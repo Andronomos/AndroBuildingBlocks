@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "minecraft:iron_ingot"
+              "blockpalette:hzrd"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blockpalette:hzrd_gray_from_iron_ingot"
+        "recipe": "blockpalette:hzrd_gray_from_hzrd"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "blockpalette:hzrd_gray_from_iron_ingot"
+      "blockpalette:hzrd_gray_from_hzrd"
     ]
   }
 }

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "1": {
-      "item": "minecraft:gray_dye"
+      "item": "minecraft:white_dye"
     },
     "2": {
       "item": "minecraft:iron_ingot"
@@ -15,6 +15,6 @@
   ],
   "result": {
     "count": 4,
-    "item": "blockpalette:hzrd_gray"
+    "item": "blockpalette:hzrd"
   }
 }

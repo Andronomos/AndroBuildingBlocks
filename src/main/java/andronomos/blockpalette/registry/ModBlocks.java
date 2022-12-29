@@ -171,8 +171,12 @@ public class ModBlocks {
 	//endregion
 
 	//region hzrd
+	public static final RegistryObject<Block> HZRD = registerBlock("hzrd", () -> new Block(PROPERTIES));
+	public static final RegistryObject<SlabBlock> HZRD_SLAB = registerSlabBlock("hzrd_slab");
+
 	public static final RegistryObject<Block> HZRD_YELLOW = registerBlock("hzrd_yellow", () -> new Block(PROPERTIES));
 	public static final RegistryObject<SlabBlock> HZRD_YELLOW_SLAB = registerSlabBlock("hzrd_yellow_slab");
+
 	public static final RegistryObject<Block> HZRD_GRAY = registerBlock("hzrd_gray", () -> new Block(PROPERTIES));
 	public static final RegistryObject<SlabBlock> HZRD_GRAY_SLAB = registerSlabBlock("hzrd_gray_slab");
 	//endregion

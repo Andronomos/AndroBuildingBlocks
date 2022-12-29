@@ -138,9 +138,13 @@ public class ModRecipeProvider extends RecipeProvider {
 		// endregion
 
 		//region hzrd
-		generateVariant(ModBlocks.HZRD_YELLOW.get(), Items.YELLOW_DYE, Items.IRON_INGOT, consumer);
+		generateVariant(ModBlocks.HZRD.get(), Items.WHITE_DYE, Items.IRON_INGOT, consumer);
+		generateSlabRecipe(ModBlocks.HZRD_SLAB.get(), ModBlocks.HZRD.get().asItem(), consumer);
+
+		generateVariant(ModBlocks.HZRD_YELLOW.get(), Items.YELLOW_DYE, ModBlocks.HZRD.get().asItem(), consumer);
 		generateSlabRecipe(ModBlocks.HZRD_YELLOW_SLAB.get(), ModBlocks.HZRD_YELLOW.get().asItem(), consumer);
-		generateVariant(ModBlocks.HZRD_GRAY.get(), Items.GRAY_DYE, Items.IRON_INGOT, consumer);
+
+		generateVariant(ModBlocks.HZRD_GRAY.get(), Items.GRAY_DYE, ModBlocks.HZRD.get().asItem(), consumer);
 		generateSlabRecipe(ModBlocks.HZRD_GRAY_SLAB.get(), ModBlocks.HZRD_GRAY.get().asItem(), consumer);
 		//endregion
 
