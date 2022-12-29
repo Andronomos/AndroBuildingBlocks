@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "group": "cytl",
-  "ingredient": {
-    "item": "blockpalette:cytl"
-  },
-  "result": "blockpalette:cytl_slab"
-}

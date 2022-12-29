@@ -1,18 +1,6 @@
 {
   "values": [
     "blockpalette:glax_cyan",
-    "blockpalette:cytl",
-    "blockpalette:cytl_stairs",
-    "blockpalette:cytl_slab",
-    "blockpalette:cytl_wall",
-    "blockpalette:cytl_fence",
-    "blockpalette:cytl_strip",
-    "blockpalette:cytl_tile",
-    "blockpalette:cytl_tile_stairs",
-    "blockpalette:cytl_tile_slab",
-    "blockpalette:cytl_stripped_column",
-    "blockpalette:cytl_grate",
-    "blockpalette:cytl_grid",
     "blockpalette:bytl",
     "blockpalette:bytl_column",
     "blockpalette:bytl_strip",

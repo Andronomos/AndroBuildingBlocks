@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "blockpalette:block/cytl/cytl_tile",
-    "side": "blockpalette:block/cytl/cytl_tile",
-    "top": "blockpalette:block/cytl/cytl_tile"
-  }
-}

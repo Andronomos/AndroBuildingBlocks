@@ -67,21 +67,6 @@ public class ModBlocks {
 	//public static final RegistryObject<Block> GLAX_YELLOW_PANE = registerGlaxPaneBlock("yellow", DyeColor.YELLOW);
 	//endregion
 
-	//region cytl
-	public static final RegistryObject<Block> CYTL = registerBlock("cytl", () -> new Block(METAL_PROPERTIES));
-	public static final RegistryObject<StairBlock> CYTL_STAIRS = registerStairBlock("cytl_stairs", CYTL);
-	public static final RegistryObject<SlabBlock> CYTL_SLAB = registerSlabBlock("cytl_slab");
-	public static final RegistryObject<WallBlock> CYTL_WALL = registerWallBlock("cytl_wall");
-	public static final RegistryObject<FenceBlock> CYTL_FENCE = registerFenceBlock("cytl_fence");
-	public static final RegistryObject<BPRotatableBlock> CYTL_STRIP = registerRotatableBlock("cytl_strip", METAL_PROPERTIES, "cytl");
-	public static final RegistryObject<Block> CYTL_TILE = registerBlock("cytl_tile", () -> new Block(METAL_PROPERTIES));
-	public static final RegistryObject<StairBlock> CYTL_TILE_STAIRS = registerStairBlock("cytl_tile_stairs", CYTL_TILE);
-	public static final RegistryObject<SlabBlock> CYTL_TILE_SLAB = registerSlabBlock("cytl_tile_slab");
-	public static final RegistryObject<BPRotatableBlock> CYTL_STRIPPED_COLUMN = registerRotatableBlock("cytl_stripped_column", METAL_PROPERTIES, "cytl");
-	public static final RegistryObject<Block> CYTL_GRATE = registerBlock("cytl_grate", () -> new Block(METAL_PROPERTIES));
-	public static final RegistryObject<Block> CYTL_GRID = registerBlock("cytl_grid", () -> new Block(METAL_PROPERTIES));
-	//endregion
-
 	//region bytl
 	public static final RegistryObject<Block> BYTL = registerBlock("bytl", () -> new Block(PROPERTIES));
 	public static final RegistryObject<BPRotatableBlock> BYTL_COLUMN = registerRotatableBlock("bytl_column", PROPERTIES, "bytl");

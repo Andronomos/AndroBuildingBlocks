@@ -137,28 +137,6 @@ public class ModRecipeProvider extends RecipeProvider {
 		generateStoneCutterRecipe(ModBlocks.BYTL_MAGENTA_FENCE.get(), ModBlocks.BYTL_MAGENTA.get(), 3, consumer);
 		// endregion
 
-		
-		
-		//region cytl
-		generateVariant(ModBlocks.CYTL.get(), Items.STONE, Items.COAL, consumer);
-		generateVariant(ModBlocks.CYTL.get(), Items.STONE, Items.CHARCOAL, consumer);
-		generateStoneCutterRecipe(ModBlocks.CYTL_STRIP.get(), ModBlocks.CYTL.get(), 1, consumer);
-		generateStairRecipe(ModBlocks.CYTL_STAIRS.get(), ModBlocks.CYTL.get().asItem(), consumer);
-		generateSlabRecipe(ModBlocks.CYTL_SLAB.get(), ModBlocks.CYTL.get().asItem(), consumer);
-		generateStoneCutterRecipe(ModBlocks.CYTL_STAIRS.get(), ModBlocks.CYTL.get(), 1,  consumer);
-		generateStoneCutterRecipe(ModBlocks.CYTL_SLAB.get(), ModBlocks.CYTL.get(), 2,  consumer);
-		generateThreeByTwoRecipe(ModBlocks.CYTL_WALL.get(), ModBlocks.CYTL.get(), consumer);
-		generateStoneCutterRecipe(ModBlocks.CYTL_FENCE.get(), ModBlocks.CYTL.get(), 3, consumer);
-		generateTwoByTwoRecipe(ModBlocks.CYTL_TILE.get(), ModBlocks.CYTL.get(), consumer);
-		generateStairRecipe(ModBlocks.CYTL_TILE_STAIRS.get(), ModBlocks.CYTL_TILE.get().asItem(), consumer);
-		generateSlabRecipe(ModBlocks.CYTL_TILE_SLAB.get(), ModBlocks.CYTL_TILE.get().asItem(), consumer);
-		generateStoneCutterRecipe(ModBlocks.CYTL_TILE_STAIRS.get(), ModBlocks.CYTL_TILE.get(), 1,  consumer);
-		generateStoneCutterRecipe(ModBlocks.CYTL_TILE_SLAB.get(), ModBlocks.CYTL_TILE.get(), 2,  consumer);
-		generateStoneCutterRecipe(ModBlocks.CYTL_STRIPPED_COLUMN.get(), ModBlocks.CYTL.get(), 1,  consumer);
-		generateStoneCutterRecipe(ModBlocks.CYTL_GRATE.get(), ModBlocks.CYTL.get(), 1, consumer);
-		generateTwoByTwoRecipe(ModBlocks.CYTL_GRID.get(), ModBlocks.CYTL_TILE.get(), consumer);
-		//endregion
-
 		//region hzrd
 		generateVariant(ModBlocks.HZRD_YELLOW.get(), Items.YELLOW_DYE, Items.IRON_INGOT, consumer);
 		generateSlabRecipe(ModBlocks.HZRD_YELLOW_SLAB.get(), ModBlocks.HZRD_YELLOW.get().asItem(), consumer);

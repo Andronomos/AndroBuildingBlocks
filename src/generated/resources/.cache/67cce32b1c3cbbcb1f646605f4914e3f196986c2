@@ -1,4 +1,4 @@
-// 1.19.2	2022-12-29T06:47:58.253125	LootTables
+// 1.19.2	2022-12-29T07:20:16.298762	LootTables
 8b55c8fab2617249608bb51c8170a7a914ac071b data/blockpalette/loot_tables/blocks/bytl.json
 a0044ba5f039b9a7fa8198204102a6c750606b67 data/blockpalette/loot_tables/blocks/bytl_black.json
 cd0cb0be2552857b8aaad80f74d38dc217d405f2 data/blockpalette/loot_tables/blocks/bytl_black_column.json
@@ -87,18 +87,6 @@ db77ce5bb5c5029c0e78477d78528bd69be70c59 data/blockpalette/loot_tables/blocks/by
 24055a670ee4ddf598e8d92cc45466585547a32b data/blockpalette/loot_tables/blocks/bytl_yellow_strip.json
 7a84fc05a6f43dc3c97ed66551940240b4a6a77c data/blockpalette/loot_tables/blocks/bytl_yellow_tile.json
 8465914ae1b36c7080b19a1bc7607745b63d70b4 data/blockpalette/loot_tables/blocks/bytl_yellow_wall.json
-c468127b05838f998e1b95f42b0eef7bd028ed57 data/blockpalette/loot_tables/blocks/cytl.json
-af9b50997b15ae93a2e9d888d7b60f55e1c222f2 data/blockpalette/loot_tables/blocks/cytl_fence.json
-b9358bfbd26a4e9fd4ebc2df2d16c2e7b7425bfe data/blockpalette/loot_tables/blocks/cytl_grate.json
-8b699c46862355b2f37824dcc1b8400ce438f0c2 data/blockpalette/loot_tables/blocks/cytl_grid.json
-e9636c032deac2d17c8cf34d1dfa2d9b6e83c9d4 data/blockpalette/loot_tables/blocks/cytl_slab.json
-5857fac741d98005c99b3ef0b60f8cb819d995c6 data/blockpalette/loot_tables/blocks/cytl_stairs.json
-01fa613896a17435e7a232c8e52caa434ee724b3 data/blockpalette/loot_tables/blocks/cytl_strip.json
-0a7cfaa0f3edda0963d29fa0c0ac9f4fe0284169 data/blockpalette/loot_tables/blocks/cytl_stripped_column.json
-ff2cf0fae33a6e1d0b9e69821094fd7431e58414 data/blockpalette/loot_tables/blocks/cytl_tile.json
-941e7450a24c7c9b317871ec4a2309a29cba5f8b data/blockpalette/loot_tables/blocks/cytl_tile_slab.json
-5e462520a18ce86a4bb407fd86950199eaed23b2 data/blockpalette/loot_tables/blocks/cytl_tile_stairs.json
-7debf77198e95d84c564a87907616d596008633f data/blockpalette/loot_tables/blocks/cytl_wall.json
 3e0e7340f62a982388224480ba1d29eb71791c9d data/blockpalette/loot_tables/blocks/glax_cyan.json
 a52716406281488b2104e55b46dd12315b6d888d data/blockpalette/loot_tables/blocks/hzrd_gray.json
 e7dfbd0abea12481208622e74f8fb85d3a9135c0 data/blockpalette/loot_tables/blocks/hzrd_gray_slab.json
