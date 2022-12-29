@@ -153,7 +153,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		generateStoneCutterRecipe(ModBlocks.MYTL_SLAB.get(), ModBlocks.MYTL.get(), 2,  consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_STRIP.get(), ModBlocks.MYTL.get(), 1, consumer);
 
-		generateVariant(ModBlocks.MYTL_GRAY.get(), Items.GRAY_DYE, Items.IRON_INGOT, consumer);
+		generateVariant(ModBlocks.MYTL_GRAY.get(), Items.GRAY_DYE, ModBlocks.MYTL.get().asItem(), consumer);
 		generateStairRecipe(ModBlocks.MYTL_GRAY_STAIRS.get(), ModBlocks.MYTL_GRAY.get().asItem(), consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_GRAY_STAIRS.get(), ModBlocks.MYTL_GRAY.get(), 1,  consumer);
 		generateThreeByTwoRecipe(ModBlocks.MYTL_GRAY_WALL.get(), ModBlocks.MYTL_GRAY.get(), consumer);
@@ -161,7 +161,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		generateStoneCutterRecipe(ModBlocks.MYTL_GRAY_SLAB.get(), ModBlocks.MYTL_GRAY.get(), 2,  consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_GRAY_STRIP.get(), ModBlocks.MYTL_GRAY.get(), 1, consumer);
 
-		generateVariant(ModBlocks.MYTL_BLACK.get(), Items.BLACK_DYE, Items.IRON_INGOT, consumer);
+		generateVariant(ModBlocks.MYTL_BLACK.get(), Items.BLACK_DYE, ModBlocks.MYTL.get().asItem(), consumer);
 		generateStairRecipe(ModBlocks.MYTL_BLACK_STAIRS.get(), ModBlocks.MYTL_BLACK.get().asItem(), consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_BLACK_STAIRS.get(), ModBlocks.MYTL_BLACK.get(), 1,  consumer);
 		generateThreeByTwoRecipe(ModBlocks.MYTL_BLACK_WALL.get(), ModBlocks.MYTL_BLACK.get(), consumer);
@@ -169,7 +169,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		generateStoneCutterRecipe(ModBlocks.MYTL_BLACK_SLAB.get(), ModBlocks.MYTL_BLACK.get(), 2,  consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_BLACK_STRIP.get(), ModBlocks.MYTL_BLACK.get(), 1, consumer);
 		
-		generateVariant(ModBlocks.MYTL_BROWN.get(), Items.BROWN_DYE, Items.IRON_INGOT, consumer);
+		generateVariant(ModBlocks.MYTL_BROWN.get(), Items.BROWN_DYE, ModBlocks.MYTL.get().asItem(), consumer);
 		generateStairRecipe(ModBlocks.MYTL_BROWN_STAIRS.get(), ModBlocks.MYTL_BROWN.get().asItem(), consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_BROWN_STAIRS.get(), ModBlocks.MYTL_BROWN.get(), 1,  consumer);
 		generateThreeByTwoRecipe(ModBlocks.MYTL_BROWN_WALL.get(), ModBlocks.MYTL_BROWN.get(), consumer);		
@@ -177,7 +177,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		generateStoneCutterRecipe(ModBlocks.MYTL_BROWN_SLAB.get(), ModBlocks.MYTL_BROWN.get(), 2,  consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_BROWN_STRIP.get(), ModBlocks.MYTL_BROWN.get(), 1, consumer);
 
-		generateVariant(ModBlocks.MYTL_GREEN.get(), Items.GREEN_DYE, Items.IRON_INGOT, consumer);
+		generateVariant(ModBlocks.MYTL_GREEN.get(), Items.GREEN_DYE, ModBlocks.MYTL.get().asItem(), consumer);
 		generateStairRecipe(ModBlocks.MYTL_GREEN_STAIRS.get(), ModBlocks.MYTL_GREEN.get().asItem(), consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_GREEN_STAIRS.get(), ModBlocks.MYTL_GREEN.get(), 1,  consumer);
 		generateThreeByTwoRecipe(ModBlocks.MYTL_GREEN_WALL.get(), ModBlocks.MYTL_GREEN.get(), consumer);
@@ -185,7 +185,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		generateStoneCutterRecipe(ModBlocks.MYTL_GREEN_SLAB.get(), ModBlocks.MYTL_GREEN.get(), 2,  consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_GREEN_STRIP.get(), ModBlocks.MYTL_GREEN.get(), 1, consumer);
 
-		generateVariant(ModBlocks.MYTL_RED.get(), Items.RED_DYE, Items.IRON_INGOT, consumer);
+		generateVariant(ModBlocks.MYTL_RED.get(), Items.RED_DYE, ModBlocks.MYTL.get().asItem(), consumer);
 		generateStairRecipe(ModBlocks.MYTL_RED_STAIRS.get(), ModBlocks.MYTL_RED.get().asItem(), consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_RED_STAIRS.get(), ModBlocks.MYTL_RED.get(), 1,  consumer);
 		generateThreeByTwoRecipe(ModBlocks.MYTL_RED_WALL.get(), ModBlocks.MYTL_RED.get(), consumer);
@@ -193,7 +193,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		generateStoneCutterRecipe(ModBlocks.MYTL_RED_SLAB.get(), ModBlocks.MYTL_RED.get(), 2,  consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_RED_STRIP.get(), ModBlocks.MYTL_RED.get(), 1, consumer);
 
-		generateVariant(ModBlocks.MYTL_ORANGE.get(), Items.ORANGE_DYE, Items.IRON_INGOT, consumer);
+		generateVariant(ModBlocks.MYTL_ORANGE.get(), Items.ORANGE_DYE, ModBlocks.MYTL.get().asItem(), consumer);
 		generateStairRecipe(ModBlocks.MYTL_ORANGE_STAIRS.get(), ModBlocks.MYTL_ORANGE.get().asItem(), consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_ORANGE_STAIRS.get(), ModBlocks.MYTL_ORANGE.get(), 1,  consumer);
 		generateThreeByTwoRecipe(ModBlocks.MYTL_ORANGE_WALL.get(), ModBlocks.MYTL_ORANGE.get(), consumer);

@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "minecraft:iron_ingot"
+              "blockpalette:mytl"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blockpalette:mytl_brown_from_iron_ingot"
+        "recipe": "blockpalette:mytl_orange_from_mytl"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "blockpalette:mytl_brown_from_iron_ingot"
+      "blockpalette:mytl_orange_from_mytl"
     ]
   }
 }
