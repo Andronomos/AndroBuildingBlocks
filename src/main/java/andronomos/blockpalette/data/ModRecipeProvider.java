@@ -9,7 +9,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -264,7 +263,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		shaped.pattern("212");
 		shaped.pattern("121");
 		shaped.unlockedBy("has_item", has(secondInputItem));
-		//shaped.group(getVarientName(output));
+		//shaped.group(getVariantName(output));
 		shaped.save(consumer, new ResourceLocation(BlockPalette.MODID, ForgeRegistries.BLOCKS.getKey(output).getPath() + "_from_" + ForgeRegistries.ITEMS.getKey(secondInputItem).getPath()));
 	}
 
@@ -272,7 +271,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		ShapelessRecipeBuilder shapeless = ShapelessRecipeBuilder.shapeless(output, 1);
 		shapeless.requires(sourceBlock.asItem());
 		shapeless.requires(inputItem);
-		//.group(getVarientName(output))
+		//.group(getVariantName(output))
 		shapeless.unlockedBy("has_item", has(sourceBlock));
 		shapeless.save(consumer);
 	}
@@ -281,7 +280,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(output, 6);
 		shaped.define('#', input);
 		shaped.pattern("###");
-		//shaped.group(getVarientName(output));
+		//shaped.group(getVariantName(output));
 		shaped.unlockedBy("has_item", has(input));
 		shaped.save(consumer);
 	}
@@ -292,7 +291,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		shaped.pattern("#  ");
 		shaped.pattern("## ");
 		shaped.pattern("###");
-		//shaped.group(getVarientName(output));
+		//shaped.group(getVariantName(output));
 		shaped.unlockedBy("has_item", has(input));
 		shaped.save(consumer);
 	}
@@ -302,7 +301,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		shaped.define('#', input);
 		shaped.pattern("##");
 		shaped.pattern("##");
-		//shaped.group(getVarientName(output));
+		//shaped.group(getVariantName(output));
 		shaped.unlockedBy("has_item", has(input));
 		shaped.save(consumer);
 	}
@@ -312,7 +311,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		shaped.define('#', input);
 		shaped.pattern("###");
 		shaped.pattern("###");
-		//shaped.group(getVarientName(output));
+		//shaped.group(getVariantName(output));
 		shaped.unlockedBy("has_item", has(input));
 		shaped.save(consumer);
 	}
@@ -321,19 +320,19 @@ public class ModRecipeProvider extends RecipeProvider {
 		String blockName = ForgeRegistries.BLOCKS.getKey(output).getPath();
 
 		SingleItemRecipeBuilder stonecutting = SingleItemRecipeBuilder.stonecutting(Ingredient.of(input), output, amount);
-		stonecutting.group(getVarientName(output));
+		stonecutting.group(getVariantName(output));
 		stonecutting.unlockedBy("has_item", has(input));
 		stonecutting.save(consumer, blockName + "_from_stonecutting");
 	}
 
 	private void generateSmeltingRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
 		SimpleCookingRecipeBuilder smelting = SimpleCookingRecipeBuilder.smelting(Ingredient.of(input), output, 0.1F, 200);
-		//smelting.group(getVarientName(output));
+		//smelting.group(getVariantName(output));
 		smelting.unlockedBy("has_item", has(input));
 		smelting.save(consumer);
 	}
 
-	private String getVarientName(Block block) {
+	private String getVariantName(Block block) {
 		String blockName = ForgeRegistries.BLOCKS.getKey(block).getPath();
 		String variantName = blockName;
 
