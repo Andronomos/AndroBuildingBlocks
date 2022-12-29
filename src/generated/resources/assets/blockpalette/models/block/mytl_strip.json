@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "blockpalette:block/mytl/mytl",
+    "side": "blockpalette:block/mytl/mytl_strip"
+  }
+}

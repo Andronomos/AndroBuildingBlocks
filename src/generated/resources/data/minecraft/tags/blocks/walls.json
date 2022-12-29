@@ -11,12 +11,12 @@
     "blockpalette:bytl_green_wall",
     "blockpalette:bytl_purple_wall",
     "blockpalette:bytl_magenta_wall",
-    "blockpalette:mytl_brown_wall",
+    "blockpalette:mytl_wall",
     "blockpalette:mytl_gray_wall",
+    "blockpalette:mytl_black_wall",
+    "blockpalette:mytl_brown_wall",
     "blockpalette:mytl_green_wall",
-    "blockpalette:mytl_white_wall",
     "blockpalette:mytl_red_wall",
-    "blockpalette:mytl_orange_wall",
-    "blockpalette:mytl_black_wall"
+    "blockpalette:mytl_orange_wall"
   ]
 }

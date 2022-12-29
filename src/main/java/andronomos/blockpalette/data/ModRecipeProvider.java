@@ -36,26 +36,6 @@ public class ModRecipeProvider extends RecipeProvider {
 		generateThreeByTwoRecipe(ModBlocks.BYTL_WALL.get(), ModBlocks.BYTL.get(), consumer);
 		generateStoneCutterRecipe(ModBlocks.BYTL_FENCE.get(), ModBlocks.BYTL.get(), 3, consumer);
 
-		generateColorVariant(ModBlocks.BYTL_YELLOW.get(), ModBlocks.BYTL.get(), Items.YELLOW_DYE, consumer);
-		generateStoneCutterRecipe(ModBlocks.BYTL_YELLOW_STRIP.get(), ModBlocks.BYTL_YELLOW.get(), 1, consumer);
-		generateStoneCutterRecipe(ModBlocks.BYTL_YELLOW_COLUMN.get(), ModBlocks.BYTL_YELLOW.get(), 1,  consumer);
-		generateStairRecipe(ModBlocks.BYTL_YELLOW_STAIRS.get(), ModBlocks.BYTL_YELLOW.get().asItem(), consumer);
-		generateSlabRecipe(ModBlocks.BYTL_YELLOW_SLAB.get(), ModBlocks.BYTL_YELLOW.get().asItem(), consumer);
-		generateStoneCutterRecipe(ModBlocks.BYTL_YELLOW_STAIRS.get(), ModBlocks.BYTL_YELLOW.get(), 1,  consumer);
-		generateStoneCutterRecipe(ModBlocks.BYTL_YELLOW_SLAB.get(), ModBlocks.BYTL_YELLOW.get(), 2,  consumer);
-		generateThreeByTwoRecipe(ModBlocks.BYTL_YELLOW_WALL.get(), ModBlocks.BYTL_YELLOW.get(), consumer);
-		generateStoneCutterRecipe(ModBlocks.BYTL_YELLOW_FENCE.get(), ModBlocks.BYTL_YELLOW.get(), 3, consumer);
-
-		generateColorVariant(ModBlocks.BYTL_BROWN.get(), ModBlocks.BYTL.get(), Items.BROWN_DYE, consumer);
-		generateStoneCutterRecipe(ModBlocks.BYTL_BROWN_STRIP.get(), ModBlocks.BYTL_BROWN.get(), 1, consumer);
-		generateStoneCutterRecipe(ModBlocks.BYTL_BROWN_COLUMN.get(), ModBlocks.BYTL_BROWN.get(), 1,  consumer);
-		generateStairRecipe(ModBlocks.BYTL_BROWN_STAIRS.get(), ModBlocks.BYTL_BROWN.get().asItem(), consumer);
-		generateSlabRecipe(ModBlocks.BYTL_BROWN_SLAB.get(), ModBlocks.BYTL_BROWN.get().asItem(), consumer);
-		generateStoneCutterRecipe(ModBlocks.BYTL_BROWN_STAIRS.get(), ModBlocks.BYTL_BROWN.get(), 1,  consumer);
-		generateStoneCutterRecipe(ModBlocks.BYTL_BROWN_SLAB.get(), ModBlocks.BYTL_BROWN.get(), 2,  consumer);
-		generateThreeByTwoRecipe(ModBlocks.BYTL_BROWN_WALL.get(), ModBlocks.BYTL_BROWN.get(), consumer);
-		generateStoneCutterRecipe(ModBlocks.BYTL_BROWN_FENCE.get(), ModBlocks.BYTL_BROWN.get(), 3, consumer);
-
 		generateColorVariant(ModBlocks.BYTL_LIGHT_GRAY.get(), ModBlocks.BYTL.get(), Items.LIGHT_GRAY_DYE, consumer);
 		generateStoneCutterRecipe(ModBlocks.BYTL_LIGHT_GRAY_STRIP.get(), ModBlocks.BYTL_LIGHT_GRAY.get(), 1, consumer);
 		generateStoneCutterRecipe(ModBlocks.BYTL_LIGHT_GRAY_COLUMN.get(), ModBlocks.BYTL_LIGHT_GRAY.get(), 1,  consumer);
@@ -85,6 +65,26 @@ public class ModRecipeProvider extends RecipeProvider {
 		generateStoneCutterRecipe(ModBlocks.BYTL_BLACK_SLAB.get(), ModBlocks.BYTL_BLACK.get(), 2,  consumer);
 		generateThreeByTwoRecipe(ModBlocks.BYTL_BLACK_WALL.get(), ModBlocks.BYTL_BLACK.get(), consumer);
 		generateStoneCutterRecipe(ModBlocks.BYTL_BLACK_FENCE.get(), ModBlocks.BYTL_BLACK.get(), 3, consumer);
+
+		generateColorVariant(ModBlocks.BYTL_YELLOW.get(), ModBlocks.BYTL.get(), Items.YELLOW_DYE, consumer);
+		generateStoneCutterRecipe(ModBlocks.BYTL_YELLOW_STRIP.get(), ModBlocks.BYTL_YELLOW.get(), 1, consumer);
+		generateStoneCutterRecipe(ModBlocks.BYTL_YELLOW_COLUMN.get(), ModBlocks.BYTL_YELLOW.get(), 1,  consumer);
+		generateStairRecipe(ModBlocks.BYTL_YELLOW_STAIRS.get(), ModBlocks.BYTL_YELLOW.get().asItem(), consumer);
+		generateSlabRecipe(ModBlocks.BYTL_YELLOW_SLAB.get(), ModBlocks.BYTL_YELLOW.get().asItem(), consumer);
+		generateStoneCutterRecipe(ModBlocks.BYTL_YELLOW_STAIRS.get(), ModBlocks.BYTL_YELLOW.get(), 1,  consumer);
+		generateStoneCutterRecipe(ModBlocks.BYTL_YELLOW_SLAB.get(), ModBlocks.BYTL_YELLOW.get(), 2,  consumer);
+		generateThreeByTwoRecipe(ModBlocks.BYTL_YELLOW_WALL.get(), ModBlocks.BYTL_YELLOW.get(), consumer);
+		generateStoneCutterRecipe(ModBlocks.BYTL_YELLOW_FENCE.get(), ModBlocks.BYTL_YELLOW.get(), 3, consumer);
+
+		generateColorVariant(ModBlocks.BYTL_BROWN.get(), ModBlocks.BYTL.get(), Items.BROWN_DYE, consumer);
+		generateStoneCutterRecipe(ModBlocks.BYTL_BROWN_STRIP.get(), ModBlocks.BYTL_BROWN.get(), 1, consumer);
+		generateStoneCutterRecipe(ModBlocks.BYTL_BROWN_COLUMN.get(), ModBlocks.BYTL_BROWN.get(), 1,  consumer);
+		generateStairRecipe(ModBlocks.BYTL_BROWN_STAIRS.get(), ModBlocks.BYTL_BROWN.get().asItem(), consumer);
+		generateSlabRecipe(ModBlocks.BYTL_BROWN_SLAB.get(), ModBlocks.BYTL_BROWN.get().asItem(), consumer);
+		generateStoneCutterRecipe(ModBlocks.BYTL_BROWN_STAIRS.get(), ModBlocks.BYTL_BROWN.get(), 1,  consumer);
+		generateStoneCutterRecipe(ModBlocks.BYTL_BROWN_SLAB.get(), ModBlocks.BYTL_BROWN.get(), 2,  consumer);
+		generateThreeByTwoRecipe(ModBlocks.BYTL_BROWN_WALL.get(), ModBlocks.BYTL_BROWN.get(), consumer);
+		generateStoneCutterRecipe(ModBlocks.BYTL_BROWN_FENCE.get(), ModBlocks.BYTL_BROWN.get(), 3, consumer);
 
 		generateColorVariant(ModBlocks.BYTL_BLUE.get(), ModBlocks.BYTL.get(), Items.BLUE_DYE, consumer);
 		generateStoneCutterRecipe(ModBlocks.BYTL_BLUE_STRIP.get(), ModBlocks.BYTL_BLUE.get(), 1, consumer);
@@ -145,13 +145,13 @@ public class ModRecipeProvider extends RecipeProvider {
 		//endregion
 
 		//region mytl
-		generateVariant(ModBlocks.MYTL_BROWN.get(), Items.BROWN_DYE, Items.IRON_INGOT, consumer);
-		generateStairRecipe(ModBlocks.MYTL_BROWN_STAIRS.get(), ModBlocks.MYTL_BROWN.get().asItem(), consumer);
-		generateStoneCutterRecipe(ModBlocks.MYTL_BROWN_STAIRS.get(), ModBlocks.MYTL_BROWN.get(), 1,  consumer);
-		generateThreeByTwoRecipe(ModBlocks.MYTL_BROWN_WALL.get(), ModBlocks.MYTL_BROWN.get(), consumer);		
-		generateSlabRecipe(ModBlocks.MYTL_BROWN_SLAB.get(), ModBlocks.MYTL_BROWN.get().asItem(), consumer);
-		generateStoneCutterRecipe(ModBlocks.MYTL_BROWN_SLAB.get(), ModBlocks.MYTL_BROWN.get(), 2,  consumer);
-		generateStoneCutterRecipe(ModBlocks.MYTL_BROWN_STRIP.get(), ModBlocks.MYTL_BROWN.get(), 1, consumer);
+		generateVariant(ModBlocks.MYTL.get(), Items.WHITE_DYE, Items.IRON_INGOT, consumer);
+		generateStairRecipe(ModBlocks.MYTL_STAIRS.get(), ModBlocks.MYTL.get().asItem(), consumer);
+		generateStoneCutterRecipe(ModBlocks.MYTL_STAIRS.get(), ModBlocks.MYTL.get(), 1,  consumer);
+		generateThreeByTwoRecipe(ModBlocks.MYTL_WALL.get(), ModBlocks.MYTL.get(), consumer);
+		generateSlabRecipe(ModBlocks.MYTL_SLAB.get(), ModBlocks.MYTL.get().asItem(), consumer);
+		generateStoneCutterRecipe(ModBlocks.MYTL_SLAB.get(), ModBlocks.MYTL.get(), 2,  consumer);
+		generateStoneCutterRecipe(ModBlocks.MYTL_STRIP.get(), ModBlocks.MYTL.get(), 1, consumer);
 
 		generateVariant(ModBlocks.MYTL_GRAY.get(), Items.GRAY_DYE, Items.IRON_INGOT, consumer);
 		generateStairRecipe(ModBlocks.MYTL_GRAY_STAIRS.get(), ModBlocks.MYTL_GRAY.get().asItem(), consumer);
@@ -161,6 +161,22 @@ public class ModRecipeProvider extends RecipeProvider {
 		generateStoneCutterRecipe(ModBlocks.MYTL_GRAY_SLAB.get(), ModBlocks.MYTL_GRAY.get(), 2,  consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_GRAY_STRIP.get(), ModBlocks.MYTL_GRAY.get(), 1, consumer);
 
+		generateVariant(ModBlocks.MYTL_BLACK.get(), Items.BLACK_DYE, Items.IRON_INGOT, consumer);
+		generateStairRecipe(ModBlocks.MYTL_BLACK_STAIRS.get(), ModBlocks.MYTL_BLACK.get().asItem(), consumer);
+		generateStoneCutterRecipe(ModBlocks.MYTL_BLACK_STAIRS.get(), ModBlocks.MYTL_BLACK.get(), 1,  consumer);
+		generateThreeByTwoRecipe(ModBlocks.MYTL_BLACK_WALL.get(), ModBlocks.MYTL_BLACK.get(), consumer);
+		generateSlabRecipe(ModBlocks.MYTL_BLACK_SLAB.get(), ModBlocks.MYTL_BLACK.get().asItem(), consumer);
+		generateStoneCutterRecipe(ModBlocks.MYTL_BLACK_SLAB.get(), ModBlocks.MYTL_BLACK.get(), 2,  consumer);
+		generateStoneCutterRecipe(ModBlocks.MYTL_BLACK_STRIP.get(), ModBlocks.MYTL_BLACK.get(), 1, consumer);
+		
+		generateVariant(ModBlocks.MYTL_BROWN.get(), Items.BROWN_DYE, Items.IRON_INGOT, consumer);
+		generateStairRecipe(ModBlocks.MYTL_BROWN_STAIRS.get(), ModBlocks.MYTL_BROWN.get().asItem(), consumer);
+		generateStoneCutterRecipe(ModBlocks.MYTL_BROWN_STAIRS.get(), ModBlocks.MYTL_BROWN.get(), 1,  consumer);
+		generateThreeByTwoRecipe(ModBlocks.MYTL_BROWN_WALL.get(), ModBlocks.MYTL_BROWN.get(), consumer);		
+		generateSlabRecipe(ModBlocks.MYTL_BROWN_SLAB.get(), ModBlocks.MYTL_BROWN.get().asItem(), consumer);
+		generateStoneCutterRecipe(ModBlocks.MYTL_BROWN_SLAB.get(), ModBlocks.MYTL_BROWN.get(), 2,  consumer);
+		generateStoneCutterRecipe(ModBlocks.MYTL_BROWN_STRIP.get(), ModBlocks.MYTL_BROWN.get(), 1, consumer);
+
 		generateVariant(ModBlocks.MYTL_GREEN.get(), Items.GREEN_DYE, Items.IRON_INGOT, consumer);
 		generateStairRecipe(ModBlocks.MYTL_GREEN_STAIRS.get(), ModBlocks.MYTL_GREEN.get().asItem(), consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_GREEN_STAIRS.get(), ModBlocks.MYTL_GREEN.get(), 1,  consumer);
@@ -168,14 +184,6 @@ public class ModRecipeProvider extends RecipeProvider {
 		generateSlabRecipe(ModBlocks.MYTL_GREEN_SLAB.get(), ModBlocks.MYTL_GREEN.get().asItem(), consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_GREEN_SLAB.get(), ModBlocks.MYTL_GREEN.get(), 2,  consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_GREEN_STRIP.get(), ModBlocks.MYTL_GREEN.get(), 1, consumer);
-
-		generateVariant(ModBlocks.MYTL_WHITE.get(), Items.WHITE_DYE, Items.IRON_INGOT, consumer);
-		generateStairRecipe(ModBlocks.MYTL_WHITE_STAIRS.get(), ModBlocks.MYTL_WHITE.get().asItem(), consumer);
-		generateStoneCutterRecipe(ModBlocks.MYTL_WHITE_STAIRS.get(), ModBlocks.MYTL_WHITE.get(), 1,  consumer);
-		generateThreeByTwoRecipe(ModBlocks.MYTL_WHITE_WALL.get(), ModBlocks.MYTL_WHITE.get(), consumer);
-		generateSlabRecipe(ModBlocks.MYTL_WHITE_SLAB.get(), ModBlocks.MYTL_WHITE.get().asItem(), consumer);
-		generateStoneCutterRecipe(ModBlocks.MYTL_WHITE_SLAB.get(), ModBlocks.MYTL_WHITE.get(), 2,  consumer);
-		generateStoneCutterRecipe(ModBlocks.MYTL_WHITE_STRIP.get(), ModBlocks.MYTL_WHITE.get(), 1, consumer);
 
 		generateVariant(ModBlocks.MYTL_RED.get(), Items.RED_DYE, Items.IRON_INGOT, consumer);
 		generateStairRecipe(ModBlocks.MYTL_RED_STAIRS.get(), ModBlocks.MYTL_RED.get().asItem(), consumer);
@@ -192,14 +200,6 @@ public class ModRecipeProvider extends RecipeProvider {
 		generateSlabRecipe(ModBlocks.MYTL_ORANGE_SLAB.get(), ModBlocks.MYTL_ORANGE.get().asItem(), consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_ORANGE_SLAB.get(), ModBlocks.MYTL_ORANGE.get(), 2,  consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_ORANGE_STRIP.get(), ModBlocks.MYTL_ORANGE.get(), 1, consumer);
-
-		generateVariant(ModBlocks.MYTL_BLACK.get(), Items.BLACK_DYE, Items.IRON_INGOT, consumer);
-		generateStairRecipe(ModBlocks.MYTL_BLACK_STAIRS.get(), ModBlocks.MYTL_BLACK.get().asItem(), consumer);
-		generateStoneCutterRecipe(ModBlocks.MYTL_BLACK_STAIRS.get(), ModBlocks.MYTL_BLACK.get(), 1,  consumer);
-		generateThreeByTwoRecipe(ModBlocks.MYTL_BLACK_WALL.get(), ModBlocks.MYTL_BLACK.get(), consumer);
-		generateSlabRecipe(ModBlocks.MYTL_BLACK_SLAB.get(), ModBlocks.MYTL_BLACK.get().asItem(), consumer);
-		generateStoneCutterRecipe(ModBlocks.MYTL_BLACK_SLAB.get(), ModBlocks.MYTL_BLACK.get(), 2,  consumer);
-		generateStoneCutterRecipe(ModBlocks.MYTL_BLACK_STRIP.get(), ModBlocks.MYTL_BLACK.get(), 1, consumer);
 		//endregion
 
 		//region glax

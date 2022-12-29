@@ -92,6 +92,7 @@
   "block.blockpalette.hzrd_gray_slab": "Hzrd Gray Slab",
   "block.blockpalette.hzrd_yellow": "Hzrd Yellow",
   "block.blockpalette.hzrd_yellow_slab": "Hzrd Yellow Slab",
+  "block.blockpalette.mytl": "Mytl",
   "block.blockpalette.mytl_black": "Mytl Black",
   "block.blockpalette.mytl_black_slab": "Mytl Black Slab",
   "block.blockpalette.mytl_black_stairs": "Mytl Black Stairs",
@@ -122,10 +123,9 @@
   "block.blockpalette.mytl_red_stairs": "Mytl Red Stairs",
   "block.blockpalette.mytl_red_strip": "Mytl Red Strip",
   "block.blockpalette.mytl_red_wall": "Mytl Red Wall",
-  "block.blockpalette.mytl_white": "Mytl White",
-  "block.blockpalette.mytl_white_slab": "Mytl White Slab",
-  "block.blockpalette.mytl_white_stairs": "Mytl White Stairs",
-  "block.blockpalette.mytl_white_strip": "Mytl White Strip",
-  "block.blockpalette.mytl_white_wall": "Mytl White Wall",
+  "block.blockpalette.mytl_slab": "Mytl Slab",
+  "block.blockpalette.mytl_stairs": "Mytl Stairs",
+  "block.blockpalette.mytl_strip": "Mytl Strip",
+  "block.blockpalette.mytl_wall": "Mytl Wall",
   "itemGroup.blockpalette_group": "BlockPalette"
 }

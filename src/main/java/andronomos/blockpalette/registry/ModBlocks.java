@@ -31,6 +31,8 @@ public class ModBlocks {
 
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, BlockPalette.MODID);
 
+	//public static final RegistryObject<Block> BP_TILE = registerBlock("bp_tile", () -> new Block(PROPERTIES));
+
 	//region glax
 	public static final RegistryObject<GlassBlock> GLAX_CYAN =  registerBlock("glax_cyan", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
 	//public static final RegistryObject<GlassBlock> GLAX_WHITE = registerBlock("glax_white", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
@@ -176,30 +178,36 @@ public class ModBlocks {
 	//endregion
 
 	//region mytl
+	public static final RegistryObject<Block> MYTL = registerBlock("mytl", () -> new Block(PROPERTIES));
+	public static final RegistryObject<StairBlock> MYTL_STAIRS = registerStairBlock("mytl_stairs", MYTL);
+	public static final RegistryObject<SlabBlock> MYTL_SLAB = registerSlabBlock("mytl_slab");
+	public static final RegistryObject<WallBlock> MYTL_WALL = registerWallBlock("mytl_wall");
+	public static final RegistryObject<BPRotatableBlock> MYTL_STRIP = registerRotatableBlock("mytl_strip", METAL_PROPERTIES, "mytl");
+
+	public static final RegistryObject<Block> MYTL_GRAY = registerBlock("mytl_gray", () -> new Block(PROPERTIES));
+	public static final RegistryObject<StairBlock> MYTL_GRAY_STAIRS = registerStairBlock("mytl_gray_stairs", MYTL_GRAY);
+	public static final RegistryObject<SlabBlock> MYTL_GRAY_SLAB = registerSlabBlock("mytl_gray_slab");
+	public static final RegistryObject<WallBlock> MYTL_GRAY_WALL = registerWallBlock("mytl_gray_wall");
+	public static final RegistryObject<BPRotatableBlock> MYTL_GRAY_STRIP = registerRotatableBlock("mytl_gray_strip", METAL_PROPERTIES, "mytl_gray");
+
+	public static final RegistryObject<Block> MYTL_BLACK = registerBlock("mytl_black", () -> new Block(PROPERTIES));
+	public static final RegistryObject<StairBlock> MYTL_BLACK_STAIRS = registerStairBlock("mytl_black_stairs", MYTL_BLACK);
+	public static final RegistryObject<SlabBlock> MYTL_BLACK_SLAB = registerSlabBlock("mytl_black_slab");
+	public static final RegistryObject<WallBlock> MYTL_BLACK_WALL = registerWallBlock("mytl_black_wall");
+	public static final RegistryObject<BPRotatableBlock> MYTL_BLACK_STRIP = registerRotatableBlock("mytl_black_strip", METAL_PROPERTIES, "mytl_black");
+	
 	public static final RegistryObject<Block> MYTL_BROWN = registerBlock("mytl_brown", () -> new Block(PROPERTIES));
 	public static final RegistryObject<StairBlock> MYTL_BROWN_STAIRS = registerStairBlock("mytl_brown_stairs", MYTL_BROWN);
 	public static final RegistryObject<SlabBlock> MYTL_BROWN_SLAB = registerSlabBlock("mytl_brown_slab");
 	public static final RegistryObject<WallBlock> MYTL_BROWN_WALL = registerWallBlock("mytl_brown_wall");
 	public static final RegistryObject<BPRotatableBlock> MYTL_BROWN_STRIP = registerRotatableBlock("mytl_brown_strip", METAL_PROPERTIES, "mytl_brown");
 	
-	public static final RegistryObject<Block> MYTL_GRAY = registerBlock("mytl_gray", () -> new Block(PROPERTIES));
-	public static final RegistryObject<StairBlock> MYTL_GRAY_STAIRS = registerStairBlock("mytl_gray_stairs", MYTL_GRAY);
-	public static final RegistryObject<SlabBlock> MYTL_GRAY_SLAB = registerSlabBlock("mytl_gray_slab");
-	public static final RegistryObject<WallBlock> MYTL_GRAY_WALL = registerWallBlock("mytl_gray_wall");
-	public static final RegistryObject<BPRotatableBlock> MYTL_GRAY_STRIP = registerRotatableBlock("mytl_gray_strip", METAL_PROPERTIES, "mytl_gray");
-	
 	public static final RegistryObject<Block> MYTL_GREEN = registerBlock("mytl_green", () -> new Block(PROPERTIES));
 	public static final RegistryObject<StairBlock> MYTL_GREEN_STAIRS = registerStairBlock("mytl_green_stairs", MYTL_GREEN);
 	public static final RegistryObject<SlabBlock> MYTL_GREEN_SLAB = registerSlabBlock("mytl_green_slab");
 	public static final RegistryObject<WallBlock> MYTL_GREEN_WALL = registerWallBlock("mytl_green_wall");
 	public static final RegistryObject<BPRotatableBlock> MYTL_GREEN_STRIP = registerRotatableBlock("mytl_green_strip", METAL_PROPERTIES, "mytl_green");
-	
-	public static final RegistryObject<Block> MYTL_WHITE = registerBlock("mytl_white", () -> new Block(PROPERTIES));
-	public static final RegistryObject<StairBlock> MYTL_WHITE_STAIRS = registerStairBlock("mytl_white_stairs", MYTL_WHITE);
-	public static final RegistryObject<SlabBlock> MYTL_WHITE_SLAB = registerSlabBlock("mytl_white_slab");
-	public static final RegistryObject<WallBlock> MYTL_WHITE_WALL = registerWallBlock("mytl_white_wall");
-	public static final RegistryObject<BPRotatableBlock> MYTL_WHITE_STRIP = registerRotatableBlock("mytl_white_strip", METAL_PROPERTIES, "mytl_white");
-	
+		
 	public static final RegistryObject<Block> MYTL_RED = registerBlock("mytl_red", () -> new Block(PROPERTIES));
 	public static final RegistryObject<StairBlock> MYTL_RED_STAIRS = registerStairBlock("mytl_red_stairs", MYTL_RED);
 	public static final RegistryObject<SlabBlock> MYTL_RED_SLAB = registerSlabBlock("mytl_red_slab");
@@ -211,12 +219,6 @@ public class ModBlocks {
 	public static final RegistryObject<SlabBlock> MYTL_ORANGE_SLAB = registerSlabBlock("mytl_orange_slab");
 	public static final RegistryObject<WallBlock> MYTL_ORANGE_WALL = registerWallBlock("mytl_orange_wall");
 	public static final RegistryObject<BPRotatableBlock> MYTL_ORANGE_STRIP = registerRotatableBlock("mytl_orange_strip", METAL_PROPERTIES, "mytl_orange");
-
-	public static final RegistryObject<Block> MYTL_BLACK = registerBlock("mytl_black", () -> new Block(PROPERTIES));
-	public static final RegistryObject<StairBlock> MYTL_BLACK_STAIRS = registerStairBlock("mytl_black_stairs", MYTL_BLACK);
-	public static final RegistryObject<SlabBlock> MYTL_BLACK_SLAB = registerSlabBlock("mytl_black_slab");
-	public static final RegistryObject<WallBlock> MYTL_BLACK_WALL = registerWallBlock("mytl_black_wall");
-	public static final RegistryObject<BPRotatableBlock> MYTL_BLACK_STRIP = registerRotatableBlock("mytl_black_strip", METAL_PROPERTIES, "mytl_black");
 	//endregion
 
 

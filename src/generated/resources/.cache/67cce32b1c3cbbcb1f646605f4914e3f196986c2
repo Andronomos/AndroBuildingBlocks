@@ -1,4 +1,4 @@
-// 1.19.2	2022-12-29T08:03:09.9155928	LootTables
+// 1.19.2	2022-12-29T08:21:03.2681371	LootTables
 8b55c8fab2617249608bb51c8170a7a914ac071b data/blockpalette/loot_tables/blocks/bytl.json
 a0044ba5f039b9a7fa8198204102a6c750606b67 data/blockpalette/loot_tables/blocks/bytl_black.json
 cd0cb0be2552857b8aaad80f74d38dc217d405f2 data/blockpalette/loot_tables/blocks/bytl_black_column.json
@@ -92,6 +92,7 @@ a52716406281488b2104e55b46dd12315b6d888d data/blockpalette/loot_tables/blocks/hz
 e7dfbd0abea12481208622e74f8fb85d3a9135c0 data/blockpalette/loot_tables/blocks/hzrd_gray_slab.json
 c9ae61156e3f68b9261a0e283ab1b60a10332ccb data/blockpalette/loot_tables/blocks/hzrd_yellow.json
 5a3dacc7da7e42125242c46eb3c172e3cac08be8 data/blockpalette/loot_tables/blocks/hzrd_yellow_slab.json
+4dcfa3b85a475b2cb6fcdd1091fa31314dfae61f data/blockpalette/loot_tables/blocks/mytl.json
 6cb6c3f86a73dc27636b8aff77e343f5bc8cc201 data/blockpalette/loot_tables/blocks/mytl_black.json
 a2ab0a8958ff46bb01c8ecac48e12e6b66d93645 data/blockpalette/loot_tables/blocks/mytl_black_slab.json
 c442628e926ffd50bca3cca4a1b02486a213b0dd data/blockpalette/loot_tables/blocks/mytl_black_stairs.json
@@ -122,8 +123,7 @@ a8acf779b5d0149828ce10c4e92d8cdc1f120d70 data/blockpalette/loot_tables/blocks/my
 30152e1499fa38f67f913efcd6d47bacba8ede2d data/blockpalette/loot_tables/blocks/mytl_red_stairs.json
 f873451539bcbc34b1c5141ca0ee7b91e8a93ff8 data/blockpalette/loot_tables/blocks/mytl_red_strip.json
 001e8c90c19792334bbb62a21258c4932ddfbfd0 data/blockpalette/loot_tables/blocks/mytl_red_wall.json
-f730850f3aa3c27bbd923b002597557e75a0ffc7 data/blockpalette/loot_tables/blocks/mytl_white.json
-d87c102e4fc17259747f732a3e153e4ede3ace84 data/blockpalette/loot_tables/blocks/mytl_white_slab.json
-7035ff7efb16200f34ec5d28a7622d9e8cf8a3a2 data/blockpalette/loot_tables/blocks/mytl_white_stairs.json
-0c792ab14632f3cc703182914ca91b7d4a246a5d data/blockpalette/loot_tables/blocks/mytl_white_strip.json
-b013727fe6b04f3fd1761a265879c3d9c87ee2d3 data/blockpalette/loot_tables/blocks/mytl_white_wall.json
+7534b7f9c60a61a6756b9d55411336ad45181ec3 data/blockpalette/loot_tables/blocks/mytl_slab.json
+404f3771aaf9a00342e35dd9fddff0989f43194a data/blockpalette/loot_tables/blocks/mytl_stairs.json
+a1e8720c1dd50fbbe626903e61e4ea176812adf1 data/blockpalette/loot_tables/blocks/mytl_strip.json
+82cffe8a70cba359af5e71b4c05e94bcf5052fa0 data/blockpalette/loot_tables/blocks/mytl_wall.json

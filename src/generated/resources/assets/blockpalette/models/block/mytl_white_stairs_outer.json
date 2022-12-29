@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "blockpalette:block/mytl/mytl_white",
-    "side": "blockpalette:block/mytl/mytl_white",
-    "top": "blockpalette:block/mytl/mytl_white"
-  }
-}
