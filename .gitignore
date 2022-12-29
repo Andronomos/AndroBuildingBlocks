@@ -16377,3 +16377,13 @@ build/_atJar_4/parent_at.cfg
 build/_atJar_4/log.txt
 build/_atJar_4/accesstransform.log
 build/_applyBinpatches_2/log.txt
+run/logs/2022-12-29-6.log.gz
+run/logs/2022-12-29-5.log.gz
+run/logs/2022-12-29-4.log.gz
+run/logs/2022-12-29-2.log.gz
+run/logs/2022-12-29-5.log.gz
+run/logs/2022-12-29-4.log.gz
+run/logs/2022-12-29-2.log.gz
+run/logs/2022-12-29-2.log.gz
+run/logs/2022-12-29-4.log.gz
+*.gz
