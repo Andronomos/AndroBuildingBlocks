@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "group": "bytl",
-  "ingredient": {
-    "item": "blockpalette:bytl_yellow"
-  },
-  "result": "blockpalette:bytl_yellow_strip"
-}
