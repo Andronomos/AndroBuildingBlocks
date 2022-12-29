@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "blockpalette:block/mytl_white_strip",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "blockpalette:block/mytl_white_strip"
+    },
+    "axis=z": {
+      "model": "blockpalette:block/mytl_white_strip",
+      "x": 90
+    }
+  }
+}

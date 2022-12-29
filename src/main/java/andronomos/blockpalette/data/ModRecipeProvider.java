@@ -151,6 +151,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		generateThreeByTwoRecipe(ModBlocks.MYTL_BROWN_WALL.get(), ModBlocks.MYTL_BROWN.get(), consumer);		
 		generateSlabRecipe(ModBlocks.MYTL_BROWN_SLAB.get(), ModBlocks.MYTL_BROWN.get().asItem(), consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_BROWN_SLAB.get(), ModBlocks.MYTL_BROWN.get(), 2,  consumer);
+		generateStoneCutterRecipe(ModBlocks.MYTL_BROWN_STRIP.get(), ModBlocks.MYTL_BROWN.get(), 1, consumer);
 
 		generateVariant(ModBlocks.MYTL_GRAY.get(), Items.GRAY_DYE, Items.IRON_INGOT, consumer);
 		generateStairRecipe(ModBlocks.MYTL_GRAY_STAIRS.get(), ModBlocks.MYTL_GRAY.get().asItem(), consumer);
@@ -158,6 +159,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		generateThreeByTwoRecipe(ModBlocks.MYTL_GRAY_WALL.get(), ModBlocks.MYTL_GRAY.get(), consumer);
 		generateSlabRecipe(ModBlocks.MYTL_GRAY_SLAB.get(), ModBlocks.MYTL_GRAY.get().asItem(), consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_GRAY_SLAB.get(), ModBlocks.MYTL_GRAY.get(), 2,  consumer);
+		generateStoneCutterRecipe(ModBlocks.MYTL_GRAY_STRIP.get(), ModBlocks.MYTL_GRAY.get(), 1, consumer);
 
 		generateVariant(ModBlocks.MYTL_GREEN.get(), Items.GREEN_DYE, Items.IRON_INGOT, consumer);
 		generateStairRecipe(ModBlocks.MYTL_GREEN_STAIRS.get(), ModBlocks.MYTL_GREEN.get().asItem(), consumer);
@@ -165,6 +167,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		generateThreeByTwoRecipe(ModBlocks.MYTL_GREEN_WALL.get(), ModBlocks.MYTL_GREEN.get(), consumer);
 		generateSlabRecipe(ModBlocks.MYTL_GREEN_SLAB.get(), ModBlocks.MYTL_GREEN.get().asItem(), consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_GREEN_SLAB.get(), ModBlocks.MYTL_GREEN.get(), 2,  consumer);
+		generateStoneCutterRecipe(ModBlocks.MYTL_GREEN_STRIP.get(), ModBlocks.MYTL_GREEN.get(), 1, consumer);
 
 		generateVariant(ModBlocks.MYTL_WHITE.get(), Items.WHITE_DYE, Items.IRON_INGOT, consumer);
 		generateStairRecipe(ModBlocks.MYTL_WHITE_STAIRS.get(), ModBlocks.MYTL_WHITE.get().asItem(), consumer);
@@ -172,6 +175,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		generateThreeByTwoRecipe(ModBlocks.MYTL_WHITE_WALL.get(), ModBlocks.MYTL_WHITE.get(), consumer);
 		generateSlabRecipe(ModBlocks.MYTL_WHITE_SLAB.get(), ModBlocks.MYTL_WHITE.get().asItem(), consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_WHITE_SLAB.get(), ModBlocks.MYTL_WHITE.get(), 2,  consumer);
+		generateStoneCutterRecipe(ModBlocks.MYTL_WHITE_STRIP.get(), ModBlocks.MYTL_WHITE.get(), 1, consumer);
 
 		generateVariant(ModBlocks.MYTL_RED.get(), Items.RED_DYE, Items.IRON_INGOT, consumer);
 		generateStairRecipe(ModBlocks.MYTL_RED_STAIRS.get(), ModBlocks.MYTL_RED.get().asItem(), consumer);
@@ -179,6 +183,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		generateThreeByTwoRecipe(ModBlocks.MYTL_RED_WALL.get(), ModBlocks.MYTL_RED.get(), consumer);
 		generateSlabRecipe(ModBlocks.MYTL_RED_SLAB.get(), ModBlocks.MYTL_RED.get().asItem(), consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_RED_SLAB.get(), ModBlocks.MYTL_RED.get(), 2,  consumer);
+		generateStoneCutterRecipe(ModBlocks.MYTL_RED_STRIP.get(), ModBlocks.MYTL_RED.get(), 1, consumer);
 
 		generateVariant(ModBlocks.MYTL_ORANGE.get(), Items.ORANGE_DYE, Items.IRON_INGOT, consumer);
 		generateStairRecipe(ModBlocks.MYTL_ORANGE_STAIRS.get(), ModBlocks.MYTL_ORANGE.get().asItem(), consumer);
@@ -186,6 +191,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		generateThreeByTwoRecipe(ModBlocks.MYTL_ORANGE_WALL.get(), ModBlocks.MYTL_ORANGE.get(), consumer);
 		generateSlabRecipe(ModBlocks.MYTL_ORANGE_SLAB.get(), ModBlocks.MYTL_ORANGE.get().asItem(), consumer);
 		generateStoneCutterRecipe(ModBlocks.MYTL_ORANGE_SLAB.get(), ModBlocks.MYTL_ORANGE.get(), 2,  consumer);
+		generateStoneCutterRecipe(ModBlocks.MYTL_ORANGE_STRIP.get(), ModBlocks.MYTL_ORANGE.get(), 1, consumer);
 
 		generateVariant(ModBlocks.MYTL_BLACK.get(), Items.BLACK_DYE, Items.IRON_INGOT, consumer);
 		generateStairRecipe(ModBlocks.MYTL_BLACK_STAIRS.get(), ModBlocks.MYTL_BLACK.get().asItem(), consumer);
