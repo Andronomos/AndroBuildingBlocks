@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "group": "mytl",
+  "ingredient": {
+    "item": "blockpalette:mytl_green"
+  },
+  "result": "blockpalette:mytl_green_stairs"
+}

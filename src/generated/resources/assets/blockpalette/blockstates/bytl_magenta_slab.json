@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blockpalette:block/bytl_magenta_slab"
+    },
+    "type=double": {
+      "model": "blockpalette:block/bytl_magenta"
+    },
+    "type=top": {
+      "model": "blockpalette:block/bytl_magenta_slab_top"
+    }
+  }
+}

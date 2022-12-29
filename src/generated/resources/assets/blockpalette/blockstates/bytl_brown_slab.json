@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blockpalette:block/bytl_brown_slab"
+    },
+    "type=double": {
+      "model": "blockpalette:block/bytl_brown"
+    },
+    "type=top": {
+      "model": "blockpalette:block/bytl_brown_slab_top"
+    }
+  }
+}

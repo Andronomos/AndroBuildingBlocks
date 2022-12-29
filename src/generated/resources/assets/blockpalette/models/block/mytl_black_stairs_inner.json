@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "blockpalette:block/mytl/mytl_black",
+    "side": "blockpalette:block/mytl/mytl_black",
+    "top": "blockpalette:block/mytl/mytl_black"
+  }
+}

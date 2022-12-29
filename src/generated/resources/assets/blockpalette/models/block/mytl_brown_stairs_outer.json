@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "blockpalette:block/mytl/mytl_brown",
+    "side": "blockpalette:block/mytl/mytl_brown",
+    "top": "blockpalette:block/mytl/mytl_brown"
+  }
+}

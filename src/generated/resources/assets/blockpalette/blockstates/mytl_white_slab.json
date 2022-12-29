@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blockpalette:block/mytl_white_slab"
+    },
+    "type=double": {
+      "model": "blockpalette:block/mytl_white"
+    },
+    "type=top": {
+      "model": "blockpalette:block/mytl_white_slab_top"
+    }
+  }
+}

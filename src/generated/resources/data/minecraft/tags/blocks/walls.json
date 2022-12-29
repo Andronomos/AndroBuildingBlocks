@@ -1,0 +1,23 @@
+{
+  "values": [
+    "blockpalette:cytl_wall",
+    "blockpalette:bytl_wall",
+    "blockpalette:bytl_light_gray_wall",
+    "blockpalette:bytl_gray_wall",
+    "blockpalette:bytl_black_wall",
+    "blockpalette:bytl_yellow_wall",
+    "blockpalette:bytl_brown_wall",
+    "blockpalette:bytl_blue_wall",
+    "blockpalette:bytl_red_wall",
+    "blockpalette:bytl_green_wall",
+    "blockpalette:bytl_purple_wall",
+    "blockpalette:bytl_magenta_wall",
+    "blockpalette:mytl_brown_wall",
+    "blockpalette:mytl_gray_wall",
+    "blockpalette:mytl_green_wall",
+    "blockpalette:mytl_white_wall",
+    "blockpalette:mytl_red_wall",
+    "blockpalette:mytl_orange_wall",
+    "blockpalette:mytl_black_wall"
+  ]
+}

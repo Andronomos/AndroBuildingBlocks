@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "blockpalette:block/hzrd/hzrd_gray",
+    "side": "blockpalette:block/hzrd/hzrd_gray",
+    "top": "blockpalette:block/hzrd/hzrd_gray"
+  }
+}

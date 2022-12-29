@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "blockpalette:block/bytl/bytl",
+    "side": "blockpalette:block/bytl/bytl",
+    "top": "blockpalette:block/bytl/bytl"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "group": "bytl",
+  "ingredient": {
+    "item": "blockpalette:bytl_light_gray"
+  },
+  "result": "blockpalette:bytl_light_gray_slab"
+}

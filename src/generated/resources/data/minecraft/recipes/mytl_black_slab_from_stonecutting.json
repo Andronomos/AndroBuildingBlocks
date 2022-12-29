@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "group": "mytl",
+  "ingredient": {
+    "item": "blockpalette:mytl_black"
+  },
+  "result": "blockpalette:mytl_black_slab"
+}

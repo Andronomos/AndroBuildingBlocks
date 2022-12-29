@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "blockpalette:block/bytl/bytl",
+    "side": "blockpalette:block/bytl/bytl_column"
+  }
+}

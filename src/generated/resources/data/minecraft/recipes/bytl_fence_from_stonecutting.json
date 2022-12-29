@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 3,
+  "group": "bytl",
+  "ingredient": {
+    "item": "blockpalette:bytl"
+  },
+  "result": "blockpalette:bytl_fence"
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blockpalette:block/cytl_tile_slab"
+    },
+    "type=double": {
+      "model": "blockpalette:block/cytl_tile"
+    },
+    "type=top": {
+      "model": "blockpalette:block/cytl_tile_slab_top"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blockpalette:block/hzrd_yellow_slab"
+    },
+    "type=double": {
+      "model": "blockpalette:block/hzrd_yellow"
+    },
+    "type=top": {
+      "model": "blockpalette:block/hzrd_yellow_slab_top"
+    }
+  }
+}

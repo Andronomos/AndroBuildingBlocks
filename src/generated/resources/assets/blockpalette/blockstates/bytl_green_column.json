@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "blockpalette:block/bytl_green_column",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "blockpalette:block/bytl_green_column"
+    },
+    "axis=z": {
+      "model": "blockpalette:block/bytl_green_column",
+      "x": 90
+    }
+  }
+}

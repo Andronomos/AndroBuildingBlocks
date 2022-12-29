@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "group": "cytl",
+  "ingredient": {
+    "item": "blockpalette:cytl_tile"
+  },
+  "result": "blockpalette:cytl_tile_stairs"
+}

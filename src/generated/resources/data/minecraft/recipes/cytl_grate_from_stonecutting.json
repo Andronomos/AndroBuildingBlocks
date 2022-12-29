@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "group": "cytl",
+  "ingredient": {
+    "item": "blockpalette:cytl"
+  },
+  "result": "blockpalette:cytl_grate"
+}
