@@ -53,8 +53,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	}
 
 	private void registerGlassBlockStateAndModel(Block block, String name, String textureFolder) {
-		ModelFile model = !textureFolder.equals("") ? models().cubeAll(name, modLoc("block/" + textureFolder + "/" + name)).renderType(new ResourceLocation("minecraft", "cutout"))
-				: models().cubeAll(name, modLoc("block/" + name)).renderType(new ResourceLocation("minecraft", "cutout"));
+		ModelFile model;
+
+		if (!textureFolder.equals("")) {
+			model = models().cubeAll(name, modLoc("block/" + textureFolder + "/" + name))
+					.renderType("translucent");
+		} else {
+			model = models().cubeAll(name, modLoc("block/" + name))
+					.renderType("translucent");
+		}
 
 		simpleBlock(block, model);
 		registerItemModel(name);
@@ -153,7 +160,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	private void registerPaneBlockStateAndModel(IronBarsBlock block, String blockName, String textureFolder) {
 		String cleanName = blockName.replace("_pane", "");
 		String textureName = String.format("block/%s/%s", textureFolder, cleanName);
-		paneBlock(block, cleanName,  modLoc(textureName), modLoc(textureName));
+		paneBlockWithRenderType(block, cleanName,  modLoc(textureName), modLoc(textureName),"translucent");
 		itemModels().singleTexture(blockName, mcLoc("item/generated"), "layer0", modLoc(textureName));
 	}
 
