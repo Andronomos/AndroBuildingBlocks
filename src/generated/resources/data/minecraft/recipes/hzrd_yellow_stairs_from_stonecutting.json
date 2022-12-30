@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "group": "hzrd",
+  "ingredient": {
+    "item": "blockpalette:hzrd_yellow"
+  },
+  "result": "blockpalette:hzrd_yellow_stairs"
+}

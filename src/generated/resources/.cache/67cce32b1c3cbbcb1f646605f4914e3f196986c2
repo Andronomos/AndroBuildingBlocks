@@ -1,4 +1,4 @@
-// 1.19.2	2022-12-30T05:47:30.5648907	LootTables
+// 1.19.2	2022-12-30T06:20:53.8005209	LootTables
 8b55c8fab2617249608bb51c8170a7a914ac071b data/blockpalette/loot_tables/blocks/bytl.json
 a0044ba5f039b9a7fa8198204102a6c750606b67 data/blockpalette/loot_tables/blocks/bytl_black.json
 cd0cb0be2552857b8aaad80f74d38dc217d405f2 data/blockpalette/loot_tables/blocks/bytl_black_column.json
@@ -122,9 +122,12 @@ ea38fde749e02c194f52c82c1ee32ad7acabef8f data/blockpalette/loot_tables/blocks/gl
 668d59bdd91ce2453d3c73bc79d8afce94e8ce93 data/blockpalette/loot_tables/blocks/hzrd.json
 a52716406281488b2104e55b46dd12315b6d888d data/blockpalette/loot_tables/blocks/hzrd_gray.json
 e7dfbd0abea12481208622e74f8fb85d3a9135c0 data/blockpalette/loot_tables/blocks/hzrd_gray_slab.json
+f0154b38a68603ae44d538192f1a8f08066ad11b data/blockpalette/loot_tables/blocks/hzrd_gray_stairs.json
 ef1b9ea41d8db9bba2a4a2801e4c1110d807ef22 data/blockpalette/loot_tables/blocks/hzrd_slab.json
+891f0129d7123b49da870313d014594a8d3b457b data/blockpalette/loot_tables/blocks/hzrd_stairs.json
 c9ae61156e3f68b9261a0e283ab1b60a10332ccb data/blockpalette/loot_tables/blocks/hzrd_yellow.json
 5a3dacc7da7e42125242c46eb3c172e3cac08be8 data/blockpalette/loot_tables/blocks/hzrd_yellow_slab.json
+544e4ecd479a7c7ed0e91af6ad8670da7dcbf1eb data/blockpalette/loot_tables/blocks/hzrd_yellow_stairs.json
 4dcfa3b85a475b2cb6fcdd1091fa31314dfae61f data/blockpalette/loot_tables/blocks/mytl.json
 6cb6c3f86a73dc27636b8aff77e343f5bc8cc201 data/blockpalette/loot_tables/blocks/mytl_black.json
 a2ab0a8958ff46bb01c8ecac48e12e6b66d93645 data/blockpalette/loot_tables/blocks/mytl_black_slab.json

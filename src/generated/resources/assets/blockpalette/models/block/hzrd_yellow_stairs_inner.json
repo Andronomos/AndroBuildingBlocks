@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "blockpalette:block/hzrd/hzrd_yellow",
+    "side": "blockpalette:block/hzrd/hzrd_yellow",
+    "top": "blockpalette:block/hzrd/hzrd_yellow"
+  }
+}

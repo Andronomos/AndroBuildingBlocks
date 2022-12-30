@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "blockpalette:block/hzrd/hzrd",
+    "side": "blockpalette:block/hzrd/hzrd",
+    "top": "blockpalette:block/hzrd/hzrd"
+  }
+}
