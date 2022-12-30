@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "1": {
+      "item": "minecraft:stone"
+    },
+    "2": {
+      "item": "minecraft:bone_meal"
+    }
+  },
+  "pattern": [
+    "121",
+    "212",
+    "121"
+  ],
+  "result": {
+    "count": 4,
+    "item": "blockpalette:bytl_column"
+  }
+}
