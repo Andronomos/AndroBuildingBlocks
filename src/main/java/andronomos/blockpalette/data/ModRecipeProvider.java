@@ -141,16 +141,19 @@ public class ModRecipeProvider extends RecipeProvider {
 		//region hzrd
 		generateVariant(ModBlocks.HZRD.get(), Items.WHITE_DYE, Items.IRON_INGOT, consumer);
 		generateSlabRecipe(ModBlocks.HZRD_SLAB.get(), ModBlocks.HZRD.get().asItem(), consumer);
+		generateStoneCutterRecipe(ModBlocks.HZRD_SLAB.get(), ModBlocks.HZRD.get(), 2,  consumer);
 		generateStairRecipe(ModBlocks.HZRD_STAIRS.get(), ModBlocks.HZRD.get().asItem(), consumer);
 		generateStoneCutterRecipe(ModBlocks.HZRD_STAIRS.get(), ModBlocks.HZRD.get(), 1,  consumer);
 
 		generateColorVariant(ModBlocks.HZRD_YELLOW.get(), ModBlocks.HZRD.get(), Items.YELLOW_DYE, consumer);
 		generateSlabRecipe(ModBlocks.HZRD_YELLOW_SLAB.get(), ModBlocks.HZRD_YELLOW.get().asItem(), consumer);
+		generateStoneCutterRecipe(ModBlocks.HZRD_YELLOW_SLAB.get(), ModBlocks.HZRD_YELLOW.get(), 2,  consumer);
 		generateStairRecipe(ModBlocks.HZRD_YELLOW_STAIRS.get(), ModBlocks.HZRD_YELLOW.get().asItem(), consumer);
 		generateStoneCutterRecipe(ModBlocks.HZRD_YELLOW_STAIRS.get(), ModBlocks.HZRD_YELLOW.get(), 1,  consumer);
 		
 		generateColorVariant(ModBlocks.HZRD_GRAY.get(), ModBlocks.HZRD.get(), Items.GRAY_DYE, consumer);
 		generateSlabRecipe(ModBlocks.HZRD_GRAY_SLAB.get(), ModBlocks.HZRD_GRAY.get().asItem(), consumer);
+		generateStoneCutterRecipe(ModBlocks.HZRD_GRAY_SLAB.get(), ModBlocks.HZRD_GRAY.get(), 2,  consumer);
 		generateStairRecipe(ModBlocks.HZRD_GRAY_STAIRS.get(), ModBlocks.HZRD_GRAY.get().asItem(), consumer);
 		generateStoneCutterRecipe(ModBlocks.HZRD_GRAY_STAIRS.get(), ModBlocks.HZRD_GRAY.get(), 1,  consumer);
 		//endregion

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "group": "hzrd",
+  "ingredient": {
+    "item": "blockpalette:hzrd"
+  },
+  "result": "blockpalette:hzrd_slab"
+}
