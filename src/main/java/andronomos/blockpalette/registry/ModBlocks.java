@@ -12,7 +12,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.util.Arrays;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -35,38 +34,38 @@ public class ModBlocks {
 
 	//region glax
 	public static final RegistryObject<GlassBlock> GLAX_CYAN =  registerBlock("glax_cyan", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
-	//public static final RegistryObject<GlassBlock> GLAX_WHITE = registerBlock("glax_white", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
-	//public static final RegistryObject<GlassBlock> GLAX_BLACK = registerBlock("glax_black", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
-	//public static final RegistryObject<GlassBlock> GLAX_BROWN = registerBlock("glax_brown", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
-	//public static final RegistryObject<GlassBlock> GLAX_RED = registerBlock("glax_red", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
-	//public static final RegistryObject<GlassBlock> GLAX_PINK = registerBlock("glax_pink", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
-	//public static final RegistryObject<GlassBlock> GLAX_BLUE = registerBlock("glax_blue", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
-	//public static final RegistryObject<GlassBlock> GLAX_GREEN = registerBlock("glax_green", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
-	//public static final RegistryObject<GlassBlock> GLAX_GRAY = registerBlock("glax_gray", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
-	//public static final RegistryObject<GlassBlock> GLAX_ORANGE = registerBlock("glax_orange", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
-	//public static final RegistryObject<GlassBlock> GLAX_PURPLE = registerBlock("glax_purple", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
-	//public static final RegistryObject<GlassBlock> GLAX_MAGENTA = registerBlock("glax_magenta", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
-	//public static final RegistryObject<GlassBlock> GLAX_LIME = registerBlock("glax_lime", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
-	//public static final RegistryObject<GlassBlock> GLAX_LIGHT_BLUE = registerBlock("glax_light_blue", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
-	//public static final RegistryObject<GlassBlock> GLAX_LIGHT_GRAY = registerBlock("glax_light_gray", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
-	//public static final RegistryObject<GlassBlock> GLAX_YELLOW = registerBlock("glax_yellow", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
-	//
-	//public static final RegistryObject<Block> GLAX_BLACK_PANE = registerGlaxPaneBlock("black", DyeColor.BLACK);
-	//public static final RegistryObject<Block> GLAX_BLUE_PANE = registerGlaxPaneBlock("blue", DyeColor.BLUE);
-	//public static final RegistryObject<Block> GLAX_BROWN_PANE = registerGlaxPaneBlock("brown", DyeColor.BROWN);
-	//public static final RegistryObject<Block> GLAX_CYAN_PANE = registerGlaxPaneBlock("cyan", DyeColor.CYAN);
-	//public static final RegistryObject<Block> GLAX_GRAY_PANE = registerGlaxPaneBlock("gray", DyeColor.GRAY);
-	//public static final RegistryObject<Block> GLAX_GREEN_PANE = registerGlaxPaneBlock("green", DyeColor.GREEN);
-	//public static final RegistryObject<Block> GLAX_LIGHT_BLUE_PANE = registerGlaxPaneBlock("light_blue", DyeColor.LIGHT_BLUE);
-	//public static final RegistryObject<Block> GLAX_LIGHT_GRAY_PANE = registerGlaxPaneBlock("light_gray", DyeColor.LIGHT_GRAY);
-	//public static final RegistryObject<Block> GLAX_LIME_PANE = registerGlaxPaneBlock("lime", DyeColor.LIME);
-	//public static final RegistryObject<Block> GLAX_MAGENTA_PANE = registerGlaxPaneBlock("magenta", DyeColor.MAGENTA);
-	//public static final RegistryObject<Block> GLAX_ORANGE_PANE = registerGlaxPaneBlock("orange", DyeColor.ORANGE);
-	//public static final RegistryObject<Block> GLAX_PINK_PANE = registerGlaxPaneBlock("pink", DyeColor.PINK);
-	//public static final RegistryObject<Block> GLAX_PURPLE_PANE = registerGlaxPaneBlock("purple", DyeColor.PURPLE);
-	//public static final RegistryObject<Block> GLAX_RED_PANE = registerGlaxPaneBlock("red", DyeColor.RED);
-	//public static final RegistryObject<Block> GLAX_WHITE_PANE = registerGlaxPaneBlock("white", DyeColor.WHITE);
-	//public static final RegistryObject<Block> GLAX_YELLOW_PANE = registerGlaxPaneBlock("yellow", DyeColor.YELLOW);
+	public static final RegistryObject<GlassBlock> GLAX_WHITE = registerBlock("glax_white", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
+	public static final RegistryObject<GlassBlock> GLAX_BLACK = registerBlock("glax_black", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
+	public static final RegistryObject<GlassBlock> GLAX_BROWN = registerBlock("glax_brown", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
+	public static final RegistryObject<GlassBlock> GLAX_RED = registerBlock("glax_red", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
+	public static final RegistryObject<GlassBlock> GLAX_PINK = registerBlock("glax_pink", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
+	public static final RegistryObject<GlassBlock> GLAX_BLUE = registerBlock("glax_blue", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
+	public static final RegistryObject<GlassBlock> GLAX_GREEN = registerBlock("glax_green", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
+	public static final RegistryObject<GlassBlock> GLAX_GRAY = registerBlock("glax_gray", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
+	public static final RegistryObject<GlassBlock> GLAX_ORANGE = registerBlock("glax_orange", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
+	public static final RegistryObject<GlassBlock> GLAX_PURPLE = registerBlock("glax_purple", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
+	public static final RegistryObject<GlassBlock> GLAX_MAGENTA = registerBlock("glax_magenta", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
+	public static final RegistryObject<GlassBlock> GLAX_LIME = registerBlock("glax_lime", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
+	public static final RegistryObject<GlassBlock> GLAX_LIGHT_BLUE = registerBlock("glax_light_blue", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
+	public static final RegistryObject<GlassBlock> GLAX_LIGHT_GRAY = registerBlock("glax_light_gray", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
+	public static final RegistryObject<GlassBlock> GLAX_YELLOW = registerBlock("glax_yellow", () -> new GlassBlock(GLAX_PROPERTIES), ModItems.GetBaseProperties());
+
+	public static final RegistryObject<Block> GLAX_BLACK_PANE = registerGlaxPaneBlock("black", DyeColor.BLACK);
+	public static final RegistryObject<Block> GLAX_BLUE_PANE = registerGlaxPaneBlock("blue", DyeColor.BLUE);
+	public static final RegistryObject<Block> GLAX_BROWN_PANE = registerGlaxPaneBlock("brown", DyeColor.BROWN);
+	public static final RegistryObject<Block> GLAX_CYAN_PANE = registerGlaxPaneBlock("cyan", DyeColor.CYAN);
+	public static final RegistryObject<Block> GLAX_GRAY_PANE = registerGlaxPaneBlock("gray", DyeColor.GRAY);
+	public static final RegistryObject<Block> GLAX_GREEN_PANE = registerGlaxPaneBlock("green", DyeColor.GREEN);
+	public static final RegistryObject<Block> GLAX_LIGHT_BLUE_PANE = registerGlaxPaneBlock("light_blue", DyeColor.LIGHT_BLUE);
+	public static final RegistryObject<Block> GLAX_LIGHT_GRAY_PANE = registerGlaxPaneBlock("light_gray", DyeColor.LIGHT_GRAY);
+	public static final RegistryObject<Block> GLAX_LIME_PANE = registerGlaxPaneBlock("lime", DyeColor.LIME);
+	public static final RegistryObject<Block> GLAX_MAGENTA_PANE = registerGlaxPaneBlock("magenta", DyeColor.MAGENTA);
+	public static final RegistryObject<Block> GLAX_ORANGE_PANE = registerGlaxPaneBlock("orange", DyeColor.ORANGE);
+	public static final RegistryObject<Block> GLAX_PINK_PANE = registerGlaxPaneBlock("pink", DyeColor.PINK);
+	public static final RegistryObject<Block> GLAX_PURPLE_PANE = registerGlaxPaneBlock("purple", DyeColor.PURPLE);
+	public static final RegistryObject<Block> GLAX_RED_PANE = registerGlaxPaneBlock("red", DyeColor.RED);
+	public static final RegistryObject<Block> GLAX_WHITE_PANE = registerGlaxPaneBlock("white", DyeColor.WHITE);
+	public static final RegistryObject<Block> GLAX_YELLOW_PANE = registerGlaxPaneBlock("yellow", DyeColor.YELLOW);
 	//endregion
 
 	//region bytl
