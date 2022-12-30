@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "blockpalette:block/bytl/bytl_light_gray_tile"
-  }
-}
