@@ -1,11 +1,6 @@
 package andronomos.blockpalette;
 
-import andronomos.blockpalette.registry.BytlBlocks;
-import andronomos.blockpalette.registry.GlaxBlocks;
-import andronomos.blockpalette.registry.HzrdBlocks;
-import andronomos.blockpalette.registry.MytlBlocks;
-import andronomos.blockpalette.registry.ModBlocks;
-import andronomos.blockpalette.registry.ModItems;
+import andronomos.blockpalette.registry.*;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.common.MinecraftForge;
@@ -35,6 +30,7 @@ public class BlockPalette {
 		MytlBlocks.register(modEventBus);
 		HzrdBlocks.register(modEventBus);
 		GlaxBlocks.register(modEventBus);
+		CarbonBlocks.register(modEventBus);
 
 		// Register ourselves for server and other game events we are interested in
 		MinecraftForge.EVENT_BUS.register(this);

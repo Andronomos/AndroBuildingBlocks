@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "blockpalette:block/carbon/carbon",
+    "side": "blockpalette:block/carbon/carbon_stripes"
+  }
+}
