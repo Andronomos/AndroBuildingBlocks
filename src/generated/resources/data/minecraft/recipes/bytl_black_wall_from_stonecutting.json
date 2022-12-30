@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "group": "bytl",
+  "ingredient": {
+    "item": "blockpalette:bytl_black"
+  },
+  "result": "blockpalette:bytl_black_wall"
+}

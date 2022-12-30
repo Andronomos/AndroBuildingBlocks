@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "group": "mytl",
-  "ingredient": {
-    "item": "blockpalette:mytl_red"
-  },
-  "result": "blockpalette:mytl_red_strip"
-}

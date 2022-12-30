@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "group": "mytl",
+  "ingredient": {
+    "item": "blockpalette:mytl_brown"
+  },
+  "result": "blockpalette:mytl_brown_wall"
+}
