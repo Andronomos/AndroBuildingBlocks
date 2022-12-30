@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
@@ -251,7 +252,32 @@ public class ModRecipeProvider extends RecipeProvider {
 		generateThreeByTwoRecipe(ModBlocks.GLAX_BROWN_PANE.get(), ModBlocks.GLAX_BROWN.get(), consumer);
 		generateThreeByTwoRecipe(ModBlocks.GLAX_MAGENTA_PANE.get(), ModBlocks.GLAX_MAGENTA.get(), consumer);
 		//endregion
+
+
+		ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
+			generateVariantRecipes(b, consumer);
+		});
 	}
+
+
+	private void generateVariantRecipes(Block outputBlock, Consumer<FinishedRecipe> consumer) {
+		String blockName = ForgeRegistries.BLOCKS.getKey(outputBlock).getPath();
+		String blockType = outputBlock.getClass().getSimpleName();
+		String variantName = blockName.contains("_") ? blockName.substring(0, blockName.lastIndexOf('_')) : blockName;
+
+		switch(blockType) {
+			case "StairBlock" -> {
+				String sourceName = blockName.substring(0, blockName.indexOf("_stairs");
+				Block sourceBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(BlockPalette.MODID, sourceName));
+				Item sourceBlockItem = sourceBlock.asItem();
+
+				generateStairRecipe((StairBlock) outputBlock, sourceBlockItem, consumer);
+				generateStoneCutterRecipe((StairBlock) outputBlock, sourceBlock, 1, consumer);
+			}
+		}
+	}
+
+
 
 	private void generateVariant(Block output, Item firstInputItem, Item secondInputItem, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(output, 4);
