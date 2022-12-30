@@ -27,6 +27,12 @@ public class ModBlocks {
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, BlockPalette.MODID);
 
 
+	public static final RegistryObject<Block> UN_ONE = registerBlock("un_one", () -> new Block(PROPERTIES));
+	public static final RegistryObject<Block> UN_TWO = registerBlock("un_two", () -> new Block(PROPERTIES));
+
+
+
+
 	public static RegistryObject<StairBlock> registerStairBlock(final String name, Supplier<Block> source) {
 		return registerBlock(name, () -> new StairBlock(() -> source.get().defaultBlockState(), PROPERTIES), ModItems.GetBaseProperties());
 	}

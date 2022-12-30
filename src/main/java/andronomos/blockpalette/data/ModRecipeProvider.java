@@ -1,11 +1,7 @@
 package andronomos.blockpalette.data;
 
 import andronomos.blockpalette.BlockPalette;
-import andronomos.blockpalette.registry.BytlBlocks;
-import andronomos.blockpalette.registry.GlaxBlocks;
-import andronomos.blockpalette.registry.HzrdBlocks;
-import andronomos.blockpalette.registry.MytlBlocks;
-import andronomos.blockpalette.registry.ModBlocks;
+import andronomos.blockpalette.registry.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
@@ -33,58 +29,44 @@ public class ModRecipeProvider extends RecipeProvider {
 
 		//region bytl
 		generateVariant(BytlBlocks.BYTL.get(), Items.STONE, Items.BONE_MEAL, consumer);
-		generateColorVariant(BytlBlocks.BYTL_LIGHT_GRAY.get(), BytlBlocks.BYTL.get(), Items.LIGHT_GRAY_DYE, consumer);
-		generateColorVariant(BytlBlocks.BYTL_GRAY.get(), BytlBlocks.BYTL.get(), Items.GRAY_DYE, consumer);
-		generateColorVariant(BytlBlocks.BYTL_BLACK.get(), BytlBlocks.BYTL.get(), Items.BLACK_DYE, consumer);
-		generateColorVariant(BytlBlocks.BYTL_YELLOW.get(), BytlBlocks.BYTL.get(), Items.YELLOW_DYE, consumer);
-		generateColorVariant(BytlBlocks.BYTL_BROWN.get(), BytlBlocks.BYTL.get(), Items.BROWN_DYE, consumer);
-		generateColorVariant(BytlBlocks.BYTL_BLUE.get(), BytlBlocks.BYTL.get(), Items.BLUE_DYE, consumer);
-		generateColorVariant(BytlBlocks.BYTL_RED.get(), BytlBlocks.BYTL.get(), Items.RED_DYE, consumer);
-		generateColorVariant(BytlBlocks.BYTL_GREEN.get(), BytlBlocks.BYTL.get(), Items.GREEN_DYE, consumer);
-		generateColorVariant(BytlBlocks.BYTL_PURPLE.get(), BytlBlocks.BYTL.get(), Items.PURPLE_DYE, consumer);
-		generateColorVariant(BytlBlocks.BYTL_MAGENTA.get(), BytlBlocks.BYTL.get(), Items.MAGENTA_DYE, consumer);
+		generateColor(BytlBlocks.BYTL_LIGHT_GRAY.get(), BytlBlocks.BYTL.get(), Items.LIGHT_GRAY_DYE, consumer);
+		generateColor(BytlBlocks.BYTL_GRAY.get(), BytlBlocks.BYTL.get(), Items.GRAY_DYE, consumer);
+		generateColor(BytlBlocks.BYTL_BLACK.get(), BytlBlocks.BYTL.get(), Items.BLACK_DYE, consumer);
+		generateColor(BytlBlocks.BYTL_YELLOW.get(), BytlBlocks.BYTL.get(), Items.YELLOW_DYE, consumer);
+		generateColor(BytlBlocks.BYTL_BROWN.get(), BytlBlocks.BYTL.get(), Items.BROWN_DYE, consumer);
+		generateColor(BytlBlocks.BYTL_BLUE.get(), BytlBlocks.BYTL.get(), Items.BLUE_DYE, consumer);
+		generateColor(BytlBlocks.BYTL_RED.get(), BytlBlocks.BYTL.get(), Items.RED_DYE, consumer);
+		generateColor(BytlBlocks.BYTL_GREEN.get(), BytlBlocks.BYTL.get(), Items.GREEN_DYE, consumer);
+		generateColor(BytlBlocks.BYTL_PURPLE.get(), BytlBlocks.BYTL.get(), Items.PURPLE_DYE, consumer);
+		generateColor(BytlBlocks.BYTL_MAGENTA.get(), BytlBlocks.BYTL.get(), Items.MAGENTA_DYE, consumer);
 		// endregion
 
 		//region hzrd
 		generateVariant(HzrdBlocks.HZRD.get(), Items.WHITE_DYE, Items.IRON_INGOT, consumer);
-		generateSlabRecipe(HzrdBlocks.HZRD_SLAB.get(), HzrdBlocks.HZRD.get().asItem(), consumer);
-		generateStoneCutterRecipe(HzrdBlocks.HZRD_SLAB.get(), HzrdBlocks.HZRD.get(), 2,  consumer);
-		generateStairRecipe(HzrdBlocks.HZRD_STAIRS.get(), HzrdBlocks.HZRD.get().asItem(), consumer);
-		generateStoneCutterRecipe(HzrdBlocks.HZRD_STAIRS.get(), HzrdBlocks.HZRD.get(), 1,  consumer);
-
-		generateColorVariant(HzrdBlocks.HZRD_YELLOW.get(), HzrdBlocks.HZRD.get(), Items.YELLOW_DYE, consumer);
-		generateSlabRecipe(HzrdBlocks.HZRD_YELLOW_SLAB.get(), HzrdBlocks.HZRD_YELLOW.get().asItem(), consumer);
-		generateStoneCutterRecipe(HzrdBlocks.HZRD_YELLOW_SLAB.get(), HzrdBlocks.HZRD_YELLOW.get(), 2,  consumer);
-		generateStairRecipe(HzrdBlocks.HZRD_YELLOW_STAIRS.get(), HzrdBlocks.HZRD_YELLOW.get().asItem(), consumer);
-		generateStoneCutterRecipe(HzrdBlocks.HZRD_YELLOW_STAIRS.get(), HzrdBlocks.HZRD_YELLOW.get(), 1,  consumer);
-
-		generateColorVariant(HzrdBlocks.HZRD_GRAY.get(), HzrdBlocks.HZRD.get(), Items.GRAY_DYE, consumer);
-		generateSlabRecipe(HzrdBlocks.HZRD_GRAY_SLAB.get(), HzrdBlocks.HZRD_GRAY.get().asItem(), consumer);
-		generateStoneCutterRecipe(HzrdBlocks.HZRD_GRAY_SLAB.get(), HzrdBlocks.HZRD_GRAY.get(), 2,  consumer);
-		generateStairRecipe(HzrdBlocks.HZRD_GRAY_STAIRS.get(), HzrdBlocks.HZRD_GRAY.get().asItem(), consumer);
-		generateStoneCutterRecipe(HzrdBlocks.HZRD_GRAY_STAIRS.get(), HzrdBlocks.HZRD_GRAY.get(), 1,  consumer);
+		generateColor(HzrdBlocks.HZRD_YELLOW.get(), HzrdBlocks.HZRD.get(), Items.YELLOW_DYE, consumer);
+		generateColor(HzrdBlocks.HZRD_GRAY.get(), HzrdBlocks.HZRD.get(), Items.GRAY_DYE, consumer);
 		//endregion
 
 		//region mytl
 		generateVariant(MytlBlocks.MYTL.get(), Items.WHITE_DYE, Items.IRON_INGOT, consumer);
 		generateStoneCutterRecipe(MytlBlocks.MYTL_STRIP.get(), MytlBlocks.MYTL.get(), 1, consumer);
 
-		generateColorVariant(MytlBlocks.MYTL_GRAY.get(), MytlBlocks.MYTL.get(), Items.GRAY_DYE, consumer);
+		generateColor(MytlBlocks.MYTL_GRAY.get(), MytlBlocks.MYTL.get(), Items.GRAY_DYE, consumer);
 		generateStoneCutterRecipe(MytlBlocks.MYTL_GRAY_STRIP.get(), MytlBlocks.MYTL_GRAY.get(), 1, consumer);
 
-		generateColorVariant(MytlBlocks.MYTL_BLACK.get(), MytlBlocks.MYTL.get(), Items.BLACK_DYE, consumer);
+		generateColor(MytlBlocks.MYTL_BLACK.get(), MytlBlocks.MYTL.get(), Items.BLACK_DYE, consumer);
 		generateStoneCutterRecipe(MytlBlocks.MYTL_BLACK_STRIP.get(), MytlBlocks.MYTL_BLACK.get(), 1, consumer);
 
-		generateColorVariant(MytlBlocks.MYTL_BROWN.get(), MytlBlocks.MYTL.get(), Items.BROWN_DYE, consumer);
+		generateColor(MytlBlocks.MYTL_BROWN.get(), MytlBlocks.MYTL.get(), Items.BROWN_DYE, consumer);
 		generateStoneCutterRecipe(MytlBlocks.MYTL_BROWN_STRIP.get(), MytlBlocks.MYTL_BROWN.get(), 1, consumer);
 
-		generateColorVariant(MytlBlocks.MYTL_GREEN.get(), MytlBlocks.MYTL.get(), Items.GREEN_DYE, consumer);
+		generateColor(MytlBlocks.MYTL_GREEN.get(), MytlBlocks.MYTL.get(), Items.GREEN_DYE, consumer);
 		generateStoneCutterRecipe(MytlBlocks.MYTL_GREEN_STRIP.get(), MytlBlocks.MYTL_GREEN.get(), 1, consumer);
 
-		generateColorVariant(MytlBlocks.MYTL_RED.get(), MytlBlocks.MYTL.get(), Items.RED_DYE, consumer);
+		generateColor(MytlBlocks.MYTL_RED.get(), MytlBlocks.MYTL.get(), Items.RED_DYE, consumer);
 		generateStoneCutterRecipe(MytlBlocks.MYTL_RED_STRIP.get(), MytlBlocks.MYTL_RED.get(), 1, consumer);
 
-		generateColorVariant(MytlBlocks.MYTL_ORANGE.get(), MytlBlocks.MYTL.get(), Items.ORANGE_DYE, consumer);
+		generateColor(MytlBlocks.MYTL_ORANGE.get(), MytlBlocks.MYTL.get(), Items.ORANGE_DYE, consumer);
 		generateStoneCutterRecipe(MytlBlocks.MYTL_ORANGE_STRIP.get(), MytlBlocks.MYTL_ORANGE.get(), 1, consumer);
 		//endregion
 
@@ -124,6 +106,11 @@ public class ModRecipeProvider extends RecipeProvider {
 		generateThreeByTwoRecipe(GlaxBlocks.GLAX_MAGENTA_PANE.get(), GlaxBlocks.GLAX_MAGENTA.get(), consumer);
 		//endregion
 
+		//region carbon
+		generateSmeltingRecipe(CarbonBlocks.CARBON.get(), Blocks.COAL_BLOCK, consumer);
+		generateTwoByTwoRecipe(CarbonBlocks.CARBON_TILE.get(), CarbonBlocks.CARBON.get(), consumer);
+		generateStoneCutterRecipe(CarbonBlocks.CARBON_STRIPES.get(), CarbonBlocks.CARBON.get(), 1, consumer);
+		//endregion
 
 		ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 			String blockName = ForgeRegistries.BLOCKS.getKey(b).getPath();
@@ -137,6 +124,7 @@ public class ModRecipeProvider extends RecipeProvider {
 
 					generateStairRecipe((StairBlock) b, sourceBlock.asItem(), consumer);
 					generateStoneCutterRecipe(b, sourceBlock, 1, consumer);
+					break;
 				}
 				case "SlabBlock": {
 					sourceBlockName = blockName.substring(0, blockName.indexOf("_slab"));
@@ -144,6 +132,7 @@ public class ModRecipeProvider extends RecipeProvider {
 
 					generateSlabRecipe((SlabBlock) b, sourceBlock.asItem(), consumer);
 					generateStoneCutterRecipe(b, sourceBlock, 1, consumer);
+					break;
 				}
 				case "WallBlock": {
 					sourceBlockName = blockName.substring(0, blockName.indexOf("_wall"));
@@ -151,11 +140,13 @@ public class ModRecipeProvider extends RecipeProvider {
 
 					generateThreeByTwoRecipe(b, sourceBlock, consumer);
 					generateStoneCutterRecipe(b, sourceBlock, 1, consumer);
+					break;
 				}
 				case "FenceBlock": {
 					sourceBlockName = blockName.substring(0, blockName.indexOf("_fence"));
 					Block sourceBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(BlockPalette.MODID, sourceBlockName));
 					generateStoneCutterRecipe(b, sourceBlock, 3, consumer);
+					break;
 				}
 			}
 		});
@@ -176,7 +167,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		shaped.save(consumer, new ResourceLocation(BlockPalette.MODID, ForgeRegistries.BLOCKS.getKey(output).getPath() + "_from_" + ForgeRegistries.ITEMS.getKey(secondInputItem).getPath()));
 	}
 
-	private void generateColorVariant(Block output, Block sourceBlock, Item inputItem, Consumer<FinishedRecipe> consumer) {
+	private void generateColor(Block output, Block sourceBlock, Item inputItem, Consumer<FinishedRecipe> consumer) {
 		ShapelessRecipeBuilder shapeless = ShapelessRecipeBuilder.shapeless(output, 1);
 		shapeless.requires(sourceBlock.asItem());
 		shapeless.requires(inputItem);
@@ -246,7 +237,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		String variantName = blockName;
 
 		if(blockName.contains("_")) {
-			variantName = blockName.substring(0, blockName.indexOf("_", 0));
+			variantName = blockName.substring(0, blockName.indexOf("_"));
 		}
 
 		return variantName;

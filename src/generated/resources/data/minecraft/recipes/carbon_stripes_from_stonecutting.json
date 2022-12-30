@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "group": "carbon",
+  "ingredient": {
+    "item": "blockpalette:carbon"
+  },
+  "result": "blockpalette:carbon_stripes"
+}
