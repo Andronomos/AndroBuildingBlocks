@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blockpalette:hzrd_yellow_from_hzrd"
+        "recipe": "blockpalette:hzrd_yellow"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "blockpalette:hzrd_yellow_from_hzrd"
+      "blockpalette:hzrd_yellow"
     ]
   }
 }

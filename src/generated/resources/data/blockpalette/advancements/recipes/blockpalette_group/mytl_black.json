@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "blockpalette:hzrd"
+              "blockpalette:mytl"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blockpalette:hzrd_gray_from_hzrd"
+        "recipe": "blockpalette:mytl_black"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "blockpalette:hzrd_gray_from_hzrd"
+      "blockpalette:mytl_black"
     ]
   }
 }

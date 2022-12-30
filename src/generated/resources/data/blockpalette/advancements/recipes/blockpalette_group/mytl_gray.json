@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blockpalette:mytl_brown_from_mytl"
+        "recipe": "blockpalette:mytl_gray"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "blockpalette:mytl_brown_from_mytl"
+      "blockpalette:mytl_gray"
     ]
   }
 }
