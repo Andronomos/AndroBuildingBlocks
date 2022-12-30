@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/template_glass_pane_noside",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "all": "blockpalette:block/glax/glax_lime",
+    "pane": "blockpalette:block/glax/glax_lime"
+  }
+}

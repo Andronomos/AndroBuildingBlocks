@@ -9,6 +9,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -207,39 +208,39 @@ public class ModRecipeProvider extends RecipeProvider {
 		//endregion
 
 		//region glax
-		//generateSmeltingRecipe(ModBlocks.GLAX_WHITE.get(), Blocks.WHITE_STAINED_GLASS, consumer);
-		//generateSmeltingRecipe(ModBlocks.GLAX_GRAY.get(), Blocks.GRAY_STAINED_GLASS, consumer);
-		//generateSmeltingRecipe(ModBlocks.GLAX_BLACK.get(), Blocks.BLACK_STAINED_GLASS, consumer);
-		//generateSmeltingRecipe(ModBlocks.GLAX_RED.get(), Blocks.RED_STAINED_GLASS, consumer);
-		//generateSmeltingRecipe(ModBlocks.GLAX_GREEN.get(), Blocks.GREEN_STAINED_GLASS, consumer);
-		//generateSmeltingRecipe(ModBlocks.GLAX_BLUE.get(), Blocks.BLUE_STAINED_GLASS, consumer);
-		//generateSmeltingRecipe(ModBlocks.GLAX_ORANGE.get(), Blocks.ORANGE_STAINED_GLASS, consumer);
-		//generateSmeltingRecipe(ModBlocks.GLAX_LIME.get(), Blocks.LIME_STAINED_GLASS, consumer);
-		//generateSmeltingRecipe(ModBlocks.GLAX_LIGHT_BLUE.get(), Blocks.LIGHT_BLUE_STAINED_GLASS, consumer);
-		//generateSmeltingRecipe(ModBlocks.GLAX_LIGHT_GRAY.get(), Blocks.LIGHT_GRAY_STAINED_GLASS, consumer);
-		//generateSmeltingRecipe(ModBlocks.GLAX_PINK.get(), Blocks.PINK_STAINED_GLASS, consumer);
-		//generateSmeltingRecipe(ModBlocks.GLAX_PURPLE.get(), Blocks.PURPLE_STAINED_GLASS, consumer);
-		//generateSmeltingRecipe(ModBlocks.GLAX_CYAN.get(), Blocks.CYAN_STAINED_GLASS, consumer);
-		//generateSmeltingRecipe(ModBlocks.GLAX_YELLOW.get(), Blocks.YELLOW_STAINED_GLASS, consumer);
-		//generateSmeltingRecipe(ModBlocks.GLAX_BROWN.get(), Blocks.BROWN_STAINED_GLASS, consumer);
-		//generateSmeltingRecipe(ModBlocks.GLAX_MAGENTA.get(), Blocks.MAGENTA_STAINED_GLASS, consumer);
-		//
-		//generateThreeByTwoRecipe(ModBlocks.GLAX_WHITE_PANE.get(), ModBlocks.GLAX_WHITE.get(), consumer);
-		//generateThreeByTwoRecipe(ModBlocks.GLAX_GRAY_PANE.get(), ModBlocks.GLAX_GRAY.get(), consumer);
-		//generateThreeByTwoRecipe(ModBlocks.GLAX_BLACK_PANE.get(), ModBlocks.GLAX_BLACK.get(), consumer);
-		//generateThreeByTwoRecipe(ModBlocks.GLAX_RED_PANE.get(), ModBlocks.GLAX_RED.get(), consumer);
-		//generateThreeByTwoRecipe(ModBlocks.GLAX_GREEN_PANE.get(), ModBlocks.GLAX_GREEN.get(), consumer);
-		//generateThreeByTwoRecipe(ModBlocks.GLAX_BLUE_PANE.get(), ModBlocks.GLAX_BLUE.get(), consumer);
-		//generateThreeByTwoRecipe(ModBlocks.GLAX_ORANGE_PANE.get(), ModBlocks.GLAX_ORANGE.get(), consumer);
-		//generateThreeByTwoRecipe(ModBlocks.GLAX_LIME_PANE.get(), ModBlocks.GLAX_LIME.get(), consumer);
-		//generateThreeByTwoRecipe(ModBlocks.GLAX_LIGHT_BLUE_PANE.get(), ModBlocks.GLAX_LIGHT_BLUE.get(), consumer);
-		//generateThreeByTwoRecipe(ModBlocks.GLAX_LIGHT_GRAY_PANE.get(), ModBlocks.GLAX_LIGHT_GRAY.get(), consumer);
-		//generateThreeByTwoRecipe(ModBlocks.GLAX_PINK_PANE.get(), ModBlocks.GLAX_PINK.get(), consumer);
-		//generateThreeByTwoRecipe(ModBlocks.GLAX_PURPLE_PANE.get(), ModBlocks.GLAX_PURPLE.get(), consumer);
-		//generateThreeByTwoRecipe(ModBlocks.GLAX_CYAN_PANE.get(), ModBlocks.GLAX_CYAN.get(), consumer);
-		//generateThreeByTwoRecipe(ModBlocks.GLAX_YELLOW_PANE.get(), ModBlocks.GLAX_YELLOW.get(), consumer);
-		//generateThreeByTwoRecipe(ModBlocks.GLAX_BROWN_PANE.get(), ModBlocks.GLAX_BROWN.get(), consumer);
-		//generateThreeByTwoRecipe(ModBlocks.GLAX_MAGENTA_PANE.get(), ModBlocks.GLAX_MAGENTA.get(), consumer);
+		generateSmeltingRecipe(ModBlocks.GLAX_WHITE.get(), Blocks.WHITE_STAINED_GLASS, consumer);
+		generateSmeltingRecipe(ModBlocks.GLAX_GRAY.get(), Blocks.GRAY_STAINED_GLASS, consumer);
+		generateSmeltingRecipe(ModBlocks.GLAX_BLACK.get(), Blocks.BLACK_STAINED_GLASS, consumer);
+		generateSmeltingRecipe(ModBlocks.GLAX_RED.get(), Blocks.RED_STAINED_GLASS, consumer);
+		generateSmeltingRecipe(ModBlocks.GLAX_GREEN.get(), Blocks.GREEN_STAINED_GLASS, consumer);
+		generateSmeltingRecipe(ModBlocks.GLAX_BLUE.get(), Blocks.BLUE_STAINED_GLASS, consumer);
+		generateSmeltingRecipe(ModBlocks.GLAX_ORANGE.get(), Blocks.ORANGE_STAINED_GLASS, consumer);
+		generateSmeltingRecipe(ModBlocks.GLAX_LIME.get(), Blocks.LIME_STAINED_GLASS, consumer);
+		generateSmeltingRecipe(ModBlocks.GLAX_LIGHT_BLUE.get(), Blocks.LIGHT_BLUE_STAINED_GLASS, consumer);
+		generateSmeltingRecipe(ModBlocks.GLAX_LIGHT_GRAY.get(), Blocks.LIGHT_GRAY_STAINED_GLASS, consumer);
+		generateSmeltingRecipe(ModBlocks.GLAX_PINK.get(), Blocks.PINK_STAINED_GLASS, consumer);
+		generateSmeltingRecipe(ModBlocks.GLAX_PURPLE.get(), Blocks.PURPLE_STAINED_GLASS, consumer);
+		generateSmeltingRecipe(ModBlocks.GLAX_CYAN.get(), Blocks.CYAN_STAINED_GLASS, consumer);
+		generateSmeltingRecipe(ModBlocks.GLAX_YELLOW.get(), Blocks.YELLOW_STAINED_GLASS, consumer);
+		generateSmeltingRecipe(ModBlocks.GLAX_BROWN.get(), Blocks.BROWN_STAINED_GLASS, consumer);
+		generateSmeltingRecipe(ModBlocks.GLAX_MAGENTA.get(), Blocks.MAGENTA_STAINED_GLASS, consumer);
+
+		generateThreeByTwoRecipe(ModBlocks.GLAX_WHITE_PANE.get(), ModBlocks.GLAX_WHITE.get(), consumer);
+		generateThreeByTwoRecipe(ModBlocks.GLAX_GRAY_PANE.get(), ModBlocks.GLAX_GRAY.get(), consumer);
+		generateThreeByTwoRecipe(ModBlocks.GLAX_BLACK_PANE.get(), ModBlocks.GLAX_BLACK.get(), consumer);
+		generateThreeByTwoRecipe(ModBlocks.GLAX_RED_PANE.get(), ModBlocks.GLAX_RED.get(), consumer);
+		generateThreeByTwoRecipe(ModBlocks.GLAX_GREEN_PANE.get(), ModBlocks.GLAX_GREEN.get(), consumer);
+		generateThreeByTwoRecipe(ModBlocks.GLAX_BLUE_PANE.get(), ModBlocks.GLAX_BLUE.get(), consumer);
+		generateThreeByTwoRecipe(ModBlocks.GLAX_ORANGE_PANE.get(), ModBlocks.GLAX_ORANGE.get(), consumer);
+		generateThreeByTwoRecipe(ModBlocks.GLAX_LIME_PANE.get(), ModBlocks.GLAX_LIME.get(), consumer);
+		generateThreeByTwoRecipe(ModBlocks.GLAX_LIGHT_BLUE_PANE.get(), ModBlocks.GLAX_LIGHT_BLUE.get(), consumer);
+		generateThreeByTwoRecipe(ModBlocks.GLAX_LIGHT_GRAY_PANE.get(), ModBlocks.GLAX_LIGHT_GRAY.get(), consumer);
+		generateThreeByTwoRecipe(ModBlocks.GLAX_PINK_PANE.get(), ModBlocks.GLAX_PINK.get(), consumer);
+		generateThreeByTwoRecipe(ModBlocks.GLAX_PURPLE_PANE.get(), ModBlocks.GLAX_PURPLE.get(), consumer);
+		generateThreeByTwoRecipe(ModBlocks.GLAX_CYAN_PANE.get(), ModBlocks.GLAX_CYAN.get(), consumer);
+		generateThreeByTwoRecipe(ModBlocks.GLAX_YELLOW_PANE.get(), ModBlocks.GLAX_YELLOW.get(), consumer);
+		generateThreeByTwoRecipe(ModBlocks.GLAX_BROWN_PANE.get(), ModBlocks.GLAX_BROWN.get(), consumer);
+		generateThreeByTwoRecipe(ModBlocks.GLAX_MAGENTA_PANE.get(), ModBlocks.GLAX_MAGENTA.get(), consumer);
 		//endregion
 	}
 

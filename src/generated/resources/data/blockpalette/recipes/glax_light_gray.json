@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "minecraft:light_gray_stained_glass"
+  },
+  "result": "blockpalette:glax_light_gray"
+}
