@@ -17,6 +17,8 @@
     "blockpalette:mytl_brown_wall",
     "blockpalette:mytl_green_wall",
     "blockpalette:mytl_red_wall",
-    "blockpalette:mytl_orange_wall"
+    "blockpalette:mytl_orange_wall",
+    "blockpalette:carbon_wall",
+    "blockpalette:carbon_tile_wall"
   ]
 }

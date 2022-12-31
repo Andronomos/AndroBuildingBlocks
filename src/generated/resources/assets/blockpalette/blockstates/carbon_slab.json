@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blockpalette:block/carbon_slab"
+    },
+    "type=double": {
+      "model": "blockpalette:block/carbon"
+    },
+    "type=top": {
+      "model": "blockpalette:block/carbon_slab_top"
+    }
+  }
+}

@@ -1,4 +1,4 @@
-// 1.19.2	2022-12-30T15:16:19.8048658	LootTables
+// 1.19.2	2022-12-30T15:27:08.1950646	LootTables
 8b55c8fab2617249608bb51c8170a7a914ac071b data/blockpalette/loot_tables/blocks/bytl.json
 a0044ba5f039b9a7fa8198204102a6c750606b67 data/blockpalette/loot_tables/blocks/bytl_black.json
 7095c0ccc92b7a1d56ef2e4f1641070fd7ed570e data/blockpalette/loot_tables/blocks/bytl_black_fence.json
@@ -55,8 +55,16 @@ e144361bf4b48e748af9d4ed3b822bcb0629da04 data/blockpalette/loot_tables/blocks/by
 db77ce5bb5c5029c0e78477d78528bd69be70c59 data/blockpalette/loot_tables/blocks/bytl_yellow_stairs.json
 8465914ae1b36c7080b19a1bc7607745b63d70b4 data/blockpalette/loot_tables/blocks/bytl_yellow_wall.json
 19ce847e16d2df04750f38be06254943ea944fb3 data/blockpalette/loot_tables/blocks/carbon.json
+f274ea05698b60787c828faded3dbab0e2aacfda data/blockpalette/loot_tables/blocks/carbon_fence.json
+dc8ef855b4a666bffb2d922bf4e1cd7306b7b068 data/blockpalette/loot_tables/blocks/carbon_slab.json
+d0a1df18c6d4e1e08f9d67c8e5a9648ccc6d3126 data/blockpalette/loot_tables/blocks/carbon_stairs.json
 040cdb6b263f11544d3ac76c8563bec00e4bf627 data/blockpalette/loot_tables/blocks/carbon_stripes.json
 5e20f69df1a6430a9f9df2ff2c62adac5d295bf4 data/blockpalette/loot_tables/blocks/carbon_tile.json
+85de5a2fb229c1a7d7c926eb4d5a1f7f6d06865e data/blockpalette/loot_tables/blocks/carbon_tile_fence.json
+3c54e79be78be650e84e5870e65d1ac883dba9e3 data/blockpalette/loot_tables/blocks/carbon_tile_slab.json
+27199d5914caec7b213c3c15e01ea2b8de191dfc data/blockpalette/loot_tables/blocks/carbon_tile_stairs.json
+e61a3314adfcddb27c51cea9dde393b62160185f data/blockpalette/loot_tables/blocks/carbon_tile_wall.json
+797e75ef5efb924b3cec31efc97662690a4d0966 data/blockpalette/loot_tables/blocks/carbon_wall.json
 8504f7daa846db85d1332934972a36f411a1d505 data/blockpalette/loot_tables/blocks/glax_black.json
 722485dde963e7dd335167cde152af4e4ae6d427 data/blockpalette/loot_tables/blocks/glax_black_pane.json
 d1c87db3389c9ed62a143b9dde88e2473d912ef7 data/blockpalette/loot_tables/blocks/glax_blue.json

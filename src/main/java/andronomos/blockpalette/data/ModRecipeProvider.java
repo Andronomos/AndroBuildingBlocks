@@ -48,7 +48,7 @@ public class ModRecipeProvider extends RecipeProvider {
 		//endregion
 
 		//region mytl
-		generateVariant(MytlBlocks.MYTL.get(), Items.WHITE_DYE, Items.IRON_INGOT, consumer);
+		generateVariant(MytlBlocks.MYTL.get(), Blocks.SMOOTH_STONE.asItem(), Items.IRON_INGOT, consumer);
 		generateStoneCutterRecipe(MytlBlocks.MYTL_STRIP.get(), MytlBlocks.MYTL.get(), 1, consumer);
 
 		generateColor(MytlBlocks.MYTL_GRAY.get(), MytlBlocks.MYTL.get(), Items.GRAY_DYE, consumer);

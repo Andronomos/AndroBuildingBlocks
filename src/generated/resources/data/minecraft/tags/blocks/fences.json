@@ -10,6 +10,8 @@
     "blockpalette:bytl_red_fence",
     "blockpalette:bytl_green_fence",
     "blockpalette:bytl_purple_fence",
-    "blockpalette:bytl_magenta_fence"
+    "blockpalette:bytl_magenta_fence",
+    "blockpalette:carbon_fence",
+    "blockpalette:carbon_tile_fence"
   ]
 }

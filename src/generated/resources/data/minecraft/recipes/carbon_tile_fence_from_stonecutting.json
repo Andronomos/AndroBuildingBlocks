@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 3,
+  "group": "carbon",
+  "ingredient": {
+    "item": "blockpalette:carbon_tile"
+  },
+  "result": "blockpalette:carbon_tile_fence"
+}

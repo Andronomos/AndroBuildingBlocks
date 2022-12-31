@@ -134,7 +134,15 @@
     "blockpalette:glax_white_pane",
     "blockpalette:glax_yellow_pane",
     "blockpalette:carbon",
+    "blockpalette:carbon_slab",
+    "blockpalette:carbon_stairs",
+    "blockpalette:carbon_wall",
+    "blockpalette:carbon_fence",
     "blockpalette:carbon_tile",
+    "blockpalette:carbon_tile_slab",
+    "blockpalette:carbon_tile_stairs",
+    "blockpalette:carbon_tile_wall",
+    "blockpalette:carbon_tile_fence",
     "blockpalette:carbon_stripes"
   ]
 }
