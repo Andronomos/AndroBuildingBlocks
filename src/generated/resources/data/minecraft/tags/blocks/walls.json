@@ -14,6 +14,11 @@
     "blockpalette:rough_pink_concrete_wall",
     "blockpalette:rough_purple_concrete_wall",
     "blockpalette:rough_red_concrete_wall",
-    "blockpalette:rough_yellow_concrete_wall"
+    "blockpalette:rough_yellow_concrete_wall",
+    "blockpalette:barricade_gray_wall",
+    "blockpalette:barricade_yellow_wall",
+    "blockpalette:barricade_green_wall",
+    "blockpalette:barricade_blue_wall",
+    "blockpalette:barricade_red_wall"
   ]
 }
