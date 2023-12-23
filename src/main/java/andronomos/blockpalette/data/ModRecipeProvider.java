@@ -23,6 +23,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 	protected void buildRecipes(Consumer<FinishedRecipe> recipeConsumer) {
 		//region Rough Concrete
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_WHITE_STAIRS.get(), ModBlocks.ROUGH_CONCRETE_WHITE.get(), 1, recipeConsumer);
+		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_WHITE_TILE.get(), ModBlocks.ROUGH_CONCRETE_WHITE.get(), 1, recipeConsumer);
 		generateStairRecipe(ModBlocks.ROUGH_CONCRETE_WHITE_STAIRS.get(), ModBlocks.ROUGH_CONCRETE_WHITE.get().asItem(), recipeConsumer);
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_WHITE_SLAB.get(), ModBlocks.ROUGH_CONCRETE_WHITE.get(), 2, recipeConsumer);
 		generateSlabRecipe(ModBlocks.ROUGH_CONCRETE_WHITE_SLAB.get(), ModBlocks.ROUGH_CONCRETE_WHITE.get().asItem(), recipeConsumer);
@@ -30,6 +31,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_WHITE_WALL.get(), ModBlocks.ROUGH_CONCRETE_WHITE.get(), 1, recipeConsumer);
 
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_BLUE_STAIRS.get(), ModBlocks.ROUGH_CONCRETE_BLUE.get(), 1, recipeConsumer);
+		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_BLUE_TILE.get(), ModBlocks.ROUGH_CONCRETE_BLUE.get(), 1, recipeConsumer);
 		generateStairRecipe(ModBlocks.ROUGH_CONCRETE_BLUE_STAIRS.get(), ModBlocks.ROUGH_CONCRETE_BLUE.get().asItem(), recipeConsumer);
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_BLUE_SLAB.get(), ModBlocks.ROUGH_CONCRETE_BLUE.get(), 2, recipeConsumer);
 		generateSlabRecipe(ModBlocks.ROUGH_CONCRETE_BLUE_SLAB.get(), ModBlocks.ROUGH_CONCRETE_BLUE.get().asItem(), recipeConsumer);
@@ -37,6 +39,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_BLUE_WALL.get(), ModBlocks.ROUGH_CONCRETE_BLUE.get(), 1, recipeConsumer);
 
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_BLACK_STAIRS.get(), ModBlocks.ROUGH_CONCRETE_BLACK.get(), 1, recipeConsumer);
+		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_BLACK_TILE.get(), ModBlocks.ROUGH_CONCRETE_BLACK.get(), 1, recipeConsumer);
 		generateStairRecipe(ModBlocks.ROUGH_CONCRETE_BLACK_STAIRS.get(), ModBlocks.ROUGH_CONCRETE_BLACK.get().asItem(), recipeConsumer);
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_BLACK_SLAB.get(), ModBlocks.ROUGH_CONCRETE_BLACK.get(), 2, recipeConsumer);
 		generateSlabRecipe(ModBlocks.ROUGH_CONCRETE_BLACK_SLAB.get(), ModBlocks.ROUGH_CONCRETE_BLACK.get().asItem(), recipeConsumer);
@@ -44,6 +47,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_BLACK_WALL.get(), ModBlocks.ROUGH_CONCRETE_BLACK.get(), 1, recipeConsumer);
 
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_BROWN_STAIRS.get(), ModBlocks.ROUGH_CONCRETE_BROWN.get(), 1, recipeConsumer);
+		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_BROWN_TILE.get(), ModBlocks.ROUGH_CONCRETE_BROWN.get(), 1, recipeConsumer);
 		generateStairRecipe(ModBlocks.ROUGH_CONCRETE_BROWN_STAIRS.get(), ModBlocks.ROUGH_CONCRETE_BROWN.get().asItem(), recipeConsumer);
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_BROWN_SLAB.get(), ModBlocks.ROUGH_CONCRETE_BROWN.get(), 2, recipeConsumer);
 		generateSlabRecipe(ModBlocks.ROUGH_CONCRETE_BROWN_SLAB.get(), ModBlocks.ROUGH_CONCRETE_BROWN.get().asItem(), recipeConsumer);
@@ -51,6 +55,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_BROWN_WALL.get(), ModBlocks.ROUGH_CONCRETE_BROWN.get(), 1, recipeConsumer);
 
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_GREEN_STAIRS.get(), ModBlocks.ROUGH_CONCRETE_GREEN.get(), 1, recipeConsumer);
+		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_GREEN_TILE.get(), ModBlocks.ROUGH_CONCRETE_GREEN.get(), 1, recipeConsumer);
 		generateStairRecipe(ModBlocks.ROUGH_CONCRETE_GREEN_STAIRS.get(), ModBlocks.ROUGH_CONCRETE_GREEN.get().asItem(), recipeConsumer);
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_GREEN_SLAB.get(), ModBlocks.ROUGH_CONCRETE_GREEN.get(), 2, recipeConsumer);
 		generateSlabRecipe(ModBlocks.ROUGH_CONCRETE_GREEN_SLAB.get(), ModBlocks.ROUGH_CONCRETE_GREEN.get().asItem(), recipeConsumer);
@@ -58,6 +63,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_GREEN_WALL.get(), ModBlocks.ROUGH_CONCRETE_GREEN.get(), 1, recipeConsumer);
 
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_GRAY_STAIRS.get(), ModBlocks.ROUGH_CONCRETE_GRAY.get(), 1, recipeConsumer);
+		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_GRAY_TILE.get(), ModBlocks.ROUGH_CONCRETE_GRAY.get(), 1, recipeConsumer);
 		generateStairRecipe(ModBlocks.ROUGH_CONCRETE_GRAY_STAIRS.get(), ModBlocks.ROUGH_CONCRETE_GRAY.get().asItem(), recipeConsumer);
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_GRAY_SLAB.get(), ModBlocks.ROUGH_CONCRETE_GRAY.get(), 2, recipeConsumer);
 		generateSlabRecipe(ModBlocks.ROUGH_CONCRETE_GRAY_SLAB.get(), ModBlocks.ROUGH_CONCRETE_GRAY.get().asItem(), recipeConsumer);
@@ -65,6 +71,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_GRAY_WALL.get(), ModBlocks.ROUGH_CONCRETE_GRAY.get(), 1, recipeConsumer);
 
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_ORANGE_STAIRS.get(), ModBlocks.ROUGH_CONCRETE_ORANGE.get(), 1, recipeConsumer);
+		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_ORANGE_TILE.get(), ModBlocks.ROUGH_CONCRETE_ORANGE.get(), 1, recipeConsumer);
 		generateStairRecipe(ModBlocks.ROUGH_CONCRETE_ORANGE_STAIRS.get(), ModBlocks.ROUGH_CONCRETE_ORANGE.get().asItem(), recipeConsumer);
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_ORANGE_SLAB.get(), ModBlocks.ROUGH_CONCRETE_ORANGE.get(), 2, recipeConsumer);
 		generateSlabRecipe(ModBlocks.ROUGH_CONCRETE_ORANGE_SLAB.get(), ModBlocks.ROUGH_CONCRETE_ORANGE.get().asItem(), recipeConsumer);
@@ -72,6 +79,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_ORANGE_WALL.get(), ModBlocks.ROUGH_CONCRETE_ORANGE.get(), 1, recipeConsumer);
 
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_PURPLE_STAIRS.get(), ModBlocks.ROUGH_CONCRETE_PURPLE.get(), 1, recipeConsumer);
+		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_PURPLE_TILE.get(), ModBlocks.ROUGH_CONCRETE_PURPLE.get(), 1, recipeConsumer);
 		generateStairRecipe(ModBlocks.ROUGH_CONCRETE_PURPLE_STAIRS.get(), ModBlocks.ROUGH_CONCRETE_PURPLE.get().asItem(), recipeConsumer);
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_PURPLE_SLAB.get(), ModBlocks.ROUGH_CONCRETE_PURPLE.get(), 2, recipeConsumer);
 		generateSlabRecipe(ModBlocks.ROUGH_CONCRETE_PURPLE_SLAB.get(), ModBlocks.ROUGH_CONCRETE_PURPLE.get().asItem(), recipeConsumer);
@@ -79,6 +87,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_PURPLE_WALL.get(), ModBlocks.ROUGH_CONCRETE_PURPLE.get(), 1, recipeConsumer);
 
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_RED_STAIRS.get(), ModBlocks.ROUGH_CONCRETE_RED.get(), 1, recipeConsumer);
+		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_RED_TILE.get(), ModBlocks.ROUGH_CONCRETE_RED.get(), 1, recipeConsumer);
 		generateStairRecipe(ModBlocks.ROUGH_CONCRETE_RED_STAIRS.get(), ModBlocks.ROUGH_CONCRETE_RED.get().asItem(), recipeConsumer);
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_RED_SLAB.get(), ModBlocks.ROUGH_CONCRETE_RED.get(), 2, recipeConsumer);
 		generateSlabRecipe(ModBlocks.ROUGH_CONCRETE_RED_SLAB.get(), ModBlocks.ROUGH_CONCRETE_RED.get().asItem(), recipeConsumer);
@@ -86,11 +95,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_RED_WALL.get(), ModBlocks.ROUGH_CONCRETE_RED.get(), 1, recipeConsumer);
 
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_YELLOW_STAIRS.get(), ModBlocks.ROUGH_CONCRETE_YELLOW.get(), 1, recipeConsumer);
+		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_YELLOW_TILE.get(), ModBlocks.ROUGH_CONCRETE_YELLOW.get(), 1, recipeConsumer);
 		generateStairRecipe(ModBlocks.ROUGH_CONCRETE_YELLOW_STAIRS.get(), ModBlocks.ROUGH_CONCRETE_YELLOW.get().asItem(), recipeConsumer);
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_YELLOW_SLAB.get(), ModBlocks.ROUGH_CONCRETE_YELLOW.get(), 2, recipeConsumer);
 		generateSlabRecipe(ModBlocks.ROUGH_CONCRETE_YELLOW_SLAB.get(), ModBlocks.ROUGH_CONCRETE_YELLOW.get().asItem(), recipeConsumer);
 		generateThreeByTwoRecipe(ModBlocks.ROUGH_CONCRETE_YELLOW_WALL.get(), ModBlocks.ROUGH_CONCRETE_YELLOW.get(), recipeConsumer);
 		generateStoneCutterRecipe(ModBlocks.ROUGH_CONCRETE_YELLOW_WALL.get(), ModBlocks.ROUGH_CONCRETE_YELLOW.get(), 1, recipeConsumer);
+
+
 		//endregion
 
 		//region Borderless Glass
