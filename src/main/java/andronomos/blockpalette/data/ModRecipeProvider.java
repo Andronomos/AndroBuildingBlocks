@@ -3,7 +3,6 @@ package andronomos.blockpalette.data;
 import andronomos.blockpalette.registry.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -17,43 +16,76 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 	@Override
 	protected void buildRecipes(Consumer<FinishedRecipe> recipeConsumer) {
-		generateRoughConcreteVariant(ModBlocks.ROUGH_WHITE_CONCRETE.get(), Blocks.WHITE_CONCRETE, recipeConsumer);
-		generateRoughConcreteVariant(ModBlocks.ROUGH_BLUE_CONCRETE.get(), Blocks.BLUE_CONCRETE, recipeConsumer);
-		generateRoughConcreteVariant(ModBlocks.ROUGH_BROWN_CONCRETE.get(), Blocks.BROWN_CONCRETE, recipeConsumer);
-		generateRoughConcreteVariant(ModBlocks.ROUGH_CYAN_CONCRETE.get(), Blocks.CYAN_CONCRETE, recipeConsumer);
-		generateRoughConcreteVariant(ModBlocks.ROUGH_GREEN_CONCRETE.get(), Blocks.GREEN_CONCRETE, recipeConsumer);
-		generateRoughConcreteVariant(ModBlocks.ROUGH_GRAY_CONCRETE.get(), Blocks.GRAY_CONCRETE, recipeConsumer);
-		generateRoughConcreteVariant(ModBlocks.ROUGH_LIGHT_BLUE_CONCRETE.get(), Blocks.LIGHT_BLUE_CONCRETE, recipeConsumer);
-		generateRoughConcreteVariant(ModBlocks.ROUGH_LIGHT_GRAY_CONCRETE.get(), Blocks.LIGHT_GRAY_CONCRETE, recipeConsumer);
-		generateRoughConcreteVariant(ModBlocks.ROUGH_LIME_CONCRETE.get(), Blocks.LIME_CONCRETE, recipeConsumer);
-		generateRoughConcreteVariant(ModBlocks.ROUGH_MAGENTA_CONCRETE.get(), Blocks.MAGENTA_CONCRETE, recipeConsumer);
-		generateRoughConcreteVariant(ModBlocks.ROUGH_ORANGE_CONCRETE.get(), Blocks.ORANGE_CONCRETE, recipeConsumer);
-		generateRoughConcreteVariant(ModBlocks.ROUGH_PINK_CONCRETE.get(), Blocks.PINK_CONCRETE, recipeConsumer);
-		generateRoughConcreteVariant(ModBlocks.ROUGH_PURPLE_CONCRETE.get(), Blocks.PURPLE_CONCRETE, recipeConsumer);
-		generateRoughConcreteVariant(ModBlocks.ROUGH_RED_CONCRETE.get(), Blocks.RED_CONCRETE, recipeConsumer);
-		generateRoughConcreteVariant(ModBlocks.ROUGH_YELLOW_CONCRETE.get(), Blocks.YELLOW_CONCRETE, recipeConsumer);
+		//region Rough Concrete
+		generateSingleItemShapelessRecipe(ModBlocks.ROUGH_WHITE_CONCRETE.get(), Blocks.WHITE_CONCRETE, recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.ROUGH_BLUE_CONCRETE.get(), Blocks.BLUE_CONCRETE, recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.ROUGH_BROWN_CONCRETE.get(), Blocks.BROWN_CONCRETE, recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.ROUGH_CYAN_CONCRETE.get(), Blocks.CYAN_CONCRETE, recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.ROUGH_GREEN_CONCRETE.get(), Blocks.GREEN_CONCRETE, recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.ROUGH_GRAY_CONCRETE.get(), Blocks.GRAY_CONCRETE, recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.ROUGH_LIGHT_BLUE_CONCRETE.get(), Blocks.LIGHT_BLUE_CONCRETE, recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.ROUGH_LIGHT_GRAY_CONCRETE.get(), Blocks.LIGHT_GRAY_CONCRETE, recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.ROUGH_LIME_CONCRETE.get(), Blocks.LIME_CONCRETE, recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.ROUGH_MAGENTA_CONCRETE.get(), Blocks.MAGENTA_CONCRETE, recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.ROUGH_ORANGE_CONCRETE.get(), Blocks.ORANGE_CONCRETE, recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.ROUGH_PINK_CONCRETE.get(), Blocks.PINK_CONCRETE, recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.ROUGH_PURPLE_CONCRETE.get(), Blocks.PURPLE_CONCRETE, recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.ROUGH_RED_CONCRETE.get(), Blocks.RED_CONCRETE, recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.ROUGH_YELLOW_CONCRETE.get(), Blocks.YELLOW_CONCRETE, recipeConsumer);
+		//endregion
 
-
+		//region Borderless Glass
+		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_WHITE_GLASS.get(), Blocks.WHITE_STAINED_GLASS, recipeConsumer);
 		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_WHITE_GLASS_PANE.get(), ModBlocks.BORDERLESS_WHITE_GLASS.get(), recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_BLUE_GLASS_PANE.get(), ModBlocks.BORDERLESS_BLUE_GLASS.get(), recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_BROWN_GLASS_PANE.get(), ModBlocks.BORDERLESS_BROWN_GLASS.get(), recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_CYAN_GLASS_PANE.get(), ModBlocks.BORDERLESS_CYAN_GLASS.get(), recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_GREEN_GLASS_PANE.get(), ModBlocks.BORDERLESS_GREEN_GLASS.get(), recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_GRAY_GLASS_PANE.get(), ModBlocks.BORDERLESS_GRAY_GLASS.get(), recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_LIGHT_BLUE_GLASS_PANE.get(), ModBlocks.BORDERLESS_LIGHT_BLUE_GLASS.get(), recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_LIGHT_GRAY_GLASS_PANE.get(), ModBlocks.BORDERLESS_LIGHT_GRAY_GLASS.get(), recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_LIME_GLASS_PANE.get(), ModBlocks.BORDERLESS_LIME_GLASS.get(), recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_MAGENTA_GLASS_PANE.get(), ModBlocks.BORDERLESS_MAGENTA_GLASS.get(), recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_ORANGE_GLASS_PANE.get(), ModBlocks.BORDERLESS_ORANGE_GLASS.get(), recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_PINK_GLASS_PANE.get(), ModBlocks.BORDERLESS_PINK_GLASS.get(), recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_PURPLE_GLASS_PANE.get(), ModBlocks.BORDERLESS_PURPLE_GLASS.get(), recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_RED_GLASS_PANE.get(), ModBlocks.BORDERLESS_RED_GLASS.get(), recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_YELLOW_GLASS_PANE.get(), ModBlocks.BORDERLESS_YELLOW_GLASS.get(), recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_BLACK_GLASS_PANE.get(), ModBlocks.BORDERLESS_BLACK_GLASS.get(), recipeConsumer);
 
+		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_BLUE_GLASS.get(), Blocks.BLUE_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_BLUE_GLASS_PANE.get(), ModBlocks.BORDERLESS_BLUE_GLASS.get(), recipeConsumer);
+
+		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_BROWN_GLASS.get(), Blocks.BROWN_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_BROWN_GLASS_PANE.get(), ModBlocks.BORDERLESS_BROWN_GLASS.get(), recipeConsumer);
+
+		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_CYAN_GLASS.get(), Blocks.CYAN_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_CYAN_GLASS_PANE.get(), ModBlocks.BORDERLESS_CYAN_GLASS.get(), recipeConsumer);
+
+		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_GREEN_GLASS.get(), Blocks.GREEN_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_GREEN_GLASS_PANE.get(), ModBlocks.BORDERLESS_GREEN_GLASS.get(), recipeConsumer);
+
+		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_GRAY_GLASS.get(), Blocks.GRAY_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_GRAY_GLASS_PANE.get(), ModBlocks.BORDERLESS_GRAY_GLASS.get(), recipeConsumer);
+
+		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_LIGHT_BLUE_GLASS.get(), Blocks.LIGHT_BLUE_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_LIGHT_BLUE_GLASS_PANE.get(), ModBlocks.BORDERLESS_LIGHT_BLUE_GLASS.get(), recipeConsumer);
+
+		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_LIGHT_GRAY_GLASS.get(), Blocks.LIGHT_GRAY_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_LIGHT_GRAY_GLASS_PANE.get(), ModBlocks.BORDERLESS_LIGHT_GRAY_GLASS.get(), recipeConsumer);
+
+		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_LIME_GLASS.get(), Blocks.LIME_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_LIME_GLASS_PANE.get(), ModBlocks.BORDERLESS_LIME_GLASS.get(), recipeConsumer);
+
+		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_MAGENTA_GLASS.get(), Blocks.MAGENTA_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_MAGENTA_GLASS_PANE.get(), ModBlocks.BORDERLESS_MAGENTA_GLASS.get(), recipeConsumer);
+
+		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_ORANGE_GLASS.get(), Blocks.ORANGE_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_ORANGE_GLASS_PANE.get(), ModBlocks.BORDERLESS_ORANGE_GLASS.get(), recipeConsumer);
+
+		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_PINK_GLASS.get(), Blocks.PINK_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_PINK_GLASS_PANE.get(), ModBlocks.BORDERLESS_PINK_GLASS.get(), recipeConsumer);
+
+		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_PURPLE_GLASS.get(), Blocks.PURPLE_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_PURPLE_GLASS_PANE.get(), ModBlocks.BORDERLESS_PURPLE_GLASS.get(), recipeConsumer);
+
+		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_RED_GLASS.get(), Blocks.RED_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_RED_GLASS_PANE.get(), ModBlocks.BORDERLESS_RED_GLASS.get(), recipeConsumer);
+
+		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_YELLOW_GLASS.get(), Blocks.YELLOW_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_YELLOW_GLASS_PANE.get(), ModBlocks.BORDERLESS_YELLOW_GLASS.get(), recipeConsumer);
+
+		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_BLACK_GLASS.get(), Blocks.BLACK_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_BLACK_GLASS_PANE.get(), ModBlocks.BORDERLESS_BLACK_GLASS.get(), recipeConsumer);
+		//endregion
 	}
 
-	private void generateRoughConcreteVariant(Block output, Block sourceBlock, Consumer<FinishedRecipe> consumer)
+	private void generateSingleItemShapelessRecipe(Block output, Block sourceBlock, Consumer<FinishedRecipe> consumer)
 	{
 		ShapelessRecipeBuilder shapeless = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS,
 				output, 1);
