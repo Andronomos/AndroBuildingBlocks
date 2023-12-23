@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "blockpalette:block/rough_concrete/rough_light_gray_concrete"
-  }
-}
