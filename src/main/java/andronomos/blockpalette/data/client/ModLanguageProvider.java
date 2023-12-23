@@ -9,6 +9,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.Objects;
+
 public class ModLanguageProvider extends LanguageProvider {
 	public ModLanguageProvider(PackOutput output, String locale) {
 		super(output, BlockPalette.MODID, locale);
@@ -16,10 +18,11 @@ public class ModLanguageProvider extends LanguageProvider {
 
 	@Override
 	protected void addTranslations() {
-		add("creativetab." + ModCreativeTabs.TABNAME, "BlockPalette");
+		add("creativetab." + ModCreativeTabs.BASETABNAME, "BlockPalette");
+		add("creativetab." + ModCreativeTabs.GLASSTABNAME, "BlockPalette");
 
 		ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
-			String name = ForgeRegistries.BLOCKS.getKey(b).getPath();
+			String name = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(b)).getPath();
 			name = name.replaceAll("_", " ");
 			name = StringUtils.capitalize(name);
 			add(b, name);
