@@ -18,6 +18,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 	@Override
 	protected void buildRecipes(Consumer<FinishedRecipe> recipeConsumer) {
 		generateRoughConcreteVariant(ModBlocks.ROUGH_WHITE_CONCRETE.get(), Blocks.WHITE_CONCRETE, recipeConsumer);
+		generateRoughConcreteVariant(ModBlocks.ROUGH_BLUE_CONCRETE.get(), Blocks.BLUE_CONCRETE, recipeConsumer);
+		generateRoughConcreteVariant(ModBlocks.ROUGH_BROWN_CONCRETE.get(), Blocks.BROWN_CONCRETE, recipeConsumer);
+		generateRoughConcreteVariant(ModBlocks.ROUGH_CYAN_CONCRETE.get(), Blocks.CYAN_CONCRETE, recipeConsumer);
+		generateRoughConcreteVariant(ModBlocks.ROUGH_GREEN_CONCRETE.get(), Blocks.GREEN_CONCRETE, recipeConsumer);
+		generateRoughConcreteVariant(ModBlocks.ROUGH_GRAY_CONCRETE.get(), Blocks.GRAY_CONCRETE, recipeConsumer);
+		generateRoughConcreteVariant(ModBlocks.ROUGH_LIGHT_BLUE_CONCRETE.get(), Blocks.LIGHT_BLUE_CONCRETE, recipeConsumer);
+		generateRoughConcreteVariant(ModBlocks.ROUGH_LIGHT_GRAY_CONCRETE.get(), Blocks.LIGHT_GRAY_CONCRETE, recipeConsumer);
+		generateRoughConcreteVariant(ModBlocks.ROUGH_LIME_CONCRETE.get(), Blocks.LIME_CONCRETE, recipeConsumer);
+		generateRoughConcreteVariant(ModBlocks.ROUGH_MAGENTA_CONCRETE.get(), Blocks.MAGENTA_CONCRETE, recipeConsumer);
+		generateRoughConcreteVariant(ModBlocks.ROUGH_ORANGE_CONCRETE.get(), Blocks.ORANGE_CONCRETE, recipeConsumer);
+		generateRoughConcreteVariant(ModBlocks.ROUGH_PINK_CONCRETE.get(), Blocks.PINK_CONCRETE, recipeConsumer);
+		generateRoughConcreteVariant(ModBlocks.ROUGH_PURPLE_CONCRETE.get(), Blocks.PURPLE_CONCRETE, recipeConsumer);
+		generateRoughConcreteVariant(ModBlocks.ROUGH_RED_CONCRETE.get(), Blocks.RED_CONCRETE, recipeConsumer);
+		generateRoughConcreteVariant(ModBlocks.ROUGH_YELLOW_CONCRETE.get(), Blocks.YELLOW_CONCRETE, recipeConsumer);
+
 
 		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_WHITE_GLASS_PANE.get(), ModBlocks.BORDERLESS_WHITE_GLASS.get(), recipeConsumer);
 		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_BLUE_GLASS_PANE.get(), ModBlocks.BORDERLESS_BLUE_GLASS.get(), recipeConsumer);
@@ -42,9 +57,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 	{
 		ShapelessRecipeBuilder shapeless = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS,
 				output, 1);
-
 		shapeless.requires(sourceBlock.asItem());
-		shapeless.requires(Items.BRUSH);
 		shapeless.unlockedBy("has_item", has(sourceBlock));
 		shapeless.save(consumer);
 	}

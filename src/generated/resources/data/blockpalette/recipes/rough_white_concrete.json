@@ -4,9 +4,6 @@
   "ingredients": [
     {
       "item": "minecraft:white_concrete"
-    },
-    {
-      "item": "minecraft:brush"
     }
   ],
   "result": {
