@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/template_wall_side",
-  "textures": {
-    "wall": "blockpalette:block/rough_concrete/rough_concrete_brown_tile"
-  }
-}

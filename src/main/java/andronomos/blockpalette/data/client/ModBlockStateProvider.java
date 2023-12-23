@@ -101,8 +101,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	private void registerPaneBlockStateAndModel(IronBarsBlock block, String blockName, String textureFolder) {
 		String cleanName = blockName.replace("_pane", "");
 		String textureName = String.format("block/%s/%s", textureFolder, cleanName);
-		paneBlockWithRenderType(block, cleanName,  modLoc(textureName), modLoc(textureName),"translucent");
-		itemModels().singleTexture(blockName, mcLoc("item/generated"), "layer0", modLoc(textureName));
+		paneBlockWithRenderType(block, modLoc(textureName), modLoc(textureName),"translucent");
+		itemModels().singleTexture(blockName, mcLoc("item/generated"), "layer0", modLoc(textureName)).renderType("translucent");
 	}
 
 	private void registerItemModel(String name) {

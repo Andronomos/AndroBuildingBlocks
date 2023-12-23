@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "blockpalette:rough_concrete_green"
-  },
-  "result": "blockpalette:rough_concrete_green_slab"
-}

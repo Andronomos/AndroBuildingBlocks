@@ -26,7 +26,6 @@ public class ModBlocks {
 
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, BlockPalette.MODID);
 
-
 	//region Rough Concrete
 	public static final RegistryObject<Block> ROUGH_CONCRETE_WHITE = registerBlock("rough_concrete_white", CONCRETE_PROPERTIES.mapColor(DyeColor.WHITE));
 	public static final RegistryObject<StairBlock> ROUGH_CONCRETE_WHITE_STAIRS = registerStairBlock("rough_concrete_white_stairs", ROUGH_CONCRETE_WHITE, CONCRETE_PROPERTIES.mapColor(DyeColor.WHITE));
@@ -130,9 +129,6 @@ public class ModBlocks {
 
 
 	//endregion
-
-
-
 
 	//region Barricade
 	public static final RegistryObject<Block> BARRICADE_YELLOW = registerBlock("barricade_yellow", BARRICADE_PROPERTIES);

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "blockpalette:rough_concrete_white"
-  },
-  "result": "blockpalette:rough_concrete_white_wall"
-}
