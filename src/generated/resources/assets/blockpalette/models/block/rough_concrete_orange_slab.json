@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "blockpalette:block/rough_concrete/rough_concrete_orange",
+    "side": "blockpalette:block/rough_concrete/rough_concrete_orange",
+    "top": "blockpalette:block/rough_concrete/rough_concrete_orange"
+  }
+}
