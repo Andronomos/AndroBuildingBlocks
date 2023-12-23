@@ -16,10 +16,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 	@Override
 	protected void buildRecipes(Consumer<FinishedRecipe> recipeConsumer) {
-		//region Rough Concrete
-
-		//endregion
-
 		//region Borderless Glass
 		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_WHITE_GLASS.get(), Blocks.WHITE_STAINED_GLASS, recipeConsumer);
 		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_WHITE_GLASS_PANE.get(), ModBlocks.BORDERLESS_WHITE_GLASS.get(), recipeConsumer);
