@@ -15,13 +15,13 @@ public class ModCreativeTabs {
 	public static final String GLASSTABNAME = "blockpalette_glass_tab";
 
 	public static final RegistryObject<CreativeModeTab> BLOCKPALETTE_TAB = CREATIVE_MODE_TABS.register(BASETABNAME, () -> CreativeModeTab.builder()
-			.withTabsBefore(CreativeModeTabs.COMBAT)
+			//.withTabsBefore(CreativeModeTabs.COMBAT)
 			.title(Component.translatable("creativetab." + BASETABNAME))
 			.icon(ModBlocks.ROUGH_WHITE_CONCRETE.get().asItem()::getDefaultInstance)
 			.displayItems((parameters, output) -> {
 				ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 					String blockType = b.getClass().getSimpleName();
-					if(blockType.equals("GlassBlock") || blockType.equals("StainedGlassBlock")) {
+					if(blockType.equals("GlassBlock") || blockType.equals("StainedGlassBlock") || blockType.equals("StainedGlassPaneBlock")) {
 						return;
 					}
 					output.accept(b);
@@ -29,13 +29,13 @@ public class ModCreativeTabs {
 			}).build());
 
 	public static final RegistryObject<CreativeModeTab> BLOCKPALETTE_GLASS_TAB = CREATIVE_MODE_TABS.register(GLASSTABNAME, () -> CreativeModeTab.builder()
-			.withTabsBefore(CreativeModeTabs.COMBAT)
+			//.withTabsBefore(CreativeModeTabs.COMBAT)
 			.title(Component.translatable("creativetab." + GLASSTABNAME))
 			.icon(ModBlocks.BORDERLESS_WHITE_GLASS.get().asItem()::getDefaultInstance)
 			.displayItems((parameters, output) -> {
 				ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 					String blockType = b.getClass().getSimpleName();
-					if(blockType.equals("GlassBlock") || blockType.equals("StainedGlassBlock")) {
+					if(blockType.equals("GlassBlock") || blockType.equals("StainedGlassBlock") || blockType.equals("StainedGlassPaneBlock")) {
 						output.accept(b);
 					}
 				});
