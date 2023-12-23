@@ -18,6 +18,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 	@Override
 	protected void buildRecipes(Consumer<FinishedRecipe> recipeConsumer) {
 		generateRoughConcreteVariant(ModBlocks.ROUGH_WHITE_CONCRETE.get(), Blocks.WHITE_CONCRETE, recipeConsumer);
+
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_WHITE_GLASS_PANE.get(), ModBlocks.BORDERLESS_WHITE_GLASS.get(), recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_BLUE_GLASS_PANE.get(), ModBlocks.BORDERLESS_BLUE_GLASS.get(), recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_BROWN_GLASS_PANE.get(), ModBlocks.BORDERLESS_BROWN_GLASS.get(), recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_CYAN_GLASS_PANE.get(), ModBlocks.BORDERLESS_CYAN_GLASS.get(), recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_GREEN_GLASS_PANE.get(), ModBlocks.BORDERLESS_GREEN_GLASS.get(), recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_GRAY_GLASS_PANE.get(), ModBlocks.BORDERLESS_GRAY_GLASS.get(), recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_LIGHT_BLUE_GLASS_PANE.get(), ModBlocks.BORDERLESS_LIGHT_BLUE_GLASS.get(), recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_LIGHT_GRAY_GLASS_PANE.get(), ModBlocks.BORDERLESS_LIGHT_GRAY_GLASS.get(), recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_LIME_GLASS_PANE.get(), ModBlocks.BORDERLESS_LIME_GLASS.get(), recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_MAGENTA_GLASS_PANE.get(), ModBlocks.BORDERLESS_MAGENTA_GLASS.get(), recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_ORANGE_GLASS_PANE.get(), ModBlocks.BORDERLESS_ORANGE_GLASS.get(), recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_PINK_GLASS_PANE.get(), ModBlocks.BORDERLESS_PINK_GLASS.get(), recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_PURPLE_GLASS_PANE.get(), ModBlocks.BORDERLESS_PURPLE_GLASS.get(), recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_RED_GLASS_PANE.get(), ModBlocks.BORDERLESS_RED_GLASS.get(), recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_YELLOW_GLASS_PANE.get(), ModBlocks.BORDERLESS_YELLOW_GLASS.get(), recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_BLACK_GLASS_PANE.get(), ModBlocks.BORDERLESS_BLACK_GLASS.get(), recipeConsumer);
+
 	}
 
 	private void generateRoughConcreteVariant(Block output, Block sourceBlock, Consumer<FinishedRecipe> consumer)
@@ -42,4 +60,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 	//	//shaped.group(getVariantName(output));
 	//	shaped.save(consumer, new ResourceLocation(BlockPalette.MODID, ForgeRegistries.BLOCKS.getKey(output).getPath() + "_from_" + ForgeRegistries.ITEMS.getKey(secondInputItem).getPath()));
 	//}
+
+	private void generateThreeByTwoRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
+		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 6);
+		shaped.define('#', input);
+		shaped.pattern("###");
+		shaped.pattern("###");
+		shaped.unlockedBy("has_item", has(input));
+		shaped.save(consumer);
+	}
 }
