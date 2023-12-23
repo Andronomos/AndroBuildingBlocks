@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "blockpalette:block/borderless_glass/borderless_magenta_glass"
+  }
+}

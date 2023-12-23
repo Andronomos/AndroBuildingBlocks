@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "blockpalette:block/barricade/barricade_red",
+    "side": "blockpalette:block/barricade/barricade_red",
+    "top": "blockpalette:block/barricade/barricade_red"
+  }
+}

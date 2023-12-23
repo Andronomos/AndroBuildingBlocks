@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blockpalette:block/rough_cyan_concrete_slab"
+    },
+    "type=double": {
+      "model": "blockpalette:block/rough_cyan_concrete"
+    },
+    "type=top": {
+      "model": "blockpalette:block/rough_cyan_concrete_slab_top"
+    }
+  }
+}

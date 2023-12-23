@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blockpalette:block/barricade_green_slab"
+    },
+    "type=double": {
+      "model": "blockpalette:block/barricade_green"
+    },
+    "type=top": {
+      "model": "blockpalette:block/barricade_green_slab_top"
+    }
+  }
+}

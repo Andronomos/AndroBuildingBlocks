@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "blockpalette:block/rough_concrete/rough_orange_concrete",
+    "side": "blockpalette:block/rough_concrete/rough_orange_concrete",
+    "top": "blockpalette:block/rough_concrete/rough_orange_concrete"
+  }
+}

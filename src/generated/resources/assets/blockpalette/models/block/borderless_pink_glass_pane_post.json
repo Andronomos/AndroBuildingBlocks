@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/template_glass_pane_post",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "edge": "blockpalette:block/borderless_glass/borderless_pink_glass",
+    "pane": "blockpalette:block/borderless_glass/borderless_pink_glass"
+  }
+}
