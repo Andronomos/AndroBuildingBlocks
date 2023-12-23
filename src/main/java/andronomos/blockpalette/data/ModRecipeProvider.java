@@ -3,9 +3,14 @@ package andronomos.blockpalette.data;
 import andronomos.blockpalette.registry.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Consumer;
 
@@ -93,6 +98,34 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		shaped.define('#', input);
 		shaped.pattern("###");
 		shaped.pattern("###");
+		shaped.unlockedBy("has_item", has(input));
+		shaped.save(consumer);
+	}
+
+	private void generateStoneCutterRecipe(Block output, Block input, int amount, Consumer<FinishedRecipe> consumer) {
+		String blockName = ForgeRegistries.BLOCKS.getKey(output).getPath();
+		SingleItemRecipeBuilder stonecutting = SingleItemRecipeBuilder.stonecutting(Ingredient.of(input), RecipeCategory.BUILDING_BLOCKS, output, amount);
+		//stonecutting.group(getVariantName(output));
+		stonecutting.unlockedBy("has_item", has(input));
+		stonecutting.save(consumer, blockName + "_from_stonecutting");
+	}
+
+	private void generateSlabRecipe(SlabBlock output, Item input, Consumer<FinishedRecipe> consumer) {
+		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 6);
+		shaped.define('#', input);
+		shaped.pattern("###");
+		//shaped.group(getVariantName(output));
+		shaped.unlockedBy("has_item", has(input));
+		shaped.save(consumer);
+	}
+
+	private void generateStairRecipe(StairBlock output, Item input, Consumer<FinishedRecipe> consumer) {
+		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 4);
+		shaped.define('#', input);
+		shaped.pattern("#  ");
+		shaped.pattern("## ");
+		shaped.pattern("###");
+		//shaped.group(getVariantName(output));
 		shaped.unlockedBy("has_item", has(input));
 		shaped.save(consumer);
 	}
