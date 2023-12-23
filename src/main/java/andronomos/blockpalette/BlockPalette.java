@@ -4,9 +4,7 @@ import andronomos.blockpalette.registry.ModBlocks;
 import andronomos.blockpalette.registry.ModCreativeTabs;
 import andronomos.blockpalette.registry.ModItems;
 import com.mojang.logging.LogUtils;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -31,17 +29,7 @@ public class BlockPalette
 
         MinecraftForge.EVENT_BUS.register(this);
 
-        // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
-
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
-    }
-
-    // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-        //if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-        //    event.accept(ModItems.WHITE_TEXTURED_CONCRETE_ITEM);
     }
 }
