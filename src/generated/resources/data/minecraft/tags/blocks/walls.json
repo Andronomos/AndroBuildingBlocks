@@ -20,10 +20,6 @@
     "blockpalette:rough_concrete_red_tile_wall",
     "blockpalette:rough_concrete_yellow_wall",
     "blockpalette:rough_concrete_yellow_tile_wall",
-    "blockpalette:barricade_gray_wall",
-    "blockpalette:barricade_yellow_wall",
-    "blockpalette:barricade_green_wall",
-    "blockpalette:barricade_blue_wall",
-    "blockpalette:barricade_red_wall"
+    "blockpalette:barricade_yellow_wall"
   ]
 }

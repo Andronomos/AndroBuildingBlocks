@@ -118,30 +118,10 @@ public class ModBlocks {
 	//endregion
 
 	//region Barricade
-	public static final RegistryObject<Block> BARRICADE_GRAY = registerBlock("barricade_gray", BARRICADE_PROPERTIES);
-	public static final RegistryObject<StairBlock> BARRICADE_GRAY_STAIRS = registerStairBlock("barricade_gray_stairs", BARRICADE_GRAY, BARRICADE_PROPERTIES);
-	public static final RegistryObject<SlabBlock> BARRICADE_GRAY_SLAB = registerSlabBlock("barricade_gray_slab", BARRICADE_PROPERTIES);
-	public static final RegistryObject<WallBlock> BARRICADE_GRAY_WALL = registerWallBlock("barricade_gray_wall", BARRICADE_PROPERTIES);
-
 	public static final RegistryObject<Block> BARRICADE_YELLOW = registerBlock("barricade_yellow", BARRICADE_PROPERTIES);
 	public static final RegistryObject<StairBlock> BARRICADE_YELLOW_STAIRS = registerStairBlock("barricade_yellow_stairs", BARRICADE_YELLOW, BARRICADE_PROPERTIES);
 	public static final RegistryObject<SlabBlock> BARRICADE_YELLOW_SLAB = registerSlabBlock("barricade_yellow_slab", BARRICADE_PROPERTIES);
 	public static final RegistryObject<WallBlock> BARRICADE_YELLOW_WALL = registerWallBlock("barricade_yellow_wall", BARRICADE_PROPERTIES);
-
-	public static final RegistryObject<Block> BARRICADE_GREEN = registerBlock("barricade_green", BARRICADE_PROPERTIES);
-	public static final RegistryObject<StairBlock> BARRICADE_GREEN_STAIRS = registerStairBlock("barricade_green_stairs", BARRICADE_GREEN, BARRICADE_PROPERTIES);
-	public static final RegistryObject<SlabBlock> BARRICADE_GREEN_SLAB = registerSlabBlock("barricade_green_slab", BARRICADE_PROPERTIES);
-	public static final RegistryObject<WallBlock> BARRICADE_GREEN_WALL = registerWallBlock("barricade_green_wall", BARRICADE_PROPERTIES);
-
-	public static final RegistryObject<Block> BARRICADE_BLUE = registerBlock("barricade_blue", BARRICADE_PROPERTIES);
-	public static final RegistryObject<StairBlock> BARRICADE_BLUE_STAIRS = registerStairBlock("barricade_blue_stairs", BARRICADE_BLUE, BARRICADE_PROPERTIES);
-	public static final RegistryObject<SlabBlock> BARRICADE_BLUE_SLAB = registerSlabBlock("barricade_blue_slab", BARRICADE_PROPERTIES);
-	public static final RegistryObject<WallBlock> BARRICADE_BLUE_WALL = registerWallBlock("barricade_blue_wall", BARRICADE_PROPERTIES);
-
-	public static final RegistryObject<Block> BARRICADE_RED = registerBlock("barricade_red", BARRICADE_PROPERTIES);
-	public static final RegistryObject<StairBlock> BARRICADE_RED_STAIRS = registerStairBlock("barricade_red_stairs", BARRICADE_RED, BARRICADE_PROPERTIES);
-	public static final RegistryObject<SlabBlock> BARRICADE_RED_SLAB = registerSlabBlock("barricade_red_slab", BARRICADE_PROPERTIES);
-	public static final RegistryObject<WallBlock> BARRICADE_RED_WALL = registerWallBlock("barricade_red_wall", BARRICADE_PROPERTIES);
 	//endregion
 
 	//region Borderless Glass
