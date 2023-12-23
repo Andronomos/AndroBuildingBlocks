@@ -19,7 +19,7 @@ public class ModLanguageProvider extends LanguageProvider {
 	@Override
 	protected void addTranslations() {
 		add("creativetab." + ModCreativeTabs.BASETABNAME, "BlockPalette");
-		add("creativetab." + ModCreativeTabs.GLASSTABNAME, "BlockPalette");
+		add("creativetab." + ModCreativeTabs.GLASSTABNAME, "BlockPalette Glass");
 
 		ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 			String name = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(b)).getPath();
