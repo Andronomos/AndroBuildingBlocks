@@ -20,6 +20,10 @@ public class ModCreativeTabs {
 			.icon(ModBlocks.ROUGH_WHITE_CONCRETE.get().asItem()::getDefaultInstance)
 			.displayItems((parameters, output) -> {
 				ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
+					String blockType = b.getClass().getSimpleName();
+					if(blockType.equals("GlassBlock") || blockType.equals("StainedGlassBlock")) {
+						return;
+					}
 					output.accept(b);
 				});
 			}).build());
