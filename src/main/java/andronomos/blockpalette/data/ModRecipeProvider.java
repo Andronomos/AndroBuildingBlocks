@@ -116,53 +116,53 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		//endregion
 
 		//region Borderless Glass
-		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_WHITE_GLASS.get(), Blocks.WHITE_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_WHITE_GLASS_PANE.get(), ModBlocks.BORDERLESS_WHITE_GLASS.get(), recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.WHITE_BORDERLESS_GLASS.get(), Blocks.WHITE_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.WHITE_BORDERLESS_GLASS_PANE.get(), ModBlocks.WHITE_BORDERLESS_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_BLUE_GLASS.get(), Blocks.BLUE_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_BLUE_GLASS_PANE.get(), ModBlocks.BORDERLESS_BLUE_GLASS.get(), recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.BLUE_BORDERLESS_GLASS.get(), Blocks.BLUE_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BLUE_BORDERLESS_GLASS_PANE.get(), ModBlocks.BLUE_BORDERLESS_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_BROWN_GLASS.get(), Blocks.BROWN_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_BROWN_GLASS_PANE.get(), ModBlocks.BORDERLESS_BROWN_GLASS.get(), recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.BROWN_BORDERLESS_GLASS.get(), Blocks.BROWN_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BROWN_BORDERLESS_GLASS_PANE.get(), ModBlocks.BROWN_BORDERLESS_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_CYAN_GLASS.get(), Blocks.CYAN_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_CYAN_GLASS_PANE.get(), ModBlocks.BORDERLESS_CYAN_GLASS.get(), recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.CYAN_BORDERLESS_GLASS.get(), Blocks.CYAN_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.CYAN_BORDERLESS_GLASS_PANE.get(), ModBlocks.CYAN_BORDERLESS_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_GREEN_GLASS.get(), Blocks.GREEN_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_GREEN_GLASS_PANE.get(), ModBlocks.BORDERLESS_GREEN_GLASS.get(), recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.GREEN_BORDERLESS_GLASS.get(), Blocks.GREEN_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.GREEN_BORDERLESS_GLASS_PANE.get(), ModBlocks.GREEN_BORDERLESS_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_GRAY_GLASS.get(), Blocks.GRAY_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_GRAY_GLASS_PANE.get(), ModBlocks.BORDERLESS_GRAY_GLASS.get(), recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.GRAY_BORDERLESS_GLASS.get(), Blocks.GRAY_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.GRAY_BORDERLESS_GLASS_PANE.get(), ModBlocks.GRAY_BORDERLESS_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_LIGHT_BLUE_GLASS.get(), Blocks.LIGHT_BLUE_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_LIGHT_BLUE_GLASS_PANE.get(), ModBlocks.BORDERLESS_LIGHT_BLUE_GLASS.get(), recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.LIGHT_BLUE_BORDERLESS_GLASS.get(), Blocks.LIGHT_BLUE_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.LIGHT_BLUE_BORDERLESS_GLASS_PANE.get(), ModBlocks.LIGHT_BLUE_BORDERLESS_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_LIGHT_GRAY_GLASS.get(), Blocks.LIGHT_GRAY_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_LIGHT_GRAY_GLASS_PANE.get(), ModBlocks.BORDERLESS_LIGHT_GRAY_GLASS.get(), recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.LIGHT_GRAY_BORDERLESS_GLASS.get(), Blocks.LIGHT_GRAY_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.LIGHT_GRAY_BORDERLESS_GLASS_PANE.get(), ModBlocks.LIGHT_GRAY_BORDERLESS_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_LIME_GLASS.get(), Blocks.LIME_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_LIME_GLASS_PANE.get(), ModBlocks.BORDERLESS_LIME_GLASS.get(), recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.LIME_BORDERLESS_GLASS.get(), Blocks.LIME_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.LIME_BORDERLESS_GLASS_PANE.get(), ModBlocks.LIME_BORDERLESS_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_MAGENTA_GLASS.get(), Blocks.MAGENTA_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_MAGENTA_GLASS_PANE.get(), ModBlocks.BORDERLESS_MAGENTA_GLASS.get(), recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.MAGENTA_BORDERLESS_GLASS.get(), Blocks.MAGENTA_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.MAGENTA_BORDERLESS_GLASS_PANE.get(), ModBlocks.MAGENTA_BORDERLESS_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_ORANGE_GLASS.get(), Blocks.ORANGE_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_ORANGE_GLASS_PANE.get(), ModBlocks.BORDERLESS_ORANGE_GLASS.get(), recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.ORANGE_BORDERLESS_GLASS.get(), Blocks.ORANGE_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.ORANGE_BORDERLESS_GLASS_PANE.get(), ModBlocks.ORANGE_BORDERLESS_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_PINK_GLASS.get(), Blocks.PINK_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_PINK_GLASS_PANE.get(), ModBlocks.BORDERLESS_PINK_GLASS.get(), recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.PINK_BORDERLESS_GLASS.get(), Blocks.PINK_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.PINK_BORDERLESS_GLASS_PANE.get(), ModBlocks.PINK_BORDERLESS_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_PURPLE_GLASS.get(), Blocks.PURPLE_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_PURPLE_GLASS_PANE.get(), ModBlocks.BORDERLESS_PURPLE_GLASS.get(), recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.PURPLE_BORDERLESS_GLASS.get(), Blocks.PURPLE_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.PURPLE_BORDERLESS_GLASS_PANE.get(), ModBlocks.PURPLE_BORDERLESS_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_RED_GLASS.get(), Blocks.RED_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_RED_GLASS_PANE.get(), ModBlocks.BORDERLESS_RED_GLASS.get(), recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.RED_BORDERLESS_GLASS.get(), Blocks.RED_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.RED_BORDERLESS_GLASS_PANE.get(), ModBlocks.RED_BORDERLESS_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_YELLOW_GLASS.get(), Blocks.YELLOW_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_YELLOW_GLASS_PANE.get(), ModBlocks.BORDERLESS_YELLOW_GLASS.get(), recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.YELLOW_BORDERLESS_GLASS.get(), Blocks.YELLOW_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.YELLOW_BORDERLESS_GLASS_PANE.get(), ModBlocks.YELLOW_BORDERLESS_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(ModBlocks.BORDERLESS_BLACK_GLASS.get(), Blocks.BLACK_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(ModBlocks.BORDERLESS_BLACK_GLASS_PANE.get(), ModBlocks.BORDERLESS_BLACK_GLASS.get(), recipeConsumer);
+		generateSingleItemShapelessRecipe(ModBlocks.BLACK_BORDERLESS_GLASS.get(), Blocks.BLACK_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(ModBlocks.BLACK_BORDERLESS_GLASS_PANE.get(), ModBlocks.BLACK_BORDERLESS_GLASS.get(), recipeConsumer);
 		//endregion
 	}
 

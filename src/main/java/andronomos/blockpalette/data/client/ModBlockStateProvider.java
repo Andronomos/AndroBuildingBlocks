@@ -43,7 +43,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 				case "StairBlock" -> registerStairBlockStateAndModel((StairBlock)b, blockName.substring(0, blockName.indexOf("_stairs")), textureFolder);
 				case "SlabBlock" -> registerSlabBlockStateAndModel((SlabBlock)b, blockName, textureFolder);
 				case "WallBlock" -> registerWallBlockStateAndModel((WallBlock)b, blockName.substring(0, blockName.indexOf("_wall")), textureFolder);
-				case "GlassBlock", "StainedGlassBlock" -> registerGlassBlockStateAndModel(b, blockName, textureFolder);
+				case "StainedGlassBlock" -> registerGlassBlockStateAndModel(b, blockName, textureFolder);
 				case "StainedGlassPaneBlock" -> registerPaneBlockStateAndModel((IronBarsBlock)b, blockName, textureFolder);
 				case "RotatedPillarBlock" -> registerRotatableBlockStateAndModel((RotatedPillarBlock) b, blockName, textureFolder,  "");
 				default -> registerBlockStateAndModel(b, blockName, textureFolder);

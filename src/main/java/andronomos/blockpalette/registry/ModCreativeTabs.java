@@ -26,7 +26,7 @@ public class ModCreativeTabs {
 
 	public static final RegistryObject<CreativeModeTab> BLOCKPALETTE_GLASS_TAB = CREATIVE_MODE_TABS.register(GLASSTABNAME, () -> CreativeModeTab.builder()
 			.title(Component.translatable("creativetab." + GLASSTABNAME))
-			.icon(ModBlocks.BORDERLESS_WHITE_GLASS.get().asItem()::getDefaultInstance)
+			.icon(ModBlocks.WHITE_BORDERLESS_GLASS.get().asItem()::getDefaultInstance)
 			.displayItems((parameters, output) -> ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 				switch (b.getClass().getSimpleName()) {
 					case "GlassBlock", "StainedGlassBlock", "StainedGlassPaneBlock" -> output.accept(b);

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "minecraft:orange_stained_glass"
+    }
+  ],
+  "result": {
+    "item": "blockpalette:orange_borderless_glass"
+  }
+}
