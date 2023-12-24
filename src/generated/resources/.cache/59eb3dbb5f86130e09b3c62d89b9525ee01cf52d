@@ -1,4 +1,4 @@
-// 1.20.1	2023-12-20T14:50:29.3221274	Loot Tables
+// 1.20.1	2023-12-24T00:34:31.7046314	Loot Tables
 04786e34d98dd9139eb58d7d94f658bbbda4ea6d data/blockpalette/loot_tables/blocks/barricade_yellow.json
 88520b25bda64179fb87dd49b0187a558ecfab6e data/blockpalette/loot_tables/blocks/barricade_yellow_slab.json
 2a4a6ca5f5703dc6f565218dc84cb5556115cbb9 data/blockpalette/loot_tables/blocks/barricade_yellow_stairs.json
@@ -125,3 +125,4 @@ a052d9abbcff329e99d8f939e8d2c0c6ecb845cd data/blockpalette/loot_tables/blocks/ro
 34027f7da9268fae6ada3625541d3ea4fcf51b43 data/blockpalette/loot_tables/blocks/rough_concrete_yellow_tile_stairs.json
 8592e80d96197fd8ff57076a437bbd18ed82e8a2 data/blockpalette/loot_tables/blocks/rough_concrete_yellow_tile_wall.json
 ec184637ce8e5add4bf19c9e0ae71841134b3128 data/blockpalette/loot_tables/blocks/rough_concrete_yellow_wall.json
+c9205dff32ae779ff49223c7a1d2348cff1af7d9 data/blockpalette/loot_tables/blocks/test.json

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blockpalette:block/rough_concrete_purple_tile_slab"
+    },
+    "type=double": {
+      "model": "blockpalette:block/rough_concrete_purple_tile"
+    },
+    "type=top": {
+      "model": "blockpalette:block/rough_concrete_purple_tile_slab_top"
+    }
+  }
+}

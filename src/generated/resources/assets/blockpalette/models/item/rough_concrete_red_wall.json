@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "blockpalette:block/rough_concrete/rough_concrete_red"
+  }
+}
