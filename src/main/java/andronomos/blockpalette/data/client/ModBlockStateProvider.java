@@ -2,10 +2,13 @@ package andronomos.blockpalette.data.client;
 
 import andronomos.blockpalette.BlockPalette;
 import andronomos.blockpalette.registry.ModBlocks;
+import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -21,7 +24,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 			String blockName = ForgeRegistries.BLOCKS.getKey(b).getPath();
 			String blockType = b.getClass().getSimpleName();
-			String textureFolder = blockName;
+			//String textureFolder = blockName;
+			String textureFolder = "";
 
 			if(blockName.contains("rough") && blockName.contains("concrete")) {
 				textureFolder = "rough_concrete";
@@ -41,6 +45,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 				case "WallBlock" -> registerWallBlockStateAndModel((WallBlock)b, blockName.substring(0, blockName.indexOf("_wall")), textureFolder);
 				case "GlassBlock", "StainedGlassBlock" -> registerGlassBlockStateAndModel(b, blockName, textureFolder);
 				case "StainedGlassPaneBlock" -> registerPaneBlockStateAndModel((IronBarsBlock)b, blockName, textureFolder);
+				case "RotatedPillarBlock" -> registerRotatableBlockStateAndModel((RotatedPillarBlock) b, blockName, textureFolder,  "");
 				default -> registerBlockStateAndModel(b, blockName, textureFolder);
 			}
 		});
@@ -103,6 +108,56 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		String textureName = String.format("block/%s/%s", textureFolder, cleanName);
 		paneBlockWithRenderType(block, modLoc(textureName), modLoc(textureName),"translucent");
 		itemModels().singleTexture(blockName, mcLoc("item/generated"), "layer0", modLoc(textureName)).renderType("translucent");
+	}
+
+	private void registerRotatableBlockStateAndModel(RotatedPillarBlock block, String name, String textureFolder, String topTexture) {
+		String resource = "block/" + textureFolder + "/" + name;
+
+		if(textureFolder.equals("")) {
+			resource = "block/" + name;
+		}
+
+		ResourceLocation sides = modLoc(resource);
+		ResourceLocation end;
+
+		if(!topTexture.equals("")) {
+			if(!textureFolder.equals("")) {
+				end = modLoc("block/" + textureFolder + "/" + topTexture);
+			} else {
+				end = modLoc("block/" + topTexture);
+			}
+		} else {
+			end = sides;
+		}
+
+		ModelFile model = models().cubeColumn(name, sides, end);
+
+		getVariantBuilder(block).forAllStatesExcept(state -> {
+			Direction.Axis axis = state.getValue(RotatedPillarBlock.AXIS);
+
+			int yRot = 0;
+			int xRot = 0;
+
+			switch (axis) {
+				case X:
+					xRot = 90;
+					yRot = 90;
+					break;
+				case Y:
+					break;
+				case Z:
+					xRot = 90;
+					break;
+			}
+
+			return ConfiguredModel.builder()
+					.modelFile(model)
+					.rotationX(xRot)
+					.rotationY(yRot)
+					.build();
+		});
+
+		registerItemModel(name);
 	}
 
 	private void registerItemModel(String name) {

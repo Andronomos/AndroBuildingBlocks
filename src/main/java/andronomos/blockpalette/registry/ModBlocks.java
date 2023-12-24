@@ -26,6 +26,8 @@ public class ModBlocks {
 
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, BlockPalette.MODID);
 
+	public static final RegistryObject<Block> TEST = registerRotatableBlock("test", BARRICADE_PROPERTIES);
+
 	//region Rough Concrete
 	public static final RegistryObject<Block> ROUGH_CONCRETE_WHITE = registerBlock("rough_concrete_white", CONCRETE_PROPERTIES.mapColor(DyeColor.WHITE));
 	public static final RegistryObject<StairBlock> ROUGH_CONCRETE_WHITE_STAIRS = registerStairBlock("rough_concrete_white_stairs", ROUGH_CONCRETE_WHITE, CONCRETE_PROPERTIES.mapColor(DyeColor.WHITE));
@@ -183,6 +185,10 @@ public class ModBlocks {
 	public static final RegistryObject<StainedGlassBlock> BORDERLESS_BLACK_GLASS = registerGlassBlock("borderless_black_glass", DyeColor.BLACK);
 	public static final RegistryObject<Block> BORDERLESS_BLACK_GLASS_PANE = registerGlassPaneBlock("black", DyeColor.BLACK);
 	//endregion
+
+	public static RegistryObject<Block> registerRotatableBlock(final String name, Block.Properties properties) {
+		return registerBlock(name, () -> new RotatedPillarBlock(properties));
+	}
 
 	public static RegistryObject<Block> registerBlock(final String name, Block.Properties properties) {
 		return registerBlock(name, () -> new Block(properties));

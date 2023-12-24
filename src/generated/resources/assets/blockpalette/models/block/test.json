@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "blockpalette:block/test"
+    "end": "blockpalette:block/test",
+    "side": "blockpalette:block/test"
   }
 }
