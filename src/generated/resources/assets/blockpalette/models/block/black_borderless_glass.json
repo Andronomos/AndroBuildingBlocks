@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cube_all",
   "render_type": "minecraft:translucent",
   "textures": {
-    "all": "blockpalette:block/borderless_glass/black_borderless_glass"
+    "all": "blockpalette:block/black_borderless_glass"
   }
 }

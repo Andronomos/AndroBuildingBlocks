@@ -2,7 +2,7 @@
   "parent": "minecraft:block/template_glass_pane_side_alt",
   "render_type": "minecraft:translucent",
   "textures": {
-    "edge": "blockpalette:block/borderless_glass/white_borderless_glass",
-    "pane": "blockpalette:block/borderless_glass/white_borderless_glass"
+    "edge": "blockpalette:block/white_borderless_glass",
+    "pane": "blockpalette:block/white_borderless_glass"
   }
 }

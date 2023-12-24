@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_wall_post",
   "textures": {
-    "wall": "blockpalette:block/rough_concrete/rough_concrete_orange_tile"
+    "wall": "blockpalette:block/rough_concrete_orange_tile"
   }
 }

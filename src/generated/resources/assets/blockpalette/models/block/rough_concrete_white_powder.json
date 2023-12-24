@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "blockpalette:block/rough_concrete/rough_concrete_white_powder"
+    "all": "blockpalette:block/rough_concrete_white_powder"
   }
 }
