@@ -171,7 +171,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateStoneCutterRecipe(ModBlocks.DARK_METAL_TILE.get(), ModBlocks.DARK_METAL.get(), 1, recipeConsumer);
 		generateStoneCutterRecipe(ModBlocks.DARK_METAL_GRATE.get(), ModBlocks.DARK_METAL.get(), 1, recipeConsumer);
 
-		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_METAL_BARRIER_YELLOW.get(), 8);
+		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_METAL_BARRIER_YELLOW.get(), 4);
 		shaped.define('1', Items.YELLOW_DYE);
 		shaped.define('2', ModBlocks.DARK_METAL.get());
 		shaped.pattern("121");
