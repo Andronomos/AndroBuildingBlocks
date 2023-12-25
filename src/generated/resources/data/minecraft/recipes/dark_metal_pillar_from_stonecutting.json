@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "blockpalette:dark_metal"
-  },
-  "result": "blockpalette:dark_metal_pillar"
-}

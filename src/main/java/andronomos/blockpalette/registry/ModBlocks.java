@@ -15,7 +15,7 @@ import java.util.function.Supplier;
 public class ModBlocks {
 	public static Block.Properties CONCRETE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.WHITE_CONCRETE);
 	public static Block.Properties CONCRETE_POWDER_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.WHITE_CONCRETE_POWDER);
-	public static Block.Properties METAL_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK);
+	public static Block.Properties STONE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.STONE);
 	public static Block.Properties BARRICADE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK);
 	public static Block.Properties GLASS_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.BLACK_STAINED_GLASS);
 	public static Block.Properties GLASS_PANE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.BLACK_STAINED_GLASS_PANE);
@@ -175,14 +175,14 @@ public class ModBlocks {
 	//endregion
 
 	//region Dark Metal
-	public static final RegistryObject<Block> DARK_METAL = registerBlock("dark_metal", METAL_PROPERTIES.mapColor(DyeColor.BLACK));
-	public static final RegistryObject<Block> DARK_METAL_PILLAR = registerRotatableBlock("dark_metal_pillar", METAL_PROPERTIES.mapColor(DyeColor.BLACK));
-	public static final RegistryObject<Block> DARK_METAL_GRATE = registerRotatableBlock("dark_metal_grate", METAL_PROPERTIES.mapColor(DyeColor.BLACK));
-	public static final RegistryObject<Block> DARK_METAL_TILE = registerBlock("dark_metal_tile", METAL_PROPERTIES.mapColor(DyeColor.BLACK));
-	public static final RegistryObject<Block> DARK_METAL_BARRIER_YELLOW = registerBlock("dark_metal_barrier_yellow", BARRICADE_PROPERTIES);
-	public static final RegistryObject<StairBlock> DARK_METAL_BARRIER_YELLOW_STAIRS = registerStairBlock("dark_metal_barrier_yellow_stairs", DARK_METAL_BARRIER_YELLOW, BARRICADE_PROPERTIES);
-	public static final RegistryObject<SlabBlock> DARK_METAL_BARRIER_YELLOW_SLAB = registerSlabBlock("dark_metal_barrier_yellow_slab", BARRICADE_PROPERTIES);
-	public static final RegistryObject<WallBlock> DARK_METAL_BARRIER_YELLOW_WALL = registerWallBlock("dark_metal_barrier_yellow_wall", BARRICADE_PROPERTIES);
+	public static final RegistryObject<Block> DARK_STONE = registerBlock("dark_stone", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
+	public static final RegistryObject<Block> DARK_STONE_PILLAR = registerRotatableBlock("dark_stone_pillar", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
+	public static final RegistryObject<Block> DARK_STONE_GRATE = registerRotatableBlock("dark_stone_grate", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
+	public static final RegistryObject<Block> DARK_STONE_TILE = registerBlock("dark_stone_tile", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
+	public static final RegistryObject<Block> DARK_STONE_BARRIER_YELLOW = registerBlock("dark_stone_barrier_yellow", BARRICADE_PROPERTIES);
+	public static final RegistryObject<StairBlock> DARK_STONE_BARRIER_YELLOW_STAIRS = registerStairBlock("dark_stone_barrier_yellow_stairs", DARK_STONE_BARRIER_YELLOW, BARRICADE_PROPERTIES);
+	public static final RegistryObject<SlabBlock> DARK_STONE_BARRIER_YELLOW_SLAB = registerSlabBlock("dark_stone_barrier_yellow_slab", BARRICADE_PROPERTIES);
+	public static final RegistryObject<WallBlock> DARK_STONE_BARRIER_YELLOW_WALL = registerWallBlock("dark_stone_barrier_yellow_wall", BARRICADE_PROPERTIES);
 	//endregion
 
 	public static RegistryObject<Block> registerRotatableBlock(final String name, Block.Properties properties) {

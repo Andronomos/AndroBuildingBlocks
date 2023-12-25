@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "blockpalette:dark_stone"
+  },
+  "result": "blockpalette:dark_stone_grate"
+}

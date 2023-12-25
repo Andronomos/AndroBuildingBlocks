@@ -112,13 +112,13 @@
     "blockpalette:yellow_borderless_glass_pane",
     "blockpalette:black_borderless_glass",
     "blockpalette:black_borderless_glass_pane",
-    "blockpalette:dark_metal",
-    "blockpalette:dark_metal_pillar",
-    "blockpalette:dark_metal_grate",
-    "blockpalette:dark_metal_tile",
-    "blockpalette:dark_metal_barrier_yellow",
-    "blockpalette:dark_metal_barrier_yellow_stairs",
-    "blockpalette:dark_metal_barrier_yellow_slab",
-    "blockpalette:dark_metal_barrier_yellow_wall"
+    "blockpalette:dark_stone",
+    "blockpalette:dark_stone_pillar",
+    "blockpalette:dark_stone_grate",
+    "blockpalette:dark_stone_tile",
+    "blockpalette:dark_stone_barrier_yellow",
+    "blockpalette:dark_stone_barrier_yellow_stairs",
+    "blockpalette:dark_stone_barrier_yellow_slab",
+    "blockpalette:dark_stone_barrier_yellow_wall"
   ]
 }

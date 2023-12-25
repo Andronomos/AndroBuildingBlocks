@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "blockpalette:block/dark_stone_barrier_yellow"
+  }
+}

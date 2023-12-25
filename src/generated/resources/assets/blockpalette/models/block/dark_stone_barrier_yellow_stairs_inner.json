@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "blockpalette:block/dark_stone_barrier_yellow",
+    "side": "blockpalette:block/dark_stone_barrier_yellow",
+    "top": "blockpalette:block/dark_stone_barrier_yellow"
+  }
+}

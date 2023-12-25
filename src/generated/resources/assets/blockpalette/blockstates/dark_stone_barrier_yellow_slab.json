@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blockpalette:block/dark_stone_barrier_yellow_slab"
+    },
+    "type=double": {
+      "model": "blockpalette:block/dark_stone_barrier_yellow"
+    },
+    "type=top": {
+      "model": "blockpalette:block/dark_stone_barrier_yellow_slab_top"
+    }
+  }
+}

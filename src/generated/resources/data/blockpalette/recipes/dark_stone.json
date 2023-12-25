@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "1": {
+      "item": "minecraft:coal_block"
+    },
+    "2": {
+      "item": "minecraft:stone"
+    }
+  },
+  "pattern": [
+    "121",
+    "212",
+    "121"
+  ],
+  "result": {
+    "count": 4,
+    "item": "blockpalette:dark_stone"
+  },
+  "show_notification": true
+}

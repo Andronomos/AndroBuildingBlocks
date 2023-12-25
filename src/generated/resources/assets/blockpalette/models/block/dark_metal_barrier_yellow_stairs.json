@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "blockpalette:block/dark_metal_barrier_yellow",
-    "side": "blockpalette:block/dark_metal_barrier_yellow",
-    "top": "blockpalette:block/dark_metal_barrier_yellow"
-  }
-}
