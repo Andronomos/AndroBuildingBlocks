@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "1": {
+      "tag": "forge:ingots/iron"
+    },
+    "2": {
+      "item": "minecraft:coal"
+    },
+    "3": {
+      "item": "minecraft:cobbled_deepslate"
+    }
+  },
+  "pattern": [
+    "323",
+    "212",
+    "323"
+  ],
+  "result": {
+    "count": 8,
+    "item": "blockpalette:dark_metal"
+  },
+  "show_notification": true
+}

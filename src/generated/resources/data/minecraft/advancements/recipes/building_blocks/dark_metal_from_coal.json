@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blockpalette:dark_metal"
+        "recipe": "minecraft:dark_metal_from_coal"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "blockpalette:dark_metal"
+      "minecraft:dark_metal_from_coal"
     ]
   },
   "sends_telemetry_event": false

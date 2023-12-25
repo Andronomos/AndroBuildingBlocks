@@ -6,7 +6,7 @@
       "tag": "forge:ingots/iron"
     },
     "2": {
-      "tag": "forge:ores/coal"
+      "item": "minecraft:charcoal"
     },
     "3": {
       "item": "minecraft:cobbled_deepslate"

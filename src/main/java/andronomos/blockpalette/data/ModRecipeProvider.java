@@ -165,16 +165,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateThreeByTwoRecipe(ModBlocks.BLACK_BORDERLESS_GLASS_PANE.get(), ModBlocks.BLACK_BORDERLESS_GLASS.get(), recipeConsumer);
 		//endregion
 
-		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_METAL.get(), 8);
-		shaped.define('1', Tags.Items.INGOTS_IRON);
-		shaped.define('2', Tags.Items.ORES_COAL);
-		shaped.define('3', Items.COBBLED_DEEPSLATE);
-		shaped.pattern("323");
-		shaped.pattern("212");
-		shaped.pattern("323");
-		shaped.unlockedBy("has_item", has(Tags.Items.INGOTS_IRON));
-		shaped.save(recipeConsumer);
-
+		generateDarkMetalRecipe(Items.COAL, recipeConsumer);
+		generateDarkMetalRecipe(Items.CHARCOAL, recipeConsumer);
 		generateStoneCutterRecipe(ModBlocks.DARK_METAL_PILLAR.get(), ModBlocks.DARK_METAL.get(), 1, recipeConsumer);
 	}
 
@@ -196,8 +188,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		shaped.pattern("112");
 		shaped.pattern("222");
 		shaped.unlockedBy("has_item", has(Tags.Items.STONE));
-		//shaped.group(getVariantName(output));
 		shaped.save(consumer);
+	}
+
+	private void generateDarkMetalRecipe(Item item, Consumer<FinishedRecipe> consumer) {
+		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_METAL.get(), 8);
+		shaped.define('1', Tags.Items.INGOTS_IRON);
+		shaped.define('2', item);
+		shaped.define('3', Items.COBBLED_DEEPSLATE);
+		shaped.pattern("323");
+		shaped.pattern("212");
+		shaped.pattern("323");
+		shaped.unlockedBy("has_item", has(Tags.Items.INGOTS_IRON));
+		shaped.group("dark_metal");
+		shaped.save(consumer, "dark_metal_from_" + ForgeRegistries.ITEMS.getKey(item).getPath());
 	}
 
 	private void generateThreeByTwoRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
