@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "blockpalette:block/industrial_yellow_arrow_left",
+    "side": "blockpalette:block/industrial_yellow_arrow_left"
+  }
+}

@@ -74,16 +74,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 	private void registerRotatableBlockStateAndModel(RotatedPillarBlock block, String name, String topTexture) {
 		String resource = "block/" + name;
-		ResourceLocation sides = modLoc(resource);
+		ResourceLocation side = modLoc(resource);
 		ResourceLocation end;
 
 		if(!topTexture.equals("")) {
 			end = modLoc("block/" + topTexture);
 		} else {
-			end = sides;
+			end = side;
 		}
 
-		ModelFile model = models().cubeColumn(name, sides, end);
+		//axisBlock(block, side, end);
+
+		ModelFile model = models().cubeColumn(name, side, end);
 
 		getVariantBuilder(block).forAllStatesExcept(state -> {
 			Direction.Axis axis = state.getValue(RotatedPillarBlock.AXIS);

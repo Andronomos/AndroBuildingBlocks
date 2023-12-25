@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blockpalette:block/industrial_yellow_stripes_slab"
+    },
+    "type=double": {
+      "model": "blockpalette:block/industrial_yellow_stripes"
+    },
+    "type=top": {
+      "model": "blockpalette:block/industrial_yellow_stripes_slab_top"
+    }
+  }
+}

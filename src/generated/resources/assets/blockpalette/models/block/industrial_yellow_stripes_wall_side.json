@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_wall_side",
   "textures": {
-    "wall": "blockpalette:block/dark_stone_barrier_yellow"
+    "wall": "blockpalette:block/industrial_yellow_stripes"
   }
 }

@@ -179,10 +179,16 @@ public class ModBlocks {
 	public static final RegistryObject<Block> DARK_STONE_PILLAR = registerRotatableBlock("dark_stone_pillar", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
 	public static final RegistryObject<Block> DARK_STONE_GRATE = registerRotatableBlock("dark_stone_grate", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
 	public static final RegistryObject<Block> DARK_STONE_TILE = registerBlock("dark_stone_tile", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
-	public static final RegistryObject<Block> DARK_STONE_BARRIER_YELLOW = registerBlock("dark_stone_barrier_yellow", BARRICADE_PROPERTIES);
-	public static final RegistryObject<StairBlock> DARK_STONE_BARRIER_YELLOW_STAIRS = registerStairBlock("dark_stone_barrier_yellow_stairs", DARK_STONE_BARRIER_YELLOW, BARRICADE_PROPERTIES);
-	public static final RegistryObject<SlabBlock> DARK_STONE_BARRIER_YELLOW_SLAB = registerSlabBlock("dark_stone_barrier_yellow_slab", BARRICADE_PROPERTIES);
-	public static final RegistryObject<WallBlock> DARK_STONE_BARRIER_YELLOW_WALL = registerWallBlock("dark_stone_barrier_yellow_wall", BARRICADE_PROPERTIES);
+	//endregion
+
+	//region Industrial Sign
+	public static final RegistryObject<Block> INDUSTRIAL_YELLOW_STRIPES = registerBlock("industrial_yellow_stripes", BARRICADE_PROPERTIES);
+	public static final RegistryObject<StairBlock> INDUSTRIAL_YELLOW_STRIPES_STAIRS = registerStairBlock("industrial_yellow_stripes_stairs", INDUSTRIAL_YELLOW_STRIPES, BARRICADE_PROPERTIES);
+	public static final RegistryObject<SlabBlock> INDUSTRIAL_YELLOW_STRIPES_SLAB = registerSlabBlock("industrial_yellow_stripes_slab", BARRICADE_PROPERTIES);
+	public static final RegistryObject<WallBlock> INDUSTRIAL_YELLOW_STRIPES_YELLOW_WALL = registerWallBlock("industrial_yellow_stripes_wall", BARRICADE_PROPERTIES);
+
+	public static final RegistryObject<Block> INDUSTRIAL_YELLOW_ARROW_LEFT = registerRotatableBlock("industrial_yellow_arrow_left", BARRICADE_PROPERTIES);
+	public static final RegistryObject<Block> INDUSTRIAL_YELLOW_ARROW_RIGHT = registerRotatableBlock("industrial_yellow_arrow_right", BARRICADE_PROPERTIES);
 	//endregion
 
 	public static RegistryObject<Block> registerRotatableBlock(final String name, Block.Properties properties) {

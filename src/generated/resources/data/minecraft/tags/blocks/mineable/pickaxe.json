@@ -116,9 +116,11 @@
     "blockpalette:dark_stone_pillar",
     "blockpalette:dark_stone_grate",
     "blockpalette:dark_stone_tile",
-    "blockpalette:dark_stone_barrier_yellow",
-    "blockpalette:dark_stone_barrier_yellow_stairs",
-    "blockpalette:dark_stone_barrier_yellow_slab",
-    "blockpalette:dark_stone_barrier_yellow_wall"
+    "blockpalette:industrial_yellow_stripes",
+    "blockpalette:industrial_yellow_stripes_stairs",
+    "blockpalette:industrial_yellow_stripes_slab",
+    "blockpalette:industrial_yellow_stripes_wall",
+    "blockpalette:industrial_yellow_arrow_left",
+    "blockpalette:industrial_yellow_arrow_right"
   ]
 }

@@ -1,4 +1,4 @@
-// 1.20.1	2023-12-24T20:26:47.1105562	Recipes
+// 1.20.1	2023-12-24T23:47:48.8010771	Recipes
 a7e5707379f8098d73c96ba21d638d6ba43c533a data/blockpalette/advancements/recipes/building_blocks/black_borderless_glass.json
 92b71735064399f9cb8f7bcef031db8dd60fddf1 data/blockpalette/advancements/recipes/building_blocks/black_borderless_glass_pane.json
 28e36a2c626e6a1d0388150c38b17fdf7af6f9f4 data/blockpalette/advancements/recipes/building_blocks/blue_borderless_glass.json
@@ -82,7 +82,7 @@ c3b1f96b8a674a4ad9378ce5b0ebff8b0b8d0e32 data/blockpalette/recipes/black_borderl
 72803c830597dfcc43d68420ec62ae227ec292a3 data/blockpalette/recipes/cyan_borderless_glass.json
 8292090cd730ae1558a3171e58120894fbabdcf9 data/blockpalette/recipes/cyan_borderless_glass_pane.json
 d7cf9a84bf61aa6ea098ec40f55b62940cbf18a2 data/blockpalette/recipes/dark_stone.json
-db2d6870b8fb417a3ebe576ba2a536be5441d182 data/blockpalette/recipes/dark_stone_tile.json
+b570993b2ebee58c5983ed88b2f9f032702e533c data/blockpalette/recipes/dark_stone_tile.json
 b8b359849728691bc43ce845830bcbab5d8df17f data/blockpalette/recipes/gray_borderless_glass.json
 eb4e6992c527481ec6fc085f9f9ffa3eb4c23d3d data/blockpalette/recipes/gray_borderless_glass_pane.json
 1121124eba411316a5ad82484a648a23695bd9c3 data/blockpalette/recipes/green_borderless_glass.json

@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "blockpalette:dark_stone_barrier_yellow_wall"
+          "name": "blockpalette:industrial_yellow_arrow_left"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "blockpalette:blocks/dark_stone_barrier_yellow_wall"
+  "random_sequence": "blockpalette:blocks/industrial_yellow_arrow_left"
 }
