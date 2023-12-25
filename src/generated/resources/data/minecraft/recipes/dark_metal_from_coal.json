@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "dark_metal",
   "key": {
     "1": {
       "tag": "forge:ingots/iron"

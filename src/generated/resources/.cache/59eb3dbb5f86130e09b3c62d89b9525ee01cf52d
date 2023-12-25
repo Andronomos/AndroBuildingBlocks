@@ -1,4 +1,4 @@
-// 1.20.1	2023-12-24T17:06:57.2544024	Loot Tables
+// 1.20.1	2023-12-24T17:43:27.7031892	Loot Tables
 04786e34d98dd9139eb58d7d94f658bbbda4ea6d data/blockpalette/loot_tables/blocks/barricade_yellow.json
 88520b25bda64179fb87dd49b0187a558ecfab6e data/blockpalette/loot_tables/blocks/barricade_yellow_slab.json
 2a4a6ca5f5703dc6f565218dc84cb5556115cbb9 data/blockpalette/loot_tables/blocks/barricade_yellow_stairs.json
@@ -13,6 +13,7 @@ f19ee4a878cafbaeb1a2a65750ec89a4afb2133c data/blockpalette/loot_tables/blocks/br
 8feeabf5d01d8f3b8e8a2c219ed6a50cba2a2f8c data/blockpalette/loot_tables/blocks/cyan_borderless_glass_pane.json
 b077043650667056f0ff1d8ff305b33eb65ad086 data/blockpalette/loot_tables/blocks/dark_metal.json
 40c6103f5c4a0b132e20fdd08364169686ec0f46 data/blockpalette/loot_tables/blocks/dark_metal_pillar.json
+b5b771aa924a82bfc9d0b606e69a9b5888c41fe7 data/blockpalette/loot_tables/blocks/dark_metal_tile.json
 9329225533021ada26db66fa323dbf5ad5c226f2 data/blockpalette/loot_tables/blocks/gray_borderless_glass.json
 35d0210585b2e6699e03ebb9436dfd393fc3f303 data/blockpalette/loot_tables/blocks/gray_borderless_glass_pane.json
 715a3e7cc2a20b96155bcb5904160c8a4e4f7ca8 data/blockpalette/loot_tables/blocks/green_borderless_glass.json
