@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "blockpalette:test"
+          "name": "blockpalette:dark_metal_pillar"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "blockpalette:blocks/test"
+  "random_sequence": "blockpalette:blocks/dark_metal_pillar"
 }

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "blockpalette:block/dark_metal_pillar",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "blockpalette:block/dark_metal_pillar"
+    },
+    "axis=z": {
+      "model": "blockpalette:block/dark_metal_pillar",
+      "x": 90
+    }
+  }
+}

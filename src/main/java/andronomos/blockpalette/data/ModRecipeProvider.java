@@ -164,6 +164,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateSingleItemShapelessRecipe(ModBlocks.BLACK_BORDERLESS_GLASS.get(), Blocks.BLACK_STAINED_GLASS, recipeConsumer);
 		generateThreeByTwoRecipe(ModBlocks.BLACK_BORDERLESS_GLASS_PANE.get(), ModBlocks.BLACK_BORDERLESS_GLASS.get(), recipeConsumer);
 		//endregion
+
+		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_METAL.get(), 8);
+		shaped.define('1', Tags.Items.INGOTS_IRON);
+		shaped.define('2', Tags.Items.ORES_COAL);
+		shaped.define('3', Items.COBBLED_DEEPSLATE);
+		shaped.pattern("323");
+		shaped.pattern("212");
+		shaped.pattern("323");
+		shaped.unlockedBy("has_item", has(Tags.Items.INGOTS_IRON));
+		shaped.save(recipeConsumer);
+
+		generateStoneCutterRecipe(ModBlocks.DARK_METAL_PILLAR.get(), ModBlocks.DARK_METAL.get(), 1, recipeConsumer);
 	}
 
 	private void generateSingleItemShapelessRecipe(Block output, Block sourceBlock, Consumer<FinishedRecipe> consumer)

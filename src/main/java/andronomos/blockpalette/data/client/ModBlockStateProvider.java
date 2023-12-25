@@ -23,7 +23,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 			String blockName = ForgeRegistries.BLOCKS.getKey(b).getPath();
 			String blockType = b.getClass().getSimpleName();
-			//String textureFolder = blockName;
 
 			switch (blockType) {
 				case "StairBlock" -> registerStairBlockStateAndModel((StairBlock)b, blockName.substring(0, blockName.indexOf("_stairs")));

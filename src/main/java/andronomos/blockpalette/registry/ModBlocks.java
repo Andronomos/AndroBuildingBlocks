@@ -15,13 +15,12 @@ import java.util.function.Supplier;
 public class ModBlocks {
 	public static Block.Properties CONCRETE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.WHITE_CONCRETE);
 	public static Block.Properties CONCRETE_POWDER_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.WHITE_CONCRETE_POWDER);
+	public static Block.Properties METAL_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK);
 	public static Block.Properties BARRICADE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK);
 	public static Block.Properties GLASS_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.BLACK_STAINED_GLASS);
 	public static Block.Properties GLASS_PANE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.BLACK_STAINED_GLASS_PANE);
 
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, BlockPalette.MODID);
-
-	public static final RegistryObject<Block> TEST = registerRotatableBlock("test", BARRICADE_PROPERTIES);
 
 	//region Rough Concrete
 	public static final RegistryObject<Block> ROUGH_CONCRETE_WHITE = registerBlock("rough_concrete_white", CONCRETE_PROPERTIES.mapColor(DyeColor.WHITE));
@@ -180,6 +179,11 @@ public class ModBlocks {
 
 	public static final RegistryObject<StainedGlassBlock> BLACK_BORDERLESS_GLASS = registerGlassBlock("black_borderless_glass", DyeColor.BLACK);
 	public static final RegistryObject<Block> BLACK_BORDERLESS_GLASS_PANE = registerGlassPaneBlock("black", DyeColor.BLACK);
+	//endregion
+
+	//region Dark Metal
+	public static final RegistryObject<Block> DARK_METAL = registerBlock("dark_metal", METAL_PROPERTIES.mapColor(DyeColor.BLACK));
+	public static final RegistryObject<Block> DARK_METAL_PILLAR = registerRotatableBlock("dark_metal_pillar", METAL_PROPERTIES.mapColor(DyeColor.BLACK));
 	//endregion
 
 	public static RegistryObject<Block> registerRotatableBlock(final String name, Block.Properties properties) {
