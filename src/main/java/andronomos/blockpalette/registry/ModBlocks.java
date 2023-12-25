@@ -124,13 +124,6 @@ public class ModBlocks {
 	public static final RegistryObject<ConcretePowderBlock> ROUGH_CONCRETE_YELLOW_POWDER = registerPowderBlock("rough_concrete_yellow_powder", ROUGH_CONCRETE_YELLOW, CONCRETE_POWDER_PROPERTIES.mapColor(DyeColor.YELLOW));
 	//endregion
 
-	//region Barricade
-	public static final RegistryObject<Block> BARRICADE_YELLOW = registerBlock("barricade_yellow", BARRICADE_PROPERTIES);
-	public static final RegistryObject<StairBlock> BARRICADE_YELLOW_STAIRS = registerStairBlock("barricade_yellow_stairs", BARRICADE_YELLOW, BARRICADE_PROPERTIES);
-	public static final RegistryObject<SlabBlock> BARRICADE_YELLOW_SLAB = registerSlabBlock("barricade_yellow_slab", BARRICADE_PROPERTIES);
-	public static final RegistryObject<WallBlock> BARRICADE_YELLOW_WALL = registerWallBlock("barricade_yellow_wall", BARRICADE_PROPERTIES);
-	//endregion
-
 	//region Borderless Glass
 	public static final RegistryObject<StainedGlassBlock> WHITE_BORDERLESS_GLASS = registerGlassBlock("white_borderless_glass", DyeColor.WHITE);
 	public static final RegistryObject<Block> WHITE_BORDERLESS_GLASS_PANE = registerGlassPaneBlock("white", DyeColor.WHITE);
@@ -186,6 +179,10 @@ public class ModBlocks {
 	public static final RegistryObject<Block> DARK_METAL_PILLAR = registerRotatableBlock("dark_metal_pillar", METAL_PROPERTIES.mapColor(DyeColor.BLACK));
 	public static final RegistryObject<Block> DARK_METAL_GRATE = registerRotatableBlock("dark_metal_grate", METAL_PROPERTIES.mapColor(DyeColor.BLACK));
 	public static final RegistryObject<Block> DARK_METAL_TILE = registerBlock("dark_metal_tile", METAL_PROPERTIES.mapColor(DyeColor.BLACK));
+	public static final RegistryObject<Block> DARK_METAL_BARRIER_YELLOW = registerBlock("dark_metal_barrier_yellow", BARRICADE_PROPERTIES);
+	public static final RegistryObject<StairBlock> DARK_METAL_BARRIER_YELLOW_STAIRS = registerStairBlock("dark_metal_barrier_yellow_stairs", DARK_METAL_BARRIER_YELLOW, BARRICADE_PROPERTIES);
+	public static final RegistryObject<SlabBlock> DARK_METAL_BARRIER_YELLOW_SLAB = registerSlabBlock("dark_metal_barrier_yellow_slab", BARRICADE_PROPERTIES);
+	public static final RegistryObject<WallBlock> DARK_METAL_BARRIER_YELLOW_WALL = registerWallBlock("dark_metal_barrier_yellow_wall", BARRICADE_PROPERTIES);
 	//endregion
 
 	public static RegistryObject<Block> registerRotatableBlock(final String name, Block.Properties properties) {

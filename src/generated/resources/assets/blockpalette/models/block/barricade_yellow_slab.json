@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "blockpalette:block/barricade_yellow",
-    "side": "blockpalette:block/barricade_yellow",
-    "top": "blockpalette:block/barricade_yellow"
-  }
-}

@@ -80,10 +80,6 @@
     "blockpalette:rough_concrete_yellow_tile_stairs",
     "blockpalette:rough_concrete_yellow_tile_slab",
     "blockpalette:rough_concrete_yellow_tile_wall",
-    "blockpalette:barricade_yellow",
-    "blockpalette:barricade_yellow_stairs",
-    "blockpalette:barricade_yellow_slab",
-    "blockpalette:barricade_yellow_wall",
     "blockpalette:white_borderless_glass",
     "blockpalette:white_borderless_glass_pane",
     "blockpalette:blue_borderless_glass",
@@ -119,6 +115,10 @@
     "blockpalette:dark_metal",
     "blockpalette:dark_metal_pillar",
     "blockpalette:dark_metal_grate",
-    "blockpalette:dark_metal_tile"
+    "blockpalette:dark_metal_tile",
+    "blockpalette:dark_metal_barrier_yellow",
+    "blockpalette:dark_metal_barrier_yellow_stairs",
+    "blockpalette:dark_metal_barrier_yellow_slab",
+    "blockpalette:dark_metal_barrier_yellow_wall"
   ]
 }

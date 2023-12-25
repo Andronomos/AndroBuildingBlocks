@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "1": {
+      "item": "minecraft:yellow_dye"
+    },
+    "2": {
+      "item": "blockpalette:dark_metal"
+    }
+  },
+  "pattern": [
+    "121",
+    "212",
+    "121"
+  ],
+  "result": {
+    "count": 8,
+    "item": "blockpalette:dark_metal_barrier_yellow"
+  },
+  "show_notification": true
+}

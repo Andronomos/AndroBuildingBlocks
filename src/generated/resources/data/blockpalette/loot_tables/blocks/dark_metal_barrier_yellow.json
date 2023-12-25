@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "blockpalette:barricade_yellow"
+          "name": "blockpalette:dark_metal_barrier_yellow"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "blockpalette:blocks/barricade_yellow"
+  "random_sequence": "blockpalette:blocks/dark_metal_barrier_yellow"
 }
