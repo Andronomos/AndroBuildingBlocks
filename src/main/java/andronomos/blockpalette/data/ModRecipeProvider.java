@@ -169,6 +169,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateDarkMetalRecipe(Items.CHARCOAL, recipeConsumer);
 		generateStoneCutterRecipe(ModBlocks.DARK_METAL_PILLAR.get(), ModBlocks.DARK_METAL.get(), 1, recipeConsumer);
 		generateStoneCutterRecipe(ModBlocks.DARK_METAL_TILE.get(), ModBlocks.DARK_METAL.get(), 1, recipeConsumer);
+		generateStoneCutterRecipe(ModBlocks.DARK_METAL_GRATE.get(), ModBlocks.DARK_METAL.get(), 1, recipeConsumer);
 	}
 
 	private void generateSingleItemShapelessRecipe(Block output, Block sourceBlock, Consumer<FinishedRecipe> consumer)

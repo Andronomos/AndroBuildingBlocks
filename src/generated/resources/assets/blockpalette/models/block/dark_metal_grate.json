@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "blockpalette:block/dark_metal_grate",
+    "side": "blockpalette:block/dark_metal_grate"
+  }
+}

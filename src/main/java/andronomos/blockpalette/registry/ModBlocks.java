@@ -184,6 +184,7 @@ public class ModBlocks {
 	//region Dark Metal
 	public static final RegistryObject<Block> DARK_METAL = registerBlock("dark_metal", METAL_PROPERTIES.mapColor(DyeColor.BLACK));
 	public static final RegistryObject<Block> DARK_METAL_PILLAR = registerRotatableBlock("dark_metal_pillar", METAL_PROPERTIES.mapColor(DyeColor.BLACK));
+	public static final RegistryObject<Block> DARK_METAL_GRATE = registerRotatableBlock("dark_metal_grate", METAL_PROPERTIES.mapColor(DyeColor.BLACK));
 	public static final RegistryObject<Block> DARK_METAL_TILE = registerBlock("dark_metal_tile", METAL_PROPERTIES.mapColor(DyeColor.BLACK));
 	//endregion
 
