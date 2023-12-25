@@ -7,9 +7,10 @@ import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.apache.commons.lang3.StringUtils;
 
+import java.util.Arrays;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class ModLanguageProvider extends LanguageProvider {
 	public ModLanguageProvider(PackOutput output, String locale) {
@@ -24,8 +25,14 @@ public class ModLanguageProvider extends LanguageProvider {
 		ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 			String name = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(b)).getPath();
 			name = name.replaceAll("_", " ");
-			name = StringUtils.capitalize(name);
+			name = capitalizeWords(name);
 			add(b, name);
 		});
+	}
+
+	static String capitalizeWords(String input) {
+		return Arrays.stream(input.split("\\s+"))
+				.map(word -> word.substring(0, 1).toUpperCase() + word.substring(1))
+				.collect(Collectors.joining(" "));
 	}
 }
