@@ -211,8 +211,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 	private void generateTwoByTwoRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 6);
 		shaped.define('#', input);
-		shaped.pattern("###");
-		shaped.pattern("###");
+		shaped.pattern("##");
+		shaped.pattern("##");
 		shaped.unlockedBy("has_item", has(input));
 		shaped.save(consumer);
 	}
