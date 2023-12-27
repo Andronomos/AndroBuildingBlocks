@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "blockpalette:block/industrial_yellow_stripes",
-    "side": "blockpalette:block/industrial_yellow_stripes",
-    "top": "blockpalette:block/industrial_yellow_stripes"
-  }
-}

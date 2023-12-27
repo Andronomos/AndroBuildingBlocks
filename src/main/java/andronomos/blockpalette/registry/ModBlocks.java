@@ -174,21 +174,11 @@ public class ModBlocks {
 	public static final RegistryObject<Block> BLACK_BORDERLESS_GLASS_PANE = registerGlassPaneBlock("black", DyeColor.BLACK);
 	//endregion
 
-	//region Dark Metal
-	public static final RegistryObject<Block> DARK_STONE = registerBlock("dark_stone", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
-	public static final RegistryObject<Block> DARK_STONE_PILLAR = registerRotatableBlock("dark_stone_pillar", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
-	public static final RegistryObject<Block> DARK_STONE_GRATE = registerRotatableBlock("dark_stone_grate", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
-	public static final RegistryObject<Block> DARK_STONE_TILE = registerBlock("dark_stone_tile", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
-	//endregion
-
-	//region Industrial Sign
-	public static final RegistryObject<Block> INDUSTRIAL_YELLOW_STRIPES = registerBlock("industrial_yellow_stripes", BARRICADE_PROPERTIES);
-	public static final RegistryObject<StairBlock> INDUSTRIAL_YELLOW_STRIPES_STAIRS = registerStairBlock("industrial_yellow_stripes_stairs", INDUSTRIAL_YELLOW_STRIPES, BARRICADE_PROPERTIES);
-	public static final RegistryObject<SlabBlock> INDUSTRIAL_YELLOW_STRIPES_SLAB = registerSlabBlock("industrial_yellow_stripes_slab", BARRICADE_PROPERTIES);
-	public static final RegistryObject<WallBlock> INDUSTRIAL_YELLOW_STRIPES_YELLOW_WALL = registerWallBlock("industrial_yellow_stripes_wall", BARRICADE_PROPERTIES);
-
-	public static final RegistryObject<Block> INDUSTRIAL_YELLOW_ARROW_LEFT = registerRotatableBlock("industrial_yellow_arrow_left", BARRICADE_PROPERTIES);
-	public static final RegistryObject<Block> INDUSTRIAL_YELLOW_ARROW_RIGHT = registerRotatableBlock("industrial_yellow_arrow_right", BARRICADE_PROPERTIES);
+	//region Slate
+	public static final RegistryObject<Block> SLATE = registerBlock("slate", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
+	public static final RegistryObject<Block> SLATE_PILLAR = registerRotatableBlock("slate_pillar", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
+	public static final RegistryObject<Block> SLATE_GRATE = registerRotatableBlock("slate_grate", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
+	public static final RegistryObject<Block> SLATE_TILE = registerBlock("slate_tile", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
 	//endregion
 
 	public static RegistryObject<Block> registerRotatableBlock(final String name, Block.Properties properties) {

@@ -165,27 +165,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateThreeByTwoRecipe(ModBlocks.BLACK_BORDERLESS_GLASS_PANE.get(), ModBlocks.BLACK_BORDERLESS_GLASS.get(), recipeConsumer);
 		//endregion
 
-		generateStoneCutterRecipe(ModBlocks.DARK_STONE_PILLAR.get(), ModBlocks.DARK_STONE.get(), 1, recipeConsumer);
-		generateTwoByTwoRecipe(ModBlocks.DARK_STONE_TILE.get(), ModBlocks.DARK_STONE.get(), recipeConsumer);
-		generateStoneCutterRecipe(ModBlocks.DARK_STONE_GRATE.get(), ModBlocks.DARK_STONE.get(), 1, recipeConsumer);
+		generateStoneCutterRecipe(ModBlocks.SLATE_PILLAR.get(), ModBlocks.SLATE.get(), 1, recipeConsumer);
+		generateTwoByTwoRecipe(ModBlocks.SLATE_TILE.get(), ModBlocks.SLATE.get(), recipeConsumer);
+		generateStoneCutterRecipe(ModBlocks.SLATE_GRATE.get(), ModBlocks.SLATE.get(), 1, recipeConsumer);
 
-		ShapedRecipeBuilder darkStoneRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_STONE.get(), 4);
-		darkStoneRecipe.define('1', Blocks.COAL_BLOCK);
-		darkStoneRecipe.define('2', Blocks.STONE);
+		ShapedRecipeBuilder darkStoneRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SLATE.get(), 4);
+		darkStoneRecipe.define('1', Items.CLAY_BALL);
+		darkStoneRecipe.define('2', Items.GUNPOWDER);
 		darkStoneRecipe.pattern("121");
 		darkStoneRecipe.pattern("212");
 		darkStoneRecipe.pattern("121");
-		darkStoneRecipe.unlockedBy("has_item", has(ModBlocks.DARK_STONE.get()));
+		darkStoneRecipe.unlockedBy("has_item", has(ModBlocks.SLATE.get()));
 		darkStoneRecipe.save(recipeConsumer);
-
-		//ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_STONE_BARRIER_YELLOW.get(), 4);
-		//shaped.define('1', Items.YELLOW_DYE);
-		//shaped.define('2', ModBlocks.DARK_STONE.get());
-		//shaped.pattern("121");
-		//shaped.pattern("212");
-		//shaped.pattern("121");
-		//shaped.unlockedBy("has_item", has(ModBlocks.DARK_STONE.get()));
-		//shaped.save(recipeConsumer);
 	}
 
 	private void generateSingleItemShapelessRecipe(Block output, Block sourceBlock, Consumer<FinishedRecipe> consumer) {
