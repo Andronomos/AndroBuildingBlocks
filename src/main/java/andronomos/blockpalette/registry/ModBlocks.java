@@ -16,6 +16,7 @@ public class ModBlocks {
 	public static Block.Properties CONCRETE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.WHITE_CONCRETE);
 	public static Block.Properties CONCRETE_POWDER_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.WHITE_CONCRETE_POWDER);
 	public static Block.Properties STONE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.STONE);
+	public static Block.Properties SLATE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.STONE).mapColor(DyeColor.BLACK);
 	public static Block.Properties BARRICADE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK);
 	public static Block.Properties GLASS_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.BLACK_STAINED_GLASS);
 	public static Block.Properties GLASS_PANE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.BLACK_STAINED_GLASS_PANE);
@@ -176,9 +177,11 @@ public class ModBlocks {
 
 	//region Slate
 	public static final RegistryObject<Block> SLATE = registerBlock("slate", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
-	public static final RegistryObject<Block> SLATE_PILLAR = registerRotatableBlock("slate_pillar", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
-	public static final RegistryObject<Block> SLATE_GRATE = registerRotatableBlock("slate_grate", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
-	public static final RegistryObject<Block> SLATE_TILE = registerBlock("slate_tile", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
+	public static final RegistryObject<StairBlock> SLATE_STAIRS = registerStairBlock("slate_stairs", SLATE, SLATE_PROPERTIES);
+	public static final RegistryObject<Block> SLATE_PILLAR = registerRotatableBlock("slate_pillar", SLATE_PROPERTIES);
+	public static final RegistryObject<Block> SLATE_GRATE = registerRotatableBlock("slate_grate", SLATE_PROPERTIES);
+	public static final RegistryObject<Block> SLATE_TILE = registerBlock("slate_tile", SLATE_PROPERTIES);
+	public static final RegistryObject<StairBlock> SLATE_TILE_STAIRS = registerStairBlock("slate_tile_stairs", SLATE_TILE, SLATE_PROPERTIES);
 	//endregion
 
 	public static RegistryObject<Block> registerRotatableBlock(final String name, Block.Properties properties) {

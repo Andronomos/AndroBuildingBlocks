@@ -113,8 +113,10 @@
     "blockpalette:black_borderless_glass",
     "blockpalette:black_borderless_glass_pane",
     "blockpalette:slate",
+    "blockpalette:slate_stairs",
     "blockpalette:slate_pillar",
     "blockpalette:slate_grate",
-    "blockpalette:slate_tile"
+    "blockpalette:slate_tile",
+    "blockpalette:slate_tile_stairs"
   ]
 }
