@@ -1,4 +1,4 @@
-// 1.20.1	2023-12-27T15:35:45.1586004	Loot Tables
+// 1.20.1	2023-12-27T15:39:37.3104547	Loot Tables
 4c0f1fd1de20dc3d10cb8de7d0d1a15b183aa57c data/blockpalette/loot_tables/blocks/black_borderless_glass.json
 c0f154ad5cc1dc6e1a62595f7781c20ee83dcd26 data/blockpalette/loot_tables/blocks/black_borderless_glass_pane.json
 f5d17dbeefd9a2465a8f965e2dc459d5b42f0fa8 data/blockpalette/loot_tables/blocks/blue_borderless_glass.json
@@ -120,8 +120,10 @@ ec184637ce8e5add4bf19c9e0ae71841134b3128 data/blockpalette/loot_tables/blocks/ro
 87e189d38089afb369dc44fec00c9aacdba73c6e data/blockpalette/loot_tables/blocks/slate.json
 c8ecc9e2cb46680e88612e9de190112a8d4b65eb data/blockpalette/loot_tables/blocks/slate_grate.json
 c7d14de54792619e1d9300ee4f65410eab2914f0 data/blockpalette/loot_tables/blocks/slate_pillar.json
+a1586530779ce1c144eae97361f8728a85ae1c9b data/blockpalette/loot_tables/blocks/slate_slab.json
 52e018cd9c04f41e2642b9b27377637fadf88de1 data/blockpalette/loot_tables/blocks/slate_stairs.json
 440eaaf9464170b3fc3e0a08bb93260fe1aeb8c2 data/blockpalette/loot_tables/blocks/slate_tile.json
+7670f7e7e60bf5769bc42977e0aa4cb912940529 data/blockpalette/loot_tables/blocks/slate_tile_slab.json
 6f139e9996d710b49c338bb7a2970a02d70bb13f data/blockpalette/loot_tables/blocks/slate_tile_stairs.json
 b536aa6e76625d4be98c28be0e183dfc23f8d0f9 data/blockpalette/loot_tables/blocks/white_borderless_glass.json
 b250fc05282e74731870f86a5523504e9a35120c data/blockpalette/loot_tables/blocks/white_borderless_glass_pane.json
