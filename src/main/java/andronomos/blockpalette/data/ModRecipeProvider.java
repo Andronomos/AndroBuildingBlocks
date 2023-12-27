@@ -169,6 +169,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateTwoByTwoRecipe(ModBlocks.SLATE_TILE.get(), ModBlocks.SLATE.get(), recipeConsumer);
 		generateStoneCutterRecipe(ModBlocks.SLATE_GRATE.get(), ModBlocks.SLATE.get(), 1, recipeConsumer);
 
+		generateStoneCutterRecipe(ModBlocks.SLATE_STAIRS.get(), ModBlocks.SLATE.get(), 1, recipeConsumer);
+		generateStoneCutterRecipe(ModBlocks.SLATE_SLAB.get(), ModBlocks.SLATE.get(), 1, recipeConsumer);
+		generateStairRecipe(ModBlocks.SLATE_TILE_STAIRS.get(), ModBlocks.SLATE_TILE.get().asItem(), recipeConsumer);
+		generateSlabRecipe(ModBlocks.SLATE_TILE_SLAB.get(), ModBlocks.SLATE_TILE.get().asItem(), recipeConsumer);
+
 		ShapedRecipeBuilder darkStoneRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SLATE.get(), 4);
 		darkStoneRecipe.define('1', Items.CLAY_BALL);
 		darkStoneRecipe.define('2', Items.GUNPOWDER);
