@@ -174,14 +174,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateStairRecipe(ModBlocks.SLATE_TILE_STAIRS.get(), ModBlocks.SLATE_TILE.get().asItem(), recipeConsumer);
 		generateSlabRecipe(ModBlocks.SLATE_TILE_SLAB.get(), ModBlocks.SLATE_TILE.get().asItem(), recipeConsumer);
 
-		ShapedRecipeBuilder darkStoneRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SLATE.get(), 4);
-		darkStoneRecipe.define('1', Items.CLAY_BALL);
-		darkStoneRecipe.define('2', Items.GUNPOWDER);
-		darkStoneRecipe.pattern("121");
-		darkStoneRecipe.pattern("212");
-		darkStoneRecipe.pattern("121");
-		darkStoneRecipe.unlockedBy("has_item", has(ModBlocks.SLATE.get()));
-		darkStoneRecipe.save(recipeConsumer);
+		ShapedRecipeBuilder slateRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SLATE.get(), 4);
+		slateRecipe.define('1', Items.CLAY_BALL);
+		slateRecipe.define('2', Items.GUNPOWDER);
+		slateRecipe.pattern("121");
+		slateRecipe.pattern("212");
+		slateRecipe.pattern("121");
+		slateRecipe.unlockedBy("has_item", has(ModBlocks.SLATE.get()));
+		slateRecipe.save(recipeConsumer);
 	}
 
 	private void generateSingleItemShapelessRecipe(Block output, Block sourceBlock, Consumer<FinishedRecipe> consumer) {
