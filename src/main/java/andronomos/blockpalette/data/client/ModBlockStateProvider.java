@@ -1,7 +1,7 @@
 package andronomos.blockpalette.data.client;
 
 import andronomos.blockpalette.BlockPalette;
-import andronomos.blockpalette.registry.ModBlocks;
+import andronomos.blockpalette.registry.BlockRegistry;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -20,7 +20,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 	@Override
 	protected void registerStatesAndModels() {
-		ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
+		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 			String blockName = ForgeRegistries.BLOCKS.getKey(b).getPath();
 			String blockType = b.getClass().getSimpleName();
 

@@ -1,7 +1,7 @@
 package andronomos.blockpalette.data.client;
 
 import andronomos.blockpalette.BlockPalette;
-import andronomos.blockpalette.registry.ModBlocks;
+import andronomos.blockpalette.registry.BlockRegistry;
 import andronomos.blockpalette.registry.ModCreativeTabs;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -22,7 +22,7 @@ public class ModLanguageProvider extends LanguageProvider {
 		add("creativetab." + ModCreativeTabs.BASETABNAME, "BlockPalette");
 		add("creativetab." + ModCreativeTabs.GLASSTABNAME, "BlockPalette Glass");
 
-		ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
+		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 			String name = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(b)).getPath();
 			name = name.replaceAll("_", " ");
 			name = capitalizeWords(name);

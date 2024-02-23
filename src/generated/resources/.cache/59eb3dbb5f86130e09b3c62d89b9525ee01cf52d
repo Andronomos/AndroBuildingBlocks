@@ -1,4 +1,4 @@
-// 1.20.1	2023-12-27T15:39:37.3104547	Loot Tables
+// 1.20.1	2024-02-23T03:57:51.0767192	Loot Tables
 4c0f1fd1de20dc3d10cb8de7d0d1a15b183aa57c data/blockpalette/loot_tables/blocks/black_borderless_glass.json
 c0f154ad5cc1dc6e1a62595f7781c20ee83dcd26 data/blockpalette/loot_tables/blocks/black_borderless_glass_pane.json
 f5d17dbeefd9a2465a8f965e2dc459d5b42f0fa8 data/blockpalette/loot_tables/blocks/blue_borderless_glass.json
@@ -125,6 +125,10 @@ a1586530779ce1c144eae97361f8728a85ae1c9b data/blockpalette/loot_tables/blocks/sl
 440eaaf9464170b3fc3e0a08bb93260fe1aeb8c2 data/blockpalette/loot_tables/blocks/slate_tile.json
 7670f7e7e60bf5769bc42977e0aa4cb912940529 data/blockpalette/loot_tables/blocks/slate_tile_slab.json
 6f139e9996d710b49c338bb7a2970a02d70bb13f data/blockpalette/loot_tables/blocks/slate_tile_stairs.json
+4f82498b4a9133ec8181627d57b79dca1e4bf2e0 data/blockpalette/loot_tables/blocks/smooth_deepslate.json
+ae6f44e2ea83628d7d09c359bc580bfce9e240d6 data/blockpalette/loot_tables/blocks/smooth_deepslate_slab.json
+57da5a2bbf4b4abc07ce8bcc720475d58888c801 data/blockpalette/loot_tables/blocks/smooth_deepslate_stairs.json
+c74caf2d4052c74c0dbc1592df89a550f39ee412 data/blockpalette/loot_tables/blocks/smooth_deepslate_wall.json
 b536aa6e76625d4be98c28be0e183dfc23f8d0f9 data/blockpalette/loot_tables/blocks/white_borderless_glass.json
 b250fc05282e74731870f86a5523504e9a35120c data/blockpalette/loot_tables/blocks/white_borderless_glass_pane.json
 afc456465ceb5609cec54f2414a855deaf7ee8bb data/blockpalette/loot_tables/blocks/yellow_borderless_glass.json

@@ -1,12 +1,10 @@
 package andronomos.blockpalette.data;
 
 import andronomos.blockpalette.BlockPalette;
-import andronomos.blockpalette.registry.ModBlocks;
+import andronomos.blockpalette.registry.BlockRegistry;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
@@ -26,7 +24,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
 	@Override
 	protected void addTags(HolderLookup.Provider provider) {
-		ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
+		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 			String blockType = b.getClass().getSimpleName();
 
 			switch (blockType) {

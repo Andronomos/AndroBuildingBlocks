@@ -15,8 +15,8 @@ public class ModCreativeTabs {
 
 	public static final RegistryObject<CreativeModeTab> BLOCKPALETTE_TAB = CREATIVE_MODE_TABS.register(BASETABNAME, () -> CreativeModeTab.builder()
 			.title(Component.translatable("creativetab." + BASETABNAME))
-			.icon(ModBlocks.ROUGH_CONCRETE_WHITE.get().asItem()::getDefaultInstance)
-			.displayItems((parameters, output) -> ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
+			.icon(BlockRegistry.ROUGH_CONCRETE_WHITE.get().asItem()::getDefaultInstance)
+			.displayItems((parameters, output) -> BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 				switch (b.getClass().getSimpleName()) {
 					case "GlassBlock", "StainedGlassBlock", "StainedGlassPaneBlock":
 						return;
@@ -26,8 +26,8 @@ public class ModCreativeTabs {
 
 	public static final RegistryObject<CreativeModeTab> BLOCKPALETTE_GLASS_TAB = CREATIVE_MODE_TABS.register(GLASSTABNAME, () -> CreativeModeTab.builder()
 			.title(Component.translatable("creativetab." + GLASSTABNAME))
-			.icon(ModBlocks.WHITE_BORDERLESS_GLASS.get().asItem()::getDefaultInstance)
-			.displayItems((parameters, output) -> ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
+			.icon(BlockRegistry.WHITE_BORDERLESS_GLASS.get().asItem()::getDefaultInstance)
+			.displayItems((parameters, output) -> BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 				switch (b.getClass().getSimpleName()) {
 					case "GlassBlock", "StainedGlassBlock", "StainedGlassPaneBlock" -> output.accept(b);
 				}

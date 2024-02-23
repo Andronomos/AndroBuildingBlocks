@@ -1,6 +1,6 @@
 package andronomos.blockpalette;
 
-import andronomos.blockpalette.registry.ModBlocks;
+import andronomos.blockpalette.registry.BlockRegistry;
 import andronomos.blockpalette.registry.ModCreativeTabs;
 import andronomos.blockpalette.registry.ModItems;
 import com.mojang.logging.LogUtils;
@@ -23,7 +23,7 @@ public class BlockPalette
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModBlocks.BLOCKS.register(modEventBus);
+        BlockRegistry.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
 
