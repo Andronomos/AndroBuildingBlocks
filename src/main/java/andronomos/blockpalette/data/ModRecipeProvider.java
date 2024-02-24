@@ -175,7 +175,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 		generateStoneCutterRecipe(BlockRegistry.SLATE_PILLAR.get(), BlockRegistry.SLATE.get(), 1, recipeConsumer);
 		generateTwoByTwoRecipe(BlockRegistry.SLATE_TILE.get(), BlockRegistry.SLATE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.SLATE_GRATE.get(), BlockRegistry.SLATE.get(), 1, recipeConsumer);
 
 		generateStoneCutterRecipe(BlockRegistry.SLATE_STAIRS.get(), BlockRegistry.SLATE.get(), 1, recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.SLATE_SLAB.get(), BlockRegistry.SLATE.get(), 1, recipeConsumer);
