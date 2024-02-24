@@ -145,6 +145,7 @@ public class BlockRegistry {
 	public static final RegistryObject<Block> SLATE = registerBlock("slate", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
 	public static final RegistryObject<StairBlock> SLATE_STAIRS = registerStairBlock("slate_stairs", SLATE, SLATE_PROPERTIES);
 	public static final RegistryObject<SlabBlock> SLATE_SLAB = registerSlabBlock("slate_slab", SLATE_PROPERTIES);
+	public static final RegistryObject<WallBlock> SLATE_WALL = registerWallBlock("slate_wall", SLATE_PROPERTIES);
 	public static final RegistryObject<Block> SLATE_PILLAR = registerRotatableBlock("slate_pillar", SLATE_PROPERTIES);
 	public static final RegistryObject<Block> SLATE_BRICKS = registerBlock("slate_bricks", SLATE_PROPERTIES);
 	public static final RegistryObject<StairBlock> SLATE_BRICK_STAIRS = registerStairBlock("slate_brick_stairs", SLATE, SLATE_PROPERTIES);
