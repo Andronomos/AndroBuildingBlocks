@@ -173,14 +173,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateThreeByTwoRecipe(BlockRegistry.SMOOTH_DEEPSLATE_WALL.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.SMOOTH_DEEPSLATE_WALL.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), 1, recipeConsumer);
 
-		generateStoneCutterRecipe(BlockRegistry.SLATE_PILLAR.get(), BlockRegistry.SLATE.get(), 1, recipeConsumer);
-		generateTwoByTwoRecipe(BlockRegistry.SLATE_TILE.get(), BlockRegistry.SLATE.get(), recipeConsumer);
-
-		generateStoneCutterRecipe(BlockRegistry.SLATE_STAIRS.get(), BlockRegistry.SLATE.get(), 1, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.SLATE_SLAB.get(), BlockRegistry.SLATE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.SLATE_TILE_STAIRS.get(), BlockRegistry.SLATE_TILE.get().asItem(), recipeConsumer);
-		generateSlabRecipe(BlockRegistry.SLATE_TILE_SLAB.get(), BlockRegistry.SLATE_TILE.get().asItem(), recipeConsumer);
-
 		ShapedRecipeBuilder slateRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SLATE.get(), 4);
 		slateRecipe.define('1', Items.CLAY_BALL);
 		slateRecipe.define('2', Items.GUNPOWDER);
@@ -189,6 +181,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		slateRecipe.pattern("121");
 		slateRecipe.unlockedBy("has_item", has(BlockRegistry.SLATE.get()));
 		slateRecipe.save(recipeConsumer);
+
+		generateStoneCutterRecipe(BlockRegistry.SLATE_PILLAR.get(), BlockRegistry.SLATE.get(), 1, recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.SLATE_STAIRS.get(), BlockRegistry.SLATE.get(), 1, recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.SLATE_SLAB.get(), BlockRegistry.SLATE.get(), 1, recipeConsumer);
 	}
 
 	private void generateSmeltingRecipe(Block input, Block output, Consumer<FinishedRecipe> consumer) {

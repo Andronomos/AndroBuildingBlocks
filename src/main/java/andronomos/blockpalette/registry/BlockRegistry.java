@@ -186,9 +186,6 @@ public class BlockRegistry {
 	public static final RegistryObject<StairBlock> SLATE_STAIRS = registerStairBlock("slate_stairs", SLATE, SLATE_PROPERTIES);
 	public static final RegistryObject<SlabBlock> SLATE_SLAB = registerSlabBlock("slate_slab", SLATE_PROPERTIES);
 	public static final RegistryObject<Block> SLATE_PILLAR = registerRotatableBlock("slate_pillar", SLATE_PROPERTIES);
-	public static final RegistryObject<Block> SLATE_TILE = registerBlock("slate_tile", SLATE_PROPERTIES);
-	public static final RegistryObject<StairBlock> SLATE_TILE_STAIRS = registerStairBlock("slate_tile_stairs", SLATE_TILE, SLATE_PROPERTIES);
-	public static final RegistryObject<SlabBlock> SLATE_TILE_SLAB = registerSlabBlock("slate_tile_slab", SLATE_PROPERTIES);
 	//endregion
 
 	public static RegistryObject<Block> registerRotatableBlock(final String name, Block.Properties properties) {

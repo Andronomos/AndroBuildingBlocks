@@ -119,9 +119,6 @@
     "blockpalette:slate",
     "blockpalette:slate_stairs",
     "blockpalette:slate_slab",
-    "blockpalette:slate_pillar",
-    "blockpalette:slate_tile",
-    "blockpalette:slate_tile_stairs",
-    "blockpalette:slate_tile_slab"
+    "blockpalette:slate_pillar"
   ]
 }
