@@ -25,9 +25,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 			String blockType = b.getClass().getSimpleName();
 
 			switch (blockType) {
-				case "StairBlock" -> registerStairBlockStateAndModel((StairBlock)b, blockName.substring(0, blockName.indexOf("_stairs")));
+				case "StairBlock" -> registerStairBlockStateAndModel((StairBlock)b, blockName);
 				case "SlabBlock" -> registerSlabBlockStateAndModel((SlabBlock)b, blockName);
-				case "WallBlock" -> registerWallBlockStateAndModel((WallBlock)b, blockName.substring(0, blockName.indexOf("_wall")));
+				case "WallBlock" -> registerWallBlockStateAndModel((WallBlock)b, blockName);
 				case "StainedGlassBlock" -> registerGlassBlockStateAndModel(b, blockName);
 				case "StainedGlassPaneBlock" -> registerPaneBlockStateAndModel((IronBarsBlock)b, blockName);
 				case "RotatedPillarBlock" -> registerRotatableBlockStateAndModel((RotatedPillarBlock) b, blockName, "slate");
@@ -43,19 +43,33 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	}
 
 	private void registerStairBlockStateAndModel(StairBlock block, String name) {
-		stairsBlock(block, modLoc("block/" + name));
-		registerItemModel(name + "_stairs");
+		String cleanName = name.substring(0, name.indexOf("_stairs"));
+		String resourceName = cleanName;
+		if(resourceName.contains("_brick")) {
+			resourceName = resourceName + "s";
+		}
+		stairsBlock(block, modLoc("block/" + resourceName));
+		registerItemModel(name);
 	}
 
 	private void registerSlabBlockStateAndModel(SlabBlock block, String name) {
 		String cleanName = name.substring(0, name.indexOf("_slab"));
-		slabBlock(block, modLoc("block/" + cleanName), modLoc("block/" + cleanName));
+		String resourceName = cleanName;
+		if(resourceName.contains("_brick")) {
+			resourceName = resourceName + "s";
+		}
+		slabBlock(block, modLoc("block/" + resourceName), modLoc("block/" + resourceName));
 		registerItemModel(name);
 	}
 
 	private void registerWallBlockStateAndModel(WallBlock block, String name) {
-		wallBlock(block, modLoc("block/" + name));
-		itemModels().wallInventory(name + "_wall", modLoc("block/" + name));
+		String cleanName = name.substring(0, name.indexOf("_wall"));
+		String resourceName = cleanName;
+		if(resourceName.contains("_brick")) {
+			resourceName = resourceName + "s";
+		}
+		wallBlock(block, modLoc("block/" + resourceName));
+		itemModels().wallInventory(name, modLoc("block/" + resourceName));
 	}
 
 	private void registerGlassBlockStateAndModel(Block block, String name) {

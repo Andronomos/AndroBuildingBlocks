@@ -173,8 +173,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		slateRecipe.save(recipeConsumer);
 
 		generateStoneCutterRecipe(BlockRegistry.SLATE_PILLAR.get(), BlockRegistry.SLATE.get(), 1, recipeConsumer);
+		generateStairRecipe(BlockRegistry.SLATE_STAIRS.get(), BlockRegistry.SLATE.get().asItem(), recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.SLATE_STAIRS.get(), BlockRegistry.SLATE.get(), 1, recipeConsumer);
+		generateSlabRecipe(BlockRegistry.SLATE_SLAB.get(), BlockRegistry.SLATE.get().asItem(), recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.SLATE_SLAB.get(), BlockRegistry.SLATE.get(), 1, recipeConsumer);
+		generateStairRecipe(BlockRegistry.SLATE_BRICK_STAIRS.get(), BlockRegistry.SLATE.get().asItem(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.SLATE_BRICK_STAIRS.get(), BlockRegistry.SLATE_BRICKS.get(), 1, recipeConsumer);
+		generateSlabRecipe(BlockRegistry.SLATE_BRICK_SLAB.get(), BlockRegistry.SLATE_BRICKS.get().asItem(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.SLATE_BRICK_SLAB.get(), BlockRegistry.SLATE_BRICKS.get(), 1, recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.SLATE_BRICK_WALL.get(), BlockRegistry.SLATE_BRICKS.get(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.SLATE_BRICK_WALL.get(), BlockRegistry.SLATE_BRICKS.get(), 1, recipeConsumer);
 	}
 
 	private void generateSmeltingRecipe(Block input, Block output, Consumer<FinishedRecipe> consumer) {
