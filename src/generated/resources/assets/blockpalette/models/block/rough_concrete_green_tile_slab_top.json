@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "blockpalette:block/rough_concrete_green_tile",
-    "side": "blockpalette:block/rough_concrete_green_tile",
-    "top": "blockpalette:block/rough_concrete_green_tile"
-  }
-}

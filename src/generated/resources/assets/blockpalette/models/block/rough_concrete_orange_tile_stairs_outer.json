@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "blockpalette:block/rough_concrete_orange_tile",
-    "side": "blockpalette:block/rough_concrete_orange_tile",
-    "top": "blockpalette:block/rough_concrete_orange_tile"
-  }
-}
