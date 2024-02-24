@@ -30,7 +30,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 				case "WallBlock" -> registerWallBlockStateAndModel((WallBlock)b, blockName.substring(0, blockName.indexOf("_wall")));
 				case "StainedGlassBlock" -> registerGlassBlockStateAndModel(b, blockName);
 				case "StainedGlassPaneBlock" -> registerPaneBlockStateAndModel((IronBarsBlock)b, blockName);
-				case "RotatedPillarBlock" -> registerRotatableBlockStateAndModel((RotatedPillarBlock) b, blockName, "");
+				case "RotatedPillarBlock" -> registerRotatableBlockStateAndModel((RotatedPillarBlock) b, blockName, "slate");
 				default -> registerBlockStateAndModel(b, blockName);
 			}
 		});

@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-23T03:57:51.0566789	Block States: blockpalette
+// 1.20.1	2024-02-24T13:05:43.4604682	Block States: blockpalette
 7a4ff041e2016adbd9767f2fe347d37ec9edd55f assets/blockpalette/blockstates/black_borderless_glass.json
 3f6ae9839d1ed50d2baf610111d26687fcd72fe2 assets/blockpalette/blockstates/black_borderless_glass_pane.json
 26e02eaa32c6b3571dab4527c5c817466421a3ea assets/blockpalette/blockstates/blue_borderless_glass.json
@@ -408,8 +408,8 @@ b7b3e6fd21bb39ab221974e685ca6a61c2240122 assets/blockpalette/models/block/rough_
 1a5063ab33f26947fbf143faa2197b6c166d6c54 assets/blockpalette/models/block/rough_concrete_yellow_wall_side.json
 5d796d2231d8b48e5eb5bcd94eccf9a028438af6 assets/blockpalette/models/block/rough_concrete_yellow_wall_side_tall.json
 2d032f583a0332c9daf42c0c5c77145856072c1e assets/blockpalette/models/block/slate.json
-22976d8c816f81733c04631245d861d18c6d7db6 assets/blockpalette/models/block/slate_grate.json
-00ad8430e108ce10e2c6c2705a3941bfef798a80 assets/blockpalette/models/block/slate_pillar.json
+3aaf6c696a480a5f4b2d4d7b0721be76dacecf1c assets/blockpalette/models/block/slate_grate.json
+75b782dff0ea76537b21a4cdcaae4426797b2cf9 assets/blockpalette/models/block/slate_pillar.json
 38a010846d71b351625b9cc2435ba188664c4176 assets/blockpalette/models/block/slate_slab.json
 dfa6af320d22aeb4e11ffd9f270e23180f7e8fa7 assets/blockpalette/models/block/slate_slab_top.json
 546ba76bf8797198362f98c9a6431c45ff556727 assets/blockpalette/models/block/slate_stairs.json
