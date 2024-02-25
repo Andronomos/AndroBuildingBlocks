@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "layer0": "androbuildingblocks:block/magenta_borderless_glass"
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "blockpalette:block/bentonite",
-    "side": "blockpalette:block/bentonite",
-    "top": "blockpalette:block/bentonite"
-  }
-}

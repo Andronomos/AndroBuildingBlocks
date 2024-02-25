@@ -1,17 +1,17 @@
 {
   "values": [
-    "blockpalette:rough_concrete_white_wall",
-    "blockpalette:rough_concrete_blue_wall",
-    "blockpalette:rough_concrete_black_wall",
-    "blockpalette:rough_concrete_brown_wall",
-    "blockpalette:rough_concrete_green_wall",
-    "blockpalette:rough_concrete_gray_wall",
-    "blockpalette:rough_concrete_orange_wall",
-    "blockpalette:rough_concrete_purple_wall",
-    "blockpalette:rough_concrete_red_wall",
-    "blockpalette:rough_concrete_yellow_wall",
-    "blockpalette:smooth_deepslate_wall",
-    "blockpalette:bentonite_wall",
-    "blockpalette:bentonite_brick_wall"
+    "androbuildingblocks:rough_concrete_white_wall",
+    "androbuildingblocks:rough_concrete_blue_wall",
+    "androbuildingblocks:rough_concrete_black_wall",
+    "androbuildingblocks:rough_concrete_brown_wall",
+    "androbuildingblocks:rough_concrete_green_wall",
+    "androbuildingblocks:rough_concrete_gray_wall",
+    "androbuildingblocks:rough_concrete_orange_wall",
+    "androbuildingblocks:rough_concrete_purple_wall",
+    "androbuildingblocks:rough_concrete_red_wall",
+    "androbuildingblocks:rough_concrete_yellow_wall",
+    "androbuildingblocks:smooth_deepslate_wall",
+    "androbuildingblocks:bentonite_wall",
+    "androbuildingblocks:bentonite_brick_wall"
   ]
 }

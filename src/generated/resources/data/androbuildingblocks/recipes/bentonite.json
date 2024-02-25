@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": {
+      "item": "minecraft:clay_ball"
+    },
+    "G": {
+      "item": "minecraft:gunpowder"
+    }
+  },
+  "pattern": [
+    "CG",
+    "GC"
+  ],
+  "result": {
+    "item": "androbuildingblocks:bentonite"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "minecraft:red_stained_glass"
+    }
+  ],
+  "result": {
+    "item": "androbuildingblocks:red_borderless_glass"
+  }
+}

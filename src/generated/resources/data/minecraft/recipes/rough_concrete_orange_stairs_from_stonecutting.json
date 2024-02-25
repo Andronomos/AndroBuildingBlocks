@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "count": 1,
   "ingredient": {
-    "item": "blockpalette:rough_concrete_orange"
+    "item": "androbuildingblocks:rough_concrete_orange"
   },
-  "result": "blockpalette:rough_concrete_orange_stairs"
+  "result": "androbuildingblocks:rough_concrete_orange_stairs"
 }

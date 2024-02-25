@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "count": 1,
   "ingredient": {
-    "item": "blockpalette:rough_concrete_yellow"
+    "item": "androbuildingblocks:rough_concrete_yellow"
   },
-  "result": "blockpalette:rough_concrete_yellow_wall"
+  "result": "androbuildingblocks:rough_concrete_yellow_wall"
 }

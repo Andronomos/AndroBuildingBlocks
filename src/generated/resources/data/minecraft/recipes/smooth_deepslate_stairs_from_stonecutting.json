@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "count": 1,
   "ingredient": {
-    "item": "blockpalette:smooth_deepslate"
+    "item": "androbuildingblocks:smooth_deepslate"
   },
-  "result": "blockpalette:smooth_deepslate_stairs"
+  "result": "androbuildingblocks:smooth_deepslate_stairs"
 }

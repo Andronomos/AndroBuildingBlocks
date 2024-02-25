@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/wall_inventory",
-  "textures": {
-    "wall": "blockpalette:block/rough_concrete_blue"
-  }
-}

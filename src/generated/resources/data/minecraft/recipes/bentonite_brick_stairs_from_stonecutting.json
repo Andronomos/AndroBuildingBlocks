@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "count": 1,
   "ingredient": {
-    "item": "blockpalette:bentonite_bricks"
+    "item": "androbuildingblocks:bentonite_bricks"
   },
-  "result": "blockpalette:bentonite_brick_stairs"
+  "result": "androbuildingblocks:bentonite_brick_stairs"
 }

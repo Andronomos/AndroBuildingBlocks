@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "androbuildingblocks:block/rough_concrete_red_slab"
+    },
+    "type=double": {
+      "model": "androbuildingblocks:block/rough_concrete_red"
+    },
+    "type=top": {
+      "model": "androbuildingblocks:block/rough_concrete_red_slab_top"
+    }
+  }
+}

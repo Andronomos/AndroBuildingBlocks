@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:gray_dye"
+    },
+    "1": {
+      "tag": "forge:stone"
+    },
+    "2": {
+      "item": "minecraft:gravel"
+    }
+  },
+  "pattern": [
+    "#11",
+    "112",
+    "222"
+  ],
+  "result": {
+    "count": 8,
+    "item": "androbuildingblocks:rough_concrete_gray_powder"
+  },
+  "show_notification": true
+}
