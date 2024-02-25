@@ -158,16 +158,7 @@ public class BlockRegistry {
 	//endregion
 
 	//region Caution
-	public static final RegistryObject<Block> DECORATIVE_YELLOW_STRIPES = registerBlock("decorative_yellow_stripes", STONE_PROPERTIES.mapColor(DyeColor.YELLOW));
-	public static final RegistryObject<Block> DECORATIVE_RED_STRIPES = registerBlock("decorative_red_stripes", STONE_PROPERTIES.mapColor(DyeColor.RED));
-	public static final RegistryObject<Block> DECORATIVE_ORANGE_STRIPES = registerBlock("decorative_orange_stripes", STONE_PROPERTIES.mapColor(DyeColor.RED));
-	public static final RegistryObject<Block> DECORATIVE_BLUE_STRIPES = registerBlock("decorative_blue_stripes", STONE_PROPERTIES.mapColor(DyeColor.RED));
-	public static final RegistryObject<Block> DECORATIVE_GREEN_STRIPES = registerBlock("decorative_green_stripes", STONE_PROPERTIES.mapColor(DyeColor.RED));
-	public static final RegistryObject<Block> DECORATIVE_PINK_STRIPES = registerBlock("decorative_pink_stripes", STONE_PROPERTIES.mapColor(DyeColor.RED));
-	public static final RegistryObject<Block> DECORATIVE_PURPLE_STRIPES = registerBlock("decorative_purple_stripes", STONE_PROPERTIES.mapColor(DyeColor.RED));
-	public static final RegistryObject<Block> DECORATIVE_BROWN_STRIPES = registerBlock("decorative_brown_stripes", STONE_PROPERTIES.mapColor(DyeColor.RED));
-	public static final RegistryObject<Block> DECORATIVE_LIGHT_BLUE_STRIPES = registerBlock("decorative_light_blue_stripes", STONE_PROPERTIES.mapColor(DyeColor.RED));
-	public static final RegistryObject<Block> DECORATIVE_LIME_STRIPES = registerBlock("decorative_lime_stripes", STONE_PROPERTIES.mapColor(DyeColor.RED));
+	public static final RegistryObject<Block> HAZARD_STRIPES = registerBlock("hazard_yellow_stripes", STONE_PROPERTIES.mapColor(DyeColor.YELLOW));
 	//endregion
 	
 
