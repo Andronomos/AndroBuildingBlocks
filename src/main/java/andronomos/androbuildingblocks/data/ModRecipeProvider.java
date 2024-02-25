@@ -191,14 +191,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateStoneCutterRecipe(BlockRegistry.BENTONITE_BRICK_WALL.get(), BlockRegistry.BENTONITE_BRICKS.get(), 1, recipeConsumer);
 		//endregion
 
-		generateStripedRecipe(BlockRegistry.STRIPES_YELLOW.get(), Items.YELLOW_DYE, Items.BLACK_DYE, recipeConsumer);
-		generateStripedRecipe(BlockRegistry.STRIPES_RED.get(), Items.RED_DYE, Items.WHITE_DYE, recipeConsumer);
+		generateStripedRecipe(BlockRegistry.DECORATIVE_YELLOW_STRIPES.get(), Items.YELLOW_DYE, recipeConsumer);
+		generateStripedRecipe(BlockRegistry.DECORATIVE_RED_STRIPES.get(), Items.RED_DYE, recipeConsumer);
+		generateStripedRecipe(BlockRegistry.DECORATIVE_ORANGE_STRIPES.get(), Items.RED_DYE, recipeConsumer);
+		generateStripedRecipe(BlockRegistry.DECORATIVE_BLUE_STRIPES.get(), Items.RED_DYE, recipeConsumer);
 	}
 
-	private void generateStripedRecipe(Block output, Item Dye, Item Dye2, Consumer<FinishedRecipe> consumer) {
+	private void generateStripedRecipe(Block output, Item Dye, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 4);
 		shaped.define('1', Dye);
-		shaped.define('2', Dye2);
+		shaped.define('2', Items.BLACK_DYE);
 		shaped.define('3', Tags.Items.STONE);
 		shaped.pattern("212");
 		shaped.pattern("131");

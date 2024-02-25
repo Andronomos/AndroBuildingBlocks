@@ -158,8 +158,10 @@ public class BlockRegistry {
 	//endregion
 
 	//region Caution
-	public static final RegistryObject<Block> STRIPES_YELLOW = registerBlock("stripes_yellow", STONE_PROPERTIES.mapColor(DyeColor.YELLOW));
-	public static final RegistryObject<Block> STRIPES_RED = registerBlock("stripes_red", STONE_PROPERTIES.mapColor(DyeColor.RED));
+	public static final RegistryObject<Block> DECORATIVE_YELLOW_STRIPES = registerBlock("decorative_yellow_stripes", STONE_PROPERTIES.mapColor(DyeColor.YELLOW));
+	public static final RegistryObject<Block> DECORATIVE_RED_STRIPES = registerBlock("decorative_red_stripes", STONE_PROPERTIES.mapColor(DyeColor.RED));
+	public static final RegistryObject<Block> DECORATIVE_ORANGE_STRIPES = registerBlock("decorative_orange_stripes", STONE_PROPERTIES.mapColor(DyeColor.RED));
+	public static final RegistryObject<Block> DECORATIVE_BLUE_STRIPES = registerBlock("decorative_blue_stripes", STONE_PROPERTIES.mapColor(DyeColor.RED));
 	//endregion
 	
 

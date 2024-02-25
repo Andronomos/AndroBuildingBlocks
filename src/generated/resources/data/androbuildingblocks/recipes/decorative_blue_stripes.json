@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "1": {
-      "item": "minecraft:yellow_dye"
+      "item": "minecraft:red_dye"
     },
     "2": {
       "item": "minecraft:black_dye"
@@ -19,7 +19,7 @@
   ],
   "result": {
     "count": 4,
-    "item": "androbuildingblocks:stripes_yellow"
+    "item": "androbuildingblocks:decorative_blue_stripes"
   },
   "show_notification": true
 }

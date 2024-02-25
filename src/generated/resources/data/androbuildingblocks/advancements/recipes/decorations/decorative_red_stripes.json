@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "androbuildingblocks:stripes_red"
+        "recipe": "androbuildingblocks:decorative_red_stripes"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "androbuildingblocks:stripes_red"
+      "androbuildingblocks:decorative_red_stripes"
     ]
   },
   "sends_telemetry_event": false

@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "androbuildingblocks:stripes_yellow"
+          "name": "androbuildingblocks:decorative_red_stripes"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "androbuildingblocks:blocks/stripes_yellow"
+  "random_sequence": "androbuildingblocks:blocks/decorative_red_stripes"
 }

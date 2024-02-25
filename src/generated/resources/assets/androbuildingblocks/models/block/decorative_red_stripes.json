@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "androbuildingblocks:block/stripes_yellow"
+    "all": "androbuildingblocks:block/decorative_red_stripes"
   }
 }
