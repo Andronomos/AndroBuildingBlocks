@@ -141,18 +141,24 @@ public class BlockRegistry {
 	public static final RegistryObject<SlabBlock> SMOOTH_DEEPSLATE_SLAB = registerSlabBlock("smooth_deepslate_slab", DEEPSLATE_PROPERTIES);
 	public static final RegistryObject<WallBlock> SMOOTH_DEEPSLATE_WALL = registerWallBlock("smooth_deepslate_wall", DEEPSLATE_PROPERTIES);
 
-	//region Slate
+	//region Bentonite
 	public static final RegistryObject<Block> BENTONITE = registerBlock("bentonite", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
 	public static final RegistryObject<StairBlock> BENTONITE_STAIRS = registerStairBlock("bentonite_stairs", BENTONITE, SLATE_PROPERTIES);
 	public static final RegistryObject<SlabBlock> BENTONITE_SLAB = registerSlabBlock("bentonite_slab", SLATE_PROPERTIES);
 	public static final RegistryObject<WallBlock> BENTONITE_WALL = registerWallBlock("bentonite_wall", SLATE_PROPERTIES);
 	public static final RegistryObject<Block> BENTONITE_PILLAR = registerRotatableBlock("bentonite_pillar", SLATE_PROPERTIES);
+	public static final RegistryObject<FenceBlock> BENTONITE_FENCE = registerFenceBlock("bentonite_fence", SLATE_PROPERTIES);
+
 	public static final RegistryObject<Block> BENTONITE_BRICKS = registerBlock("bentonite_bricks", SLATE_PROPERTIES);
 	public static final RegistryObject<StairBlock> BENTONITE_BRICK_STAIRS = registerStairBlock("bentonite_brick_stairs", BENTONITE, SLATE_PROPERTIES);
 	public static final RegistryObject<SlabBlock> BENTONITE_BRICK_SLAB = registerSlabBlock("bentonite_brick_slab", SLATE_PROPERTIES);
 	public static final RegistryObject<WallBlock> BENTONITE_BRICK_WALL = registerWallBlock("bentonite_brick_wall", SLATE_PROPERTIES);
 	public static final RegistryObject<Block> BENTONITE_GRATE = registerBlock("bentonite_grate", SLATE_PROPERTIES);
 	//endregion
+
+	private static RegistryObject<FenceBlock> registerFenceBlock(final String name, Block.Properties properties) {
+		return registerBlock(name, () -> new FenceBlock(properties));
+	}
 
 	public static RegistryObject<Block> registerRotatableBlock(final String name, Block.Properties properties) {
 		return registerBlock(name, () -> new RotatedPillarBlock(properties));

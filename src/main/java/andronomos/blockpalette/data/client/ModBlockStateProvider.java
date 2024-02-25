@@ -28,6 +28,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 				case "StairBlock" -> registerStairBlockStateAndModel((StairBlock)b, blockName);
 				case "SlabBlock" -> registerSlabBlockStateAndModel((SlabBlock)b, blockName);
 				case "WallBlock" -> registerWallBlockStateAndModel((WallBlock)b, blockName);
+				case "FenceBlock" -> registerFenceBlockStateAndModel((FenceBlock) b, blockName);
 				case "StainedGlassBlock" -> registerGlassBlockStateAndModel(b, blockName);
 				case "StainedGlassPaneBlock" -> registerPaneBlockStateAndModel((IronBarsBlock)b, blockName);
 				case "RotatedPillarBlock" -> registerRotatableBlockStateAndModel((RotatedPillarBlock) b, blockName);
@@ -40,6 +41,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		ModelFile model = models().cubeAll(name, modLoc("block/" + name));
 		simpleBlock(block, model);
 		registerItemModel(name);
+	}
+
+	private void registerFenceBlockStateAndModel(FenceBlock block, String name) {
+		String cleanName = name.substring(0, name.indexOf("_fence"));
+		fenceBlock(block, modLoc("block/" + cleanName));
+		itemModels().fenceInventory(name, modLoc("block/" + cleanName));
 	}
 
 	private void registerStairBlockStateAndModel(StairBlock block, String name) {
