@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-25T09:54:17.3492997	Recipes
+// 1.20.1	2024-02-25T09:59:30.5153501	Recipes
 5776a9102991c459bbef9917e2264db641d491c3 data/blockpalette/advancements/recipes/building_blocks/bentonite.json
 c5448c695a7e4d3bea68cf6ef1643ecf4608ad5d data/blockpalette/advancements/recipes/building_blocks/bentonite_bricks.json
 213c10fdd0bbd2563236fd5459bb60085f12af6f data/blockpalette/advancements/recipes/building_blocks/bentonite_brick_slab.json
@@ -83,7 +83,7 @@ d8d1ae34d154517cff596ed669a84b1e1b78b021 data/blockpalette/advancements/recipes/
 19aa259c489a1777ff6e8d756e27443b364df077 data/blockpalette/advancements/recipes/building_blocks/white_borderless_glass_pane.json
 f1f2d8f434ee441e74f259a577569eb07ef00f89 data/blockpalette/advancements/recipes/building_blocks/yellow_borderless_glass.json
 fd11514dd328e8a05c22b4c205500948cefdc143 data/blockpalette/advancements/recipes/building_blocks/yellow_borderless_glass_pane.json
-0ceb873e7445496458a9c932435a5e57263b0957 data/blockpalette/recipes/bentonite.json
+c91311387a531954e0970e0bff17dd7dd122266e data/blockpalette/recipes/bentonite.json
 fed161cd07d1f28f3dd18ade081825732361db68 data/blockpalette/recipes/bentonite_bricks.json
 fb72203c2c42668576bb0436b8cd9078f335c8d8 data/blockpalette/recipes/bentonite_brick_slab.json
 554cdc999845d7df65d914bafda8b871db471a9a data/blockpalette/recipes/bentonite_brick_stairs.json

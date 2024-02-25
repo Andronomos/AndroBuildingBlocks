@@ -1,21 +1,20 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "category": "building",
-  "ingredients": [
-    {
+  "key": {
+    "C": {
       "item": "minecraft:clay_ball"
     },
-    {
-      "item": "minecraft:clay_ball"
-    },
-    {
-      "item": "minecraft:gunpowder"
-    },
-    {
+    "G": {
       "item": "minecraft:gunpowder"
     }
+  },
+  "pattern": [
+    "CG",
+    "GC"
   ],
   "result": {
     "item": "blockpalette:bentonite"
-  }
+  },
+  "show_notification": true
 }

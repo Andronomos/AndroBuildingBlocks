@@ -165,9 +165,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateStoneCutterRecipe(BlockRegistry.SMOOTH_DEEPSLATE_WALL.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), 1, recipeConsumer);
 
 		//region Bentonite
-		ShapelessRecipeBuilder bentoniteRecipe = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.BENTONITE.get(), 1);
-		bentoniteRecipe.requires(Items.CLAY_BALL, 2);
-		bentoniteRecipe.requires(Items.GUNPOWDER, 2);
+		ShapedRecipeBuilder bentoniteRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.BENTONITE.get(), 1);
+		bentoniteRecipe.define('C', Items.CLAY_BALL);
+		bentoniteRecipe.define('G', Items.GUNPOWDER);
+		bentoniteRecipe.pattern("CG");
+		bentoniteRecipe.pattern("GC");
 		bentoniteRecipe.unlockedBy("has_item", has(Items.CLAY_BALL));
 		bentoniteRecipe.save(recipeConsumer);
 
