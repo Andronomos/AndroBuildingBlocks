@@ -16,7 +16,7 @@ import org.slf4j.Logger;
 @Mod(AndroBuildingBlocks.MODID)
 public class AndroBuildingBlocks
 {
-    public static final String MODID = "andronomos";
+    public static final String MODID = "androbuildingblocks";
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public AndroBuildingBlocks()
