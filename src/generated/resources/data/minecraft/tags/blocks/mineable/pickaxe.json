@@ -76,14 +76,14 @@
     "blockpalette:smooth_deepslate_stairs",
     "blockpalette:smooth_deepslate_slab",
     "blockpalette:smooth_deepslate_wall",
-    "blockpalette:slate",
-    "blockpalette:slate_stairs",
-    "blockpalette:slate_slab",
-    "blockpalette:slate_wall",
-    "blockpalette:slate_pillar",
-    "blockpalette:slate_bricks",
-    "blockpalette:slate_brick_stairs",
-    "blockpalette:slate_brick_slab",
-    "blockpalette:slate_brick_wall"
+    "blockpalette:bentonite",
+    "blockpalette:bentonite_stairs",
+    "blockpalette:bentonite_slab",
+    "blockpalette:bentonite_wall",
+    "blockpalette:bentonite_pillar",
+    "blockpalette:bentonite_bricks",
+    "blockpalette:bentonite_brick_stairs",
+    "blockpalette:bentonite_brick_slab",
+    "blockpalette:bentonite_brick_wall"
   ]
 }

@@ -142,15 +142,15 @@ public class BlockRegistry {
 	public static final RegistryObject<WallBlock> SMOOTH_DEEPSLATE_WALL = registerWallBlock("smooth_deepslate_wall", DEEPSLATE_PROPERTIES);
 
 	//region Slate
-	public static final RegistryObject<Block> SLATE = registerBlock("slate", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
-	public static final RegistryObject<StairBlock> SLATE_STAIRS = registerStairBlock("slate_stairs", SLATE, SLATE_PROPERTIES);
-	public static final RegistryObject<SlabBlock> SLATE_SLAB = registerSlabBlock("slate_slab", SLATE_PROPERTIES);
-	public static final RegistryObject<WallBlock> SLATE_WALL = registerWallBlock("slate_wall", SLATE_PROPERTIES);
-	public static final RegistryObject<Block> SLATE_PILLAR = registerRotatableBlock("slate_pillar", SLATE_PROPERTIES);
-	public static final RegistryObject<Block> SLATE_BRICKS = registerBlock("slate_bricks", SLATE_PROPERTIES);
-	public static final RegistryObject<StairBlock> SLATE_BRICK_STAIRS = registerStairBlock("slate_brick_stairs", SLATE, SLATE_PROPERTIES);
-	public static final RegistryObject<SlabBlock> SLATE_BRICK_SLAB = registerSlabBlock("slate_brick_slab", SLATE_PROPERTIES);
-	public static final RegistryObject<WallBlock> SLATE_BRICK_WALL = registerWallBlock("slate_brick_wall", SLATE_PROPERTIES);
+	public static final RegistryObject<Block> BENTONITE = registerBlock("bentonite", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
+	public static final RegistryObject<StairBlock> BENTONITE_STAIRS = registerStairBlock("bentonite_stairs", BENTONITE, SLATE_PROPERTIES);
+	public static final RegistryObject<SlabBlock> BENTONITE_SLAB = registerSlabBlock("bentonite_slab", SLATE_PROPERTIES);
+	public static final RegistryObject<WallBlock> BENTONITE_WALL = registerWallBlock("bentonite_wall", SLATE_PROPERTIES);
+	public static final RegistryObject<Block> BENTONITE_PILLAR = registerRotatableBlock("bentonite_pillar", SLATE_PROPERTIES);
+	public static final RegistryObject<Block> BENTONITE_BRICKS = registerBlock("bentonite_bricks", SLATE_PROPERTIES);
+	public static final RegistryObject<StairBlock> BENTONITE_BRICK_STAIRS = registerStairBlock("bentonite_brick_stairs", BENTONITE, SLATE_PROPERTIES);
+	public static final RegistryObject<SlabBlock> BENTONITE_BRICK_SLAB = registerSlabBlock("bentonite_brick_slab", SLATE_PROPERTIES);
+	public static final RegistryObject<WallBlock> BENTONITE_BRICK_WALL = registerWallBlock("bentonite_brick_wall", SLATE_PROPERTIES);
 	//endregion
 
 	public static RegistryObject<Block> registerRotatableBlock(final String name, Block.Properties properties) {

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "blockpalette:block/bentonite_bricks",
+    "side": "blockpalette:block/bentonite_bricks",
+    "top": "blockpalette:block/bentonite_bricks"
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "blockpalette:slate"
-  },
-  "result": "blockpalette:slate_bricks"
-}

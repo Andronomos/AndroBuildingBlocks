@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blockpalette:block/bentonite_slab"
+    },
+    "type=double": {
+      "model": "blockpalette:block/bentonite"
+    },
+    "type=top": {
+      "model": "blockpalette:block/bentonite_slab_top"
+    }
+  }
+}

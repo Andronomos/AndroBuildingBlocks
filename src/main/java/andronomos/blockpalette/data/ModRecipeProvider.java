@@ -163,29 +163,29 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateThreeByTwoRecipe(BlockRegistry.SMOOTH_DEEPSLATE_WALL.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.SMOOTH_DEEPSLATE_WALL.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), 1, recipeConsumer);
 
-		ShapedRecipeBuilder slateRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SLATE.get(), 4);
+		ShapedRecipeBuilder slateRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.BENTONITE.get(), 4);
 		slateRecipe.define('1', Items.CLAY_BALL);
 		slateRecipe.define('2', Items.GUNPOWDER);
 		slateRecipe.pattern("121");
 		slateRecipe.pattern("212");
 		slateRecipe.pattern("121");
-		slateRecipe.unlockedBy("has_item", has(BlockRegistry.SLATE.get()));
+		slateRecipe.unlockedBy("has_item", has(BlockRegistry.BENTONITE.get()));
 		slateRecipe.save(recipeConsumer);
 
-		generateStoneCutterRecipe(BlockRegistry.SLATE_PILLAR.get(), BlockRegistry.SLATE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.SLATE_STAIRS.get(), BlockRegistry.SLATE.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.SLATE_STAIRS.get(), BlockRegistry.SLATE.get(), 1, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.SLATE_SLAB.get(), BlockRegistry.SLATE.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.SLATE_WALL.get(), BlockRegistry.SLATE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.SLATE_SLAB.get(), BlockRegistry.SLATE.get(), 1, recipeConsumer);
-		generateTwoByTwoRecipe(BlockRegistry.SLATE_BRICKS.get(), BlockRegistry.SLATE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.SLATE_BRICKS.get(), BlockRegistry.SLATE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.SLATE_BRICK_STAIRS.get(), BlockRegistry.SLATE.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.SLATE_BRICK_STAIRS.get(), BlockRegistry.SLATE_BRICKS.get(), 1, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.SLATE_BRICK_SLAB.get(), BlockRegistry.SLATE_BRICKS.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.SLATE_BRICK_SLAB.get(), BlockRegistry.SLATE_BRICKS.get(), 1, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.SLATE_BRICK_WALL.get(), BlockRegistry.SLATE_BRICKS.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.SLATE_BRICK_WALL.get(), BlockRegistry.SLATE_BRICKS.get(), 1, recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.BENTONITE_PILLAR.get(), BlockRegistry.BENTONITE.get(), 1, recipeConsumer);
+		generateStairRecipe(BlockRegistry.BENTONITE_STAIRS.get(), BlockRegistry.BENTONITE.get().asItem(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.BENTONITE_STAIRS.get(), BlockRegistry.BENTONITE.get(), 1, recipeConsumer);
+		generateSlabRecipe(BlockRegistry.BENTONITE_SLAB.get(), BlockRegistry.BENTONITE.get().asItem(), recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.BENTONITE_WALL.get(), BlockRegistry.BENTONITE.get(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.BENTONITE_SLAB.get(), BlockRegistry.BENTONITE.get(), 1, recipeConsumer);
+		generateTwoByTwoRecipe(BlockRegistry.BENTONITE_BRICKS.get(), BlockRegistry.BENTONITE.get(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.BENTONITE_BRICKS.get(), BlockRegistry.BENTONITE.get(), 1, recipeConsumer);
+		generateStairRecipe(BlockRegistry.BENTONITE_BRICK_STAIRS.get(), BlockRegistry.BENTONITE.get().asItem(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.BENTONITE_BRICK_STAIRS.get(), BlockRegistry.BENTONITE_BRICKS.get(), 1, recipeConsumer);
+		generateSlabRecipe(BlockRegistry.BENTONITE_BRICK_SLAB.get(), BlockRegistry.BENTONITE_BRICKS.get().asItem(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.BENTONITE_BRICK_SLAB.get(), BlockRegistry.BENTONITE_BRICKS.get(), 1, recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.BENTONITE_BRICK_WALL.get(), BlockRegistry.BENTONITE_BRICKS.get(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.BENTONITE_BRICK_WALL.get(), BlockRegistry.BENTONITE_BRICKS.get(), 1, recipeConsumer);
 	}
 
 	private void generateSmeltingRecipe(Block input, Block output, Consumer<FinishedRecipe> consumer) {

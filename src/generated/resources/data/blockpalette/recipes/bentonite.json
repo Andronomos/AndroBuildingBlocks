@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "1": {
+      "item": "minecraft:clay_ball"
+    },
+    "2": {
+      "item": "minecraft:gunpowder"
+    }
+  },
+  "pattern": [
+    "121",
+    "212",
+    "121"
+  ],
+  "result": {
+    "count": 4,
+    "item": "blockpalette:bentonite"
+  },
+  "show_notification": true
+}

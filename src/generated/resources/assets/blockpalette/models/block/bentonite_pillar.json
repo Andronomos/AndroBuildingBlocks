@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "blockpalette:block/bentonite",
+    "side": "blockpalette:block/bentonite_pillar"
+  }
+}
