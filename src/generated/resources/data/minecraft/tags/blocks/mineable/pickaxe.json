@@ -85,6 +85,8 @@
     "androbuildingblocks:bentonite_brick_stairs",
     "androbuildingblocks:bentonite_brick_slab",
     "androbuildingblocks:bentonite_brick_wall",
-    "androbuildingblocks:bentonite_grate"
+    "androbuildingblocks:bentonite_grate",
+    "androbuildingblocks:stripes_yellow",
+    "androbuildingblocks:stripes_red"
   ]
 }

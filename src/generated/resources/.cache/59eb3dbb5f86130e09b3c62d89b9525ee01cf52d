@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-25T11:00:30.3379746	Loot Tables
+// 1.20.1	2024-02-25T11:13:59.1481828	Loot Tables
 e94b86e4e3d9ed8e467d6452359039a300fecd2a data/androbuildingblocks/loot_tables/blocks/bentonite.json
 8799034a74a988df13c323f1fa9acf240b36fc4b data/androbuildingblocks/loot_tables/blocks/bentonite_bricks.json
 590471c732fd6c7df68a1a134f9302fa71f1542e data/androbuildingblocks/loot_tables/blocks/bentonite_brick_slab.json
@@ -91,6 +91,8 @@ e9a23886bfd9264984f532f5f9895c421a3a90a0 data/androbuildingblocks/loot_tables/bl
 1be32d3da85eff854a14d9c50fb91ff598fa938e data/androbuildingblocks/loot_tables/blocks/smooth_deepslate_slab.json
 e7549062673c6728f123efcdd9b97486579c8f19 data/androbuildingblocks/loot_tables/blocks/smooth_deepslate_stairs.json
 17f62b19d8d6efaccda57838ab7e2502c43abad8 data/androbuildingblocks/loot_tables/blocks/smooth_deepslate_wall.json
+e805666498e166008e30fb5ab36db92406c2d992 data/androbuildingblocks/loot_tables/blocks/stripes_red.json
+841d6c903e748762fe6b1033a113e1dafaeb3b6c data/androbuildingblocks/loot_tables/blocks/stripes_yellow.json
 6689a319ccf1909d0fdfe23ae9ffa55e5c4ba6a3 data/androbuildingblocks/loot_tables/blocks/white_borderless_glass.json
 d71f9da85d956f346dc151115c6380f9e11c3636 data/androbuildingblocks/loot_tables/blocks/white_borderless_glass_pane.json
 bf3ad5f8ce57bc6d3524067b43a117ae1767d17a data/androbuildingblocks/loot_tables/blocks/yellow_borderless_glass.json

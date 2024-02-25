@@ -157,6 +157,12 @@ public class BlockRegistry {
 	public static final RegistryObject<Block> BENTONITE_GRATE = registerBlock("bentonite_grate", SLATE_PROPERTIES);
 	//endregion
 
+	//region Caution
+	public static final RegistryObject<Block> STRIPES_YELLOW = registerBlock("stripes_yellow", STONE_PROPERTIES.mapColor(DyeColor.YELLOW));
+	public static final RegistryObject<Block> STRIPES_RED = registerBlock("stripes_red", STONE_PROPERTIES.mapColor(DyeColor.RED));
+	//endregion
+	
+
 	public static RegistryObject<Block> registerRotatableBlock(final String name, Block.Properties properties) {
 		return registerBlock(name, () -> new RotatedPillarBlock(properties));
 	}
