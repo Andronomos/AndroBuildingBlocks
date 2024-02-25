@@ -86,15 +86,6 @@
     "androbuildingblocks:bentonite_brick_slab",
     "androbuildingblocks:bentonite_brick_wall",
     "androbuildingblocks:bentonite_grate",
-    "androbuildingblocks:decorative_yellow_stripes",
-    "androbuildingblocks:decorative_red_stripes",
-    "androbuildingblocks:decorative_orange_stripes",
-    "androbuildingblocks:decorative_blue_stripes",
-    "androbuildingblocks:decorative_green_stripes",
-    "androbuildingblocks:decorative_pink_stripes",
-    "androbuildingblocks:decorative_purple_stripes",
-    "androbuildingblocks:decorative_brown_stripes",
-    "androbuildingblocks:decorative_light_blue_stripes",
-    "androbuildingblocks:decorative_lime_stripes"
+    "androbuildingblocks:hazard_yellow_stripes"
   ]
 }
