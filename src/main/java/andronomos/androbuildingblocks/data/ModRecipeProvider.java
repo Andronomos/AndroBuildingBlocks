@@ -191,10 +191,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateStoneCutterRecipe(BlockRegistry.BENTONITE_BRICK_WALL.get(), BlockRegistry.BENTONITE_BRICKS.get(), 1, recipeConsumer);
 		//endregion
 
+		//region Decorative Stripes
 		generateStripedRecipe(BlockRegistry.DECORATIVE_YELLOW_STRIPES.get(), Items.YELLOW_DYE, recipeConsumer);
 		generateStripedRecipe(BlockRegistry.DECORATIVE_RED_STRIPES.get(), Items.RED_DYE, recipeConsumer);
 		generateStripedRecipe(BlockRegistry.DECORATIVE_ORANGE_STRIPES.get(), Items.RED_DYE, recipeConsumer);
 		generateStripedRecipe(BlockRegistry.DECORATIVE_BLUE_STRIPES.get(), Items.RED_DYE, recipeConsumer);
+		generateStripedRecipe(BlockRegistry.DECORATIVE_GREEN_STRIPES.get(), Items.GREEN_DYE, recipeConsumer);
+		generateStripedRecipe(BlockRegistry.DECORATIVE_PINK_STRIPES.get(), Items.PINK_DYE, recipeConsumer);
+		generateStripedRecipe(BlockRegistry.DECORATIVE_PURPLE_STRIPES.get(), Items.PURPLE_DYE, recipeConsumer);
+		generateStripedRecipe(BlockRegistry.DECORATIVE_LIME_STRIPES.get(), Items.LIME_DYE, recipeConsumer);
+		generateStripedRecipe(BlockRegistry.DECORATIVE_LIGHT_BLUE_STRIPES.get(), Items.LIGHT_BLUE_DYE, recipeConsumer);
+		generateStripedRecipe(BlockRegistry.DECORATIVE_BROWN_STRIPES.get(), Items.BROWN_DYE, recipeConsumer);
+		//endregion
 	}
 
 	private void generateStripedRecipe(Block output, Item Dye, Consumer<FinishedRecipe> consumer) {
