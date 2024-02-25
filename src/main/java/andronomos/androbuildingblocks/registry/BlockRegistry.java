@@ -158,7 +158,7 @@ public class BlockRegistry {
 	//endregion
 
 	//region Caution
-	public static final RegistryObject<Block> HAZARD_STRIPES = registerBlock("hazard_yellow_stripes", STONE_PROPERTIES.mapColor(DyeColor.YELLOW));
+	public static final RegistryObject<Block> HAZARD_STRIPES = registerBlock("hazard_stripes", STONE_PROPERTIES.mapColor(DyeColor.YELLOW));
 	//endregion
 	
 
