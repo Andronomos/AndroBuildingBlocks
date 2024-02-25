@@ -1,6 +1,6 @@
-package androbuildingblocks.blockpalette.data.loot;
+package andronomos.androbuildingblocks.data.loot;
 
-import androbuildingblocks.blockpalette.registry.BlockRegistry;
+import andronomos.androbuildingblocks.registry.BlockRegistry;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.*;

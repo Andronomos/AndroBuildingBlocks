@@ -1,6 +1,6 @@
-package androbuildingblocks.blockpalette.data;
+package andronomos.androbuildingblocks.data;
 
-import androbuildingblocks.blockpalette.registry.BlockRegistry;
+import andronomos.androbuildingblocks.registry.BlockRegistry;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Item;

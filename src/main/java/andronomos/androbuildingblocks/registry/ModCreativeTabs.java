@@ -1,6 +1,6 @@
-package androbuildingblocks.blockpalette.registry;
+package andronomos.androbuildingblocks.registry;
 
-import androbuildingblocks.blockpalette.AndroBuildingBlocks;
+import andronomos.androbuildingblocks.AndroBuildingBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;

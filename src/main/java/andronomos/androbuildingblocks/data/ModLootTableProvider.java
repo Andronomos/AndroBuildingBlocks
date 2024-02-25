@@ -1,6 +1,6 @@
-package androbuildingblocks.blockpalette.data;
+package andronomos.androbuildingblocks.data;
 
-import androbuildingblocks.blockpalette.data.loot.ModBlockLootSubProvider;
+import andronomos.androbuildingblocks.data.loot.ModBlockLootSubProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;

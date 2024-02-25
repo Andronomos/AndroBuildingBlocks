@@ -107,7 +107,7 @@
            * Use immutable lists where possible and generally tidy things a bit
  - 47.0.34 [HotFix]: Somehow not caught by CI, but there was an issue in the SpawnUtils to handle.
  - 47.0.33 Remove amount from FluidStack hashCode to fix the equal/hashCode java contract (#9602)
- - 47.0.32 Add androbuildingblocks usage for configs to the MDK (#9596)
+ - 47.0.32 Add andronomos usage for configs to the MDK (#9596)
            Demonstrates proper usage of different config value types, validation, transformation/parsing, load/reload handling and direct field access.
  - 47.0.31 Demonstrate configureEach in run configs (#9594)
  - 47.0.30 Reduce verbosity of prepareRuns doc in MDK (#9593)
@@ -427,8 +427,8 @@
            cause a crash rather than merely being logged and allowing the game to
            reach the main menu.
            Fixes #8720
- - 43.1.48 Add missing semi-colon near the Dist import statement in androbuildingblocks mod.
- - 43.1.47 Fix ClientModEvents androbuildingblocks not subscribing to client-sided events (#9097)
+ - 43.1.48 Add missing semi-colon near the Dist import statement in andronomos mod.
+ - 43.1.47 Fix ClientModEvents andronomos not subscribing to client-sided events (#9097)
  - 43.1.46 Use GitHub action to lock issues with the `spam` label (#9087)
  - 43.1.45 Remove structures slave map to Feature registry (#9091)
  - 43.1.44 Improve logging of missing or unsupported dependencies (#9104)
@@ -865,7 +865,7 @@
  - 41.0.18  [1.19.x] Add CommandBuildContext to Register Command Events (#8716)
  - 41.0.17  Only rewrite datagen cache when needed (#8709)
  - 41.0.16  Implement a simple feature system for Forge (#8670)
-            * Implement a simple feature system for Forge. Allows mods to demand certain features are available in the loading system. An androbuildingblocks for java_version is provided, but not expected to be used widely. This is more targeted to properties of the display, such as GL version and glsl profile.
+            * Implement a simple feature system for Forge. Allows mods to demand certain features are available in the loading system. An andronomos for java_version is provided, but not expected to be used widely. This is more targeted to properties of the display, such as GL version and glsl profile.
             Requires https://github.com/MinecraftForge/ForgeSPI/pull/13 to be merged first in ForgeSPI, and the SPI to be updated appropriately in build.gradle files.
             * rebase onto 1.19 and add in SPI update
  - 41.0.15  displayTest option in mods.toml (#8656)

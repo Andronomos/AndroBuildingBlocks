@@ -1,8 +1,8 @@
-package androbuildingblocks.blockpalette;
+package andronomos.androbuildingblocks;
 
-import androbuildingblocks.blockpalette.registry.BlockRegistry;
-import androbuildingblocks.blockpalette.registry.ModCreativeTabs;
-import androbuildingblocks.blockpalette.registry.ModItems;
+import andronomos.androbuildingblocks.registry.BlockRegistry;
+import andronomos.androbuildingblocks.registry.ModCreativeTabs;
+import andronomos.androbuildingblocks.registry.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -16,7 +16,7 @@ import org.slf4j.Logger;
 @Mod(AndroBuildingBlocks.MODID)
 public class AndroBuildingBlocks
 {
-    public static final String MODID = "androbuildingblocks";
+    public static final String MODID = "andronomos";
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public AndroBuildingBlocks()

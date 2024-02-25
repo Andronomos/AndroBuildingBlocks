@@ -1,7 +1,7 @@
-package androbuildingblocks.blockpalette.data;
+package andronomos.androbuildingblocks.data;
 
-import androbuildingblocks.blockpalette.AndroBuildingBlocks;
-import androbuildingblocks.blockpalette.registry.BlockRegistry;
+import andronomos.androbuildingblocks.AndroBuildingBlocks;
+import andronomos.androbuildingblocks.registry.BlockRegistry;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;

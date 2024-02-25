@@ -1,8 +1,8 @@
-package androbuildingblocks.blockpalette.data;
+package andronomos.androbuildingblocks.data;
 
-import androbuildingblocks.blockpalette.data.client.ModBlockStateProvider;
-import androbuildingblocks.blockpalette.data.client.ModItemModelProvider;
-import androbuildingblocks.blockpalette.data.client.ModLanguageProvider;
+import andronomos.androbuildingblocks.data.client.ModBlockStateProvider;
+import andronomos.androbuildingblocks.data.client.ModItemModelProvider;
+import andronomos.androbuildingblocks.data.client.ModLanguageProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.ExistingFileHelper;

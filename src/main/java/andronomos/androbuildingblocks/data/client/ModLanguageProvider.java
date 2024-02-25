@@ -1,8 +1,8 @@
-package androbuildingblocks.blockpalette.data.client;
+package andronomos.androbuildingblocks.data.client;
 
-import androbuildingblocks.blockpalette.AndroBuildingBlocks;
-import androbuildingblocks.blockpalette.registry.BlockRegistry;
-import androbuildingblocks.blockpalette.registry.ModCreativeTabs;
+import andronomos.androbuildingblocks.AndroBuildingBlocks;
+import andronomos.androbuildingblocks.registry.BlockRegistry;
+import andronomos.androbuildingblocks.registry.ModCreativeTabs;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -19,8 +19,8 @@ public class ModLanguageProvider extends LanguageProvider {
 
 	@Override
 	protected void addTranslations() {
-		add("creativetab." + ModCreativeTabs.BASETABNAME, "BlockPalette");
-		add("creativetab." + ModCreativeTabs.GLASSTABNAME, "BlockPalette Glass");
+		add("creativetab." + ModCreativeTabs.BASETABNAME, "AndroBuildingBlocks");
+		add("creativetab." + ModCreativeTabs.GLASSTABNAME, "AndroBuildingBlocks Glass");
 
 		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 			String name = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(b)).getPath();

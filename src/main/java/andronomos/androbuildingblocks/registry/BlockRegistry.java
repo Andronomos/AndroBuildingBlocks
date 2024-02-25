@@ -1,6 +1,6 @@
-package androbuildingblocks.blockpalette.registry;
+package andronomos.androbuildingblocks.registry;
 
-import androbuildingblocks.blockpalette.AndroBuildingBlocks;
+import andronomos.androbuildingblocks.AndroBuildingBlocks;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;

@@ -1,6 +1,6 @@
-package androbuildingblocks.blockpalette.data.client;
+package andronomos.androbuildingblocks.data.client;
 
-import androbuildingblocks.blockpalette.AndroBuildingBlocks;
+import andronomos.androbuildingblocks.AndroBuildingBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
