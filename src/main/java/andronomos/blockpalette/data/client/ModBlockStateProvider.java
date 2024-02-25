@@ -30,7 +30,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 				case "WallBlock" -> registerWallBlockStateAndModel((WallBlock)b, blockName);
 				case "StainedGlassBlock" -> registerGlassBlockStateAndModel(b, blockName);
 				case "StainedGlassPaneBlock" -> registerPaneBlockStateAndModel((IronBarsBlock)b, blockName);
-				case "RotatedPillarBlock" -> registerRotatableBlockStateAndModel((RotatedPillarBlock) b, blockName, "slate");
+				case "RotatedPillarBlock" -> registerRotatableBlockStateAndModel((RotatedPillarBlock) b, blockName);
 				default -> registerBlockStateAndModel(b, blockName);
 			}
 		});
@@ -86,18 +86,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		itemModels().singleTexture(blockName, mcLoc("item/generated"), "layer0", modLoc(textureName)).renderType("translucent");
 	}
 
-	private void registerRotatableBlockStateAndModel(RotatedPillarBlock block, String name, String topTexture) {
+	private void registerRotatableBlockStateAndModel(RotatedPillarBlock block, String name) {
+		String topResource = name.substring(0, name.indexOf("_pillar"));
 		String resource = "block/" + name;
 		ResourceLocation side = modLoc(resource);
 		ResourceLocation end;
 
-		if(!topTexture.equals("")) {
-			end = modLoc("block/" + topTexture);
-		} else {
-			end = side;
-		}
+		//if(!topResource.equals("")) {
+		//	end = modLoc("block/" + topResource);
+		//} else {
+		//	end = side;
+		//}
 
-		//axisBlock(block, side, end);
+		end = modLoc("block/" + topResource);
 
 		ModelFile model = models().cubeColumn(name, side, end);
 
