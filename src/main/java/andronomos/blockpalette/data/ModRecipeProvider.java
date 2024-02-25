@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.StairBlock;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.registries.ForgeRegistries;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
@@ -22,7 +23,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 	}
 
 	@Override
-	protected void buildRecipes(Consumer<FinishedRecipe> recipeConsumer) {
+	protected void buildRecipes(@NotNull Consumer<FinishedRecipe> recipeConsumer) {
 		//region Rough Concrete
 		generateRoughConcretePowder(BlockRegistry.ROUGH_CONCRETE_WHITE_POWDER.get(), Items.WHITE_DYE, recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_WHITE_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_WHITE.get(), 1, recipeConsumer);
@@ -163,14 +164,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateThreeByTwoRecipe(BlockRegistry.SMOOTH_DEEPSLATE_WALL.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.SMOOTH_DEEPSLATE_WALL.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), 1, recipeConsumer);
 
-		ShapedRecipeBuilder slateRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.BENTONITE.get(), 4);
-		slateRecipe.define('1', Items.CLAY_BALL);
-		slateRecipe.define('2', Items.GUNPOWDER);
-		slateRecipe.pattern("121");
-		slateRecipe.pattern("212");
-		slateRecipe.pattern("121");
-		slateRecipe.unlockedBy("has_item", has(BlockRegistry.BENTONITE.get()));
-		slateRecipe.save(recipeConsumer);
+		//region Bentonite
+		ShapelessRecipeBuilder bentoniteRecipe = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.BENTONITE.get(), 1);
+		bentoniteRecipe.requires(Items.CLAY_BALL, 2);
+		bentoniteRecipe.requires(Items.GUNPOWDER, 2);
+		bentoniteRecipe.unlockedBy("has_item", has(Items.CLAY_BALL));
+		bentoniteRecipe.save(recipeConsumer);
+
 
 		generateStoneCutterRecipe(BlockRegistry.BENTONITE_PILLAR.get(), BlockRegistry.BENTONITE.get(), 1, recipeConsumer);
 		generateStairRecipe(BlockRegistry.BENTONITE_STAIRS.get(), BlockRegistry.BENTONITE.get().asItem(), recipeConsumer);
@@ -178,6 +178,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateSlabRecipe(BlockRegistry.BENTONITE_SLAB.get(), BlockRegistry.BENTONITE.get().asItem(), recipeConsumer);
 		generateThreeByTwoRecipe(BlockRegistry.BENTONITE_WALL.get(), BlockRegistry.BENTONITE.get(), recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.BENTONITE_SLAB.get(), BlockRegistry.BENTONITE.get(), 1, recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.BENTONITE_GRATE.get(), BlockRegistry.BENTONITE.get(), 1, recipeConsumer);
+
 		generateTwoByTwoRecipe(BlockRegistry.BENTONITE_BRICKS.get(), BlockRegistry.BENTONITE.get(), recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.BENTONITE_BRICKS.get(), BlockRegistry.BENTONITE.get(), 1, recipeConsumer);
 		generateStairRecipe(BlockRegistry.BENTONITE_BRICK_STAIRS.get(), BlockRegistry.BENTONITE.get().asItem(), recipeConsumer);
@@ -186,7 +188,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateStoneCutterRecipe(BlockRegistry.BENTONITE_BRICK_SLAB.get(), BlockRegistry.BENTONITE_BRICKS.get(), 1, recipeConsumer);
 		generateThreeByTwoRecipe(BlockRegistry.BENTONITE_BRICK_WALL.get(), BlockRegistry.BENTONITE_BRICKS.get(), recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.BENTONITE_BRICK_WALL.get(), BlockRegistry.BENTONITE_BRICKS.get(), 1, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BENTONITE_GRATE.get(), BlockRegistry.BENTONITE.get(), 1, recipeConsumer);
+		//endregion
 	}
 
 	private void generateSmeltingRecipe(Block input, Block output, Consumer<FinishedRecipe> consumer) {
