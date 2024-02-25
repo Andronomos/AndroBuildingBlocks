@@ -19,7 +19,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
 	@Override
 	public String getName() {
-		return "AndroBuildingBlocks Tags";
+		return "BlockPalette Tags";
 	}
 
 	@Override
