@@ -171,7 +171,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		bentoniteRecipe.unlockedBy("has_item", has(Items.CLAY_BALL));
 		bentoniteRecipe.save(recipeConsumer);
 
-
 		generateStoneCutterRecipe(BlockRegistry.BENTONITE_PILLAR.get(), BlockRegistry.BENTONITE.get(), 1, recipeConsumer);
 		generateStairRecipe(BlockRegistry.BENTONITE_STAIRS.get(), BlockRegistry.BENTONITE.get().asItem(), recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.BENTONITE_STAIRS.get(), BlockRegistry.BENTONITE.get(), 1, recipeConsumer);
@@ -239,7 +238,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 	private void generateStoneCutterRecipe(Block output, Block input, int amount, Consumer<FinishedRecipe> consumer) {
 		String blockName = ForgeRegistries.BLOCKS.getKey(output).getPath();
 		SingleItemRecipeBuilder stonecutting = SingleItemRecipeBuilder.stonecutting(Ingredient.of(input), RecipeCategory.BUILDING_BLOCKS, output, amount);
-		//stonecutting.group(getVariantName(output));
 		stonecutting.unlockedBy("has_item", has(input));
 		stonecutting.save(consumer, blockName + "_from_stonecutting");
 	}
@@ -248,7 +246,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 6);
 		shaped.define('#', input);
 		shaped.pattern("###");
-		//shaped.group(getVariantName(output));
 		shaped.unlockedBy("has_item", has(input));
 		shaped.save(consumer);
 	}
@@ -259,7 +256,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		shaped.pattern("#  ");
 		shaped.pattern("## ");
 		shaped.pattern("###");
-		//shaped.group(getVariantName(output));
 		shaped.unlockedBy("has_item", has(input));
 		shaped.save(consumer);
 	}
