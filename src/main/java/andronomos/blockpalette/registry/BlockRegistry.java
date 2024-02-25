@@ -147,7 +147,6 @@ public class BlockRegistry {
 	public static final RegistryObject<SlabBlock> BENTONITE_SLAB = registerSlabBlock("bentonite_slab", SLATE_PROPERTIES);
 	public static final RegistryObject<WallBlock> BENTONITE_WALL = registerWallBlock("bentonite_wall", SLATE_PROPERTIES);
 	public static final RegistryObject<Block> BENTONITE_PILLAR = registerRotatableBlock("bentonite_pillar", SLATE_PROPERTIES);
-	public static final RegistryObject<FenceBlock> BENTONITE_FENCE = registerFenceBlock("bentonite_fence", SLATE_PROPERTIES);
 
 	public static final RegistryObject<Block> BENTONITE_BRICKS = registerBlock("bentonite_bricks", SLATE_PROPERTIES);
 	public static final RegistryObject<StairBlock> BENTONITE_BRICK_STAIRS = registerStairBlock("bentonite_brick_stairs", BENTONITE, SLATE_PROPERTIES);
@@ -156,16 +155,8 @@ public class BlockRegistry {
 	public static final RegistryObject<Block> BENTONITE_GRATE = registerBlock("bentonite_grate", SLATE_PROPERTIES);
 	//endregion
 
-	private static RegistryObject<FenceBlock> registerFenceBlock(final String name, Block.Properties properties) {
-		return registerBlock(name, () -> new FenceBlock(properties));
-	}
-
 	public static RegistryObject<Block> registerRotatableBlock(final String name, Block.Properties properties) {
 		return registerBlock(name, () -> new RotatedPillarBlock(properties));
-	}
-
-	public static RegistryObject<Block> registerBlock(final String name, Block.Properties properties) {
-		return registerBlock(name, () -> new Block(properties));
 	}
 
 	public static RegistryObject<ConcretePowderBlock> registerPowderBlock(final String name, Supplier<Block> solidBlock, BlockBehaviour.Properties properties) {
@@ -190,6 +181,10 @@ public class BlockRegistry {
 
 	private static RegistryObject<Block> registerGlassPaneBlock(final String name, DyeColor color) {
 		return registerBlock(name + "_borderless_glass_pane", () -> new StainedGlassPaneBlock(color, GLASS_PANE_PROPERTIES));
+	}
+
+	public static RegistryObject<Block> registerBlock(final String name, Block.Properties properties) {
+		return registerBlock(name, () -> new Block(properties));
 	}
 
 	private static <BLOCK extends Block> RegistryObject<BLOCK> registerBlock(final String name, final Supplier<BLOCK> blockFactory) {
