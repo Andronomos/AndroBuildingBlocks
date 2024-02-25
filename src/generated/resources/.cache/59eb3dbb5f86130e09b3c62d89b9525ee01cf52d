@@ -1,9 +1,10 @@
-// 1.20.1	2024-02-24T21:21:35.1542421	Loot Tables
+// 1.20.1	2024-02-24T22:18:53.383893	Loot Tables
 c0799ddfe0da23597dfc6cd8aa9bfaf3fafce061 data/blockpalette/loot_tables/blocks/bentonite.json
 3e5795fc60407e97e4f0f737bcd4219876f37c5c data/blockpalette/loot_tables/blocks/bentonite_bricks.json
 39eb283e8beb4f183d3edb9d83c42818d8d5f921 data/blockpalette/loot_tables/blocks/bentonite_brick_slab.json
 edc93ed5aee02301ab3521ff5c1162debd932dc0 data/blockpalette/loot_tables/blocks/bentonite_brick_stairs.json
 e66af634d63db71bb329d3f39833d90c0e29316c data/blockpalette/loot_tables/blocks/bentonite_brick_wall.json
+a81e8ffee25870a4eef83fa06ba69cfa3c0080ef data/blockpalette/loot_tables/blocks/bentonite_grate.json
 0b34e5dddf4ed5995d30e0be9d0a19bd23eb6ecb data/blockpalette/loot_tables/blocks/bentonite_pillar.json
 23f7c68cbef90b0a34d46e2a9e085c9c27371a9f data/blockpalette/loot_tables/blocks/bentonite_slab.json
 cdfd6606f76fb3bce87bd38ff335ebdf5f4bd969 data/blockpalette/loot_tables/blocks/bentonite_stairs.json

@@ -84,6 +84,7 @@
     "blockpalette:bentonite_bricks",
     "blockpalette:bentonite_brick_stairs",
     "blockpalette:bentonite_brick_slab",
-    "blockpalette:bentonite_brick_wall"
+    "blockpalette:bentonite_brick_wall",
+    "blockpalette:bentonite_grate"
   ]
 }

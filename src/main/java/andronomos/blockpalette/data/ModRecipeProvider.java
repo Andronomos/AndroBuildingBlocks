@@ -186,6 +186,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateStoneCutterRecipe(BlockRegistry.BENTONITE_BRICK_SLAB.get(), BlockRegistry.BENTONITE_BRICKS.get(), 1, recipeConsumer);
 		generateThreeByTwoRecipe(BlockRegistry.BENTONITE_BRICK_WALL.get(), BlockRegistry.BENTONITE_BRICKS.get(), recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.BENTONITE_BRICK_WALL.get(), BlockRegistry.BENTONITE_BRICKS.get(), 1, recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.BENTONITE_GRATE.get(), BlockRegistry.BENTONITE.get(), 1, recipeConsumer);
 	}
 
 	private void generateSmeltingRecipe(Block input, Block output, Consumer<FinishedRecipe> consumer) {
