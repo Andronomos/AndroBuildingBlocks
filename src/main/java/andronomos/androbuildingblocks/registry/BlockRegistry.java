@@ -136,10 +136,12 @@ public class BlockRegistry {
 	public static final RegistryObject<Block> BLACK_BORDERLESS_GLASS_PANE = registerGlassPaneBlock("black", DyeColor.BLACK);
 	//endregion
 
+	//region Smooth Deepslate
 	public static final RegistryObject<Block> SMOOTH_DEEPSLATE = registerBlock("smooth_deepslate", DEEPSLATE_PROPERTIES);
 	public static final RegistryObject<StairBlock> SMOOTH_DEEPSLATE_STAIRS = registerStairBlock("smooth_deepslate_stairs", SMOOTH_DEEPSLATE, DEEPSLATE_PROPERTIES);
 	public static final RegistryObject<SlabBlock> SMOOTH_DEEPSLATE_SLAB = registerSlabBlock("smooth_deepslate_slab", DEEPSLATE_PROPERTIES);
 	public static final RegistryObject<WallBlock> SMOOTH_DEEPSLATE_WALL = registerWallBlock("smooth_deepslate_wall", DEEPSLATE_PROPERTIES);
+	//endregion
 
 	//region Bentonite
 	public static final RegistryObject<Block> BENTONITE = registerBlock("bentonite", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
