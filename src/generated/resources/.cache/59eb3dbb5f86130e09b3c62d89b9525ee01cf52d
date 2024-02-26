@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-25T19:05:45.9055175	Loot Tables
+// 1.20.1	2024-02-25T19:37:08.4461922	Loot Tables
 e94b86e4e3d9ed8e467d6452359039a300fecd2a data/androbuildingblocks/loot_tables/blocks/bentonite.json
 8799034a74a988df13c323f1fa9acf240b36fc4b data/androbuildingblocks/loot_tables/blocks/bentonite_bricks.json
 590471c732fd6c7df68a1a134f9302fa71f1542e data/androbuildingblocks/loot_tables/blocks/bentonite_brick_slab.json
@@ -15,6 +15,7 @@ eb3f6283f23ff6cd9c786f92c6c079b1c8597845 data/androbuildingblocks/loot_tables/bl
 df28c4f8331f17fe1fc58f8a433e44cdd241ebf5 data/androbuildingblocks/loot_tables/blocks/blue_structural_glass_pane.json
 7806f2e586c3c6ed86412bd0486ab6119b72ecb8 data/androbuildingblocks/loot_tables/blocks/brown_structural_glass.json
 7fda5375778dd69ed163ebafd653fba22724b4e8 data/androbuildingblocks/loot_tables/blocks/brown_structural_glass_pane.json
+dc7f30c9a2ab6c861e5491a00382b5e0876ab34d data/androbuildingblocks/loot_tables/blocks/carbon_steel.json
 0386228c3a35af4d116b2bdb3fbf7d2e8ce26c49 data/androbuildingblocks/loot_tables/blocks/cyan_structural_glass.json
 e9d5da42723737e0428a346f14d87ed3e4f8a313 data/androbuildingblocks/loot_tables/blocks/cyan_structural_glass_pane.json
 cf2fd92cfaf4ea7a4b808cae41974524c24e536e data/androbuildingblocks/loot_tables/blocks/gray_structural_glass.json

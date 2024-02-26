@@ -154,7 +154,8 @@ public class BlockRegistry {
 	//region Caution
 	public static final RegistryObject<Block> HAZARD_STRIPES = registerBlock("hazard_stripes", STONE_PROPERTIES.mapColor(DyeColor.YELLOW));
 	//endregion
-	
+
+	public static final RegistryObject<Block> CARBON_STEEL = registerBlock("carbon_steel", STONE_PROPERTIES.mapColor(DyeColor.YELLOW));
 
 	public static RegistryObject<Block> registerRotatableBlock(final String name, Block.Properties properties) {
 		return registerBlock(name, () -> new RotatedPillarBlock(properties));
