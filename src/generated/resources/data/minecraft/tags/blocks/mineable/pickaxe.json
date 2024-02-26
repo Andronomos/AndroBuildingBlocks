@@ -91,6 +91,10 @@
     "androbuildingblocks:bentonite_brick_wall",
     "androbuildingblocks:bentonite_grate",
     "androbuildingblocks:hazard_stripes",
-    "androbuildingblocks:carbon_steel"
+    "androbuildingblocks:carbon_steel",
+    "androbuildingblocks:carbon_steel_stairs",
+    "androbuildingblocks:carbon_steel_slab",
+    "androbuildingblocks:carbon_steel_wall",
+    "androbuildingblocks:carbon_steel_grating"
   ]
 }

@@ -14,12 +14,12 @@ import java.util.function.Supplier;
 
 public class BlockRegistry {
 	public static Block.Properties CONCRETE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.WHITE_CONCRETE);
-	public static Block.Properties CONCRETE_POWDER_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.WHITE_CONCRETE_POWDER);
 	public static Block.Properties DEEPSLATE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE);
 	public static Block.Properties STONE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.STONE);
 	public static Block.Properties SLATE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.STONE).mapColor(DyeColor.BLACK);
 	public static Block.Properties GLASS_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.GLASS).strength(0.75f);
 	public static Block.Properties GLASS_PANE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.GLASS_PANE);
+	public static Block.Properties METAL_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK);
 
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AndroBuildingBlocks.MODID);
 
@@ -155,7 +155,13 @@ public class BlockRegistry {
 	public static final RegistryObject<Block> HAZARD_STRIPES = registerBlock("hazard_stripes", STONE_PROPERTIES.mapColor(DyeColor.YELLOW));
 	//endregion
 
-	public static final RegistryObject<Block> CARBON_STEEL = registerBlock("carbon_steel", STONE_PROPERTIES.mapColor(DyeColor.YELLOW));
+	//region Carbon Steel
+	public static final RegistryObject<Block> CARBON_STEEL = registerBlock("carbon_steel", METAL_PROPERTIES);
+	public static final RegistryObject<StairBlock> CARBON_STEEL_STAIRS = registerStairBlock("carbon_steel_stairs", CARBON_STEEL, METAL_PROPERTIES);
+	public static final RegistryObject<SlabBlock> CARBON_STEEL_SLAB = registerSlabBlock("carbon_steel_slab", METAL_PROPERTIES);
+	public static final RegistryObject<WallBlock> CARBON_STEEL_WALL = registerWallBlock("carbon_steel_wall", METAL_PROPERTIES);
+	public static final RegistryObject<Block> CARBON_STEEL_GRATING = registerBlock("carbon_steel_grating", METAL_PROPERTIES);
+	//endregion
 
 	public static RegistryObject<Block> registerRotatableBlock(final String name, Block.Properties properties) {
 		return registerBlock(name, () -> new RotatedPillarBlock(properties));

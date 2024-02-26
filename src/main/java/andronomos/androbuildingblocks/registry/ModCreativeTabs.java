@@ -14,12 +14,14 @@ public class ModCreativeTabs {
 	public static final String BASETABNAME = "androbuildingblocks_tab";
 	public static final String MODERNTABNAME = "androbuildingblocks_modern_tab";
 
+
+
 	public static final RegistryObject<CreativeModeTab> ANDROBUILDINGBLOCKS_TAB = CREATIVE_MODE_TABS.register(BASETABNAME, () -> CreativeModeTab.builder()
 			.title(Component.translatable("creativetab." + BASETABNAME))
 			.icon(BlockRegistry.REINFORCED_CONCRETE_WHITE.get().asItem()::getDefaultInstance)
 			.displayItems((parameters, output) -> BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 				String blockName = ForgeRegistries.BLOCKS.getKey(b).getPath();
-				if(blockName.contains("concrete") || blockName.contains("structural_glass")) {
+				if(blockName.contains("concrete") || blockName.contains("structural_glass") || blockName.contains("steel")) {
 					return;
 				}
 				output.accept(b);
@@ -30,7 +32,7 @@ public class ModCreativeTabs {
 			.icon(BlockRegistry.REINFORCED_CONCRETE_WHITE.get().asItem()::getDefaultInstance)
 			.displayItems((parameters, output) -> BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 				String blockName = ForgeRegistries.BLOCKS.getKey(b).getPath();
-				if(blockName.contains("concrete") || blockName.contains("structural_glass")) {
+				if(blockName.contains("concrete") || blockName.contains("structural_glass") || blockName.contains("steel")) {
 					output.accept(b);
 				}
 			})).build());

@@ -202,6 +202,36 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		//region Decorative Stripes
 		generateStripedRecipe(BlockRegistry.HAZARD_STRIPES.get(), Items.YELLOW_DYE, recipeConsumer);
 		//endregion
+
+		//region Carbon Steel
+		ShapedRecipeBuilder carbonSteelCoalRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.CARBON_STEEL.get(), 4);
+		carbonSteelCoalRecipe.define('C', Items.COAL);
+		carbonSteelCoalRecipe.define('I', Tags.Items.INGOTS_IRON);
+		carbonSteelCoalRecipe.pattern("CIC");
+		carbonSteelCoalRecipe.pattern("ICI");
+		carbonSteelCoalRecipe.pattern("CIC");
+		carbonSteelCoalRecipe.group("carbon_steel");
+		carbonSteelCoalRecipe.unlockedBy("has_item", has(Items.COAL));
+		carbonSteelCoalRecipe.save(recipeConsumer);
+
+		ShapedRecipeBuilder carbonSteelCharcoalRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.CARBON_STEEL.get(), 4);
+		carbonSteelCharcoalRecipe.define('C', Items.CHARCOAL);
+		carbonSteelCharcoalRecipe.define('I', Tags.Items.INGOTS_IRON);
+		carbonSteelCharcoalRecipe.pattern("CIC");
+		carbonSteelCharcoalRecipe.pattern("ICI");
+		carbonSteelCharcoalRecipe.pattern("CIC");
+		carbonSteelCharcoalRecipe.group("carbon_steel");
+		carbonSteelCharcoalRecipe.unlockedBy("has_item", has(Items.CHARCOAL));
+		carbonSteelCharcoalRecipe.save(recipeConsumer, "carbon_steel_from_charcoal");
+
+		generateStairRecipe(BlockRegistry.CARBON_STEEL_STAIRS.get(), BlockRegistry.CARBON_STEEL.get().asItem(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.CARBON_STEEL_STAIRS.get(), BlockRegistry.CARBON_STEEL.get(), 1, recipeConsumer);
+		generateSlabRecipe(BlockRegistry.CARBON_STEEL_SLAB.get(), BlockRegistry.CARBON_STEEL.get().asItem(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.CARBON_STEEL_SLAB.get(), BlockRegistry.CARBON_STEEL.get(), 1, recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.CARBON_STEEL_WALL.get(), BlockRegistry.CARBON_STEEL.get(), 1, recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.CARBON_STEEL_WALL.get(), BlockRegistry.CARBON_STEEL.get(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.CARBON_STEEL_GRATING.get(), BlockRegistry.CARBON_STEEL.get(), 1, recipeConsumer);
+		//endregion
 	}
 
 
@@ -244,14 +274,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		shapedSand.save(consumer, concreteName + "_from_sand");
 	}
 
-
-
-
-
-
-
-
-
 	private void generateStripedRecipe(Block output, Item Dye, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 4);
 		shaped.define('1', Dye);
@@ -270,16 +292,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		cooking.unlockedBy("has_item", has(input));
 		cooking.save(consumer);
 	}
-
-	//private void generateSingleItemShapelessRecipe(Block output, Block sourceBlock, Consumer<FinishedRecipe> consumer) {
-	//	ShapelessRecipeBuilder shapeless = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS,
-	//			output, 1);
-	//	shapeless.requires(sourceBlock.asItem());
-	//	shapeless.unlockedBy("has_item", has(sourceBlock));
-	//	shapeless.save(consumer);
-	//}
-
-
 
 	private void generateTwoByTwoRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 6);

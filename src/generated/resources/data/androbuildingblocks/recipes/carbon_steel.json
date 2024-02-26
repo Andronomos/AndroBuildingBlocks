@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "carbon_steel",
+  "key": {
+    "C": {
+      "item": "minecraft:coal"
+    },
+    "I": {
+      "tag": "forge:ingots/iron"
+    }
+  },
+  "pattern": [
+    "CIC",
+    "ICI",
+    "CIC"
+  ],
+  "result": {
+    "count": 4,
+    "item": "androbuildingblocks:carbon_steel"
+  },
+  "show_notification": true
+}
