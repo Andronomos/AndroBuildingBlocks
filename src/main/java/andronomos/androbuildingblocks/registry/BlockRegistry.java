@@ -58,6 +58,26 @@ public class BlockRegistry {
 	public static final RegistryObject<StairBlock> REINFORCED_CONCRETE_RED_STAIRS = registerStairBlock("reinforced_concrete_red_stairs", REINFORCED_CONCRETE_RED, CONCRETE_PROPERTIES.mapColor(DyeColor.RED));
 	public static final RegistryObject<SlabBlock> REINFORCED_CONCRETE_RED_SLAB = registerSlabBlock("reinforced_concrete_red_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.RED));
 	public static final RegistryObject<WallBlock> REINFORCED_CONCRETE_RED_WALL = registerWallBlock("reinforced_concrete_red_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.RED));
+
+	public static final RegistryObject<Block> REINFORCED_CONCRETE_YELLOW = registerBlock("reinforced_concrete_yellow", CONCRETE_PROPERTIES.mapColor(DyeColor.YELLOW));
+	public static final RegistryObject<StairBlock> REINFORCED_CONCRETE_YELLOW_STAIRS = registerStairBlock("reinforced_concrete_yellow_stairs", REINFORCED_CONCRETE_YELLOW, CONCRETE_PROPERTIES.mapColor(DyeColor.YELLOW));
+	public static final RegistryObject<SlabBlock> REINFORCED_CONCRETE_YELLOW_SLAB = registerSlabBlock("reinforced_concrete_yellow_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.YELLOW));
+	public static final RegistryObject<WallBlock> REINFORCED_CONCRETE_YELLOW_WALL = registerWallBlock("reinforced_concrete_yellow_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.YELLOW));
+
+	public static final RegistryObject<Block> REINFORCED_CONCRETE_PURPLE = registerBlock("reinforced_concrete_purple", CONCRETE_PROPERTIES.mapColor(DyeColor.PURPLE));
+	public static final RegistryObject<StairBlock> REINFORCED_CONCRETE_PURPLE_STAIRS = registerStairBlock("reinforced_concrete_purple_stairs", REINFORCED_CONCRETE_PURPLE, CONCRETE_PROPERTIES.mapColor(DyeColor.PURPLE));
+	public static final RegistryObject<SlabBlock> REINFORCED_CONCRETE_PURPLE_SLAB = registerSlabBlock("reinforced_concrete_purple_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.PURPLE));
+	public static final RegistryObject<WallBlock> REINFORCED_CONCRETE_PURPLE_WALL = registerWallBlock("reinforced_concrete_purple_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.PURPLE));
+
+	public static final RegistryObject<Block> REINFORCED_CONCRETE_PINK = registerBlock("reinforced_concrete_pink", CONCRETE_PROPERTIES.mapColor(DyeColor.PINK));
+	public static final RegistryObject<StairBlock> REINFORCED_CONCRETE_PINK_STAIRS = registerStairBlock("reinforced_concrete_pink_stairs", REINFORCED_CONCRETE_PINK, CONCRETE_PROPERTIES.mapColor(DyeColor.PINK));
+	public static final RegistryObject<SlabBlock> REINFORCED_CONCRETE_PINK_SLAB = registerSlabBlock("reinforced_concrete_pink_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.PINK));
+	public static final RegistryObject<WallBlock> REINFORCED_CONCRETE_PINK_WALL = registerWallBlock("reinforced_concrete_pink_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.PINK));
+
+	public static final RegistryObject<Block> REINFORCED_CONCRETE_ORANGE = registerBlock("reinforced_concrete_orange", CONCRETE_PROPERTIES.mapColor(DyeColor.ORANGE));
+	public static final RegistryObject<StairBlock> REINFORCED_CONCRETE_ORANGE_STAIRS = registerStairBlock("reinforced_concrete_orange_stairs", REINFORCED_CONCRETE_PINK, CONCRETE_PROPERTIES.mapColor(DyeColor.ORANGE));
+	public static final RegistryObject<SlabBlock> REINFORCED_CONCRETE_ORANGE_SLAB = registerSlabBlock("reinforced_concrete_orange_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.ORANGE));
+	public static final RegistryObject<WallBlock> REINFORCED_CONCRETE_ORANGE_WALL = registerWallBlock("reinforced_concrete_orange_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.ORANGE));
 	//endregion
 
 	//region Structural Glass
@@ -154,10 +174,6 @@ public class BlockRegistry {
 
 	public static RegistryObject<StainedGlassBlock> registerGlassBlock(final String name, DyeColor color) {
 		return registerBlock(name, () -> new StainedGlassBlock(color, GLASS_PROPERTIES));
-	}
-
-	private static RegistryObject<Block> registerGlassPaneBlock(final String name) {
-		return registerBlock(name, () -> new IronBarsBlock(GLASS_PANE_PROPERTIES));
 	}
 
 	private static RegistryObject<Block> registerStainedGlassPaneBlock(final String name, DyeColor color) {

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "androbuildingblocks:block/reinforced_concrete_pink",
+    "side": "androbuildingblocks:block/reinforced_concrete_pink",
+    "top": "androbuildingblocks:block/reinforced_concrete_pink"
+  }
+}

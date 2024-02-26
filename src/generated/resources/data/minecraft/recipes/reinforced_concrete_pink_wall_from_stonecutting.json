@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "androbuildingblocks:reinforced_concrete_pink"
+  },
+  "result": "androbuildingblocks:reinforced_concrete_pink_wall"
+}
