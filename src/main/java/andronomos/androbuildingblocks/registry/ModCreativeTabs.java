@@ -18,9 +18,9 @@ public class ModCreativeTabs {
 			.title(Component.translatable("creativetab." + BASETABNAME))
 			.icon(BlockRegistry.REINFORCED_CONCRETE_WHITE.get().asItem()::getDefaultInstance)
 			.displayItems((parameters, output) -> BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
-				switch (b.getClass().getSimpleName()) {
-					case "GlassBlock", "StainedGlassBlock", "StainedGlassPaneBlock":
-						return;
+				String blockName = ForgeRegistries.BLOCKS.getKey(b).getPath();
+				if(blockName.contains("concrete") || blockName.contains("structural_glass")) {
+					return;
 				}
 				output.accept(b);
 			})).build());
@@ -30,7 +30,6 @@ public class ModCreativeTabs {
 			.icon(BlockRegistry.REINFORCED_CONCRETE_WHITE.get().asItem()::getDefaultInstance)
 			.displayItems((parameters, output) -> BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 				String blockName = ForgeRegistries.BLOCKS.getKey(b).getPath();
-
 				if(blockName.contains("concrete") || blockName.contains("structural_glass")) {
 					output.accept(b);
 				}
