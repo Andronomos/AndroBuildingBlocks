@@ -107,9 +107,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		//endregion
 
 		//region Borderless Glass
-		buildStructuralGlassRecipe(BlockRegistry.STRUCTURAL_GLASS.get(), Blocks.GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.STRUCTURAL_GLASS_PANE.get(), BlockRegistry.STRUCTURAL_GLASS.get(), recipeConsumer);
-
 		buildStructuralGlassRecipe(BlockRegistry.WHITE_STRUCTURAL_GLASS.get(), Blocks.WHITE_STAINED_GLASS, recipeConsumer);
 		generateThreeByTwoRecipe(BlockRegistry.WHITE_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.WHITE_STRUCTURAL_GLASS.get(), recipeConsumer);
 

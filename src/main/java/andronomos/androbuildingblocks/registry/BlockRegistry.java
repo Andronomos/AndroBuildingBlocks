@@ -86,9 +86,6 @@ public class BlockRegistry {
 	//endregion
 
 	//region Borderless Glass
-	public static final RegistryObject<StainedGlassBlock> STRUCTURAL_GLASS = registerGlassBlock("structural_glass", DyeColor.WHITE);
-	public static final RegistryObject<Block> STRUCTURAL_GLASS_PANE = registerGlassPaneBlock("structural_glass_pane");
-
 	public static final RegistryObject<StainedGlassBlock> WHITE_STRUCTURAL_GLASS = registerGlassBlock("white_structural_glass", DyeColor.WHITE);
 	public static final RegistryObject<Block> WHITE_STRUCTURAL_GLASS_PANE = registerStainedGlassPaneBlock("white", DyeColor.WHITE);
 
