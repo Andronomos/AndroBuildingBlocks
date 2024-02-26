@@ -1,6 +1,7 @@
 package andronomos.androbuildingblocks.data.client;
 
 import andronomos.androbuildingblocks.AndroBuildingBlocks;
+import andronomos.androbuildingblocks.block.BuildingBlock;
 import andronomos.androbuildingblocks.registry.BlockRegistry;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
@@ -29,7 +30,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
 				case "SlabBlock" -> registerSlabBlockStateAndModel((SlabBlock)b, blockName);
 				case "WallBlock" -> registerWallBlockStateAndModel((WallBlock)b, blockName);
 				case "FenceBlock" -> registerFenceBlockStateAndModel((FenceBlock) b, blockName);
-				case "StainedGlassBlock", "GlassBlock" -> registerGlassBlockStateAndModel(b, blockName);
+				case "BuildingBlock" -> {
+					if(((BuildingBlock)b).isTranslucent) {
+						registerTranslucentBlockStateAndModel(b, blockName);
+					} else {
+						registerBlockStateAndModel(b, blockName);
+					}
+				}
 				case "StainedGlassPaneBlock", "IronBarsBlock" -> registerPaneBlockStateAndModel((IronBarsBlock)b, blockName);
 				case "RotatedPillarBlock" -> registerRotatableBlockStateAndModel((RotatedPillarBlock) b, blockName);
 				default -> registerBlockStateAndModel(b, blockName);
@@ -79,7 +86,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		itemModels().wallInventory(name, modLoc("block/" + resourceName));
 	}
 
-	private void registerGlassBlockStateAndModel(Block block, String name) {
+	private void registerTranslucentBlockStateAndModel(Block block, String name) {
 		ModelFile model;
 		model = models().cubeAll(name, modLoc("block/" + name)).renderType("translucent");
 		simpleBlock(block, model);
