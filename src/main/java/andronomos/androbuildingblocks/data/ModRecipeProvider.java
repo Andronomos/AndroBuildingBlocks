@@ -107,53 +107,56 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		//endregion
 
 		//region Borderless Glass
-		generateSingleItemShapelessRecipe(BlockRegistry.WHITE_BORDERLESS_GLASS.get(), Blocks.WHITE_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.WHITE_BORDERLESS_GLASS_PANE.get(), BlockRegistry.WHITE_BORDERLESS_GLASS.get(), recipeConsumer);
+		buildStructuralGlassRecipe(BlockRegistry.STRUCTURAL_GLASS.get(), Blocks.GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.STRUCTURAL_GLASS_PANE.get(), BlockRegistry.STRUCTURAL_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(BlockRegistry.BLUE_BORDERLESS_GLASS.get(), Blocks.BLUE_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.BLUE_BORDERLESS_GLASS_PANE.get(), BlockRegistry.BLUE_BORDERLESS_GLASS.get(), recipeConsumer);
+		buildStructuralGlassRecipe(BlockRegistry.WHITE_STRUCTURAL_GLASS.get(), Blocks.WHITE_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.WHITE_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.WHITE_STRUCTURAL_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(BlockRegistry.BROWN_BORDERLESS_GLASS.get(), Blocks.BROWN_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.BROWN_BORDERLESS_GLASS_PANE.get(), BlockRegistry.BROWN_BORDERLESS_GLASS.get(), recipeConsumer);
+		buildStructuralGlassRecipe(BlockRegistry.BLUE_STRUCTURAL_GLASS.get(), Blocks.BLUE_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.BLUE_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.BLUE_STRUCTURAL_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(BlockRegistry.CYAN_BORDERLESS_GLASS.get(), Blocks.CYAN_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.CYAN_BORDERLESS_GLASS_PANE.get(), BlockRegistry.CYAN_BORDERLESS_GLASS.get(), recipeConsumer);
+		buildStructuralGlassRecipe(BlockRegistry.BROWN_STRUCTURAL_GLASS.get(), Blocks.BROWN_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.BROWN_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.BROWN_STRUCTURAL_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(BlockRegistry.GREEN_BORDERLESS_GLASS.get(), Blocks.GREEN_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.GREEN_BORDERLESS_GLASS_PANE.get(), BlockRegistry.GREEN_BORDERLESS_GLASS.get(), recipeConsumer);
+		buildStructuralGlassRecipe(BlockRegistry.CYAN_STRUCTURAL_GLASS.get(), Blocks.CYAN_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.CYAN_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.CYAN_STRUCTURAL_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(BlockRegistry.GRAY_BORDERLESS_GLASS.get(), Blocks.GRAY_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.GRAY_BORDERLESS_GLASS_PANE.get(), BlockRegistry.GRAY_BORDERLESS_GLASS.get(), recipeConsumer);
+		buildStructuralGlassRecipe(BlockRegistry.GREEN_STRUCTURAL_GLASS.get(), Blocks.GREEN_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.GREEN_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.GREEN_STRUCTURAL_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(BlockRegistry.LIGHT_BLUE_BORDERLESS_GLASS.get(), Blocks.LIGHT_BLUE_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.LIGHT_BLUE_BORDERLESS_GLASS_PANE.get(), BlockRegistry.LIGHT_BLUE_BORDERLESS_GLASS.get(), recipeConsumer);
+		buildStructuralGlassRecipe(BlockRegistry.GRAY_STRUCTURAL_GLASS.get(), Blocks.GRAY_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.GRAY_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.GRAY_STRUCTURAL_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(BlockRegistry.LIGHT_GRAY_BORDERLESS_GLASS.get(), Blocks.LIGHT_GRAY_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.LIGHT_GRAY_BORDERLESS_GLASS_PANE.get(), BlockRegistry.LIGHT_GRAY_BORDERLESS_GLASS.get(), recipeConsumer);
+		buildStructuralGlassRecipe(BlockRegistry.LIGHT_BLUE_STRUCTURAL_GLASS.get(), Blocks.LIGHT_BLUE_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.LIGHT_BLUE_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.LIGHT_BLUE_STRUCTURAL_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(BlockRegistry.LIME_BORDERLESS_GLASS.get(), Blocks.LIME_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.LIME_BORDERLESS_GLASS_PANE.get(), BlockRegistry.LIME_BORDERLESS_GLASS.get(), recipeConsumer);
+		buildStructuralGlassRecipe(BlockRegistry.LIGHT_GRAY_STRUCTURAL_GLASS.get(), Blocks.LIGHT_GRAY_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.LIGHT_GRAY_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.LIGHT_GRAY_STRUCTURAL_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(BlockRegistry.MAGENTA_BORDERLESS_GLASS.get(), Blocks.MAGENTA_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.MAGENTA_BORDERLESS_GLASS_PANE.get(), BlockRegistry.MAGENTA_BORDERLESS_GLASS.get(), recipeConsumer);
+		buildStructuralGlassRecipe(BlockRegistry.LIME_STRUCTURAL_GLASS.get(), Blocks.LIME_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.LIME_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.LIME_STRUCTURAL_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(BlockRegistry.ORANGE_BORDERLESS_GLASS.get(), Blocks.ORANGE_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.ORANGE_BORDERLESS_GLASS_PANE.get(), BlockRegistry.ORANGE_BORDERLESS_GLASS.get(), recipeConsumer);
+		buildStructuralGlassRecipe(BlockRegistry.MAGENTA_STRUCTURAL_GLASS.get(), Blocks.MAGENTA_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.MAGENTA_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.MAGENTA_STRUCTURAL_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(BlockRegistry.PINK_BORDERLESS_GLASS.get(), Blocks.PINK_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.PINK_BORDERLESS_GLASS_PANE.get(), BlockRegistry.PINK_BORDERLESS_GLASS.get(), recipeConsumer);
+		buildStructuralGlassRecipe(BlockRegistry.ORANGE_STRUCTURAL_GLASS.get(), Blocks.ORANGE_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.ORANGE_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.ORANGE_STRUCTURAL_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(BlockRegistry.PURPLE_BORDERLESS_GLASS.get(), Blocks.PURPLE_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.PURPLE_BORDERLESS_GLASS_PANE.get(), BlockRegistry.PURPLE_BORDERLESS_GLASS.get(), recipeConsumer);
+		buildStructuralGlassRecipe(BlockRegistry.PINK_STRUCTURAL_GLASS.get(), Blocks.PINK_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.PINK_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.PINK_STRUCTURAL_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(BlockRegistry.RED_BORDERLESS_GLASS.get(), Blocks.RED_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.RED_BORDERLESS_GLASS_PANE.get(), BlockRegistry.RED_BORDERLESS_GLASS.get(), recipeConsumer);
+		buildStructuralGlassRecipe(BlockRegistry.PURPLE_STRUCTURAL_GLASS.get(), Blocks.PURPLE_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.PURPLE_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.PURPLE_STRUCTURAL_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(BlockRegistry.YELLOW_BORDERLESS_GLASS.get(), Blocks.YELLOW_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.YELLOW_BORDERLESS_GLASS_PANE.get(), BlockRegistry.YELLOW_BORDERLESS_GLASS.get(), recipeConsumer);
+		buildStructuralGlassRecipe(BlockRegistry.RED_STRUCTURAL_GLASS.get(), Blocks.RED_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.RED_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.RED_STRUCTURAL_GLASS.get(), recipeConsumer);
 
-		generateSingleItemShapelessRecipe(BlockRegistry.BLACK_BORDERLESS_GLASS.get(), Blocks.BLACK_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.BLACK_BORDERLESS_GLASS_PANE.get(), BlockRegistry.BLACK_BORDERLESS_GLASS.get(), recipeConsumer);
+		buildStructuralGlassRecipe(BlockRegistry.YELLOW_STRUCTURAL_GLASS.get(), Blocks.YELLOW_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.YELLOW_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.YELLOW_STRUCTURAL_GLASS.get(), recipeConsumer);
+
+		buildStructuralGlassRecipe(BlockRegistry.BLACK_STRUCTURAL_GLASS.get(), Blocks.BLACK_STAINED_GLASS, recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.BLACK_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.BLACK_STRUCTURAL_GLASS.get(), recipeConsumer);
 		//endregion
 
 		generateSmeltingRecipe(Blocks.DEEPSLATE, BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
@@ -196,6 +199,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		//endregion
 	}
 
+
+	private void buildStructuralGlassRecipe(Block output, Block Input, Consumer<FinishedRecipe> consumer) {
+		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 4);
+		shaped.define('1', Input);
+		shaped.define('2', Items.SLIME_BALL);
+		shaped.pattern("212");
+		shaped.pattern("121");
+		shaped.pattern("212");
+		shaped.unlockedBy("has_item", has(Items.SLIME_BALL));
+		shaped.save(consumer);
+	}
+
+
+
+
+
+
+
+
+
+
+
 	private void generateStripedRecipe(Block output, Item Dye, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 4);
 		shaped.define('1', Dye);
@@ -215,13 +240,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		cooking.save(consumer);
 	}
 
-	private void generateSingleItemShapelessRecipe(Block output, Block sourceBlock, Consumer<FinishedRecipe> consumer) {
-		ShapelessRecipeBuilder shapeless = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS,
-				output, 1);
-		shapeless.requires(sourceBlock.asItem());
-		shapeless.unlockedBy("has_item", has(sourceBlock));
-		shapeless.save(consumer);
-	}
+	//private void generateSingleItemShapelessRecipe(Block output, Block sourceBlock, Consumer<FinishedRecipe> consumer) {
+	//	ShapelessRecipeBuilder shapeless = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS,
+	//			output, 1);
+	//	shapeless.requires(sourceBlock.asItem());
+	//	shapeless.unlockedBy("has_item", has(sourceBlock));
+	//	shapeless.save(consumer);
+	//}
 
 	private void generateRoughConcretePowder(Block output, Item dye, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 8);

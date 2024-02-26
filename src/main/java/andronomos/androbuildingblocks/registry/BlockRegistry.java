@@ -18,9 +18,8 @@ public class BlockRegistry {
 	public static Block.Properties DEEPSLATE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE);
 	public static Block.Properties STONE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.STONE);
 	public static Block.Properties SLATE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.STONE).mapColor(DyeColor.BLACK);
-	public static Block.Properties BARRICADE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK);
-	public static Block.Properties GLASS_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.BLACK_STAINED_GLASS);
-	public static Block.Properties GLASS_PANE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.BLACK_STAINED_GLASS_PANE);
+	public static Block.Properties GLASS_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.GLASS).strength(0.75f);
+	public static Block.Properties GLASS_PANE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.GLASS_PANE);
 
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AndroBuildingBlocks.MODID);
 
@@ -87,53 +86,56 @@ public class BlockRegistry {
 	//endregion
 
 	//region Borderless Glass
-	public static final RegistryObject<StainedGlassBlock> WHITE_BORDERLESS_GLASS = registerGlassBlock("white_borderless_glass", DyeColor.WHITE);
-	public static final RegistryObject<Block> WHITE_BORDERLESS_GLASS_PANE = registerGlassPaneBlock("white", DyeColor.WHITE);
+	public static final RegistryObject<StainedGlassBlock> STRUCTURAL_GLASS = registerGlassBlock("structural_glass", DyeColor.WHITE);
+	public static final RegistryObject<Block> STRUCTURAL_GLASS_PANE = registerGlassPaneBlock("structural_glass_pane");
 
-	public static final RegistryObject<StainedGlassBlock> BLUE_BORDERLESS_GLASS = registerGlassBlock("blue_borderless_glass", DyeColor.BLUE);
-	public static final RegistryObject<Block> BLUE_BORDERLESS_GLASS_PANE = registerGlassPaneBlock("blue", DyeColor.BLUE);
+	public static final RegistryObject<StainedGlassBlock> WHITE_STRUCTURAL_GLASS = registerGlassBlock("white_structural_glass", DyeColor.WHITE);
+	public static final RegistryObject<Block> WHITE_STRUCTURAL_GLASS_PANE = registerStainedGlassPaneBlock("white", DyeColor.WHITE);
 
-	public static final RegistryObject<StainedGlassBlock> BROWN_BORDERLESS_GLASS = registerGlassBlock("brown_borderless_glass", DyeColor.BROWN);
-	public static final RegistryObject<Block> BROWN_BORDERLESS_GLASS_PANE = registerGlassPaneBlock("brown", DyeColor.BROWN);
+	public static final RegistryObject<StainedGlassBlock> BLUE_STRUCTURAL_GLASS = registerGlassBlock("blue_structural_glass", DyeColor.BLUE);
+	public static final RegistryObject<Block> BLUE_STRUCTURAL_GLASS_PANE = registerStainedGlassPaneBlock("blue", DyeColor.BLUE);
 
-	public static final RegistryObject<StainedGlassBlock> CYAN_BORDERLESS_GLASS = registerGlassBlock("cyan_borderless_glass", DyeColor.CYAN);
-	public static final RegistryObject<Block> CYAN_BORDERLESS_GLASS_PANE = registerGlassPaneBlock("cyan", DyeColor.CYAN);
+	public static final RegistryObject<StainedGlassBlock> BROWN_STRUCTURAL_GLASS = registerGlassBlock("brown_structural_glass", DyeColor.BROWN);
+	public static final RegistryObject<Block> BROWN_STRUCTURAL_GLASS_PANE = registerStainedGlassPaneBlock("brown", DyeColor.BROWN);
 
-	public static final RegistryObject<StainedGlassBlock> GREEN_BORDERLESS_GLASS = registerGlassBlock("green_borderless_glass", DyeColor.GREEN);
-	public static final RegistryObject<Block> GREEN_BORDERLESS_GLASS_PANE = registerGlassPaneBlock("green", DyeColor.GREEN);
+	public static final RegistryObject<StainedGlassBlock> CYAN_STRUCTURAL_GLASS = registerGlassBlock("cyan_structural_glass", DyeColor.CYAN);
+	public static final RegistryObject<Block> CYAN_STRUCTURAL_GLASS_PANE = registerStainedGlassPaneBlock("cyan", DyeColor.CYAN);
 
-	public static final RegistryObject<StainedGlassBlock> GRAY_BORDERLESS_GLASS = registerGlassBlock("gray_borderless_glass", DyeColor.GRAY);
-	public static final RegistryObject<Block> GRAY_BORDERLESS_GLASS_PANE = registerGlassPaneBlock("gray", DyeColor.GRAY);
+	public static final RegistryObject<StainedGlassBlock> GREEN_STRUCTURAL_GLASS = registerGlassBlock("green_structural_glass", DyeColor.GREEN);
+	public static final RegistryObject<Block> GREEN_STRUCTURAL_GLASS_PANE = registerStainedGlassPaneBlock("green", DyeColor.GREEN);
 
-	public static final RegistryObject<StainedGlassBlock> LIGHT_BLUE_BORDERLESS_GLASS = registerGlassBlock("light_blue_borderless_glass", DyeColor.LIGHT_BLUE);
-	public static final RegistryObject<Block> LIGHT_BLUE_BORDERLESS_GLASS_PANE = registerGlassPaneBlock("light_blue", DyeColor.LIGHT_BLUE);
+	public static final RegistryObject<StainedGlassBlock> GRAY_STRUCTURAL_GLASS = registerGlassBlock("gray_structural_glass", DyeColor.GRAY);
+	public static final RegistryObject<Block> GRAY_STRUCTURAL_GLASS_PANE = registerStainedGlassPaneBlock("gray", DyeColor.GRAY);
 
-	public static final RegistryObject<StainedGlassBlock> LIGHT_GRAY_BORDERLESS_GLASS = registerGlassBlock("light_gray_borderless_glass", DyeColor.LIGHT_GRAY);
-	public static final RegistryObject<Block> LIGHT_GRAY_BORDERLESS_GLASS_PANE = registerGlassPaneBlock("light_gray", DyeColor.LIGHT_GRAY);
+	public static final RegistryObject<StainedGlassBlock> LIGHT_BLUE_STRUCTURAL_GLASS = registerGlassBlock("light_blue_structural_glass", DyeColor.LIGHT_BLUE);
+	public static final RegistryObject<Block> LIGHT_BLUE_STRUCTURAL_GLASS_PANE = registerStainedGlassPaneBlock("light_blue", DyeColor.LIGHT_BLUE);
 
-	public static final RegistryObject<StainedGlassBlock> LIME_BORDERLESS_GLASS = registerGlassBlock("lime_borderless_glass", DyeColor.LIME);
-	public static final RegistryObject<Block> LIME_BORDERLESS_GLASS_PANE = registerGlassPaneBlock("lime", DyeColor.LIME);
+	public static final RegistryObject<StainedGlassBlock> LIGHT_GRAY_STRUCTURAL_GLASS = registerGlassBlock("light_gray_structural_glass", DyeColor.LIGHT_GRAY);
+	public static final RegistryObject<Block> LIGHT_GRAY_STRUCTURAL_GLASS_PANE = registerStainedGlassPaneBlock("light_gray", DyeColor.LIGHT_GRAY);
 
-	public static final RegistryObject<StainedGlassBlock> MAGENTA_BORDERLESS_GLASS = registerGlassBlock("magenta_borderless_glass", DyeColor.MAGENTA);
-	public static final RegistryObject<Block> MAGENTA_BORDERLESS_GLASS_PANE = registerGlassPaneBlock("magenta", DyeColor.MAGENTA);
+	public static final RegistryObject<StainedGlassBlock> LIME_STRUCTURAL_GLASS = registerGlassBlock("lime_structural_glass", DyeColor.LIME);
+	public static final RegistryObject<Block> LIME_STRUCTURAL_GLASS_PANE = registerStainedGlassPaneBlock("lime", DyeColor.LIME);
 
-	public static final RegistryObject<StainedGlassBlock> ORANGE_BORDERLESS_GLASS = registerGlassBlock("orange_borderless_glass", DyeColor.ORANGE);
-	public static final RegistryObject<Block> ORANGE_BORDERLESS_GLASS_PANE = registerGlassPaneBlock("orange", DyeColor.ORANGE);
+	public static final RegistryObject<StainedGlassBlock> MAGENTA_STRUCTURAL_GLASS = registerGlassBlock("magenta_structural_glass", DyeColor.MAGENTA);
+	public static final RegistryObject<Block> MAGENTA_STRUCTURAL_GLASS_PANE = registerStainedGlassPaneBlock("magenta", DyeColor.MAGENTA);
 
-	public static final RegistryObject<StainedGlassBlock> PINK_BORDERLESS_GLASS = registerGlassBlock("pink_borderless_glass", DyeColor.PINK);
-	public static final RegistryObject<Block> PINK_BORDERLESS_GLASS_PANE = registerGlassPaneBlock("pink", DyeColor.PINK);
+	public static final RegistryObject<StainedGlassBlock> ORANGE_STRUCTURAL_GLASS = registerGlassBlock("orange_structural_glass", DyeColor.ORANGE);
+	public static final RegistryObject<Block> ORANGE_STRUCTURAL_GLASS_PANE = registerStainedGlassPaneBlock("orange", DyeColor.ORANGE);
 
-	public static final RegistryObject<StainedGlassBlock> PURPLE_BORDERLESS_GLASS = registerGlassBlock("purple_borderless_glass", DyeColor.PURPLE);
-	public static final RegistryObject<Block> PURPLE_BORDERLESS_GLASS_PANE = registerGlassPaneBlock("purple", DyeColor.PURPLE);
+	public static final RegistryObject<StainedGlassBlock> PINK_STRUCTURAL_GLASS = registerGlassBlock("pink_structural_glass", DyeColor.PINK);
+	public static final RegistryObject<Block> PINK_STRUCTURAL_GLASS_PANE = registerStainedGlassPaneBlock("pink", DyeColor.PINK);
 
-	public static final RegistryObject<StainedGlassBlock> RED_BORDERLESS_GLASS = registerGlassBlock("red_borderless_glass", DyeColor.RED);
-	public static final RegistryObject<Block> RED_BORDERLESS_GLASS_PANE = registerGlassPaneBlock("red", DyeColor.RED);
+	public static final RegistryObject<StainedGlassBlock> PURPLE_STRUCTURAL_GLASS = registerGlassBlock("purple_structural_glass", DyeColor.PURPLE);
+	public static final RegistryObject<Block> PURPLE_STRUCTURAL_GLASS_PANE = registerStainedGlassPaneBlock("purple", DyeColor.PURPLE);
 
-	public static final RegistryObject<StainedGlassBlock> YELLOW_BORDERLESS_GLASS = registerGlassBlock("yellow_borderless_glass", DyeColor.YELLOW);
-	public static final RegistryObject<Block> YELLOW_BORDERLESS_GLASS_PANE = registerGlassPaneBlock("yellow", DyeColor.YELLOW);
+	public static final RegistryObject<StainedGlassBlock> RED_STRUCTURAL_GLASS = registerGlassBlock("red_structural_glass", DyeColor.RED);
+	public static final RegistryObject<Block> RED_STRUCTURAL_GLASS_PANE = registerStainedGlassPaneBlock("red", DyeColor.RED);
 
-	public static final RegistryObject<StainedGlassBlock> BLACK_BORDERLESS_GLASS = registerGlassBlock("black_borderless_glass", DyeColor.BLACK);
-	public static final RegistryObject<Block> BLACK_BORDERLESS_GLASS_PANE = registerGlassPaneBlock("black", DyeColor.BLACK);
+	public static final RegistryObject<StainedGlassBlock> YELLOW_STRUCTURAL_GLASS = registerGlassBlock("yellow_structural_glass", DyeColor.YELLOW);
+	public static final RegistryObject<Block> YELLOW_STRUCTURAL_GLASS_PANE = registerStainedGlassPaneBlock("yellow", DyeColor.YELLOW);
+
+	public static final RegistryObject<StainedGlassBlock> BLACK_STRUCTURAL_GLASS = registerGlassBlock("black_structural_glass", DyeColor.BLACK);
+	public static final RegistryObject<Block> BLACK_STRUCTURAL_GLASS_PANE = registerStainedGlassPaneBlock("black", DyeColor.BLACK);
 	//endregion
 
 	//region Smooth Deepslate
@@ -186,8 +188,12 @@ public class BlockRegistry {
 		return registerBlock(name, () -> new StainedGlassBlock(color, GLASS_PROPERTIES));
 	}
 
-	private static RegistryObject<Block> registerGlassPaneBlock(final String name, DyeColor color) {
-		return registerBlock(name + "_borderless_glass_pane", () -> new StainedGlassPaneBlock(color, GLASS_PANE_PROPERTIES));
+	private static RegistryObject<Block> registerGlassPaneBlock(final String name) {
+		return registerBlock(name, () -> new IronBarsBlock(GLASS_PANE_PROPERTIES));
+	}
+
+	private static RegistryObject<Block> registerStainedGlassPaneBlock(final String name, DyeColor color) {
+		return registerBlock(name + "_structural_glass_pane", () -> new StainedGlassPaneBlock(color, GLASS_PANE_PROPERTIES));
 	}
 
 	public static RegistryObject<Block> registerBlock(final String name, Block.Properties properties) {
