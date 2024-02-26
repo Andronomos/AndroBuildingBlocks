@@ -30,6 +30,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 				case "SlabBlock" -> registerSlabBlockStateAndModel((SlabBlock)b, blockName);
 				case "WallBlock" -> registerWallBlockStateAndModel((WallBlock)b, blockName);
 				case "FenceBlock" -> registerFenceBlockStateAndModel((FenceBlock) b, blockName);
+				case "StainedGlassBlock" -> registerTranslucentBlockStateAndModel(b, blockName);
 				case "BuildingBlock" -> {
 					if(((BuildingBlock)b).isTranslucent) {
 						registerTranslucentBlockStateAndModel(b, blockName);
