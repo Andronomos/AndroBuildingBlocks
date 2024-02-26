@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "androbuildingblocks:reinforced_concrete_blue"
+  },
+  "result": "androbuildingblocks:reinforced_concrete_blue_slab"
+}

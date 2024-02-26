@@ -25,88 +25,64 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 	@Override
 	protected void buildRecipes(@NotNull Consumer<FinishedRecipe> recipeConsumer) {
 		//region Rough Concrete
-		generateRoughConcretePowder(BlockRegistry.ROUGH_CONCRETE_WHITE_POWDER.get(), Items.WHITE_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_WHITE_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_WHITE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.ROUGH_CONCRETE_WHITE_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_WHITE.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_WHITE_SLAB.get(), BlockRegistry.ROUGH_CONCRETE_WHITE.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.ROUGH_CONCRETE_WHITE_SLAB.get(), BlockRegistry.ROUGH_CONCRETE_WHITE.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.ROUGH_CONCRETE_WHITE_WALL.get(), BlockRegistry.ROUGH_CONCRETE_WHITE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_WHITE_WALL.get(), BlockRegistry.ROUGH_CONCRETE_WHITE.get(), 1, recipeConsumer);
+		buildReinforcedConcreteRecipe(BlockRegistry.REINFORCED_CONCRETE_WHITE.get(), Items.WHITE_DYE, recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_WHITE_STAIRS.get(), BlockRegistry.REINFORCED_CONCRETE_WHITE.get(), 1, recipeConsumer);
+		generateStairRecipe(BlockRegistry.REINFORCED_CONCRETE_WHITE_STAIRS.get(), BlockRegistry.REINFORCED_CONCRETE_WHITE.get().asItem(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_WHITE_SLAB.get(), BlockRegistry.REINFORCED_CONCRETE_WHITE.get(), 2, recipeConsumer);
+		generateSlabRecipe(BlockRegistry.REINFORCED_CONCRETE_WHITE_SLAB.get(), BlockRegistry.REINFORCED_CONCRETE_WHITE.get().asItem(), recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.REINFORCED_CONCRETE_WHITE_WALL.get(), BlockRegistry.REINFORCED_CONCRETE_WHITE.get(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_WHITE_WALL.get(), BlockRegistry.REINFORCED_CONCRETE_WHITE.get(), 1, recipeConsumer);
 
-		generateRoughConcretePowder(BlockRegistry.ROUGH_CONCRETE_BLUE_POWDER.get(), Items.BLUE_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_BLUE_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_BLUE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.ROUGH_CONCRETE_BLUE_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_BLUE.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_BLUE_SLAB.get(), BlockRegistry.ROUGH_CONCRETE_BLUE.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.ROUGH_CONCRETE_BLUE_SLAB.get(), BlockRegistry.ROUGH_CONCRETE_BLUE.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.ROUGH_CONCRETE_BLUE_WALL.get(), BlockRegistry.ROUGH_CONCRETE_BLUE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_BLUE_WALL.get(), BlockRegistry.ROUGH_CONCRETE_BLUE.get(), 1, recipeConsumer);
+		buildReinforcedConcreteRecipe(BlockRegistry.REINFORCED_CONCRETE_BLUE.get(), Items.BLUE_DYE, recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_BLUE_STAIRS.get(), BlockRegistry.REINFORCED_CONCRETE_BLUE.get(), 1, recipeConsumer);
+		generateStairRecipe(BlockRegistry.REINFORCED_CONCRETE_BLUE_STAIRS.get(), BlockRegistry.REINFORCED_CONCRETE_BLUE.get().asItem(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_BLUE_SLAB.get(), BlockRegistry.REINFORCED_CONCRETE_BLUE.get(), 2, recipeConsumer);
+		generateSlabRecipe(BlockRegistry.REINFORCED_CONCRETE_BLUE_SLAB.get(), BlockRegistry.REINFORCED_CONCRETE_BLUE.get().asItem(), recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.REINFORCED_CONCRETE_BLUE_WALL.get(), BlockRegistry.REINFORCED_CONCRETE_BLUE.get(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_BLUE_WALL.get(), BlockRegistry.REINFORCED_CONCRETE_BLUE.get(), 1, recipeConsumer);
 
-		generateRoughConcretePowder(BlockRegistry.ROUGH_CONCRETE_BLACK_POWDER.get(), Items.BLACK_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_BLACK_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_BLACK.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.ROUGH_CONCRETE_BLACK_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_BLACK.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_BLACK_SLAB.get(), BlockRegistry.ROUGH_CONCRETE_BLACK.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.ROUGH_CONCRETE_BLACK_SLAB.get(), BlockRegistry.ROUGH_CONCRETE_BLACK.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.ROUGH_CONCRETE_BLACK_WALL.get(), BlockRegistry.ROUGH_CONCRETE_BLACK.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_BLACK_WALL.get(), BlockRegistry.ROUGH_CONCRETE_BLACK.get(), 1, recipeConsumer);
+		buildReinforcedConcreteRecipe(BlockRegistry.REINFORCED_CONCRETE_BLACK.get(), Items.BLACK_DYE, recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_BLACK_STAIRS.get(), BlockRegistry.REINFORCED_CONCRETE_BLACK.get(), 1, recipeConsumer);
+		generateStairRecipe(BlockRegistry.REINFORCED_CONCRETE_BLACK_STAIRS.get(), BlockRegistry.REINFORCED_CONCRETE_BLACK.get().asItem(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_BLACK_SLAB.get(), BlockRegistry.REINFORCED_CONCRETE_BLACK.get(), 2, recipeConsumer);
+		generateSlabRecipe(BlockRegistry.REINFORCED_CONCRETE_BLACK_SLAB.get(), BlockRegistry.REINFORCED_CONCRETE_BLACK.get().asItem(), recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.REINFORCED_CONCRETE_BLACK_WALL.get(), BlockRegistry.REINFORCED_CONCRETE_BLACK.get(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_BLACK_WALL.get(), BlockRegistry.REINFORCED_CONCRETE_BLACK.get(), 1, recipeConsumer);
 
-		generateRoughConcretePowder(BlockRegistry.ROUGH_CONCRETE_BROWN_POWDER.get(), Items.BROWN_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_BROWN_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_BROWN.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.ROUGH_CONCRETE_BROWN_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_BROWN.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_BROWN_SLAB.get(), BlockRegistry.ROUGH_CONCRETE_BROWN.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.ROUGH_CONCRETE_BROWN_SLAB.get(), BlockRegistry.ROUGH_CONCRETE_BROWN.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.ROUGH_CONCRETE_BROWN_WALL.get(), BlockRegistry.ROUGH_CONCRETE_BROWN.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_BROWN_WALL.get(), BlockRegistry.ROUGH_CONCRETE_BROWN.get(), 1, recipeConsumer);
+		buildReinforcedConcreteRecipe(BlockRegistry.REINFORCED_CONCRETE_BROWN.get(), Items.BROWN_DYE, recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_BROWN_STAIRS.get(), BlockRegistry.REINFORCED_CONCRETE_BROWN.get(), 1, recipeConsumer);
+		generateStairRecipe(BlockRegistry.REINFORCED_CONCRETE_BROWN_STAIRS.get(), BlockRegistry.REINFORCED_CONCRETE_BROWN.get().asItem(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_BROWN_SLAB.get(), BlockRegistry.REINFORCED_CONCRETE_BROWN.get(), 2, recipeConsumer);
+		generateSlabRecipe(BlockRegistry.REINFORCED_CONCRETE_BROWN_SLAB.get(), BlockRegistry.REINFORCED_CONCRETE_BROWN.get().asItem(), recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.REINFORCED_CONCRETE_BROWN_WALL.get(), BlockRegistry.REINFORCED_CONCRETE_BROWN.get(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_BROWN_WALL.get(), BlockRegistry.REINFORCED_CONCRETE_BROWN.get(), 1, recipeConsumer);
 
-		generateRoughConcretePowder(BlockRegistry.ROUGH_CONCRETE_GREEN_POWDER.get(), Items.GREEN_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_GREEN_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_GREEN.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.ROUGH_CONCRETE_GREEN_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_GREEN.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_GREEN_SLAB.get(), BlockRegistry.ROUGH_CONCRETE_GREEN.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.ROUGH_CONCRETE_GREEN_SLAB.get(), BlockRegistry.ROUGH_CONCRETE_GREEN.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.ROUGH_CONCRETE_GREEN_WALL.get(), BlockRegistry.ROUGH_CONCRETE_GREEN.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_GREEN_WALL.get(), BlockRegistry.ROUGH_CONCRETE_GREEN.get(), 1, recipeConsumer);
+		buildReinforcedConcreteRecipe(BlockRegistry.REINFORCED_CONCRETE_GREEN.get(), Items.GREEN_DYE, recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_GREEN_STAIRS.get(), BlockRegistry.REINFORCED_CONCRETE_GREEN.get(), 1, recipeConsumer);
+		generateStairRecipe(BlockRegistry.REINFORCED_CONCRETE_GREEN_STAIRS.get(), BlockRegistry.REINFORCED_CONCRETE_GREEN.get().asItem(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_GREEN_SLAB.get(), BlockRegistry.REINFORCED_CONCRETE_GREEN.get(), 2, recipeConsumer);
+		generateSlabRecipe(BlockRegistry.REINFORCED_CONCRETE_GREEN_SLAB.get(), BlockRegistry.REINFORCED_CONCRETE_GREEN.get().asItem(), recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.REINFORCED_CONCRETE_GREEN_WALL.get(), BlockRegistry.REINFORCED_CONCRETE_GREEN.get(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_GREEN_WALL.get(), BlockRegistry.REINFORCED_CONCRETE_GREEN.get(), 1, recipeConsumer);
 
-		generateRoughConcretePowder(BlockRegistry.ROUGH_CONCRETE_GRAY_POWDER.get(), Items.GRAY_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_GRAY_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_GRAY.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.ROUGH_CONCRETE_GRAY_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_GRAY.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_GRAY_SLAB.get(), BlockRegistry.ROUGH_CONCRETE_GRAY.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.ROUGH_CONCRETE_GRAY_SLAB.get(), BlockRegistry.ROUGH_CONCRETE_GRAY.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.ROUGH_CONCRETE_GRAY_WALL.get(), BlockRegistry.ROUGH_CONCRETE_GRAY.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_GRAY_WALL.get(), BlockRegistry.ROUGH_CONCRETE_GRAY.get(), 1, recipeConsumer);
+		buildReinforcedConcreteRecipe(BlockRegistry.REINFORCED_CONCRETE_GRAY.get(), Items.GRAY_DYE, recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_GRAY_STAIRS.get(), BlockRegistry.REINFORCED_CONCRETE_GRAY.get(), 1, recipeConsumer);
+		generateStairRecipe(BlockRegistry.REINFORCED_CONCRETE_GRAY_STAIRS.get(), BlockRegistry.REINFORCED_CONCRETE_GRAY.get().asItem(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_GRAY_SLAB.get(), BlockRegistry.REINFORCED_CONCRETE_GRAY.get(), 2, recipeConsumer);
+		generateSlabRecipe(BlockRegistry.REINFORCED_CONCRETE_GRAY_SLAB.get(), BlockRegistry.REINFORCED_CONCRETE_GRAY.get().asItem(), recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.REINFORCED_CONCRETE_GRAY_WALL.get(), BlockRegistry.REINFORCED_CONCRETE_GRAY.get(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_GRAY_WALL.get(), BlockRegistry.REINFORCED_CONCRETE_GRAY.get(), 1, recipeConsumer);
 
-		generateRoughConcretePowder(BlockRegistry.ROUGH_CONCRETE_ORANGE_POWDER.get(), Items.ORANGE_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_ORANGE_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_ORANGE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.ROUGH_CONCRETE_ORANGE_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_ORANGE.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_ORANGE_SLAB.get(), BlockRegistry.ROUGH_CONCRETE_ORANGE.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.ROUGH_CONCRETE_ORANGE_SLAB.get(), BlockRegistry.ROUGH_CONCRETE_ORANGE.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.ROUGH_CONCRETE_ORANGE_WALL.get(), BlockRegistry.ROUGH_CONCRETE_ORANGE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_ORANGE_WALL.get(), BlockRegistry.ROUGH_CONCRETE_ORANGE.get(), 1, recipeConsumer);
-
-		generateRoughConcretePowder(BlockRegistry.ROUGH_CONCRETE_PURPLE_POWDER.get(), Items.PURPLE_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_PURPLE_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_PURPLE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.ROUGH_CONCRETE_PURPLE_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_PURPLE.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_PURPLE_SLAB.get(), BlockRegistry.ROUGH_CONCRETE_PURPLE.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.ROUGH_CONCRETE_PURPLE_SLAB.get(), BlockRegistry.ROUGH_CONCRETE_PURPLE.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.ROUGH_CONCRETE_PURPLE_WALL.get(), BlockRegistry.ROUGH_CONCRETE_PURPLE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_PURPLE_WALL.get(), BlockRegistry.ROUGH_CONCRETE_PURPLE.get(), 1, recipeConsumer);
-
-		generateRoughConcretePowder(BlockRegistry.ROUGH_CONCRETE_RED_POWDER.get(), Items.RED_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_RED_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_RED.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.ROUGH_CONCRETE_RED_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_RED.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_RED_SLAB.get(), BlockRegistry.ROUGH_CONCRETE_RED.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.ROUGH_CONCRETE_RED_SLAB.get(), BlockRegistry.ROUGH_CONCRETE_RED.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.ROUGH_CONCRETE_RED_WALL.get(), BlockRegistry.ROUGH_CONCRETE_RED.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_RED_WALL.get(), BlockRegistry.ROUGH_CONCRETE_RED.get(), 1, recipeConsumer);
-
-		generateRoughConcretePowder(BlockRegistry.ROUGH_CONCRETE_YELLOW_POWDER.get(), Items.YELLOW_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_YELLOW_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_YELLOW.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.ROUGH_CONCRETE_YELLOW_STAIRS.get(), BlockRegistry.ROUGH_CONCRETE_YELLOW.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_YELLOW_SLAB.get(), BlockRegistry.ROUGH_CONCRETE_YELLOW.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.ROUGH_CONCRETE_YELLOW_SLAB.get(), BlockRegistry.ROUGH_CONCRETE_YELLOW.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.ROUGH_CONCRETE_YELLOW_WALL.get(), BlockRegistry.ROUGH_CONCRETE_YELLOW.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ROUGH_CONCRETE_YELLOW_WALL.get(), BlockRegistry.ROUGH_CONCRETE_YELLOW.get(), 1, recipeConsumer);
+		buildReinforcedConcreteRecipe(BlockRegistry.REINFORCED_CONCRETE_RED.get(), Items.RED_DYE, recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_RED_STAIRS.get(), BlockRegistry.REINFORCED_CONCRETE_RED.get(), 1, recipeConsumer);
+		generateStairRecipe(BlockRegistry.REINFORCED_CONCRETE_RED_STAIRS.get(), BlockRegistry.REINFORCED_CONCRETE_RED.get().asItem(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_RED_SLAB.get(), BlockRegistry.REINFORCED_CONCRETE_RED.get(), 2, recipeConsumer);
+		generateSlabRecipe(BlockRegistry.REINFORCED_CONCRETE_RED_SLAB.get(), BlockRegistry.REINFORCED_CONCRETE_RED.get().asItem(), recipeConsumer);
+		generateThreeByTwoRecipe(BlockRegistry.REINFORCED_CONCRETE_RED_WALL.get(), BlockRegistry.REINFORCED_CONCRETE_RED.get(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.REINFORCED_CONCRETE_RED_WALL.get(), BlockRegistry.REINFORCED_CONCRETE_RED.get(), 1, recipeConsumer);
 		//endregion
 
-		//region Borderless Glass
+		//region Structural Glass
 		buildStructuralGlassRecipe(BlockRegistry.WHITE_STRUCTURAL_GLASS.get(), Blocks.WHITE_STAINED_GLASS, recipeConsumer);
 		generateThreeByTwoRecipe(BlockRegistry.WHITE_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.WHITE_STRUCTURAL_GLASS.get(), recipeConsumer);
 
@@ -208,7 +184,33 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		shaped.save(consumer);
 	}
 
+	private void buildReinforcedConcreteRecipe(Block output, Item dye, Consumer<FinishedRecipe> consumer) {
+		String concreteName = ForgeRegistries.BLOCKS.getKey(output).getPath();
 
+		ShapedRecipeBuilder shapedGravel = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 8);
+		shapedGravel.define('1', Tags.Items.STONE);
+		shapedGravel.define('2', Tags.Items.INGOTS_IRON);
+		shapedGravel.define('3', Items.GRAVEL);
+		shapedGravel.define('4', dye);
+		shapedGravel.pattern("212");
+		shapedGravel.pattern("343");
+		shapedGravel.pattern("212");
+		shapedGravel.group(concreteName);
+		shapedGravel.unlockedBy("has_item", has(Tags.Items.STONE));
+		shapedGravel.save(consumer);
+
+		ShapedRecipeBuilder shapedSand = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 8);
+		shapedSand.define('1', Tags.Items.STONE);
+		shapedSand.define('2', Tags.Items.INGOTS_IRON);
+		shapedSand.define('3', Items.SAND);
+		shapedSand.define('4', dye);
+		shapedSand.pattern("212");
+		shapedSand.pattern("343");
+		shapedSand.pattern("212");
+		shapedSand.group(concreteName);
+		shapedSand.unlockedBy("has_item", has(Tags.Items.STONE));
+		shapedSand.save(consumer, concreteName + "_from_sand");
+	}
 
 
 
@@ -245,17 +247,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 	//	shapeless.save(consumer);
 	//}
 
-	private void generateRoughConcretePowder(Block output, Item dye, Consumer<FinishedRecipe> consumer) {
-		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 8);
-		shaped.define('#', dye);
-		shaped.define('1', Tags.Items.STONE);
-		shaped.define('2', Items.GRAVEL);
-		shaped.pattern("#11");
-		shaped.pattern("112");
-		shaped.pattern("222");
-		shaped.unlockedBy("has_item", has(Tags.Items.STONE));
-		shaped.save(consumer);
-	}
+
 
 	private void generateTwoByTwoRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 6);

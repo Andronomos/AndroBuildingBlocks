@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "androbuildingblocks:block/rough_concrete_green",
-    "side": "androbuildingblocks:block/rough_concrete_green",
-    "top": "androbuildingblocks:block/rough_concrete_green"
-  }
-}

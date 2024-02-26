@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "androbuildingblocks:rough_concrete_black"
-  },
-  "result": "androbuildingblocks:rough_concrete_black_slab"
-}

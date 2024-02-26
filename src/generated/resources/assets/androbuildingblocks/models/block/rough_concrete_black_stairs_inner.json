@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "androbuildingblocks:block/rough_concrete_black",
-    "side": "androbuildingblocks:block/rough_concrete_black",
-    "top": "androbuildingblocks:block/rough_concrete_black"
-  }
-}

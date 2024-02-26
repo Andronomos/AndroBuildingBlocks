@@ -15,7 +15,7 @@ public class ModCreativeTabs {
 
 	public static final RegistryObject<CreativeModeTab> ANDROBUILDINGBLOCKS_TAB = CREATIVE_MODE_TABS.register(BASETABNAME, () -> CreativeModeTab.builder()
 			.title(Component.translatable("creativetab." + BASETABNAME))
-			.icon(BlockRegistry.ROUGH_CONCRETE_WHITE.get().asItem()::getDefaultInstance)
+			.icon(BlockRegistry.REINFORCED_CONCRETE_WHITE.get().asItem()::getDefaultInstance)
 			.displayItems((parameters, output) -> BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 				switch (b.getClass().getSimpleName()) {
 					case "GlassBlock", "StainedGlassBlock", "StainedGlassPaneBlock":
