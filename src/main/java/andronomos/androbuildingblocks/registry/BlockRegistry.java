@@ -162,7 +162,7 @@ public class BlockRegistry {
 	public static final RegistryObject<StairBlock> CARBON_STEEL_STAIRS = registerStairBlock("carbon_steel_stairs", CARBON_STEEL, METAL_PROPERTIES);
 	public static final RegistryObject<SlabBlock> CARBON_STEEL_SLAB = registerSlabBlock("carbon_steel_slab", METAL_PROPERTIES);
 	public static final RegistryObject<WallBlock> CARBON_STEEL_WALL = registerWallBlock("carbon_steel_wall", METAL_PROPERTIES);
-	public static final RegistryObject<Block> CARBON_STEEL_GRATING = registerBlock("carbon_steel_grating", METAL_PROPERTIES.noOcclusion(), true);
+	public static final RegistryObject<Block> CARBON_STEEL_MESHING = registerBlock("carbon_steel_meshing", METAL_PROPERTIES);
 	//endregion
 
 	public static RegistryObject<Block> registerRotatableBlock(final String name, Block.Properties properties) {

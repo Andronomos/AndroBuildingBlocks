@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:carbon_steel_grating_from_stonecutting"
+        "recipe": "minecraft:carbon_steel_meshing_from_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:carbon_steel_grating_from_stonecutting"
+      "minecraft:carbon_steel_meshing_from_stonecutting"
     ]
   },
   "sends_telemetry_event": false
