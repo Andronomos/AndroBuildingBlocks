@@ -138,20 +138,6 @@ public class BlockRegistry {
 	public static final RegistryObject<WallBlock> SMOOTH_DEEPSLATE_WALL = registerWallBlock("smooth_deepslate_wall", DEEPSLATE_PROPERTIES);
 	//endregion
 
-	//region Bentonite
-	public static final RegistryObject<Block> BENTONITE = registerBlock("bentonite", STONE_PROPERTIES.mapColor(DyeColor.BLACK));
-	public static final RegistryObject<StairBlock> BENTONITE_STAIRS = registerStairBlock("bentonite_stairs", BENTONITE, SLATE_PROPERTIES);
-	public static final RegistryObject<SlabBlock> BENTONITE_SLAB = registerSlabBlock("bentonite_slab", SLATE_PROPERTIES);
-	public static final RegistryObject<WallBlock> BENTONITE_WALL = registerWallBlock("bentonite_wall", SLATE_PROPERTIES);
-	public static final RegistryObject<Block> BENTONITE_PILLAR = registerRotatableBlock("bentonite_pillar", SLATE_PROPERTIES);
-
-	public static final RegistryObject<Block> BENTONITE_BRICKS = registerBlock("bentonite_bricks", SLATE_PROPERTIES);
-	public static final RegistryObject<StairBlock> BENTONITE_BRICK_STAIRS = registerStairBlock("bentonite_brick_stairs", BENTONITE, SLATE_PROPERTIES);
-	public static final RegistryObject<SlabBlock> BENTONITE_BRICK_SLAB = registerSlabBlock("bentonite_brick_slab", SLATE_PROPERTIES);
-	public static final RegistryObject<WallBlock> BENTONITE_BRICK_WALL = registerWallBlock("bentonite_brick_wall", SLATE_PROPERTIES);
-	public static final RegistryObject<Block> BENTONITE_GRATE = registerBlock("bentonite_grate", SLATE_PROPERTIES);
-	//endregion
-
 	//region Caution
 	public static final RegistryObject<Block> YELLOW_CAUTION_STRIPES = registerBlock("yellow_caution_stripes", STONE_PROPERTIES.mapColor(DyeColor.YELLOW));
 	public static final RegistryObject<Block> RED_CAUTION_STRIPES = registerBlock("red_caution_stripes", STONE_PROPERTIES.mapColor(DyeColor.YELLOW));

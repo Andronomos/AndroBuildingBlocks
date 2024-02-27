@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "androbuildingblocks:block/bentonite_bricks",
-    "side": "androbuildingblocks:block/bentonite_bricks",
-    "top": "androbuildingblocks:block/bentonite_bricks"
-  }
-}

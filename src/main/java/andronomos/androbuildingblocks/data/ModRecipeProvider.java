@@ -172,33 +172,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateThreeByTwoRecipe(BlockRegistry.SMOOTH_DEEPSLATE_WALL.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.SMOOTH_DEEPSLATE_WALL.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), 1, recipeConsumer);
 
-		//region Bentonite
-		ShapedRecipeBuilder bentoniteRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.BENTONITE.get(), 1);
-		bentoniteRecipe.define('C', Items.CLAY_BALL);
-		bentoniteRecipe.define('G', Items.GUNPOWDER);
-		bentoniteRecipe.pattern("CG");
-		bentoniteRecipe.pattern("GC");
-		bentoniteRecipe.unlockedBy("has_item", has(Items.CLAY_BALL));
-		bentoniteRecipe.save(recipeConsumer);
-
-		generateStoneCutterRecipe(BlockRegistry.BENTONITE_PILLAR.get(), BlockRegistry.BENTONITE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.BENTONITE_STAIRS.get(), BlockRegistry.BENTONITE.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BENTONITE_STAIRS.get(), BlockRegistry.BENTONITE.get(), 1, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.BENTONITE_SLAB.get(), BlockRegistry.BENTONITE.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.BENTONITE_WALL.get(), BlockRegistry.BENTONITE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BENTONITE_SLAB.get(), BlockRegistry.BENTONITE.get(), 1, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BENTONITE_GRATE.get(), BlockRegistry.BENTONITE.get(), 1, recipeConsumer);
-
-		generateTwoByTwoRecipe(BlockRegistry.BENTONITE_BRICKS.get(), BlockRegistry.BENTONITE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BENTONITE_BRICKS.get(), BlockRegistry.BENTONITE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.BENTONITE_BRICK_STAIRS.get(), BlockRegistry.BENTONITE.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BENTONITE_BRICK_STAIRS.get(), BlockRegistry.BENTONITE_BRICKS.get(), 1, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.BENTONITE_BRICK_SLAB.get(), BlockRegistry.BENTONITE_BRICKS.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BENTONITE_BRICK_SLAB.get(), BlockRegistry.BENTONITE_BRICKS.get(), 1, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.BENTONITE_BRICK_WALL.get(), BlockRegistry.BENTONITE_BRICKS.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BENTONITE_BRICK_WALL.get(), BlockRegistry.BENTONITE_BRICKS.get(), 1, recipeConsumer);
-		//endregion
-
 		//region Caution Stripes
 		generateStripedRecipe(BlockRegistry.YELLOW_CAUTION_STRIPES.get(), Items.YELLOW_DYE, Items.BLACK_DYE, recipeConsumer);
 		generateStripedRecipe(BlockRegistry.RED_CAUTION_STRIPES.get(), Items.RED_DYE, Items.WHITE_DYE, recipeConsumer);
