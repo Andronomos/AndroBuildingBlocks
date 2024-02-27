@@ -199,8 +199,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateStoneCutterRecipe(BlockRegistry.BENTONITE_BRICK_WALL.get(), BlockRegistry.BENTONITE_BRICKS.get(), 1, recipeConsumer);
 		//endregion
 
-		//region Decorative Stripes
-		generateStripedRecipe(BlockRegistry.HAZARD_STRIPES.get(), Items.YELLOW_DYE, recipeConsumer);
+		//region Caution Stripes
+		generateStripedRecipe(BlockRegistry.YELLOW_CAUTION_STRIPES.get(), Items.YELLOW_DYE, Items.BLACK_DYE, recipeConsumer);
+		generateStripedRecipe(BlockRegistry.RED_CAUTION_STRIPES.get(), Items.RED_DYE, Items.WHITE_DYE, recipeConsumer);
 		//endregion
 
 		//region Carbon Steel
@@ -274,10 +275,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		shapedSand.save(consumer, concreteName + "_from_sand");
 	}
 
-	private void generateStripedRecipe(Block output, Item Dye, Consumer<FinishedRecipe> consumer) {
+	private void generateStripedRecipe(Block output, Item Dye, Item Dye2, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 4);
 		shaped.define('1', Dye);
-		shaped.define('2', Items.BLACK_DYE);
+		shaped.define('2', Dye2);
 		shaped.define('3', Tags.Items.STONE);
 		shaped.pattern("212");
 		shaped.pattern("131");

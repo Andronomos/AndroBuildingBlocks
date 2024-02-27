@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "androbuildingblocks:hazard_stripes"
+          "name": "androbuildingblocks:yellow_caution_stripes"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "androbuildingblocks:blocks/hazard_stripes"
+  "random_sequence": "androbuildingblocks:blocks/yellow_caution_stripes"
 }
