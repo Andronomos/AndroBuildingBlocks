@@ -108,6 +108,9 @@
     "androbuildingblocks:carbon_steel_stairs",
     "androbuildingblocks:carbon_steel_slab",
     "androbuildingblocks:carbon_steel_wall",
-    "androbuildingblocks:carbon_steel_meshing"
+    "androbuildingblocks:carbon_steel_meshing",
+    "androbuildingblocks:carbon",
+    "androbuildingblocks:carbon_grate",
+    "androbuildingblocks:carbon_mesh"
   ]
 }

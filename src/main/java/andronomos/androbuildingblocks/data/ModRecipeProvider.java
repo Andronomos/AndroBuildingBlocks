@@ -230,6 +230,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateThreeByTwoRecipe(BlockRegistry.CARBON_STEEL_WALL.get(), BlockRegistry.CARBON_STEEL.get(), recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.CARBON_STEEL_MESHING.get(), BlockRegistry.CARBON_STEEL.get(), 1, recipeConsumer);
 		//endregion
+
+		generateSmeltingRecipe(Blocks.COAL_BLOCK, BlockRegistry.CARBON.get(), recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.CARBON_MESH.get(), BlockRegistry.CARBON.get(), 1, recipeConsumer);
+		generateStoneCutterRecipe(BlockRegistry.CARBON_GRATE.get(), BlockRegistry.CARBON.get(), 1, recipeConsumer);
 	}
 
 

@@ -174,6 +174,18 @@ public class BlockRegistry {
 	public static final RegistryObject<Block> CARBON_STEEL_MESHING = registerBlock("carbon_steel_meshing", METAL_PROPERTIES);
 	//endregion
 
+
+	public static final RegistryObject<Block> CARBON = registerBlock("carbon", METAL_PROPERTIES);
+	public static final RegistryObject<Block> CARBON_GRATE = registerBlock("carbon_grate", METAL_PROPERTIES);
+	public static final RegistryObject<Block> CARBON_MESH = registerBlock("carbon_mesh", METAL_PROPERTIES);
+
+
+
+
+
+
+
+
 	public static RegistryObject<Block> registerRotatableBlock(final String name, Block.Properties properties) {
 		return registerBlock(name, () -> new RotatedPillarBlock(properties));
 	}
