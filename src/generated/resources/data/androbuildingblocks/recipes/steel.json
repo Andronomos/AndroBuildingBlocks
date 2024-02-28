@@ -4,7 +4,7 @@
   "group": "carbon_steel",
   "key": {
     "C": {
-      "item": "minecraft:charcoal"
+      "item": "minecraft:coal"
     },
     "I": {
       "tag": "forge:ingots/iron"

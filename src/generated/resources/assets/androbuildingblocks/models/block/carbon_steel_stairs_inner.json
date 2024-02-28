@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "androbuildingblocks:block/carbon_steel",
-    "side": "androbuildingblocks:block/carbon_steel",
-    "top": "androbuildingblocks:block/carbon_steel"
-  }
-}
