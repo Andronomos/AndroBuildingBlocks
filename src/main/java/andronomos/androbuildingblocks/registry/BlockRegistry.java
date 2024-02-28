@@ -166,12 +166,12 @@ public class BlockRegistry {
 	public static final RegistryObject<Block> RED_CAUTION_STRIPES = registerBlock("red_caution_stripes", STONE_PROPERTIES.mapColor(DyeColor.YELLOW));
 	//endregion
 
-	//region Carbon Steel
-	public static final RegistryObject<Block> CARBON_STEEL = registerBlock("carbon_steel", METAL_PROPERTIES);
-	public static final RegistryObject<StairBlock> CARBON_STEEL_STAIRS = registerStairBlock("carbon_steel_stairs", CARBON_STEEL, METAL_PROPERTIES);
-	public static final RegistryObject<SlabBlock> CARBON_STEEL_SLAB = registerSlabBlock("carbon_steel_slab", METAL_PROPERTIES);
-	public static final RegistryObject<WallBlock> CARBON_STEEL_WALL = registerWallBlock("carbon_steel_wall", METAL_PROPERTIES);
-	public static final RegistryObject<Block> CARBON_STEEL_MESHING = registerBlock("carbon_steel_meshing", METAL_PROPERTIES);
+	//region Steel
+	public static final RegistryObject<Block> STEEL = registerBlock("steel", METAL_PROPERTIES);
+	public static final RegistryObject<StairBlock> STEEL_STAIRS = registerStairBlock("steel_stairs", STEEL, METAL_PROPERTIES);
+	public static final RegistryObject<SlabBlock> STEEL_SLAB = registerSlabBlock("steel_slab", METAL_PROPERTIES);
+	public static final RegistryObject<WallBlock> STEEL_WALL = registerWallBlock("steel_wall", METAL_PROPERTIES);
+	public static final RegistryObject<Block> STEEL_MESHING = registerBlock("steel_meshing", METAL_PROPERTIES);
 	//endregion
 
 
