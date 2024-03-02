@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "androbuildingblocks:reinforced_concrete_white"
-  },
-  "result": "androbuildingblocks:reinforced_concrete_white_grate"
-}

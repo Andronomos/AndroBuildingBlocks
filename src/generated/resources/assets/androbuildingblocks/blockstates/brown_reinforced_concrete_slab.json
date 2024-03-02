@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "androbuildingblocks:block/brown_reinforced_concrete_slab"
+    },
+    "type=double": {
+      "model": "androbuildingblocks:block/brown_reinforced_concrete"
+    },
+    "type=top": {
+      "model": "androbuildingblocks:block/brown_reinforced_concrete_slab_top"
+    }
+  }
+}

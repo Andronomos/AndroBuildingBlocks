@@ -1,16 +1,16 @@
 {
   "values": [
-    "androbuildingblocks:reinforced_concrete_white_wall",
-    "androbuildingblocks:reinforced_concrete_blue_wall",
-    "androbuildingblocks:reinforced_concrete_black_wall",
-    "androbuildingblocks:reinforced_concrete_brown_wall",
-    "androbuildingblocks:reinforced_concrete_green_wall",
-    "androbuildingblocks:reinforced_concrete_gray_wall",
-    "androbuildingblocks:reinforced_concrete_red_wall",
-    "androbuildingblocks:reinforced_concrete_yellow_wall",
-    "androbuildingblocks:reinforced_concrete_purple_wall",
-    "androbuildingblocks:reinforced_concrete_pink_wall",
-    "androbuildingblocks:reinforced_concrete_orange_wall",
+    "androbuildingblocks:white_reinforced_concrete_wall",
+    "androbuildingblocks:blue_reinforced_concrete_wall",
+    "androbuildingblocks:black_reinforced_concrete_wall",
+    "androbuildingblocks:brown_reinforced_concrete_wall",
+    "androbuildingblocks:green_reinforced_concrete_wall",
+    "androbuildingblocks:gray_reinforced_concrete_wall",
+    "androbuildingblocks:orange_reinforced_concrete_wall",
+    "androbuildingblocks:purple_reinforced_concrete_wall",
+    "androbuildingblocks:red_reinforced_concrete_wall",
+    "androbuildingblocks:yellow_reinforced_concrete_wall",
+    "androbuildingblocks:pink_reinforced_concrete_wall",
     "androbuildingblocks:smooth_deepslate_wall",
     "androbuildingblocks:steel_wall"
   ]

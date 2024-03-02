@@ -25,82 +25,93 @@ public class BlockRegistry {
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AndroBuildingBlocks.MODID);
 
 	//region Reinforced Concrete
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_WHITE = registerBlock("reinforced_concrete_white", CONCRETE_PROPERTIES.mapColor(DyeColor.WHITE));
-	public static final RegistryObject<StairBlock> REINFORCED_CONCRETE_WHITE_STAIRS = registerStairBlock("reinforced_concrete_white_stairs", REINFORCED_CONCRETE_WHITE, CONCRETE_PROPERTIES.mapColor(DyeColor.WHITE));
-	public static final RegistryObject<SlabBlock> REINFORCED_CONCRETE_WHITE_SLAB = registerSlabBlock("reinforced_concrete_white_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.WHITE));
-	public static final RegistryObject<WallBlock> REINFORCED_CONCRETE_WHITE_WALL = registerWallBlock("reinforced_concrete_white_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.WHITE));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_WHITE_GRATE = registerBlock("reinforced_concrete_white_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.WHITE));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_WHITE_TILE = registerBlock("reinforced_concrete_white_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.WHITE));
+	public static final RegistryObject<Block> WHITE_REINFORCED_CONCRETE = registerBlock("white_reinforced_concrete", CONCRETE_PROPERTIES.mapColor(DyeColor.WHITE));
+	public static final RegistryObject<StairBlock> WHITE_REINFORCED_CONCRETE_STAIRS = registerStairBlock("white_reinforced_concrete_stairs", WHITE_REINFORCED_CONCRETE, CONCRETE_PROPERTIES.mapColor(DyeColor.WHITE));
+	public static final RegistryObject<SlabBlock> WHITE_REINFORCED_CONCRETE_SLAB = registerSlabBlock("white_reinforced_concrete_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.WHITE));
+	public static final RegistryObject<WallBlock> WHITE_REINFORCED_CONCRETE_WALL = registerWallBlock("white_reinforced_concrete_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.WHITE));
+	public static final RegistryObject<Block> WHITE_REINFORCED_CONCRETE_GRATE = registerBlock("white_reinforced_concrete_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.WHITE));
+	public static final RegistryObject<Block> WHITE_REINFORCED_CONCRETE_TILE = registerBlock("white_reinforced_concrete_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.WHITE));
+	public static final RegistryObject<Block> WHITE_REINFORCED_CONCRETE_PILLAR = registerBlock("white_reinforced_concrete_pillar", CONCRETE_PROPERTIES.mapColor(DyeColor.WHITE));
 
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_BLUE = registerBlock("reinforced_concrete_blue", CONCRETE_PROPERTIES.mapColor(DyeColor.BLUE));
-	public static final RegistryObject<StairBlock> REINFORCED_CONCRETE_BLUE_STAIRS = registerStairBlock("reinforced_concrete_blue_stairs", REINFORCED_CONCRETE_BLUE, CONCRETE_PROPERTIES.mapColor(DyeColor.BLUE));
-	public static final RegistryObject<SlabBlock> REINFORCED_CONCRETE_BLUE_SLAB = registerSlabBlock("reinforced_concrete_blue_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.BLUE));
-	public static final RegistryObject<WallBlock> REINFORCED_CONCRETE_BLUE_WALL = registerWallBlock("reinforced_concrete_blue_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.BLUE));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_BLUE_GRATE = registerBlock("reinforced_concrete_blue_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.BLUE));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_BLUE_TILE = registerBlock("reinforced_concrete_blue_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.BLUE));
+	public static final RegistryObject<Block> BLUE_REINFORCED_CONCRETE = registerBlock("blue_reinforced_concrete", CONCRETE_PROPERTIES.mapColor(DyeColor.BLUE));
+	public static final RegistryObject<StairBlock> BLUE_REINFORCED_CONCRETE_STAIRS = registerStairBlock("blue_reinforced_concrete_stairs", BLUE_REINFORCED_CONCRETE, CONCRETE_PROPERTIES.mapColor(DyeColor.BLUE));
+	public static final RegistryObject<SlabBlock> BLUE_REINFORCED_CONCRETE_SLAB = registerSlabBlock("blue_reinforced_concrete_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.BLUE));
+	public static final RegistryObject<WallBlock> BLUE_REINFORCED_CONCRETE_WALL = registerWallBlock("blue_reinforced_concrete_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.BLUE));
+	public static final RegistryObject<Block> BLUE_REINFORCED_CONCRETE_GRATE = registerBlock("blue_reinforced_concrete_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.BLUE));
+	public static final RegistryObject<Block> BLUE_REINFORCED_CONCRETE_TILE = registerBlock("blue_reinforced_concrete_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.BLUE));
+	public static final RegistryObject<Block> BLUE_REINFORCED_CONCRETE_PILLAR = registerBlock("blue_reinforced_concrete_pillar", CONCRETE_PROPERTIES.mapColor(DyeColor.BLUE));
 
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_BLACK = registerBlock("reinforced_concrete_black", CONCRETE_PROPERTIES.mapColor(DyeColor.BLACK));
-	public static final RegistryObject<StairBlock> REINFORCED_CONCRETE_BLACK_STAIRS = registerStairBlock("reinforced_concrete_black_stairs", REINFORCED_CONCRETE_BLACK, CONCRETE_PROPERTIES.mapColor(DyeColor.BLACK));
-	public static final RegistryObject<SlabBlock> REINFORCED_CONCRETE_BLACK_SLAB = registerSlabBlock("reinforced_concrete_black_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.BLACK));
-	public static final RegistryObject<WallBlock> REINFORCED_CONCRETE_BLACK_WALL = registerWallBlock("reinforced_concrete_black_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.BLACK));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_BLACK_GRATE = registerBlock("reinforced_concrete_black_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.BLACK));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_BLACK_TILE = registerBlock("reinforced_concrete_black_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.BLACK));
+	public static final RegistryObject<Block> BLACK_REINFORCED_CONCRETE = registerBlock("black_reinforced_concrete", CONCRETE_PROPERTIES.mapColor(DyeColor.BLACK));
+	public static final RegistryObject<StairBlock> BLACK_REINFORCED_CONCRETE_STAIRS = registerStairBlock("black_reinforced_concrete_stairs", BLACK_REINFORCED_CONCRETE, CONCRETE_PROPERTIES.mapColor(DyeColor.BLACK));
+	public static final RegistryObject<SlabBlock> BLACK_REINFORCED_CONCRETE_SLAB = registerSlabBlock("black_reinforced_concrete_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.BLACK));
+	public static final RegistryObject<WallBlock> BLACK_REINFORCED_CONCRETE_WALL = registerWallBlock("black_reinforced_concrete_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.BLACK));
+	public static final RegistryObject<Block> BLACK_REINFORCED_CONCRETE_GRATE = registerBlock("black_reinforced_concrete_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.BLACK));
+	public static final RegistryObject<Block> BLACK_REINFORCED_CONCRETE_TILE = registerBlock("black_reinforced_concrete_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.BLACK));
+	public static final RegistryObject<Block> BLACK_REINFORCED_CONCRETE_PILLAR = registerBlock("black_reinforced_concrete_pillar", CONCRETE_PROPERTIES.mapColor(DyeColor.BLACK));
 
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_BROWN = registerBlock("reinforced_concrete_brown", CONCRETE_PROPERTIES.mapColor(DyeColor.BROWN));
-	public static final RegistryObject<StairBlock> REINFORCED_CONCRETE_BROWN_STAIRS = registerStairBlock("reinforced_concrete_brown_stairs", REINFORCED_CONCRETE_BROWN, CONCRETE_PROPERTIES.mapColor(DyeColor.BROWN));
-	public static final RegistryObject<SlabBlock> REINFORCED_CONCRETE_BROWN_SLAB = registerSlabBlock("reinforced_concrete_brown_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.BROWN));
-	public static final RegistryObject<WallBlock> REINFORCED_CONCRETE_BROWN_WALL = registerWallBlock("reinforced_concrete_brown_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.BROWN));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_BROWN_GRATE = registerBlock("reinforced_concrete_brown_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.BROWN));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_BROWN_TILE = registerBlock("reinforced_concrete_brown_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.BROWN));
+	public static final RegistryObject<Block> BROWN_REINFORCED_CONCRETE = registerBlock("brown_reinforced_concrete", CONCRETE_PROPERTIES.mapColor(DyeColor.BROWN));
+	public static final RegistryObject<StairBlock> BROWN_REINFORCED_CONCRETE_STAIRS = registerStairBlock("brown_reinforced_concrete_stairs", BROWN_REINFORCED_CONCRETE, CONCRETE_PROPERTIES.mapColor(DyeColor.BROWN));
+	public static final RegistryObject<SlabBlock> BROWN_REINFORCED_CONCRETE_SLAB = registerSlabBlock("brown_reinforced_concrete_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.BROWN));
+	public static final RegistryObject<WallBlock> BROWN_REINFORCED_CONCRETE_WALL = registerWallBlock("brown_reinforced_concrete_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.BROWN));
+	public static final RegistryObject<Block> BROWN_REINFORCED_CONCRETE_GRATE = registerBlock("brown_reinforced_concrete_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.BROWN));
+	public static final RegistryObject<Block> BROWN_REINFORCED_CONCRETE_TILE = registerBlock("brown_reinforced_concrete_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.BROWN));
+	public static final RegistryObject<Block> BROWN_REINFORCED_CONCRETE_PILLAR = registerBlock("brown_reinforced_concrete_pillar", CONCRETE_PROPERTIES.mapColor(DyeColor.BROWN));
 
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_GREEN = registerBlock("reinforced_concrete_green", CONCRETE_PROPERTIES.mapColor(DyeColor.GREEN));
-	public static final RegistryObject<StairBlock> REINFORCED_CONCRETE_GREEN_STAIRS = registerStairBlock("reinforced_concrete_green_stairs", REINFORCED_CONCRETE_GREEN, CONCRETE_PROPERTIES.mapColor(DyeColor.GREEN));
-	public static final RegistryObject<SlabBlock> REINFORCED_CONCRETE_GREEN_SLAB = registerSlabBlock("reinforced_concrete_green_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.GREEN));
-	public static final RegistryObject<WallBlock> REINFORCED_CONCRETE_GREEN_WALL = registerWallBlock("reinforced_concrete_green_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.GREEN));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_GREEN_GRATE = registerBlock("reinforced_concrete_green_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.GREEN));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_GREEN_TILE = registerBlock("reinforced_concrete_green_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.GREEN));
+	public static final RegistryObject<Block> GREEN_REINFORCED_CONCRETE = registerBlock("green_reinforced_concrete", CONCRETE_PROPERTIES.mapColor(DyeColor.GREEN));
+	public static final RegistryObject<StairBlock> GREEN_REINFORCED_CONCRETE_STAIRS = registerStairBlock("green_reinforced_concrete_stairs", GREEN_REINFORCED_CONCRETE, CONCRETE_PROPERTIES.mapColor(DyeColor.GREEN));
+	public static final RegistryObject<SlabBlock> GREEN_REINFORCED_CONCRETE_SLAB = registerSlabBlock("green_reinforced_concrete_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.GREEN));
+	public static final RegistryObject<WallBlock> GREEN_REINFORCED_CONCRETE_WALL = registerWallBlock("green_reinforced_concrete_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.GREEN));
+	public static final RegistryObject<Block> GREEN_REINFORCED_CONCRETE_GRATE = registerBlock("green_reinforced_concrete_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.GREEN));
+	public static final RegistryObject<Block> GREEN_REINFORCED_CONCRETE_TILE = registerBlock("green_reinforced_concrete_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.GREEN));
+	public static final RegistryObject<Block> GREEN_REINFORCED_CONCRETE_PILLAR = registerBlock("green_reinforced_concrete_pillar", CONCRETE_PROPERTIES.mapColor(DyeColor.GREEN));
 
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_GRAY = registerBlock("reinforced_concrete_gray", CONCRETE_PROPERTIES.mapColor(DyeColor.GRAY));
-	public static final RegistryObject<StairBlock> REINFORCED_CONCRETE_GRAY_STAIRS = registerStairBlock("reinforced_concrete_gray_stairs", REINFORCED_CONCRETE_GRAY, CONCRETE_PROPERTIES.mapColor(DyeColor.GRAY));
-	public static final RegistryObject<SlabBlock> REINFORCED_CONCRETE_GRAY_SLAB = registerSlabBlock("reinforced_concrete_gray_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.GRAY));
-	public static final RegistryObject<WallBlock> REINFORCED_CONCRETE_GRAY_WALL = registerWallBlock("reinforced_concrete_gray_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.GRAY));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_GRAY_GRATE = registerBlock("reinforced_concrete_gray_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.GRAY));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_GRAY_TILE = registerBlock("reinforced_concrete_gray_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.GRAY));
+	public static final RegistryObject<Block> GRAY_REINFORCED_CONCRETE = registerBlock("gray_reinforced_concrete", CONCRETE_PROPERTIES.mapColor(DyeColor.GRAY));
+	public static final RegistryObject<StairBlock> GRAY_REINFORCED_CONCRETE_STAIRS = registerStairBlock("gray_reinforced_concrete_stairs", GRAY_REINFORCED_CONCRETE, CONCRETE_PROPERTIES.mapColor(DyeColor.GRAY));
+	public static final RegistryObject<SlabBlock> GRAY_REINFORCED_CONCRETE_SLAB = registerSlabBlock("gray_reinforced_concrete_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.GRAY));
+	public static final RegistryObject<WallBlock> GRAY_REINFORCED_CONCRETE_WALL = registerWallBlock("gray_reinforced_concrete_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.GRAY));
+	public static final RegistryObject<Block> GRAY_REINFORCED_CONCRETE_GRATE = registerBlock("gray_reinforced_concrete_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.GRAY));
+	public static final RegistryObject<Block> GRAY_REINFORCED_CONCRETE_TILE = registerBlock("gray_reinforced_concrete_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.GRAY));
+	public static final RegistryObject<Block> GRAY_REINFORCED_CONCRETE_PILLAR = registerBlock("gray_reinforced_concrete_pillar", CONCRETE_PROPERTIES.mapColor(DyeColor.GRAY));
 
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_RED = registerBlock("reinforced_concrete_red", CONCRETE_PROPERTIES.mapColor(DyeColor.RED));
-	public static final RegistryObject<StairBlock> REINFORCED_CONCRETE_RED_STAIRS = registerStairBlock("reinforced_concrete_red_stairs", REINFORCED_CONCRETE_RED, CONCRETE_PROPERTIES.mapColor(DyeColor.RED));
-	public static final RegistryObject<SlabBlock> REINFORCED_CONCRETE_RED_SLAB = registerSlabBlock("reinforced_concrete_red_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.RED));
-	public static final RegistryObject<WallBlock> REINFORCED_CONCRETE_RED_WALL = registerWallBlock("reinforced_concrete_red_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.RED));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_RED_GRATE = registerBlock("reinforced_concrete_red_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.RED));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_RED_TILE = registerBlock("reinforced_concrete_red_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.RED));
+	public static final RegistryObject<Block> ORANGE_REINFORCED_CONCRETE = registerBlock("orange_reinforced_concrete", CONCRETE_PROPERTIES.mapColor(DyeColor.ORANGE));
+	public static final RegistryObject<StairBlock> ORANGE_REINFORCED_CONCRETE_STAIRS = registerStairBlock("orange_reinforced_concrete_stairs", ORANGE_REINFORCED_CONCRETE, CONCRETE_PROPERTIES.mapColor(DyeColor.ORANGE));
+	public static final RegistryObject<SlabBlock> ORANGE_REINFORCED_CONCRETE_SLAB = registerSlabBlock("orange_reinforced_concrete_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.ORANGE));
+	public static final RegistryObject<WallBlock> ORANGE_REINFORCED_CONCRETE_WALL = registerWallBlock("orange_reinforced_concrete_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.ORANGE));
+	public static final RegistryObject<Block> ORANGE_REINFORCED_CONCRETE_GRATE = registerBlock("orange_reinforced_concrete_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.ORANGE));
+	public static final RegistryObject<Block> ORANGE_REINFORCED_CONCRETE_TILE = registerBlock("orange_reinforced_concrete_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.ORANGE));
+	public static final RegistryObject<Block> ORANGE_REINFORCED_CONCRETE_PILLAR = registerBlock("orange_reinforced_concrete_pillar", CONCRETE_PROPERTIES.mapColor(DyeColor.ORANGE));
 
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_YELLOW = registerBlock("reinforced_concrete_yellow", CONCRETE_PROPERTIES.mapColor(DyeColor.YELLOW));
-	public static final RegistryObject<StairBlock> REINFORCED_CONCRETE_YELLOW_STAIRS = registerStairBlock("reinforced_concrete_yellow_stairs", REINFORCED_CONCRETE_YELLOW, CONCRETE_PROPERTIES.mapColor(DyeColor.YELLOW));
-	public static final RegistryObject<SlabBlock> REINFORCED_CONCRETE_YELLOW_SLAB = registerSlabBlock("reinforced_concrete_yellow_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.YELLOW));
-	public static final RegistryObject<WallBlock> REINFORCED_CONCRETE_YELLOW_WALL = registerWallBlock("reinforced_concrete_yellow_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.YELLOW));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_YELLOW_GRATE = registerBlock("reinforced_concrete_yellow_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.YELLOW));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_YELLOW_TILE = registerBlock("reinforced_concrete_yellow_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.YELLOW));
+	public static final RegistryObject<Block> PURPLE_REINFORCED_CONCRETE = registerBlock("purple_reinforced_concrete", CONCRETE_PROPERTIES.mapColor(DyeColor.PURPLE));
+	public static final RegistryObject<StairBlock> PURPLE_REINFORCED_CONCRETE_STAIRS = registerStairBlock("purple_reinforced_concrete_stairs", PURPLE_REINFORCED_CONCRETE, CONCRETE_PROPERTIES.mapColor(DyeColor.PURPLE));
+	public static final RegistryObject<SlabBlock> PURPLE_REINFORCED_CONCRETE_SLAB = registerSlabBlock("purple_reinforced_concrete_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.PURPLE));
+	public static final RegistryObject<WallBlock> PURPLE_REINFORCED_CONCRETE_WALL = registerWallBlock("purple_reinforced_concrete_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.PURPLE));
+	public static final RegistryObject<Block> PURPLE_REINFORCED_CONCRETE_GRATE = registerBlock("purple_reinforced_concrete_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.PURPLE));
+	public static final RegistryObject<Block> PURPLE_REINFORCED_CONCRETE_TILE = registerBlock("purple_reinforced_concrete_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.PURPLE));
+	public static final RegistryObject<Block> PURPLE_REINFORCED_CONCRETE_PILLAR = registerBlock("purple_reinforced_concrete_pillar", CONCRETE_PROPERTIES.mapColor(DyeColor.PURPLE));
 
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_PURPLE = registerBlock("reinforced_concrete_purple", CONCRETE_PROPERTIES.mapColor(DyeColor.PURPLE));
-	public static final RegistryObject<StairBlock> REINFORCED_CONCRETE_PURPLE_STAIRS = registerStairBlock("reinforced_concrete_purple_stairs", REINFORCED_CONCRETE_PURPLE, CONCRETE_PROPERTIES.mapColor(DyeColor.PURPLE));
-	public static final RegistryObject<SlabBlock> REINFORCED_CONCRETE_PURPLE_SLAB = registerSlabBlock("reinforced_concrete_purple_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.PURPLE));
-	public static final RegistryObject<WallBlock> REINFORCED_CONCRETE_PURPLE_WALL = registerWallBlock("reinforced_concrete_purple_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.PURPLE));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_PURPLE_GRATE = registerBlock("reinforced_concrete_purple_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.PURPLE));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_PURPLE_TILE = registerBlock("reinforced_concrete_purple_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.PURPLE));
+	public static final RegistryObject<Block> RED_REINFORCED_CONCRETE = registerBlock("red_reinforced_concrete", CONCRETE_PROPERTIES.mapColor(DyeColor.RED));
+	public static final RegistryObject<StairBlock> RED_REINFORCED_CONCRETE_STAIRS = registerStairBlock("red_reinforced_concrete_stairs", RED_REINFORCED_CONCRETE, CONCRETE_PROPERTIES.mapColor(DyeColor.RED));
+	public static final RegistryObject<SlabBlock> RED_REINFORCED_CONCRETE_SLAB = registerSlabBlock("red_reinforced_concrete_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.RED));
+	public static final RegistryObject<WallBlock> RED_REINFORCED_CONCRETE_WALL = registerWallBlock("red_reinforced_concrete_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.RED));
+	public static final RegistryObject<Block> RED_REINFORCED_CONCRETE_GRATE = registerBlock("red_reinforced_concrete_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.RED));
+	public static final RegistryObject<Block> RED_REINFORCED_CONCRETE_TILE = registerBlock("red_reinforced_concrete_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.RED));
+	public static final RegistryObject<Block> RED_REINFORCED_CONCRETE_PILLAR = registerBlock("red_reinforced_concrete_pillar", CONCRETE_PROPERTIES.mapColor(DyeColor.RED));
 
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_PINK = registerBlock("reinforced_concrete_pink", CONCRETE_PROPERTIES.mapColor(DyeColor.PINK));
-	public static final RegistryObject<StairBlock> REINFORCED_CONCRETE_PINK_STAIRS = registerStairBlock("reinforced_concrete_pink_stairs", REINFORCED_CONCRETE_PINK, CONCRETE_PROPERTIES.mapColor(DyeColor.PINK));
-	public static final RegistryObject<SlabBlock> REINFORCED_CONCRETE_PINK_SLAB = registerSlabBlock("reinforced_concrete_pink_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.PINK));
-	public static final RegistryObject<WallBlock> REINFORCED_CONCRETE_PINK_WALL = registerWallBlock("reinforced_concrete_pink_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.PINK));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_PINK_GRATE = registerBlock("reinforced_concrete_pink_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.PINK));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_PINK_TILE = registerBlock("reinforced_concrete_pink_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.PINK));
+	public static final RegistryObject<Block> YELLOW_REINFORCED_CONCRETE = registerBlock("yellow_reinforced_concrete", CONCRETE_PROPERTIES.mapColor(DyeColor.YELLOW));
+	public static final RegistryObject<StairBlock> YELLOW_REINFORCED_CONCRETE_STAIRS = registerStairBlock("yellow_reinforced_concrete_stairs", YELLOW_REINFORCED_CONCRETE, CONCRETE_PROPERTIES.mapColor(DyeColor.YELLOW));
+	public static final RegistryObject<SlabBlock> YELLOW_REINFORCED_CONCRETE_SLAB = registerSlabBlock("yellow_reinforced_concrete_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.YELLOW));
+	public static final RegistryObject<WallBlock> YELLOW_REINFORCED_CONCRETE_WALL = registerWallBlock("yellow_reinforced_concrete_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.YELLOW));
+	public static final RegistryObject<Block> YELLOW_REINFORCED_CONCRETE_GRATE = registerBlock("yellow_reinforced_concrete_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.YELLOW));
+	public static final RegistryObject<Block> YELLOW_REINFORCED_CONCRETE_TILE = registerBlock("yellow_reinforced_concrete_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.YELLOW));
+	public static final RegistryObject<Block> YELLOW_REINFORCED_CONCRETE_PILLAR = registerBlock("yellow_reinforced_concrete_pillar", CONCRETE_PROPERTIES.mapColor(DyeColor.YELLOW));
 
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_ORANGE = registerBlock("reinforced_concrete_orange", CONCRETE_PROPERTIES.mapColor(DyeColor.ORANGE));
-	public static final RegistryObject<StairBlock> REINFORCED_CONCRETE_ORANGE_STAIRS = registerStairBlock("reinforced_concrete_orange_stairs", REINFORCED_CONCRETE_PINK, CONCRETE_PROPERTIES.mapColor(DyeColor.ORANGE));
-	public static final RegistryObject<SlabBlock> REINFORCED_CONCRETE_ORANGE_SLAB = registerSlabBlock("reinforced_concrete_orange_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.ORANGE));
-	public static final RegistryObject<WallBlock> REINFORCED_CONCRETE_ORANGE_WALL = registerWallBlock("reinforced_concrete_orange_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.ORANGE));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_ORANGE_GRATE = registerBlock("reinforced_concrete_orange_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.ORANGE));
-	public static final RegistryObject<Block> REINFORCED_CONCRETE_ORANGE_TILE = registerBlock("reinforced_concrete_orange_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.ORANGE));
+	public static final RegistryObject<Block> PINK_REINFORCED_CONCRETE = registerBlock("pink_reinforced_concrete", CONCRETE_PROPERTIES.mapColor(DyeColor.PINK));
+	public static final RegistryObject<StairBlock> PINK_REINFORCED_CONCRETE_STAIRS = registerStairBlock("pink_reinforced_concrete_stairs", PINK_REINFORCED_CONCRETE, CONCRETE_PROPERTIES.mapColor(DyeColor.PINK));
+	public static final RegistryObject<SlabBlock> PINK_REINFORCED_CONCRETE_SLAB = registerSlabBlock("pink_reinforced_concrete_slab", CONCRETE_PROPERTIES.mapColor(DyeColor.PINK));
+	public static final RegistryObject<WallBlock> PINK_REINFORCED_CONCRETE_WALL = registerWallBlock("pink_reinforced_concrete_wall", CONCRETE_PROPERTIES.mapColor(DyeColor.PINK));
+	public static final RegistryObject<Block> PINK_REINFORCED_CONCRETE_GRATE = registerBlock("pink_reinforced_concrete_grate", CONCRETE_PROPERTIES.mapColor(DyeColor.PINK));
+	public static final RegistryObject<Block> PINK_REINFORCED_CONCRETE_TILE = registerBlock("pink_reinforced_concrete_tile", CONCRETE_PROPERTIES.mapColor(DyeColor.PINK));
+	public static final RegistryObject<Block> PINK_REINFORCED_CONCRETE_PILLAR = registerBlock("pink_reinforced_concrete_pillar", CONCRETE_PROPERTIES.mapColor(DyeColor.PINK));
 
 	//endregion
 

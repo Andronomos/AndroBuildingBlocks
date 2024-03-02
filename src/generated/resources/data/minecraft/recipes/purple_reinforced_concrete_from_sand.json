@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "purple_reinforced_concrete",
+  "key": {
+    "1": {
+      "tag": "forge:stone"
+    },
+    "2": {
+      "tag": "forge:ingots/iron"
+    },
+    "3": {
+      "item": "minecraft:sand"
+    },
+    "4": {
+      "item": "minecraft:purple_dye"
+    }
+  },
+  "pattern": [
+    "212",
+    "343",
+    "212"
+  ],
+  "result": {
+    "count": 8,
+    "item": "androbuildingblocks:purple_reinforced_concrete"
+  },
+  "show_notification": true
+}
