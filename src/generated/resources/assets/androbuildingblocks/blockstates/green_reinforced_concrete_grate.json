@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "axis=x": {
+      "model": "androbuildingblocks:block/green_reinforced_concrete_grate",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
       "model": "androbuildingblocks:block/green_reinforced_concrete_grate"
+    },
+    "axis=z": {
+      "model": "androbuildingblocks:block/green_reinforced_concrete_grate",
+      "x": 90
     }
   }
 }

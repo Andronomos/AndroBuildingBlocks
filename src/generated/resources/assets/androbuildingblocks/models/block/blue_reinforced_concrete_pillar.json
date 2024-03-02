@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "androbuildingblocks:block/blue_reinforced_concrete_pillar"
+    "end": "androbuildingblocks:block/blue_reinforced_concrete",
+    "side": "androbuildingblocks:block/blue_reinforced_concrete_pillar"
   }
 }

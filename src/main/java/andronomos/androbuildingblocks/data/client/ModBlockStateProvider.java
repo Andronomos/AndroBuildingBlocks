@@ -102,7 +102,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	}
 
 	private void registerRotatableBlockStateAndModel(RotatedPillarBlock block, String name) {
-		String topResource = name.substring(0, name.indexOf("_pillar"));
+		String keyword = "_pillar";
+
+		if(name.contains("grate")) {
+			keyword = "_grate";
+		}
+
+		String topResource = name.substring(0, name.indexOf(keyword));
 		String resource = "block/" + name;
 		ResourceLocation side = modLoc(resource);
 		ResourceLocation end;

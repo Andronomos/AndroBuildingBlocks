@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "androbuildingblocks:block/pink_reinforced_concrete_grate"
+    "end": "androbuildingblocks:block/pink_reinforced_concrete",
+    "side": "androbuildingblocks:block/pink_reinforced_concrete_grate"
   }
 }
