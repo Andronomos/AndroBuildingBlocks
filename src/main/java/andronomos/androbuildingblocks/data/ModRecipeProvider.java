@@ -1,8 +1,10 @@
 package andronomos.androbuildingblocks.data;
 
+import andronomos.androbuildingblocks.AndroBuildingBlocks;
 import andronomos.androbuildingblocks.registry.BlockRegistry;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -91,17 +93,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateTwoByTwoRecipe(BlockRegistry.GRAY_REINFORCED_CONCRETE_TILE.get(), BlockRegistry.GRAY_REINFORCED_CONCRETE.get(), recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.GRAY_REINFORCED_CONCRETE_PILLAR.get(), BlockRegistry.GRAY_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
 
-		buildReinforcedConcreteRecipe(BlockRegistry.ORANGE_REINFORCED_CONCRETE.get(), Items.ORANGE_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ORANGE_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.ORANGE_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.ORANGE_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.ORANGE_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ORANGE_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.ORANGE_REINFORCED_CONCRETE.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.ORANGE_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.ORANGE_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.ORANGE_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.ORANGE_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ORANGE_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.ORANGE_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ORANGE_REINFORCED_CONCRETE_GRATE.get(), BlockRegistry.ORANGE_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateTwoByTwoRecipe(BlockRegistry.ORANGE_REINFORCED_CONCRETE_TILE.get(), BlockRegistry.ORANGE_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.ORANGE_REINFORCED_CONCRETE_PILLAR.get(), BlockRegistry.ORANGE_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-
 		buildReinforcedConcreteRecipe(BlockRegistry.PURPLE_REINFORCED_CONCRETE.get(), Items.PURPLE_DYE, recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.PURPLE_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.PURPLE_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
 		generateStairRecipe(BlockRegistry.PURPLE_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.PURPLE_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
@@ -118,33 +109,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateStairRecipe(BlockRegistry.RED_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.RED_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.RED_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.RED_REINFORCED_CONCRETE.get(), 2, recipeConsumer);
 		generateSlabRecipe(BlockRegistry.RED_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.RED_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.RED_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.RED_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.RED_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.RED_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
+		//generateThreeByTwoRecipe(BlockRegistry.RED_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.RED_REINFORCED_CONCRETE.get(), recipeConsumer);
+		//generateStoneCutterRecipe(BlockRegistry.RED_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.RED_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.RED_REINFORCED_CONCRETE_GRATE.get(), BlockRegistry.RED_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
 		generateTwoByTwoRecipe(BlockRegistry.RED_REINFORCED_CONCRETE_TILE.get(), BlockRegistry.RED_REINFORCED_CONCRETE.get(), recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.RED_REINFORCED_CONCRETE_PILLAR.get(), BlockRegistry.RED_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
 
-		buildReinforcedConcreteRecipe(BlockRegistry.YELLOW_REINFORCED_CONCRETE.get(), Items.YELLOW_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.YELLOW_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.YELLOW_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.YELLOW_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.YELLOW_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.YELLOW_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.YELLOW_REINFORCED_CONCRETE.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.YELLOW_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.YELLOW_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.YELLOW_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.YELLOW_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.YELLOW_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.YELLOW_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.YELLOW_REINFORCED_CONCRETE_GRATE.get(), BlockRegistry.YELLOW_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateTwoByTwoRecipe(BlockRegistry.YELLOW_REINFORCED_CONCRETE_TILE.get(), BlockRegistry.YELLOW_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.YELLOW_REINFORCED_CONCRETE_PILLAR.get(), BlockRegistry.YELLOW_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-
-		buildReinforcedConcreteRecipe(BlockRegistry.PINK_REINFORCED_CONCRETE.get(), Items.PINK_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.PINK_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.PINK_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.PINK_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.PINK_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.PINK_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.PINK_REINFORCED_CONCRETE.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.PINK_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.PINK_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.PINK_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.PINK_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.PINK_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.PINK_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.PINK_REINFORCED_CONCRETE_GRATE.get(), BlockRegistry.PINK_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateTwoByTwoRecipe(BlockRegistry.PINK_REINFORCED_CONCRETE_TILE.get(), BlockRegistry.PINK_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.PINK_REINFORCED_CONCRETE_PILLAR.get(), BlockRegistry.PINK_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
+		buildConcreteWallRecipes(BlockRegistry.RED_REINFORCED_CONCRETE.get(), recipeConsumer);
 
 		//endregion
 
@@ -247,6 +218,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateStoneCutterRecipe(BlockRegistry.CARBON_MESH.get(), BlockRegistry.CARBON.get(), 1, recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.CARBON_GRATE.get(), BlockRegistry.CARBON.get(), 1, recipeConsumer);
 	}
+
+
+
+	private void buildConcreteWallRecipes(Block concrete, Consumer<FinishedRecipe> consumer) {
+		String concreteName = ForgeRegistries.BLOCKS.getKey(concrete).getPath();
+		String targetBlockName = String.format("%s_wall", concreteName);
+		Block targetBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(AndroBuildingBlocks.MODID, targetBlockName));
+		generateThreeByTwoRecipe(targetBlock, concrete, consumer);
+		generateStoneCutterRecipe(targetBlock, concrete,1, consumer);
+	}
+
+
+
+
+
+
 
 
 	private void buildStructuralGlassRecipe(Block output, Block Input, Consumer<FinishedRecipe> consumer) {
