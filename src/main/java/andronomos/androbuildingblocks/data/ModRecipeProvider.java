@@ -12,7 +12,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -35,11 +34,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 			Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", String.format("%s_dye", color)));
 
 			if(blockExists(concreteBlock) && dye != null) {
-				buildReinforcedConcreteRecipe(concreteBlock, dye, recipeConsumer);
-				buildConcreteWallRecipes(concreteBlock, recipeConsumer);
-				buildConcreteStairRecipes(concreteBlock, recipeConsumer);
-			} else {
-				AndroBuildingBlocks.LOGGER.info(String.format("reinforced_concrete: %s", String.format("%s_reinforced_concrete", color)));
+				buildReinforcedConcreteRecipes(concreteBlock, dye, recipeConsumer);
 			}
 		});
 
@@ -52,7 +47,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 			if(blockExists(structuralGlassBlock) && blockExists(glassPaneBlock)) {
 				buildStructuralGlassRecipe(structuralGlassBlock, vanillaGlassBlock, recipeConsumer);
-				generateThreeByTwoRecipe(glassPaneBlock, structuralGlassBlock, recipeConsumer);
+				buildThreeByTwoRecipe(glassPaneBlock, structuralGlassBlock, recipeConsumer);
 			} else {
 				AndroBuildingBlocks.LOGGER.info(String.format("structural_glass: %s", String.format("%s_stained_glass", color)));
 				AndroBuildingBlocks.LOGGER.info(String.format("structural_glass_pane: %s", String.format("%s_structural_glass_pane", color)));
@@ -60,18 +55,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		}
 
 		//region Smooth Deepslate
-		generateSmeltingRecipe(Blocks.DEEPSLATE, BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.SMOOTH_DEEPSLATE_SLAB.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.SMOOTH_DEEPSLATE_STAIRS.get(), BlockRegistry.SMOOTH_DEEPSLATE.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.SMOOTH_DEEPSLATE_STAIRS.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), 1, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.SMOOTH_DEEPSLATE_SLAB.get(), BlockRegistry.SMOOTH_DEEPSLATE.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.SMOOTH_DEEPSLATE_WALL.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.SMOOTH_DEEPSLATE_WALL.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), 1, recipeConsumer);
+		buildSmeltingRecipe(Blocks.DEEPSLATE, BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
+		buildStoneCutterRecipe(BlockRegistry.SMOOTH_DEEPSLATE_SLAB.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), 2, recipeConsumer);
+		buildStairRecipe(BlockRegistry.SMOOTH_DEEPSLATE_STAIRS.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
+		buildStoneCutterRecipe(BlockRegistry.SMOOTH_DEEPSLATE_STAIRS.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), 1, recipeConsumer);
+		buildThreeByOneRecipe(BlockRegistry.SMOOTH_DEEPSLATE_SLAB.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
+		buildThreeByTwoRecipe(BlockRegistry.SMOOTH_DEEPSLATE_WALL.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
+		buildStoneCutterRecipe(BlockRegistry.SMOOTH_DEEPSLATE_WALL.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), 1, recipeConsumer);
 		//endregion
 
 		//region Caution Stripes
-		generateStripedRecipe(BlockRegistry.YELLOW_CAUTION_STRIPES.get(), Items.YELLOW_DYE, Items.BLACK_DYE, recipeConsumer);
-		generateStripedRecipe(BlockRegistry.RED_CAUTION_STRIPES.get(), Items.RED_DYE, Items.WHITE_DYE, recipeConsumer);
+		buildStripedRecipe(BlockRegistry.YELLOW_CAUTION_STRIPES.get(), Items.YELLOW_DYE, Items.BLACK_DYE, recipeConsumer);
+		buildStripedRecipe(BlockRegistry.RED_CAUTION_STRIPES.get(), Items.RED_DYE, Items.WHITE_DYE, recipeConsumer);
 		//endregion
 
 		//region Steel
@@ -95,56 +90,85 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		carbonSteelCharcoalRecipe.unlockedBy("has_item", has(Items.CHARCOAL));
 		carbonSteelCharcoalRecipe.save(recipeConsumer, "carbon_steel_from_charcoal");
 
-		generateStairRecipe(BlockRegistry.STEEL_STAIRS.get(), BlockRegistry.STEEL.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.STEEL_STAIRS.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.STEEL_SLAB.get(), BlockRegistry.STEEL.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.STEEL_SLAB.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.STEEL_WALL.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.STEEL_WALL.get(), BlockRegistry.STEEL.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.STEEL_MESH.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
+		buildStairRecipe(BlockRegistry.STEEL_STAIRS.get(), BlockRegistry.STEEL.get(), recipeConsumer);
+		buildStoneCutterRecipe(BlockRegistry.STEEL_STAIRS.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
+		buildThreeByOneRecipe(BlockRegistry.STEEL_SLAB.get(), BlockRegistry.STEEL.get(), recipeConsumer);
+		buildStoneCutterRecipe(BlockRegistry.STEEL_SLAB.get(), BlockRegistry.STEEL.get(), 2, recipeConsumer);
+		buildStoneCutterRecipe(BlockRegistry.STEEL_WALL.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
+		buildThreeByTwoRecipe(BlockRegistry.STEEL_WALL.get(), BlockRegistry.STEEL.get(), recipeConsumer);
+		buildStoneCutterRecipe(BlockRegistry.STEEL_MESH.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
 		//endregion
 
-		generateSmeltingRecipe(Blocks.COAL_BLOCK, BlockRegistry.CARBON.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.CARBON_MESH.get(), BlockRegistry.CARBON.get(), 1, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.CARBON_GRATE.get(), BlockRegistry.CARBON.get(), 1, recipeConsumer);
+		buildSmeltingRecipe(Blocks.COAL_BLOCK, BlockRegistry.CARBON.get(), recipeConsumer);
+		buildStoneCutterRecipe(BlockRegistry.CARBON_MESH.get(), BlockRegistry.CARBON.get(), 1, recipeConsumer);
+		buildStoneCutterRecipe(BlockRegistry.CARBON_GRATE.get(), BlockRegistry.CARBON.get(), 1, recipeConsumer);
 
 	}
 
-	private void buildConcreteWallRecipes(Block concrete, Consumer<FinishedRecipe> consumer) {
-		String concreteName = ForgeRegistries.BLOCKS.getKey(concrete).getPath();
-		Block wallBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_wall", concreteName)));
-		Block tileWallBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_tile_wall", concreteName)));
-
-		if(blockExists(wallBlock)) {
-			generateThreeByTwoRecipe(wallBlock, concrete, consumer);
-			generateStoneCutterRecipe(wallBlock, concrete,1, consumer);
-		}
-
-		if(blockExists(tileWallBlock)) {
-			generateThreeByTwoRecipe(tileWallBlock, concrete, consumer);
-			generateStoneCutterRecipe(tileWallBlock, concrete,1, consumer);
-		}
-	}
-
-	private void buildConcreteStairRecipes(Block concrete, Consumer<FinishedRecipe> consumer) {
+	private void buildReinforcedConcreteRecipes(Block concrete, Item dye, Consumer<FinishedRecipe> consumer) {
 		String concreteName = ForgeRegistries.BLOCKS.getKey(concrete).getPath();
 		Block stairBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_stairs", concreteName)));
+		Block slabBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_slab", concreteName)));
+		Block wallBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_wall", concreteName)));
+		Block tileBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_tile", concreteName)));
 		Block tileStairBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_tile_stairs", concreteName)));
+		Block tileSlabBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_tile_slab", concreteName)));
+		Block tileWallBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_tile_wall", concreteName)));
+
+		ShapedRecipeBuilder shapedGravel = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, concrete, 8);
+		shapedGravel.define('1', Tags.Items.STONE);
+		shapedGravel.define('2', Tags.Items.INGOTS_IRON);
+		shapedGravel.define('3', Items.GRAVEL);
+		shapedGravel.define('4', dye);
+		shapedGravel.pattern("212");
+		shapedGravel.pattern("343");
+		shapedGravel.pattern("212");
+		shapedGravel.group(concreteName);
+		shapedGravel.unlockedBy("has_item", has(Tags.Items.STONE));
+		shapedGravel.save(consumer);
 
 		if(blockExists(stairBlock)) {
-			generateStairRecipe((StairBlock) stairBlock, concrete.asItem(), consumer);
-			generateStoneCutterRecipe(stairBlock, concrete,1, consumer);
+			buildStairRecipe((StairBlock) stairBlock, concrete, consumer);
+			buildStoneCutterRecipe(stairBlock, concrete,1, consumer);
+		}
+
+		if(blockExists(slabBlock)) {
+			buildThreeByOneRecipe(slabBlock, concrete, consumer);
+			buildStoneCutterRecipe(slabBlock, concrete,2, consumer);
+		}
+
+		if(blockExists(wallBlock)) {
+			buildThreeByTwoRecipe(wallBlock, concrete, consumer);
+			buildStoneCutterRecipe(wallBlock, concrete,1, consumer);
+		}
+
+		if(blockExists(tileBlock)) {
+			buildThreeByTwoRecipe(wallBlock, concrete, consumer);
+			buildTwoByTwoRecipe(tileBlock, concrete, consumer);
+			buildStoneCutterRecipe(tileBlock, concrete,1, consumer);
 		}
 
 		if(blockExists(tileStairBlock)) {
-			generateThreeByTwoRecipe(tileStairBlock, concrete, consumer);
-			generateStoneCutterRecipe(tileStairBlock, concrete,1, consumer);
+			buildThreeByTwoRecipe(tileStairBlock, tileBlock, consumer);
+			buildStoneCutterRecipe(tileStairBlock, tileBlock,1, consumer);
+		}
+
+		if(blockExists(tileSlabBlock)) {
+			buildThreeByOneRecipe(tileSlabBlock, tileBlock, consumer);
+			buildStoneCutterRecipe(tileSlabBlock, tileBlock,2, consumer);
+		}
+
+		if(blockExists(tileWallBlock)) {
+			buildThreeByTwoRecipe(tileWallBlock, tileBlock, consumer);
+			buildStoneCutterRecipe(tileWallBlock, tileBlock,1, consumer);
 		}
 	}
 
 	private boolean blockExists(Block block) {
 		return block != null && block != Blocks.AIR;
 	}
+
+
 
 	private void buildStructuralGlassRecipe(Block output, Block Input, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 4);
@@ -157,35 +181,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		shaped.save(consumer);
 	}
 
-	private void buildReinforcedConcreteRecipe(Block output, Item dye, Consumer<FinishedRecipe> consumer) {
-		String concreteName = ForgeRegistries.BLOCKS.getKey(output).getPath();
-
-		ShapedRecipeBuilder shapedGravel = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 8);
-		shapedGravel.define('1', Tags.Items.STONE);
-		shapedGravel.define('2', Tags.Items.INGOTS_IRON);
-		shapedGravel.define('3', Items.GRAVEL);
-		shapedGravel.define('4', dye);
-		shapedGravel.pattern("212");
-		shapedGravel.pattern("343");
-		shapedGravel.pattern("212");
-		shapedGravel.group(concreteName);
-		shapedGravel.unlockedBy("has_item", has(Tags.Items.STONE));
-		shapedGravel.save(consumer);
-
-		ShapedRecipeBuilder shapedSand = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 8);
-		shapedSand.define('1', Tags.Items.STONE);
-		shapedSand.define('2', Tags.Items.INGOTS_IRON);
-		shapedSand.define('3', Items.SAND);
-		shapedSand.define('4', dye);
-		shapedSand.pattern("212");
-		shapedSand.pattern("343");
-		shapedSand.pattern("212");
-		shapedSand.group(concreteName);
-		shapedSand.unlockedBy("has_item", has(Tags.Items.STONE));
-		shapedSand.save(consumer, concreteName + "_from_sand");
-	}
-
-	private void generateStripedRecipe(Block output, Item Dye, Item Dye2, Consumer<FinishedRecipe> consumer) {
+	private void buildStripedRecipe(Block output, Item Dye, Item Dye2, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 4);
 		shaped.define('1', Dye);
 		shaped.define('2', Dye2);
@@ -197,14 +193,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		shaped.save(consumer);
 	}
 
-	private void generateSmeltingRecipe(Block input, Block output, Consumer<FinishedRecipe> consumer) {
-		SimpleCookingRecipeBuilder cooking = SimpleCookingRecipeBuilder.smelting(Ingredient.of(input),
-				RecipeCategory.BUILDING_BLOCKS,	output, 0.1F, 200);
-		cooking.unlockedBy("has_item", has(input));
-		cooking.save(consumer);
-	}
 
-	private void generateTwoByTwoRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
+
+
+
+
+	private void buildTwoByTwoRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 6);
 		shaped.define('#', input);
 		shaped.pattern("##");
@@ -213,7 +207,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		shaped.save(consumer);
 	}
 
-	private void generateThreeByTwoRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
+	private void buildThreeByOneRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
+		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 6);
+		shaped.define('#', input);
+		shaped.pattern("###");
+		shaped.unlockedBy("has_item", has(input));
+		shaped.save(consumer);
+	}
+
+	private void buildThreeByTwoRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 6);
 		shaped.define('#', input);
 		shaped.pattern("###");
@@ -222,22 +224,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		shaped.save(consumer);
 	}
 
-	private void generateStoneCutterRecipe(Block output, Block input, int amount, Consumer<FinishedRecipe> consumer) {
+	private void buildStoneCutterRecipe(Block output, Block input, int amount, Consumer<FinishedRecipe> consumer) {
 		String blockName = ForgeRegistries.BLOCKS.getKey(output).getPath();
 		SingleItemRecipeBuilder stonecutting = SingleItemRecipeBuilder.stonecutting(Ingredient.of(input), RecipeCategory.BUILDING_BLOCKS, output, amount);
 		stonecutting.unlockedBy("has_item", has(input));
 		stonecutting.save(consumer, blockName + "_from_stonecutting");
 	}
 
-	private void generateSlabRecipe(SlabBlock output, Item input, Consumer<FinishedRecipe> consumer) {
-		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 6);
-		shaped.define('#', input);
-		shaped.pattern("###");
-		shaped.unlockedBy("has_item", has(input));
-		shaped.save(consumer);
+	private void buildSmeltingRecipe(Block input, Block output, Consumer<FinishedRecipe> consumer) {
+		SimpleCookingRecipeBuilder cooking = SimpleCookingRecipeBuilder.smelting(Ingredient.of(input),
+				RecipeCategory.BUILDING_BLOCKS,	output, 0.1F, 200);
+		cooking.unlockedBy("has_item", has(input));
+		cooking.save(consumer);
 	}
 
-	private void generateStairRecipe(StairBlock output, Item input, Consumer<FinishedRecipe> consumer) {
+	private void buildStairRecipe(StairBlock output, Block input, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 4);
 		shaped.define('#', input);
 		shaped.pattern("#  ");
