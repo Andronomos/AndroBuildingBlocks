@@ -1,5 +1,7 @@
 {
   "values": [
+    "androbuildingblocks:smooth_deepslate_wall",
+    "androbuildingblocks:steel_wall",
     "androbuildingblocks:white_reinforced_concrete_wall",
     "androbuildingblocks:blue_reinforced_concrete_wall",
     "androbuildingblocks:black_reinforced_concrete_wall",
@@ -7,8 +9,6 @@
     "androbuildingblocks:green_reinforced_concrete_wall",
     "androbuildingblocks:gray_reinforced_concrete_wall",
     "androbuildingblocks:purple_reinforced_concrete_wall",
-    "androbuildingblocks:red_reinforced_concrete_wall",
-    "androbuildingblocks:smooth_deepslate_wall",
-    "androbuildingblocks:steel_wall"
+    "androbuildingblocks:red_reinforced_concrete_wall"
   ]
 }

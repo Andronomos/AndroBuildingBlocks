@@ -1,10 +1,12 @@
 package andronomos.androbuildingblocks.data;
 
 import andronomos.androbuildingblocks.AndroBuildingBlocks;
+import andronomos.androbuildingblocks.block.BlockVariants;
 import andronomos.androbuildingblocks.registry.BlockRegistry;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -19,6 +21,8 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
+import static andronomos.androbuildingblocks.AndroBuildingBlocks.MODID;
+
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
 	public ModRecipeProvider(PackOutput output) {
 		super(output);
@@ -26,148 +30,34 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 	@Override
 	protected void buildRecipes(@NotNull Consumer<FinishedRecipe> recipeConsumer) {
-		//region Reinforced Concrete
-		buildReinforcedConcreteRecipe(BlockRegistry.WHITE_REINFORCED_CONCRETE.get(), Items.WHITE_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.WHITE_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.WHITE_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.WHITE_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.WHITE_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.WHITE_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.WHITE_REINFORCED_CONCRETE.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.WHITE_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.WHITE_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.WHITE_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.WHITE_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.WHITE_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.WHITE_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.WHITE_REINFORCED_CONCRETE_GRATE.get(), BlockRegistry.WHITE_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateTwoByTwoRecipe(BlockRegistry.WHITE_REINFORCED_CONCRETE_TILE.get(), BlockRegistry.WHITE_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.WHITE_REINFORCED_CONCRETE_PILLAR.get(), BlockRegistry.WHITE_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
+		BlockVariants.concreteColors.forEach(color -> {
+			Block concreteBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_reinforced_concrete", color)));
+			Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", String.format("%s_dye", color)));
 
-		buildReinforcedConcreteRecipe(BlockRegistry.BLUE_REINFORCED_CONCRETE.get(), Items.BLUE_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BLUE_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.BLUE_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.BLUE_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.BLUE_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BLUE_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.BLUE_REINFORCED_CONCRETE.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.BLUE_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.BLUE_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.BLUE_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.BLUE_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BLUE_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.BLUE_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BLUE_REINFORCED_CONCRETE_GRATE.get(), BlockRegistry.BLUE_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateTwoByTwoRecipe(BlockRegistry.BLUE_REINFORCED_CONCRETE_TILE.get(), BlockRegistry.BLUE_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BLUE_REINFORCED_CONCRETE_PILLAR.get(), BlockRegistry.BLUE_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
+			if(blockExists(concreteBlock) && dye != null) {
+				buildReinforcedConcreteRecipe(concreteBlock, dye, recipeConsumer);
+				buildConcreteWallRecipes(concreteBlock, recipeConsumer);
+				buildConcreteStairRecipes(concreteBlock, recipeConsumer);
+			} else {
+				AndroBuildingBlocks.LOGGER.info(String.format("reinforced_concrete: %s", String.format("%s_reinforced_concrete", color)));
+			}
+		});
 
-		buildReinforcedConcreteRecipe(BlockRegistry.BLACK_REINFORCED_CONCRETE.get(), Items.BLACK_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BLACK_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.BLACK_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.BLACK_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.BLACK_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BLACK_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.BLACK_REINFORCED_CONCRETE.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.BLACK_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.BLACK_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.BLACK_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.BLACK_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BLACK_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.BLACK_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BLACK_REINFORCED_CONCRETE_GRATE.get(), BlockRegistry.BLACK_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateTwoByTwoRecipe(BlockRegistry.BLACK_REINFORCED_CONCRETE_TILE.get(), BlockRegistry.BLACK_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BLACK_REINFORCED_CONCRETE_PILLAR.get(), BlockRegistry.BLACK_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
+		for(DyeColor color : DyeColor.values()) {
+			AndroBuildingBlocks.LOGGER.info(String.format("ModRecipeProvider#buildRecipes | color: %s", color));
 
-		buildReinforcedConcreteRecipe(BlockRegistry.BROWN_REINFORCED_CONCRETE.get(), Items.BROWN_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BROWN_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.BROWN_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.BROWN_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.BROWN_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BROWN_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.BROWN_REINFORCED_CONCRETE.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.BROWN_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.BROWN_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.BROWN_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.BROWN_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BROWN_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.BROWN_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BROWN_REINFORCED_CONCRETE_GRATE.get(), BlockRegistry.BROWN_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateTwoByTwoRecipe(BlockRegistry.BROWN_REINFORCED_CONCRETE_TILE.get(), BlockRegistry.BROWN_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.BROWN_REINFORCED_CONCRETE_PILLAR.get(), BlockRegistry.BROWN_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
+			Block vanillaGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft", String.format("%s_stained_glass", color)));
+			Block structuralGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_structural_glass", color)));
+			Block glassPaneBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_structural_glass_pane", color)));
 
-		buildReinforcedConcreteRecipe(BlockRegistry.GREEN_REINFORCED_CONCRETE.get(), Items.GREEN_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.GREEN_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.GREEN_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.GREEN_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.GREEN_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.GREEN_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.GREEN_REINFORCED_CONCRETE.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.GREEN_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.GREEN_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.GREEN_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.GREEN_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.GREEN_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.GREEN_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.GREEN_REINFORCED_CONCRETE_GRATE.get(), BlockRegistry.GREEN_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateTwoByTwoRecipe(BlockRegistry.GREEN_REINFORCED_CONCRETE_TILE.get(), BlockRegistry.GREEN_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.GREEN_REINFORCED_CONCRETE_PILLAR.get(), BlockRegistry.GREEN_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-
-		buildReinforcedConcreteRecipe(BlockRegistry.GRAY_REINFORCED_CONCRETE.get(), Items.GRAY_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.GRAY_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.GRAY_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.GRAY_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.GRAY_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.GRAY_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.GRAY_REINFORCED_CONCRETE.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.GRAY_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.GRAY_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.GRAY_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.GRAY_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.GRAY_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.GRAY_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.GRAY_REINFORCED_CONCRETE_GRATE.get(), BlockRegistry.GRAY_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateTwoByTwoRecipe(BlockRegistry.GRAY_REINFORCED_CONCRETE_TILE.get(), BlockRegistry.GRAY_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.GRAY_REINFORCED_CONCRETE_PILLAR.get(), BlockRegistry.GRAY_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-
-		buildReinforcedConcreteRecipe(BlockRegistry.PURPLE_REINFORCED_CONCRETE.get(), Items.PURPLE_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.PURPLE_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.PURPLE_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.PURPLE_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.PURPLE_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.PURPLE_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.PURPLE_REINFORCED_CONCRETE.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.PURPLE_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.PURPLE_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.PURPLE_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.PURPLE_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.PURPLE_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.PURPLE_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.PURPLE_REINFORCED_CONCRETE_GRATE.get(), BlockRegistry.PURPLE_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateTwoByTwoRecipe(BlockRegistry.PURPLE_REINFORCED_CONCRETE_TILE.get(), BlockRegistry.PURPLE_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.PURPLE_REINFORCED_CONCRETE_PILLAR.get(), BlockRegistry.PURPLE_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-
-		buildReinforcedConcreteRecipe(BlockRegistry.RED_REINFORCED_CONCRETE.get(), Items.RED_DYE, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.RED_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.RED_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStairRecipe(BlockRegistry.RED_REINFORCED_CONCRETE_STAIRS.get(), BlockRegistry.RED_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.RED_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.RED_REINFORCED_CONCRETE.get(), 2, recipeConsumer);
-		generateSlabRecipe(BlockRegistry.RED_REINFORCED_CONCRETE_SLAB.get(), BlockRegistry.RED_REINFORCED_CONCRETE.get().asItem(), recipeConsumer);
-		//generateThreeByTwoRecipe(BlockRegistry.RED_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.RED_REINFORCED_CONCRETE.get(), recipeConsumer);
-		//generateStoneCutterRecipe(BlockRegistry.RED_REINFORCED_CONCRETE_WALL.get(), BlockRegistry.RED_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.RED_REINFORCED_CONCRETE_GRATE.get(), BlockRegistry.RED_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-		generateTwoByTwoRecipe(BlockRegistry.RED_REINFORCED_CONCRETE_TILE.get(), BlockRegistry.RED_REINFORCED_CONCRETE.get(), recipeConsumer);
-		generateStoneCutterRecipe(BlockRegistry.RED_REINFORCED_CONCRETE_PILLAR.get(), BlockRegistry.RED_REINFORCED_CONCRETE.get(), 1, recipeConsumer);
-
-		buildConcreteWallRecipes(BlockRegistry.RED_REINFORCED_CONCRETE.get(), recipeConsumer);
-
-		//endregion
-
-		//region Structural Glass
-		buildStructuralGlassRecipe(BlockRegistry.WHITE_STRUCTURAL_GLASS.get(), Blocks.WHITE_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.WHITE_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.WHITE_STRUCTURAL_GLASS.get(), recipeConsumer);
-
-		buildStructuralGlassRecipe(BlockRegistry.BLUE_STRUCTURAL_GLASS.get(), Blocks.BLUE_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.BLUE_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.BLUE_STRUCTURAL_GLASS.get(), recipeConsumer);
-
-		buildStructuralGlassRecipe(BlockRegistry.BROWN_STRUCTURAL_GLASS.get(), Blocks.BROWN_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.BROWN_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.BROWN_STRUCTURAL_GLASS.get(), recipeConsumer);
-
-		buildStructuralGlassRecipe(BlockRegistry.CYAN_STRUCTURAL_GLASS.get(), Blocks.CYAN_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.CYAN_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.CYAN_STRUCTURAL_GLASS.get(), recipeConsumer);
-
-		buildStructuralGlassRecipe(BlockRegistry.GREEN_STRUCTURAL_GLASS.get(), Blocks.GREEN_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.GREEN_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.GREEN_STRUCTURAL_GLASS.get(), recipeConsumer);
-
-		buildStructuralGlassRecipe(BlockRegistry.GRAY_STRUCTURAL_GLASS.get(), Blocks.GRAY_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.GRAY_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.GRAY_STRUCTURAL_GLASS.get(), recipeConsumer);
-
-		buildStructuralGlassRecipe(BlockRegistry.LIGHT_BLUE_STRUCTURAL_GLASS.get(), Blocks.LIGHT_BLUE_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.LIGHT_BLUE_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.LIGHT_BLUE_STRUCTURAL_GLASS.get(), recipeConsumer);
-
-		buildStructuralGlassRecipe(BlockRegistry.LIGHT_GRAY_STRUCTURAL_GLASS.get(), Blocks.LIGHT_GRAY_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.LIGHT_GRAY_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.LIGHT_GRAY_STRUCTURAL_GLASS.get(), recipeConsumer);
-
-		buildStructuralGlassRecipe(BlockRegistry.LIME_STRUCTURAL_GLASS.get(), Blocks.LIME_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.LIME_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.LIME_STRUCTURAL_GLASS.get(), recipeConsumer);
-
-		buildStructuralGlassRecipe(BlockRegistry.MAGENTA_STRUCTURAL_GLASS.get(), Blocks.MAGENTA_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.MAGENTA_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.MAGENTA_STRUCTURAL_GLASS.get(), recipeConsumer);
-
-		buildStructuralGlassRecipe(BlockRegistry.ORANGE_STRUCTURAL_GLASS.get(), Blocks.ORANGE_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.ORANGE_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.ORANGE_STRUCTURAL_GLASS.get(), recipeConsumer);
-
-		buildStructuralGlassRecipe(BlockRegistry.PINK_STRUCTURAL_GLASS.get(), Blocks.PINK_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.PINK_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.PINK_STRUCTURAL_GLASS.get(), recipeConsumer);
-
-		buildStructuralGlassRecipe(BlockRegistry.PURPLE_STRUCTURAL_GLASS.get(), Blocks.PURPLE_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.PURPLE_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.PURPLE_STRUCTURAL_GLASS.get(), recipeConsumer);
-
-		buildStructuralGlassRecipe(BlockRegistry.RED_STRUCTURAL_GLASS.get(), Blocks.RED_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.RED_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.RED_STRUCTURAL_GLASS.get(), recipeConsumer);
-
-		buildStructuralGlassRecipe(BlockRegistry.YELLOW_STRUCTURAL_GLASS.get(), Blocks.YELLOW_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.YELLOW_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.YELLOW_STRUCTURAL_GLASS.get(), recipeConsumer);
-
-		buildStructuralGlassRecipe(BlockRegistry.BLACK_STRUCTURAL_GLASS.get(), Blocks.BLACK_STAINED_GLASS, recipeConsumer);
-		generateThreeByTwoRecipe(BlockRegistry.BLACK_STRUCTURAL_GLASS_PANE.get(), BlockRegistry.BLACK_STRUCTURAL_GLASS.get(), recipeConsumer);
-		//endregion
+			if(blockExists(structuralGlassBlock) && blockExists(glassPaneBlock)) {
+				buildStructuralGlassRecipe(structuralGlassBlock, vanillaGlassBlock, recipeConsumer);
+				generateThreeByTwoRecipe(glassPaneBlock, structuralGlassBlock, recipeConsumer);
+			} else {
+				AndroBuildingBlocks.LOGGER.info(String.format("structural_glass: %s", String.format("%s_stained_glass", color)));
+				AndroBuildingBlocks.LOGGER.info(String.format("structural_glass_pane: %s", String.format("%s_structural_glass_pane", color)));
+			}
+		}
 
 		//region Smooth Deepslate
 		generateSmeltingRecipe(Blocks.DEEPSLATE, BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
@@ -217,24 +107,44 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		generateSmeltingRecipe(Blocks.COAL_BLOCK, BlockRegistry.CARBON.get(), recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.CARBON_MESH.get(), BlockRegistry.CARBON.get(), 1, recipeConsumer);
 		generateStoneCutterRecipe(BlockRegistry.CARBON_GRATE.get(), BlockRegistry.CARBON.get(), 1, recipeConsumer);
+
 	}
-
-
 
 	private void buildConcreteWallRecipes(Block concrete, Consumer<FinishedRecipe> consumer) {
 		String concreteName = ForgeRegistries.BLOCKS.getKey(concrete).getPath();
-		String targetBlockName = String.format("%s_wall", concreteName);
-		Block targetBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(AndroBuildingBlocks.MODID, targetBlockName));
-		generateThreeByTwoRecipe(targetBlock, concrete, consumer);
-		generateStoneCutterRecipe(targetBlock, concrete,1, consumer);
+		Block wallBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_wall", concreteName)));
+		Block tileWallBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_tile_wall", concreteName)));
+
+		if(blockExists(wallBlock)) {
+			generateThreeByTwoRecipe(wallBlock, concrete, consumer);
+			generateStoneCutterRecipe(wallBlock, concrete,1, consumer);
+		}
+
+		if(blockExists(tileWallBlock)) {
+			generateThreeByTwoRecipe(tileWallBlock, concrete, consumer);
+			generateStoneCutterRecipe(tileWallBlock, concrete,1, consumer);
+		}
 	}
 
+	private void buildConcreteStairRecipes(Block concrete, Consumer<FinishedRecipe> consumer) {
+		String concreteName = ForgeRegistries.BLOCKS.getKey(concrete).getPath();
+		Block stairBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_stairs", concreteName)));
+		Block tileStairBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_tile_stairs", concreteName)));
 
+		if(blockExists(stairBlock)) {
+			generateStairRecipe((StairBlock) stairBlock, concrete.asItem(), consumer);
+			generateStoneCutterRecipe(stairBlock, concrete,1, consumer);
+		}
 
+		if(blockExists(tileStairBlock)) {
+			generateThreeByTwoRecipe(tileStairBlock, concrete, consumer);
+			generateStoneCutterRecipe(tileStairBlock, concrete,1, consumer);
+		}
+	}
 
-
-
-
+	private boolean blockExists(Block block) {
+		return block != null && block != Blocks.AIR;
+	}
 
 	private void buildStructuralGlassRecipe(Block output, Block Input, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 4);
