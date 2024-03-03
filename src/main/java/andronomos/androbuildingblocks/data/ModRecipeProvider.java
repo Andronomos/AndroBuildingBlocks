@@ -99,6 +99,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildStoneCutterRecipe(BlockRegistry.STEEL_WALL.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
 		buildThreeByTwoRecipe(BlockRegistry.STEEL_WALL.get(), BlockRegistry.STEEL.get(), recipeConsumer);
 		buildStoneCutterRecipe(BlockRegistry.STEEL_MESH.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
+		buildTwoByTwoRecipe(BlockRegistry.STEEL_PLATE.get(), BlockRegistry.STEEL.get(), recipeConsumer);
 		//endregion
 
 		buildSmeltingRecipe(Blocks.COAL_BLOCK, BlockRegistry.GRAPHITE.get(), recipeConsumer);
@@ -129,7 +130,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		shapedGravel.save(consumer);
 
 		if(blockExists(stairBlock)) {
-			buildStairRecipe((StairBlock) stairBlock, concrete, consumer);
+			buildStairRecipe(stairBlock, concrete, consumer);
 			buildStoneCutterRecipe(stairBlock, concrete,1, consumer);
 		}
 
@@ -144,13 +145,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		}
 
 		if(blockExists(tileBlock)) {
-			buildThreeByTwoRecipe(wallBlock, concrete, consumer);
 			buildTwoByTwoRecipe(tileBlock, concrete, consumer);
 			buildStoneCutterRecipe(tileBlock, concrete,1, consumer);
 		}
 
 		if(blockExists(tileStairBlock)) {
-			buildThreeByTwoRecipe(tileStairBlock, tileBlock, consumer);
+			buildStairRecipe(tileStairBlock, tileBlock, consumer);
 			buildStoneCutterRecipe(tileStairBlock, tileBlock,1, consumer);
 		}
 
@@ -182,7 +182,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 	}
 
 	private void buildTwoByTwoRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
-		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 6);
+		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 4);
 		shaped.define('#', input);
 		shaped.pattern("##");
 		shaped.pattern("##");
@@ -221,7 +221,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		cooking.save(consumer);
 	}
 
-	private void buildStairRecipe(StairBlock output, Block input, Consumer<FinishedRecipe> consumer) {
+	private void buildStairRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 4);
 		shaped.define('#', input);
 		shaped.pattern("#  ");

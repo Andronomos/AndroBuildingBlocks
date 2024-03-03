@@ -68,6 +68,7 @@ public class BlockRegistry {
 	public static final RegistryObject<SlabBlock> STEEL_SLAB = registerSlabBlock("steel_slab", METAL_PROPERTIES);
 	public static final RegistryObject<WallBlock> STEEL_WALL = registerWallBlock("steel_wall", METAL_PROPERTIES);
 	public static final RegistryObject<Block> STEEL_MESH = registerBlock("steel_mesh", METAL_PROPERTIES);
+	public static final RegistryObject<Block> STEEL_PLATE = registerBlock("steel_plate", METAL_PROPERTIES);
 	//endregion
 
 	public static final RegistryObject<Block> GRAPHITE = registerBlock("graphite", METAL_PROPERTIES);

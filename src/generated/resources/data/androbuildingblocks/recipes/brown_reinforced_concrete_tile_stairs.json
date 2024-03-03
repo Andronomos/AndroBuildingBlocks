@@ -3,15 +3,16 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "androbuildingblocks:brown_reinforced_concrete"
+      "item": "androbuildingblocks:brown_reinforced_concrete_tile"
     }
   },
   "pattern": [
-    "###",
+    "#  ",
+    "## ",
     "###"
   ],
   "result": {
-    "count": 6,
+    "count": 4,
     "item": "androbuildingblocks:brown_reinforced_concrete_tile_stairs"
   },
   "show_notification": true
