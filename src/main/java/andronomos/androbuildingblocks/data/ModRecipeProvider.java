@@ -101,9 +101,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildStoneCutterRecipe(BlockRegistry.STEEL_MESH.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
 		//endregion
 
-		buildSmeltingRecipe(Blocks.COAL_BLOCK, BlockRegistry.CARBON.get(), recipeConsumer);
-		buildStoneCutterRecipe(BlockRegistry.CARBON_MESH.get(), BlockRegistry.CARBON.get(), 1, recipeConsumer);
-		buildStoneCutterRecipe(BlockRegistry.CARBON_GRATE.get(), BlockRegistry.CARBON.get(), 1, recipeConsumer);
+		buildSmeltingRecipe(Blocks.COAL_BLOCK, BlockRegistry.GRAPHITE.get(), recipeConsumer);
+		buildStoneCutterRecipe(BlockRegistry.GRAPHITE_MESH.get(), BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
+		buildStoneCutterRecipe(BlockRegistry.GRAPHITE_GRATE.get(), BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
 	}
 
 	private void buildReinforcedConcreteRecipes(Block concrete, Item dye, Consumer<FinishedRecipe> consumer) {

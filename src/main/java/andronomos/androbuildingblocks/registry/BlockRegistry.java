@@ -70,9 +70,9 @@ public class BlockRegistry {
 	public static final RegistryObject<Block> STEEL_MESH = registerBlock("steel_mesh", METAL_PROPERTIES);
 	//endregion
 
-	public static final RegistryObject<Block> CARBON = registerBlock("carbon", METAL_PROPERTIES);
-	public static final RegistryObject<Block> CARBON_GRATE = registerRotatableBlock("carbon_grate", METAL_PROPERTIES);
-	public static final RegistryObject<Block> CARBON_MESH = registerBlock("carbon_mesh", METAL_PROPERTIES);
+	public static final RegistryObject<Block> GRAPHITE = registerBlock("graphite", METAL_PROPERTIES);
+	public static final RegistryObject<Block> GRAPHITE_GRATE = registerRotatableBlock("graphite_grate", METAL_PROPERTIES);
+	public static final RegistryObject<Block> GRAPHITE_MESH = registerBlock("graphite_mesh", METAL_PROPERTIES);
 
 
 
