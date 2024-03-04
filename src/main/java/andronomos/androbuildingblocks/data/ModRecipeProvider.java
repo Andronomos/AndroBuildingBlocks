@@ -28,21 +28,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 	@Override
 	protected void buildRecipes(@NotNull Consumer<FinishedRecipe> recipeConsumer) {
-		BlockCategories.REINFORCED_CONCRETE_BLOCKS.types.forEach(color -> {
-			Block concreteBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_reinforced_concrete", color)));
-			Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", String.format("%s_dye", color)));
+		BlockCategories.REINFORCED_CONCRETE_BLOCKS.types.forEach(type -> {
+			Block concreteBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_reinforced_concrete", type.name)));
+			Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", String.format("%s_dye", type.name)));
 			if(blockExists(concreteBlock) && dye != null) {
 				buildReinforcedConcreteRecipes(concreteBlock, dye, recipeConsumer);
 			}
 		});
-
-		//BlockList.concreteColors.forEach(color -> {
-		//	Block concreteBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_reinforced_concrete", color)));
-		//	Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", String.format("%s_dye", color)));
-		//	if(blockExists(concreteBlock) && dye != null) {
-		//		buildReinforcedConcreteRecipes(concreteBlock, dye, recipeConsumer);
-		//	}
-		//});
 
 		//for(DyeColor color : DyeColor.values()) {
 		//	Block vanillaGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft", String.format("%s_stained_glass", color)));

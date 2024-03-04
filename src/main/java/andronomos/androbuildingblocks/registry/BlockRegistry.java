@@ -27,23 +27,22 @@ public class BlockRegistry {
 
 	public static void registerReinforcedConcrete() {
 		BlockCategories.REINFORCED_CONCRETE_BLOCKS.types.forEach(type -> {
-			Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", String.format("%s_dye", type)));
-			DyeColor dyeColor = DyeColor.valueOf(type.name.toUpperCase());
-			BlockBehaviour.Properties properties = BlockCategories.REINFORCED_CONCRETE_BLOCKS.properties.mapColor(dyeColor);
+			Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", String.format("%s_dye", type.name)));
+			BlockBehaviour.Properties properties = BlockCategories.REINFORCED_CONCRETE_BLOCKS.properties.mapColor(type.getDyeColor());
 
 			if(dye != null) {
-				RegistryObject<Block> concreteBlock = registerBlock(String.format("%s_reinforced_concrete", type), properties);
+				RegistryObject<Block> concreteBlock = registerBlock(String.format("%s_reinforced_concrete", type.name), properties);
 
 				if(type.hasStairVariant) {
-					registerStairBlock(String.format("%s_reinforced_concrete_stairs", type), concreteBlock, properties);
+					registerStairBlock(String.format("%s_reinforced_concrete_stairs", type.name), concreteBlock, properties);
 				}
 
 				if(type.hasSlabVariant) {
-					registerSlabBlock(String.format("%s_reinforced_concrete_slab", type), properties);
+					registerSlabBlock(String.format("%s_reinforced_concrete_slab", type.name), properties);
 				}
 
 				if(type.hasWallVariant) {
-					registerWallBlock(String.format("%s_reinforced_concrete_wall", type), properties);
+					registerWallBlock(String.format("%s_reinforced_concrete_wall", type.name), properties);
 				}
 			}
 		});
@@ -59,20 +58,46 @@ public class BlockRegistry {
 	public static void registerSteelBlocks() {
 		BlockBehaviour.Properties properties = BlockCategories.STEEL_BLOCKS.properties;
 		RegistryObject<Block> steelBlock = registerBlock(BlockCategories.STEEL_BLOCKS.name, properties);
+		registerStairBlock(String.format("%s_stairs", BlockCategories.STEEL_BLOCKS.name), steelBlock, properties);
+		registerSlabBlock(String.format("%s_slab", BlockCategories.STEEL_BLOCKS.name), properties);
+		registerWallBlock(String.format("%s_wall", BlockCategories.STEEL_BLOCKS.name), properties);
 
 		BlockCategories.STEEL_BLOCKS.types.forEach(type -> {
 			registerBlock(String.format("steel_%s", type.name), properties);
 
 			if(type.hasStairVariant) {
-				registerStairBlock(String.format("%s_%s_stairs", BlockCategories.STEEL_BLOCKS.name, type), steelBlock, properties);
+				registerStairBlock(String.format("%s_%s_stairs", BlockCategories.STEEL_BLOCKS.name, type.name), steelBlock, properties);
 			}
 
 			if(type.hasSlabVariant) {
-				registerSlabBlock(String.format("%s_%s_slab", BlockCategories.STEEL_BLOCKS.name, type), properties);
+				registerSlabBlock(String.format("%s_%s_slab", BlockCategories.STEEL_BLOCKS.name, type.name), properties);
 			}
 
 			if(type.hasWallVariant) {
-				registerWallBlock(String.format("%s_%s_wall", BlockCategories.STEEL_BLOCKS.name, type), properties);
+				registerWallBlock(String.format("%s_%s_wall", BlockCategories.STEEL_BLOCKS.name, type.name), properties);
+			}
+		});
+	}
+
+	public static void registerGraphiteBlocks()
+	{
+		BlockBehaviour.Properties properties = BlockCategories.GRAPHITE_BLOCKS.properties;
+		RegistryObject<Block> graphiteBlock = registerBlock(BlockCategories.GRAPHITE_BLOCKS.name, properties);
+		registerStairBlock(String.format("%s_stairs", BlockCategories.GRAPHITE_BLOCKS.name), graphiteBlock, properties);
+		registerSlabBlock(String.format("%s_slab", BlockCategories.GRAPHITE_BLOCKS.name), properties);
+		registerWallBlock(String.format("%s_wall", BlockCategories.GRAPHITE_BLOCKS.name), properties);
+
+		BlockCategories.GRAPHITE_BLOCKS.types.forEach(type -> {
+			if(type.hasStairVariant) {
+				registerStairBlock(String.format("%s_%s_stairs", BlockCategories.STEEL_BLOCKS.name, type.name), graphiteBlock, properties);
+			}
+
+			if(type.hasSlabVariant) {
+				registerSlabBlock(String.format("%s_%s_slab", BlockCategories.STEEL_BLOCKS.name, type.name), properties);
+			}
+
+			if(type.hasWallVariant) {
+				registerWallBlock(String.format("%s_%s_wall", BlockCategories.STEEL_BLOCKS.name, type.name), properties);
 			}
 		});
 	}

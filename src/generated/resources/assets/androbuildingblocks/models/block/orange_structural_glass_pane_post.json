@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/template_glass_pane_post",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "edge": "androbuildingblocks:block/orange_structural_glass",
+    "pane": "androbuildingblocks:block/orange_structural_glass"
+  }
+}
