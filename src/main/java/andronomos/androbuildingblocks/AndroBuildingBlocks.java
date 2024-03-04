@@ -25,6 +25,8 @@ public class AndroBuildingBlocks
 
         BlockRegistry.BLOCKS.register(modEventBus);
         BlockRegistry.registerReinforcedConcrete();
+        BlockRegistry.registerSteelBlocks();
+        BlockRegistry.registerGlassBlocks();
 
         ModItems.ITEMS.register(modEventBus);
         ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);

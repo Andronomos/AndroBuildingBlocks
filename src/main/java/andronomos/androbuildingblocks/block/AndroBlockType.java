@@ -1,10 +1,13 @@
 package andronomos.androbuildingblocks.block;
 
+import net.minecraft.world.item.DyeColor;
+
 public class AndroBlockType {
-	public final String name;
-	public final boolean hasStairVariant;
-	public final boolean hasSlabVariant;
-	public final boolean hasWallVariant;
+	public String name;
+	public boolean hasStairVariant;
+	public boolean hasSlabVariant;
+	public boolean hasWallVariant;
+	public DyeColor dyeColor;
 
 	public AndroBlockType(String name) {
 		this(name, true, true, true);
@@ -15,6 +18,14 @@ public class AndroBlockType {
 		this.hasStairVariant = hasStairVariant;
 		this.hasSlabVariant = hasSlabVariant;
 		this.hasWallVariant = hasWallVariant;
+	}
+
+	public void setDyeColor(DyeColor color) {
+		this.dyeColor = color;
+	}
+
+	public DyeColor getDyeColor() {
+		return this.dyeColor;
 	}
 }
 

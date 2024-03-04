@@ -1,6 +1,6 @@
 package andronomos.androbuildingblocks.data;
 
-import andronomos.androbuildingblocks.block.BlockList;
+import andronomos.androbuildingblocks.block.BlockCategories;
 import andronomos.androbuildingblocks.registry.BlockRegistry;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -28,15 +28,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 	@Override
 	protected void buildRecipes(@NotNull Consumer<FinishedRecipe> recipeConsumer) {
-		BlockList.CONCRETE_BLOCKS.types.forEach(color -> {
+		BlockCategories.REINFORCED_CONCRETE_BLOCKS.types.forEach(color -> {
 			Block concreteBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_reinforced_concrete", color)));
 			Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", String.format("%s_dye", color)));
 			if(blockExists(concreteBlock) && dye != null) {
 				buildReinforcedConcreteRecipes(concreteBlock, dye, recipeConsumer);
 			}
 		});
-
-
 
 		//BlockList.concreteColors.forEach(color -> {
 		//	Block concreteBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_reinforced_concrete", color)));
@@ -46,77 +44,77 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		//	}
 		//});
 
-		for(DyeColor color : DyeColor.values()) {
-			Block vanillaGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft", String.format("%s_stained_glass", color)));
-			Block structuralGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_structural_glass", color)));
-			Block glassPaneBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_structural_glass_pane", color)));
-
-			if(blockExists(vanillaGlassBlock) && blockExists(structuralGlassBlock) && blockExists(glassPaneBlock)) {
-				ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, structuralGlassBlock, 4);
-				shaped.define('1', vanillaGlassBlock);
-				shaped.define('2', Items.SLIME_BALL);
-				shaped.pattern("212");
-				shaped.pattern("121");
-				shaped.pattern("212");
-				shaped.unlockedBy("has_item", has(Items.SLIME_BALL));
-				shaped.save(recipeConsumer);
-
-				buildThreeByTwoRecipe(glassPaneBlock, structuralGlassBlock, recipeConsumer);
-			}
-		}
+		//for(DyeColor color : DyeColor.values()) {
+		//	Block vanillaGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft", String.format("%s_stained_glass", color)));
+		//	Block structuralGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_structural_glass", color)));
+		//	Block glassPaneBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_structural_glass_pane", color)));
+		//
+		//	if(blockExists(vanillaGlassBlock) && blockExists(structuralGlassBlock) && blockExists(glassPaneBlock)) {
+		//		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, structuralGlassBlock, 4);
+		//		shaped.define('1', vanillaGlassBlock);
+		//		shaped.define('2', Items.SLIME_BALL);
+		//		shaped.pattern("212");
+		//		shaped.pattern("121");
+		//		shaped.pattern("212");
+		//		shaped.unlockedBy("has_item", has(Items.SLIME_BALL));
+		//		shaped.save(recipeConsumer);
+		//
+		//		buildThreeByTwoRecipe(glassPaneBlock, structuralGlassBlock, recipeConsumer);
+		//	}
+		//}
 
 		//region Smooth Deepslate
-		buildSmeltingRecipe(Blocks.DEEPSLATE, BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
-		buildStairRecipe(BlockRegistry.SMOOTH_DEEPSLATE_STAIRS.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
-		buildStoneCutterRecipe(BlockRegistry.SMOOTH_DEEPSLATE_STAIRS.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), 1, recipeConsumer);
-		buildStoneCutterRecipe(BlockRegistry.SMOOTH_DEEPSLATE_SLAB.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), 2, recipeConsumer);
-		buildThreeByOneRecipe(BlockRegistry.SMOOTH_DEEPSLATE_SLAB.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
-		buildThreeByTwoRecipe(BlockRegistry.SMOOTH_DEEPSLATE_WALL.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
-		buildStoneCutterRecipe(BlockRegistry.SMOOTH_DEEPSLATE_WALL.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), 1, recipeConsumer);
+		//buildSmeltingRecipe(Blocks.DEEPSLATE, BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
+		//buildStairRecipe(BlockRegistry.SMOOTH_DEEPSLATE_STAIRS.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
+		//buildStoneCutterRecipe(BlockRegistry.SMOOTH_DEEPSLATE_STAIRS.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), 1, recipeConsumer);
+		//buildStoneCutterRecipe(BlockRegistry.SMOOTH_DEEPSLATE_SLAB.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), 2, recipeConsumer);
+		//buildThreeByOneRecipe(BlockRegistry.SMOOTH_DEEPSLATE_SLAB.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
+		//buildThreeByTwoRecipe(BlockRegistry.SMOOTH_DEEPSLATE_WALL.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
+		//buildStoneCutterRecipe(BlockRegistry.SMOOTH_DEEPSLATE_WALL.get(), BlockRegistry.SMOOTH_DEEPSLATE.get(), 1, recipeConsumer);
 		//endregion
 
 		//region Caution Stripes
-		buildStripedRecipe(BlockRegistry.YELLOW_CAUTION_STRIPES.get(), Items.YELLOW_DYE, Items.BLACK_DYE, recipeConsumer);
-		buildStripedRecipe(BlockRegistry.RED_CAUTION_STRIPES.get(), Items.RED_DYE, Items.WHITE_DYE, recipeConsumer);
+		//buildStripedRecipe(BlockRegistry.YELLOW_CAUTION_STRIPES.get(), Items.YELLOW_DYE, Items.BLACK_DYE, recipeConsumer);
+		//buildStripedRecipe(BlockRegistry.RED_CAUTION_STRIPES.get(), Items.RED_DYE, Items.WHITE_DYE, recipeConsumer);
 		//endregion
 
 		//region Steel
-		ShapedRecipeBuilder carbonSteelCoalRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.STEEL.get(), 4);
-		carbonSteelCoalRecipe.define('C', Items.COAL);
-		carbonSteelCoalRecipe.define('I', Tags.Items.INGOTS_IRON);
-		carbonSteelCoalRecipe.pattern("CIC");
-		carbonSteelCoalRecipe.pattern("ICI");
-		carbonSteelCoalRecipe.pattern("CIC");
-		carbonSteelCoalRecipe.group("carbon_steel");
-		carbonSteelCoalRecipe.unlockedBy("has_item", has(Items.COAL));
-		carbonSteelCoalRecipe.save(recipeConsumer);
+		//ShapedRecipeBuilder carbonSteelCoalRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.STEEL.get(), 4);
+		//carbonSteelCoalRecipe.define('C', Items.COAL);
+		//carbonSteelCoalRecipe.define('I', Tags.Items.INGOTS_IRON);
+		//carbonSteelCoalRecipe.pattern("CIC");
+		//carbonSteelCoalRecipe.pattern("ICI");
+		//carbonSteelCoalRecipe.pattern("CIC");
+		//carbonSteelCoalRecipe.group("carbon_steel");
+		//carbonSteelCoalRecipe.unlockedBy("has_item", has(Items.COAL));
+		//carbonSteelCoalRecipe.save(recipeConsumer);
+		//
+		//ShapedRecipeBuilder carbonSteelCharcoalRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.STEEL.get(), 4);
+		//carbonSteelCharcoalRecipe.define('C', Items.CHARCOAL);
+		//carbonSteelCharcoalRecipe.define('I', Tags.Items.INGOTS_IRON);
+		//carbonSteelCharcoalRecipe.pattern("CIC");
+		//carbonSteelCharcoalRecipe.pattern("ICI");
+		//carbonSteelCharcoalRecipe.pattern("CIC");
+		//carbonSteelCharcoalRecipe.group("carbon_steel");
+		//carbonSteelCharcoalRecipe.unlockedBy("has_item", has(Items.CHARCOAL));
+		//carbonSteelCharcoalRecipe.save(recipeConsumer, "carbon_steel_from_charcoal");
 
-		ShapedRecipeBuilder carbonSteelCharcoalRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.STEEL.get(), 4);
-		carbonSteelCharcoalRecipe.define('C', Items.CHARCOAL);
-		carbonSteelCharcoalRecipe.define('I', Tags.Items.INGOTS_IRON);
-		carbonSteelCharcoalRecipe.pattern("CIC");
-		carbonSteelCharcoalRecipe.pattern("ICI");
-		carbonSteelCharcoalRecipe.pattern("CIC");
-		carbonSteelCharcoalRecipe.group("carbon_steel");
-		carbonSteelCharcoalRecipe.unlockedBy("has_item", has(Items.CHARCOAL));
-		carbonSteelCharcoalRecipe.save(recipeConsumer, "carbon_steel_from_charcoal");
-
-		buildStairRecipe(BlockRegistry.STEEL_STAIRS.get(), BlockRegistry.STEEL.get(), recipeConsumer);
-		buildStoneCutterRecipe(BlockRegistry.STEEL_STAIRS.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
-		buildThreeByOneRecipe(BlockRegistry.STEEL_SLAB.get(), BlockRegistry.STEEL.get(), recipeConsumer);
-		buildStoneCutterRecipe(BlockRegistry.STEEL_SLAB.get(), BlockRegistry.STEEL.get(), 2, recipeConsumer);
-		buildStoneCutterRecipe(BlockRegistry.STEEL_WALL.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
-		buildThreeByTwoRecipe(BlockRegistry.STEEL_WALL.get(), BlockRegistry.STEEL.get(), recipeConsumer);
-		buildStoneCutterRecipe(BlockRegistry.STEEL_MESH.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
-		buildTwoByTwoRecipe(BlockRegistry.STEEL_PLATE.get(), BlockRegistry.STEEL.get(), recipeConsumer);
+		//buildStairRecipe(BlockRegistry.STEEL_STAIRS.get(), BlockRegistry.STEEL.get(), recipeConsumer);
+		//buildStoneCutterRecipe(BlockRegistry.STEEL_STAIRS.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
+		//buildThreeByOneRecipe(BlockRegistry.STEEL_SLAB.get(), BlockRegistry.STEEL.get(), recipeConsumer);
+		//buildStoneCutterRecipe(BlockRegistry.STEEL_SLAB.get(), BlockRegistry.STEEL.get(), 2, recipeConsumer);
+		//buildStoneCutterRecipe(BlockRegistry.STEEL_WALL.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
+		//buildThreeByTwoRecipe(BlockRegistry.STEEL_WALL.get(), BlockRegistry.STEEL.get(), recipeConsumer);
+		//buildStoneCutterRecipe(BlockRegistry.STEEL_MESH.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
+		//buildTwoByTwoRecipe(BlockRegistry.STEEL_PLATE.get(), BlockRegistry.STEEL.get(), recipeConsumer);
 		//endregion
 
-		buildSmeltingRecipe(Blocks.COAL_BLOCK, BlockRegistry.GRAPHITE.get(), recipeConsumer);
-		buildStoneCutterRecipe(BlockRegistry.GRAPHITE_STAIRS.get(), BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
-		buildThreeByOneRecipe(BlockRegistry.GRAPHITE_SLAB.get(), BlockRegistry.GRAPHITE.get(), recipeConsumer);
-		buildStoneCutterRecipe(BlockRegistry.GRAPHITE_SLAB.get(), BlockRegistry.GRAPHITE.get(), 2, recipeConsumer);
-		buildThreeByTwoRecipe(BlockRegistry.GRAPHITE_WALL.get(), BlockRegistry.GRAPHITE.get(), recipeConsumer);
-		buildStoneCutterRecipe(BlockRegistry.GRAPHITE_WALL.get(), BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
+		//buildSmeltingRecipe(Blocks.COAL_BLOCK, BlockRegistry.GRAPHITE.get(), recipeConsumer);
+		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_STAIRS.get(), BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
+		//buildThreeByOneRecipe(BlockRegistry.GRAPHITE_SLAB.get(), BlockRegistry.GRAPHITE.get(), recipeConsumer);
+		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_SLAB.get(), BlockRegistry.GRAPHITE.get(), 2, recipeConsumer);
+		//buildThreeByTwoRecipe(BlockRegistry.GRAPHITE_WALL.get(), BlockRegistry.GRAPHITE.get(), recipeConsumer);
+		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_WALL.get(), BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
 
 		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_MESH.get(), BlockRegistry.GRAPHITE_TILE_STAIRS.get(), 1, recipeConsumer);
 		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_GRATE.get(), BlockRegistry.GRAPHITE_TILE_STAIRS.get(), 1, recipeConsumer);
