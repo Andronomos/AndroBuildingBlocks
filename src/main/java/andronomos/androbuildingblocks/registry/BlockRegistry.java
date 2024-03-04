@@ -36,10 +36,10 @@ public class BlockRegistry {
 				registerStairBlock(String.format("%s_reinforced_concrete_stairs", color), concreteBlock, CONCRETE_PROPERTIES.mapColor(dyeColor));
 				registerSlabBlock(String.format("%s_reinforced_concrete_slab", color), CONCRETE_PROPERTIES.mapColor(dyeColor));
 				registerWallBlock(String.format("%s_reinforced_concrete_wall", color), CONCRETE_PROPERTIES.mapColor(dyeColor));
-				registerRotatableBlock(String.format("%s_reinforced_concrete_grate", color), CONCRETE_PROPERTIES.mapColor(dyeColor));
-				RegistryObject<Block> concreteTileBlock = registerBlock(String.format("%s_reinforced_concrete_tile", color), CONCRETE_PROPERTIES.mapColor(dyeColor));
-				registerStairBlock(String.format("%s_reinforced_concrete_tile_stairs", color), concreteTileBlock, CONCRETE_PROPERTIES.mapColor(dyeColor));
-				registerRotatableBlock(String.format("%s_reinforced_concrete_pillar", color), CONCRETE_PROPERTIES.mapColor(dyeColor));
+				//registerRotatableBlock(String.format("%s_reinforced_concrete_grate", color), CONCRETE_PROPERTIES.mapColor(dyeColor));
+				//RegistryObject<Block> concreteTileBlock = registerBlock(String.format("%s_reinforced_concrete_tile", color), CONCRETE_PROPERTIES.mapColor(dyeColor));
+				//registerStairBlock(String.format("%s_reinforced_concrete_tile_stairs", color), concreteTileBlock, CONCRETE_PROPERTIES.mapColor(dyeColor));
+				//registerRotatableBlock(String.format("%s_reinforced_concrete_pillar", color), CONCRETE_PROPERTIES.mapColor(dyeColor));
 			}
 		});
 
