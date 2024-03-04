@@ -15,7 +15,7 @@ public class BlockCategories {
 	public static final AndroBlockCategory STEEL_BLOCKS = new AndroBlockCategory("steel", BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK));
 	public static final AndroBlockCategory STRUCTURAL_GLASS_BLOCKS = new AndroBlockCategory("structural_glass", BlockBehaviour.Properties.copy(Blocks.GLASS).strength(0.75f));
 
-	public static void setupBlocks() {
+	public static void createCategories() {
 		AndroBlockCategories.add(REINFORCED_CONCRETE_BLOCKS);
 		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("black").setDyeColor(DyeColor.BLACK));
 		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("blue").setDyeColor(DyeColor.BLUE));

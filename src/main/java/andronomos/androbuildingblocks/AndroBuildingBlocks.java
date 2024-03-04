@@ -24,7 +24,7 @@ public class AndroBuildingBlocks
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        BlockCategories.setupBlocks();
+        BlockCategories.createCategories();
 
         BlockRegistry.BLOCKS.register(modEventBus);
         BlockRegistry.registerReinforcedConcrete();

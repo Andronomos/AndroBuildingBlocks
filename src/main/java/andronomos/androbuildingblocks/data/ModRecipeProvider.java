@@ -140,11 +140,37 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		});
 		//endregion
 
-
-
-
 		//region Graphite
-		//buildSmeltingRecipe(Blocks.COAL_BLOCK, BlockRegistry.GRAPHITE.get(), recipeConsumer);
+		Block graphiteBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, BlockCategories.GRAPHITE_BLOCKS.name));
+		buildSmeltingRecipe(Blocks.COAL_BLOCK, graphiteBlock, recipeConsumer);
+		BlockCategories.GRAPHITE_BLOCKS.types.forEach(type -> {
+			String variantName = String.format("%s_%s", BlockCategories.GRAPHITE_BLOCKS.name, type.name);
+			Block variantBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, variantName));
+
+			if(blockExists(variantBlock)) {
+				Block stairBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_stairs", variantName)));
+				Block slabBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_slab", variantName)));
+				Block wallBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_wall", variantName)));
+
+				if(type.hasStairVariant && blockExists(stairBlock)) {
+					buildStairRecipe(stairBlock, variantBlock, recipeConsumer);
+					buildStoneCutterRecipe(stairBlock, variantBlock, 1, recipeConsumer);
+				}
+
+				if(type.hasSlabVariant && blockExists(slabBlock)) {
+					buildThreeByOneRecipe(slabBlock, variantBlock, recipeConsumer);
+					buildStoneCutterRecipe(slabBlock, variantBlock, 2, recipeConsumer);
+				}
+
+				if(type.hasWallVariant && blockExists(wallBlock)) {
+					buildStoneCutterRecipe(wallBlock, variantBlock, 1, recipeConsumer);
+					buildThreeByTwoRecipe(wallBlock, variantBlock, recipeConsumer);
+				}
+			}
+		});
+
+
+
 		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_STAIRS.get(), BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
 		//buildThreeByOneRecipe(BlockRegistry.GRAPHITE_SLAB.get(), BlockRegistry.GRAPHITE.get(), recipeConsumer);
 		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_SLAB.get(), BlockRegistry.GRAPHITE.get(), 2, recipeConsumer);
@@ -160,20 +186,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_TILE_SLAB.get(), BlockRegistry.GRAPHITE_TILE.get(), 2, recipeConsumer);
 		//buildThreeByTwoRecipe(BlockRegistry.GRAPHITE_TILE_WALL.get(), BlockRegistry.GRAPHITE_TILE.get(), recipeConsumer);
 		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_TILE_WALL.get(), BlockRegistry.GRAPHITE_TILE.get(), 1, recipeConsumer);
-
-		//BlockVariants.graphiteVariants.forEach(variant -> {
-		//	Block variantBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("graphite_%s", variant)));
-		//
-		//	if(blockExists(variantBlock)) {
-		//		buildStoneCutterRecipe(variantBlock, BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
-		//
-		//		//stairs, slab, wall
-		//		BlockVariants.graphiteBlocks.forEach(block -> {
-		//
-		//		});
-		//	}
-		//});
 		//endregion
+
+
+
+
+
+
 
 		//region Smooth Deepslate
 		//buildSmeltingRecipe(Blocks.DEEPSLATE, BlockRegistry.SMOOTH_DEEPSLATE.get(), recipeConsumer);
