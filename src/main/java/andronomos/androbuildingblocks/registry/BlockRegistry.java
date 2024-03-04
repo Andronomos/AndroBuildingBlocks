@@ -88,6 +88,8 @@ public class BlockRegistry {
 		registerWallBlock(String.format("%s_wall", BlockCategories.GRAPHITE_BLOCKS.name), properties);
 
 		BlockCategories.GRAPHITE_BLOCKS.types.forEach(type -> {
+			registerBlock(String.format("%s_%s", BlockCategories.GRAPHITE_BLOCKS.name, type.name), properties);
+
 			if(type.hasStairVariant) {
 				registerStairBlock(String.format("%s_%s_stairs", BlockCategories.GRAPHITE_BLOCKS.name, type.name), graphiteBlock, properties);
 			}

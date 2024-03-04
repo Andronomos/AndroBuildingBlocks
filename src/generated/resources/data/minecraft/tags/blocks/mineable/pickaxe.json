@@ -76,6 +76,9 @@
     "androbuildingblocks:graphite_stairs",
     "androbuildingblocks:graphite_slab",
     "androbuildingblocks:graphite_wall",
+    "androbuildingblocks:graphite_grate",
+    "androbuildingblocks:graphite_mesh",
+    "androbuildingblocks:graphite_tile",
     "androbuildingblocks:graphite_tile_stairs",
     "androbuildingblocks:graphite_tile_slab",
     "androbuildingblocks:graphite_tile_wall"
