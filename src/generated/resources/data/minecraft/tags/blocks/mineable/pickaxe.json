@@ -71,6 +71,13 @@
     "androbuildingblocks:red_structural_glass",
     "androbuildingblocks:red_structural_glass_pane",
     "androbuildingblocks:black_structural_glass",
-    "androbuildingblocks:black_structural_glass_pane"
+    "androbuildingblocks:black_structural_glass_pane",
+    "androbuildingblocks:graphite",
+    "androbuildingblocks:graphite_stairs",
+    "androbuildingblocks:graphite_slab",
+    "androbuildingblocks:graphite_wall",
+    "androbuildingblocks:graphite_tile_stairs",
+    "androbuildingblocks:graphite_tile_slab",
+    "androbuildingblocks:graphite_tile_wall"
   ]
 }

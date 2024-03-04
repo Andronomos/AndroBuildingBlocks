@@ -27,9 +27,9 @@ public class BlockCategories {
 		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("white").setDyeColor(DyeColor.WHITE));
 
 		AndroBlockCategories.add(GRAPHITE_BLOCKS);
-		GRAPHITE_BLOCKS.addType(new AndroBlockType("grate"));
-		GRAPHITE_BLOCKS.addType(new AndroBlockType("mesh"));
-		GRAPHITE_BLOCKS.addType(new AndroBlockType("tile", false, false, false));
+		GRAPHITE_BLOCKS.addType(new AndroBlockType("grate", false, false, false));
+		GRAPHITE_BLOCKS.addType(new AndroBlockType("mesh", false, false, false));
+		GRAPHITE_BLOCKS.addType(new AndroBlockType("tile"));
 
 		AndroBlockCategories.add(STEEL_BLOCKS);
 		STEEL_BLOCKS.addType(new AndroBlockType("plate"));

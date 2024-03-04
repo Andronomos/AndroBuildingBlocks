@@ -89,15 +89,15 @@ public class BlockRegistry {
 
 		BlockCategories.GRAPHITE_BLOCKS.types.forEach(type -> {
 			if(type.hasStairVariant) {
-				registerStairBlock(String.format("%s_%s_stairs", BlockCategories.STEEL_BLOCKS.name, type.name), graphiteBlock, properties);
+				registerStairBlock(String.format("%s_%s_stairs", BlockCategories.GRAPHITE_BLOCKS.name, type.name), graphiteBlock, properties);
 			}
 
 			if(type.hasSlabVariant) {
-				registerSlabBlock(String.format("%s_%s_slab", BlockCategories.STEEL_BLOCKS.name, type.name), properties);
+				registerSlabBlock(String.format("%s_%s_slab", BlockCategories.GRAPHITE_BLOCKS.name, type.name), properties);
 			}
 
 			if(type.hasWallVariant) {
-				registerWallBlock(String.format("%s_%s_wall", BlockCategories.STEEL_BLOCKS.name, type.name), properties);
+				registerWallBlock(String.format("%s_%s_wall", BlockCategories.GRAPHITE_BLOCKS.name, type.name), properties);
 			}
 		});
 	}
@@ -112,15 +112,6 @@ public class BlockRegistry {
 	//region Caution
 	//public static final RegistryObject<Block> YELLOW_CAUTION_STRIPES = registerBlock("yellow_caution_stripes", STONE_PROPERTIES.mapColor(DyeColor.YELLOW));
 	//public static final RegistryObject<Block> RED_CAUTION_STRIPES = registerBlock("red_caution_stripes", STONE_PROPERTIES.mapColor(DyeColor.YELLOW));
-	//endregion
-
-	//region Steel
-	//public static final RegistryObject<Block> STEEL = registerBlock("steel", METAL_PROPERTIES);
-	//public static final RegistryObject<StairBlock> STEEL_STAIRS = registerStairBlock("steel_stairs", STEEL, METAL_PROPERTIES);
-	//public static final RegistryObject<SlabBlock> STEEL_SLAB = registerSlabBlock("steel_slab", METAL_PROPERTIES);
-	//public static final RegistryObject<WallBlock> STEEL_WALL = registerWallBlock("steel_wall", METAL_PROPERTIES);
-	//public static final RegistryObject<Block> STEEL_MESH = registerBlock("steel_mesh", METAL_PROPERTIES);
-	//public static final RegistryObject<Block> STEEL_PLATE = registerBlock("steel_plate", METAL_PROPERTIES);
 	//endregion
 
 	//public static final RegistryObject<Block> GRAPHITE = registerBlock("graphite", METAL_PROPERTIES);
