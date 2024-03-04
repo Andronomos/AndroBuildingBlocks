@@ -1,6 +1,6 @@
 package andronomos.androbuildingblocks.data;
 
-import andronomos.androbuildingblocks.block.BlockVariants;
+import andronomos.androbuildingblocks.block.BlockList;
 import andronomos.androbuildingblocks.registry.BlockRegistry;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -11,7 +11,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.StairBlock;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -29,13 +28,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 	@Override
 	protected void buildRecipes(@NotNull Consumer<FinishedRecipe> recipeConsumer) {
-		BlockVariants.concreteColors.forEach(color -> {
+		BlockList.CONCRETE_BLOCKS.types.forEach(color -> {
 			Block concreteBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_reinforced_concrete", color)));
 			Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", String.format("%s_dye", color)));
 			if(blockExists(concreteBlock) && dye != null) {
 				buildReinforcedConcreteRecipes(concreteBlock, dye, recipeConsumer);
 			}
 		});
+
+
+
+		//BlockList.concreteColors.forEach(color -> {
+		//	Block concreteBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_reinforced_concrete", color)));
+		//	Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", String.format("%s_dye", color)));
+		//	if(blockExists(concreteBlock) && dye != null) {
+		//		buildReinforcedConcreteRecipes(concreteBlock, dye, recipeConsumer);
+		//	}
+		//});
 
 		for(DyeColor color : DyeColor.values()) {
 			Block vanillaGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft", String.format("%s_stained_glass", color)));
@@ -103,9 +112,34 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		//endregion
 
 		buildSmeltingRecipe(Blocks.COAL_BLOCK, BlockRegistry.GRAPHITE.get(), recipeConsumer);
-		buildStoneCutterRecipe(BlockRegistry.GRAPHITE_MESH.get(), BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
-		buildStoneCutterRecipe(BlockRegistry.GRAPHITE_GRATE.get(), BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
-		buildTwoByTwoRecipe(BlockRegistry.GRAPHITE_TILE.get(), BlockRegistry.GRAPHITE.get(), recipeConsumer);
+		buildStoneCutterRecipe(BlockRegistry.GRAPHITE_STAIRS.get(), BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
+		buildThreeByOneRecipe(BlockRegistry.GRAPHITE_SLAB.get(), BlockRegistry.GRAPHITE.get(), recipeConsumer);
+		buildStoneCutterRecipe(BlockRegistry.GRAPHITE_SLAB.get(), BlockRegistry.GRAPHITE.get(), 2, recipeConsumer);
+		buildThreeByTwoRecipe(BlockRegistry.GRAPHITE_WALL.get(), BlockRegistry.GRAPHITE.get(), recipeConsumer);
+		buildStoneCutterRecipe(BlockRegistry.GRAPHITE_WALL.get(), BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
+
+		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_MESH.get(), BlockRegistry.GRAPHITE_TILE_STAIRS.get(), 1, recipeConsumer);
+		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_GRATE.get(), BlockRegistry.GRAPHITE_TILE_STAIRS.get(), 1, recipeConsumer);
+		//buildTwoByTwoRecipe(BlockRegistry.GRAPHITE_TILE.get(), BlockRegistry.GRAPHITE_TILE_STAIRS.get(), recipeConsumer);
+		//buildStairRecipe(BlockRegistry.GRAPHITE_TILE_STAIRS.get(), BlockRegistry.GRAPHITE_TILE.get(), recipeConsumer);
+		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_TILE_STAIRS.get(), BlockRegistry.GRAPHITE_TILE.get(), 1, recipeConsumer);
+		//buildThreeByOneRecipe(BlockRegistry.GRAPHITE_TILE_SLAB.get(), BlockRegistry.GRAPHITE_TILE.get(), recipeConsumer);
+		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_TILE_SLAB.get(), BlockRegistry.GRAPHITE_TILE.get(), 2, recipeConsumer);
+		//buildThreeByTwoRecipe(BlockRegistry.GRAPHITE_TILE_WALL.get(), BlockRegistry.GRAPHITE_TILE.get(), recipeConsumer);
+		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_TILE_WALL.get(), BlockRegistry.GRAPHITE_TILE.get(), 1, recipeConsumer);
+
+		//BlockVariants.graphiteVariants.forEach(variant -> {
+		//	Block variantBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("graphite_%s", variant)));
+		//
+		//	if(blockExists(variantBlock)) {
+		//		buildStoneCutterRecipe(variantBlock, BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
+		//
+		//		//stairs, slab, wall
+		//		BlockVariants.graphiteBlocks.forEach(block -> {
+		//
+		//		});
+		//	}
+		//});
 	}
 
 	private void buildReinforcedConcreteRecipes(Block concrete, Item dye, Consumer<FinishedRecipe> consumer) {

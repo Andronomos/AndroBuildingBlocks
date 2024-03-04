@@ -1,7 +1,7 @@
 package andronomos.androbuildingblocks.registry;
 
 import andronomos.androbuildingblocks.AndroBuildingBlocks;
-import andronomos.androbuildingblocks.block.BlockVariants;
+import andronomos.androbuildingblocks.block.BlockList;
 import andronomos.androbuildingblocks.block.BuildingBlock;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
@@ -25,21 +25,25 @@ public class BlockRegistry {
 
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AndroBuildingBlocks.MODID);
 
-
 	public static void registerReinforcedConcrete() {
-		BlockVariants.concreteColors.forEach(color -> {
-			Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", String.format("%s_dye", color)));
-			DyeColor dyeColor = DyeColor.valueOf(color.toUpperCase());
+		BlockList.CONCRETE_BLOCKS.types.forEach(type -> {
+			Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", String.format("%s_dye", type)));
+			DyeColor dyeColor = DyeColor.valueOf(type.name.toUpperCase());
 
 			if(dye != null) {
-				RegistryObject<Block> concreteBlock = registerBlock(String.format("%s_reinforced_concrete", color), CONCRETE_PROPERTIES.mapColor(dyeColor));
-				registerStairBlock(String.format("%s_reinforced_concrete_stairs", color), concreteBlock, CONCRETE_PROPERTIES.mapColor(dyeColor));
-				registerSlabBlock(String.format("%s_reinforced_concrete_slab", color), CONCRETE_PROPERTIES.mapColor(dyeColor));
-				registerWallBlock(String.format("%s_reinforced_concrete_wall", color), CONCRETE_PROPERTIES.mapColor(dyeColor));
-				//registerRotatableBlock(String.format("%s_reinforced_concrete_grate", color), CONCRETE_PROPERTIES.mapColor(dyeColor));
-				//RegistryObject<Block> concreteTileBlock = registerBlock(String.format("%s_reinforced_concrete_tile", color), CONCRETE_PROPERTIES.mapColor(dyeColor));
-				//registerStairBlock(String.format("%s_reinforced_concrete_tile_stairs", color), concreteTileBlock, CONCRETE_PROPERTIES.mapColor(dyeColor));
-				//registerRotatableBlock(String.format("%s_reinforced_concrete_pillar", color), CONCRETE_PROPERTIES.mapColor(dyeColor));
+				RegistryObject<Block> concreteBlock = registerBlock(String.format("%s_reinforced_concrete", type), CONCRETE_PROPERTIES.mapColor(dyeColor));
+
+				if(type.hasStairVariant) {
+					registerStairBlock(String.format("%s_reinforced_concrete_stairs", type), concreteBlock, CONCRETE_PROPERTIES.mapColor(dyeColor));
+				}
+
+				if(type.hasSlabVariant) {
+					registerSlabBlock(String.format("%s_reinforced_concrete_slab", type), CONCRETE_PROPERTIES.mapColor(dyeColor));
+				}
+
+				if(type.hasWallVariant) {
+					registerWallBlock(String.format("%s_reinforced_concrete_wall", type), CONCRETE_PROPERTIES.mapColor(dyeColor));
+				}
 			}
 		});
 
@@ -72,10 +76,15 @@ public class BlockRegistry {
 	//endregion
 
 	public static final RegistryObject<Block> GRAPHITE = registerBlock("graphite", METAL_PROPERTIES);
+	public static final RegistryObject<StairBlock> GRAPHITE_STAIRS = registerStairBlock("graphite_stairs", GRAPHITE, METAL_PROPERTIES);
+	public static final RegistryObject<SlabBlock> GRAPHITE_SLAB = registerSlabBlock("graphite_slab", METAL_PROPERTIES);
+	public static final RegistryObject<WallBlock> GRAPHITE_WALL = registerWallBlock("graphite_wall", METAL_PROPERTIES);
 	public static final RegistryObject<Block> GRAPHITE_GRATE = registerRotatableBlock("graphite_grate", METAL_PROPERTIES);
 	public static final RegistryObject<Block> GRAPHITE_MESH = registerBlock("graphite_mesh", METAL_PROPERTIES);
 	public static final RegistryObject<Block> GRAPHITE_TILE = registerBlock("graphite_tile", METAL_PROPERTIES);
-
+	public static final RegistryObject<StairBlock> GRAPHITE_TILE_STAIRS = registerStairBlock("graphite_tile_stairs", GRAPHITE_TILE, METAL_PROPERTIES);
+	public static final RegistryObject<SlabBlock> GRAPHITE_TILE_SLAB = registerSlabBlock("graphite_tile_slab", METAL_PROPERTIES);
+	public static final RegistryObject<WallBlock> GRAPHITE_TILE_WALL = registerWallBlock("graphite_tile_wall", METAL_PROPERTIES);
 
 
 
