@@ -69,6 +69,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		});
 		//endregion
 
+		//region Structural Glass
 		BlockCategories.STRUCTURAL_GLASS_BLOCKS.types.forEach(type -> {
 			Block vanillaGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft", String.format("%s_stained_glass", type.name)));
 			Block structuralGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_structural_glass", type.name)));
@@ -87,6 +88,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 				buildThreeByTwoRecipe(glassPaneBlock, structuralGlassBlock, recipeConsumer);
 			}
 		});
+		//endregion
 
 		//region Steel
 		Block steelBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, BlockCategories.STEEL_BLOCKS.name));
@@ -137,6 +139,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 			}
 		});
 		//endregion
+
+
+
 
 		//region Graphite
 		//buildSmeltingRecipe(Blocks.COAL_BLOCK, BlockRegistry.GRAPHITE.get(), recipeConsumer);
