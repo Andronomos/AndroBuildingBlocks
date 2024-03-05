@@ -110,6 +110,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 			steelFromCharcoalRecipe.group(BlockCategories.STEEL_BLOCKS.sourceBlock.name);
 			steelFromCharcoalRecipe.unlockedBy("has_item", has(Items.CHARCOAL));
 			steelFromCharcoalRecipe.save(recipeConsumer, String.format("%s_from_charcoal", BlockCategories.STEEL_BLOCKS.sourceBlock.name));
+
+			Block stairBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_stairs", BlockCategories.STEEL_BLOCKS.sourceBlock.name)));
+			Block slabBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_slab", BlockCategories.STEEL_BLOCKS.sourceBlock.name)));
+			Block wallBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_wall", BlockCategories.STEEL_BLOCKS.sourceBlock.name)));
+
+			if(BlockCategories.STEEL_BLOCKS.sourceBlock.hasStairVariant && blockExists(stairBlock)) {
+				buildStairRecipe(stairBlock, steelBlock, recipeConsumer);
+				buildStoneCutterRecipe(stairBlock, steelBlock, 1, recipeConsumer);
+			}
+
+			if(BlockCategories.STEEL_BLOCKS.sourceBlock.hasSlabVariant && blockExists(slabBlock)) {
+				buildThreeByOneRecipe(slabBlock, steelBlock, recipeConsumer);
+				buildStoneCutterRecipe(slabBlock, steelBlock, 2, recipeConsumer);
+			}
+
+			if(BlockCategories.STEEL_BLOCKS.sourceBlock.hasWallVariant && blockExists(wallBlock)) {
+				buildStoneCutterRecipe(wallBlock, steelBlock, 1, recipeConsumer);
+				buildThreeByTwoRecipe(wallBlock, steelBlock, recipeConsumer);
+			}
 		}
 
 		BlockCategories.STEEL_BLOCKS.blockTypes.forEach(blockType -> {
