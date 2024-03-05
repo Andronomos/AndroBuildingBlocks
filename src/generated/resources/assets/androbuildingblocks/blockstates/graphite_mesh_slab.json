@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "androbuildingblocks:block/graphite_mesh_slab"
+    },
+    "type=double": {
+      "model": "androbuildingblocks:block/graphite_mesh"
+    },
+    "type=top": {
+      "model": "androbuildingblocks:block/graphite_mesh_slab_top"
+    }
+  }
+}

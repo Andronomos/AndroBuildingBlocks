@@ -28,12 +28,12 @@ public class BlockCategories {
 
 		AndroBlockCategories.add(GRAPHITE_BLOCKS);
 		GRAPHITE_BLOCKS.addType(new AndroBlockType("grate", false, false, false).rotatable(true));
-		GRAPHITE_BLOCKS.addType(new AndroBlockType("mesh", false, false, false).transparency(true));
+		GRAPHITE_BLOCKS.addType(new AndroBlockType("mesh", false, true, false).transparency(true));
 		GRAPHITE_BLOCKS.addType(new AndroBlockType("tile"));
 
 		AndroBlockCategories.add(STEEL_BLOCKS);
 		STEEL_BLOCKS.addType(new AndroBlockType("tile"));
-		STEEL_BLOCKS.addType(new AndroBlockType("mesh", false, false, false).transparency(true));
+		STEEL_BLOCKS.addType(new AndroBlockType("mesh", false, true, false).transparency(true));
 
 		AndroBlockCategories.add(STRUCTURAL_GLASS_BLOCKS);
 		for(DyeColor color : DyeColor.values()) {
