@@ -27,15 +27,7 @@ public class BlockRegistry {
 			BlockBehaviour.Properties properties = blockCategory.properties;
 
 			if(blockCategory.sourceBlock != null) {
-				RegistryObject<Block> sourceBlock = registerBlock(blockCategory.sourceBlock.name, properties);
-
-				//String sourceBlockName;
-
-				//if(blockCategory.sourceBlock.baseNamePrefixed) {
-				//	sourceBlockName = String.format("%s_%s", blockCategory.baseName, blockCategory.sourceBlock.name);
-				//} else {
-				//	sourceBlockName = String.format("%s_%s", blockCategory.sourceBlock.name, blockCategory.baseName);
-				//}
+				RegistryObject<Block> sourceBlock = registerBlock(blockCategory.sourceBlock.name, properties, blockCategory.sourceBlock.hasTransparency);
 
 				if(blockCategory.sourceBlock.hasStairVariant) {
 					registerStairBlock(String.format("%s_stairs", blockCategory.sourceBlock.name), sourceBlock, properties);
@@ -110,10 +102,6 @@ public class BlockRegistry {
 
 	private static RegistryObject<Block> registerStainedGlassPaneBlock(final String name, DyeColor color) {
 		return registerBlock(name, () -> new StainedGlassPaneBlock(color, GLASS_PANE_PROPERTIES));
-	}
-
-	private static RegistryObject<Block> registerBlock(final String name, Block.Properties properties) {
-		return registerBlock(name, () -> new AndroBlock(properties, false));
 	}
 
 	private static RegistryObject<Block> registerBlock(final String name, Block.Properties properties, boolean isTranslucent) {
