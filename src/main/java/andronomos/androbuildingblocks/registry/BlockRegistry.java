@@ -84,8 +84,7 @@ public class BlockRegistry {
 		});
 	}
 
-	public static void registerGraphiteBlocks()
-	{
+	public static void registerGraphiteBlocks() {
 		BlockBehaviour.Properties properties = BlockCategories.GRAPHITE_BLOCKS.properties;
 		RegistryObject<Block> graphiteBlock = registerBlock(BlockCategories.GRAPHITE_BLOCKS.name, properties);
 		registerStairBlock(String.format("%s_stairs", BlockCategories.GRAPHITE_BLOCKS.name), graphiteBlock, properties);

@@ -7,6 +7,7 @@ public class AndroBlockType {
 	public boolean hasStairVariant;
 	public boolean hasSlabVariant;
 	public boolean hasWallVariant;
+	public boolean hasTransparency = false;
 	public boolean isRotatable = false;
 	public DyeColor dyeColor;
 
@@ -31,8 +32,13 @@ public class AndroBlockType {
 		return this.dyeColor;
 	}
 
-	public AndroBlockType setRotatable() {
-		this.isRotatable = true;
+	public AndroBlockType rotatable(boolean value) {
+		this.isRotatable = value;
+		return this;
+	}
+
+	public AndroBlockType transparency(boolean value) {
+		this.hasTransparency = value;
 		return this;
 	}
 }
