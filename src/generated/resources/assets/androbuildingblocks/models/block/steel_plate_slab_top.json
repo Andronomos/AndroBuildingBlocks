@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "androbuildingblocks:block/steel_plate",
-    "side": "androbuildingblocks:block/steel_plate",
-    "top": "androbuildingblocks:block/steel_plate"
-  }
-}
