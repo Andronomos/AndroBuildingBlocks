@@ -33,6 +33,7 @@ public class BlockCategories {
 		GRAPHITE_BLOCKS.addType(new AndroBlockType("tile"));
 
 		AndroBlockCategories.add(STEEL_BLOCKS);
+		STEEL_BLOCKS.addType(new AndroBlockType("tile"));
 		STEEL_BLOCKS.addType(new AndroBlockType("plate"));
 
 		AndroBlockCategories.add(STRUCTURAL_GLASS_BLOCKS);
