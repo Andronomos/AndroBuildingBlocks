@@ -23,7 +23,7 @@ public class AndroBlockType {
 		this.hasWallVariant = hasWallVariant;
 	}
 
-	public AndroBlockType setDyeColor(DyeColor color) {
+	public AndroBlockType dyeColor(DyeColor color) {
 		this.dyeColor = color;
 		return this;
 	}

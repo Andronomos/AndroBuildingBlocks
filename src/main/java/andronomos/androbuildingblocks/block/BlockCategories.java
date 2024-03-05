@@ -17,14 +17,14 @@ public class BlockCategories {
 
 	public static void createCategories() {
 		AndroBlockCategories.add(REINFORCED_CONCRETE_BLOCKS);
-		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("black").setDyeColor(DyeColor.BLACK));
-		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("blue").setDyeColor(DyeColor.BLUE));
-		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("brown").setDyeColor(DyeColor.BROWN));
-		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("green").setDyeColor(DyeColor.GREEN));
-		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("gray").setDyeColor(DyeColor.GRAY));
-		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("purple").setDyeColor(DyeColor.PURPLE));
-		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("red").setDyeColor(DyeColor.RED));
-		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("white").setDyeColor(DyeColor.WHITE));
+		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("black").dyeColor(DyeColor.BLACK));
+		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("blue").dyeColor(DyeColor.BLUE));
+		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("brown").dyeColor(DyeColor.BROWN));
+		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("green").dyeColor(DyeColor.GREEN));
+		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("gray").dyeColor(DyeColor.GRAY));
+		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("purple").dyeColor(DyeColor.PURPLE));
+		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("red").dyeColor(DyeColor.RED));
+		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("white").dyeColor(DyeColor.WHITE));
 
 		AndroBlockCategories.add(GRAPHITE_BLOCKS);
 		GRAPHITE_BLOCKS.addType(new AndroBlockType("grate", false, false, false).rotatable(true));
@@ -38,7 +38,7 @@ public class BlockCategories {
 		AndroBlockCategories.add(STRUCTURAL_GLASS_BLOCKS);
 		for(DyeColor color : DyeColor.values()) {
 			AndroBlockType type = new AndroBlockType(color.getName());
-			type.setDyeColor(color);
+			type.dyeColor(color);
 			STRUCTURAL_GLASS_BLOCKS.addType(type);
 		}
 	}
