@@ -33,7 +33,7 @@ public class BlockCategories {
 
 		AndroBlockCategories.add(STEEL_BLOCKS);
 		STEEL_BLOCKS.addType(new AndroBlockType("tile"));
-		STEEL_BLOCKS.addType(new AndroBlockType("mesh").transparency(true));
+		STEEL_BLOCKS.addType(new AndroBlockType("mesh", false, false, false).transparency(true));
 
 		AndroBlockCategories.add(STRUCTURAL_GLASS_BLOCKS);
 		for(DyeColor color : DyeColor.values()) {

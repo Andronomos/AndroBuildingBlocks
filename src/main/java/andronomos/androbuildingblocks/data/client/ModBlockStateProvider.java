@@ -30,23 +30,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
 				case "SlabBlock" -> registerSlabBlockStateAndModel((SlabBlock)b, blockName);
 				case "WallBlock" -> registerWallBlockStateAndModel((WallBlock)b, blockName);
 				case "FenceBlock" -> registerFenceBlockStateAndModel((FenceBlock) b, blockName);
-				case "StainedGlassBlock" -> registerTranslucentBlockStateAndModel(b, blockName);
-				case "BuildingBlock" -> {
-					if(((AndroBlock)b).isTranslucent) {
-						registerTranslucentBlockStateAndModel(b, blockName);
-					} else {
-						registerBlockStateAndModel(b, blockName);
-					}
-				}
+				case "StainedGlassBlock" -> registerBlockStateAndModel(b, blockName, true);
+				case "BuildingBlock" -> registerBlockStateAndModel(b, blockName, ((AndroBlock)b).isTranslucent);
 				case "StainedGlassPaneBlock", "IronBarsBlock" -> registerPaneBlockStateAndModel((IronBarsBlock)b, blockName);
 				case "RotatedPillarBlock" -> registerRotatableBlockStateAndModel((RotatedPillarBlock) b, blockName);
-				default -> registerBlockStateAndModel(b, blockName);
+				default -> registerBlockStateAndModel(b, blockName, false);
 			}
 		});
 	}
 
-	private void registerBlockStateAndModel(Block block, String name) {
-		ModelFile model = models().cubeAll(name, modLoc("block/" + name));
+	private void registerBlockStateAndModel(Block block, String name, boolean isTranslucent) {
+		ModelFile model;
+
+		if(isTranslucent) {
+			model = models().cubeAll(name, modLoc("block/" + name)).renderType("translucent");
+		} else {
+			model = models().cubeAll(name, modLoc("block/" + name));
+		}
+
 		simpleBlock(block, model);
 		registerItemModel(name);
 	}
@@ -85,13 +86,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		}
 		wallBlock(block, modLoc("block/" + resourceName));
 		itemModels().wallInventory(name, modLoc("block/" + resourceName));
-	}
-
-	private void registerTranslucentBlockStateAndModel(Block block, String name) {
-		ModelFile model;
-		model = models().cubeAll(name, modLoc("block/" + name)).renderType("translucent");
-		simpleBlock(block, model);
-		registerItemModel(name);
 	}
 
 	private void registerPaneBlockStateAndModel(IronBarsBlock block, String blockName) {
