@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-04T23:19:17.7510841	Loot Tables
+// 1.20.1	2024-03-04T23:44:37.0658832	Loot Tables
 14f9a71c2e535a9923546efa308695513f4012b0 data/androbuildingblocks/loot_tables/blocks/black_reinforced_concrete.json
 5612ae1df4fdbc234a613f9f8e7a89ed7f9d9f8a data/androbuildingblocks/loot_tables/blocks/black_reinforced_concrete_slab.json
 fb4a51606b00bada880a6d3c7485794729951bd6 data/androbuildingblocks/loot_tables/blocks/black_reinforced_concrete_stairs.json
@@ -67,9 +67,6 @@ de2e0d2d74ee12ad8b90e496452f79c18082a8b5 data/androbuildingblocks/loot_tables/bl
 fdb1c6375c43354736e754011a84d6648961ef01 data/androbuildingblocks/loot_tables/blocks/red_structural_glass_pane.json
 026f67407390518b85d90061f37e0d3a2ba32c56 data/androbuildingblocks/loot_tables/blocks/steel.json
 6af904ba1a73aef1b03a3699f1f025b081fb83c2 data/androbuildingblocks/loot_tables/blocks/steel_mesh.json
-6821ba26210b0b85dc5e66e37f646d78a944a065 data/androbuildingblocks/loot_tables/blocks/steel_mesh_slab.json
-30018a917661c416ab5ffb2ca97cf8f2c16c3264 data/androbuildingblocks/loot_tables/blocks/steel_mesh_stairs.json
-156172142a1d537924a3bfd25e7384f5cf3e0f34 data/androbuildingblocks/loot_tables/blocks/steel_mesh_wall.json
 ea408a0f5685ea427a30b7edd253bd15b2ed7d78 data/androbuildingblocks/loot_tables/blocks/steel_slab.json
 a72669b25b72f53cfc1c7d20afed706c90f61ec2 data/androbuildingblocks/loot_tables/blocks/steel_stairs.json
 889470c2ecb7282b3b0763b34bc9e3f9088e5379 data/androbuildingblocks/loot_tables/blocks/steel_tile.json
