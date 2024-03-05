@@ -4,7 +4,6 @@ import net.minecraft.world.item.DyeColor;
 
 public class AndroBlockType {
 	public String name;
-	public String fullName;
 	public boolean hasStairVariant;
 	public boolean hasSlabVariant;
 	public boolean hasWallVariant;

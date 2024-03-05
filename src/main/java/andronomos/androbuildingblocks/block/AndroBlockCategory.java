@@ -22,6 +22,7 @@ public class AndroBlockCategory {
 	 * otherwise it's simply the blocks that fit this category
 	 */
 	public final List<AndroBlockType> blockTypes = new ArrayList<>();
+
 	public Block.Properties properties;
 
 	public AndroBlockCategory(String name, Block.Properties properties) {
@@ -34,9 +35,6 @@ public class AndroBlockCategory {
 	}
 
 	public void addBlockType(AndroBlockType blockType) {
-
-
-
 		blockTypes.add(blockType);
 	}
 }

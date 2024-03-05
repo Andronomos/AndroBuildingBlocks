@@ -37,9 +37,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		//});
 
 		//region Concrete
-		BlockCategories.REINFORCED_CONCRETE_BLOCKS.blockTypes.forEach(type -> {
-			Block variantBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, type.name));
-			Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", String.format("%s_dye", type.dyeColor.getName())));
+		BlockCategories.REINFORCED_CONCRETE_BLOCKS.blockTypes.forEach(blockType -> {
+			Block variantBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, blockType.name));
+			Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", String.format("%s_dye", blockType.dyeColor.getName())));
 
 			if(blockExists(variantBlock)) {
 				ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, variantBlock, 8);
@@ -50,25 +50,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 				shaped.pattern("212");
 				shaped.pattern("343");
 				shaped.pattern("212");
-				shaped.group(String.format("%s_%s", type.name, BlockCategories.REINFORCED_CONCRETE_BLOCKS.baseName));
+				shaped.group(String.format("%s_%s", blockType.name, BlockCategories.REINFORCED_CONCRETE_BLOCKS.baseName));
 				shaped.unlockedBy("has_item", has(Tags.Items.STONE));
 				shaped.save(recipeConsumer);
 
-				Block stairBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_stairs", type.name)));
-				Block slabBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_slab", type.name)));
-				Block wallBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_wall", type.name)));
+				Block stairBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_stairs", blockType.name)));
+				Block slabBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_slab", blockType.name)));
+				Block wallBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_wall", blockType.name)));
 
-				if(type.hasStairVariant && blockExists(stairBlock)) {
+				if(blockType.hasStairVariant && blockExists(stairBlock)) {
 					buildStairRecipe(stairBlock, variantBlock, recipeConsumer);
 					buildStoneCutterRecipe(stairBlock, variantBlock, 1, recipeConsumer);
 				}
 
-				if(type.hasSlabVariant && blockExists(slabBlock)) {
+				if(blockType.hasSlabVariant && blockExists(slabBlock)) {
 					buildThreeByOneRecipe(slabBlock, variantBlock, recipeConsumer);
 					buildStoneCutterRecipe(slabBlock, variantBlock, 2, recipeConsumer);
 				}
 
-				if(type.hasWallVariant && blockExists(wallBlock)) {
+				if(blockType.hasWallVariant && blockExists(wallBlock)) {
 					buildStoneCutterRecipe(wallBlock, variantBlock, 1, recipeConsumer);
 					buildThreeByTwoRecipe(wallBlock, variantBlock, recipeConsumer);
 				}
