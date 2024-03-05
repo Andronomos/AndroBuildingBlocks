@@ -67,6 +67,9 @@ public class BlockRegistry {
 			if(type.isRotatable) {
 				registerRotatableBlock(String.format("steel_%s", type.name), properties);
 			} else {
+				if(type.hasTransparency) {
+					properties.noOcclusion();
+				}
 				registerBlock(String.format("steel_%s", type.name), properties, type.hasTransparency);
 			}
 
