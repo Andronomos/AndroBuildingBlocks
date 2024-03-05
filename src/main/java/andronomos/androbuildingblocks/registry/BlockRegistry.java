@@ -52,7 +52,7 @@ public class BlockRegistry {
 	public static void registerGlassBlocks() {
 		BlockCategories.STRUCTURAL_GLASS_BLOCKS.types.forEach(type -> {
 			registerGlassBlock(String.format("%s_structural_glass", type.dyeColor), type.dyeColor);
-			registerStainedGlassPaneBlock(type.dyeColor.getName(), type.dyeColor);
+			registerStainedGlassPaneBlock(type.dyeColor.getName() + "_structural_glass_pane", type.dyeColor);
 		});
 	}
 
@@ -139,7 +139,7 @@ public class BlockRegistry {
 	}
 
 	private static RegistryObject<Block> registerStainedGlassPaneBlock(final String name, DyeColor color) {
-		return registerBlock(name + "_structural_glass_pane", () -> new StainedGlassPaneBlock(color, GLASS_PANE_PROPERTIES));
+		return registerBlock(name, () -> new StainedGlassPaneBlock(color, GLASS_PANE_PROPERTIES));
 	}
 
 	private static RegistryObject<Block> registerBlock(final String name, Block.Properties properties) {
