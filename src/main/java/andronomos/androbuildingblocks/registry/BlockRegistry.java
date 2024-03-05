@@ -2,7 +2,7 @@ package andronomos.androbuildingblocks.registry;
 
 import andronomos.androbuildingblocks.AndroBuildingBlocks;
 import andronomos.androbuildingblocks.block.BlockCategories;
-import andronomos.androbuildingblocks.block.BuildingBlock;
+import andronomos.androbuildingblocks.block.AndroBlock;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
@@ -151,11 +151,11 @@ public class BlockRegistry {
 	}
 
 	private static RegistryObject<Block> registerBlock(final String name, Block.Properties properties) {
-		return registerBlock(name, () -> new BuildingBlock(properties, false));
+		return registerBlock(name, () -> new AndroBlock(properties, false));
 	}
 
 	private static RegistryObject<Block> registerBlock(final String name, Block.Properties properties, boolean isTranslucent) {
-		return registerBlock(name, () -> new BuildingBlock(properties, isTranslucent));
+		return registerBlock(name, () -> new AndroBlock(properties, isTranslucent));
 	}
 
 	private static <BLOCK extends Block> RegistryObject<BLOCK> registerBlock(final String name, final Supplier<BLOCK> blockFactory) {

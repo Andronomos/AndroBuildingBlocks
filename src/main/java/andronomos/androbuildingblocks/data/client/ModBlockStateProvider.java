@@ -1,7 +1,7 @@
 package andronomos.androbuildingblocks.data.client;
 
 import andronomos.androbuildingblocks.AndroBuildingBlocks;
-import andronomos.androbuildingblocks.block.BuildingBlock;
+import andronomos.androbuildingblocks.block.AndroBlock;
 import andronomos.androbuildingblocks.registry.BlockRegistry;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
@@ -32,7 +32,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 				case "FenceBlock" -> registerFenceBlockStateAndModel((FenceBlock) b, blockName);
 				case "StainedGlassBlock" -> registerTranslucentBlockStateAndModel(b, blockName);
 				case "BuildingBlock" -> {
-					if(((BuildingBlock)b).isTranslucent) {
+					if(((AndroBlock)b).isTranslucent) {
 						registerTranslucentBlockStateAndModel(b, blockName);
 					} else {
 						registerBlockStateAndModel(b, blockName);
