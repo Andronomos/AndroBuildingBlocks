@@ -50,13 +50,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 				shaped.pattern("212");
 				shaped.pattern("343");
 				shaped.pattern("212");
-				shaped.group(String.format("%s_%s", blockType.name, BlockCategories.REINFORCED_CONCRETE_BLOCKS.baseName));
+				shaped.group(blockType.name);
 				shaped.unlockedBy("has_item", has(Tags.Items.STONE));
 				shaped.save(recipeConsumer);
 
 				Block stairBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_stairs", blockType.name)));
-				Block slabBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_slab", blockType.name)));
-				Block wallBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_wall", blockType.name)));
+				Block slabBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_slab", blockType.name)));
+				Block wallBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_wall", blockType.name)));
 
 				if(blockType.hasStairVariant && blockExists(stairBlock)) {
 					buildStairRecipe(stairBlock, variantBlock, recipeConsumer);

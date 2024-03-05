@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "green_reinforced_concrete_reinforced_concrete",
+  "group": "green_reinforced_concrete",
   "key": {
     "1": {
       "tag": "forge:stone"
