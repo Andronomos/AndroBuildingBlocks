@@ -168,24 +168,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 				}
 			}
 		});
-
-
-
-		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_STAIRS.get(), BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
-		//buildThreeByOneRecipe(BlockRegistry.GRAPHITE_SLAB.get(), BlockRegistry.GRAPHITE.get(), recipeConsumer);
-		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_SLAB.get(), BlockRegistry.GRAPHITE.get(), 2, recipeConsumer);
-		//buildThreeByTwoRecipe(BlockRegistry.GRAPHITE_WALL.get(), BlockRegistry.GRAPHITE.get(), recipeConsumer);
-		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_WALL.get(), BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
-
-		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_MESH.get(), BlockRegistry.GRAPHITE_TILE_STAIRS.get(), 1, recipeConsumer);
-		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_GRATE.get(), BlockRegistry.GRAPHITE_TILE_STAIRS.get(), 1, recipeConsumer);
-		//buildTwoByTwoRecipe(BlockRegistry.GRAPHITE_TILE.get(), BlockRegistry.GRAPHITE_TILE_STAIRS.get(), recipeConsumer);
-		//buildStairRecipe(BlockRegistry.GRAPHITE_TILE_STAIRS.get(), BlockRegistry.GRAPHITE_TILE.get(), recipeConsumer);
-		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_TILE_STAIRS.get(), BlockRegistry.GRAPHITE_TILE.get(), 1, recipeConsumer);
-		//buildThreeByOneRecipe(BlockRegistry.GRAPHITE_TILE_SLAB.get(), BlockRegistry.GRAPHITE_TILE.get(), recipeConsumer);
-		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_TILE_SLAB.get(), BlockRegistry.GRAPHITE_TILE.get(), 2, recipeConsumer);
-		//buildThreeByTwoRecipe(BlockRegistry.GRAPHITE_TILE_WALL.get(), BlockRegistry.GRAPHITE_TILE.get(), recipeConsumer);
-		//buildStoneCutterRecipe(BlockRegistry.GRAPHITE_TILE_WALL.get(), BlockRegistry.GRAPHITE_TILE.get(), 1, recipeConsumer);
 		//endregion
 
 

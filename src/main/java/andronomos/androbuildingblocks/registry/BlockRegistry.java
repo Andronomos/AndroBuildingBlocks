@@ -16,13 +16,8 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 
 public class BlockRegistry {
-	//public static Block.Properties CONCRETE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.WHITE_CONCRETE);
-	//public static Block.Properties DEEPSLATE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE);
-	//public static Block.Properties STONE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.STONE);
 	public static Block.Properties GLASS_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.GLASS).strength(0.75f);
 	public static Block.Properties GLASS_PANE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.GLASS_PANE);
-	//public static Block.Properties METAL_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK);
-
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AndroBuildingBlocks.MODID);
 
 	public static void registerReinforcedConcrete() {
@@ -31,7 +26,13 @@ public class BlockRegistry {
 			BlockBehaviour.Properties properties = BlockCategories.REINFORCED_CONCRETE_BLOCKS.properties.mapColor(type.getDyeColor());
 
 			if(dye != null) {
-				RegistryObject<Block> concreteBlock = registerBlock(String.format("%s_reinforced_concrete", type.name), properties);
+				RegistryObject<Block> concreteBlock;
+
+				if(type.isRotatable) {
+					concreteBlock = registerRotatableBlock(String.format("%s_reinforced_concrete", type.name), properties);
+				} else {
+					concreteBlock = registerBlock(String.format("%s_reinforced_concrete", type.name), properties);
+				}
 
 				if(type.hasStairVariant) {
 					registerStairBlock(String.format("%s_reinforced_concrete_stairs", type.name), concreteBlock, properties);
@@ -63,7 +64,11 @@ public class BlockRegistry {
 		registerWallBlock(String.format("%s_wall", BlockCategories.STEEL_BLOCKS.name), properties);
 
 		BlockCategories.STEEL_BLOCKS.types.forEach(type -> {
-			registerBlock(String.format("steel_%s", type.name), properties);
+			if(type.isRotatable) {
+				registerRotatableBlock(String.format("steel_%s", type.name), properties);
+			} else {
+				registerBlock(String.format("steel_%s", type.name), properties);
+			}
 
 			if(type.hasStairVariant) {
 				registerStairBlock(String.format("%s_%s_stairs", BlockCategories.STEEL_BLOCKS.name, type.name), steelBlock, properties);
@@ -88,7 +93,11 @@ public class BlockRegistry {
 		registerWallBlock(String.format("%s_wall", BlockCategories.GRAPHITE_BLOCKS.name), properties);
 
 		BlockCategories.GRAPHITE_BLOCKS.types.forEach(type -> {
-			registerBlock(String.format("%s_%s", BlockCategories.GRAPHITE_BLOCKS.name, type.name), properties);
+			if(type.isRotatable) {
+				registerRotatableBlock(String.format("%s_%s", BlockCategories.GRAPHITE_BLOCKS.name, type.name), properties);
+			} else {
+				registerBlock(String.format("%s_%s", BlockCategories.GRAPHITE_BLOCKS.name, type.name), properties);
+			}
 
 			if(type.hasStairVariant) {
 				registerStairBlock(String.format("%s_%s_stairs", BlockCategories.GRAPHITE_BLOCKS.name, type.name), graphiteBlock, properties);
@@ -104,34 +113,10 @@ public class BlockRegistry {
 		});
 	}
 
-	//region Smooth Deepslate
-	//public static final RegistryObject<Block> SMOOTH_DEEPSLATE = registerBlock("smooth_deepslate", DEEPSLATE_PROPERTIES);
-	//public static final RegistryObject<StairBlock> SMOOTH_DEEPSLATE_STAIRS = registerStairBlock("smooth_deepslate_stairs", SMOOTH_DEEPSLATE, DEEPSLATE_PROPERTIES);
-	//public static final RegistryObject<SlabBlock> SMOOTH_DEEPSLATE_SLAB = registerSlabBlock("smooth_deepslate_slab", DEEPSLATE_PROPERTIES);
-	//public static final RegistryObject<WallBlock> SMOOTH_DEEPSLATE_WALL = registerWallBlock("smooth_deepslate_wall", DEEPSLATE_PROPERTIES);
-	//endregion
-
 	//region Caution
 	//public static final RegistryObject<Block> YELLOW_CAUTION_STRIPES = registerBlock("yellow_caution_stripes", STONE_PROPERTIES.mapColor(DyeColor.YELLOW));
 	//public static final RegistryObject<Block> RED_CAUTION_STRIPES = registerBlock("red_caution_stripes", STONE_PROPERTIES.mapColor(DyeColor.YELLOW));
 	//endregion
-
-	//public static final RegistryObject<Block> GRAPHITE = registerBlock("graphite", METAL_PROPERTIES);
-	//public static final RegistryObject<StairBlock> GRAPHITE_STAIRS = registerStairBlock("graphite_stairs", GRAPHITE, METAL_PROPERTIES);
-	//public static final RegistryObject<SlabBlock> GRAPHITE_SLAB = registerSlabBlock("graphite_slab", METAL_PROPERTIES);
-	//public static final RegistryObject<WallBlock> GRAPHITE_WALL = registerWallBlock("graphite_wall", METAL_PROPERTIES);
-	//public static final RegistryObject<Block> GRAPHITE_GRATE = registerRotatableBlock("graphite_grate", METAL_PROPERTIES);
-	//public static final RegistryObject<Block> GRAPHITE_MESH = registerBlock("graphite_mesh", METAL_PROPERTIES);
-	//public static final RegistryObject<Block> GRAPHITE_TILE = registerBlock("graphite_tile", METAL_PROPERTIES);
-	//public static final RegistryObject<StairBlock> GRAPHITE_TILE_STAIRS = registerStairBlock("graphite_tile_stairs", GRAPHITE_TILE, METAL_PROPERTIES);
-	//public static final RegistryObject<SlabBlock> GRAPHITE_TILE_SLAB = registerSlabBlock("graphite_tile_slab", METAL_PROPERTIES);
-	//public static final RegistryObject<WallBlock> GRAPHITE_TILE_WALL = registerWallBlock("graphite_tile_wall", METAL_PROPERTIES);
-
-
-
-
-
-
 
 	private static RegistryObject<Block> registerRotatableBlock(final String name, Block.Properties properties) {
 		return registerBlock(name, () -> new RotatedPillarBlock(properties));

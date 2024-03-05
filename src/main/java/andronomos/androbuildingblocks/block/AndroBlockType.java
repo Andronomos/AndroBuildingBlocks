@@ -7,7 +7,9 @@ public class AndroBlockType {
 	public boolean hasStairVariant;
 	public boolean hasSlabVariant;
 	public boolean hasWallVariant;
+	public boolean isRotatable = false;
 	public DyeColor dyeColor;
+
 
 	public AndroBlockType(String name) {
 		this(name, true, true, true);
@@ -27,6 +29,11 @@ public class AndroBlockType {
 
 	public DyeColor getDyeColor() {
 		return this.dyeColor;
+	}
+
+	public AndroBlockType setRotatable() {
+		this.isRotatable = true;
+		return this;
 	}
 }
 
