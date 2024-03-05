@@ -8,9 +8,9 @@
     "androbuildingblocks:purple_reinforced_concrete_wall",
     "androbuildingblocks:red_reinforced_concrete_wall",
     "androbuildingblocks:white_reinforced_concrete_wall",
-    "androbuildingblocks:steel_wall",
-    "androbuildingblocks:steel_tile_wall",
     "androbuildingblocks:graphite_wall",
-    "androbuildingblocks:graphite_tile_wall"
+    "androbuildingblocks:graphite_tile_wall",
+    "androbuildingblocks:steel_wall",
+    "androbuildingblocks:steel_tile_wall"
   ]
 }

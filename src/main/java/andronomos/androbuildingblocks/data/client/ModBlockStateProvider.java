@@ -2,6 +2,7 @@ package andronomos.androbuildingblocks.data.client;
 
 import andronomos.androbuildingblocks.AndroBuildingBlocks;
 import andronomos.androbuildingblocks.block.AndroBlock;
+import andronomos.androbuildingblocks.block.AndroSlabBlock;
 import andronomos.androbuildingblocks.registry.BlockRegistry;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
@@ -27,7 +28,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 			switch (blockType) {
 				case "StairBlock" -> registerStairBlockStateAndModel((StairBlock)b, blockName);
-				case "SlabBlock" -> registerSlabBlockStateAndModel((SlabBlock)b, blockName);
+				case "AndroSlabBlock" -> registerSlabBlockStateAndModel((SlabBlock)b, blockName, ((AndroSlabBlock)b).isTranslucent);
 				case "WallBlock" -> registerWallBlockStateAndModel((WallBlock)b, blockName);
 				case "FenceBlock" -> registerFenceBlockStateAndModel((FenceBlock) b, blockName);
 				case "StainedGlassBlock" -> registerBlockStateAndModel(b, blockName, true);
@@ -39,17 +40,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		});
 	}
 
-	private void registerBlockStateAndModel(Block block, String name, boolean isTranslucent) {
+	private void registerBlockStateAndModel(Block block, String blockName, boolean isTranslucent) {
 		ModelFile model;
 
 		if(isTranslucent) {
-			model = models().cubeAll(name, modLoc("block/" + name)).renderType("translucent");
+			model = models().cubeAll(blockName, modLoc("block/" + blockName)).renderType("translucent");
 		} else {
-			model = models().cubeAll(name, modLoc("block/" + name));
+			model = models().cubeAll(blockName, modLoc("block/" + blockName));
 		}
 
 		simpleBlock(block, model);
-		registerItemModel(name);
+		registerItemModel(blockName);
 	}
 
 	private void registerFenceBlockStateAndModel(FenceBlock block, String name) {
@@ -68,14 +69,28 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		registerItemModel(name);
 	}
 
-	private void registerSlabBlockStateAndModel(SlabBlock block, String name) {
-		String cleanName = name.substring(0, name.indexOf("_slab"));
+	private void registerSlabBlockStateAndModel(SlabBlock block, String blockName, boolean isTranslucent) {
+		String cleanName = blockName.substring(0, blockName.indexOf("_slab"));
 		String resourceName = cleanName;
 		if(resourceName.contains("_brick")) {
 			resourceName = resourceName + "s";
 		}
-		slabBlock(block, modLoc("block/" + resourceName), modLoc("block/" + resourceName));
-		registerItemModel(name);
+
+		ResourceLocation texture = modLoc("block/" + resourceName);
+
+		//In the future we can change this to something unique if we want
+		ResourceLocation doubleslab = modLoc("block/" + resourceName);
+
+		if(isTranslucent) {
+			slabBlock(block,
+					models().slab(blockName, texture, texture, texture).renderType("translucent"),
+					models().slabTop(blockName + "_top", texture, texture, texture).renderType("translucent"),
+					models().getExistingFile(doubleslab));
+		} else {
+			slabBlock(block, texture, texture);
+		}
+
+		registerItemModel(blockName);
 	}
 
 	private void registerWallBlockStateAndModel(WallBlock block, String name) {

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "androbuildingblocks:graphite_tile"
-  },
-  "result": "androbuildingblocks:graphite_tile_stairs"
-}

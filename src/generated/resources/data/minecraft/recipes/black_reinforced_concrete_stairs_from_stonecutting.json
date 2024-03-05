@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "androbuildingblocks:black_reinforced_concrete"
-  },
-  "result": "androbuildingblocks:black_reinforced_concrete_stairs"
-}

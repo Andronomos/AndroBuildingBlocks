@@ -1,11 +1,9 @@
 package andronomos.androbuildingblocks.data;
 
 import andronomos.androbuildingblocks.block.BlockCategories;
-import andronomos.androbuildingblocks.registry.BlockRegistry;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -29,8 +27,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 	@Override
 	protected void buildRecipes(@NotNull Consumer<FinishedRecipe> recipeConsumer) {
 		//region Concrete
-		BlockCategories.REINFORCED_CONCRETE_BLOCKS.types.forEach(type -> {
-			String variantName = String.format("%s_%s", type.name, BlockCategories.REINFORCED_CONCRETE_BLOCKS.name);
+		BlockCategories.REINFORCED_CONCRETE_BLOCKS.blockTypes.forEach(type -> {
+			String variantName = String.format("%s_%s", type.name, BlockCategories.REINFORCED_CONCRETE_BLOCKS.baseName);
 			Block variantBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, variantName));
 			Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", String.format("%s_dye", type.name)));
 
@@ -43,7 +41,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 				shaped.pattern("212");
 				shaped.pattern("343");
 				shaped.pattern("212");
-				shaped.group(String.format("%s_%s", type.name, BlockCategories.REINFORCED_CONCRETE_BLOCKS.name));
+				shaped.group(String.format("%s_%s", type.name, BlockCategories.REINFORCED_CONCRETE_BLOCKS.baseName));
 				shaped.unlockedBy("has_item", has(Tags.Items.STONE));
 				shaped.save(recipeConsumer);
 
@@ -70,7 +68,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		//endregion
 
 		//region Structural Glass
-		BlockCategories.STRUCTURAL_GLASS_BLOCKS.types.forEach(type -> {
+		BlockCategories.STRUCTURAL_GLASS_BLOCKS.blockTypes.forEach(type -> {
 			Block vanillaGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft", String.format("%s_stained_glass", type.name)));
 			Block structuralGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_structural_glass", type.name)));
 			Block glassPaneBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_structural_glass_pane", type.name)));
@@ -91,7 +89,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		//endregion
 
 		//region Steel
-		Block steelBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, BlockCategories.STEEL_BLOCKS.name));
+		Block steelBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, BlockCategories.STEEL_BLOCKS.baseName));
 
 		ShapedRecipeBuilder steelFromCoalRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, steelBlock, 4);
 		steelFromCoalRecipe.define('C', Items.COAL);
@@ -99,7 +97,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		steelFromCoalRecipe.pattern("CIC");
 		steelFromCoalRecipe.pattern("ICI");
 		steelFromCoalRecipe.pattern("CIC");
-		steelFromCoalRecipe.group(BlockCategories.STEEL_BLOCKS.name);
+		steelFromCoalRecipe.group(BlockCategories.STEEL_BLOCKS.baseName);
 		steelFromCoalRecipe.unlockedBy("has_item", has(Items.COAL));
 		steelFromCoalRecipe.save(recipeConsumer);
 
@@ -109,12 +107,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		steelFromCharcoalRecipe.pattern("CIC");
 		steelFromCharcoalRecipe.pattern("ICI");
 		steelFromCharcoalRecipe.pattern("CIC");
-		steelFromCharcoalRecipe.group(BlockCategories.STEEL_BLOCKS.name);
+		steelFromCharcoalRecipe.group(BlockCategories.STEEL_BLOCKS.baseName);
 		steelFromCharcoalRecipe.unlockedBy("has_item", has(Items.CHARCOAL));
-		steelFromCharcoalRecipe.save(recipeConsumer, String.format("%s_from_charcoal", BlockCategories.STEEL_BLOCKS.name));
+		steelFromCharcoalRecipe.save(recipeConsumer, String.format("%s_from_charcoal", BlockCategories.STEEL_BLOCKS.baseName));
 
-		BlockCategories.STEEL_BLOCKS.types.forEach(type -> {
-			String variantName = String.format("%s_%s", BlockCategories.STEEL_BLOCKS.name, type.name);
+		BlockCategories.STEEL_BLOCKS.blockTypes.forEach(type -> {
+			String variantName = String.format("%s_%s", BlockCategories.STEEL_BLOCKS.baseName, type.name);
 			Block variantBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, variantName));
 
 			if(blockExists(variantBlock)) {
@@ -141,10 +139,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		//endregion
 
 		//region Graphite
-		Block graphiteBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, BlockCategories.GRAPHITE_BLOCKS.name));
+		Block graphiteBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, BlockCategories.GRAPHITE_BLOCKS.baseName));
 		buildSmeltingRecipe(Blocks.COAL_BLOCK, graphiteBlock, recipeConsumer);
-		BlockCategories.GRAPHITE_BLOCKS.types.forEach(type -> {
-			String variantName = String.format("%s_%s", BlockCategories.GRAPHITE_BLOCKS.name, type.name);
+		BlockCategories.GRAPHITE_BLOCKS.blockTypes.forEach(type -> {
+			String variantName = String.format("%s_%s", BlockCategories.GRAPHITE_BLOCKS.baseName, type.name);
 			Block variantBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, variantName));
 
 			if(blockExists(variantBlock)) {

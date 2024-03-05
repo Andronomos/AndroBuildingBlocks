@@ -17,29 +17,29 @@ public class BlockCategories {
 
 	public static void createCategories() {
 		AndroBlockCategories.add(REINFORCED_CONCRETE_BLOCKS);
-		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("black").dyeColor(DyeColor.BLACK));
-		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("blue").dyeColor(DyeColor.BLUE));
-		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("brown").dyeColor(DyeColor.BROWN));
-		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("green").dyeColor(DyeColor.GREEN));
-		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("gray").dyeColor(DyeColor.GRAY));
-		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("purple").dyeColor(DyeColor.PURPLE));
-		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("red").dyeColor(DyeColor.RED));
-		REINFORCED_CONCRETE_BLOCKS.addType(new AndroBlockType("white").dyeColor(DyeColor.WHITE));
+		REINFORCED_CONCRETE_BLOCKS.addBlockType(new AndroBlockType("black_" + REINFORCED_CONCRETE_BLOCKS.baseName).dyeColor(DyeColor.BLACK));
+		REINFORCED_CONCRETE_BLOCKS.addBlockType(new AndroBlockType("blue_" + REINFORCED_CONCRETE_BLOCKS.baseName).dyeColor(DyeColor.BLUE));
+		REINFORCED_CONCRETE_BLOCKS.addBlockType(new AndroBlockType("brown_" + REINFORCED_CONCRETE_BLOCKS.baseName).dyeColor(DyeColor.BROWN));
+		REINFORCED_CONCRETE_BLOCKS.addBlockType(new AndroBlockType("green_" + REINFORCED_CONCRETE_BLOCKS.baseName).dyeColor(DyeColor.GREEN));
+		REINFORCED_CONCRETE_BLOCKS.addBlockType(new AndroBlockType("gray_" + REINFORCED_CONCRETE_BLOCKS.baseName).dyeColor(DyeColor.GRAY));
+		REINFORCED_CONCRETE_BLOCKS.addBlockType(new AndroBlockType("purple_" + REINFORCED_CONCRETE_BLOCKS.baseName).dyeColor(DyeColor.PURPLE));
+		REINFORCED_CONCRETE_BLOCKS.addBlockType(new AndroBlockType("red_" + REINFORCED_CONCRETE_BLOCKS.baseName).dyeColor(DyeColor.RED));
+		REINFORCED_CONCRETE_BLOCKS.addBlockType(new AndroBlockType("white_" + REINFORCED_CONCRETE_BLOCKS.baseName).dyeColor(DyeColor.WHITE));
 
 		AndroBlockCategories.add(GRAPHITE_BLOCKS);
-		GRAPHITE_BLOCKS.addType(new AndroBlockType("grate", false, false, false).rotatable(true));
-		GRAPHITE_BLOCKS.addType(new AndroBlockType("mesh", false, true, false).transparency(true));
-		GRAPHITE_BLOCKS.addType(new AndroBlockType("tile"));
+		GRAPHITE_BLOCKS.setSourceBlock(new AndroBlockType(GRAPHITE_BLOCKS.baseName));
+		GRAPHITE_BLOCKS.addBlockType(new AndroBlockType(GRAPHITE_BLOCKS.baseName + "_grate", false, false, false).rotatable(true));
+		GRAPHITE_BLOCKS.addBlockType(new AndroBlockType(GRAPHITE_BLOCKS.baseName + "_mesh", false, true, false).transparency(true));
+		GRAPHITE_BLOCKS.addBlockType(new AndroBlockType(GRAPHITE_BLOCKS.baseName + "_tile"));
 
 		AndroBlockCategories.add(STEEL_BLOCKS);
-		STEEL_BLOCKS.addType(new AndroBlockType("tile"));
-		STEEL_BLOCKS.addType(new AndroBlockType("mesh", false, true, false).transparency(true));
+		STEEL_BLOCKS.setSourceBlock(new AndroBlockType(STEEL_BLOCKS.baseName));
+		STEEL_BLOCKS.addBlockType(new AndroBlockType(STEEL_BLOCKS.baseName + "_tile"));
+		STEEL_BLOCKS.addBlockType(new AndroBlockType(STEEL_BLOCKS.baseName + "_mesh", false, true, false).transparency(true));
 
 		AndroBlockCategories.add(STRUCTURAL_GLASS_BLOCKS);
 		for(DyeColor color : DyeColor.values()) {
-			AndroBlockType type = new AndroBlockType(color.getName());
-			type.dyeColor(color);
-			STRUCTURAL_GLASS_BLOCKS.addType(type);
+			STRUCTURAL_GLASS_BLOCKS.addBlockType(new AndroBlockType(color.getName() + "_" + STRUCTURAL_GLASS_BLOCKS.baseName).dyeColor(color).glass(true));
 		}
 	}
 }

@@ -10,7 +10,7 @@ public class AndroBlockType {
 	public boolean hasTransparency = false;
 	public boolean isRotatable = false;
 	public DyeColor dyeColor;
-
+	public boolean isGlass = false;
 
 	public AndroBlockType(String name) {
 		this(name, true, true, true);
@@ -28,10 +28,6 @@ public class AndroBlockType {
 		return this;
 	}
 
-	public DyeColor getDyeColor() {
-		return this.dyeColor;
-	}
-
 	public AndroBlockType rotatable(boolean value) {
 		this.isRotatable = value;
 		return this;
@@ -39,6 +35,11 @@ public class AndroBlockType {
 
 	public AndroBlockType transparency(boolean value) {
 		this.hasTransparency = value;
+		return this;
+	}
+
+	public AndroBlockType glass(boolean value) {
+		this.isGlass = value;
 		return this;
 	}
 }

@@ -1,6 +1,7 @@
 package andronomos.androbuildingblocks.registry;
 
 import andronomos.androbuildingblocks.AndroBuildingBlocks;
+import andronomos.androbuildingblocks.block.AndroSlabBlock;
 import andronomos.androbuildingblocks.block.BlockCategories;
 import andronomos.androbuildingblocks.block.AndroBlock;
 import net.minecraft.resources.ResourceLocation;
@@ -20,103 +21,178 @@ public class BlockRegistry {
 	public static Block.Properties GLASS_PANE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.GLASS_PANE);
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AndroBuildingBlocks.MODID);
 
-	public static void registerReinforcedConcrete() {
-		BlockCategories.REINFORCED_CONCRETE_BLOCKS.types.forEach(type -> {
-			Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", String.format("%s_dye", type.name)));
-			BlockBehaviour.Properties properties = BlockCategories.REINFORCED_CONCRETE_BLOCKS.properties.mapColor(type.getDyeColor());
 
-			if(dye != null) {
-				RegistryObject<Block> concreteBlock;
+	public static void registerBlocks() {
+		BlockCategories.AndroBlockCategories.forEach(blockCategory -> {
+			BlockBehaviour.Properties properties = blockCategory.properties;
 
-				if(type.isRotatable) {
-					concreteBlock = registerRotatableBlock(String.format("%s_reinforced_concrete", type.name), properties);
-				} else {
-					if(type.hasTransparency) {
-						properties.noOcclusion();
-					}
-					concreteBlock = registerBlock(String.format("%s_reinforced_concrete", type.name), properties, type.hasTransparency);
+			if(blockCategory.sourceBlock != null) {
+				RegistryObject<Block> sourceBlock = registerBlock(blockCategory.sourceBlock.name, properties);
+
+				//String sourceBlockName;
+
+				//if(blockCategory.sourceBlock.baseNamePrefixed) {
+				//	sourceBlockName = String.format("%s_%s", blockCategory.baseName, blockCategory.sourceBlock.name);
+				//} else {
+				//	sourceBlockName = String.format("%s_%s", blockCategory.sourceBlock.name, blockCategory.baseName);
+				//}
+
+				if(blockCategory.sourceBlock.hasStairVariant) {
+					registerStairBlock(String.format("%s_stairs", blockCategory.sourceBlock.name), sourceBlock, properties);
 				}
 
-				if(type.hasStairVariant) {
-					registerStairBlock(String.format("%s_reinforced_concrete_stairs", type.name), concreteBlock, properties);
+				if(blockCategory.sourceBlock.hasSlabVariant) {
+					registerSlabBlock(String.format("%s_slab", blockCategory.sourceBlock.name), properties, blockCategory.sourceBlock.hasTransparency);
 				}
 
-				if(type.hasSlabVariant) {
-					registerSlabBlock(String.format("%s_reinforced_concrete_slab", type.name), properties);
-				}
-
-				if(type.hasWallVariant) {
-					registerWallBlock(String.format("%s_reinforced_concrete_wall", type.name), properties);
+				if(blockCategory.sourceBlock.hasWallVariant) {
+					registerWallBlock(String.format("%s_wall", blockCategory.sourceBlock.name), properties);
 				}
 			}
+
+			blockCategory.blockTypes.forEach(blockType -> {
+				if(blockType.hasTransparency) {
+					properties.noOcclusion();
+				}
+
+				if(blockType.isGlass) {
+					registerGlassBlock(blockType.name, blockType.dyeColor);
+					registerStainedGlassPaneBlock(String.format("%s_pane", blockType.name), blockType.dyeColor);
+				} else {
+					RegistryObject<Block> subBlock;
+
+					if(blockType.isRotatable) {
+						subBlock = registerRotatableBlock(blockType.name, properties);
+					} else {
+						subBlock = registerBlock(blockType.name, properties, blockType.hasTransparency);
+					}
+
+					if(blockType.hasStairVariant) {
+						registerStairBlock(String.format("%s_stairs", blockType.name), subBlock, properties);
+					}
+
+					if(blockType.hasSlabVariant) {
+						registerSlabBlock(String.format("%s_slab", blockType.name), properties, blockType.hasTransparency);
+					}
+
+					if(blockType.hasWallVariant) {
+						registerWallBlock(String.format("%s_wall", blockType.name), properties);
+					}
+				}
+			});
 		});
 	}
 
-	public static void registerGlassBlocks() {
-		BlockCategories.STRUCTURAL_GLASS_BLOCKS.types.forEach(type -> {
-			registerGlassBlock(String.format("%s_structural_glass", type.dyeColor), type.dyeColor);
-			registerStainedGlassPaneBlock(type.dyeColor.getName() + "_structural_glass_pane", type.dyeColor);
+	public static void registerReinforcedConcrete() {
+		BlockCategories.REINFORCED_CONCRETE_BLOCKS.blockTypes.forEach(blockType -> {
+			Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", String.format("%s_dye", blockType.name)));
+			BlockBehaviour.Properties properties = BlockCategories.REINFORCED_CONCRETE_BLOCKS.properties.mapColor(blockType.dyeColor);
+
+			if(dye != null) {
+				if(blockType.hasTransparency) {
+					properties.noOcclusion();
+				}
+
+				RegistryObject<Block> subBlock;
+
+				if(blockType.isRotatable) {
+					subBlock = registerRotatableBlock(String.format("%s_reinforced_concrete", blockType.name), properties);
+				} else {
+					subBlock = registerBlock(String.format("%s_reinforced_concrete", blockType.name), properties, blockType.hasTransparency);
+				}
+
+				if(blockType.hasStairVariant) {
+					registerStairBlock(String.format("%s_reinforced_concrete_stairs", blockType.name), subBlock, properties);
+				}
+
+				if(blockType.hasSlabVariant) {
+					registerSlabBlock(String.format("%s_reinforced_concrete_slab", blockType.name), properties, false);
+				}
+
+				if(blockType.hasWallVariant) {
+					registerWallBlock(String.format("%s_reinforced_concrete_wall", blockType.name), properties);
+				}
+			}
 		});
 	}
 
 	public static void registerSteelBlocks() {
 		BlockBehaviour.Properties properties = BlockCategories.STEEL_BLOCKS.properties;
-		RegistryObject<Block> steelBlock = registerBlock(BlockCategories.STEEL_BLOCKS.name, properties);
-		registerStairBlock(String.format("%s_stairs", BlockCategories.STEEL_BLOCKS.name), steelBlock, properties);
-		registerSlabBlock(String.format("%s_slab", BlockCategories.STEEL_BLOCKS.name), properties);
-		registerWallBlock(String.format("%s_wall", BlockCategories.STEEL_BLOCKS.name), properties);
+		RegistryObject<Block> sourceBlock = registerBlock(BlockCategories.STEEL_BLOCKS.sourceBlock.name, properties);
 
-		BlockCategories.STEEL_BLOCKS.types.forEach(type -> {
-			if(type.isRotatable) {
-				registerRotatableBlock(String.format("steel_%s", type.name), properties);
+		if(BlockCategories.STEEL_BLOCKS.sourceBlock.hasStairVariant) {
+			registerStairBlock(String.format("%s_stairs", BlockCategories.STEEL_BLOCKS.baseName), sourceBlock, properties);
+		}
+
+		if(BlockCategories.STEEL_BLOCKS.sourceBlock.hasSlabVariant) {
+			registerSlabBlock(String.format("%s_slab", BlockCategories.STEEL_BLOCKS.baseName), properties, BlockCategories.STEEL_BLOCKS.sourceBlock.hasTransparency);
+		}
+
+		if(BlockCategories.STEEL_BLOCKS.sourceBlock.hasWallVariant) {
+			registerWallBlock(String.format("%s_wall", BlockCategories.STEEL_BLOCKS.baseName), properties);
+		}
+
+		BlockCategories.STEEL_BLOCKS.blockTypes.forEach(blockType -> {
+			if(blockType.hasTransparency) {
+				properties.noOcclusion();
+			}
+
+			RegistryObject<Block> subBlock;
+
+			if(blockType.isRotatable) {
+				subBlock = registerRotatableBlock(String.format("steel_%s", blockType.name), properties);
 			} else {
-				if(type.hasTransparency) {
-					properties.noOcclusion();
-				}
-				registerBlock(String.format("steel_%s", type.name), properties, type.hasTransparency);
+				subBlock = registerBlock(String.format("steel_%s", blockType.name), properties, blockType.hasTransparency);
 			}
 
-			if(type.hasStairVariant) {
-				registerStairBlock(String.format("%s_%s_stairs", BlockCategories.STEEL_BLOCKS.name, type.name), steelBlock, properties);
+			if(blockType.hasStairVariant) {
+				registerStairBlock(String.format("%s_%s_stairs", BlockCategories.STEEL_BLOCKS.baseName, blockType.name), subBlock, properties);
 			}
 
-			if(type.hasSlabVariant) {
-				registerSlabBlock(String.format("%s_%s_slab", BlockCategories.STEEL_BLOCKS.name, type.name), properties);
+			if(blockType.hasSlabVariant) {
+				registerSlabBlock(String.format("%s_%s_slab", BlockCategories.STEEL_BLOCKS.baseName, blockType.name), properties, blockType.hasTransparency);
 			}
 
-			if(type.hasWallVariant) {
-				registerWallBlock(String.format("%s_%s_wall", BlockCategories.STEEL_BLOCKS.name, type.name), properties);
+			if(blockType.hasWallVariant) {
+				registerWallBlock(String.format("%s_%s_wall", BlockCategories.STEEL_BLOCKS.baseName, blockType.name), properties);
 			}
+		});
+	}
+
+	public static void registerGlassBlocks() {
+		BlockCategories.STRUCTURAL_GLASS_BLOCKS.blockTypes.forEach(type -> {
+			registerGlassBlock(String.format("%s_structural_glass", type.dyeColor), type.dyeColor);
+			registerStainedGlassPaneBlock(type.dyeColor.getName() + "_structural_glass_pane", type.dyeColor);
 		});
 	}
 
 	public static void registerGraphiteBlocks() {
 		BlockBehaviour.Properties properties = BlockCategories.GRAPHITE_BLOCKS.properties;
-		RegistryObject<Block> graphiteBlock = registerBlock(BlockCategories.GRAPHITE_BLOCKS.name, properties);
-		registerStairBlock(String.format("%s_stairs", BlockCategories.GRAPHITE_BLOCKS.name), graphiteBlock, properties);
-		registerSlabBlock(String.format("%s_slab", BlockCategories.GRAPHITE_BLOCKS.name), properties);
-		registerWallBlock(String.format("%s_wall", BlockCategories.GRAPHITE_BLOCKS.name), properties);
+		RegistryObject<Block> graphiteBlock = registerBlock(BlockCategories.GRAPHITE_BLOCKS.baseName, properties);
+		registerStairBlock(String.format("%s_stairs", BlockCategories.GRAPHITE_BLOCKS.baseName), graphiteBlock, properties);
+		registerSlabBlock(String.format("%s_slab", BlockCategories.GRAPHITE_BLOCKS.baseName), properties, false);
+		registerWallBlock(String.format("%s_wall", BlockCategories.GRAPHITE_BLOCKS.baseName), properties);
 
-		BlockCategories.GRAPHITE_BLOCKS.types.forEach(type -> {
+		BlockCategories.GRAPHITE_BLOCKS.blockTypes.forEach(type -> {
 			if(type.isRotatable) {
-				registerRotatableBlock(String.format("%s_%s", BlockCategories.GRAPHITE_BLOCKS.name, type.name), properties);
+				registerRotatableBlock(String.format("%s_%s", BlockCategories.GRAPHITE_BLOCKS.baseName, type.name), properties);
 			} else {
 				if(type.hasTransparency) {
 					properties.noOcclusion();
 				}
-				registerBlock(String.format("%s_%s", BlockCategories.GRAPHITE_BLOCKS.name, type.name), properties, type.hasTransparency);
+				registerBlock(String.format("%s_%s", BlockCategories.GRAPHITE_BLOCKS.baseName, type.name), properties, type.hasTransparency);
 			}
 
 			if(type.hasStairVariant) {
-				registerStairBlock(String.format("%s_%s_stairs", BlockCategories.GRAPHITE_BLOCKS.name, type.name), graphiteBlock, properties);
+				registerStairBlock(String.format("%s_%s_stairs", BlockCategories.GRAPHITE_BLOCKS.baseName, type.name), graphiteBlock, properties);
 			}
 
 			if(type.hasSlabVariant) {
-				registerSlabBlock(String.format("%s_%s_slab", BlockCategories.GRAPHITE_BLOCKS.name, type.name), properties);
+				registerSlabBlock(String.format("%s_%s_slab", BlockCategories.GRAPHITE_BLOCKS.baseName, type.name), properties, type.hasTransparency);
 			}
 
 			if(type.hasWallVariant) {
-				registerWallBlock(String.format("%s_%s_wall", BlockCategories.GRAPHITE_BLOCKS.name, type.name), properties);
+				registerWallBlock(String.format("%s_%s_wall", BlockCategories.GRAPHITE_BLOCKS.baseName, type.name), properties);
 			}
 		});
 	}
@@ -134,8 +210,8 @@ public class BlockRegistry {
 		return registerBlock(name, () -> new StairBlock(() -> source.get().defaultBlockState(), properties));
 	}
 
-	private static RegistryObject<SlabBlock> registerSlabBlock(final String name, Block.Properties properties) {
-		return registerBlock(name, () -> new SlabBlock(properties));
+	private static RegistryObject<SlabBlock> registerSlabBlock(final String name, Block.Properties properties, boolean isTranslucent) {
+		return registerBlock(name, () -> new AndroSlabBlock(properties, isTranslucent));
 	}
 
 	private static RegistryObject<WallBlock> registerWallBlock(final String name, Block.Properties properties) {
