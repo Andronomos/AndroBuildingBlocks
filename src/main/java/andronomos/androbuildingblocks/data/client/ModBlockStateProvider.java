@@ -31,7 +31,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 				case "WallBlock" -> registerWallBlockStateAndModel((WallBlock)b, blockName);
 				case "FenceBlock" -> registerFenceBlockStateAndModel((FenceBlock) b, blockName);
 				case "StainedGlassBlock" -> registerBlockStateAndModel(b, blockName, true);
-				case "BuildingBlock" -> registerBlockStateAndModel(b, blockName, ((AndroBlock)b).isTranslucent);
+				case "AndroBlock" -> registerBlockStateAndModel(b, blockName, ((AndroBlock)b).isTranslucent);
 				case "StainedGlassPaneBlock", "IronBarsBlock" -> registerPaneBlockStateAndModel((IronBarsBlock)b, blockName);
 				case "RotatedPillarBlock" -> registerRotatableBlockStateAndModel((RotatedPillarBlock) b, blockName);
 				default -> registerBlockStateAndModel(b, blockName, false);
