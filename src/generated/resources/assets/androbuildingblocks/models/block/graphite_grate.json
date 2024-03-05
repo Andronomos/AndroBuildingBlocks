@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "androbuildingblocks:block/graphite_grate"
+    "end": "androbuildingblocks:block/graphite",
+    "side": "androbuildingblocks:block/graphite_grate"
   }
 }
