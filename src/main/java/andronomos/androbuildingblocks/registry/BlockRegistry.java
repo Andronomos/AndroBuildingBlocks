@@ -4,7 +4,6 @@ import andronomos.androbuildingblocks.AndroBuildingBlocks;
 import andronomos.androbuildingblocks.block.AndroSlabBlock;
 import andronomos.androbuildingblocks.block.BlockCategories;
 import andronomos.androbuildingblocks.block.AndroBlock;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;

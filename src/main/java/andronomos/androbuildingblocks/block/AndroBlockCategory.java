@@ -34,6 +34,9 @@ public class AndroBlockCategory {
 	}
 
 	public void addBlockType(AndroBlockType blockType) {
+
+
+
 		blockTypes.add(blockType);
 	}
 }
