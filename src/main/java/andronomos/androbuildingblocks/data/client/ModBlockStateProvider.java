@@ -60,8 +60,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	}
 
 	private void registerStairBlockStateAndModel(StairBlock block, String name) {
-		String cleanName = name.substring(0, name.indexOf("_stairs"));
-		String resourceName = cleanName;
+		String resourceName = name.substring(0, name.indexOf("_stairs"));
 		if(resourceName.contains("_brick")) {
 			resourceName = resourceName + "s";
 		}
@@ -70,8 +69,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	}
 
 	private void registerSlabBlockStateAndModel(SlabBlock block, String blockName, boolean isTranslucent) {
-		String cleanName = blockName.substring(0, blockName.indexOf("_slab"));
-		String resourceName = cleanName;
+		String resourceName = blockName.substring(0, blockName.indexOf("_slab"));
 		if(resourceName.contains("_brick")) {
 			resourceName = resourceName + "s";
 		}
@@ -94,8 +92,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	}
 
 	private void registerWallBlockStateAndModel(WallBlock block, String name) {
-		String cleanName = name.substring(0, name.indexOf("_wall"));
-		String resourceName = cleanName;
+		String resourceName = name.substring(0, name.indexOf("_wall"));
 		if(resourceName.contains("_brick")) {
 			resourceName = resourceName + "s";
 		}
