@@ -31,6 +31,9 @@ public class BlockRegistry {
 				if(type.isRotatable) {
 					concreteBlock = registerRotatableBlock(String.format("%s_reinforced_concrete", type.name), properties);
 				} else {
+					if(type.hasTransparency) {
+						properties.noOcclusion();
+					}
 					concreteBlock = registerBlock(String.format("%s_reinforced_concrete", type.name), properties, type.hasTransparency);
 				}
 
@@ -98,6 +101,9 @@ public class BlockRegistry {
 			if(type.isRotatable) {
 				registerRotatableBlock(String.format("%s_%s", BlockCategories.GRAPHITE_BLOCKS.name, type.name), properties);
 			} else {
+				if(type.hasTransparency) {
+					properties.noOcclusion();
+				}
 				registerBlock(String.format("%s_%s", BlockCategories.GRAPHITE_BLOCKS.name, type.name), properties, type.hasTransparency);
 			}
 

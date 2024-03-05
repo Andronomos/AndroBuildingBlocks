@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-04T23:19:17.7425157	Block States: androbuildingblocks
+// 1.20.1	2024-03-04T23:25:22.024286	Block States: androbuildingblocks
 fe461e05c553efb17b31cc33c415f2534ef0e257 assets/androbuildingblocks/blockstates/black_reinforced_concrete.json
 3ad4adb4774e0e1808cfd54bb0628b4f05d8b30f assets/androbuildingblocks/blockstates/black_reinforced_concrete_slab.json
 fd73f467da20ab7e62e1ed96f2f5fa6f9fc688b4 assets/androbuildingblocks/blockstates/black_reinforced_concrete_stairs.json
@@ -138,7 +138,7 @@ d744e58a410a95af90fba4f51340402e0b0eca14 assets/androbuildingblocks/models/block
 f85969fd0c7dd1bb42884412141230b1d37450c9 assets/androbuildingblocks/models/block/cyan_structural_glass_pane_side_alt.json
 09c31bb93a63d2fb2dfc13efc11d0b72174e7eba assets/androbuildingblocks/models/block/graphite.json
 2547d13286fad5ea21b4349d6f87cfc2d16b6b2f assets/androbuildingblocks/models/block/graphite_grate.json
-8b1101d3ff6813cf25e727ba6a281be36518a0eb assets/androbuildingblocks/models/block/graphite_mesh.json
+7fe1cb3bb74df1833250d74ef3c9f57613fc6b8f assets/androbuildingblocks/models/block/graphite_mesh.json
 36eba6c3f68889ed4c8485c30a0ee33bf3509dad assets/androbuildingblocks/models/block/graphite_slab.json
 b9b69c97c8abd8f4d6d7a7b5b00ea3a73e374a72 assets/androbuildingblocks/models/block/graphite_slab_top.json
 563e71a4960f03c062f980d948eccd6913ce0d88 assets/androbuildingblocks/models/block/graphite_stairs.json

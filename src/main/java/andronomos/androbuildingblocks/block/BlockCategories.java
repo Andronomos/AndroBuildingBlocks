@@ -28,7 +28,7 @@ public class BlockCategories {
 
 		AndroBlockCategories.add(GRAPHITE_BLOCKS);
 		GRAPHITE_BLOCKS.addType(new AndroBlockType("grate", false, false, false).rotatable(true));
-		GRAPHITE_BLOCKS.addType(new AndroBlockType("mesh", false, false, false));
+		GRAPHITE_BLOCKS.addType(new AndroBlockType("mesh", false, false, false).transparency(true));
 		GRAPHITE_BLOCKS.addType(new AndroBlockType("tile"));
 
 		AndroBlockCategories.add(STEEL_BLOCKS);
