@@ -78,9 +78,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 		//region Structural Glass
 		BlockCategories.STRUCTURAL_GLASS_BLOCKS.blockTypes.forEach(type -> {
-			Block vanillaGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft", String.format("%s_stained_glass", type.name)));
-			Block structuralGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_structural_glass", type.name)));
-			Block glassPaneBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_structural_glass_pane", type.name)));
+			Block vanillaGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft", String.format("%s_stained_glass", type.dyeColor.getName())));
+			Block structuralGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, type.name));
+			Block glassPaneBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_pane", type.name)));
 
 			if(blockExists(vanillaGlassBlock) && blockExists(structuralGlassBlock) && blockExists(glassPaneBlock)) {
 				ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, structuralGlassBlock, 4);
