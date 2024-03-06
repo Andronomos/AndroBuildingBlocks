@@ -20,7 +20,6 @@ public class BlockRegistry {
 	public static Block.Properties GLASS_PANE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.GLASS_PANE);
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AndroBuildingBlocks.MODID);
 
-
 	public static void registerBlocks() {
 		BlockCategories.AndroBlockCategories.forEach(blockCategory -> {
 			BlockBehaviour.Properties properties = blockCategory.properties;
