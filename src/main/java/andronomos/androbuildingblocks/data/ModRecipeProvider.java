@@ -162,6 +162,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 			Block graphiteBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, BlockCategories.GRAPHITE_BLOCKS.sourceBlock.name));
 			if(graphiteBlock != null) {
 				buildSmeltingRecipe(Blocks.COAL_BLOCK, graphiteBlock, recipeConsumer);
+
+				Block stairBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_stairs", BlockCategories.GRAPHITE_BLOCKS.sourceBlock.name)));
+				Block slabBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_slab", BlockCategories.GRAPHITE_BLOCKS.sourceBlock.name)));
+				Block wallBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_wall", BlockCategories.GRAPHITE_BLOCKS.sourceBlock.name)));
+
+				if(BlockCategories.GRAPHITE_BLOCKS.sourceBlock.hasStairVariant && blockExists(stairBlock)) {
+					buildStairRecipe(stairBlock, steelBlock, recipeConsumer);
+					buildStoneCutterRecipe(stairBlock, steelBlock, 1, recipeConsumer);
+				}
+
+				if(BlockCategories.GRAPHITE_BLOCKS.sourceBlock.hasSlabVariant && blockExists(slabBlock)) {
+					buildThreeByOneRecipe(slabBlock, steelBlock, recipeConsumer);
+					buildStoneCutterRecipe(slabBlock, steelBlock, 2, recipeConsumer);
+				}
+
+				if(BlockCategories.GRAPHITE_BLOCKS.sourceBlock.hasWallVariant && blockExists(wallBlock)) {
+					buildStoneCutterRecipe(wallBlock, steelBlock, 1, recipeConsumer);
+					buildThreeByTwoRecipe(wallBlock, steelBlock, recipeConsumer);
+				}
 			}
 		}
 
