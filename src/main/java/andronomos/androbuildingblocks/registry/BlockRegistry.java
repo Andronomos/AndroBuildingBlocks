@@ -2,6 +2,7 @@ package andronomos.androbuildingblocks.registry;
 
 import andronomos.androbuildingblocks.AndroBuildingBlocks;
 import andronomos.androbuildingblocks.block.AndroBlock;
+import andronomos.androbuildingblocks.block.AndroBlockType;
 import andronomos.androbuildingblocks.block.AndroSlabBlock;
 import andronomos.androbuildingblocks.block.BlockCategories;
 import net.minecraft.world.item.BlockItem;
@@ -71,6 +72,10 @@ public class BlockRegistry {
 				}
 			});
 		});
+	}
+
+	private void registerVariants(AndroBlockType blockType) {
+
 	}
 
 	//region Caution

@@ -1,5 +1,6 @@
 package andronomos.androbuildingblocks.data;
 
+import andronomos.androbuildingblocks.block.AndroBlockType;
 import andronomos.androbuildingblocks.block.BlockCategories;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -44,24 +45,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 				shaped.unlockedBy("has_item", has(Tags.Items.STONE));
 				shaped.save(recipeConsumer);
 
-				Block stairBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_stairs", blockType.name)));
-				Block slabBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_slab", blockType.name)));
-				Block wallBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_wall", blockType.name)));
-
-				if(blockType.hasStairVariant && blockExists(stairBlock)) {
-					buildStairRecipe(stairBlock, variantBlock, recipeConsumer);
-					buildStoneCutterRecipe(stairBlock, variantBlock, 1, recipeConsumer);
-				}
-
-				if(blockType.hasSlabVariant && blockExists(slabBlock)) {
-					buildThreeByOneRecipe(slabBlock, variantBlock, recipeConsumer);
-					buildStoneCutterRecipe(slabBlock, variantBlock, 2, recipeConsumer);
-				}
-
-				if(blockType.hasWallVariant && blockExists(wallBlock)) {
-					buildStoneCutterRecipe(wallBlock, variantBlock, 1, recipeConsumer);
-					buildThreeByTwoRecipe(wallBlock, variantBlock, recipeConsumer);
-				}
+				buildVariantRecipes(variantBlock, blockType, recipeConsumer);
 			}
 		});
 		//endregion
@@ -132,27 +116,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		}
 
 		BlockCategories.STEEL_BLOCKS.blockTypes.forEach(blockType -> {
-			Block variantBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, blockType.name));
+			Block steelVariant = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, blockType.name));
 
-			if(blockExists(variantBlock)) {
-				Block stairBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_stairs", blockType.name)));
-				Block slabBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_slab", blockType.name)));
-				Block wallBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_wall", blockType.name)));
+			if(blockExists(steelVariant)) {
+				//todo: generate a recipe for the variant block itself
 
-				if(blockType.hasStairVariant && blockExists(stairBlock)) {
-					buildStairRecipe(stairBlock, variantBlock, recipeConsumer);
-					buildStoneCutterRecipe(stairBlock, variantBlock, 1, recipeConsumer);
-				}
-
-				if(blockType.hasSlabVariant && blockExists(slabBlock)) {
-					buildThreeByOneRecipe(slabBlock, variantBlock, recipeConsumer);
-					buildStoneCutterRecipe(slabBlock, variantBlock, 2, recipeConsumer);
-				}
-
-				if(blockType.hasWallVariant && blockExists(wallBlock)) {
-					buildStoneCutterRecipe(wallBlock, variantBlock, 1, recipeConsumer);
-					buildThreeByTwoRecipe(wallBlock, variantBlock, recipeConsumer);
-				}
+				buildVariantRecipes(steelVariant, blockType, recipeConsumer);
 			}
 		});
 		//endregion
@@ -160,6 +129,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		//region Graphite
 		if(BlockCategories.GRAPHITE_BLOCKS.sourceBlock != null) {
 			Block graphiteBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, BlockCategories.GRAPHITE_BLOCKS.sourceBlock.name));
+
 			if(graphiteBlock != null) {
 				buildSmeltingRecipe(Blocks.COAL_BLOCK, graphiteBlock, recipeConsumer);
 
@@ -185,39 +155,40 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		}
 
 		BlockCategories.GRAPHITE_BLOCKS.blockTypes.forEach(blockType -> {
-			Block variantBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, blockType.name));
+			Block graphiteVariant = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, blockType.name));
 
-			if(blockExists(variantBlock)) {
-				Block stairBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_stairs", blockType.name)));
-				Block slabBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_slab", blockType.name)));
-				Block wallBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_wall", blockType.name)));
-
-				if(blockType.hasStairVariant && blockExists(stairBlock)) {
-					buildStairRecipe(stairBlock, variantBlock, recipeConsumer);
-					buildStoneCutterRecipe(stairBlock, variantBlock, 1, recipeConsumer);
-				}
-
-				if(blockType.hasSlabVariant && blockExists(slabBlock)) {
-					buildThreeByOneRecipe(slabBlock, variantBlock, recipeConsumer);
-					buildStoneCutterRecipe(slabBlock, variantBlock, 2, recipeConsumer);
-				}
-
-				if(blockType.hasWallVariant && blockExists(wallBlock)) {
-					buildStoneCutterRecipe(wallBlock, variantBlock, 1, recipeConsumer);
-					buildThreeByTwoRecipe(wallBlock, variantBlock, recipeConsumer);
-				}
+			if(blockExists(graphiteVariant)) {
+				//todo: generate a recipe for the variant block itself
+				buildVariantRecipes(graphiteVariant, blockType, recipeConsumer);
 			}
 		});
 		//endregion
-
-
-
-
 
 		//region Caution Stripes
 		//buildStripedRecipe(BlockRegistry.YELLOW_CAUTION_STRIPES.get(), Items.YELLOW_DYE, Items.BLACK_DYE, recipeConsumer);
 		//buildStripedRecipe(BlockRegistry.RED_CAUTION_STRIPES.get(), Items.RED_DYE, Items.WHITE_DYE, recipeConsumer);
 		//endregion
+	}
+
+	private void buildVariantRecipes(Block source, AndroBlockType blockType, Consumer<FinishedRecipe> recipeConsumer) {
+		Block stairBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_stairs", blockType.name)));
+		Block slabBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_slab", blockType.name)));
+		Block wallBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_wall", blockType.name)));
+
+		if(blockType.hasStairVariant && blockExists(stairBlock)) {
+			buildStairRecipe(stairBlock, source, recipeConsumer);
+			buildStoneCutterRecipe(stairBlock, source, 1, recipeConsumer);
+		}
+
+		if(blockType.hasSlabVariant && blockExists(slabBlock)) {
+			buildThreeByOneRecipe(slabBlock, source, recipeConsumer);
+			buildStoneCutterRecipe(slabBlock, source, 2, recipeConsumer);
+		}
+
+		if(blockType.hasWallVariant && blockExists(wallBlock)) {
+			buildStoneCutterRecipe(wallBlock, source, 1, recipeConsumer);
+			buildThreeByTwoRecipe(wallBlock, source, recipeConsumer);
+		}
 	}
 
 

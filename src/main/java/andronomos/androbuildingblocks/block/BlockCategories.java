@@ -9,7 +9,6 @@ import java.util.List;
 
 public class BlockCategories {
 	public static final List<AndroBlockCategory> AndroBlockCategories = new ArrayList<>();
-
 	public static final AndroBlockCategory REINFORCED_CONCRETE_BLOCKS = new AndroBlockCategory("reinforced_concrete", BlockBehaviour.Properties.copy(Blocks.WHITE_CONCRETE));
 	public static final AndroBlockCategory GRAPHITE_BLOCKS = new AndroBlockCategory("graphite", BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK));
 	public static final AndroBlockCategory STEEL_BLOCKS = new AndroBlockCategory("steel", BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK));
