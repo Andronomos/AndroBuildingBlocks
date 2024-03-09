@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:yellow_dye"
+    },
+    "2": {
+      "item": "minecraft:black_dye"
+    },
+    "3": {
+      "tag": "forge:stone"
+    }
+  },
+  "pattern": [
+    "212",
+    "131",
+    "212"
+  ],
+  "result": {
+    "count": 4,
+    "item": "androbuildingblocks:yellow_caution_stripes"
+  },
+  "show_notification": true
+}

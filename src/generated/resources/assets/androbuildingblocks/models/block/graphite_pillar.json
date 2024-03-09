@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cube_column",
   "textures": {
     "end": "androbuildingblocks:block/graphite",
-    "side": "androbuildingblocks:block/graphite_grate"
+    "side": "androbuildingblocks:block/graphite_pillar"
   }
 }

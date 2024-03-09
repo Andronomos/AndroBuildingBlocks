@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "androbuildingblocks:block/red_caution_stripes_slab"
+    },
+    "type=double": {
+      "model": "androbuildingblocks:block/red_caution_stripes"
+    },
+    "type=top": {
+      "model": "androbuildingblocks:block/red_caution_stripes_slab_top"
+    }
+  }
+}

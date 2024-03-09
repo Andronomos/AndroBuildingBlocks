@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "androbuildingblocks:graphite_grate"
+          "name": "androbuildingblocks:red_caution_stripes_slab"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "androbuildingblocks:blocks/graphite_grate"
+  "random_sequence": "androbuildingblocks:blocks/red_caution_stripes_slab"
 }

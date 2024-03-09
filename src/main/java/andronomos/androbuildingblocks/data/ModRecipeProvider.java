@@ -1,10 +1,10 @@
 package andronomos.androbuildingblocks.data;
 
-import andronomos.androbuildingblocks.block.AndroBlockType;
-import andronomos.androbuildingblocks.block.BlockCategories;
+import andronomos.androbuildingblocks.registry.BlockRegistry;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -27,171 +27,132 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 	@Override
 	protected void buildRecipes(@NotNull Consumer<FinishedRecipe> recipeConsumer) {
-		//region Concrete
-		BlockCategories.REINFORCED_CONCRETE_BLOCKS.blockTypes.forEach(blockType -> {
-			Block variantBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, blockType.name));
-			Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", String.format("%s_dye", blockType.dyeColor.getName())));
+		buildReinforcedConcreteRecipe(BlockRegistry.BLACK_REINFORCED_CONCRETE.get(), "black", recipeConsumer);
+		buildReinforcedConcreteRecipe(BlockRegistry.BLUE_REINFORCED_CONCRETE.get(), "blue", recipeConsumer);
+		buildReinforcedConcreteRecipe(BlockRegistry.BROWN_REINFORCED_CONCRETE.get(), "brown", recipeConsumer);
+		buildReinforcedConcreteRecipe(BlockRegistry.GREEN_REINFORCED_CONCRETE.get(), "green", recipeConsumer);
+		buildReinforcedConcreteRecipe(BlockRegistry.GRAY_REINFORCED_CONCRETE.get(), "gray", recipeConsumer);
+		buildReinforcedConcreteRecipe(BlockRegistry.PURPLE_REINFORCED_CONCRETE.get(), "purple", recipeConsumer);
+		buildReinforcedConcreteRecipe(BlockRegistry.RED_REINFORCED_CONCRETE.get(), "red", recipeConsumer);
+		buildReinforcedConcreteRecipe(BlockRegistry.WHITE_REINFORCED_CONCRETE.get(), "white", recipeConsumer);
 
-			if(blockExists(variantBlock) && dye != null) {
-				ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, variantBlock, 8);
-				shaped.define('1', Tags.Items.STONE);
-				shaped.define('2', Tags.Items.INGOTS_IRON);
-				shaped.define('3', Items.GRAVEL);
-				shaped.define('4', dye);
-				shaped.pattern("212");
-				shaped.pattern("343");
-				shaped.pattern("212");
-				shaped.group(blockType.name);
-				shaped.unlockedBy("has_item", has(Tags.Items.STONE));
-				shaped.save(recipeConsumer);
-
-				buildVariantRecipes(variantBlock, blockType, recipeConsumer);
-			}
-		});
-		//endregion
-
-		//region Structural Glass
-		BlockCategories.STRUCTURAL_GLASS_BLOCKS.blockTypes.forEach(type -> {
-			Block vanillaGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft", String.format("%s_stained_glass", type.dyeColor.getName())));
-			Block structuralGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, type.name));
-			Block glassPaneBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_pane", type.name)));
-
-			if(blockExists(vanillaGlassBlock) && blockExists(structuralGlassBlock) && blockExists(glassPaneBlock)) {
-				ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, structuralGlassBlock, 4);
-				shaped.define('1', vanillaGlassBlock);
-				shaped.define('2', Items.SLIME_BALL);
-				shaped.pattern("212");
-				shaped.pattern("121");
-				shaped.pattern("212");
-				shaped.unlockedBy("has_item", has(Items.SLIME_BALL));
-				shaped.save(recipeConsumer);
-
-				buildThreeByTwoRecipe(glassPaneBlock, structuralGlassBlock, recipeConsumer);
-			}
-		});
-		//endregion
-
-		//region Steel
-		Block steelBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, BlockCategories.STEEL_BLOCKS.sourceBlock.name));
-
-		if(steelBlock != null) {
-			ShapedRecipeBuilder steelFromCoalRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, steelBlock, 4);
-			steelFromCoalRecipe.define('C', Items.COAL);
-			steelFromCoalRecipe.define('I', Tags.Items.INGOTS_IRON);
-			steelFromCoalRecipe.pattern("CIC");
-			steelFromCoalRecipe.pattern("ICI");
-			steelFromCoalRecipe.pattern("CIC");
-			steelFromCoalRecipe.group(BlockCategories.STEEL_BLOCKS.sourceBlock.name);
-			steelFromCoalRecipe.unlockedBy("has_item", has(Items.COAL));
-			steelFromCoalRecipe.save(recipeConsumer);
-
-			ShapedRecipeBuilder steelFromCharcoalRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, steelBlock, 4);
-			steelFromCharcoalRecipe.define('C', Items.CHARCOAL);
-			steelFromCharcoalRecipe.define('I', Tags.Items.INGOTS_IRON);
-			steelFromCharcoalRecipe.pattern("CIC");
-			steelFromCharcoalRecipe.pattern("ICI");
-			steelFromCharcoalRecipe.pattern("CIC");
-			steelFromCharcoalRecipe.group(BlockCategories.STEEL_BLOCKS.sourceBlock.name);
-			steelFromCharcoalRecipe.unlockedBy("has_item", has(Items.CHARCOAL));
-			steelFromCharcoalRecipe.save(recipeConsumer, String.format("%s_from_charcoal", BlockCategories.STEEL_BLOCKS.sourceBlock.name));
-
-			Block stairBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_stairs", BlockCategories.STEEL_BLOCKS.sourceBlock.name)));
-			Block slabBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_slab", BlockCategories.STEEL_BLOCKS.sourceBlock.name)));
-			Block wallBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_wall", BlockCategories.STEEL_BLOCKS.sourceBlock.name)));
-
-			if(BlockCategories.STEEL_BLOCKS.sourceBlock.hasStairVariant && blockExists(stairBlock)) {
-				buildStairRecipe(stairBlock, steelBlock, recipeConsumer);
-				buildStoneCutterRecipe(stairBlock, steelBlock, 1, recipeConsumer);
-			}
-
-			if(BlockCategories.STEEL_BLOCKS.sourceBlock.hasSlabVariant && blockExists(slabBlock)) {
-				buildThreeByOneRecipe(slabBlock, steelBlock, recipeConsumer);
-				buildStoneCutterRecipe(slabBlock, steelBlock, 2, recipeConsumer);
-			}
-
-			if(BlockCategories.STEEL_BLOCKS.sourceBlock.hasWallVariant && blockExists(wallBlock)) {
-				buildStoneCutterRecipe(wallBlock, steelBlock, 1, recipeConsumer);
-				buildThreeByTwoRecipe(wallBlock, steelBlock, recipeConsumer);
-			}
+		for(DyeColor color : DyeColor.values()) {
+			Block glassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, color + "_structural_glass"));
+			buildStructuralGlassRecipes(glassBlock, color.getName(), recipeConsumer);
 		}
 
-		BlockCategories.STEEL_BLOCKS.blockTypes.forEach(blockType -> {
-			Block steelVariant = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, blockType.name));
+		buildSteelRecipes(recipeConsumer);
+		buildGraphiteRecipes(recipeConsumer);
 
-			if(blockExists(steelVariant)) {
-				//todo: generate a recipe for the variant block itself
+		buildStripedRecipe(BlockRegistry.YELLOW_CAUTION_STRIPES.get(), Items.YELLOW_DYE, Items.BLACK_DYE, recipeConsumer);
+		buildVariantRecipes(BlockRegistry.YELLOW_CAUTION_STRIPES.get(),false, true, true, recipeConsumer);
+		buildStripedRecipe(BlockRegistry.RED_CAUTION_STRIPES.get(), Items.RED_DYE, Items.WHITE_DYE, recipeConsumer);
+		buildVariantRecipes(BlockRegistry.RED_CAUTION_STRIPES.get(),false, true, true, recipeConsumer);
 
-				buildVariantRecipes(steelVariant, blockType, recipeConsumer);
-			}
-		});
-		//endregion
-
-		//region Graphite
-		if(BlockCategories.GRAPHITE_BLOCKS.sourceBlock != null) {
-			Block graphiteBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, BlockCategories.GRAPHITE_BLOCKS.sourceBlock.name));
-
-			if(graphiteBlock != null) {
-				buildSmeltingRecipe(Blocks.COAL_BLOCK, graphiteBlock, recipeConsumer);
-
-				Block stairBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_stairs", BlockCategories.GRAPHITE_BLOCKS.sourceBlock.name)));
-				Block slabBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_slab", BlockCategories.GRAPHITE_BLOCKS.sourceBlock.name)));
-				Block wallBlock =  ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_wall", BlockCategories.GRAPHITE_BLOCKS.sourceBlock.name)));
-
-				if(BlockCategories.GRAPHITE_BLOCKS.sourceBlock.hasStairVariant && blockExists(stairBlock)) {
-					buildStairRecipe(stairBlock, steelBlock, recipeConsumer);
-					buildStoneCutterRecipe(stairBlock, steelBlock, 1, recipeConsumer);
-				}
-
-				if(BlockCategories.GRAPHITE_BLOCKS.sourceBlock.hasSlabVariant && blockExists(slabBlock)) {
-					buildThreeByOneRecipe(slabBlock, steelBlock, recipeConsumer);
-					buildStoneCutterRecipe(slabBlock, steelBlock, 2, recipeConsumer);
-				}
-
-				if(BlockCategories.GRAPHITE_BLOCKS.sourceBlock.hasWallVariant && blockExists(wallBlock)) {
-					buildStoneCutterRecipe(wallBlock, steelBlock, 1, recipeConsumer);
-					buildThreeByTwoRecipe(wallBlock, steelBlock, recipeConsumer);
-				}
-			}
-		}
-
-		BlockCategories.GRAPHITE_BLOCKS.blockTypes.forEach(blockType -> {
-			Block graphiteVariant = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, blockType.name));
-
-			if(blockExists(graphiteVariant)) {
-				//todo: generate a recipe for the variant block itself
-				buildVariantRecipes(graphiteVariant, blockType, recipeConsumer);
-			}
-		});
-		//endregion
-
-		//region Caution Stripes
-		//buildStripedRecipe(BlockRegistry.YELLOW_CAUTION_STRIPES.get(), Items.YELLOW_DYE, Items.BLACK_DYE, recipeConsumer);
-		//buildStripedRecipe(BlockRegistry.RED_CAUTION_STRIPES.get(), Items.RED_DYE, Items.WHITE_DYE, recipeConsumer);
-		//endregion
+		buildSmeltingRecipe(Blocks.STONE, BlockRegistry.CHARRED_STONE.get(), recipeConsumer);
+		buildVariantRecipes(BlockRegistry.CHARRED_STONE.get(),true, true, true, recipeConsumer);
 	}
 
-	private void buildVariantRecipes(Block source, AndroBlockType blockType, Consumer<FinishedRecipe> recipeConsumer) {
-		Block stairBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_stairs", blockType.name)));
-		Block slabBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_slab", blockType.name)));
-		Block wallBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_wall", blockType.name)));
+	private void buildReinforcedConcreteRecipe(Block block, String color, Consumer<FinishedRecipe> recipeConsumer) {
+		Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", color + "_dye"));
+		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, block, 8);
+		shaped.define('1', Tags.Items.STONE);
+		shaped.define('2', Tags.Items.INGOTS_IRON);
+		shaped.define('3', Items.GRAVEL);
+		shaped.define('4', dye);
+		shaped.pattern("212");
+		shaped.pattern("343");
+		shaped.pattern("212");
+		shaped.unlockedBy("has_item", has(Tags.Items.STONE));
+		shaped.save(recipeConsumer);
 
-		if(blockType.hasStairVariant && blockExists(stairBlock)) {
+		buildVariantRecipes(block, true, true, true, recipeConsumer);
+	}
+
+	private void buildStructuralGlassRecipes(Block block, String color, Consumer<FinishedRecipe> recipeConsumer) {
+		Block vanillaGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft", color + "_stained_glass"));
+
+		if(blockExists(vanillaGlassBlock)) {
+			ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, block, 4);
+			shaped.define('1', vanillaGlassBlock);
+			shaped.define('2', Items.SLIME_BALL);
+			shaped.pattern("212");
+			shaped.pattern("121");
+			shaped.pattern("212");
+			shaped.unlockedBy("has_item", has(Items.SLIME_BALL));
+			shaped.save(recipeConsumer);
+
+			String name = ForgeRegistries.BLOCKS.getKey(block).getPath();
+			Block glassPaneBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_pane", name)));
+
+			if(blockExists(glassPaneBlock)) {
+				buildThreeByTwoRecipe(glassPaneBlock, block, recipeConsumer);
+			}
+		}
+	}
+
+	private void buildSteelRecipes(Consumer<FinishedRecipe> recipeConsumer) {
+		ShapedRecipeBuilder steelFromCoalRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.STEEL.get(), 4);
+		steelFromCoalRecipe.define('C', Items.COAL);
+		steelFromCoalRecipe.define('I', Tags.Items.INGOTS_IRON);
+		steelFromCoalRecipe.pattern("CIC");
+		steelFromCoalRecipe.pattern("ICI");
+		steelFromCoalRecipe.pattern("CIC");
+		steelFromCoalRecipe.group("steel");
+		steelFromCoalRecipe.unlockedBy("has_item", has(Items.COAL));
+		steelFromCoalRecipe.save(recipeConsumer);
+
+		ShapedRecipeBuilder steelFromCharcoalRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.STEEL.get(), 4);
+		steelFromCharcoalRecipe.define('C', Items.CHARCOAL);
+		steelFromCharcoalRecipe.define('I', Tags.Items.INGOTS_IRON);
+		steelFromCharcoalRecipe.pattern("CIC");
+		steelFromCharcoalRecipe.pattern("ICI");
+		steelFromCharcoalRecipe.pattern("CIC");
+		steelFromCharcoalRecipe.group("steel");
+		steelFromCharcoalRecipe.unlockedBy("has_item", has(Items.CHARCOAL));
+		steelFromCharcoalRecipe.save(recipeConsumer, "steel_from_charcoal");
+
+		buildTwoByTwoRecipe(BlockRegistry.STEEL_TILE.get(), BlockRegistry.STEEL.get(), recipeConsumer);
+		buildStoneCutterRecipe(BlockRegistry.STEEL_TILE.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
+		buildStoneCutterRecipe(BlockRegistry.STEEL_MESH.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
+
+		buildVariantRecipes(BlockRegistry.STEEL.get(), true, true, true, recipeConsumer);
+		buildVariantRecipes(BlockRegistry.STEEL_MESH.get(), true, true, true, recipeConsumer);
+		buildVariantRecipes(BlockRegistry.STEEL_TILE.get(), true, true, true, recipeConsumer);
+	}
+	
+	private void buildGraphiteRecipes(Consumer<FinishedRecipe> recipeConsumer) {
+		buildSmeltingRecipe(Blocks.COAL_BLOCK, BlockRegistry.GRAPHITE.get(), recipeConsumer);
+		buildStoneCutterRecipe(BlockRegistry.GRAPHITE_MESH.get(), BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
+		buildStoneCutterRecipe(BlockRegistry.GRAPHITE_TILE.get(), BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
+		buildTwoByTwoRecipe(BlockRegistry.GRAPHITE_TILE.get(), BlockRegistry.GRAPHITE.get(), recipeConsumer);
+		buildVariantRecipes(BlockRegistry.GRAPHITE.get(), true, true, true, recipeConsumer);
+		buildVariantRecipes(BlockRegistry.GRAPHITE_MESH.get(), true, true, true, recipeConsumer);
+		buildVariantRecipes(BlockRegistry.GRAPHITE_TILE.get(), true, true, true, recipeConsumer);
+	}
+
+	private void buildVariantRecipes(Block source, boolean stairs, boolean slab, boolean wall, Consumer<FinishedRecipe> recipeConsumer) {
+		String name = ForgeRegistries.BLOCKS.getKey(source).getPath();
+
+		Block stairBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_stairs", name)));
+		Block slabBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_slab", name)));
+		Block wallBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_wall", name)));
+
+		if(stairs && blockExists(stairBlock)) {
 			buildStairRecipe(stairBlock, source, recipeConsumer);
 			buildStoneCutterRecipe(stairBlock, source, 1, recipeConsumer);
 		}
 
-		if(blockType.hasSlabVariant && blockExists(slabBlock)) {
+		if(slab && blockExists(slabBlock)) {
 			buildThreeByOneRecipe(slabBlock, source, recipeConsumer);
 			buildStoneCutterRecipe(slabBlock, source, 2, recipeConsumer);
 		}
 
-		if(blockType.hasWallVariant && blockExists(wallBlock)) {
+		if(wall && blockExists(wallBlock)) {
 			buildStoneCutterRecipe(wallBlock, source, 1, recipeConsumer);
 			buildThreeByTwoRecipe(wallBlock, source, recipeConsumer);
 		}
 	}
-
-
 
 	private boolean blockExists(Block block) {
 		return block != null && block != Blocks.AIR;
