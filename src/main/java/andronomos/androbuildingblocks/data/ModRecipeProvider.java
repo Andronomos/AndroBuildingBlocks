@@ -51,6 +51,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 		buildSmeltingRecipe(Blocks.STONE, BlockRegistry.CHARRED_STONE.get(), recipeConsumer);
 		buildVariantRecipes(BlockRegistry.CHARRED_STONE.get(),true, true, true, recipeConsumer);
+
+		ShapedRecipeBuilder shaleRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.STEEL.get(), 4);
+		shaleRecipe.define('M', Blocks.MUD);
+		shaleRecipe.define('C', Blocks.CALCITE);
+		shaleRecipe.pattern("MCM");
+		shaleRecipe.pattern("CMC");
+		shaleRecipe.pattern("MCM");
+		shaleRecipe.unlockedBy("has_item", has(Blocks.MUD));
+		shaleRecipe.save(recipeConsumer);
+		buildVariantRecipes(BlockRegistry.SHALE.get(),true, true, true, recipeConsumer);
 	}
 
 	private void buildReinforcedConcreteRecipe(Block block, String color, Consumer<FinishedRecipe> recipeConsumer) {

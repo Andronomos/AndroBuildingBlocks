@@ -46,6 +46,7 @@ public class BlockRegistry {
 	public static final RegistryObject<Block> RED_CAUTION_STRIPES = registerHorizontalBlock("red_caution_stripes", GENERIC_PROPERTIES);
 
 	public static final RegistryObject<Block> CHARRED_STONE = registerHorizontalBlock("chared_stone", GENERIC_PROPERTIES);
+	public static final RegistryObject<Block> SHALE = registerHorizontalBlock("shale", GENERIC_PROPERTIES);
 
 
 	public static void registerBlocks() {
@@ -75,6 +76,7 @@ public class BlockRegistry {
 		registerVariants(RED_CAUTION_STRIPES, "red_caution_stripes", GENERIC_PROPERTIES, false, true, true);
 
 		registerVariants(CHARRED_STONE, "charred_stone", GENERIC_PROPERTIES, true, true, true);
+		registerVariants(SHALE, "shale", GENERIC_PROPERTIES, true, true, true);
 	}
 
 	private static void registerVariants(RegistryObject<Block> block, String name, Block.Properties properties, boolean stairs, boolean slab, boolean wall) {
