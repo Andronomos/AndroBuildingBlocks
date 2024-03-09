@@ -2,6 +2,8 @@ package andronomos.androbuildingblocks.data.client;
 
 import andronomos.androbuildingblocks.AndroBuildingBlocks;
 import andronomos.androbuildingblocks.block.AndroBlock;
+import andronomos.androbuildingblocks.block.AndroHorizontalBlock;
+import andronomos.androbuildingblocks.block.AndroRotatableBlock;
 import andronomos.androbuildingblocks.block.AndroSlabBlock;
 import andronomos.androbuildingblocks.registry.BlockRegistry;
 import net.minecraft.core.Direction;
@@ -34,11 +36,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
 				case "StainedGlassBlock" -> registerBlockStateAndModel(b, blockName, true);
 				case "AndroBlock" -> registerBlockStateAndModel(b, blockName, ((AndroBlock)b).isTranslucent);
 				case "StainedGlassPaneBlock", "IronBarsBlock" -> registerPaneBlockStateAndModel((IronBarsBlock)b, blockName);
-				case "RotatedPillarBlock" -> registerRotatableBlockStateAndModel((RotatedPillarBlock) b, blockName);
+				case "AndroRotatableBlock" -> registerRotatableBlockStateAndModel((AndroRotatableBlock)b, blockName);
+				case "GlazedTerracottaBlock" -> registerHorizontalBlockStateAndModel((GlazedTerracottaBlock)b, blockName);
 				default -> registerBlockStateAndModel(b, blockName, false);
 			}
 		});
 	}
+
+
 
 	private void registerBlockStateAndModel(Block block, String blockName, boolean isTranslucent) {
 		ModelFile model;
@@ -107,27 +112,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		itemModels().singleTexture(blockName, mcLoc("item/generated"), "layer0", modLoc(textureName)).renderType("translucent");
 	}
 
-	private void registerRotatableBlockStateAndModel(RotatedPillarBlock block, String name) {
-		String keyword = "_pillar";
-
-		if(name.contains("grate")) {
-			keyword = "_grate";
-		}
-
-		String topResource = name.substring(0, name.indexOf(keyword));
-		String resource = "block/" + name;
+	private void registerRotatableBlockStateAndModel(AndroRotatableBlock block, String blockName) {
+		String resource = "block/" + blockName;
 		ResourceLocation side = modLoc(resource);
 		ResourceLocation end;
 
-		//if(!topResource.equals("")) {
-		//	end = modLoc("block/" + topResource);
-		//} else {
-		//	end = side;
-		//}
+		if(!block.topResource.equals("")) {
+			end = modLoc("block/" + block.topResource);
+		} else {
+			end = side;
+		}
 
-		end = modLoc("block/" + topResource);
-
-		ModelFile model = models().cubeColumn(name, side, end);
+		ModelFile model = models().cubeColumn(blockName, side, end);
 
 		getVariantBuilder(block).forAllStatesExcept(state -> {
 			Direction.Axis axis = state.getValue(RotatedPillarBlock.AXIS);
@@ -154,7 +150,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
 					.build();
 		});
 
-		registerItemModel(name);
+		registerItemModel(blockName);
+	}
+
+	private void registerHorizontalBlockStateAndModel(GlazedTerracottaBlock b, String blockName) {
+		String resource = "block/" + blockName;
+		ResourceLocation side = modLoc(resource);
+		horizontalBlock(b, side, side, side);
+		registerItemModel(blockName);
 	}
 
 	private void registerItemModel(String name) {

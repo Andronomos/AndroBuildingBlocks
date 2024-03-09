@@ -1,6 +1,5 @@
 package andronomos.androbuildingblocks;
 
-import andronomos.androbuildingblocks.block.BlockCategories;
 import andronomos.androbuildingblocks.registry.BlockRegistry;
 import andronomos.androbuildingblocks.registry.ModCreativeTabs;
 import andronomos.androbuildingblocks.registry.ModItems;
@@ -23,8 +22,6 @@ public class AndroBuildingBlocks
     public AndroBuildingBlocks()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
-        BlockCategories.createCategories();
 
         BlockRegistry.BLOCKS.register(modEventBus);
         BlockRegistry.registerBlocks();
