@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "androbuildingblocks:block/shale_slab"
+    },
+    "type=double": {
+      "model": "androbuildingblocks:block/shale"
+    },
+    "type=top": {
+      "model": "androbuildingblocks:block/shale_slab_top"
+    }
+  }
+}

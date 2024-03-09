@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "androbuildingblocks:block/shale",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "androbuildingblocks:block/shale"
+    },
+    "facing=south": {
+      "model": "androbuildingblocks:block/shale",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "androbuildingblocks:block/shale",
+      "y": 270
+    }
+  }
+}

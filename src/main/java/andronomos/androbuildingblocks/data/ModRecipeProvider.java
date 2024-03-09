@@ -52,7 +52,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildSmeltingRecipe(Blocks.STONE, BlockRegistry.CHARRED_STONE.get(), recipeConsumer);
 		buildVariantRecipes(BlockRegistry.CHARRED_STONE.get(),true, true, true, recipeConsumer);
 
-		ShapedRecipeBuilder shaleRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.STEEL.get(), 4);
+		ShapedRecipeBuilder shaleRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SHALE.get(), 4);
 		shaleRecipe.define('M', Blocks.MUD);
 		shaleRecipe.define('C', Blocks.CALCITE);
 		shaleRecipe.pattern("MCM");
@@ -135,6 +135,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildSmeltingRecipe(Blocks.COAL_BLOCK, BlockRegistry.GRAPHITE.get(), recipeConsumer);
 		buildStoneCutterRecipe(BlockRegistry.GRAPHITE_MESH.get(), BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
 		buildStoneCutterRecipe(BlockRegistry.GRAPHITE_TILE.get(), BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
+		buildStoneCutterRecipe(BlockRegistry.GRAPHITE_PILLAR.get(), BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
 		buildTwoByTwoRecipe(BlockRegistry.GRAPHITE_TILE.get(), BlockRegistry.GRAPHITE.get(), recipeConsumer);
 		buildVariantRecipes(BlockRegistry.GRAPHITE.get(), true, true, true, recipeConsumer);
 		buildVariantRecipes(BlockRegistry.GRAPHITE_MESH.get(), true, true, true, recipeConsumer);

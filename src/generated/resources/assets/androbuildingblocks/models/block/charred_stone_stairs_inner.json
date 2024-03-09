@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "androbuildingblocks:block/charred_stone",
+    "side": "androbuildingblocks:block/charred_stone",
+    "top": "androbuildingblocks:block/charred_stone"
+  }
+}

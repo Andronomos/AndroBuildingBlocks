@@ -45,7 +45,7 @@ public class BlockRegistry {
 	public static final RegistryObject<Block> YELLOW_CAUTION_STRIPES = registerBlock("yellow_caution_stripes", () -> new Block(GENERIC_PROPERTIES));
 	public static final RegistryObject<Block> RED_CAUTION_STRIPES = registerHorizontalBlock("red_caution_stripes", GENERIC_PROPERTIES);
 
-	public static final RegistryObject<Block> CHARRED_STONE = registerHorizontalBlock("chared_stone", GENERIC_PROPERTIES);
+	public static final RegistryObject<Block> CHARRED_STONE = registerHorizontalBlock("charred_stone", GENERIC_PROPERTIES);
 	public static final RegistryObject<Block> SHALE = registerHorizontalBlock("shale", GENERIC_PROPERTIES);
 
 

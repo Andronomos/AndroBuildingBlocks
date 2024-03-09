@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "androbuildingblocks:block/charred_stone",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "androbuildingblocks:block/charred_stone"
+    },
+    "facing=south": {
+      "model": "androbuildingblocks:block/charred_stone",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "androbuildingblocks:block/charred_stone",
+      "y": 270
+    }
+  }
+}
