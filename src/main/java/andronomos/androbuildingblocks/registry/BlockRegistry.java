@@ -38,7 +38,7 @@ public class BlockRegistry {
 	//public static final RegistryObject<Block> STEEL_PILLAR = registerBlock("steel_pillar", METAL_PROPERTIES, false);
 
 	public static final RegistryObject<Block> GRAPHITE = registerBlock("graphite", () -> new Block(METAL_PROPERTIES));
-	public static final RegistryObject<Block> GRAPHITE_MESH = registerBlock("graphite_mesh", METAL_PROPERTIES, true);
+	public static final RegistryObject<Block> GRAPHITE_MESH = registerBlock("graphite_mesh", METAL_PROPERTIES, false);
 	public static final RegistryObject<Block> GRAPHITE_TILE = registerBlock("graphite_tile", METAL_PROPERTIES, false);
 	public static final RegistryObject<Block> GRAPHITE_PILLAR = registerRotatableBlock("graphite_pillar", "graphite", METAL_PROPERTIES);
 
