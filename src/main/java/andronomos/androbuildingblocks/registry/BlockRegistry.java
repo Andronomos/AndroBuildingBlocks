@@ -48,6 +48,8 @@ public class BlockRegistry {
 	public static final RegistryObject<Block> CHARRED_STONE = registerHorizontalBlock("charred_stone", GENERIC_PROPERTIES);
 	public static final RegistryObject<Block> SHALE = registerHorizontalBlock("shale", GENERIC_PROPERTIES);
 
+	public static final RegistryObject<Block> MOSSY_COBBLED_DEEPLSATE = registerHorizontalBlock("mossy_cobbled_deepslate", GENERIC_PROPERTIES);
+
 
 	public static void registerBlocks() {
 		registerVariants(BLACK_REINFORCED_CONCRETE, "black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES, true, true, true);
@@ -77,6 +79,8 @@ public class BlockRegistry {
 
 		registerVariants(CHARRED_STONE, "charred_stone", GENERIC_PROPERTIES, true, true, true);
 		registerVariants(SHALE, "shale", GENERIC_PROPERTIES, true, true, true);
+
+		registerVariants(MOSSY_COBBLED_DEEPLSATE, "mossy_cobbled_deepslate", GENERIC_PROPERTIES, true, true, true);
 	}
 
 	private static void registerVariants(RegistryObject<Block> block, String name, Block.Properties properties, boolean stairs, boolean slab, boolean wall) {

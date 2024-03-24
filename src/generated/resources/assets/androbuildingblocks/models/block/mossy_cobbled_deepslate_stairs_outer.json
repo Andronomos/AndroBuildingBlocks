@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "androbuildingblocks:block/mossy_cobbled_deepslate",
+    "side": "androbuildingblocks:block/mossy_cobbled_deepslate",
+    "top": "androbuildingblocks:block/mossy_cobbled_deepslate"
+  }
+}
