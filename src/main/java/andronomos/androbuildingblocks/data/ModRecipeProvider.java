@@ -73,10 +73,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		mossyCobbledDeepslateFromVines.group("mossy_cobbled_deepslate");
 		mossyCobbledDeepslateFromVines.requires(Items.COBBLED_DEEPSLATE);
 		mossyCobbledDeepslateFromVines.requires(Items.VINE);
-		mossyCobbledDeepslateFromVines.unlockedBy("has_item", has(Items.MOSS_BLOCK));
+		mossyCobbledDeepslateFromVines.unlockedBy("has_item", has(Items.VINE));
 		mossyCobbledDeepslateFromVines.save(recipeConsumer, "mossy_cobbled_deepslate_from_vines");
 
+		ShapelessRecipeBuilder mossyDeepslateBricks = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.MOSSY_DEEPLSATE_BRICKS.get(), 1);
+		mossyDeepslateBricks.group("mossy_deepslate_bricks");
+		mossyDeepslateBricks.requires(Items.DEEPSLATE_BRICKS);
+		mossyDeepslateBricks.requires(Items.MOSS_BLOCK);
+		mossyDeepslateBricks.unlockedBy("has_item", has(Items.MOSS_BLOCK));
+		mossyDeepslateBricks.save(recipeConsumer);
+
+		ShapelessRecipeBuilder mossyDeepslateBricksFromVines = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.MOSSY_DEEPLSATE_BRICKS.get(), 1);
+		mossyDeepslateBricksFromVines.group("mossy_deepslate_bricks");
+		mossyDeepslateBricksFromVines.requires(Items.DEEPSLATE_BRICKS);
+		mossyDeepslateBricksFromVines.requires(Items.VINE);
+		mossyDeepslateBricksFromVines.unlockedBy("has_item", has(Items.VINE));
+		mossyDeepslateBricksFromVines.save(recipeConsumer, "mossy_deepslate_bricks_from_vines");
+
 		buildVariantRecipes(BlockRegistry.MOSSY_COBBLED_DEEPLSATE.get(), true, true, true, recipeConsumer);
+		buildVariantRecipes(BlockRegistry.MOSSY_DEEPLSATE_BRICKS.get(), true, true, true, recipeConsumer);
 	}
 
 	private void buildReinforcedConcreteRecipe(Block block, String color, Consumer<FinishedRecipe> recipeConsumer) {

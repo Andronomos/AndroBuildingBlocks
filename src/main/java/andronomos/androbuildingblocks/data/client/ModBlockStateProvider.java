@@ -66,18 +66,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 	private void registerStairBlockStateAndModel(StairBlock block, String name) {
 		String resourceName = name.substring(0, name.indexOf("_stairs"));
-		if(resourceName.contains("_brick")) {
-			resourceName = resourceName + "s";
-		}
+		//if(resourceName.contains("_brick")) {
+		//	resourceName = resourceName + "s";
+		//}
 		stairsBlock(block, modLoc("block/" + resourceName));
 		registerItemModel(name);
 	}
 
 	private void registerSlabBlockStateAndModel(SlabBlock block, String blockName, boolean isTranslucent) {
 		String resourceName = blockName.substring(0, blockName.indexOf("_slab"));
-		if(resourceName.contains("_brick")) {
-			resourceName = resourceName + "s";
-		}
+		//if(resourceName.contains("_brick")) {
+		//	resourceName = resourceName + "s";
+		//}
 
 		ResourceLocation texture = modLoc("block/" + resourceName);
 
@@ -98,9 +98,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 	private void registerWallBlockStateAndModel(WallBlock block, String name) {
 		String resourceName = name.substring(0, name.indexOf("_wall"));
-		if(resourceName.contains("_brick")) {
-			resourceName = resourceName + "s";
-		}
+		//if(resourceName.contains("_brick")) {
+		//	resourceName = resourceName + "s";
+		//}
 		wallBlock(block, modLoc("block/" + resourceName));
 		itemModels().wallInventory(name, modLoc("block/" + resourceName));
 	}

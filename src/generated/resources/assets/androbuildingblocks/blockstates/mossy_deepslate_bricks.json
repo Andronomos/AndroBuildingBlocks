@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "androbuildingblocks:block/mossy_deepslate_bricks",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "androbuildingblocks:block/mossy_deepslate_bricks"
+    },
+    "facing=south": {
+      "model": "androbuildingblocks:block/mossy_deepslate_bricks",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "androbuildingblocks:block/mossy_deepslate_bricks",
+      "y": 270
+    }
+  }
+}

@@ -20,6 +20,7 @@
     "androbuildingblocks:charred_stone",
     "androbuildingblocks:shale",
     "androbuildingblocks:mossy_cobbled_deepslate",
+    "androbuildingblocks:mossy_deepslate_bricks",
     "androbuildingblocks:black_reinforced_concrete_stairs",
     "androbuildingblocks:black_reinforced_concrete_slab",
     "androbuildingblocks:black_reinforced_concrete_wall",
@@ -106,6 +107,9 @@
     "androbuildingblocks:shale_wall",
     "androbuildingblocks:mossy_cobbled_deepslate_stairs",
     "androbuildingblocks:mossy_cobbled_deepslate_slab",
-    "androbuildingblocks:mossy_cobbled_deepslate_wall"
+    "androbuildingblocks:mossy_cobbled_deepslate_wall",
+    "androbuildingblocks:mossy_deepslate_bricks_stairs",
+    "androbuildingblocks:mossy_deepslate_bricks_slab",
+    "androbuildingblocks:mossy_deepslate_bricks_wall"
   ]
 }
