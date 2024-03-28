@@ -21,8 +21,6 @@ public class BlockRegistry {
 	public static Block.Properties GLASS_PANE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.GLASS_PANE);
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AndroBuildingBlocks.MODID);
 
-	//public static final RegistryObject<Block> BLACK_REINFORCED_CONCRETE = registerBlock("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
-
 	public static final RegistryObject<Block> BLACK_REINFORCED_CONCRETE = registerBlock("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES, false);
 	public static final RegistryObject<Block> BLUE_REINFORCED_CONCRETE = registerBlock("blue_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES, false);
 	public static final RegistryObject<Block> BROWN_REINFORCED_CONCRETE = registerBlock("brown_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES, false);
