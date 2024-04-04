@@ -2,7 +2,7 @@ package andronomos.androbuildingblocks;
 
 import andronomos.androbuildingblocks.registry.BlockRegistry;
 import andronomos.androbuildingblocks.registry.ModCreativeTabs;
-import andronomos.androbuildingblocks.registry.ModItems;
+import andronomos.androbuildingblocks.registry.ItemRegistry;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -26,7 +26,7 @@ public class AndroBuildingBlocks
         BlockRegistry.BLOCKS.register(modEventBus);
         BlockRegistry.registerBlocks();
 
-        ModItems.ITEMS.register(modEventBus);
+        ItemRegistry.ITEMS.register(modEventBus);
         ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);

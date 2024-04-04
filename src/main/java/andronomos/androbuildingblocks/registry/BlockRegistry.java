@@ -131,7 +131,7 @@ public class BlockRegistry {
 
 	private static <BLOCK extends Block> RegistryObject<BLOCK> registerBlock(final String name, final Supplier<BLOCK> blockFactory) {
 		final RegistryObject<BLOCK> block = BLOCKS.register(name, blockFactory);
-		ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+		ItemRegistry.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
 		return block;
 	}
 }
