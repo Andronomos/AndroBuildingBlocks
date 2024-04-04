@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "androbuildingblocks:dark_prismarine_bricks"
+  },
+  "result": "androbuildingblocks:dark_prismarine_bricks_slab"
+}

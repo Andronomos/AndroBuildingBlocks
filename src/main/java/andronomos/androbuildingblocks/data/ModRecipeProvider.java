@@ -92,6 +92,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 		buildVariantRecipes(BlockRegistry.MOSSY_COBBLED_DEEPLSATE.get(), true, true, true, recipeConsumer);
 		buildVariantRecipes(BlockRegistry.MOSSY_DEEPLSATE_BRICKS.get(), true, true, true, recipeConsumer);
+
+		buildTwoByTwoRecipe(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), Blocks.DARK_PRISMARINE, recipeConsumer);
+		buildStoneCutterRecipe(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), Blocks.DARK_PRISMARINE, 1, recipeConsumer);
+		buildVariantRecipes(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), true, true, true, recipeConsumer);
 	}
 
 	private void buildReinforcedConcreteRecipe(Block block, String color, Consumer<FinishedRecipe> recipeConsumer) {
