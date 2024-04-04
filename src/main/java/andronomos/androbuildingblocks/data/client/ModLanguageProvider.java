@@ -2,7 +2,7 @@ package andronomos.androbuildingblocks.data.client;
 
 import andronomos.androbuildingblocks.AndroBuildingBlocks;
 import andronomos.androbuildingblocks.registry.BlockRegistry;
-import andronomos.androbuildingblocks.registry.ModCreativeTabs;
+import andronomos.androbuildingblocks.registry.CreativeTabRegistry;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -19,7 +19,7 @@ public class ModLanguageProvider extends LanguageProvider {
 
 	@Override
 	protected void addTranslations() {
-		add("creativetab." + ModCreativeTabs.BASETABNAME, "AndroBuildingBlocks");
+		add("creativetab." + CreativeTabRegistry.BASETABNAME, "AndroBuildingBlocks");
 
 		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 			String name = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(b)).getPath();
