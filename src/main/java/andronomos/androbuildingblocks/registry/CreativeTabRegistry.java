@@ -16,4 +16,10 @@ public class CreativeTabRegistry {
 			.title(Component.translatable("creativetab." + BASETABNAME))
 			.icon(BlockRegistry.BLOCKS.getEntries().stream().findFirst().map(RegistryObject::get).get().asItem()::getDefaultInstance)
 			.displayItems((parameters, output) -> BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> output.accept(b))).build());
+
+
+	public static final RegistryObject<CreativeModeTab> ANDROBUILDINGBLOCKS_MODERN_TAB = CREATIVE_MODE_TABS.register("androbuildingblocks_modern_tab", () -> CreativeModeTab.builder()
+			.title(Component.translatable("creativetab.androbuildingblocks_modern_tab"))
+			.icon(BlockRegistry.BLOCKS.getEntries().stream().findFirst().map(RegistryObject::get).get().asItem()::getDefaultInstance)
+			.displayItems((parameters, output) -> BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> output.accept(b))).build());
 }

@@ -1,10 +1,7 @@
 package andronomos.androbuildingblocks.data.client;
 
 import andronomos.androbuildingblocks.AndroBuildingBlocks;
-import andronomos.androbuildingblocks.block.AndroBlock;
-import andronomos.androbuildingblocks.block.AndroHorizontalBlock;
 import andronomos.androbuildingblocks.block.AndroRotatableBlock;
-import andronomos.androbuildingblocks.block.AndroSlabBlock;
 import andronomos.androbuildingblocks.registry.BlockRegistry;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
@@ -24,95 +21,66 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 	@Override
 	protected void registerStatesAndModels() {
-		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
-			String blockName = ForgeRegistries.BLOCKS.getKey(b).getPath();
-			String blockType = b.getClass().getSimpleName();
+		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
+			String blockPath = ForgeRegistries.BLOCKS.getKey(block).getPath();
+			String className = block.getClass().getSimpleName();
 
-			switch (blockType) {
-				case "StairBlock" -> registerStairBlockStateAndModel((StairBlock)b, blockName);
-				case "AndroSlabBlock" -> registerSlabBlockStateAndModel((SlabBlock)b, blockName, ((AndroSlabBlock)b).isTranslucent);
-				case "WallBlock" -> registerWallBlockStateAndModel((WallBlock)b, blockName);
-				case "FenceBlock" -> registerFenceBlockStateAndModel((FenceBlock) b, blockName);
-				case "StainedGlassBlock" -> registerBlockStateAndModel(b, blockName, true);
-				case "AndroBlock" -> registerBlockStateAndModel(b, blockName, ((AndroBlock)b).isTranslucent);
-				case "StainedGlassPaneBlock", "IronBarsBlock" -> registerPaneBlockStateAndModel((IronBarsBlock)b, blockName);
-				case "AndroRotatableBlock" -> registerRotatableBlockStateAndModel((AndroRotatableBlock)b, blockName);
-				case "GlazedTerracottaBlock" -> registerHorizontalBlockStateAndModel((GlazedTerracottaBlock)b, blockName);
-				default -> registerBlockStateAndModel(b, blockName, false);
+			switch (className) {
+				case "StairBlock" -> registerStairsBlock(block, blockPath);
+				case "SlabBlock" -> registerSlabBlock(block, blockPath);
+				case "WallBlock" -> registerWallBlock(block, blockPath);
+				case "StainedGlassBlock" -> registerSimpleBlock(block, blockPath, true);
+				case "StainedGlassPaneBlock", "IronBarsBlock" -> registerPaneBlock(block, blockPath);
+				case "AndroRotatableBlock" -> registerRotatableBlock((AndroRotatableBlock)block, blockPath);
+				case "GlazedTerracottaBlock" -> registerHorizontalBlockStateAndModel((GlazedTerracottaBlock)block, blockPath);
+				default -> registerSimpleBlock(block, blockPath, false);
 			}
 		});
 	}
 
-
-
-	private void registerBlockStateAndModel(Block block, String blockName, boolean isTranslucent) {
-		ModelFile model;
-
+	private void registerSimpleBlock(Block block, String path, boolean isTranslucent) {
+		ModelFile model = models().cubeAll(path, modLoc("block/" + path));
 		if(isTranslucent) {
-			model = models().cubeAll(blockName, modLoc("block/" + blockName)).renderType("translucent");
-		} else {
-			model = models().cubeAll(blockName, modLoc("block/" + blockName));
+			model = models().cubeAll(path, modLoc("block/" + path)).renderType("translucent");
 		}
-
 		simpleBlock(block, model);
-		registerItemModel(blockName);
+		registerItemModel(path);
 	}
 
-	private void registerFenceBlockStateAndModel(FenceBlock block, String name) {
-		String cleanName = name.substring(0, name.indexOf("_fence"));
-		fenceBlock(block, modLoc("block/" + cleanName));
-		itemModels().fenceInventory(name, modLoc("block/" + cleanName));
+	//private void registerFenceBlockStateAndModel(FenceBlock block, String name) {
+	//	String cleanName = name.substring(0, name.indexOf("_fence"));
+	//	fenceBlock(block, modLoc("block/" + cleanName));
+	//	itemModels().fenceInventory(name, modLoc("block/" + cleanName));
+	//}
+
+	public void registerStairsBlock(Block block, String path) {
+		String parent = path.replace("_stairs", "");
+		stairsBlock((StairBlock) block, modLoc("block/" + parent));
+		registerItemModel(path);
 	}
 
-	private void registerStairBlockStateAndModel(StairBlock block, String name) {
-		String resourceName = name.substring(0, name.indexOf("_stairs"));
-		//if(resourceName.contains("_brick")) {
-		//	resourceName = resourceName + "s";
-		//}
-		stairsBlock(block, modLoc("block/" + resourceName));
-		registerItemModel(name);
+	public void registerSlabBlock(Block slab, String path) {
+		String parent = path.replace("_slab", "");
+		ResourceLocation txt = modLoc("block/" + parent);
+		slabBlock((SlabBlock) slab, txt, txt);
+		registerItemModel(path);
 	}
 
-	private void registerSlabBlockStateAndModel(SlabBlock block, String blockName, boolean isTranslucent) {
-		String resourceName = blockName.substring(0, blockName.indexOf("_slab"));
-		//if(resourceName.contains("_brick")) {
-		//	resourceName = resourceName + "s";
-		//}
-
-		ResourceLocation texture = modLoc("block/" + resourceName);
-
-		//In the future we can change this to something unique if we want
-		ResourceLocation doubleslab = modLoc("block/" + resourceName);
-
-		if(isTranslucent) {
-			slabBlock(block,
-					models().slab(blockName, texture, texture, texture).renderType("translucent"),
-					models().slabTop(blockName + "_top", texture, texture, texture).renderType("translucent"),
-					models().getExistingFile(doubleslab));
-		} else {
-			slabBlock(block, texture, texture);
-		}
-
-		registerItemModel(blockName);
+	private void registerWallBlock(Block block, String path) {
+		String parent = path.replace("_wall", "");
+		ResourceLocation txt = modLoc("block/" + parent);
+		wallBlock((WallBlock) block, txt);
+		itemModels().wallInventory(path, txt);
 	}
 
-	private void registerWallBlockStateAndModel(WallBlock block, String name) {
-		String resourceName = name.substring(0, name.indexOf("_wall"));
-		//if(resourceName.contains("_brick")) {
-		//	resourceName = resourceName + "s";
-		//}
-		wallBlock(block, modLoc("block/" + resourceName));
-		itemModels().wallInventory(name, modLoc("block/" + resourceName));
+	private void registerPaneBlock(Block block, String path) {
+		String parent = path.replace("_pane", "");
+		String textureName = String.format("block/%s", parent);
+		paneBlockWithRenderType((IronBarsBlock)block, modLoc(textureName), modLoc(textureName),"translucent");
+		itemModels().singleTexture(path, mcLoc("item/generated"), "layer0", modLoc(textureName)).renderType("translucent");
 	}
 
-	private void registerPaneBlockStateAndModel(IronBarsBlock block, String blockName) {
-		String cleanName = blockName.replace("_pane", "");
-		String textureName = String.format("block/%s", cleanName);
-		paneBlockWithRenderType(block, modLoc(textureName), modLoc(textureName),"translucent");
-		itemModels().singleTexture(blockName, mcLoc("item/generated"), "layer0", modLoc(textureName)).renderType("translucent");
-	}
-
-	private void registerRotatableBlockStateAndModel(AndroRotatableBlock block, String blockName) {
+	private void registerRotatableBlock(AndroRotatableBlock block, String blockName) {
 		String resource = "block/" + blockName;
 		ResourceLocation side = modLoc(resource);
 		ResourceLocation end;

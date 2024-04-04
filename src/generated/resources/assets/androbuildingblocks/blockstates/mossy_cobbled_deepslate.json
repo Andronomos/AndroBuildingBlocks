@@ -1,19 +1,7 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "androbuildingblocks:block/mossy_cobbled_deepslate",
-      "y": 90
-    },
-    "facing=north": {
+    "": {
       "model": "androbuildingblocks:block/mossy_cobbled_deepslate"
-    },
-    "facing=south": {
-      "model": "androbuildingblocks:block/mossy_cobbled_deepslate",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "androbuildingblocks:block/mossy_cobbled_deepslate",
-      "y": 270
     }
   }
 }
