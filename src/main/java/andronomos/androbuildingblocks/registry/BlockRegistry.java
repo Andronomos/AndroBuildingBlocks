@@ -49,7 +49,7 @@ public class BlockRegistry {
 	public static final RegistryObject<Block> MOSSY_COBBLED_DEEPLSATE = registerHorizontalBlock("mossy_cobbled_deepslate", GENERIC_PROPERTIES);
 	public static final RegistryObject<Block> MOSSY_DEEPLSATE_BRICKS = registerHorizontalBlock("mossy_deepslate_bricks", GENERIC_PROPERTIES);
 	public static final RegistryObject<Block> DARK_PRISMARINE_BRICKS = registerBlock("dark_prismarine_bricks", BlockBehaviour.Properties.copy(Blocks.DARK_PRISMARINE), false);
-
+	public static final RegistryObject<Block> BASALT_BRICKS = registerBlock("basalt_bricks", BlockBehaviour.Properties.copy(Blocks.BASALT), false);
 
 	public static void registerBlocks() {
 		registerVariants(BLACK_REINFORCED_CONCRETE, "black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES, true, true, true);
@@ -83,6 +83,8 @@ public class BlockRegistry {
 		registerVariants(MOSSY_COBBLED_DEEPLSATE, "mossy_cobbled_deepslate", BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE), true, true, true);
 		registerVariants(MOSSY_DEEPLSATE_BRICKS, "mossy_deepslate_bricks", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS), true, true, true);
 		registerVariants(DARK_PRISMARINE_BRICKS, "dark_prismarine_bricks", BlockBehaviour.Properties.copy(Blocks.DARK_PRISMARINE), true, true, true);
+		registerVariants(BASALT_BRICKS, "basalt_bricks", BlockBehaviour.Properties.copy(Blocks.BASALT), true, true, true);
+
 	}
 
 	private static void registerVariants(RegistryObject<Block> block, String name, Block.Properties properties, boolean stairs, boolean slab, boolean wall) {

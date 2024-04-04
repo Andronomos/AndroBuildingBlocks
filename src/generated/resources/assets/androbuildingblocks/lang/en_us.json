@@ -1,4 +1,8 @@
 {
+  "block.androbuildingblocks.basalt_bricks": "Basalt Bricks",
+  "block.androbuildingblocks.basalt_bricks_slab": "Basalt Bricks Slab",
+  "block.androbuildingblocks.basalt_bricks_stairs": "Basalt Bricks Stairs",
+  "block.androbuildingblocks.basalt_bricks_wall": "Basalt Bricks Wall",
   "block.androbuildingblocks.black_reinforced_concrete": "Black Reinforced Concrete",
   "block.androbuildingblocks.black_reinforced_concrete_slab": "Black Reinforced Concrete Slab",
   "block.androbuildingblocks.black_reinforced_concrete_stairs": "Black Reinforced Concrete Stairs",

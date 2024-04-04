@@ -1,4 +1,8 @@
-// 1.20.1	2024-04-04T02:32:57.7060996	Loot Tables
+// 1.20.1	2024-04-04T04:34:44.5113283	Loot Tables
+e3e9f38c1657e0277acc450b88d4c326647101d2 data/androbuildingblocks/loot_tables/blocks/basalt_bricks.json
+e81b8f3f158719b7c33fae324c8a25d7a0f299f0 data/androbuildingblocks/loot_tables/blocks/basalt_bricks_slab.json
+874a89057661c2af75a8497032f8a87a23c94e8e data/androbuildingblocks/loot_tables/blocks/basalt_bricks_stairs.json
+3271b8c6d92289654a5dbeafa4887ac085b856d8 data/androbuildingblocks/loot_tables/blocks/basalt_bricks_wall.json
 14f9a71c2e535a9923546efa308695513f4012b0 data/androbuildingblocks/loot_tables/blocks/black_reinforced_concrete.json
 5612ae1df4fdbc234a613f9f8e7a89ed7f9d9f8a data/androbuildingblocks/loot_tables/blocks/black_reinforced_concrete_slab.json
 fb4a51606b00bada880a6d3c7485794729951bd6 data/androbuildingblocks/loot_tables/blocks/black_reinforced_concrete_stairs.json
