@@ -2,6 +2,7 @@ package andronomos.androbuildingblocks.data.client;
 
 import andronomos.androbuildingblocks.AndroBuildingBlocks;
 import net.minecraft.data.PackOutput;
+import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -12,6 +13,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 
 	@Override
 	protected void registerModels() {
+		createSingleTexture("sandpaper");
+	}
 
+	private ItemModelBuilder createSingleTexture(String name) {
+		return singleTexture(name, mcLoc("item/generated"), "layer0", modLoc("item/" + name));
 	}
 }
