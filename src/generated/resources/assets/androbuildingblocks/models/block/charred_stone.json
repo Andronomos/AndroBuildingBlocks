@@ -1,8 +1,6 @@
 {
-  "parent": "minecraft:block/orientable",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "front": "androbuildingblocks:block/charred_stone",
-    "side": "androbuildingblocks:block/charred_stone",
-    "top": "androbuildingblocks:block/charred_stone"
+    "all": "androbuildingblocks:block/charred_stone"
   }
 }

@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "androbuildingblocks:graphite_mesh_wall"
+          "name": "androbuildingblocks:yellow_caution_stripes_stairs"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "androbuildingblocks:blocks/graphite_mesh_wall"
+  "random_sequence": "androbuildingblocks:blocks/yellow_caution_stripes_stairs"
 }

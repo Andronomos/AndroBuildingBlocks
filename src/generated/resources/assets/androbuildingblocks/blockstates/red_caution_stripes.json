@@ -1,19 +1,7 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "androbuildingblocks:block/red_caution_stripes",
-      "y": 90
-    },
-    "facing=north": {
+    "": {
       "model": "androbuildingblocks:block/red_caution_stripes"
-    },
-    "facing=south": {
-      "model": "androbuildingblocks:block/red_caution_stripes",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "androbuildingblocks:block/red_caution_stripes",
-      "y": 270
     }
   }
 }

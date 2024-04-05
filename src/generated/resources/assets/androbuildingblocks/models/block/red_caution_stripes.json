@@ -1,8 +1,6 @@
 {
-  "parent": "minecraft:block/orientable",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "front": "androbuildingblocks:block/red_caution_stripes",
-    "side": "androbuildingblocks:block/red_caution_stripes",
-    "top": "androbuildingblocks:block/red_caution_stripes"
+    "all": "androbuildingblocks:block/red_caution_stripes"
   }
 }
