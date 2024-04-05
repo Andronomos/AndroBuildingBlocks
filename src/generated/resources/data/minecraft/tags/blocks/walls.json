@@ -25,6 +25,8 @@
     "androbuildingblocks:sanded_deepslate_wall",
     "androbuildingblocks:sanded_granite_wall",
     "androbuildingblocks:basalt_bricks_wall",
-    "androbuildingblocks:sanded_basalt_bricks_wall"
+    "androbuildingblocks:sanded_basalt_bricks_wall",
+    "androbuildingblocks:sanded_basalt_wall",
+    "androbuildingblocks:sanded_netherrack_wall"
   ]
 }

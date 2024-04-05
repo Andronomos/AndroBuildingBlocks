@@ -52,10 +52,11 @@ public class BlockRegistry {
 	public static final RegistryObject<Block> SANDED_DARK_PRISMARINE_BRICKS = registerBlock("sanded_dark_prismarine_bricks", DARK_PRISMARINE_PROPERTIES);
 	public static final RegistryObject<Block> BASALT_BRICKS = registerBlock("basalt_bricks", BASALT_PROPERTIES);
 	public static final RegistryObject<Block> SANDED_BASALT_BRICKS = registerBlock("sanded_basalt_bricks", BASALT_PROPERTIES);
+	public static final RegistryObject<Block> SANDED_BASALT = registerBlock("sanded_basalt", BlockBehaviour.Properties.copy(Blocks.BASALT));
 	public static final RegistryObject<Block> SANDED_GRANITE = registerBlock("sanded_granite", BlockBehaviour.Properties.copy(Blocks.GRANITE));
 	public static final RegistryObject<Block> SANDED_DEEPSLATE = registerBlock("sanded_deepslate", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE));
 	public static final RegistryObject<Block> SANDED_DEEPSLATE_BRICKS = registerBlock("sanded_deepslate_bricks", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS));
-
+	public static final RegistryObject<Block> SANDED_NETHERRACK = registerBlock("sanded_netherrack", BlockBehaviour.Properties.copy(Blocks.NETHERRACK));
 
 	public static void registerBlocks() {
 		registerVariants(BLACK_REINFORCED_CONCRETE, "black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES, true, true, true);
@@ -93,6 +94,8 @@ public class BlockRegistry {
 		registerVariants(SANDED_GRANITE, "sanded_granite", BlockBehaviour.Properties.copy(Blocks.GRANITE), true, true, true);
 		registerVariants(BASALT_BRICKS, "basalt_bricks", BASALT_PROPERTIES, true, true, true);
 		registerVariants(SANDED_BASALT_BRICKS, "sanded_basalt_bricks", BASALT_PROPERTIES, true, true, true);
+		registerVariants(SANDED_BASALT, "sanded_basalt", BlockBehaviour.Properties.copy(Blocks.BASALT), true, true, true);
+		registerVariants(SANDED_NETHERRACK, "sanded_netherrack", BlockBehaviour.Properties.copy(Blocks.GRANITE), true, true, true);
 	}
 
 	private static void registerVariants(RegistryObject<Block> block, String name, Block.Properties properties, boolean stairs, boolean slab, boolean wall) {

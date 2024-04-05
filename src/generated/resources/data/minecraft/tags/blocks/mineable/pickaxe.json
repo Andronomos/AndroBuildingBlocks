@@ -24,9 +24,11 @@
     "androbuildingblocks:sanded_dark_prismarine_bricks",
     "androbuildingblocks:basalt_bricks",
     "androbuildingblocks:sanded_basalt_bricks",
+    "androbuildingblocks:sanded_basalt",
     "androbuildingblocks:sanded_granite",
     "androbuildingblocks:sanded_deepslate",
     "androbuildingblocks:sanded_deepslate_bricks",
+    "androbuildingblocks:sanded_netherrack",
     "androbuildingblocks:black_reinforced_concrete_stairs",
     "androbuildingblocks:black_reinforced_concrete_slab",
     "androbuildingblocks:black_reinforced_concrete_wall",
@@ -134,6 +136,12 @@
     "androbuildingblocks:basalt_bricks_wall",
     "androbuildingblocks:sanded_basalt_bricks_stairs",
     "androbuildingblocks:sanded_basalt_bricks_slab",
-    "androbuildingblocks:sanded_basalt_bricks_wall"
+    "androbuildingblocks:sanded_basalt_bricks_wall",
+    "androbuildingblocks:sanded_basalt_stairs",
+    "androbuildingblocks:sanded_basalt_slab",
+    "androbuildingblocks:sanded_basalt_wall",
+    "androbuildingblocks:sanded_netherrack_stairs",
+    "androbuildingblocks:sanded_netherrack_slab",
+    "androbuildingblocks:sanded_netherrack_wall"
   ]
 }

@@ -140,10 +140,30 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		sandedGraniteRecipe.unlockedBy("has_item", has(Items.GRANITE));
 		sandedGraniteRecipe.save(recipeConsumer, "sanded_granite");
 
+		ShapelessRecipeBuilder sandedBasaltRecipe = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SANDED_BASALT.get(), 1);
+		sandedBasaltRecipe.requires(ItemRegistry.SANDPAPER.get());
+		sandedBasaltRecipe.requires(Items.BASALT);
+		sandedBasaltRecipe.unlockedBy("has_item", has(Items.BASALT));
+		sandedBasaltRecipe.save(recipeConsumer, "sanded_basalt");
+
+		ShapelessRecipeBuilder sandedBasaltBricksRecipe = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SANDED_BASALT_BRICKS.get(), 1);
+		sandedBasaltBricksRecipe.requires(ItemRegistry.SANDPAPER.get());
+		sandedBasaltBricksRecipe.requires(BlockRegistry.SANDED_BASALT_BRICKS.get());
+		sandedBasaltBricksRecipe.unlockedBy("has_item", has(BlockRegistry.SANDED_BASALT_BRICKS.get()));
+		sandedBasaltBricksRecipe.save(recipeConsumer, "sanded_basalt_bricks");
+
+		ShapelessRecipeBuilder sandedNetherrackRecipe = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SANDED_NETHERRACK.get(), 1);
+		sandedNetherrackRecipe.requires(ItemRegistry.SANDPAPER.get());
+		sandedNetherrackRecipe.requires(Items.NETHERRACK);
+		sandedNetherrackRecipe.unlockedBy("has_item", has(Items.NETHERRACK));
+		sandedNetherrackRecipe.save(recipeConsumer, "sanded_netherrack");
+
 		buildVariantRecipes(BlockRegistry.SANDED_GRANITE.get(), true, true, true, recipeConsumer);
 		buildVariantRecipes(BlockRegistry.SANDED_DEEPSLATE.get(), true, true, true, recipeConsumer);
 		buildVariantRecipes(BlockRegistry.SANDED_DEEPSLATE_BRICKS.get(), true, true, true, recipeConsumer);
 		buildVariantRecipes(BlockRegistry.SANDED_DARK_PRISMARINE_BRICKS.get(), true, true, true, recipeConsumer);
+		buildVariantRecipes(BlockRegistry.SANDED_BASALT.get(), true, true, true, recipeConsumer);
+		buildVariantRecipes(BlockRegistry.SANDED_BASALT_BRICKS.get(), true, true, true, recipeConsumer);
 	}
 
 	private void buildReinforcedConcreteRecipe(Block block, String color, Consumer<FinishedRecipe> recipeConsumer) {
