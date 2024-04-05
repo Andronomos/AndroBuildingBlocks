@@ -96,10 +96,6 @@
   "block.androbuildingblocks.shale_stairs": "Shale Stairs",
   "block.androbuildingblocks.shale_wall": "Shale Wall",
   "block.androbuildingblocks.steel": "Steel",
-  "block.androbuildingblocks.steel_mesh": "Steel Mesh",
-  "block.androbuildingblocks.steel_mesh_slab": "Steel Mesh Slab",
-  "block.androbuildingblocks.steel_mesh_stairs": "Steel Mesh Stairs",
-  "block.androbuildingblocks.steel_mesh_wall": "Steel Mesh Wall",
   "block.androbuildingblocks.steel_slab": "Steel Slab",
   "block.androbuildingblocks.steel_stairs": "Steel Stairs",
   "block.androbuildingblocks.steel_tile": "Steel Tile",
@@ -118,5 +114,6 @@
   "block.androbuildingblocks.yellow_caution_stripes_wall": "Yellow Caution Stripes Wall",
   "block.androbuildingblocks.yellow_structural_glass": "Yellow Structural Glass",
   "block.androbuildingblocks.yellow_structural_glass_pane": "Yellow Structural Glass Pane",
+  "creativetab.androbuildingblocks_modern_tab": "AndroBuildingBlocks Modern",
   "creativetab.androbuildingblocks_tab": "AndroBuildingBlocks"
 }

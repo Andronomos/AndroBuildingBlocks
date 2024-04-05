@@ -1,7 +1,7 @@
 package andronomos.androbuildingblocks.registry;
 
 import andronomos.androbuildingblocks.AndroBuildingBlocks;
-import andronomos.androbuildingblocks.block.*;
+import andronomos.androbuildingblocks.block.AndroRotatableBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
@@ -19,6 +19,7 @@ public class BlockRegistry {
 	public static Block.Properties METAL_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK);
 	public static Block.Properties GLASS_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.GLASS).strength(0.75f);
 	public static Block.Properties GLASS_PANE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.GLASS_PANE);
+
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AndroBuildingBlocks.MODID);
 
 	public static final RegistryObject<Block> BLACK_REINFORCED_CONCRETE = registerBlock("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
@@ -31,17 +32,15 @@ public class BlockRegistry {
 	public static final RegistryObject<Block> WHITE_REINFORCED_CONCRETE = registerBlock("white_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
 
 	public static final RegistryObject<Block> STEEL = registerBlock("steel", () -> new Block(METAL_PROPERTIES));
-	public static final RegistryObject<Block> STEEL_MESH = registerBlock("steel_mesh", METAL_PROPERTIES);
 	public static final RegistryObject<Block> STEEL_TILE = registerBlock("steel_tile", METAL_PROPERTIES);
-	//public static final RegistryObject<Block> STEEL_PILLAR = registerBlock("steel_pillar", METAL_PROPERTIES, false);
+
+	public static final RegistryObject<Block> YELLOW_CAUTION_STRIPES = registerBlock("yellow_caution_stripes", () -> new Block(GENERIC_PROPERTIES));
+	public static final RegistryObject<Block> RED_CAUTION_STRIPES = registerHorizontalBlock("red_caution_stripes", GENERIC_PROPERTIES);
 
 	public static final RegistryObject<Block> GRAPHITE = registerBlock("graphite", () -> new Block(METAL_PROPERTIES));
 	public static final RegistryObject<Block> GRAPHITE_MESH = registerBlock("graphite_mesh", METAL_PROPERTIES);
 	public static final RegistryObject<Block> GRAPHITE_TILE = registerBlock("graphite_tile", METAL_PROPERTIES);
 	public static final RegistryObject<Block> GRAPHITE_PILLAR = registerRotatableBlock("graphite_pillar", "graphite", METAL_PROPERTIES);
-
-	public static final RegistryObject<Block> YELLOW_CAUTION_STRIPES = registerBlock("yellow_caution_stripes", () -> new Block(GENERIC_PROPERTIES));
-	public static final RegistryObject<Block> RED_CAUTION_STRIPES = registerHorizontalBlock("red_caution_stripes", GENERIC_PROPERTIES);
 
 	public static final RegistryObject<Block> CHARRED_STONE = registerHorizontalBlock("charred_stone", GENERIC_PROPERTIES);
 	public static final RegistryObject<Block> SHALE = registerHorizontalBlock("shale", GENERIC_PROPERTIES);
@@ -61,14 +60,6 @@ public class BlockRegistry {
 		registerVariants(RED_REINFORCED_CONCRETE, "red_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES, true, true, true);
 		registerVariants(WHITE_REINFORCED_CONCRETE, "white_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES, true, true, true);
 
-		registerVariants(STEEL, "steel", METAL_PROPERTIES, true, true, true);
-		registerVariants(STEEL_MESH, "steel_mesh", METAL_PROPERTIES, true, true, true);
-		registerVariants(STEEL_TILE, "steel_tile", METAL_PROPERTIES, true, true, true);
-
-		registerVariants(GRAPHITE, "graphite", METAL_PROPERTIES, true, true, true);
-		registerVariants(GRAPHITE_MESH, "graphite_mesh", METAL_PROPERTIES, true, true, true);
-		registerVariants(GRAPHITE_TILE, "graphite_tile", METAL_PROPERTIES, true, true, true);
-
 		for(DyeColor color : DyeColor.values()) {
 			registerGlassBlock(color + "_structural_glass", color);
 			registerStainedGlassPaneBlock(color + "_structural_glass_pane", color);
@@ -77,6 +68,13 @@ public class BlockRegistry {
 		registerVariants(YELLOW_CAUTION_STRIPES, "yellow_caution_stripes", GENERIC_PROPERTIES, false, true, true);
 		registerVariants(RED_CAUTION_STRIPES, "red_caution_stripes", GENERIC_PROPERTIES, false, true, true);
 
+		registerVariants(STEEL, "steel", METAL_PROPERTIES, true, true, true);
+		registerVariants(STEEL_TILE, "steel_tile", METAL_PROPERTIES, true, true, true);
+
+		registerVariants(GRAPHITE, "graphite", METAL_PROPERTIES, true, true, true);
+		registerVariants(GRAPHITE_MESH, "graphite_mesh", METAL_PROPERTIES, true, true, true);
+		registerVariants(GRAPHITE_TILE, "graphite_tile", METAL_PROPERTIES, true, true, true);
+
 		registerVariants(CHARRED_STONE, "charred_stone", GENERIC_PROPERTIES, true, true, true);
 		registerVariants(SHALE, "shale", GENERIC_PROPERTIES, true, true, true);
 
@@ -84,7 +82,6 @@ public class BlockRegistry {
 		registerVariants(MOSSY_DEEPLSATE_BRICKS, "mossy_deepslate_bricks", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS), true, true, true);
 		registerVariants(DARK_PRISMARINE_BRICKS, "dark_prismarine_bricks", BlockBehaviour.Properties.copy(Blocks.DARK_PRISMARINE), true, true, true);
 		registerVariants(BASALT_BRICKS, "basalt_bricks", BlockBehaviour.Properties.copy(Blocks.BASALT), true, true, true);
-
 	}
 
 	private static void registerVariants(RegistryObject<Block> block, String name, Block.Properties properties, boolean stairs, boolean slab, boolean wall) {

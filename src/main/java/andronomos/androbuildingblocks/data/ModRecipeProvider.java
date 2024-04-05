@@ -163,10 +163,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 		buildTwoByTwoRecipe(BlockRegistry.STEEL_TILE.get(), BlockRegistry.STEEL.get(), recipeConsumer);
 		buildStoneCutterRecipe(BlockRegistry.STEEL_TILE.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
-		buildStoneCutterRecipe(BlockRegistry.STEEL_MESH.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
 
 		buildVariantRecipes(BlockRegistry.STEEL.get(), true, true, true, recipeConsumer);
-		buildVariantRecipes(BlockRegistry.STEEL_MESH.get(), true, true, true, recipeConsumer);
 		buildVariantRecipes(BlockRegistry.STEEL_TILE.get(), true, true, true, recipeConsumer);
 	}
 	
