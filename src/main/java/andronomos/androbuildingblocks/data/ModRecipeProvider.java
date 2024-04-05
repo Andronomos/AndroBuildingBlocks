@@ -164,6 +164,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildVariantRecipes(BlockRegistry.SANDED_DARK_PRISMARINE_BRICKS.get(), true, true, true, recipeConsumer);
 		buildVariantRecipes(BlockRegistry.SANDED_BASALT.get(), true, true, true, recipeConsumer);
 		buildVariantRecipes(BlockRegistry.SANDED_BASALT_BRICKS.get(), true, true, true, recipeConsumer);
+		buildVariantRecipes(BlockRegistry.SANDED_NETHERRACK.get(), true, true, true, recipeConsumer);
 	}
 
 	private void buildReinforcedConcreteRecipe(Block block, String color, Consumer<FinishedRecipe> recipeConsumer) {
