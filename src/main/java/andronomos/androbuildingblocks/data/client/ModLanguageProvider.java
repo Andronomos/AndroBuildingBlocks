@@ -19,7 +19,7 @@ public class ModLanguageProvider extends LanguageProvider {
 
 	@Override
 	protected void addTranslations() {
-		add("creativetab." + CreativeTabRegistry.BASETABNAME, "AndroBuildingBlocks");
+		add("creativetab.androbuildingblocks_tab", "AndroBuildingBlocks");
 
 		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 			String name = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(b)).getPath();
