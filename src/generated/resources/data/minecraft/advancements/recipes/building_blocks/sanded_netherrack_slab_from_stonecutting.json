@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "androbuildingblocks:dark_prismarine_bricks"
+              "androbuildingblocks:sanded_netherrack"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:sanded_dark_prismarine_bricks"
+        "recipe": "minecraft:sanded_netherrack_slab_from_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:sanded_dark_prismarine_bricks"
+      "minecraft:sanded_netherrack_slab_from_stonecutting"
     ]
   },
   "sends_telemetry_event": false

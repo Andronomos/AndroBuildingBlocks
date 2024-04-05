@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "minecraft:deepslate_bricks"
+              "androbuildingblocks:sanded_netherrack"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:sanded_deepslate_bricks"
+        "recipe": "androbuildingblocks:sanded_netherrack_wall"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:sanded_deepslate_bricks"
+      "androbuildingblocks:sanded_netherrack_wall"
     ]
   },
   "sends_telemetry_event": false

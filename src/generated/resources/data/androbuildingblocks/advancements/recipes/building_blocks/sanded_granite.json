@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "minecraft:netherrack"
+              "minecraft:granite"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:sanded_netherrack"
+        "recipe": "androbuildingblocks:sanded_granite"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:sanded_netherrack"
+      "androbuildingblocks:sanded_granite"
     ]
   },
   "sends_telemetry_event": false

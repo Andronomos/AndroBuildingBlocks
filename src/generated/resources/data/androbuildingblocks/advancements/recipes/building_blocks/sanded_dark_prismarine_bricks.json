@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "minecraft:basalt"
+              "androbuildingblocks:dark_prismarine_bricks"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:sanded_basalt"
+        "recipe": "androbuildingblocks:sanded_dark_prismarine_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:sanded_basalt"
+      "androbuildingblocks:sanded_dark_prismarine_bricks"
     ]
   },
   "sends_telemetry_event": false

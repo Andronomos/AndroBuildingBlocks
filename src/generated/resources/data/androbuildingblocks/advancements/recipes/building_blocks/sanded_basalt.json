@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "minecraft:granite"
+              "minecraft:basalt"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:sanded_granite"
+        "recipe": "androbuildingblocks:sanded_basalt"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:sanded_granite"
+      "androbuildingblocks:sanded_basalt"
     ]
   },
   "sends_telemetry_event": false
