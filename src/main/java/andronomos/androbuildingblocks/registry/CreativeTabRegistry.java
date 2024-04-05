@@ -10,16 +10,8 @@ import net.minecraftforge.registries.RegistryObject;
 public class CreativeTabRegistry {
 	public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AndroBuildingBlocks.MODID);
 
-	public static final String BASETABNAME = "androbuildingblocks_tab";
-
-	public static final RegistryObject<CreativeModeTab> ANDROBUILDINGBLOCKS_TAB = CREATIVE_MODE_TABS.register(BASETABNAME, () -> CreativeModeTab.builder()
-			.title(Component.translatable("creativetab." + BASETABNAME))
-			.icon(BlockRegistry.BLOCKS.getEntries().stream().findFirst().map(RegistryObject::get).get().asItem()::getDefaultInstance)
-			.displayItems((parameters, output) -> BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> output.accept(b))).build());
-
-
-	public static final RegistryObject<CreativeModeTab> ANDROBUILDINGBLOCKS_MODERN_TAB = CREATIVE_MODE_TABS.register("androbuildingblocks_modern_tab", () -> CreativeModeTab.builder()
-			.title(Component.translatable("creativetab.androbuildingblocks_modern_tab"))
+	public static final RegistryObject<CreativeModeTab> ANDROBUILDINGBLOCKS_TAB = CREATIVE_MODE_TABS.register("scratchpad_tab", () -> CreativeModeTab.builder()
+			.title(Component.translatable("creativetab.androbuildingblocks_tab"))
 			.icon(BlockRegistry.BLOCKS.getEntries().stream().findFirst().map(RegistryObject::get).get().asItem()::getDefaultInstance)
 			.displayItems((parameters, output) -> BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> output.accept(b))).build());
 }
