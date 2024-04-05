@@ -247,10 +247,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		}
 	}
 
-	private boolean blockExists(Block block) {
-		return block != null && block != Blocks.AIR;
-	}
-
 	private void createStripedRecipe(Block output, Item Dye, Item Dye2, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 4);
 		shaped.define('1', Dye);
@@ -311,5 +307,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		shaped.pattern("###");
 		shaped.unlockedBy("has_item", has(input));
 		shaped.save(consumer);
+	}
+
+	private boolean blockExists(Block block) {
+		return block != null && block != Blocks.AIR;
 	}
 }
