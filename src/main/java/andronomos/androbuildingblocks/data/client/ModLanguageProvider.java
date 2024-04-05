@@ -3,6 +3,7 @@ package andronomos.androbuildingblocks.data.client;
 import andronomos.androbuildingblocks.AndroBuildingBlocks;
 import andronomos.androbuildingblocks.registry.BlockRegistry;
 import andronomos.androbuildingblocks.registry.CreativeTabRegistry;
+import andronomos.androbuildingblocks.registry.ItemRegistry;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -20,6 +21,7 @@ public class ModLanguageProvider extends LanguageProvider {
 	@Override
 	protected void addTranslations() {
 		add("creativetab.androbuildingblocks_tab", "AndroBuildingBlocks");
+		add(ItemRegistry.SANDPAPER.get(), "Sandpaper");
 
 		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 			String name = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(b)).getPath();

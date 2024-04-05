@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "sanded_deepslate",
+  "ingredients": [
+    {
+      "item": "androbuildingblocks:sandpaper"
+    },
+    {
+      "item": "minecraft:deepslate"
+    }
+  ],
+  "result": {
+    "item": "androbuildingblocks:sanded_deepslate"
+  }
+}

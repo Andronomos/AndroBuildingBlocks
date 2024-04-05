@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "androbuildingblocks:block/sanded_deepslate_slab"
+    },
+    "type=double": {
+      "model": "androbuildingblocks:block/sanded_deepslate"
+    },
+    "type=top": {
+      "model": "androbuildingblocks:block/sanded_deepslate_slab_top"
+    }
+  }
+}

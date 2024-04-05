@@ -91,6 +91,19 @@
   "block.androbuildingblocks.red_reinforced_concrete_wall": "Red Reinforced Concrete Wall",
   "block.androbuildingblocks.red_structural_glass": "Red Structural Glass",
   "block.androbuildingblocks.red_structural_glass_pane": "Red Structural Glass Pane",
+  "block.androbuildingblocks.sanded_dark_prismarine_bricks": "Sanded Dark Prismarine Bricks",
+  "block.androbuildingblocks.sanded_dark_prismarine_bricks_slab": "Sanded Dark Prismarine Bricks Slab",
+  "block.androbuildingblocks.sanded_dark_prismarine_bricks_stairs": "Sanded Dark Prismarine Bricks Stairs",
+  "block.androbuildingblocks.sanded_dark_prismarine_bricks_wall": "Sanded Dark Prismarine Bricks Wall",
+  "block.androbuildingblocks.sanded_deepslate": "Sanded Deepslate",
+  "block.androbuildingblocks.sanded_deepslate_bricks": "Sanded Deepslate Bricks",
+  "block.androbuildingblocks.sanded_deepslate_bricks_slab": "Sanded Deepslate Bricks Slab",
+  "block.androbuildingblocks.sanded_deepslate_bricks_stairs": "Sanded Deepslate Bricks Stairs",
+  "block.androbuildingblocks.sanded_deepslate_bricks_wall": "Sanded Deepslate Bricks Wall",
+  "block.androbuildingblocks.sanded_deepslate_slab": "Sanded Deepslate Slab",
+  "block.androbuildingblocks.sanded_deepslate_stairs": "Sanded Deepslate Stairs",
+  "block.androbuildingblocks.sanded_deepslate_wall": "Sanded Deepslate Wall",
+  "block.androbuildingblocks.sanded_granite": "Sanded Granite",
   "block.androbuildingblocks.shale": "Shale",
   "block.androbuildingblocks.shale_slab": "Shale Slab",
   "block.androbuildingblocks.shale_stairs": "Shale Stairs",
@@ -114,6 +127,6 @@
   "block.androbuildingblocks.yellow_caution_stripes_wall": "Yellow Caution Stripes Wall",
   "block.androbuildingblocks.yellow_structural_glass": "Yellow Structural Glass",
   "block.androbuildingblocks.yellow_structural_glass_pane": "Yellow Structural Glass Pane",
-  "creativetab.androbuildingblocks_modern_tab": "AndroBuildingBlocks Modern",
-  "creativetab.androbuildingblocks_tab": "AndroBuildingBlocks"
+  "creativetab.androbuildingblocks_tab": "AndroBuildingBlocks",
+  "item.androbuildingblocks.sandpaper": "Sandpaper"
 }
