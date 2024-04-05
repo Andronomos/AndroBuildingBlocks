@@ -122,41 +122,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		sandedDeepslateFromCobbledRecipe.unlockedBy("has_item", has(Items.COBBLED_DEEPSLATE));
 		sandedDeepslateFromCobbledRecipe.save(recipeConsumer, "sanded_deepslate_from_cobbled");
 
-		ShapelessRecipeBuilder sandedDeepslateBricksRecipe = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SANDED_DEEPSLATE_BRICKS.get(), 1);
-		sandedDeepslateBricksRecipe.requires(ItemRegistry.SANDPAPER.get());
-		sandedDeepslateBricksRecipe.requires(Items.DEEPSLATE_BRICKS);
-		sandedDeepslateBricksRecipe.unlockedBy("has_item", has(Items.DEEPSLATE_BRICKS));
-		sandedDeepslateBricksRecipe.save(recipeConsumer, "sanded_deepslate_bricks");
-
-		ShapelessRecipeBuilder sandedDarkPrismarineBricksRecipe = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SANDED_DARK_PRISMARINE_BRICKS.get(), 1);
-		sandedDarkPrismarineBricksRecipe.requires(ItemRegistry.SANDPAPER.get());
-		sandedDarkPrismarineBricksRecipe.requires(BlockRegistry.DARK_PRISMARINE_BRICKS.get());
-		sandedDarkPrismarineBricksRecipe.unlockedBy("has_item", has(BlockRegistry.DARK_PRISMARINE_BRICKS.get()));
-		sandedDarkPrismarineBricksRecipe.save(recipeConsumer, "sanded_dark_prismarine_bricks");
-
-		ShapelessRecipeBuilder sandedGraniteRecipe = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SANDED_GRANITE.get(), 1);
-		sandedGraniteRecipe.requires(ItemRegistry.SANDPAPER.get());
-		sandedGraniteRecipe.requires(Items.GRANITE);
-		sandedGraniteRecipe.unlockedBy("has_item", has(Items.GRANITE));
-		sandedGraniteRecipe.save(recipeConsumer, "sanded_granite");
-
-		ShapelessRecipeBuilder sandedBasaltRecipe = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SANDED_BASALT.get(), 1);
-		sandedBasaltRecipe.requires(ItemRegistry.SANDPAPER.get());
-		sandedBasaltRecipe.requires(Items.BASALT);
-		sandedBasaltRecipe.unlockedBy("has_item", has(Items.BASALT));
-		sandedBasaltRecipe.save(recipeConsumer, "sanded_basalt");
-
-		ShapelessRecipeBuilder sandedBasaltBricksRecipe = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SANDED_BASALT_BRICKS.get(), 1);
-		sandedBasaltBricksRecipe.requires(ItemRegistry.SANDPAPER.get());
-		sandedBasaltBricksRecipe.requires(BlockRegistry.SANDED_BASALT_BRICKS.get());
-		sandedBasaltBricksRecipe.unlockedBy("has_item", has(BlockRegistry.SANDED_BASALT_BRICKS.get()));
-		sandedBasaltBricksRecipe.save(recipeConsumer, "sanded_basalt_bricks");
-
-		ShapelessRecipeBuilder sandedNetherrackRecipe = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SANDED_NETHERRACK.get(), 1);
-		sandedNetherrackRecipe.requires(ItemRegistry.SANDPAPER.get());
-		sandedNetherrackRecipe.requires(Items.NETHERRACK);
-		sandedNetherrackRecipe.unlockedBy("has_item", has(Items.NETHERRACK));
-		sandedNetherrackRecipe.save(recipeConsumer, "sanded_netherrack");
+		createSandedRecipe(BlockRegistry.SANDED_DEEPSLATE_BRICKS.get(), Blocks.DEEPSLATE_BRICKS, recipeConsumer);
+		createSandedRecipe(BlockRegistry.SANDED_DARK_PRISMARINE_BRICKS.get(), BlockRegistry.DARK_PRISMARINE_BRICKS.get(), recipeConsumer);
+		createSandedRecipe(BlockRegistry.SANDED_GRANITE.get(), Blocks.GRANITE, recipeConsumer);
+		createSandedRecipe(BlockRegistry.SANDED_BASALT.get(), Blocks.BASALT, recipeConsumer);
+		createSandedRecipe(BlockRegistry.SANDED_BASALT_BRICKS.get(), BlockRegistry.BASALT_BRICKS.get(), recipeConsumer);
+		createSandedRecipe(BlockRegistry.SANDED_NETHERRACK.get(), Blocks.NETHERRACK, recipeConsumer);
 
 		buildVariantRecipes(BlockRegistry.SANDED_GRANITE.get(), true, true, true, recipeConsumer);
 		buildVariantRecipes(BlockRegistry.SANDED_DEEPSLATE.get(), true, true, true, recipeConsumer);
