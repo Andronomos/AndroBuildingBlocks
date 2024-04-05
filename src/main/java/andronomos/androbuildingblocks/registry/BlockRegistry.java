@@ -50,9 +50,11 @@ public class BlockRegistry {
 	public static final RegistryObject<Block> DARK_PRISMARINE_BRICKS = registerBlock("dark_prismarine_bricks", BlockBehaviour.Properties.copy(Blocks.DARK_PRISMARINE));
 	public static final RegistryObject<Block> SANDED_DARK_PRISMARINE_BRICKS = registerBlock("sanded_dark_prismarine_bricks", BlockBehaviour.Properties.copy(Blocks.DARK_PRISMARINE));
 	public static final RegistryObject<Block> BASALT_BRICKS = registerBlock("basalt_bricks", BlockBehaviour.Properties.copy(Blocks.BASALT));
+	public static final RegistryObject<Block> SANDED_BASALT_BRICKS = registerBlock("sanded_basalt_bricks", BlockBehaviour.Properties.copy(Blocks.BASALT));
 	public static final RegistryObject<Block> SANDED_GRANITE = registerBlock("sanded_granite", BlockBehaviour.Properties.copy(Blocks.DARK_PRISMARINE));
 	public static final RegistryObject<Block> SANDED_DEEPSLATE = registerBlock("sanded_deepslate", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE));
 	public static final RegistryObject<Block> SANDED_DEEPSLATE_BRICKS = registerBlock("sanded_deepslate_bricks", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS));
+
 
 	public static void registerBlocks() {
 		registerVariants(BLACK_REINFORCED_CONCRETE, "black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES, true, true, true);
@@ -81,7 +83,6 @@ public class BlockRegistry {
 
 		registerVariants(CHARRED_STONE, "charred_stone", GENERIC_PROPERTIES, true, true, true);
 		registerVariants(SHALE, "shale", GENERIC_PROPERTIES, true, true, true);
-
 		registerVariants(MOSSY_COBBLED_DEEPLSATE, "mossy_cobbled_deepslate", BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE), true, true, true);
 		registerVariants(MOSSY_DEEPLSATE_BRICKS, "mossy_deepslate_bricks", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS), true, true, true);
 		registerVariants(DARK_PRISMARINE_BRICKS, "dark_prismarine_bricks", BlockBehaviour.Properties.copy(Blocks.DARK_PRISMARINE), true, true, true);
@@ -90,6 +91,7 @@ public class BlockRegistry {
 		registerVariants(SANDED_DEEPSLATE, "sanded_deepslate", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE), true, true, true);
 		registerVariants(SANDED_GRANITE, "sanded_granite", BlockBehaviour.Properties.copy(Blocks.GRANITE), true, true, true);
 		registerVariants(BASALT_BRICKS, "basalt_bricks", BlockBehaviour.Properties.copy(Blocks.BASALT), true, true, true);
+		registerVariants(SANDED_BASALT_BRICKS, "sanded_basalt_bricks", BlockBehaviour.Properties.copy(Blocks.BASALT), true, true, true);
 	}
 
 	private static void registerVariants(RegistryObject<Block> block, String name, Block.Properties properties, boolean stairs, boolean slab, boolean wall) {
