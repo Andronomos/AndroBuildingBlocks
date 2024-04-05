@@ -88,6 +88,7 @@ public class BlockRegistry {
 		registerVariants(SANDED_DARK_PRISMARINE_BRICKS, "sanded_dark_prismarine_bricks", BlockBehaviour.Properties.copy(Blocks.DARK_PRISMARINE), true, true, true);
 		registerVariants(SANDED_DEEPSLATE_BRICKS, "sanded_deepslate_bricks", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS), true, true, true);
 		registerVariants(SANDED_DEEPSLATE, "sanded_deepslate", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE), true, true, true);
+		registerVariants(SANDED_GRANITE, "sanded_granite", BlockBehaviour.Properties.copy(Blocks.GRANITE), true, true, true);
 		registerVariants(BASALT_BRICKS, "basalt_bricks", BlockBehaviour.Properties.copy(Blocks.BASALT), true, true, true);
 	}
 

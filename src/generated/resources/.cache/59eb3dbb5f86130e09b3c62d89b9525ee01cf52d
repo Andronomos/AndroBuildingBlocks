@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-05T01:22:13.0777151	Loot Tables
+// 1.20.1	2024-04-05T01:31:30.4530211	Loot Tables
 e3e9f38c1657e0277acc450b88d4c326647101d2 data/androbuildingblocks/loot_tables/blocks/basalt_bricks.json
 e81b8f3f158719b7c33fae324c8a25d7a0f299f0 data/androbuildingblocks/loot_tables/blocks/basalt_bricks_slab.json
 874a89057661c2af75a8497032f8a87a23c94e8e data/androbuildingblocks/loot_tables/blocks/basalt_bricks_stairs.json
@@ -104,6 +104,9 @@ c033fac41040a5e2134de89c3417795598a8713a data/androbuildingblocks/loot_tables/bl
 8b95348145b1a227e1a6e9e9c5bd7816dcc10bd3 data/androbuildingblocks/loot_tables/blocks/sanded_deepslate_stairs.json
 cf4fc81265286b8b5a888c6a5162f9a78dd07cc5 data/androbuildingblocks/loot_tables/blocks/sanded_deepslate_wall.json
 022e4ca7b454883822ba63aa950e93921078a1bb data/androbuildingblocks/loot_tables/blocks/sanded_granite.json
+6dc448e4fe84f2abab8f18ab7be9d42e0cd2c33f data/androbuildingblocks/loot_tables/blocks/sanded_granite_slab.json
+40d212f3df8ceb94b1dca53fadeecdf5dde2b140 data/androbuildingblocks/loot_tables/blocks/sanded_granite_stairs.json
+1e4fa211f7d3435aafa46507c847ba0d00307e69 data/androbuildingblocks/loot_tables/blocks/sanded_granite_wall.json
 197d40d33f2af552dfc017d6d54098c7f263aa3f data/androbuildingblocks/loot_tables/blocks/shale.json
 6c60c8e782c2e3f050a72c7141032794fb7a75f7 data/androbuildingblocks/loot_tables/blocks/shale_slab.json
 9802eaac639409fbea4662cb98d4f34ffa2f5d91 data/androbuildingblocks/loot_tables/blocks/shale_stairs.json
