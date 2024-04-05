@@ -167,6 +167,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildVariantRecipes(BlockRegistry.SANDED_NETHERRACK.get(), true, true, true, recipeConsumer);
 	}
 
+
+	private void createSandedRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
+		ShapelessRecipeBuilder sandedRecipe = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, output, 1);
+		sandedRecipe.requires(ItemRegistry.SANDPAPER.get());
+		sandedRecipe.requires(input);
+		sandedRecipe.unlockedBy("has_item", has(input));
+		sandedRecipe.save(consumer);
+	}
+
+
+
+
+
 	private void buildReinforcedConcreteRecipe(Block block, String color, Consumer<FinishedRecipe> recipeConsumer) {
 		Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", color + "_dye"));
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, block, 8);
