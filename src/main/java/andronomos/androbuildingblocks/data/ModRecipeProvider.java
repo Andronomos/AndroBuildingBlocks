@@ -45,11 +45,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		createSteelRecipes(recipeConsumer);
 		createGraphiteRecipes(recipeConsumer);
 
-		createStripedRecipe(BlockRegistry.YELLOW_CAUTION_STRIPES.get(), Items.YELLOW_DYE, Items.BLACK_DYE, recipeConsumer);
-		createVariantRecipes(BlockRegistry.YELLOW_CAUTION_STRIPES.get(),false, true, true, recipeConsumer);
-		createStripedRecipe(BlockRegistry.RED_CAUTION_STRIPES.get(), Items.RED_DYE, Items.WHITE_DYE, recipeConsumer);
-		createVariantRecipes(BlockRegistry.RED_CAUTION_STRIPES.get(),false, true, true, recipeConsumer);
-
 		createSmeltingRecipe(Blocks.STONE, BlockRegistry.CHARRED_STONE.get(), recipeConsumer);
 		createVariantRecipes(BlockRegistry.CHARRED_STONE.get(),true, true, true, recipeConsumer);
 
@@ -244,18 +239,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 			createStoneCutterRecipe(wallBlock, source, 1, recipeConsumer);
 			createThreeByTwoRecipe(wallBlock, source, recipeConsumer);
 		}
-	}
-
-	private void createStripedRecipe(Block output, Item Dye, Item Dye2, Consumer<FinishedRecipe> consumer) {
-		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 4);
-		shaped.define('1', Dye);
-		shaped.define('2', Dye2);
-		shaped.define('3', Tags.Items.STONE);
-		shaped.pattern("212");
-		shaped.pattern("131");
-		shaped.pattern("212");
-		shaped.unlockedBy("has_item", has(Tags.Items.DYES));
-		shaped.save(consumer);
 	}
 
 	private void createTwoByTwoRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {

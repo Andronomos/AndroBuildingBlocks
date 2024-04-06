@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "androbuildingblocks:block/red_caution_stripes",
-    "side": "androbuildingblocks:block/red_caution_stripes",
-    "top": "androbuildingblocks:block/red_caution_stripes"
-  }
-}

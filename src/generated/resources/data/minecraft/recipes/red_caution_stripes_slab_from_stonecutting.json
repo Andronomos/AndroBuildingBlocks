@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "androbuildingblocks:red_caution_stripes"
-  },
-  "result": "androbuildingblocks:red_caution_stripes_slab"
-}

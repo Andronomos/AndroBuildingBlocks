@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "androbuildingblocks:block/yellow_caution_stripes",
-    "side": "androbuildingblocks:block/yellow_caution_stripes",
-    "top": "androbuildingblocks:block/yellow_caution_stripes"
-  }
-}

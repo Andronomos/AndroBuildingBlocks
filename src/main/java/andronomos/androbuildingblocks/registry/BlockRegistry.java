@@ -36,9 +36,6 @@ public class BlockRegistry {
 	public static RegistryObject<Block> STEEL;
 	public static RegistryObject<Block> STEEL_TILE;
 
-	public static RegistryObject<Block> YELLOW_CAUTION_STRIPES;
-	public static RegistryObject<Block> RED_CAUTION_STRIPES;
-
 	public static RegistryObject<Block> GRAPHITE;
 	public static RegistryObject<Block> GRAPHITE_TILE;
 	public static RegistryObject<Block> GRAPHITE_PILLAR;
@@ -70,9 +67,6 @@ public class BlockRegistry {
 
 		STEEL = registerBlockAndVariants("steel", METAL_PROPERTIES);
 		STEEL_TILE = registerBlockAndVariants("steel_tile", METAL_PROPERTIES);
-
-		YELLOW_CAUTION_STRIPES = registerBlockAndVariants("yellow_caution_stripes", GENERIC_PROPERTIES);
-		RED_CAUTION_STRIPES = registerBlockAndVariants("red_caution_stripes", GENERIC_PROPERTIES);
 
 		GRAPHITE = registerBlockAndVariants("graphite", METAL_PROPERTIES);
 		GRAPHITE_TILE = registerBlockAndVariants("graphite_tile", METAL_PROPERTIES);
