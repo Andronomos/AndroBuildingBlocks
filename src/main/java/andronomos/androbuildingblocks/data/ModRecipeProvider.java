@@ -201,11 +201,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		steelFromCharcoalRecipe.unlockedBy("has_item", has(Items.CHARCOAL));
 		steelFromCharcoalRecipe.save(recipeConsumer, "steel_from_charcoal");
 
-		createTwoByTwoRecipe(BlockRegistry.STEEL_TILE.get(), BlockRegistry.STEEL.get(), recipeConsumer);
-		createStoneCutterRecipe(BlockRegistry.STEEL_TILE.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
-
 		createVariantRecipes(BlockRegistry.STEEL.get(), true, true, true, recipeConsumer);
-		createVariantRecipes(BlockRegistry.STEEL_TILE.get(), true, true, true, recipeConsumer);
+		createVariantRecipes(BlockRegistry.STEEL_PANEL.get(), true, true, true, recipeConsumer);
+		createStoneCutterRecipe(BlockRegistry.STEEL_PANEL.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
 	}
 
 	private void createVariantRecipes(Block source, boolean stairs, boolean slab, boolean wall, Consumer<FinishedRecipe> recipeConsumer) {
