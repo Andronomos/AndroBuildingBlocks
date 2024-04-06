@@ -36,6 +36,9 @@ public class BlockRegistry {
 	public static RegistryObject<Block> STEEL;
 	public static RegistryObject<Block> STEEL_PANEL;
 
+	public static RegistryObject<Block> ENDER_STEEL;
+	public static RegistryObject<Block> ENDER_STEEL_PANEL;
+
 	public static RegistryObject<Block> CHARRED_STONE;
 	public static RegistryObject<Block> MOSSY_COBBLED_DEEPLSATE;
 	public static RegistryObject<Block> MOSSY_DEEPLSATE_BRICKS;
@@ -63,6 +66,9 @@ public class BlockRegistry {
 
 		STEEL = registerBlockAndVariants("steel", METAL_PROPERTIES);
 		STEEL_PANEL = registerBlockAndVariants("steel_panel", METAL_PROPERTIES);
+
+		ENDER_STEEL = registerBlockAndVariants("ender_steel", METAL_PROPERTIES);
+		ENDER_STEEL_PANEL = registerBlockAndVariants("ender_steel_panel", METAL_PROPERTIES);
 
 		CHARRED_STONE = registerBlockAndVariants("charred_stone", GENERIC_PROPERTIES);
 		MOSSY_COBBLED_DEEPLSATE = registerBlockAndVariants("mossy_cobbled_deepslate", GENERIC_PROPERTIES);
