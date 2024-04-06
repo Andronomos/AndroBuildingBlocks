@@ -204,6 +204,32 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		createVariantRecipes(BlockRegistry.STEEL.get(), true, true, true, recipeConsumer);
 		createVariantRecipes(BlockRegistry.STEEL_PANEL.get(), true, true, true, recipeConsumer);
 		createStoneCutterRecipe(BlockRegistry.STEEL_PANEL.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
+
+		ShapedRecipeBuilder enderSteelFromCoalRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.ENDER_STEEL.get(), 4);
+		enderSteelFromCoalRecipe.define('C', Items.COAL);
+		enderSteelFromCoalRecipe.define('I', Tags.Items.INGOTS_IRON);
+		enderSteelFromCoalRecipe.define('P', Items.ENDER_PEARL);
+		enderSteelFromCoalRecipe.pattern("CIC");
+		enderSteelFromCoalRecipe.pattern("IPI");
+		enderSteelFromCoalRecipe.pattern("CIC");
+		enderSteelFromCoalRecipe.group("steel");
+		enderSteelFromCoalRecipe.unlockedBy("has_item", has(Items.ENDER_PEARL));
+		enderSteelFromCoalRecipe.save(recipeConsumer);
+
+		ShapedRecipeBuilder enderSteelFromCharcoalRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.ENDER_STEEL.get(), 4);
+		enderSteelFromCharcoalRecipe.define('C', Items.CHARCOAL);
+		enderSteelFromCharcoalRecipe.define('I', Tags.Items.INGOTS_IRON);
+		enderSteelFromCharcoalRecipe.define('P', Items.ENDER_PEARL);
+		enderSteelFromCharcoalRecipe.pattern("CIC");
+		enderSteelFromCharcoalRecipe.pattern("IPI");
+		enderSteelFromCharcoalRecipe.pattern("CIC");
+		enderSteelFromCharcoalRecipe.group("steel");
+		enderSteelFromCharcoalRecipe.unlockedBy("has_item", has(Items.ENDER_PEARL));
+		enderSteelFromCharcoalRecipe.save(recipeConsumer, "ender_steel_from_charcoal");
+
+		createVariantRecipes(BlockRegistry.ENDER_STEEL.get(), true, true, true, recipeConsumer);
+		createVariantRecipes(BlockRegistry.ENDER_STEEL_PANEL.get(), true, true, true, recipeConsumer);
+		createStoneCutterRecipe(BlockRegistry.ENDER_STEEL_PANEL.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
 	}
 
 	private void createVariantRecipes(Block source, boolean stairs, boolean slab, boolean wall, Consumer<FinishedRecipe> recipeConsumer) {

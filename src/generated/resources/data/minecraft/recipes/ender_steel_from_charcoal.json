@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "steel",
+  "key": {
+    "C": {
+      "item": "minecraft:charcoal"
+    },
+    "I": {
+      "tag": "forge:ingots/iron"
+    },
+    "P": {
+      "item": "minecraft:ender_pearl"
+    }
+  },
+  "pattern": [
+    "CIC",
+    "IPI",
+    "CIC"
+  ],
+  "result": {
+    "count": 4,
+    "item": "androbuildingblocks:ender_steel"
+  },
+  "show_notification": true
+}
