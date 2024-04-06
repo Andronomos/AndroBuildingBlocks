@@ -36,19 +36,15 @@ public class BlockRegistry {
 	public static RegistryObject<Block> STEEL;
 	public static RegistryObject<Block> STEEL_TILE;
 
-	public static RegistryObject<Block> GRAPHITE;
-	public static RegistryObject<Block> GRAPHITE_TILE;
-	public static RegistryObject<Block> GRAPHITE_PILLAR;
-
 	public static RegistryObject<Block> CHARRED_STONE;
 	public static RegistryObject<Block> MOSSY_COBBLED_DEEPLSATE;
 	public static RegistryObject<Block> MOSSY_DEEPLSATE_BRICKS;
 	public static RegistryObject<Block> DARK_PRISMARINE_BRICKS;
+	public static RegistryObject<Block> BASALT_BRICKS;
 	public static RegistryObject<Block> SANDED_DARK_PRISMARINE_BRICKS;
 	public static RegistryObject<Block> SANDED_GRANITE;
 	public static RegistryObject<Block> SANDED_DEEPSLATE;
 	public static RegistryObject<Block> SANDED_DEEPSLATE_BRICKS;
-	public static RegistryObject<Block> BASALT_BRICKS;
 	public static RegistryObject<Block> SANDED_BASALT;
 	public static RegistryObject<Block> SANDED_BASALT_BRICKS;
 	public static RegistryObject<Block> SANDED_NETHERRACK;
@@ -67,10 +63,6 @@ public class BlockRegistry {
 
 		STEEL = registerBlockAndVariants("steel", METAL_PROPERTIES);
 		STEEL_TILE = registerBlockAndVariants("steel_tile", METAL_PROPERTIES);
-
-		GRAPHITE = registerBlockAndVariants("graphite", METAL_PROPERTIES);
-		GRAPHITE_TILE = registerBlockAndVariants("graphite_tile", METAL_PROPERTIES);
-		GRAPHITE_PILLAR = registerRotatableBlock("graphite_pillar", "graphite", METAL_PROPERTIES);
 
 		CHARRED_STONE = registerBlockAndVariants("charred_stone", GENERIC_PROPERTIES);
 		MOSSY_COBBLED_DEEPLSATE = registerBlockAndVariants("mossy_cobbled_deepslate", GENERIC_PROPERTIES);

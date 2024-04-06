@@ -43,7 +43,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		}
 
 		createSteelRecipes(recipeConsumer);
-		createGraphiteRecipes(recipeConsumer);
 
 		createSmeltingRecipe(Blocks.STONE, BlockRegistry.CHARRED_STONE.get(), recipeConsumer);
 		createVariantRecipes(BlockRegistry.CHARRED_STONE.get(),true, true, true, recipeConsumer);
@@ -207,15 +206,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 		createVariantRecipes(BlockRegistry.STEEL.get(), true, true, true, recipeConsumer);
 		createVariantRecipes(BlockRegistry.STEEL_TILE.get(), true, true, true, recipeConsumer);
-	}
-	
-	private void createGraphiteRecipes(Consumer<FinishedRecipe> recipeConsumer) {
-		createSmeltingRecipe(Blocks.COAL_BLOCK, BlockRegistry.GRAPHITE.get(), recipeConsumer);
-		createStoneCutterRecipe(BlockRegistry.GRAPHITE_TILE.get(), BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
-		createStoneCutterRecipe(BlockRegistry.GRAPHITE_PILLAR.get(), BlockRegistry.GRAPHITE.get(), 1, recipeConsumer);
-		createTwoByTwoRecipe(BlockRegistry.GRAPHITE_TILE.get(), BlockRegistry.GRAPHITE.get(), recipeConsumer);
-		createVariantRecipes(BlockRegistry.GRAPHITE.get(), true, true, true, recipeConsumer);
-		createVariantRecipes(BlockRegistry.GRAPHITE_TILE.get(), true, true, true, recipeConsumer);
 	}
 
 	private void createVariantRecipes(Block source, boolean stairs, boolean slab, boolean wall, Consumer<FinishedRecipe> recipeConsumer) {
