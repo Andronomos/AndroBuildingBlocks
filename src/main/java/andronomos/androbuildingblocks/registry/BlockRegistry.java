@@ -55,6 +55,7 @@ public class BlockRegistry {
 	public static RegistryObject<Block> SANDED_BASALT;
 	public static RegistryObject<Block> SANDED_BASALT_BRICKS;
 	public static RegistryObject<Block> SANDED_NETHERRACK;
+	public static RegistryObject<Block> SANDED_COAL_BLOCK;
 	public static RegistryObject<Block> SHALE;
 
 	public static void registerBlocks() {
@@ -89,6 +90,7 @@ public class BlockRegistry {
 		SANDED_BASALT = registerBlockAndVariants("sanded_basalt", BASALT_PROPERTIES);
 		SANDED_BASALT_BRICKS = registerBlockAndVariants("sanded_basalt_bricks", BASALT_PROPERTIES);
 		SANDED_NETHERRACK = registerBlockAndVariants("sanded_netherrack", BlockBehaviour.Properties.copy(Blocks.NETHERRACK));
+		SANDED_COAL_BLOCK = registerBlockAndVariants("sanded_coal_block", BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK));
 		SHALE = registerBlockAndVariants("shale", GENERIC_PROPERTIES);
 
 		for(DyeColor color : DyeColor.values()) {

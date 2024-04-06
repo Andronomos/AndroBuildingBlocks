@@ -128,6 +128,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		createSandedRecipe(BlockRegistry.SANDED_BASALT.get(), Blocks.BASALT, recipeConsumer);
 		createSandedRecipe(BlockRegistry.SANDED_BASALT_BRICKS.get(), BlockRegistry.BASALT_BRICKS.get(), recipeConsumer);
 		createSandedRecipe(BlockRegistry.SANDED_NETHERRACK.get(), Blocks.NETHERRACK, recipeConsumer);
+		createSandedRecipe(BlockRegistry.SANDED_COAL_BLOCK.get(), Blocks.COAL_BLOCK, recipeConsumer);
 
 		createVariantRecipes(BlockRegistry.SANDED_GRANITE.get(), true, true, true, recipeConsumer);
 		createVariantRecipes(BlockRegistry.SANDED_DEEPSLATE.get(), true, true, true, recipeConsumer);
@@ -136,8 +137,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		createVariantRecipes(BlockRegistry.SANDED_BASALT.get(), true, true, true, recipeConsumer);
 		createVariantRecipes(BlockRegistry.SANDED_BASALT_BRICKS.get(), true, true, true, recipeConsumer);
 		createVariantRecipes(BlockRegistry.SANDED_NETHERRACK.get(), true, true, true, recipeConsumer);
+		createVariantRecipes(BlockRegistry.SANDED_COAL_BLOCK.get(), true, true, true, recipeConsumer);
 	}
-
 
 	private void createSandedRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
 		ShapelessRecipeBuilder sandedRecipe = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, output, 1);

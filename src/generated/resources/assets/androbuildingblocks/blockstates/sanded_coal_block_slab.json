@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "androbuildingblocks:block/sanded_coal_block_slab"
+    },
+    "type=double": {
+      "model": "androbuildingblocks:block/sanded_coal_block"
+    },
+    "type=top": {
+      "model": "androbuildingblocks:block/sanded_coal_block_slab_top"
+    }
+  }
+}
