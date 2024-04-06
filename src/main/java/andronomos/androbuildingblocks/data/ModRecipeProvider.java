@@ -212,7 +212,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		enderSteelFromCoalRecipe.pattern("CIC");
 		enderSteelFromCoalRecipe.pattern("IPI");
 		enderSteelFromCoalRecipe.pattern("CIC");
-		enderSteelFromCoalRecipe.group("steel");
+		enderSteelFromCoalRecipe.group("ender_steel");
 		enderSteelFromCoalRecipe.unlockedBy("has_item", has(Items.ENDER_PEARL));
 		enderSteelFromCoalRecipe.save(recipeConsumer);
 
@@ -223,7 +223,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		enderSteelFromCharcoalRecipe.pattern("CIC");
 		enderSteelFromCharcoalRecipe.pattern("IPI");
 		enderSteelFromCharcoalRecipe.pattern("CIC");
-		enderSteelFromCharcoalRecipe.group("steel");
+		enderSteelFromCharcoalRecipe.group("ender_steel");
 		enderSteelFromCharcoalRecipe.unlockedBy("has_item", has(Items.ENDER_PEARL));
 		enderSteelFromCharcoalRecipe.save(recipeConsumer, "ender_steel_from_charcoal");
 
