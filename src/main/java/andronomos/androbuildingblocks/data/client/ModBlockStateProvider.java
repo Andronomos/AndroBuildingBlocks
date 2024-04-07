@@ -55,18 +55,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 	public void registerStairsBlock(Block block, String path) {
 		String parent = path.replace("_stairs", "");
-		if (parent.contains("bricks")) {
-			parent.replace("bricks", "brick");
-		}
 		stairsBlock((StairBlock) block, modLoc("block/" + parent));
 		registerItemModel(path);
 	}
 
 	public void registerSlabBlock(Block slab, String path) {
 		String parent = path.replace("_slab", "");
-		if (parent.contains("bricks")) {
-			parent.replace("bricks", "brick");
-		}
 		ResourceLocation txt = modLoc("block/" + parent);
 		slabBlock((SlabBlock) slab, txt, txt);
 		registerItemModel(path);
@@ -74,9 +68,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 	private void registerWallBlock(Block block, String path) {
 		String parent = path.replace("_wall", "");
-		if (parent.contains("bricks")) {
-			parent.replace("bricks", "brick");
-		}
 		ResourceLocation txt = modLoc("block/" + parent);
 		wallBlock((WallBlock) block, txt);
 		itemModels().wallInventory(path, txt);
