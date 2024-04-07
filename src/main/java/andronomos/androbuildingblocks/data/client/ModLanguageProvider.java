@@ -2,7 +2,6 @@ package andronomos.androbuildingblocks.data.client;
 
 import andronomos.androbuildingblocks.AndroBuildingBlocks;
 import andronomos.androbuildingblocks.registry.BlockRegistry;
-import andronomos.androbuildingblocks.registry.CreativeTabRegistry;
 import andronomos.androbuildingblocks.registry.ItemRegistry;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
