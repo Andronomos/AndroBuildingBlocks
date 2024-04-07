@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "androbuildingblocks:sanded_deepslate_bricks"
-  },
-  "result": "androbuildingblocks:sanded_deepslate_bricks_slab"
-}

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "androbuildingblocks:mossy_deepslate_bricks"
-  },
-  "result": "androbuildingblocks:mossy_deepslate_bricks_slab"
-}

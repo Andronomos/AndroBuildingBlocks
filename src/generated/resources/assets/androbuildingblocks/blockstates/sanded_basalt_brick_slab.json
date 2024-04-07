@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "androbuildingblocks:block/sanded_basalt_brick_slab"
+    },
+    "type=double": {
+      "model": "androbuildingblocks:block/sanded_basalt_bricks"
+    },
+    "type=top": {
+      "model": "androbuildingblocks:block/sanded_basalt_brick_slab_top"
+    }
+  }
+}

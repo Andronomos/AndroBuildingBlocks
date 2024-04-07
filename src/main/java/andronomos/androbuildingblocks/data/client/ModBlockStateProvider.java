@@ -55,12 +55,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 	public void registerStairsBlock(Block block, String path) {
 		String parent = path.replace("_stairs", "");
+		parent = getProperParentName(parent);
 		stairsBlock((StairBlock) block, modLoc("block/" + parent));
 		registerItemModel(path);
 	}
 
 	public void registerSlabBlock(Block slab, String path) {
 		String parent = path.replace("_slab", "");
+		parent = getProperParentName(parent);
 		ResourceLocation txt = modLoc("block/" + parent);
 		slabBlock((SlabBlock) slab, txt, txt);
 		registerItemModel(path);
@@ -68,6 +70,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 	private void registerWallBlock(Block block, String path) {
 		String parent = path.replace("_wall", "");
+		parent = getProperParentName(parent);
 		ResourceLocation txt = modLoc("block/" + parent);
 		wallBlock((WallBlock) block, txt);
 		itemModels().wallInventory(path, txt);
@@ -130,5 +133,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 	private void registerItemModel(String name) {
 		itemModels().withExistingParent(name, modLoc("block/" + name));
+	}
+
+
+	private String getProperParentName(String dirtyParent) {
+		if (dirtyParent.contains("brick") && !dirtyParent.contains("bricks")) {
+			return dirtyParent.replace("brick","bricks");
+		}
+		return dirtyParent;
 	}
 }

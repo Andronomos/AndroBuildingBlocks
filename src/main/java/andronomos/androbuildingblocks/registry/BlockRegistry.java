@@ -93,14 +93,23 @@ public class BlockRegistry {
 
 	private static void registerVariants(RegistryObject<Block> block, String name, Block.Properties properties, boolean stairs, boolean slab, boolean wall) {
 		if(stairs) {
+			if (name.contains("bricks")) {
+				name = name.replace("bricks", "brick");
+			}
 			registerStairBlock(String.format("%s_stairs", name), block, properties);
 		}
 
 		if(slab) {
+			if (name.contains("bricks")) {
+				name = name.replace("bricks", "brick");
+			}
 			registerSlabBlock(String.format("%s_slab", name), properties);
 		}
 
 		if(wall) {
+			if (name.contains("bricks")) {
+				name = name.replace("bricks", "brick");
+			}
 			registerWallBlock(String.format("%s_wall", name), properties);
 		}
 	}

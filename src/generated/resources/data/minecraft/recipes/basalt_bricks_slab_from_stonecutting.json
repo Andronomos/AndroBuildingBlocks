@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "androbuildingblocks:basalt_bricks"
-  },
-  "result": "androbuildingblocks:basalt_bricks_slab"
-}
