@@ -61,8 +61,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		String parent = path.replace("_trapdoor", "");
 		parent = getProperParentName(parent);
 		ResourceLocation txt = modLoc("block/" + parent);
-		trapdoorBlock((TrapDoorBlock) block, txt, false);
-		itemModels().fenceInventory(path, txt);
+		trapdoorBlock((TrapDoorBlock) block, txt, true);
+		itemModels().trapdoorTop(path, txt);
 	}
 
 	public void registerStairsBlock(Block block, String path) {
