@@ -29,6 +29,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 				case "StairBlock" -> registerStairsBlock(block, blockPath);
 				case "SlabBlock" -> registerSlabBlock(block, blockPath);
 				case "WallBlock" -> registerWallBlock(block, blockPath);
+				case "FenceBlock" -> registerFenceBlockStateAndModel(block, blockPath);
 				case "StainedGlassBlock" -> registerSimpleBlock(block, blockPath, true);
 				case "StainedGlassPaneBlock", "IronBarsBlock" -> registerPaneBlock(block, blockPath);
 				case "AndroRotatableBlock" -> registerRotatableBlock((AndroRotatableBlock)block, blockPath);
@@ -47,11 +48,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		registerItemModel(path);
 	}
 
-	//private void registerFenceBlockStateAndModel(FenceBlock block, String name) {
-	//	String cleanName = name.substring(0, name.indexOf("_fence"));
-	//	fenceBlock(block, modLoc("block/" + cleanName));
-	//	itemModels().fenceInventory(name, modLoc("block/" + cleanName));
-	//}
+	private void registerFenceBlockStateAndModel(Block block, String path) {
+		String parent = path.replace("_fence", "");
+		parent = getProperParentName(parent);
+		ResourceLocation txt = modLoc("block/" + parent);
+		fenceBlock((FenceBlock) block, txt);
+		itemModels().fenceInventory(path, txt);
+	}
 
 	public void registerStairsBlock(Block block, String path) {
 		String parent = path.replace("_stairs", "");
@@ -134,7 +137,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	private void registerItemModel(String name) {
 		itemModels().withExistingParent(name, modLoc("block/" + name));
 	}
-
 
 	private String getProperParentName(String dirtyParent) {
 		if (dirtyParent.contains("brick") && !dirtyParent.contains("bricks")) {

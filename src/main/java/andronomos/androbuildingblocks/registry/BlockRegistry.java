@@ -91,26 +91,25 @@ public class BlockRegistry {
 		}
 	}
 
-	private static void registerVariants(RegistryObject<Block> block, String name, Block.Properties properties, boolean stairs, boolean slab, boolean wall) {
+	private static void registerVariants(RegistryObject<Block> block, String name, Block.Properties properties, boolean stairs, boolean slab, boolean wall, boolean fence) {
+		if (name.contains("bricks")) {
+			name = name.replace("bricks", "brick");
+		}
+
 		if(stairs) {
-			if (name.contains("bricks")) {
-				name = name.replace("bricks", "brick");
-			}
 			registerStairBlock(String.format("%s_stairs", name), block, properties);
 		}
 
 		if(slab) {
-			if (name.contains("bricks")) {
-				name = name.replace("bricks", "brick");
-			}
 			registerSlabBlock(String.format("%s_slab", name), properties);
 		}
 
 		if(wall) {
-			if (name.contains("bricks")) {
-				name = name.replace("bricks", "brick");
-			}
 			registerWallBlock(String.format("%s_wall", name), properties);
+		}
+
+		if(fence) {
+			registerFenceBlock(String.format("%s_fence", name), properties);
 		}
 	}
 
@@ -134,6 +133,10 @@ public class BlockRegistry {
 		return registerBlock(name, () -> new WallBlock(properties));
 	}
 
+	private static RegistryObject<FenceBlock> registerFenceBlock(final String name, Block.Properties properties) {
+		return registerBlock(name, () -> new FenceBlock(properties));
+	}
+
 	private static RegistryObject<StainedGlassBlock> registerGlassBlock(final String name, DyeColor color) {
 		return registerBlock(name, () -> new StainedGlassBlock(color, GLASS_PROPERTIES));
 	}
@@ -142,11 +145,9 @@ public class BlockRegistry {
 		return registerBlock(name, () -> new StainedGlassPaneBlock(color, GLASS_PANE_PROPERTIES));
 	}
 
-
-
 	private static RegistryObject<Block> registerBlockAndVariants(final String name, Block.Properties properties) {
 		RegistryObject<Block> block = registerBlock(name, () -> new Block(properties));
-		registerVariants(block, name, properties, true, true, true);
+		registerVariants(block, name, properties, true, true, true, true);
 		return block;
 	}
 
