@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "androbuildingblocks:mossy_deepslate_brick_fence"
+          "name": "androbuildingblocks:sanded_granite_trapdoor"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "androbuildingblocks:blocks/mossy_deepslate_brick_fence"
+  "random_sequence": "androbuildingblocks:blocks/sanded_granite_trapdoor"
 }

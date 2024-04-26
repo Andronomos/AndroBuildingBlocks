@@ -31,7 +31,11 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 				case "ConcretePowderBlock" -> tag(BlockTags.MINEABLE_WITH_SHOVEL).add(b);
 				case "FenceBlock" -> {
 					tag(BlockTags.FENCES).add(b);
-					tag(BlockTags.MINEABLE_WITH_AXE).add(b);
+					tag(BlockTags.MINEABLE_WITH_PICKAXE).add(b);
+				}
+				case "TrapDoorBlock" -> {
+					tag(BlockTags.TRAPDOORS).add(b);
+					tag(BlockTags.MINEABLE_WITH_PICKAXE).add(b);
 				}
 				default -> tag(BlockTags.MINEABLE_WITH_PICKAXE).add(b);
 			}

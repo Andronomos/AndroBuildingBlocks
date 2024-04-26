@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/fence_post",
+  "parent": "minecraft:block/template_trapdoor_bottom",
   "textures": {
     "texture": "androbuildingblocks:block/mossy_deepslate_bricks"
   }
