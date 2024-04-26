@@ -72,13 +72,13 @@ public class BlockRegistry {
 
 		CHARRED_STONE = registerBlockAndVariants("charred_stone", GENERIC_PROPERTIES);
 		MOSSY_COBBLED_DEEPLSATE = registerBlockAndVariants("mossy_cobbled_deepslate", GENERIC_PROPERTIES);
-		MOSSY_DEEPLSATE_BRICKS = registerBlockAndVariants("mossy_deepslate_bricks", GENERIC_PROPERTIES);
-		DARK_PRISMARINE_BRICKS = registerBlockAndVariants("dark_prismarine_bricks", DARK_PRISMARINE_PROPERTIES);
+		MOSSY_DEEPLSATE_BRICKS = registerBlockAndVariants("mossy_deepslate_bricks", GENERIC_PROPERTIES, true, true, true, false);
+		DARK_PRISMARINE_BRICKS = registerBlockAndVariants("dark_prismarine_bricks", DARK_PRISMARINE_PROPERTIES, true, true, true, false);
 		SANDED_DARK_PRISMARINE_BRICKS = registerBlockAndVariants("sanded_dark_prismarine_bricks", DARK_PRISMARINE_PROPERTIES);
 		SANDED_GRANITE = registerBlockAndVariants("sanded_granite", DARK_PRISMARINE_PROPERTIES);
 		SANDED_DEEPSLATE = registerBlockAndVariants("sanded_deepslate", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE));
 		SANDED_DEEPSLATE_BRICKS = registerBlockAndVariants("sanded_deepslate_bricks", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS));
-		BASALT_BRICKS = registerBlockAndVariants("basalt_bricks", BASALT_PROPERTIES);
+		BASALT_BRICKS = registerBlockAndVariants("basalt_bricks", BASALT_PROPERTIES, true, true, true, false);
 		SANDED_BASALT = registerBlockAndVariants("sanded_basalt", BASALT_PROPERTIES);
 		SANDED_BASALT_BRICKS = registerBlockAndVariants("sanded_basalt_bricks", BASALT_PROPERTIES);
 		SANDED_NETHERRACK = registerBlockAndVariants("sanded_netherrack", BlockBehaviour.Properties.copy(Blocks.NETHERRACK));
@@ -146,8 +146,12 @@ public class BlockRegistry {
 	}
 
 	private static RegistryObject<Block> registerBlockAndVariants(final String name, Block.Properties properties) {
+		return registerBlockAndVariants(name, properties);
+	}
+
+	private static RegistryObject<Block> registerBlockAndVariants(final String name, Block.Properties properties, boolean stairs, boolean slab, boolean wall, boolean fence) {
 		RegistryObject<Block> block = registerBlock(name, () -> new Block(properties));
-		registerVariants(block, name, properties, true, true, true, true);
+		registerVariants(block, name, properties, stairs, slab, wall, fence);
 		return block;
 	}
 
