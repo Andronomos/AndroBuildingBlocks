@@ -27,106 +27,106 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 	}
 
 	@Override
-	protected void buildRecipes(@NotNull Consumer<FinishedRecipe> recipeConsumer) {
-		createReinforcedConcrete(BlockRegistry.BLACK_REINFORCED_CONCRETE.get(), "black", recipeConsumer);
-		createReinforcedConcrete(BlockRegistry.BLUE_REINFORCED_CONCRETE.get(), "blue", recipeConsumer);
-		createReinforcedConcrete(BlockRegistry.BROWN_REINFORCED_CONCRETE.get(), "brown", recipeConsumer);
-		createReinforcedConcrete(BlockRegistry.GREEN_REINFORCED_CONCRETE.get(), "green", recipeConsumer);
-		createReinforcedConcrete(BlockRegistry.GRAY_REINFORCED_CONCRETE.get(), "gray", recipeConsumer);
-		createReinforcedConcrete(BlockRegistry.PURPLE_REINFORCED_CONCRETE.get(), "purple", recipeConsumer);
-		createReinforcedConcrete(BlockRegistry.RED_REINFORCED_CONCRETE.get(), "red", recipeConsumer);
-		createReinforcedConcrete(BlockRegistry.WHITE_REINFORCED_CONCRETE.get(), "white", recipeConsumer);
+	protected void buildRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
+		createReinforcedConcrete(BlockRegistry.BLACK_REINFORCED_CONCRETE.get(), "black", consumer);
+		createReinforcedConcrete(BlockRegistry.BLUE_REINFORCED_CONCRETE.get(), "blue", consumer);
+		createReinforcedConcrete(BlockRegistry.BROWN_REINFORCED_CONCRETE.get(), "brown", consumer);
+		createReinforcedConcrete(BlockRegistry.GREEN_REINFORCED_CONCRETE.get(), "green", consumer);
+		createReinforcedConcrete(BlockRegistry.GRAY_REINFORCED_CONCRETE.get(), "gray", consumer);
+		createReinforcedConcrete(BlockRegistry.PURPLE_REINFORCED_CONCRETE.get(), "purple", consumer);
+		createReinforcedConcrete(BlockRegistry.RED_REINFORCED_CONCRETE.get(), "red", consumer);
+		createReinforcedConcrete(BlockRegistry.WHITE_REINFORCED_CONCRETE.get(), "white", consumer);
 
 		for(DyeColor color : DyeColor.values()) {
 			Block glassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, color + "_structural_glass"));
-			createStructuralGlass(glassBlock, color.getName(), recipeConsumer);
+			createStructuralGlass(glassBlock, color.getName(), consumer);
 		}
 
-		createSteel(recipeConsumer);
+		createSteel(consumer);
 
-		createSmelting(Blocks.STONE, BlockRegistry.CHARRED_STONE.get(), recipeConsumer);
-		createVariants(BlockRegistry.CHARRED_STONE.get(),true, true, true, recipeConsumer);
+		createSmelting(Blocks.STONE, BlockRegistry.CHARRED_STONE.get(), consumer);
+		createVariants(BlockRegistry.CHARRED_STONE.get(),true, true, true, consumer);
 
 		ShapelessRecipeBuilder mossyCobbledDeepslate = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.MOSSY_COBBLED_DEEPLSATE.get(), 1);
 		mossyCobbledDeepslate.group("mossy_cobbled_deepslate");
 		mossyCobbledDeepslate.requires(Items.COBBLED_DEEPSLATE);
 		mossyCobbledDeepslate.requires(Items.MOSS_BLOCK);
 		mossyCobbledDeepslate.unlockedBy("has_item", has(Items.MOSS_BLOCK));
-		mossyCobbledDeepslate.save(recipeConsumer);
+		mossyCobbledDeepslate.save(consumer);
 
 		ShapelessRecipeBuilder mossyCobbledDeepslateFromVines = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.MOSSY_COBBLED_DEEPLSATE.get(), 1);
 		mossyCobbledDeepslateFromVines.group("mossy_cobbled_deepslate");
 		mossyCobbledDeepslateFromVines.requires(Items.COBBLED_DEEPSLATE);
 		mossyCobbledDeepslateFromVines.requires(Items.VINE);
 		mossyCobbledDeepslateFromVines.unlockedBy("has_item", has(Items.VINE));
-		mossyCobbledDeepslateFromVines.save(recipeConsumer, "mossy_cobbled_deepslate_from_vines");
+		mossyCobbledDeepslateFromVines.save(consumer, "mossy_cobbled_deepslate_from_vines");
 
 		ShapelessRecipeBuilder mossyDeepslateBricks = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.MOSSY_DEEPLSATE_BRICKS.get(), 1);
 		mossyDeepslateBricks.group("mossy_deepslate_bricks");
 		mossyDeepslateBricks.requires(Items.DEEPSLATE_BRICKS);
 		mossyDeepslateBricks.requires(Items.MOSS_BLOCK);
 		mossyDeepslateBricks.unlockedBy("has_item", has(Items.MOSS_BLOCK));
-		mossyDeepslateBricks.save(recipeConsumer);
+		mossyDeepslateBricks.save(consumer);
 
 		ShapelessRecipeBuilder mossyDeepslateBricksFromVines = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.MOSSY_DEEPLSATE_BRICKS.get(), 1);
 		mossyDeepslateBricksFromVines.group("mossy_deepslate_bricks");
 		mossyDeepslateBricksFromVines.requires(Items.DEEPSLATE_BRICKS);
 		mossyDeepslateBricksFromVines.requires(Items.VINE);
 		mossyDeepslateBricksFromVines.unlockedBy("has_item", has(Items.VINE));
-		mossyDeepslateBricksFromVines.save(recipeConsumer, "mossy_deepslate_bricks_from_vines");
+		mossyDeepslateBricksFromVines.save(consumer, "mossy_deepslate_bricks_from_vines");
 
-		createVariants(BlockRegistry.MOSSY_COBBLED_DEEPLSATE.get(), true, true, true, recipeConsumer);
-		createVariants(BlockRegistry.MOSSY_DEEPLSATE_BRICKS.get(), true, true, true, recipeConsumer);
+		createVariants(BlockRegistry.MOSSY_COBBLED_DEEPLSATE.get(), true, true, true, consumer);
+		createVariants(BlockRegistry.MOSSY_DEEPLSATE_BRICKS.get(), true, true, true, consumer);
 
-		createTwoByTwo(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), Blocks.DARK_PRISMARINE, recipeConsumer);
-		createStoneCutter(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), Blocks.DARK_PRISMARINE, 1, recipeConsumer);
-		createVariants(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), true, true, true, recipeConsumer);
+		createTwoByTwo(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), Blocks.DARK_PRISMARINE, consumer);
+		createStoneCutter(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), Blocks.DARK_PRISMARINE, 1, consumer);
+		createVariants(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), true, true, true, consumer);
 
-		createTwoByTwo(BlockRegistry.BASALT_BRICKS.get(), Blocks.SMOOTH_BASALT, recipeConsumer);
-		createStoneCutter(BlockRegistry.BASALT_BRICKS.get(), Blocks.SMOOTH_BASALT, 1, recipeConsumer);
-		createVariants(BlockRegistry.BASALT_BRICKS.get(), true, true, true, recipeConsumer);
+		createTwoByTwo(BlockRegistry.BASALT_BRICKS.get(), Blocks.SMOOTH_BASALT, consumer);
+		createStoneCutter(BlockRegistry.BASALT_BRICKS.get(), Blocks.SMOOTH_BASALT, 1, consumer);
+		createVariants(BlockRegistry.BASALT_BRICKS.get(), true, true, true, consumer);
 
 		ShapelessRecipeBuilder sandpaperRecipe = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ItemRegistry.SANDPAPER.get(), 1);
 		sandpaperRecipe.requires(Items.SAND);
 		sandpaperRecipe.requires(Items.PAPER);
 		sandpaperRecipe.unlockedBy("has_item", has(Items.PAPER));
-		sandpaperRecipe.save(recipeConsumer, "sandpaper");
+		sandpaperRecipe.save(consumer, "sandpaper");
 
 		ShapelessRecipeBuilder sandedDeepslate = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SANDED_DEEPSLATE.get(), 1);
 		sandedDeepslate.requires(ItemRegistry.SANDPAPER.get());
 		sandedDeepslate.requires(Items.DEEPSLATE);
 		sandedDeepslate.group("sanded_deepslate");
 		sandedDeepslate.unlockedBy("has_item", has(Items.DEEPSLATE));
-		sandedDeepslate.save(recipeConsumer, "sanded_deepslate");
+		sandedDeepslate.save(consumer, "sanded_deepslate");
 
 		ShapelessRecipeBuilder sandedDeepslateFromCobbled = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SANDED_DEEPSLATE.get(), 1);
 		sandedDeepslateFromCobbled.requires(ItemRegistry.SANDPAPER.get());
 		sandedDeepslateFromCobbled.requires(Items.COBBLED_DEEPSLATE);
 		sandedDeepslateFromCobbled.group("sanded_deepslate");
 		sandedDeepslateFromCobbled.unlockedBy("has_item", has(Items.COBBLED_DEEPSLATE));
-		sandedDeepslateFromCobbled.save(recipeConsumer, "sanded_deepslate_from_cobbled");
+		sandedDeepslateFromCobbled.save(consumer, "sanded_deepslate_from_cobbled");
 
-		createVariants(BlockRegistry.SANDED_DEEPSLATE.get(), true, true, true, recipeConsumer);
+		createVariants(BlockRegistry.SANDED_DEEPSLATE.get(), true, true, true, consumer);
 
-		createSandedRecipe(BlockRegistry.SANDED_ANDESITE.get(), Blocks.ANDESITE, recipeConsumer);
-		createVariants(BlockRegistry.SANDED_ANDESITE.get(), true, true, true, recipeConsumer);
-		createSandedRecipe(BlockRegistry.SANDED_GRANITE.get(), Blocks.GRANITE, recipeConsumer);
-		createVariants(BlockRegistry.SANDED_GRANITE.get(), true, true, true, recipeConsumer);
-		createSandedRecipe(BlockRegistry.SANDED_DARK_PRISMARINE.get(), Blocks.DARK_PRISMARINE, recipeConsumer);
-		createVariants(BlockRegistry.SANDED_DARK_PRISMARINE.get(), true, true, true, recipeConsumer);
-		createSandedRecipe(BlockRegistry.SANDED_BASALT.get(), Blocks.BASALT, recipeConsumer);
-		createVariants(BlockRegistry.SANDED_BASALT.get(), true, true, true, recipeConsumer);
-		createSandedRecipe(BlockRegistry.SANDED_NETHERRACK.get(), Blocks.NETHERRACK, recipeConsumer);
-		createVariants(BlockRegistry.SANDED_NETHERRACK.get(), true, true, true, recipeConsumer);
-		createSandedRecipe(BlockRegistry.SANDED_NETHERBRICKS.get(), Blocks.NETHER_BRICKS, recipeConsumer);
-		createVariants(BlockRegistry.SANDED_NETHERBRICKS.get(), true, true, true, recipeConsumer);
-		createSandedRecipe(BlockRegistry.SANDED_PACKED_MUD.get(), Blocks.PACKED_MUD, recipeConsumer);
-		createVariants(BlockRegistry.SANDED_PACKED_MUD.get(), true, true, true, recipeConsumer);
-		createSandedRecipe(BlockRegistry.SANDED_CALCITE.get(), Blocks.CALCITE, recipeConsumer);
-		createVariants(BlockRegistry.SANDED_CALCITE.get(), true, true, true, recipeConsumer);
+		createSanded(BlockRegistry.SANDED_ANDESITE.get(), Blocks.ANDESITE, consumer);
+		createVariants(BlockRegistry.SANDED_ANDESITE.get(), true, true, true, consumer);
+		createSanded(BlockRegistry.SANDED_GRANITE.get(), Blocks.GRANITE, consumer);
+		createVariants(BlockRegistry.SANDED_GRANITE.get(), true, true, true, consumer);
+		createSanded(BlockRegistry.SANDED_DARK_PRISMARINE.get(), Blocks.DARK_PRISMARINE, consumer);
+		createVariants(BlockRegistry.SANDED_DARK_PRISMARINE.get(), true, true, true, consumer);
+		createSanded(BlockRegistry.SANDED_BASALT.get(), Blocks.BASALT, consumer);
+		createVariants(BlockRegistry.SANDED_BASALT.get(), true, true, true, consumer);
+		createSanded(BlockRegistry.SANDED_NETHERRACK.get(), Blocks.NETHERRACK, consumer);
+		createVariants(BlockRegistry.SANDED_NETHERRACK.get(), true, true, true, consumer);
+		createSanded(BlockRegistry.SANDED_NETHERBRICKS.get(), Blocks.NETHER_BRICKS, consumer);
+		createVariants(BlockRegistry.SANDED_NETHERBRICKS.get(), true, true, true, consumer);
+		createSanded(BlockRegistry.SANDED_PACKED_MUD.get(), Blocks.PACKED_MUD, consumer);
+		createVariants(BlockRegistry.SANDED_PACKED_MUD.get(), true, true, true, consumer);
+		createSanded(BlockRegistry.SANDED_CALCITE.get(), Blocks.CALCITE, consumer);
+		createVariants(BlockRegistry.SANDED_CALCITE.get(), true, true, true, consumer);
 	}
 
-	private void createSandedRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
+	private void createSanded(Block output, Block input, Consumer<FinishedRecipe> consumer) {
 		ShapelessRecipeBuilder sandedRecipe = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, output, 1);
 		sandedRecipe.requires(ItemRegistry.SANDPAPER.get());
 		sandedRecipe.requires(input);
@@ -134,7 +134,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		sandedRecipe.save(consumer);
 	}
 
-	private void createReinforcedConcrete(Block concreateBlock, String color, Consumer<FinishedRecipe> recipeConsumer) {
+	private void createReinforcedConcrete(Block concreateBlock, String color, Consumer<FinishedRecipe> consumer) {
 		Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", color + "_dye"));
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, concreateBlock, 8);
 		shaped.define('1', Tags.Items.STONE);
@@ -145,10 +145,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		shaped.pattern("343");
 		shaped.pattern("212");
 		shaped.unlockedBy("has_item", has(Tags.Items.STONE));
-		shaped.save(recipeConsumer);
+		shaped.save(consumer);
 
-		createVariants(concreateBlock, true, true, true, recipeConsumer);
-
+		createVariants(concreateBlock, true, true, true, consumer);
 	}
 
 	private void createStructuralGlass(Block block, String color, Consumer<FinishedRecipe> recipeConsumer) {
