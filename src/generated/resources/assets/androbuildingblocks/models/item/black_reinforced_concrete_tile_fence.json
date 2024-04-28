@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/fence_inventory",
-  "textures": {
-    "texture": "androbuildingblocks:block/black_reinforced_concrete_tile"
-  }
-}
