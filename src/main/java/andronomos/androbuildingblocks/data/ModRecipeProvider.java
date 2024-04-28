@@ -112,17 +112,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		createVariantRecipes(BlockRegistry.SANDED_ANDESITE.get(), true, true, true, recipeConsumer);
 		createSandedRecipe(BlockRegistry.SANDED_GRANITE.get(), Blocks.GRANITE, recipeConsumer);
 		createVariantRecipes(BlockRegistry.SANDED_GRANITE.get(), true, true, true, recipeConsumer);
-		createSandedRecipe(BlockRegistry.SANDED_DARK_PRISMARINE.get(), BlockRegistry.DARK_PRISMARINE_BRICKS.get(), recipeConsumer);
+		createSandedRecipe(BlockRegistry.SANDED_DARK_PRISMARINE.get(), Blocks.DARK_PRISMARINE, recipeConsumer);
 		createVariantRecipes(BlockRegistry.SANDED_DARK_PRISMARINE.get(), true, true, true, recipeConsumer);
 		createSandedRecipe(BlockRegistry.SANDED_BASALT.get(), Blocks.BASALT, recipeConsumer);
 		createVariantRecipes(BlockRegistry.SANDED_BASALT.get(), true, true, true, recipeConsumer);
 		createSandedRecipe(BlockRegistry.SANDED_NETHERRACK.get(), Blocks.NETHERRACK, recipeConsumer);
 		createVariantRecipes(BlockRegistry.SANDED_NETHERRACK.get(), true, true, true, recipeConsumer);
-		createSandedRecipe(BlockRegistry.SANDED_NETHERBRICKS.get(), Blocks.NETHERRACK, recipeConsumer);
+		createSandedRecipe(BlockRegistry.SANDED_NETHERBRICKS.get(), Blocks.NETHER_BRICKS, recipeConsumer);
 		createVariantRecipes(BlockRegistry.SANDED_NETHERBRICKS.get(), true, true, true, recipeConsumer);
-		createSandedRecipe(BlockRegistry.SANDED_PACKED_MUD.get(), Blocks.NETHERRACK, recipeConsumer);
+		createSandedRecipe(BlockRegistry.SANDED_PACKED_MUD.get(), Blocks.PACKED_MUD, recipeConsumer);
 		createVariantRecipes(BlockRegistry.SANDED_PACKED_MUD.get(), true, true, true, recipeConsumer);
-		createSandedRecipe(BlockRegistry.SANDED_CALCITE.get(), Blocks.NETHERRACK, recipeConsumer);
+		createSandedRecipe(BlockRegistry.SANDED_CALCITE.get(), Blocks.CALCITE, recipeConsumer);
 		createVariantRecipes(BlockRegistry.SANDED_CALCITE.get(), true, true, true, recipeConsumer);
 	}
 
