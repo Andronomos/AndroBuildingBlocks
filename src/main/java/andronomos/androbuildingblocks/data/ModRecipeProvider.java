@@ -39,13 +39,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 		for(DyeColor color : DyeColor.values()) {
 			Block glassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, color + "_structural_glass"));
-			createStructuralGlassRecipes(glassBlock, color.getName(), recipeConsumer);
+			createStructuralGlass(glassBlock, color.getName(), recipeConsumer);
 		}
 
-		createSteelRecipes(recipeConsumer);
+		createSteel(recipeConsumer);
 
-		createSmeltingRecipe(Blocks.STONE, BlockRegistry.CHARRED_STONE.get(), recipeConsumer);
-		createVariantRecipes(BlockRegistry.CHARRED_STONE.get(),true, true, true, recipeConsumer);
+		createSmelting(Blocks.STONE, BlockRegistry.CHARRED_STONE.get(), recipeConsumer);
+		createVariants(BlockRegistry.CHARRED_STONE.get(),true, true, true, recipeConsumer);
 
 		ShapelessRecipeBuilder mossyCobbledDeepslate = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.MOSSY_COBBLED_DEEPLSATE.get(), 1);
 		mossyCobbledDeepslate.group("mossy_cobbled_deepslate");
@@ -75,16 +75,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		mossyDeepslateBricksFromVines.unlockedBy("has_item", has(Items.VINE));
 		mossyDeepslateBricksFromVines.save(recipeConsumer, "mossy_deepslate_bricks_from_vines");
 
-		createVariantRecipes(BlockRegistry.MOSSY_COBBLED_DEEPLSATE.get(), true, true, true, recipeConsumer);
-		createVariantRecipes(BlockRegistry.MOSSY_DEEPLSATE_BRICKS.get(), true, true, true, recipeConsumer);
+		createVariants(BlockRegistry.MOSSY_COBBLED_DEEPLSATE.get(), true, true, true, recipeConsumer);
+		createVariants(BlockRegistry.MOSSY_DEEPLSATE_BRICKS.get(), true, true, true, recipeConsumer);
 
-		createTwoByTwoRecipe(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), Blocks.DARK_PRISMARINE, recipeConsumer);
-		createStoneCutterRecipe(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), Blocks.DARK_PRISMARINE, 1, recipeConsumer);
-		createVariantRecipes(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), true, true, true, recipeConsumer);
+		createTwoByTwo(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), Blocks.DARK_PRISMARINE, recipeConsumer);
+		createStoneCutter(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), Blocks.DARK_PRISMARINE, 1, recipeConsumer);
+		createVariants(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), true, true, true, recipeConsumer);
 
-		createTwoByTwoRecipe(BlockRegistry.BASALT_BRICKS.get(), Blocks.SMOOTH_BASALT, recipeConsumer);
-		createStoneCutterRecipe(BlockRegistry.BASALT_BRICKS.get(), Blocks.SMOOTH_BASALT, 1, recipeConsumer);
-		createVariantRecipes(BlockRegistry.BASALT_BRICKS.get(), true, true, true, recipeConsumer);
+		createTwoByTwo(BlockRegistry.BASALT_BRICKS.get(), Blocks.SMOOTH_BASALT, recipeConsumer);
+		createStoneCutter(BlockRegistry.BASALT_BRICKS.get(), Blocks.SMOOTH_BASALT, 1, recipeConsumer);
+		createVariants(BlockRegistry.BASALT_BRICKS.get(), true, true, true, recipeConsumer);
 
 		ShapelessRecipeBuilder sandpaperRecipe = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ItemRegistry.SANDPAPER.get(), 1);
 		sandpaperRecipe.requires(Items.SAND);
@@ -106,24 +106,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		sandedDeepslateFromCobbledRecipe.unlockedBy("has_item", has(Items.COBBLED_DEEPSLATE));
 		sandedDeepslateFromCobbledRecipe.save(recipeConsumer, "sanded_deepslate_from_cobbled");
 
-		createVariantRecipes(BlockRegistry.SANDED_DEEPSLATE.get(), true, true, true, recipeConsumer);
+		createVariants(BlockRegistry.SANDED_DEEPSLATE.get(), true, true, true, recipeConsumer);
 
 		createSandedRecipe(BlockRegistry.SANDED_ANDESITE.get(), Blocks.ANDESITE, recipeConsumer);
-		createVariantRecipes(BlockRegistry.SANDED_ANDESITE.get(), true, true, true, recipeConsumer);
+		createVariants(BlockRegistry.SANDED_ANDESITE.get(), true, true, true, recipeConsumer);
 		createSandedRecipe(BlockRegistry.SANDED_GRANITE.get(), Blocks.GRANITE, recipeConsumer);
-		createVariantRecipes(BlockRegistry.SANDED_GRANITE.get(), true, true, true, recipeConsumer);
+		createVariants(BlockRegistry.SANDED_GRANITE.get(), true, true, true, recipeConsumer);
 		createSandedRecipe(BlockRegistry.SANDED_DARK_PRISMARINE.get(), Blocks.DARK_PRISMARINE, recipeConsumer);
-		createVariantRecipes(BlockRegistry.SANDED_DARK_PRISMARINE.get(), true, true, true, recipeConsumer);
+		createVariants(BlockRegistry.SANDED_DARK_PRISMARINE.get(), true, true, true, recipeConsumer);
 		createSandedRecipe(BlockRegistry.SANDED_BASALT.get(), Blocks.BASALT, recipeConsumer);
-		createVariantRecipes(BlockRegistry.SANDED_BASALT.get(), true, true, true, recipeConsumer);
+		createVariants(BlockRegistry.SANDED_BASALT.get(), true, true, true, recipeConsumer);
 		createSandedRecipe(BlockRegistry.SANDED_NETHERRACK.get(), Blocks.NETHERRACK, recipeConsumer);
-		createVariantRecipes(BlockRegistry.SANDED_NETHERRACK.get(), true, true, true, recipeConsumer);
+		createVariants(BlockRegistry.SANDED_NETHERRACK.get(), true, true, true, recipeConsumer);
 		createSandedRecipe(BlockRegistry.SANDED_NETHERBRICKS.get(), Blocks.NETHER_BRICKS, recipeConsumer);
-		createVariantRecipes(BlockRegistry.SANDED_NETHERBRICKS.get(), true, true, true, recipeConsumer);
+		createVariants(BlockRegistry.SANDED_NETHERBRICKS.get(), true, true, true, recipeConsumer);
 		createSandedRecipe(BlockRegistry.SANDED_PACKED_MUD.get(), Blocks.PACKED_MUD, recipeConsumer);
-		createVariantRecipes(BlockRegistry.SANDED_PACKED_MUD.get(), true, true, true, recipeConsumer);
+		createVariants(BlockRegistry.SANDED_PACKED_MUD.get(), true, true, true, recipeConsumer);
 		createSandedRecipe(BlockRegistry.SANDED_CALCITE.get(), Blocks.CALCITE, recipeConsumer);
-		createVariantRecipes(BlockRegistry.SANDED_CALCITE.get(), true, true, true, recipeConsumer);
+		createVariants(BlockRegistry.SANDED_CALCITE.get(), true, true, true, recipeConsumer);
 	}
 
 	private void createSandedRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
@@ -134,9 +134,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		sandedRecipe.save(consumer);
 	}
 
-	private void createReinforcedConcreteRecipe(Block block, String color, Consumer<FinishedRecipe> recipeConsumer) {
+	private void createReinforcedConcreteRecipe(Block concreateBlock, String color, Consumer<FinishedRecipe> recipeConsumer) {
 		Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", color + "_dye"));
-		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, block, 8);
+		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, concreateBlock, 8);
 		shaped.define('1', Tags.Items.STONE);
 		shaped.define('2', Tags.Items.INGOTS_IRON);
 		shaped.define('3', Items.GRAVEL);
@@ -147,10 +147,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		shaped.unlockedBy("has_item", has(Tags.Items.STONE));
 		shaped.save(recipeConsumer);
 
-		createVariantRecipes(block, true, true, true, recipeConsumer);
+		createVariants(concreateBlock, true, true, true, recipeConsumer);
 	}
 
-	private void createStructuralGlassRecipes(Block block, String color, Consumer<FinishedRecipe> recipeConsumer) {
+	private void createStructuralGlass(Block block, String color, Consumer<FinishedRecipe> recipeConsumer) {
 		Block vanillaGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft", color + "_stained_glass"));
 
 		if(blockExists(vanillaGlassBlock)) {
@@ -167,12 +167,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 			Block glassPaneBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_pane", name)));
 
 			if(blockExists(glassPaneBlock)) {
-				createThreeByTwoRecipe(glassPaneBlock, block, recipeConsumer);
+				createThreeByTwo(glassPaneBlock, block, recipeConsumer);
 			}
 		}
 	}
 
-	private void createSteelRecipes(Consumer<FinishedRecipe> recipeConsumer) {
+	private void createSteel(Consumer<FinishedRecipe> recipeConsumer) {
 		ShapedRecipeBuilder steelFromCoalRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.STEEL.get(), 4);
 		steelFromCoalRecipe.define('C', Items.COAL);
 		steelFromCoalRecipe.define('I', Tags.Items.INGOTS_IRON);
@@ -193,9 +193,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		steelFromCharcoalRecipe.unlockedBy("has_item", has(Items.CHARCOAL));
 		steelFromCharcoalRecipe.save(recipeConsumer, "steel_from_charcoal");
 
-		createVariantRecipes(BlockRegistry.STEEL.get(), true, true, true, recipeConsumer);
-		createVariantRecipes(BlockRegistry.STEEL_PANEL.get(), true, true, true, recipeConsumer);
-		createStoneCutterRecipe(BlockRegistry.STEEL_PANEL.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
+		createVariants(BlockRegistry.STEEL.get(), true, true, true, recipeConsumer);
+		createVariants(BlockRegistry.STEEL_PANEL.get(), true, true, true, recipeConsumer);
+		createStoneCutter(BlockRegistry.STEEL_PANEL.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
 
 		ShapedRecipeBuilder enderSteelFromCoalRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.ENDER_STEEL.get(), 4);
 		enderSteelFromCoalRecipe.define('C', Items.COAL);
@@ -219,12 +219,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		enderSteelFromCharcoalRecipe.unlockedBy("has_item", has(Items.ENDER_PEARL));
 		enderSteelFromCharcoalRecipe.save(recipeConsumer, "ender_steel_from_charcoal");
 
-		createVariantRecipes(BlockRegistry.ENDER_STEEL.get(), true, true, true, recipeConsumer);
-		createVariantRecipes(BlockRegistry.ENDER_STEEL_PANEL.get(), true, true, true, recipeConsumer);
-		createStoneCutterRecipe(BlockRegistry.ENDER_STEEL_PANEL.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
+		createVariants(BlockRegistry.ENDER_STEEL.get(), true, true, true, recipeConsumer);
+		createVariants(BlockRegistry.ENDER_STEEL_PANEL.get(), true, true, true, recipeConsumer);
+		createStoneCutter(BlockRegistry.ENDER_STEEL_PANEL.get(), BlockRegistry.STEEL.get(), 1, recipeConsumer);
 	}
 
-	private void createVariantRecipes(Block source, boolean stairs, boolean slab, boolean wall, Consumer<FinishedRecipe> recipeConsumer) {
+	private void createVariants(Block source, boolean stairs, boolean slab, boolean wall, Consumer<FinishedRecipe> recipeConsumer) {
 		String name = ForgeRegistries.BLOCKS.getKey(source).getPath();
 
 		Block stairBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_stairs", name)));
@@ -232,22 +232,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		Block wallBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_wall", name)));
 
 		if(stairs && blockExists(stairBlock)) {
-			createStairRecipe(stairBlock, source, recipeConsumer);
-			createStoneCutterRecipe(stairBlock, source, 1, recipeConsumer);
+			createStair(stairBlock, source, recipeConsumer);
+			createStoneCutter(stairBlock, source, 1, recipeConsumer);
 		}
 
 		if(slab && blockExists(slabBlock)) {
-			createThreeByOneRecipe(slabBlock, source, recipeConsumer);
-			createStoneCutterRecipe(slabBlock, source, 2, recipeConsumer);
+			createThreeByOne(slabBlock, source, recipeConsumer);
+			createStoneCutter(slabBlock, source, 2, recipeConsumer);
 		}
 
 		if(wall && blockExists(wallBlock)) {
-			createStoneCutterRecipe(wallBlock, source, 1, recipeConsumer);
-			createThreeByTwoRecipe(wallBlock, source, recipeConsumer);
+			createStoneCutter(wallBlock, source, 1, recipeConsumer);
+			createThreeByTwo(wallBlock, source, recipeConsumer);
 		}
 	}
 
-	private void createTwoByTwoRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
+	private void createTwoByTwo(Block output, Block input, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 4);
 		shaped.define('#', input);
 		shaped.pattern("##");
@@ -256,7 +256,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		shaped.save(consumer);
 	}
 
-	private void createThreeByOneRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
+	private void createThreeByOne(Block output, Block input, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 6);
 		shaped.define('#', input);
 		shaped.pattern("###");
@@ -264,7 +264,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		shaped.save(consumer);
 	}
 
-	private void createThreeByTwoRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
+	private void createThreeByTwo(Block output, Block input, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 6);
 		shaped.define('#', input);
 		shaped.pattern("###");
@@ -273,21 +273,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		shaped.save(consumer);
 	}
 
-	private void createStoneCutterRecipe(Block output, Block input, int amount, Consumer<FinishedRecipe> consumer) {
+	private void createStoneCutter(Block output, Block input, int amount, Consumer<FinishedRecipe> consumer) {
 		String blockName = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(output)).getPath();
 		SingleItemRecipeBuilder stonecutting = SingleItemRecipeBuilder.stonecutting(Ingredient.of(input), RecipeCategory.BUILDING_BLOCKS, output, amount);
 		stonecutting.unlockedBy("has_item", has(input));
 		stonecutting.save(consumer, blockName + "_from_stonecutting");
 	}
 
-	private void createSmeltingRecipe(Block input, Block output, Consumer<FinishedRecipe> consumer) {
+	private void createSmelting(Block input, Block output, Consumer<FinishedRecipe> consumer) {
 		SimpleCookingRecipeBuilder cooking = SimpleCookingRecipeBuilder.smelting(Ingredient.of(input),
 				RecipeCategory.BUILDING_BLOCKS,	output, 0.1F, 200);
 		cooking.unlockedBy("has_item", has(input));
 		cooking.save(consumer);
 	}
 
-	private void createStairRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
+	private void createStair(Block output, Block input, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 4);
 		shaped.define('#', input);
 		shaped.pattern("#  ");
