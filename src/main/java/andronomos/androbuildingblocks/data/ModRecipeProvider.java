@@ -122,6 +122,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		createVariantRecipes(BlockRegistry.SANDED_NETHERBRICKS.get(), true, true, true, recipeConsumer);
 		createSandedRecipe(BlockRegistry.SANDED_PACKED_MUD.get(), Blocks.NETHERRACK, recipeConsumer);
 		createVariantRecipes(BlockRegistry.SANDED_PACKED_MUD.get(), true, true, true, recipeConsumer);
+		createSandedRecipe(BlockRegistry.SANDED_CALCITE.get(), Blocks.NETHERRACK, recipeConsumer);
+		createVariantRecipes(BlockRegistry.SANDED_CALCITE.get(), true, true, true, recipeConsumer);
 	}
 
 	private void createSandedRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
