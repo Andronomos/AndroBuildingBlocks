@@ -28,14 +28,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 	@Override
 	protected void buildRecipes(@NotNull Consumer<FinishedRecipe> recipeConsumer) {
-		createReinforcedConcreteRecipe(BlockRegistry.BLACK_REINFORCED_CONCRETE.get(), "black", recipeConsumer);
-		createReinforcedConcreteRecipe(BlockRegistry.BLUE_REINFORCED_CONCRETE.get(), "blue", recipeConsumer);
-		createReinforcedConcreteRecipe(BlockRegistry.BROWN_REINFORCED_CONCRETE.get(), "brown", recipeConsumer);
-		createReinforcedConcreteRecipe(BlockRegistry.GREEN_REINFORCED_CONCRETE.get(), "green", recipeConsumer);
-		createReinforcedConcreteRecipe(BlockRegistry.GRAY_REINFORCED_CONCRETE.get(), "gray", recipeConsumer);
-		createReinforcedConcreteRecipe(BlockRegistry.PURPLE_REINFORCED_CONCRETE.get(), "purple", recipeConsumer);
-		createReinforcedConcreteRecipe(BlockRegistry.RED_REINFORCED_CONCRETE.get(), "red", recipeConsumer);
-		createReinforcedConcreteRecipe(BlockRegistry.WHITE_REINFORCED_CONCRETE.get(), "white", recipeConsumer);
+		createReinforcedConcrete(BlockRegistry.BLACK_REINFORCED_CONCRETE.get(), "black", recipeConsumer);
+		createReinforcedConcrete(BlockRegistry.BLUE_REINFORCED_CONCRETE.get(), "blue", recipeConsumer);
+		createReinforcedConcrete(BlockRegistry.BROWN_REINFORCED_CONCRETE.get(), "brown", recipeConsumer);
+		createReinforcedConcrete(BlockRegistry.GREEN_REINFORCED_CONCRETE.get(), "green", recipeConsumer);
+		createReinforcedConcrete(BlockRegistry.GRAY_REINFORCED_CONCRETE.get(), "gray", recipeConsumer);
+		createReinforcedConcrete(BlockRegistry.PURPLE_REINFORCED_CONCRETE.get(), "purple", recipeConsumer);
+		createReinforcedConcrete(BlockRegistry.RED_REINFORCED_CONCRETE.get(), "red", recipeConsumer);
+		createReinforcedConcrete(BlockRegistry.WHITE_REINFORCED_CONCRETE.get(), "white", recipeConsumer);
 
 		for(DyeColor color : DyeColor.values()) {
 			Block glassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, color + "_structural_glass"));
@@ -92,19 +92,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		sandpaperRecipe.unlockedBy("has_item", has(Items.PAPER));
 		sandpaperRecipe.save(recipeConsumer, "sandpaper");
 
-		ShapelessRecipeBuilder sandedDeepslateRecipe = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SANDED_DEEPSLATE.get(), 1);
-		sandedDeepslateRecipe.requires(ItemRegistry.SANDPAPER.get());
-		sandedDeepslateRecipe.requires(Items.DEEPSLATE);
-		sandedDeepslateRecipe.group("sanded_deepslate");
-		sandedDeepslateRecipe.unlockedBy("has_item", has(Items.DEEPSLATE));
-		sandedDeepslateRecipe.save(recipeConsumer, "sanded_deepslate");
+		ShapelessRecipeBuilder sandedDeepslate = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SANDED_DEEPSLATE.get(), 1);
+		sandedDeepslate.requires(ItemRegistry.SANDPAPER.get());
+		sandedDeepslate.requires(Items.DEEPSLATE);
+		sandedDeepslate.group("sanded_deepslate");
+		sandedDeepslate.unlockedBy("has_item", has(Items.DEEPSLATE));
+		sandedDeepslate.save(recipeConsumer, "sanded_deepslate");
 
-		ShapelessRecipeBuilder sandedDeepslateFromCobbledRecipe = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SANDED_DEEPSLATE.get(), 1);
-		sandedDeepslateFromCobbledRecipe.requires(ItemRegistry.SANDPAPER.get());
-		sandedDeepslateFromCobbledRecipe.requires(Items.COBBLED_DEEPSLATE);
-		sandedDeepslateFromCobbledRecipe.group("sanded_deepslate");
-		sandedDeepslateFromCobbledRecipe.unlockedBy("has_item", has(Items.COBBLED_DEEPSLATE));
-		sandedDeepslateFromCobbledRecipe.save(recipeConsumer, "sanded_deepslate_from_cobbled");
+		ShapelessRecipeBuilder sandedDeepslateFromCobbled = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SANDED_DEEPSLATE.get(), 1);
+		sandedDeepslateFromCobbled.requires(ItemRegistry.SANDPAPER.get());
+		sandedDeepslateFromCobbled.requires(Items.COBBLED_DEEPSLATE);
+		sandedDeepslateFromCobbled.group("sanded_deepslate");
+		sandedDeepslateFromCobbled.unlockedBy("has_item", has(Items.COBBLED_DEEPSLATE));
+		sandedDeepslateFromCobbled.save(recipeConsumer, "sanded_deepslate_from_cobbled");
 
 		createVariants(BlockRegistry.SANDED_DEEPSLATE.get(), true, true, true, recipeConsumer);
 
@@ -134,7 +134,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		sandedRecipe.save(consumer);
 	}
 
-	private void createReinforcedConcreteRecipe(Block concreateBlock, String color, Consumer<FinishedRecipe> recipeConsumer) {
+	private void createReinforcedConcrete(Block concreateBlock, String color, Consumer<FinishedRecipe> recipeConsumer) {
 		Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", color + "_dye"));
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, concreateBlock, 8);
 		shaped.define('1', Tags.Items.STONE);
@@ -148,6 +148,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		shaped.save(recipeConsumer);
 
 		createVariants(concreateBlock, true, true, true, recipeConsumer);
+
 	}
 
 	private void createStructuralGlass(Block block, String color, Consumer<FinishedRecipe> recipeConsumer) {
