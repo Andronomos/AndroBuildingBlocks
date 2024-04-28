@@ -7,7 +7,6 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -26,13 +25,32 @@ public class BlockRegistry {
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AndroBuildingBlocks.MODID);
 
 	public static RegistryObject<Block> BLACK_REINFORCED_CONCRETE;
+	public static RegistryObject<Block> BLACK_REINFORCED_CONCRETE_TILE;
+	public static RegistryObject<Block> BLACK_REINFORCED_CONCRETE_BRICKS;
 	public static RegistryObject<Block> BLUE_REINFORCED_CONCRETE;
+	public static RegistryObject<Block> BLUE_REINFORCED_CONCRETE_TILE;
+	public static RegistryObject<Block> BLUE_REINFORCED_CONCRETE_BRICKS;
 	public static RegistryObject<Block> BROWN_REINFORCED_CONCRETE;
+	public static RegistryObject<Block> BROWN_REINFORCED_CONCRETE_TILE;
+	public static RegistryObject<Block> BROWN_REINFORCED_CONCRETE_BRICKS;
 	public static RegistryObject<Block> GREEN_REINFORCED_CONCRETE;
+	public static RegistryObject<Block> GREEN_REINFORCED_CONCRETE_TILE;
+	public static RegistryObject<Block> GREEN_REINFORCED_CONCRETE_BRICKS;
 	public static RegistryObject<Block> GRAY_REINFORCED_CONCRETE;
+	public static RegistryObject<Block> GRAY_REINFORCED_CONCRETE_TILE;
+	public static RegistryObject<Block> GRAY_REINFORCED_CONCRETE_BRICKS;
+	public static RegistryObject<Block> PINK_REINFORCED_CONCRETE;
+	public static RegistryObject<Block> PINK_REINFORCED_CONCRETE_TILE;
+	public static RegistryObject<Block> PINK_REINFORCED_CONCRETE_BRICKS;
 	public static RegistryObject<Block> PURPLE_REINFORCED_CONCRETE;
+	public static RegistryObject<Block> PURPLE_REINFORCED_CONCRETE_TILE;
+	public static RegistryObject<Block> PURPLE_REINFORCED_CONCRETE_BRICKS;
 	public static RegistryObject<Block> RED_REINFORCED_CONCRETE;
+	public static RegistryObject<Block> RED_REINFORCED_CONCRETE_TILE;
+	public static RegistryObject<Block> RED_REINFORCED_CONCRETE_BRICKS;
 	public static RegistryObject<Block> WHITE_REINFORCED_CONCRETE;
+	public static RegistryObject<Block> WHITE_REINFORCED_CONCRETE_TILE;
+	public static RegistryObject<Block> WHITE_REINFORCED_CONCRETE_BRICKS;
 
 	public static RegistryObject<Block> STEEL;
 	public static RegistryObject<Block> STEEL_PANEL;
@@ -42,37 +60,46 @@ public class BlockRegistry {
 
 	public static RegistryObject<Block> CHARRED_STONE;
 	public static RegistryObject<Block> MOSSY_COBBLED_DEEPLSATE;
-	public static RegistryObject<Block> MOSSY_COBBLED_DEEPLSATE_TRAPDOOR;
 	public static RegistryObject<Block> MOSSY_DEEPLSATE_BRICKS;
-	public static RegistryObject<Block> MOSSY_DEEPLSATE_BRICKS_TRAPDOOR;
 	public static RegistryObject<Block> DARK_PRISMARINE_BRICKS;
-	public static RegistryObject<Block> DARK_PRISMARINE_BRICKS_TRAPDOOR;
 	public static RegistryObject<Block> BASALT_BRICKS;
-	public static RegistryObject<Block> SANDED_DARK_PRISMARINE_BRICKS;
+	public static RegistryObject<Block> SANDED_ANDESITE;
+	public static RegistryObject<Block> SANDED_DARK_PRISMARINE;
 	public static RegistryObject<Block> SANDED_GRANITE;
-	public static RegistryObject<Block> SANDED_GRANITE_TRAPDOOR;
 	public static RegistryObject<Block> SANDED_DEEPSLATE;
-	public static RegistryObject<Block> SANDED_DEEPSLATE_TRAPDOOR;
-	public static RegistryObject<Block> SANDED_DEEPSLATE_BRICKS;
 	public static RegistryObject<Block> SANDED_BASALT;
-	public static RegistryObject<Block> SANDED_BASALT_TRAPDOOR;
-	public static RegistryObject<Block> SANDED_BASALT_BRICKS;
 	public static RegistryObject<Block> SANDED_NETHERRACK;
-	public static RegistryObject<Block> SANDED_NETHERRACK_TRAPDOOR;
-	public static RegistryObject<Block> SANDED_COAL_BLOCK;
-	public static RegistryObject<Block> SANDED_COAL_BLOCK_TRAPDOOR;
-	public static RegistryObject<Block> SHALE;
-	public static RegistryObject<Block> SHALE_TRAPDOOR;
+	public static RegistryObject<Block> SANDED_NETHERBRICKS;
+	public static RegistryObject<Block> SANDED_PACKED_MUD;
 
 	public static void registerBlocks() {
 		BLACK_REINFORCED_CONCRETE = registerBlockAndVariants("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
+		BLACK_REINFORCED_CONCRETE_TILE = registerBlockAndVariants("black_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
+		BLACK_REINFORCED_CONCRETE_BRICKS = registerBlockAndVariants("black_reinforced_concrete_bricks", REINFORCED_CONCRETE_PROPERTIES);
 		BLUE_REINFORCED_CONCRETE = registerBlockAndVariants("blue_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
+		BLUE_REINFORCED_CONCRETE_TILE = registerBlockAndVariants("blue_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
+		BLUE_REINFORCED_CONCRETE_BRICKS = registerBlockAndVariants("blue_reinforced_concrete_bricks", REINFORCED_CONCRETE_PROPERTIES);
 		BROWN_REINFORCED_CONCRETE = registerBlockAndVariants("brown_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
+		BROWN_REINFORCED_CONCRETE_TILE = registerBlockAndVariants("brown_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
+		BROWN_REINFORCED_CONCRETE_BRICKS = registerBlockAndVariants("brown_reinforced_concrete_bricks", REINFORCED_CONCRETE_PROPERTIES);
 		GREEN_REINFORCED_CONCRETE = registerBlockAndVariants("green_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
+		GREEN_REINFORCED_CONCRETE_TILE = registerBlockAndVariants("green_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
+		GREEN_REINFORCED_CONCRETE_BRICKS = registerBlockAndVariants("green_reinforced_concrete_bricks", REINFORCED_CONCRETE_PROPERTIES);
 		GRAY_REINFORCED_CONCRETE = registerBlockAndVariants("gray_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
+		GRAY_REINFORCED_CONCRETE_TILE = registerBlockAndVariants("gray_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
+		GRAY_REINFORCED_CONCRETE_BRICKS = registerBlockAndVariants("gray_reinforced_concrete_bricks", REINFORCED_CONCRETE_PROPERTIES);
 		PURPLE_REINFORCED_CONCRETE = registerBlockAndVariants("purple_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
+		PURPLE_REINFORCED_CONCRETE_TILE = registerBlockAndVariants("purple_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
+		PURPLE_REINFORCED_CONCRETE_BRICKS = registerBlockAndVariants("purple_reinforced_concrete_bricks", REINFORCED_CONCRETE_PROPERTIES);
+		PINK_REINFORCED_CONCRETE = registerBlockAndVariants("pink_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
+		PINK_REINFORCED_CONCRETE_TILE = registerBlockAndVariants("pink_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
+		PINK_REINFORCED_CONCRETE_BRICKS = registerBlockAndVariants("pink_reinforced_concrete_bricks", REINFORCED_CONCRETE_PROPERTIES);
 		RED_REINFORCED_CONCRETE = registerBlockAndVariants("red_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
+		RED_REINFORCED_CONCRETE_TILE = registerBlockAndVariants("red_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
+		RED_REINFORCED_CONCRETE_BRICKS = registerBlockAndVariants("red_reinforced_concrete_bricks", REINFORCED_CONCRETE_PROPERTIES);
 		WHITE_REINFORCED_CONCRETE = registerBlockAndVariants("white_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
+		WHITE_REINFORCED_CONCRETE_TILE = registerBlockAndVariants("white_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
+		WHITE_REINFORCED_CONCRETE_BRICKS = registerBlockAndVariants("white_reinforced_concrete_bricks", REINFORCED_CONCRETE_PROPERTIES);
 
 		STEEL = registerBlockAndVariants("steel", METAL_PROPERTIES);
 		STEEL_PANEL = registerBlockAndVariants("steel_panel", METAL_PROPERTIES);
@@ -82,27 +109,18 @@ public class BlockRegistry {
 
 		CHARRED_STONE = registerBlockAndVariants("charred_stone", GENERIC_PROPERTIES);
 		MOSSY_COBBLED_DEEPLSATE = registerBlockAndVariants("mossy_cobbled_deepslate", GENERIC_PROPERTIES);
-		MOSSY_COBBLED_DEEPLSATE_TRAPDOOR = registerBlock("mossy_cobbled_deepslate_trapdoor", () -> new TrapDoorBlock(GENERIC_PROPERTIES, BlockSetType.STONE));
+		MOSSY_DEEPLSATE_BRICKS = registerBlockAndVariants("mossy_deepslate_bricks", GENERIC_PROPERTIES, true, true, true, false);
+		DARK_PRISMARINE_BRICKS = registerBlockAndVariants("dark_prismarine_bricks", DARK_PRISMARINE_PROPERTIES, true, true, true, false);
+		BASALT_BRICKS = registerBlockAndVariants("basalt_bricks", BASALT_PROPERTIES, true, true, true, false);
 
-		MOSSY_DEEPLSATE_BRICKS = registerBlockAndVariants("mossy_deepslate_bricks", GENERIC_PROPERTIES, true, true, true, false, true);
-		MOSSY_DEEPLSATE_BRICKS_TRAPDOOR = registerBlock("mossy_deepslate_bricks_trapdoor", () -> new TrapDoorBlock(GENERIC_PROPERTIES, BlockSetType.STONE));
-		DARK_PRISMARINE_BRICKS = registerBlockAndVariants("dark_prismarine_bricks", DARK_PRISMARINE_PROPERTIES, true, true, true, false, true);
-		DARK_PRISMARINE_BRICKS_TRAPDOOR = registerBlock("dark_prismarine_bricks_trapdoor", () -> new TrapDoorBlock(GENERIC_PROPERTIES, BlockSetType.STONE));
-		SANDED_DARK_PRISMARINE_BRICKS = registerBlockAndVariants("sanded_dark_prismarine_bricks", DARK_PRISMARINE_PROPERTIES);
-		SANDED_GRANITE = registerBlockAndVariants("sanded_granite", DARK_PRISMARINE_PROPERTIES);
-		SANDED_GRANITE_TRAPDOOR = registerBlock("sanded_granite_trapdoor", () -> new TrapDoorBlock(GENERIC_PROPERTIES, BlockSetType.STONE));
+		SANDED_ANDESITE = registerBlockAndVariants("sanded_andesite", BlockBehaviour.Properties.copy(Blocks.ANDESITE));
+		SANDED_DARK_PRISMARINE = registerBlockAndVariants("sanded_dark_prismarine", DARK_PRISMARINE_PROPERTIES);
+		SANDED_GRANITE = registerBlockAndVariants("sanded_granite", BlockBehaviour.Properties.copy(Blocks.GRANITE));
 		SANDED_DEEPSLATE = registerBlockAndVariants("sanded_deepslate", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE));
-		SANDED_DEEPSLATE_TRAPDOOR = registerBlock("sanded_deepslate_trapdoor", () -> new TrapDoorBlock(GENERIC_PROPERTIES, BlockSetType.STONE));
-		SANDED_DEEPSLATE_BRICKS = registerBlockAndVariants("sanded_deepslate_bricks", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS));
-		BASALT_BRICKS = registerBlockAndVariants("basalt_bricks", BASALT_PROPERTIES, true, true, true, false, true);
 		SANDED_BASALT = registerBlockAndVariants("sanded_basalt", BASALT_PROPERTIES);
-		SANDED_BASALT_TRAPDOOR = registerBlock("sanded_basalt_trapdoor", () -> new TrapDoorBlock(GENERIC_PROPERTIES, BlockSetType.STONE));
-		SANDED_BASALT_BRICKS = registerBlockAndVariants("sanded_basalt_bricks", BASALT_PROPERTIES);
 		SANDED_NETHERRACK = registerBlockAndVariants("sanded_netherrack", BlockBehaviour.Properties.copy(Blocks.NETHERRACK));
-		SANDED_NETHERRACK_TRAPDOOR = registerBlock("sanded_netherrack_trapdoor", () -> new TrapDoorBlock(GENERIC_PROPERTIES, BlockSetType.STONE));
-		SANDED_COAL_BLOCK = registerBlockAndVariants("sanded_coal_block", BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK));
-		SANDED_COAL_BLOCK_TRAPDOOR = registerBlock("sanded_coal_block_trapdoor", () -> new TrapDoorBlock(GENERIC_PROPERTIES, BlockSetType.STONE));
-		SHALE = registerBlockAndVariants("shale", GENERIC_PROPERTIES);
+		SANDED_NETHERBRICKS = registerBlockAndVariants("sanded_netherbricks", BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS));
+		SANDED_PACKED_MUD = registerBlockAndVariants("sanded_packed_mud", BlockBehaviour.Properties.copy(Blocks.PACKED_MUD));
 
 		for(DyeColor color : DyeColor.values()) {
 			registerGlassBlock(color + "_structural_glass", color);
@@ -143,16 +161,16 @@ public class BlockRegistry {
 	}
 
 	private static RegistryObject<Block> registerBlockAndVariants(final String name, Block.Properties properties) {
-		return registerBlockAndVariants(name, properties, true, true, true, true, true);
+		return registerBlockAndVariants(name, properties, true, true, true, true);
 	}
 
-	private static RegistryObject<Block> registerBlockAndVariants(final String name, Block.Properties properties, boolean stairs, boolean slab, boolean wall, boolean fence, boolean trapdoor) {
+	private static RegistryObject<Block> registerBlockAndVariants(final String name, Block.Properties properties, boolean stairs, boolean slab, boolean wall, boolean fence) {
 		RegistryObject<Block> block = registerBlock(name, () -> new Block(properties));
-		registerVariants(block, name, properties, stairs, slab, wall, fence, trapdoor);
+		registerVariants(block, name, properties, stairs, slab, wall, fence);
 		return block;
 	}
 
-	private static void registerVariants(RegistryObject<Block> block, String name, Block.Properties properties, boolean stairs, boolean slab, boolean wall, boolean fence, boolean trapdoor) {
+	private static void registerVariants(RegistryObject<Block> block, String name, Block.Properties properties, boolean stairs, boolean slab, boolean wall, boolean fence) {
 		if (name.contains("bricks")) {
 			name = name.replace("bricks", "brick");
 		}
