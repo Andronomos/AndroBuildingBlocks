@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/fence_post",
-  "textures": {
-    "texture": "androbuildingblocks:block/sanded_coal_block"
-  }
-}

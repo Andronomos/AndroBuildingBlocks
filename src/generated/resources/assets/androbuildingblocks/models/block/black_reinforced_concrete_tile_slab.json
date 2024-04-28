@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "androbuildingblocks:block/black_reinforced_concrete_tile",
+    "side": "androbuildingblocks:block/black_reinforced_concrete_tile",
+    "top": "androbuildingblocks:block/black_reinforced_concrete_tile"
+  }
+}

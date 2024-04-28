@@ -1,5 +1,4 @@
-// 1.20.1	2024-04-25T19:40:25.9757504	AndroBuildingBlocks Tags
-4bbd1764e32667913039facbfd4e191351c59350 data/minecraft/tags/blocks/fences.json
-afddbffc4dafb2dcac0bc00d090f4d0dbddcdcee data/minecraft/tags/blocks/mineable/pickaxe.json
-add1e504ac7c8fc09379c364bfbf6d2be6904ddf data/minecraft/tags/blocks/trapdoors.json
-192da206e3b57952a2ef9c3f14294aaf7a494aa4 data/minecraft/tags/blocks/walls.json
+// 1.20.1	2024-04-28T01:04:03.2955601	AndroBuildingBlocks Tags
+deb02624bdbbc14d9e07863b7afeaa8d7c8ad608 data/minecraft/tags/blocks/fences.json
+161480ee5f965f585cf215740e7d4797fb0b4216 data/minecraft/tags/blocks/mineable/pickaxe.json
+8bb57451276058e55d0fcb0da1021cec89adb690 data/minecraft/tags/blocks/walls.json
