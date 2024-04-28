@@ -47,16 +47,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		createSmeltingRecipe(Blocks.STONE, BlockRegistry.CHARRED_STONE.get(), recipeConsumer);
 		createVariantRecipes(BlockRegistry.CHARRED_STONE.get(),true, true, true, recipeConsumer);
 
-		ShapedRecipeBuilder shaleRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SHALE.get(), 4);
-		shaleRecipe.define('M', Blocks.MUD);
-		shaleRecipe.define('C', Blocks.CALCITE);
-		shaleRecipe.pattern("MCM");
-		shaleRecipe.pattern("CMC");
-		shaleRecipe.pattern("MCM");
-		shaleRecipe.unlockedBy("has_item", has(Blocks.MUD));
-		shaleRecipe.save(recipeConsumer);
-		createVariantRecipes(BlockRegistry.SHALE.get(),true, true, true, recipeConsumer);
-
 		ShapelessRecipeBuilder mossyCobbledDeepslate = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.MOSSY_COBBLED_DEEPLSATE.get(), 1);
 		mossyCobbledDeepslate.group("mossy_cobbled_deepslate");
 		mossyCobbledDeepslate.requires(Items.COBBLED_DEEPSLATE);
@@ -116,22 +106,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		sandedDeepslateFromCobbledRecipe.unlockedBy("has_item", has(Items.COBBLED_DEEPSLATE));
 		sandedDeepslateFromCobbledRecipe.save(recipeConsumer, "sanded_deepslate_from_cobbled");
 
-		createSandedRecipe(BlockRegistry.SANDED_DEEPSLATE_BRICKS.get(), Blocks.DEEPSLATE_BRICKS, recipeConsumer);
-		createSandedRecipe(BlockRegistry.SANDED_DARK_PRISMARINE_BRICKS.get(), BlockRegistry.DARK_PRISMARINE_BRICKS.get(), recipeConsumer);
-		createSandedRecipe(BlockRegistry.SANDED_GRANITE.get(), Blocks.GRANITE, recipeConsumer);
-		createSandedRecipe(BlockRegistry.SANDED_BASALT.get(), Blocks.BASALT, recipeConsumer);
-		createSandedRecipe(BlockRegistry.SANDED_BASALT_BRICKS.get(), BlockRegistry.BASALT_BRICKS.get(), recipeConsumer);
-		createSandedRecipe(BlockRegistry.SANDED_NETHERRACK.get(), Blocks.NETHERRACK, recipeConsumer);
-		createSandedRecipe(BlockRegistry.SANDED_COAL_BLOCK.get(), Blocks.COAL_BLOCK, recipeConsumer);
-
-		createVariantRecipes(BlockRegistry.SANDED_GRANITE.get(), true, true, true, recipeConsumer);
 		createVariantRecipes(BlockRegistry.SANDED_DEEPSLATE.get(), true, true, true, recipeConsumer);
-		createVariantRecipes(BlockRegistry.SANDED_DEEPSLATE_BRICKS.get(), true, true, true, recipeConsumer);
-		createVariantRecipes(BlockRegistry.SANDED_DARK_PRISMARINE_BRICKS.get(), true, true, true, recipeConsumer);
+
+		createSandedRecipe(BlockRegistry.SANDED_ANDESITE.get(), Blocks.ANDESITE, recipeConsumer);
+		createVariantRecipes(BlockRegistry.SANDED_ANDESITE.get(), true, true, true, recipeConsumer);
+		createSandedRecipe(BlockRegistry.SANDED_GRANITE.get(), Blocks.GRANITE, recipeConsumer);
+		createVariantRecipes(BlockRegistry.SANDED_GRANITE.get(), true, true, true, recipeConsumer);
+		createSandedRecipe(BlockRegistry.SANDED_DARK_PRISMARINE.get(), BlockRegistry.DARK_PRISMARINE_BRICKS.get(), recipeConsumer);
+		createVariantRecipes(BlockRegistry.SANDED_DARK_PRISMARINE.get(), true, true, true, recipeConsumer);
+		createSandedRecipe(BlockRegistry.SANDED_BASALT.get(), Blocks.BASALT, recipeConsumer);
 		createVariantRecipes(BlockRegistry.SANDED_BASALT.get(), true, true, true, recipeConsumer);
-		createVariantRecipes(BlockRegistry.SANDED_BASALT_BRICKS.get(), true, true, true, recipeConsumer);
+		createSandedRecipe(BlockRegistry.SANDED_NETHERRACK.get(), Blocks.NETHERRACK, recipeConsumer);
 		createVariantRecipes(BlockRegistry.SANDED_NETHERRACK.get(), true, true, true, recipeConsumer);
-		createVariantRecipes(BlockRegistry.SANDED_COAL_BLOCK.get(), true, true, true, recipeConsumer);
+		createSandedRecipe(BlockRegistry.SANDED_NETHERBRICKS.get(), Blocks.NETHERRACK, recipeConsumer);
+		createVariantRecipes(BlockRegistry.SANDED_NETHERBRICKS.get(), true, true, true, recipeConsumer);
+		createSandedRecipe(BlockRegistry.SANDED_PACKED_MUD.get(), Blocks.NETHERRACK, recipeConsumer);
+		createVariantRecipes(BlockRegistry.SANDED_PACKED_MUD.get(), true, true, true, recipeConsumer);
 	}
 
 	private void createSandedRecipe(Block output, Block input, Consumer<FinishedRecipe> consumer) {
