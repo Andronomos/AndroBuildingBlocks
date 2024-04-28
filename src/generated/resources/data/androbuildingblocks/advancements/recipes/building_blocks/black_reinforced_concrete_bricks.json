@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "minecraft:dark_prismarine"
+              "androbuildingblocks:black_reinforced_concrete"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "androbuildingblocks:sanded_dark_prismarine"
+        "recipe": "androbuildingblocks:black_reinforced_concrete_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "androbuildingblocks:sanded_dark_prismarine"
+      "androbuildingblocks:black_reinforced_concrete_bricks"
     ]
   },
   "sends_telemetry_event": false
