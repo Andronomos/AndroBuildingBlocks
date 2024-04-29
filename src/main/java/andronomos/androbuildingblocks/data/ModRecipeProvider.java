@@ -124,6 +124,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		createVariants(BlockRegistry.SANDED_PACKED_MUD.get(), true, true, true, consumer);
 		createSanded(BlockRegistry.SANDED_CALCITE.get(), Blocks.CALCITE, consumer);
 		createVariants(BlockRegistry.SANDED_CALCITE.get(), true, true, true, consumer);
+		createSanded(BlockRegistry.SANDED_STONE.get(), Blocks.STONE, consumer);
+		createVariants(BlockRegistry.SANDED_STONE.get(), true, true, true, consumer);
+		createSanded(BlockRegistry.SANDED_BLACKSTONE.get(), Blocks.BLACKSTONE, consumer);
+		createVariants(BlockRegistry.SANDED_BLACKSTONE.get(), true, true, true, consumer);
 	}
 
 	private void createSanded(Block output, Block input, Consumer<FinishedRecipe> consumer) {

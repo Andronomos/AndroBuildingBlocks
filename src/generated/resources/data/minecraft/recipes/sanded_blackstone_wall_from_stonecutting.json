@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "androbuildingblocks:sanded_blackstone"
+  },
+  "result": "androbuildingblocks:sanded_blackstone_wall"
+}
