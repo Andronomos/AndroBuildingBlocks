@@ -181,51 +181,51 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 	}
 
 	private void createSteel(Consumer<FinishedRecipe> consumer) {
-		ShapedRecipeBuilder steelFromCoalRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.STEEL.get(), 4);
-		steelFromCoalRecipe.define('C', Items.COAL);
-		steelFromCoalRecipe.define('I', Tags.Items.INGOTS_IRON);
-		steelFromCoalRecipe.pattern("CIC");
-		steelFromCoalRecipe.pattern("ICI");
-		steelFromCoalRecipe.pattern("CIC");
-		steelFromCoalRecipe.group("steel");
-		steelFromCoalRecipe.unlockedBy("has_item", has(Items.COAL));
-		steelFromCoalRecipe.save(consumer);
+		ShapedRecipeBuilder steelFromCoal = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.STEEL.get(), 4);
+		steelFromCoal.define('C', Items.COAL);
+		steelFromCoal.define('I', Tags.Items.INGOTS_IRON);
+		steelFromCoal.pattern("CIC");
+		steelFromCoal.pattern("ICI");
+		steelFromCoal.pattern("CIC");
+		steelFromCoal.group("steel");
+		steelFromCoal.unlockedBy("has_item", has(Items.COAL));
+		steelFromCoal.save(consumer);
 
-		ShapedRecipeBuilder steelFromCharcoalRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.STEEL.get(), 4);
-		steelFromCharcoalRecipe.define('C', Items.CHARCOAL);
-		steelFromCharcoalRecipe.define('I', Tags.Items.INGOTS_IRON);
-		steelFromCharcoalRecipe.pattern("CIC");
-		steelFromCharcoalRecipe.pattern("ICI");
-		steelFromCharcoalRecipe.pattern("CIC");
-		steelFromCharcoalRecipe.group("steel");
-		steelFromCharcoalRecipe.unlockedBy("has_item", has(Items.CHARCOAL));
-		steelFromCharcoalRecipe.save(consumer, "steel_from_charcoal");
+		ShapedRecipeBuilder steelFromCharcoal = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.STEEL.get(), 4);
+		steelFromCharcoal.define('C', Items.CHARCOAL);
+		steelFromCharcoal.define('I', Tags.Items.INGOTS_IRON);
+		steelFromCharcoal.pattern("CIC");
+		steelFromCharcoal.pattern("ICI");
+		steelFromCharcoal.pattern("CIC");
+		steelFromCharcoal.group("steel");
+		steelFromCharcoal.unlockedBy("has_item", has(Items.CHARCOAL));
+		steelFromCharcoal.save(consumer, "steel_from_charcoal");
 
 		createVariants(BlockRegistry.STEEL.get(), true, true, true, consumer);
-		createVariants(BlockRegistry.STEEL_PANEL.get(), true, true, true, consumer);
-		createStoneCutter(BlockRegistry.STEEL_PANEL.get(), BlockRegistry.STEEL.get(), 1, consumer);
+		createVariants(BlockRegistry.STEEL_SIDING.get(), true, true, true, consumer);
+		createStoneCutter(BlockRegistry.STEEL_SIDING.get(), BlockRegistry.STEEL.get(), 1, consumer);
 
-		ShapedRecipeBuilder enderSteelFromCoalRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.ENDER_STEEL.get(), 4);
-		enderSteelFromCoalRecipe.define('C', Items.COAL);
-		enderSteelFromCoalRecipe.define('I', Tags.Items.INGOTS_IRON);
-		enderSteelFromCoalRecipe.define('P', Items.ENDER_PEARL);
-		enderSteelFromCoalRecipe.pattern("CIC");
-		enderSteelFromCoalRecipe.pattern("IPI");
-		enderSteelFromCoalRecipe.pattern("CIC");
-		enderSteelFromCoalRecipe.group("ender_steel");
-		enderSteelFromCoalRecipe.unlockedBy("has_item", has(Items.ENDER_PEARL));
-		enderSteelFromCoalRecipe.save(consumer);
+		ShapedRecipeBuilder enderSteelFromCoal = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.ENDER_STEEL.get(), 4);
+		enderSteelFromCoal.define('C', Items.COAL);
+		enderSteelFromCoal.define('I', Tags.Items.INGOTS_IRON);
+		enderSteelFromCoal.define('P', Items.ENDER_PEARL);
+		enderSteelFromCoal.pattern("CIC");
+		enderSteelFromCoal.pattern("IPI");
+		enderSteelFromCoal.pattern("CIC");
+		enderSteelFromCoal.group("ender_steel");
+		enderSteelFromCoal.unlockedBy("has_item", has(Items.ENDER_PEARL));
+		enderSteelFromCoal.save(consumer);
 
-		ShapedRecipeBuilder enderSteelFromCharcoalRecipe = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.ENDER_STEEL.get(), 4);
-		enderSteelFromCharcoalRecipe.define('C', Items.CHARCOAL);
-		enderSteelFromCharcoalRecipe.define('I', Tags.Items.INGOTS_IRON);
-		enderSteelFromCharcoalRecipe.define('P', Items.ENDER_PEARL);
-		enderSteelFromCharcoalRecipe.pattern("CIC");
-		enderSteelFromCharcoalRecipe.pattern("IPI");
-		enderSteelFromCharcoalRecipe.pattern("CIC");
-		enderSteelFromCharcoalRecipe.group("ender_steel");
-		enderSteelFromCharcoalRecipe.unlockedBy("has_item", has(Items.ENDER_PEARL));
-		enderSteelFromCharcoalRecipe.save(consumer, "ender_steel_from_charcoal");
+		ShapedRecipeBuilder enderSteelFromCharcoal = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.ENDER_STEEL.get(), 4);
+		enderSteelFromCharcoal.define('C', Items.CHARCOAL);
+		enderSteelFromCharcoal.define('I', Tags.Items.INGOTS_IRON);
+		enderSteelFromCharcoal.define('P', Items.ENDER_PEARL);
+		enderSteelFromCharcoal.pattern("CIC");
+		enderSteelFromCharcoal.pattern("IPI");
+		enderSteelFromCharcoal.pattern("CIC");
+		enderSteelFromCharcoal.group("ender_steel");
+		enderSteelFromCharcoal.unlockedBy("has_item", has(Items.ENDER_PEARL));
+		enderSteelFromCharcoal.save(consumer, "ender_steel_from_charcoal");
 
 		createVariants(BlockRegistry.ENDER_STEEL.get(), true, true, true, consumer);
 		createVariants(BlockRegistry.ENDER_STEEL_PANEL.get(), true, true, true, consumer);

@@ -53,7 +53,7 @@ public class BlockRegistry {
 	public static RegistryObject<Block> WHITE_REINFORCED_CONCRETE_BRICKS;
 
 	public static RegistryObject<Block> STEEL;
-	public static RegistryObject<Block> STEEL_PANEL;
+	public static RegistryObject<Block> STEEL_SIDING;
 
 	public static RegistryObject<Block> ENDER_STEEL;
 	public static RegistryObject<Block> ENDER_STEEL_PANEL;
@@ -103,7 +103,7 @@ public class BlockRegistry {
 		WHITE_REINFORCED_CONCRETE_BRICKS = registerBlockAndVariants("white_reinforced_concrete_bricks", REINFORCED_CONCRETE_PROPERTIES, true, true, true, false);
 
 		STEEL = registerBlockAndVariants("steel", METAL_PROPERTIES);
-		STEEL_PANEL = registerBlockAndVariants("steel_panel", METAL_PROPERTIES);
+		STEEL_SIDING = registerBlockAndVariants("steel_siding", METAL_PROPERTIES);
 
 		ENDER_STEEL = registerBlockAndVariants("ender_steel", METAL_PROPERTIES);
 		ENDER_STEEL_PANEL = registerBlockAndVariants("ender_steel_panel", METAL_PROPERTIES);

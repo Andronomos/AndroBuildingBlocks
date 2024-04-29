@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "androbuildingblocks:steel_panel"
-  },
-  "result": "androbuildingblocks:steel_panel_wall"
-}
