@@ -74,6 +74,9 @@ public class BlockRegistry {
 	public static RegistryObject<Block> SANDED_CALCITE;
 	public static RegistryObject<Block> SANDED_STONE;
 	public static RegistryObject<Block> SANDED_BLACKSTONE;
+	public static RegistryObject<Block> SANDED_END_STONE;
+	public static RegistryObject<Block> SANDED_DRIPSTONE;
+	public static RegistryObject<Block> SANDED_TUFF;
 
 	public static void registerBlocks() {
 		BLACK_REINFORCED_CONCRETE = registerBlockAndVariants("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
@@ -127,6 +130,9 @@ public class BlockRegistry {
 		SANDED_CALCITE = registerBlockAndVariants("sanded_calcite", BlockBehaviour.Properties.copy(Blocks.PACKED_MUD));
 		SANDED_STONE = registerBlockAndVariants("sanded_stone", GENERIC_PROPERTIES);
 		SANDED_BLACKSTONE = registerBlockAndVariants("sanded_blackstone", BlockBehaviour.Properties.copy(Blocks.BLACKSTONE));
+		SANDED_END_STONE = registerBlockAndVariants("sanded_end_stone", BlockBehaviour.Properties.copy(Blocks.END_STONE));
+		SANDED_DRIPSTONE = registerBlockAndVariants("sanded_dripstone", BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK));
+		SANDED_TUFF = registerBlockAndVariants("sanded_tuff", BlockBehaviour.Properties.copy(Blocks.TUFF));
 
 		for(DyeColor color : DyeColor.values()) {
 			registerGlassBlock(color + "_structural_glass", color);

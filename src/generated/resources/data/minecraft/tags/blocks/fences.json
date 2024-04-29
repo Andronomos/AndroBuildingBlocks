@@ -21,6 +21,9 @@
     "androbuildingblocks:sanded_packed_mud_fence",
     "androbuildingblocks:sanded_calcite_fence",
     "androbuildingblocks:sanded_stone_fence",
-    "androbuildingblocks:sanded_blackstone_fence"
+    "androbuildingblocks:sanded_blackstone_fence",
+    "androbuildingblocks:sanded_end_stone_fence",
+    "androbuildingblocks:sanded_dripstone_fence",
+    "androbuildingblocks:sanded_tuff_fence"
   ]
 }
