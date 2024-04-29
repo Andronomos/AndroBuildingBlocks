@@ -104,11 +104,11 @@ public class BlockRegistry {
 		WHITE_REINFORCED_CONCRETE_TILE = registerBlockAndVariants("white_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES, true, true, true, false);
 		WHITE_REINFORCED_CONCRETE_BRICKS = registerBlockAndVariants("white_reinforced_concrete_bricks", REINFORCED_CONCRETE_PROPERTIES, true, true, true, false);
 
-		STEEL = registerBlockAndVariants("steel", METAL_PROPERTIES);
-		STEEL_SIDING = registerBlockAndVariants("steel_siding", METAL_PROPERTIES);
+		STEEL = registerBlockAndVariants("steel", METAL_PROPERTIES, true, true, true, false);
+		STEEL_SIDING = registerBlockAndVariants("steel_siding", METAL_PROPERTIES, true, true, true, false);
 
-		END_STEEL = registerBlockAndVariants("end_steel", METAL_PROPERTIES);
-		END_STEEL_SIDING = registerBlockAndVariants("end_steel_siding", METAL_PROPERTIES);
+		END_STEEL = registerBlockAndVariants("end_steel", METAL_PROPERTIES, true, true, true, false);
+		END_STEEL_SIDING = registerBlockAndVariants("end_steel_siding", METAL_PROPERTIES, true, true, true, false);
 
 		CHARRED_STONE = registerBlockAndVariants("charred_stone", GENERIC_PROPERTIES);
 		MOSSY_COBBLED_DEEPLSATE = registerBlockAndVariants("mossy_cobbled_deepslate", GENERIC_PROPERTIES);
