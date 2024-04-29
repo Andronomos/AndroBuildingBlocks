@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "androbuildingblocks:block/ender_steel_panel",
-    "side": "androbuildingblocks:block/ender_steel_panel",
-    "top": "androbuildingblocks:block/ender_steel_panel"
-  }
-}

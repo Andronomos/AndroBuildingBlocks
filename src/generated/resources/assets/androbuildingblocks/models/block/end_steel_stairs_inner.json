@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "androbuildingblocks:block/end_steel",
+    "side": "androbuildingblocks:block/end_steel",
+    "top": "androbuildingblocks:block/end_steel"
+  }
+}

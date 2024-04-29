@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "androbuildingblocks:block/end_steel_siding_slab"
+    },
+    "type=double": {
+      "model": "androbuildingblocks:block/end_steel_siding"
+    },
+    "type=top": {
+      "model": "androbuildingblocks:block/end_steel_siding_slab_top"
+    }
+  }
+}

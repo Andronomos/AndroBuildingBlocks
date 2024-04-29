@@ -205,31 +205,31 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		createVariants(BlockRegistry.STEEL_SIDING.get(), true, true, true, consumer);
 		createStoneCutter(BlockRegistry.STEEL_SIDING.get(), BlockRegistry.STEEL.get(), 1, consumer);
 
-		ShapedRecipeBuilder enderSteelFromCoal = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.ENDER_STEEL.get(), 4);
-		enderSteelFromCoal.define('C', Items.COAL);
-		enderSteelFromCoal.define('I', Tags.Items.INGOTS_IRON);
-		enderSteelFromCoal.define('P', Items.ENDER_PEARL);
-		enderSteelFromCoal.pattern("CIC");
-		enderSteelFromCoal.pattern("IPI");
-		enderSteelFromCoal.pattern("CIC");
-		enderSteelFromCoal.group("ender_steel");
-		enderSteelFromCoal.unlockedBy("has_item", has(Items.ENDER_PEARL));
-		enderSteelFromCoal.save(consumer);
+		ShapedRecipeBuilder endSteelFromCoal = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.END_STEEL.get(), 4);
+		endSteelFromCoal.define('C', Items.COAL);
+		endSteelFromCoal.define('I', Tags.Items.INGOTS_IRON);
+		endSteelFromCoal.define('P', Items.ENDER_PEARL);
+		endSteelFromCoal.pattern("CIC");
+		endSteelFromCoal.pattern("IPI");
+		endSteelFromCoal.pattern("CIC");
+		endSteelFromCoal.group("end_steel");
+		endSteelFromCoal.unlockedBy("has_item", has(Items.ENDER_PEARL));
+		endSteelFromCoal.save(consumer);
 
-		ShapedRecipeBuilder enderSteelFromCharcoal = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.ENDER_STEEL.get(), 4);
-		enderSteelFromCharcoal.define('C', Items.CHARCOAL);
-		enderSteelFromCharcoal.define('I', Tags.Items.INGOTS_IRON);
-		enderSteelFromCharcoal.define('P', Items.ENDER_PEARL);
-		enderSteelFromCharcoal.pattern("CIC");
-		enderSteelFromCharcoal.pattern("IPI");
-		enderSteelFromCharcoal.pattern("CIC");
-		enderSteelFromCharcoal.group("ender_steel");
-		enderSteelFromCharcoal.unlockedBy("has_item", has(Items.ENDER_PEARL));
-		enderSteelFromCharcoal.save(consumer, "ender_steel_from_charcoal");
+		ShapedRecipeBuilder endSteelFromCharcoal = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.END_STEEL.get(), 4);
+		endSteelFromCharcoal.define('C', Items.CHARCOAL);
+		endSteelFromCharcoal.define('I', Tags.Items.INGOTS_IRON);
+		endSteelFromCharcoal.define('P', Items.ENDER_PEARL);
+		endSteelFromCharcoal.pattern("CIC");
+		endSteelFromCharcoal.pattern("IPI");
+		endSteelFromCharcoal.pattern("CIC");
+		endSteelFromCharcoal.group("end_steel");
+		endSteelFromCharcoal.unlockedBy("has_item", has(Items.ENDER_PEARL));
+		endSteelFromCharcoal.save(consumer, "end_steel_from_charcoal");
 
-		createVariants(BlockRegistry.ENDER_STEEL.get(), true, true, true, consumer);
-		createVariants(BlockRegistry.ENDER_STEEL_PANEL.get(), true, true, true, consumer);
-		createStoneCutter(BlockRegistry.ENDER_STEEL_PANEL.get(), BlockRegistry.STEEL.get(), 1, consumer);
+		createVariants(BlockRegistry.END_STEEL.get(), true, true, true, consumer);
+		createVariants(BlockRegistry.END_STEEL_SIDING.get(), true, true, true, consumer);
+		createStoneCutter(BlockRegistry.END_STEEL_SIDING.get(), BlockRegistry.STEEL.get(), 1, consumer);
 	}
 
 	private void createVariants(Block source, boolean stairs, boolean slab, boolean wall, Consumer<FinishedRecipe> consumer) {
