@@ -72,6 +72,8 @@ public class BlockRegistry {
 	public static RegistryObject<Block> SANDED_NETHERBRICKS;
 	public static RegistryObject<Block> SANDED_PACKED_MUD;
 	public static RegistryObject<Block> SANDED_CALCITE;
+	public static RegistryObject<Block> SANDED_STONE;
+	public static RegistryObject<Block> SANDED_BLACKSTONE;
 
 	public static void registerBlocks() {
 		BLACK_REINFORCED_CONCRETE = registerBlockAndVariants("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
@@ -123,6 +125,8 @@ public class BlockRegistry {
 		SANDED_NETHERBRICKS = registerBlockAndVariants("sanded_netherbricks", BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS));
 		SANDED_PACKED_MUD = registerBlockAndVariants("sanded_packed_mud", BlockBehaviour.Properties.copy(Blocks.PACKED_MUD));
 		SANDED_CALCITE = registerBlockAndVariants("sanded_calcite", BlockBehaviour.Properties.copy(Blocks.PACKED_MUD));
+		SANDED_STONE = registerBlockAndVariants("sanded_stone", GENERIC_PROPERTIES);
+		SANDED_BLACKSTONE = registerBlockAndVariants("sanded_blackstone", BlockBehaviour.Properties.copy(Blocks.BLACKSTONE));
 
 		for(DyeColor color : DyeColor.values()) {
 			registerGlassBlock(color + "_structural_glass", color);

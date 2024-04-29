@@ -44,6 +44,8 @@
     "androbuildingblocks:sanded_netherrack_wall",
     "androbuildingblocks:sanded_netherbrick_wall",
     "androbuildingblocks:sanded_packed_mud_wall",
-    "androbuildingblocks:sanded_calcite_wall"
+    "androbuildingblocks:sanded_calcite_wall",
+    "androbuildingblocks:sanded_stone_wall",
+    "androbuildingblocks:sanded_blackstone_wall"
   ]
 }
