@@ -233,6 +233,10 @@ public class BlockRegistry {
 	public static RegistryObject<StairBlock> ASPHALT_STAIRS;
 	public static RegistryObject<SlabBlock> ASPHALT_SLAB;
 
+	public static Supplier<Block> ASPHALT_SHINGLES;
+	public static RegistryObject<StairBlock> ASPHALT_SHINGLES_STAIRS;
+	public static RegistryObject<SlabBlock> ASPHALT_SHINGLES_SLAB;
+
 	public static void register() {
 		BLACK_REINFORCED_CONCRETE = registerBlock("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
 		BLACK_REINFORCED_CONCRETE_STAIRS = registerStairBlock("black_reinforced_concrete_stairs", BLACK_REINFORCED_CONCRETE, REINFORCED_CONCRETE_PROPERTIES);
@@ -441,6 +445,10 @@ public class BlockRegistry {
 		ASPHALT = registerBlock("asphalt", () -> new AsphaltBlock(GENERIC_PROPERTIES));
 		ASPHALT_STAIRS = registerStairBlock("asphalt_stairs", ASPHALT, GENERIC_PROPERTIES);
 		ASPHALT_SLAB = registerSlabBlock("asphalt_slab", GENERIC_PROPERTIES);
+
+		ASPHALT_SHINGLES = registerBlock("asphalt_shingles", () -> new AsphaltBlock(GENERIC_PROPERTIES));
+		ASPHALT_SHINGLES_STAIRS = registerStairBlock("asphalt_shingles_stairs", ASPHALT, GENERIC_PROPERTIES);
+		ASPHALT_SHINGLES_SLAB = registerSlabBlock("asphalt_shingles_slab", GENERIC_PROPERTIES);
 
 		for(DyeColor color : DyeColor.values()) {
 			registerGlassBlock(color + "_structural_glass", color);
