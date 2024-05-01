@@ -153,7 +153,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		Block tileBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_tile", name)));
 
 		if (blockExists(tileBlock)) {
-			ShapedRecipeBuilder tile = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, concreteBlock, 8);
+			ShapedRecipeBuilder tile = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, tileBlock, 8);
 			tile.define('1', concreteBlock);
 			tile.pattern("11");
 			tile.pattern("11");
