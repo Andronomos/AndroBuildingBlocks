@@ -4,6 +4,7 @@ import andronomos.androbuildingblocks.AndroBuildingBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -26,11 +27,7 @@ public class CreativeTabRegistry {
 			.title(Component.translatable("creativetab.androbuildingblocks_modern_tab"))
 			.icon(BlockRegistry.WHITE_REINFORCED_CONCRETE.get().asItem()::getDefaultInstance)
 			.displayItems((parameters, output) -> {
-				BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath().contains("reinforced_concrete")).forEach(block -> {
-					output.accept(block);
-				});
-
-				BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath().contains("structural_glass")).forEach(block -> {
+				BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> isModernBlock(block)).forEach(block -> {
 					output.accept(block);
 				});
 
@@ -123,4 +120,11 @@ public class CreativeTabRegistry {
 				output.accept(BlockRegistry.BLACK_SILT_SHINGLES_SLAB.get());
 			})
 			.build());
+
+
+
+	private static boolean isModernBlock(Block block) {
+		String blockPath = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
+		return blockPath.contains("reinforced_concrete") || blockPath.contains("structural_glass") || blockPath.contains("steel");
+	}
 }
