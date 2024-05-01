@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "androbuildingblocks:block/asphalt_slab"
+    },
+    "type=double": {
+      "model": "androbuildingblocks:block/asphalt"
+    },
+    "type=top": {
+      "model": "androbuildingblocks:block/asphalt_slab_top"
+    }
+  }
+}

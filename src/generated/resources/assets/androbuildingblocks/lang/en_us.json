@@ -1,4 +1,7 @@
 {
+  "block.androbuildingblocks.asphalt": "Asphalt",
+  "block.androbuildingblocks.asphalt_slab": "Asphalt Slab",
+  "block.androbuildingblocks.asphalt_stairs": "Asphalt Stairs",
   "block.androbuildingblocks.basalt_brick_slab": "Basalt Brick Slab",
   "block.androbuildingblocks.basalt_brick_stairs": "Basalt Brick Stairs",
   "block.androbuildingblocks.basalt_brick_wall": "Basalt Brick Wall",

@@ -1,6 +1,7 @@
 package andronomos.androbuildingblocks.registry;
 
 import andronomos.androbuildingblocks.AndroBuildingBlocks;
+import andronomos.androbuildingblocks.block.AsphaltBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
@@ -228,6 +229,10 @@ public class BlockRegistry {
 	public static RegistryObject<WallBlock> STEEL_SIDING_WALL;
 	public static RegistryObject<SlabBlock> STEEL_SIDING_SLAB;
 
+	public static Supplier<Block> ASPHALT;
+	public static RegistryObject<StairBlock> ASPHALT_STAIRS;
+	public static RegistryObject<SlabBlock> ASPHALT_SLAB;
+
 	public static void register() {
 		BLACK_REINFORCED_CONCRETE = registerBlock("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
 		BLACK_REINFORCED_CONCRETE_STAIRS = registerStairBlock("black_reinforced_concrete_stairs", BLACK_REINFORCED_CONCRETE, REINFORCED_CONCRETE_PROPERTIES);
@@ -432,6 +437,10 @@ public class BlockRegistry {
 		STEEL_SIDING_STAIRS = registerStairBlock("steel_siding_stairs", BLACK_SILT, METAL_PROPERTIES);
 		STEEL_SIDING_WALL = registerWallBlock("steel_siding_wall", METAL_PROPERTIES);
 		STEEL_SIDING_SLAB = registerSlabBlock("steel_siding_slab", METAL_PROPERTIES);
+
+		ASPHALT = registerBlock("asphalt", () -> new AsphaltBlock(GENERIC_PROPERTIES));
+		ASPHALT_STAIRS = registerStairBlock("asphalt_stairs", ASPHALT, GENERIC_PROPERTIES);
+		ASPHALT_SLAB = registerSlabBlock("asphalt_slab", GENERIC_PROPERTIES);
 
 		for(DyeColor color : DyeColor.values()) {
 			registerGlassBlock(color + "_structural_glass", color);
