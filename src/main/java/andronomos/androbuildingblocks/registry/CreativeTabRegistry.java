@@ -25,12 +25,27 @@ public class CreativeTabRegistry {
 			})
 			.build());
 
-	public static final RegistryObject<CreativeModeTab> ANDROBUILDINGBLOCKS_TAB = CREATIVE_MODE_TABS.register("androbuildingblocks_tab", () -> CreativeModeTab.builder()
-			.title(Component.translatable("creativetab.androbuildingblocks_tab"))
-			.icon(BlockRegistry.BLOCKS.getEntries().stream().findFirst().map(RegistryObject::get).get().asItem()::getDefaultInstance)
+	public static final RegistryObject<CreativeModeTab> ANDROBUILDINGBLOCKS_MODERN_TAB = CREATIVE_MODE_TABS.register("androbuildingblocks_modern_tab", () -> CreativeModeTab.builder()
+			.title(Component.translatable("creativetab.androbuildingblocks_modern_tab"))
+			.icon(BlockRegistry.WHITE_REINFORCED_CONCRETE.get().asItem()::getDefaultInstance)
+			.displayItems((parameters, output) -> {
+				BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath().contains("reinforced_concrete")).forEach(block -> {
+					output.accept(block);
+				});
+
+				BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath().contains("structural_glass")).forEach(block -> {
+					output.accept(block);
+				});
+
+				//output.accept();
+			})
+			.build());
+
+	public static final RegistryObject<CreativeModeTab> ANDROBUILDINGBLOCKS_MISC_TAB = CREATIVE_MODE_TABS.register("androbuildingblocks_misc_tab", () -> CreativeModeTab.builder()
+			.title(Component.translatable("creativetab.androbuildingblocks_misc_tab"))
+			.icon(BlockRegistry.MOSSY_COBBLED_DEEPLSATE.get().asItem()::getDefaultInstance)
 			.displayItems((parameters, output) -> {
 				//BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> output.accept(b));
-
 				output.accept(BlockRegistry.CHARRED_STONE.get());
 				output.accept(BlockRegistry.CHARRED_STONE_STAIRS.get());
 				output.accept(BlockRegistry.CHARRED_STONE_SLAB.get());
@@ -95,38 +110,20 @@ public class CreativeTabRegistry {
 				output.accept(BlockRegistry.MOSSY_DEEPLSATE_BRICK_STAIRS.get());
 				output.accept(BlockRegistry.MOSSY_DEEPLSATE_BRICK_WALL.get());
 				output.accept(BlockRegistry.MOSSY_DEEPLSATE_BRICK_SLAB.get());
-				output.accept(BlockRegistry. SILT.get());
-				output.accept(BlockRegistry. SILT_STAIRS.get());
-				output.accept(BlockRegistry. SILT_WALL.get());
-				output.accept(BlockRegistry. SILT_SLAB.get());
-				output.accept(BlockRegistry. SILT_SHINGLES.get());
-				output.accept(BlockRegistry. SILT_SHINGLES_STAIRS.get());
-				output.accept(BlockRegistry. SILT_SHINGLES_SLAB.get());
-				output.accept(BlockRegistry. BLACK_SILT.get());
-				output.accept(BlockRegistry. BLACK_SILT_STAIRS.get());
-				output.accept(BlockRegistry. BLACK_SILT_WALL.get());
-				output.accept(BlockRegistry. BLACK_SILT_SLAB.get());
-				output.accept(BlockRegistry. BLACK_SILT_SHINGLES.get());
-				output.accept(BlockRegistry. BLACK_SILT_SHINGLES_STAIRS.get());
-				output.accept(BlockRegistry. BLACK_SILT_SHINGLES_SLAB.get());
-			})
-			.build());
-
-	public static final RegistryObject<CreativeModeTab> ANDROBUILDINGBLOCKS_MODERN_TAB = CREATIVE_MODE_TABS.register("androbuildingblocks_modern_tab", () -> CreativeModeTab.builder()
-			.title(Component.translatable("creativetab.androbuildingblocks_modern_tab"))
-			.icon(BlockRegistry.WHITE_REINFORCED_CONCRETE.get().asItem()::getDefaultInstance)
-			.displayItems((parameters, output) -> {
-				BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath().contains("reinforced_concrete")).forEach(block -> {
-					output.accept(block);
-				});
-
-				BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath().contains("structural_glass")).forEach(block -> {
-					output.accept(block);
-				});
-
-
-				//output.accept();
-
+				output.accept(BlockRegistry.SILT.get());
+				output.accept(BlockRegistry.SILT_STAIRS.get());
+				output.accept(BlockRegistry.SILT_WALL.get());
+				output.accept(BlockRegistry.SILT_SLAB.get());
+				output.accept(BlockRegistry.SILT_SHINGLES.get());
+				output.accept(BlockRegistry.SILT_SHINGLES_STAIRS.get());
+				output.accept(BlockRegistry.SILT_SHINGLES_SLAB.get());
+				output.accept(BlockRegistry.BLACK_SILT.get());
+				output.accept(BlockRegistry.BLACK_SILT_STAIRS.get());
+				output.accept(BlockRegistry.BLACK_SILT_WALL.get());
+				output.accept(BlockRegistry.BLACK_SILT_SLAB.get());
+				output.accept(BlockRegistry.BLACK_SILT_SHINGLES.get());
+				output.accept(BlockRegistry.BLACK_SILT_SHINGLES_STAIRS.get());
+				output.accept(BlockRegistry.BLACK_SILT_SHINGLES_SLAB.get());
 			})
 			.build());
 }
