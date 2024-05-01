@@ -51,13 +51,10 @@ public class BlockRegistry {
 	public static RegistryObject<Block> WHITE_REINFORCED_CONCRETE;
 	public static RegistryObject<Block> WHITE_REINFORCED_CONCRETE_TILE;
 	public static RegistryObject<Block> WHITE_REINFORCED_CONCRETE_BRICKS;
-
 	public static RegistryObject<Block> STEEL;
 	public static RegistryObject<Block> STEEL_SIDING;
-
 	public static RegistryObject<Block> END_STEEL;
 	public static RegistryObject<Block> END_STEEL_SIDING;
-
 	public static RegistryObject<Block> CHARRED_STONE;
 	public static RegistryObject<Block> MOSSY_COBBLED_DEEPLSATE;
 	public static RegistryObject<Block> MOSSY_DEEPLSATE_BRICKS;
@@ -77,6 +74,7 @@ public class BlockRegistry {
 	public static RegistryObject<Block> SANDED_END_STONE;
 	public static RegistryObject<Block> SANDED_DRIPSTONE;
 	public static RegistryObject<Block> SANDED_TUFF;
+	public static RegistryObject<Block> SILT;
 
 	public static void registerBlocks() {
 		BLACK_REINFORCED_CONCRETE = registerBlockAndVariants("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
@@ -133,6 +131,7 @@ public class BlockRegistry {
 		SANDED_END_STONE = registerBlockAndVariants("sanded_end_stone", BlockBehaviour.Properties.copy(Blocks.END_STONE));
 		SANDED_DRIPSTONE = registerBlockAndVariants("sanded_dripstone", BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK));
 		SANDED_TUFF = registerBlockAndVariants("sanded_tuff", BlockBehaviour.Properties.copy(Blocks.TUFF));
+		SILT = registerBlockAndVariants("silt", BlockBehaviour.Properties.copy(Blocks.SOUL_SAND));
 
 		for(DyeColor color : DyeColor.values()) {
 			registerGlassBlock(color + "_structural_glass", color);

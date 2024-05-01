@@ -134,6 +134,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		createVariants(BlockRegistry.SANDED_DRIPSTONE.get(), true, true, true, consumer);
 		createSanded(BlockRegistry.SANDED_TUFF.get(), Blocks.TUFF, consumer);
 		createVariants(BlockRegistry.SANDED_TUFF.get(), true, true, true, consumer);
+
+		ShapedRecipeBuilder silt = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SILT.get(), 4);
+		silt.define('S', Items.CLAY);
+		silt.define('C', Items.SAND);
+		silt.pattern("SCS");
+		silt.pattern("CSC");
+		silt.pattern("SCS");
+		silt.unlockedBy("has_item", has(BlockRegistry.SILT.get()));
+		silt.save(consumer);
 	}
 
 	private void createSanded(Block output, Block input, Consumer<FinishedRecipe> consumer) {

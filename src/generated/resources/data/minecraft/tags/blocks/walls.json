@@ -49,6 +49,7 @@
     "androbuildingblocks:sanded_blackstone_wall",
     "androbuildingblocks:sanded_end_stone_wall",
     "androbuildingblocks:sanded_dripstone_wall",
-    "androbuildingblocks:sanded_tuff_wall"
+    "androbuildingblocks:sanded_tuff_wall",
+    "androbuildingblocks:silt_wall"
   ]
 }

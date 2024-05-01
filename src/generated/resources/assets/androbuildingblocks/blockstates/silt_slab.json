@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "androbuildingblocks:block/silt_slab"
+    },
+    "type=double": {
+      "model": "androbuildingblocks:block/silt"
+    },
+    "type=top": {
+      "model": "androbuildingblocks:block/silt_slab_top"
+    }
+  }
+}
