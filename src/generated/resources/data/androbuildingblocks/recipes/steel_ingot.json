@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "steel",
+  "group": "steel_ingot",
   "key": {
     "C": {
       "item": "minecraft:coal"

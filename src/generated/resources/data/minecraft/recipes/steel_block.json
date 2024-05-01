@@ -1,7 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "steel",
   "key": {
     "I": {
       "item": "androbuildingblocks:steel_ingot"
@@ -13,7 +12,6 @@
     "III"
   ],
   "result": {
-    "count": 4,
     "item": "androbuildingblocks:steel_block"
   },
   "show_notification": true
