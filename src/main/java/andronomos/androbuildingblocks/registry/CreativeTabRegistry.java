@@ -18,6 +18,7 @@ public class CreativeTabRegistry {
 			.icon(ItemRegistry.SANDPAPER.get()::getDefaultInstance)
 			.displayItems((parameters, output) -> {
 				output.accept(ItemRegistry.SANDPAPER.get());
+				output.accept(ItemRegistry.STEEL_INGOT.get());
 			})
 			.build());
 
