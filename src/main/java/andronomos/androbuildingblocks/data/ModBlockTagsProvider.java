@@ -29,7 +29,6 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
 	@Override
 	protected void addTags(HolderLookup.Provider provider) {
-
 		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath().contains("concrete")).forEach(block -> {
 			tag(BlockTags.MINEABLE_WITH_PICKAXE).add(block);
 		});

@@ -41,6 +41,8 @@
     "androbuildingblocks:silt_shingles_stairs",
     "androbuildingblocks:black_silt_stairs",
     "androbuildingblocks:black_silt_shingles_stairs",
+    "androbuildingblocks:steel_stairs",
+    "androbuildingblocks:steel_siding_stairs",
     "androbuildingblocks:dark_prismarine_brick_stairs"
   ]
 }

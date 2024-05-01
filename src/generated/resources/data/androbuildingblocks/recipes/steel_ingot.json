@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "steel",
+  "key": {
+    "C": {
+      "item": "minecraft:coal"
+    },
+    "I": {
+      "tag": "forge:ingots/iron"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "CIC",
+    "CCC"
+  ],
+  "result": {
+    "count": 4,
+    "item": "androbuildingblocks:steel_ingot"
+  },
+  "show_notification": true
+}

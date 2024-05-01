@@ -218,6 +218,16 @@ public class BlockRegistry {
 	public static RegistryObject<StairBlock> BLACK_SILT_SHINGLES_STAIRS;
 	public static RegistryObject<SlabBlock> BLACK_SILT_SHINGLES_SLAB;
 
+	public static RegistryObject<Block> STEEL_BLOCK;
+	public static RegistryObject<StairBlock> STEEL_STAIRS;
+	public static RegistryObject<WallBlock> STEEL_WALL;
+	public static RegistryObject<SlabBlock> STEEL_SLAB;
+
+	public static RegistryObject<Block> STEEL_SIDING;
+	public static RegistryObject<StairBlock> STEEL_SIDING_STAIRS;
+	public static RegistryObject<WallBlock> STEEL_SIDING_WALL;
+	public static RegistryObject<SlabBlock> STEEL_SIDING_SLAB;
+
 	public static void register() {
 		BLACK_REINFORCED_CONCRETE = registerBlock("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
 		BLACK_REINFORCED_CONCRETE_STAIRS = registerStairBlock("black_reinforced_concrete_stairs", BLACK_REINFORCED_CONCRETE, REINFORCED_CONCRETE_PROPERTIES);
@@ -412,6 +422,16 @@ public class BlockRegistry {
 		BLACK_SILT_SHINGLES = registerBlock("black_silt_shingles", ClAY_PROPERTIES);
 		BLACK_SILT_SHINGLES_STAIRS = registerStairBlock("black_silt_shingles_stairs", BLACK_SILT_SHINGLES, ClAY_PROPERTIES);
 		BLACK_SILT_SHINGLES_SLAB = registerSlabBlock("black_silt_shingles_slab", ClAY_PROPERTIES);
+
+		STEEL_BLOCK = registerBlock("steel_block", METAL_PROPERTIES);
+		STEEL_STAIRS = registerStairBlock("steel_stairs", BLACK_SILT, METAL_PROPERTIES);
+		STEEL_WALL = registerWallBlock("steel_wall", METAL_PROPERTIES);
+		STEEL_SLAB = registerSlabBlock("steel_slab", METAL_PROPERTIES);
+
+		STEEL_SIDING = registerBlock("steel_siding", METAL_PROPERTIES);
+		STEEL_SIDING_STAIRS = registerStairBlock("steel_siding_stairs", BLACK_SILT, METAL_PROPERTIES);
+		STEEL_SIDING_WALL = registerWallBlock("steel_siding_wall", METAL_PROPERTIES);
+		STEEL_SIDING_SLAB = registerSlabBlock("steel_siding_slab", METAL_PROPERTIES);
 
 		for(DyeColor color : DyeColor.values()) {
 			registerGlassBlock(color + "_structural_glass", color);

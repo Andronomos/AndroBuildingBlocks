@@ -39,6 +39,8 @@
     "androbuildingblocks:charred_stone_wall",
     "androbuildingblocks:silt_wall",
     "androbuildingblocks:black_silt_wall",
+    "androbuildingblocks:steel_wall",
+    "androbuildingblocks:steel_siding_wall",
     "androbuildingblocks:dark_prismarine_brick_wall"
   ]
 }

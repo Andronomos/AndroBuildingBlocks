@@ -142,6 +142,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 			Block glassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, color + "_structural_glass"));
 			buildStructuralGlass(glassBlock, color.getName(), consumer);
 		}
+
+		buildSteel(consumer);
 	}
 
 	private void buildReinforcedConcrete(Block concreteBlock, String color, Consumer<FinishedRecipe> consumer) {
@@ -196,6 +198,41 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		sandedRecipe.requires(input);
 		sandedRecipe.unlockedBy("has_item", has(input));
 		sandedRecipe.save(consumer);
+	}
+
+	private void buildSteel(Consumer<FinishedRecipe> consumer) {
+		ShapedRecipeBuilder steelFromCoal = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ItemRegistry.STEEL_INGOT.get(), 4);
+		steelFromCoal.define('C', Items.COAL);
+		steelFromCoal.define('I', Tags.Items.INGOTS_IRON);
+		steelFromCoal.pattern("CCC");
+		steelFromCoal.pattern("CIC");
+		steelFromCoal.pattern("CCC");
+		steelFromCoal.group("steel");
+		steelFromCoal.unlockedBy("has_item", has(Items.COAL));
+		steelFromCoal.save(consumer);
+
+		ShapedRecipeBuilder steelFromCharcoal = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ItemRegistry.STEEL_INGOT.get(), 4);
+		steelFromCharcoal.define('C', Items.CHARCOAL);
+		steelFromCharcoal.define('I', Tags.Items.INGOTS_IRON);
+		steelFromCharcoal.pattern("CCC");
+		steelFromCharcoal.pattern("CIC");
+		steelFromCharcoal.pattern("CCC");
+		steelFromCharcoal.group("steel");
+		steelFromCharcoal.unlockedBy("has_item", has(Items.CHARCOAL));
+		steelFromCharcoal.save(consumer, "steel_from_charcoal");
+
+		ShapedRecipeBuilder steelBlock = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.STEEL_BLOCK.get(), 4);
+		steelBlock.define('I', ItemRegistry.STEEL_INGOT.get());
+		steelBlock.pattern("III");
+		steelBlock.pattern("III");
+		steelBlock.pattern("III");
+		steelBlock.group("steel");
+		steelBlock.unlockedBy("has_item", has(ItemRegistry.STEEL_INGOT.get()));
+		steelBlock.save(consumer, "steel_block");
+
+		buildVariants(BlockRegistry.STEEL_BLOCK.get(), true, true, true, consumer);
+		buildVariants(BlockRegistry.STEEL_SIDING.get(), true, true, true, consumer);
+		buildStoneCutter(BlockRegistry.STEEL_SIDING.get(), BlockRegistry.STEEL_BLOCK.get(), 1, consumer);
 	}
 
 	private void buildStructuralGlass(Block block, String color, Consumer<FinishedRecipe> consumer) {

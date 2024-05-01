@@ -12,4 +12,7 @@ public class ItemRegistry {
 
 	public static final RegistryObject<Item> SANDPAPER = ITEMS.register("sandpaper",
 			() -> new SandpaperItem(new Item.Properties()));
+
+	public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot",
+			() -> new Item(new Item.Properties()));
 }

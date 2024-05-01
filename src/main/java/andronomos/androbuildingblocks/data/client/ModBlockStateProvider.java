@@ -14,6 +14,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.Objects;
+
 public class ModBlockStateProvider extends BlockStateProvider {
 	public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
 		super(output, AndroBuildingBlocks.MODID, exFileHelper);
@@ -22,7 +24,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	@Override
 	protected void registerStatesAndModels() {
 		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
-			String blockPath = ForgeRegistries.BLOCKS.getKey(block).getPath();
+			String blockPath = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
 			String className = block.getClass().getSimpleName();
 
 			switch (className) {
@@ -147,6 +149,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	private String getProperParentName(String dirtyParent) {
 		if (dirtyParent.contains("brick") && !dirtyParent.contains("bricks")) {
 			return dirtyParent.replace("brick","bricks");
+		}
+		if (dirtyParent.contains("steel") && !dirtyParent.contains("siding")) {
+			return dirtyParent + "_block";
 		}
 		return dirtyParent;
 	}
