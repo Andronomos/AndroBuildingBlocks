@@ -1,7 +1,6 @@
 package andronomos.androbuildingblocks.data.client;
 
 import andronomos.androbuildingblocks.AndroBuildingBlocks;
-import andronomos.androbuildingblocks.block.AndroRotatableBlock;
 import andronomos.androbuildingblocks.registry.BlockRegistry;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
@@ -92,54 +91,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		String textureName = String.format("block/%s", parent);
 		paneBlockWithRenderType((IronBarsBlock)block, modLoc(textureName), modLoc(textureName),"translucent");
 		itemModels().singleTexture(path, mcLoc("item/generated"), "layer0", modLoc(textureName)).renderType("translucent");
-	}
-
-	private void registerRotatableBlock(AndroRotatableBlock block, String blockName) {
-		String resource = "block/" + blockName;
-		ResourceLocation side = modLoc(resource);
-		ResourceLocation end;
-
-		if(!block.topResource.equals("")) {
-			end = modLoc("block/" + block.topResource);
-		} else {
-			end = side;
-		}
-
-		ModelFile model = models().cubeColumn(blockName, side, end);
-
-		getVariantBuilder(block).forAllStatesExcept(state -> {
-			Direction.Axis axis = state.getValue(RotatedPillarBlock.AXIS);
-
-			int yRot = 0;
-			int xRot = 0;
-
-			switch (axis) {
-				case X:
-					xRot = 90;
-					yRot = 90;
-					break;
-				case Y:
-					break;
-				case Z:
-					xRot = 90;
-					break;
-			}
-
-			return ConfiguredModel.builder()
-					.modelFile(model)
-					.rotationX(xRot)
-					.rotationY(yRot)
-					.build();
-		});
-
-		registerItemModel(blockName);
-	}
-
-	private void registerHorizontalBlock(GlazedTerracottaBlock b, String blockName) {
-		String resource = "block/" + blockName;
-		ResourceLocation side = modLoc(resource);
-		horizontalBlock(b, side, side, side);
-		registerItemModel(blockName);
 	}
 
 	private void registerItemModel(String name) {
