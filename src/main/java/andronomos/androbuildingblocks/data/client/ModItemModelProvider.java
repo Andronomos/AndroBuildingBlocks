@@ -14,6 +14,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 	@Override
 	protected void registerModels() {
 		createSingleTexture("sandpaper");
+		createSingleTexture("steel_ingot");
 	}
 
 	private ItemModelBuilder createSingleTexture(String name) {
