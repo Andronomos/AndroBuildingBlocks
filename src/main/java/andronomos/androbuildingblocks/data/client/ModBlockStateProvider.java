@@ -30,11 +30,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 				case "SlabBlock" -> registerSlabBlock(block, blockPath);
 				case "WallBlock" -> registerWallBlock(block, blockPath);
 				case "FenceBlock" -> registerFenceBlock(block, blockPath);
-				case "TrapDoorBlock" -> registerTrapDoorBlockStateAndModel(block, blockPath);
 				case "StainedGlassBlock" -> registerSimpleBlock(block, blockPath, true);
 				case "StainedGlassPaneBlock", "IronBarsBlock" -> registerPaneBlock(block, blockPath);
-				case "AndroRotatableBlock" -> registerRotatableBlock((AndroRotatableBlock)block, blockPath);
-				case "GlazedTerracottaBlock" -> registerHorizontalBlock((GlazedTerracottaBlock)block, blockPath);
 				default -> registerSimpleBlock(block, blockPath, false);
 			}
 		});

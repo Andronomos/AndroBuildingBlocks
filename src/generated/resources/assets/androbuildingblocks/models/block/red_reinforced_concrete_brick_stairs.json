@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "androbuildingblocks:block/red_reinforced_concrete_bricks",
-    "side": "androbuildingblocks:block/red_reinforced_concrete_bricks",
-    "top": "androbuildingblocks:block/red_reinforced_concrete_bricks"
-  }
-}

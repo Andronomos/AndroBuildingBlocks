@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "androbuildingblocks:end_steel"
-  },
-  "result": "androbuildingblocks:end_steel_stairs"
-}

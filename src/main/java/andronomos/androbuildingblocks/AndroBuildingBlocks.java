@@ -24,7 +24,7 @@ public class AndroBuildingBlocks
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         BlockRegistry.BLOCKS.register(modEventBus);
-        BlockRegistry.registerBlocks();
+        BlockRegistry.register();
 
         ItemRegistry.ITEMS.register(modEventBus);
         CreativeTabRegistry.CREATIVE_MODE_TABS.register(modEventBus);

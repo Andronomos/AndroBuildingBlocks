@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "minecraft:smooth_basalt"
-  },
-  "result": "androbuildingblocks:basalt_bricks"
-}
