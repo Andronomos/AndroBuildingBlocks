@@ -132,10 +132,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		silt.save(consumer);
 
 		buildVariants(BlockRegistry.SILT.get(), true, true, true, consumer);
-		buildTwoByTwo(BlockRegistry.SILT_SHINGLES.get(), BlockRegistry.SILT.get(), consumer);
-		buildVariants(BlockRegistry.SILT_SHINGLES.get(), true, true, true, consumer);
-		buildStoneCutter(BlockRegistry.SILT_SHINGLES.get(), BlockRegistry.SILT.get(), 1, consumer);
-
 		buildColoredSilt(BlockRegistry.BLACK_SILT.get(), "black", consumer);
 
 		for(DyeColor color : DyeColor.values()) {

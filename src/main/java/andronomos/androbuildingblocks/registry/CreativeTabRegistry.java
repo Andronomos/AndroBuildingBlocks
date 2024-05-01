@@ -117,16 +117,10 @@ public class CreativeTabRegistry {
 				output.accept(BlockRegistry.SILT_STAIRS.get());
 				output.accept(BlockRegistry.SILT_WALL.get());
 				output.accept(BlockRegistry.SILT_SLAB.get());
-				output.accept(BlockRegistry.SILT_SHINGLES.get());
-				output.accept(BlockRegistry.SILT_SHINGLES_STAIRS.get());
-				output.accept(BlockRegistry.SILT_SHINGLES_SLAB.get());
 				output.accept(BlockRegistry.BLACK_SILT.get());
 				output.accept(BlockRegistry.BLACK_SILT_STAIRS.get());
 				output.accept(BlockRegistry.BLACK_SILT_WALL.get());
 				output.accept(BlockRegistry.BLACK_SILT_SLAB.get());
-				output.accept(BlockRegistry.BLACK_SILT_SHINGLES.get());
-				output.accept(BlockRegistry.BLACK_SILT_SHINGLES_STAIRS.get());
-				output.accept(BlockRegistry.BLACK_SILT_SHINGLES_SLAB.get());
 			})
 			.build());
 
