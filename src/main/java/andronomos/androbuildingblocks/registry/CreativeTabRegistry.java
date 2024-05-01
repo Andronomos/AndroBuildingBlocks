@@ -36,11 +36,7 @@ public class CreativeTabRegistry {
 			.title(Component.translatable("creativetab.androbuildingblocks_modern_tab"))
 			.icon(BlockRegistry.WHITE_REINFORCED_CONCRETE.get().asItem()::getDefaultInstance)
 			.displayItems((parameters, output) -> {
-				BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> isModernBlock(block)).forEach(block -> {
-					output.accept(block);
-				});
-
-				//output.accept();
+				BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> isModernBlock(block)).forEach(block -> output.accept(block));
 			})
 			.build());
 
@@ -124,11 +120,8 @@ public class CreativeTabRegistry {
 			})
 			.build());
 
-
-
 	private static boolean isModernBlock(Block block) {
 		String blockPath = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
-		//return blockPath.contains("reinforced_concrete") || blockPath.contains("structural_glass") || blockPath.contains("steel");
 		return modernBlocks.stream().anyMatch(blockPath::contains);
 	}
 }

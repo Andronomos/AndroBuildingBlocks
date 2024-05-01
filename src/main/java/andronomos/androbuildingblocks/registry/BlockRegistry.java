@@ -229,6 +229,14 @@ public class BlockRegistry {
 	public static RegistryObject<StairBlock> ASPHALT_SHINGLES_STAIRS;
 	public static RegistryObject<SlabBlock> ASPHALT_SHINGLES_SLAB;
 
+	public static Supplier<Block> RED_ASPHALT;
+	public static RegistryObject<StairBlock> RED_ASPHALT_STAIRS;
+	public static RegistryObject<SlabBlock> RED_ASPHALT_SLAB;
+
+	public static Supplier<Block> RED_ASPHALT_SHINGLES;
+	public static RegistryObject<StairBlock> RED_ASPHALT_SHINGLES_STAIRS;
+	public static RegistryObject<SlabBlock> RED_ASPHALT_SHINGLES_SLAB;
+
 	public static void register() {
 		BLACK_REINFORCED_CONCRETE = registerBlock("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
 		BLACK_REINFORCED_CONCRETE_STAIRS = registerStairBlock("black_reinforced_concrete_stairs", BLACK_REINFORCED_CONCRETE, REINFORCED_CONCRETE_PROPERTIES);
@@ -431,8 +439,16 @@ public class BlockRegistry {
 		ASPHALT_SLAB = registerSlabBlock("asphalt_slab", GENERIC_PROPERTIES);
 
 		ASPHALT_SHINGLES = registerBlock("asphalt_shingles", () -> new AsphaltBlock(GENERIC_PROPERTIES));
-		ASPHALT_SHINGLES_STAIRS = registerStairBlock("asphalt_shingles_stairs", ASPHALT, GENERIC_PROPERTIES);
+		ASPHALT_SHINGLES_STAIRS = registerStairBlock("asphalt_shingles_stairs", ASPHALT_SHINGLES, GENERIC_PROPERTIES);
 		ASPHALT_SHINGLES_SLAB = registerSlabBlock("asphalt_shingles_slab", GENERIC_PROPERTIES);
+
+		RED_ASPHALT = registerBlock("red_asphalt", () -> new AsphaltBlock(GENERIC_PROPERTIES));
+		RED_ASPHALT_STAIRS = registerStairBlock("red_asphalt_stairs", RED_ASPHALT, GENERIC_PROPERTIES);
+		RED_ASPHALT_SLAB = registerSlabBlock("red_asphalt_slab", GENERIC_PROPERTIES);
+
+		RED_ASPHALT_SHINGLES = registerBlock("red_asphalt_shingles", () -> new AsphaltBlock(GENERIC_PROPERTIES));
+		RED_ASPHALT_SHINGLES_STAIRS = registerStairBlock("red_asphalt_shingles_stairs", RED_ASPHALT_SHINGLES, GENERIC_PROPERTIES);
+		RED_ASPHALT_SHINGLES_SLAB = registerSlabBlock("red_asphalt_shingles_slab", GENERIC_PROPERTIES);
 
 		for(DyeColor color : DyeColor.values()) {
 			registerGlassBlock(color + "_structural_glass", color);

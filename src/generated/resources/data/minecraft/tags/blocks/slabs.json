@@ -38,12 +38,12 @@
     "androbuildingblocks:basalt_brick_slab",
     "androbuildingblocks:charred_stone_slab",
     "androbuildingblocks:silt_slab",
-    "androbuildingblocks:silt_shingles_slab",
     "androbuildingblocks:black_silt_slab",
-    "androbuildingblocks:black_silt_shingles_slab",
     "androbuildingblocks:steel_slab",
     "androbuildingblocks:steel_siding_slab",
     "androbuildingblocks:asphalt_slab",
-    "androbuildingblocks:asphalt_shingles_slab"
+    "androbuildingblocks:asphalt_shingles_slab",
+    "androbuildingblocks:red_asphalt_slab",
+    "androbuildingblocks:red_asphalt_shingles_slab"
   ]
 }
