@@ -152,7 +152,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, concreteBlock, 8);
 		shaped.define('1', Tags.Items.STONE);
-		shaped.define('2', Tags.Items.INGOTS_IRON);
+		shaped.define('2', ItemRegistry.STEEL_INGOT.get());
 		shaped.define('3', Items.GRAVEL);
 		shaped.define('4', Objects.requireNonNull(dye));
 		shaped.pattern("212");
@@ -201,7 +201,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 	}
 
 	private void buildSteel(Consumer<FinishedRecipe> consumer) {
-		ShapedRecipeBuilder steelFromCoal = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ItemRegistry.STEEL_INGOT.get(), 4);
+		ShapedRecipeBuilder steelFromCoal = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ItemRegistry.STEEL_INGOT.get(), 1);
 		steelFromCoal.define('C', Items.COAL);
 		steelFromCoal.define('I', Tags.Items.INGOTS_IRON);
 		steelFromCoal.pattern("CCC");
@@ -211,7 +211,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		steelFromCoal.unlockedBy("has_item", has(Items.COAL));
 		steelFromCoal.save(consumer);
 
-		ShapedRecipeBuilder steelFromCharcoal = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ItemRegistry.STEEL_INGOT.get(), 4);
+		ShapedRecipeBuilder steelFromCharcoal = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ItemRegistry.STEEL_INGOT.get(), 1);
 		steelFromCharcoal.define('C', Items.CHARCOAL);
 		steelFromCharcoal.define('I', Tags.Items.INGOTS_IRON);
 		steelFromCharcoal.pattern("CCC");
@@ -258,6 +258,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 	private void buildVariants(Block source, boolean stairs, boolean slab, boolean wall, Consumer<FinishedRecipe> consumer) {
 		String name = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(source)).getPath();
+
+		if (name.endsWith("_block")) {
+			name = name.replace("_block", "");
+		}
 
 		Block stairBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_stairs", name)));
 		Block slabBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_slab", name)));
