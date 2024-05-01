@@ -122,7 +122,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildVariants(BlockRegistry.CHARRED_STONE.get(),true, true, true, consumer);
 
 		ShapedRecipeBuilder silt = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SILT.get(), 4);
-		silt.define('S', Items.CLAY);
+		silt.define('S', Items.CLAY_BALL);
 		silt.define('C', Items.SAND);
 		silt.pattern("SCS");
 		silt.pattern("CSC");
@@ -131,6 +131,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		silt.save(consumer);
 
 		buildVariants(BlockRegistry.SILT.get(), true, true, true, consumer);
+		buildTwoByTwo(BlockRegistry.SILT_SHINGLES.get(), BlockRegistry.SILT.get(), consumer);
+		buildVariants(BlockRegistry.SILT_SHINGLES.get(), true, true, true, consumer);
+		buildStoneCutter(BlockRegistry.SILT_SHINGLES.get(), BlockRegistry.SILT.get(), 1, consumer);
+
+		buildColoredSilt(BlockRegistry.BLACK_SILT.get(), "black", consumer);
 	}
 
 	private void buildReinforcedConcrete(Block concreteBlock, String color, Consumer<FinishedRecipe> consumer) {
@@ -162,6 +167,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 			buildVariants(tileBlock, true, true, true, consumer);
 		}
+	}
+
+	private void buildColoredSilt(Block coloredSiltBlock, String color, Consumer<FinishedRecipe> consumer) {
+		Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", color + "_dye"));
+
+		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, coloredSiltBlock, 8);
+		shaped.define('S', BlockRegistry.SILT.get());
+		shaped.define('D', Objects.requireNonNull(dye));
+		shaped.pattern("SSS");
+		shaped.pattern("SDS");
+		shaped.pattern("SSS");
+		shaped.unlockedBy("has_item", has(Objects.requireNonNull(dye)));
+		shaped.save(consumer);
+
+		buildVariants(coloredSiltBlock, true, true, true, consumer);
 	}
 
 	private void buildSanded(Block output, Block input, Consumer<FinishedRecipe> consumer) {

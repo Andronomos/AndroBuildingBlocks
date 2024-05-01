@@ -20,6 +20,7 @@ public class BlockRegistry {
 	public static Block.Properties GLASS_PANE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.GLASS_PANE);
 	public static Block.Properties DARK_PRISMARINE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.DARK_PRISMARINE);
 	public static Block.Properties BASALT_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.BASALT);
+	public static Block.Properties ClAY_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.CLAY);
 
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AndroBuildingBlocks.MODID);
 
@@ -204,6 +205,19 @@ public class BlockRegistry {
 	public static RegistryObject<WallBlock> SILT_WALL;
 	public static RegistryObject<SlabBlock> SILT_SLAB;
 
+	public static RegistryObject<Block> SILT_SHINGLES;
+	public static RegistryObject<StairBlock> SILT_SHINGLES_STAIRS;
+	public static RegistryObject<SlabBlock> SILT_SHINGLES_SLAB;
+
+	public static RegistryObject<Block> BLACK_SILT;
+	public static RegistryObject<StairBlock> BLACK_SILT_STAIRS;
+	public static RegistryObject<WallBlock> BLACK_SILT_WALL;
+	public static RegistryObject<SlabBlock> BLACK_SILT_SLAB;
+
+	public static RegistryObject<Block> BLACK_SILT_SHINGLES;
+	public static RegistryObject<StairBlock> BLACK_SILT_SHINGLES_STAIRS;
+	public static RegistryObject<SlabBlock> BLACK_SILT_SHINGLES_SLAB;
+
 	public static void register() {
 		BLACK_REINFORCED_CONCRETE = registerBlock("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
 		BLACK_REINFORCED_CONCRETE_STAIRS = registerStairBlock("black_reinforced_concrete_stairs", BLACK_REINFORCED_CONCRETE, REINFORCED_CONCRETE_PROPERTIES);
@@ -381,10 +395,23 @@ public class BlockRegistry {
 		CHARRED_STONE_WALL = registerWallBlock("charred_stone_wall", GENERIC_PROPERTIES);
 		CHARRED_STONE_SLAB = registerSlabBlock("charred_stone_slab", GENERIC_PROPERTIES);
 
-		SILT = registerBlock("silt", BlockBehaviour.Properties.copy(Blocks.DIRT));
-		SILT_STAIRS = registerStairBlock("silt_stairs", SILT, BlockBehaviour.Properties.copy(Blocks.DIRT));
-		SILT_WALL = registerWallBlock("silt_wall", BlockBehaviour.Properties.copy(Blocks.DIRT));
-		SILT_SLAB = registerSlabBlock("silt_slab", BlockBehaviour.Properties.copy(Blocks.DIRT));
+		SILT = registerBlock("silt", BlockBehaviour.Properties.copy(Blocks.CLAY));
+		SILT_STAIRS = registerStairBlock("silt_stairs", SILT, BlockBehaviour.Properties.copy(Blocks.CLAY));
+		SILT_WALL = registerWallBlock("silt_wall", BlockBehaviour.Properties.copy(Blocks.CLAY));
+		SILT_SLAB = registerSlabBlock("silt_slab", BlockBehaviour.Properties.copy(Blocks.CLAY));
+
+		SILT_SHINGLES = registerBlock("silt_shingles", BlockBehaviour.Properties.copy(Blocks.CLAY));
+		SILT_SHINGLES_STAIRS = registerStairBlock("silt_shingles_stairs", SILT_SHINGLES, ClAY_PROPERTIES);
+		SILT_SHINGLES_SLAB = registerSlabBlock("silt_shingles_slab", ClAY_PROPERTIES);
+
+		BLACK_SILT = registerBlock("black_silt", ClAY_PROPERTIES);
+		BLACK_SILT_STAIRS = registerStairBlock("black_silt_stairs", BLACK_SILT, ClAY_PROPERTIES);
+		BLACK_SILT_WALL = registerWallBlock("black_silt_wall", ClAY_PROPERTIES);
+		BLACK_SILT_SLAB = registerSlabBlock("black_silt_slab", ClAY_PROPERTIES);
+
+		BLACK_SILT_SHINGLES = registerBlock("black_silt_shingles", ClAY_PROPERTIES);
+		BLACK_SILT_SHINGLES_STAIRS = registerStairBlock("black_silt_shingles_stairs", BLACK_SILT_SHINGLES, ClAY_PROPERTIES);
+		BLACK_SILT_SHINGLES_SLAB = registerSlabBlock("black_silt_shingles_slab", ClAY_PROPERTIES);
 
 		for(DyeColor color : DyeColor.values()) {
 			registerGlassBlock(color + "_structural_glass", color);

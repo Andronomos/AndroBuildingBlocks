@@ -147,6 +147,12 @@
     "androbuildingblocks:charred_stone",
     "androbuildingblocks:charred_stone_stairs",
     "androbuildingblocks:charred_stone_slab",
-    "androbuildingblocks:charred_stone_wall"
+    "androbuildingblocks:charred_stone_wall",
+    "androbuildingblocks:silt_shingles",
+    "androbuildingblocks:silt_shingles_stairs",
+    "androbuildingblocks:silt_shingles_slab",
+    "androbuildingblocks:black_silt_shingles",
+    "androbuildingblocks:black_silt_shingles_stairs",
+    "androbuildingblocks:black_silt_shingles_slab"
   ]
 }

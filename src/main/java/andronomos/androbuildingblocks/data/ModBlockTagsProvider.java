@@ -5,6 +5,9 @@ import andronomos.androbuildingblocks.registry.BlockRegistry;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.WallBlock;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -26,15 +29,21 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
 	@Override
 	protected void addTags(HolderLookup.Provider provider) {
-		//tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.RED_REINFORCED_CONCRETE.get());
-		//tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.RED_REINFORCED_CONCRETE_STAIRS.get());
-		//tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.RED_REINFORCED_CONCRETE_SLAB.get());
-		//tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.RED_REINFORCED_CONCRETE_WALL.get());
 
-		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> {
-			return Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath().contains("concrete");
-		}).forEach(block -> {
+		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath().contains("concrete")).forEach(block -> {
 			tag(BlockTags.MINEABLE_WITH_PICKAXE).add(block);
+		});
+
+		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> block instanceof StairBlock).forEach(block -> {
+			tag(BlockTags.STAIRS).add(block);
+		});
+
+		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> block instanceof WallBlock).forEach(block -> {
+			tag(BlockTags.WALLS).add(block);
+		});
+
+		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> block instanceof SlabBlock).forEach(block -> {
+			tag(BlockTags.SLABS).add(block);
 		});
 
 		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.SANDED_ANDESITE.get());
@@ -124,8 +133,10 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
 		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.DARK_PRISMARINE_BRICKS.get());
 		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.DARK_PRISMARINE_BRICK_STAIRS.get());
+		tag(BlockTags.STAIRS).add(BlockRegistry.DARK_PRISMARINE_BRICK_STAIRS.get());
 		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.DARK_PRISMARINE_BRICK_SLAB.get());
 		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.DARK_PRISMARINE_BRICK_WALL.get());
+		tag(BlockTags.WALLS).add(BlockRegistry.DARK_PRISMARINE_BRICK_WALL.get());
 
 		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.CHARRED_STONE.get());
 		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.CHARRED_STONE_STAIRS.get());
@@ -137,17 +148,17 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 		tag(BlockTags.MINEABLE_WITH_SHOVEL).add(BlockRegistry.SILT_SLAB.get());
 		tag(BlockTags.MINEABLE_WITH_SHOVEL).add(BlockRegistry.SILT_WALL.get());
 
-		//BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
-		//	String blockType = b.getClass().getSimpleName();
-		//
-		//	switch (blockType) {
-		//		case "FenceBlock" -> {
-		//			tag(BlockTags.FENCES).add(b);
-		//			tag(BlockTags.MINEABLE_WITH_PICKAXE).add(b);
-		//		}
-		//		case "WallBlock" -> tag(BlockTags.WALLS).add(b);
-		//		default -> tag(BlockTags.MINEABLE_WITH_PICKAXE).add(b);
-		//	}
-		//});
+		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.SILT_SHINGLES.get());
+		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.SILT_SHINGLES_STAIRS.get());
+		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.SILT_SHINGLES_SLAB.get());
+
+		tag(BlockTags.MINEABLE_WITH_SHOVEL).add(BlockRegistry.BLACK_SILT.get());
+		tag(BlockTags.MINEABLE_WITH_SHOVEL).add(BlockRegistry.BLACK_SILT_STAIRS.get());
+		tag(BlockTags.MINEABLE_WITH_SHOVEL).add(BlockRegistry.BLACK_SILT_SLAB.get());
+		tag(BlockTags.MINEABLE_WITH_SHOVEL).add(BlockRegistry.BLACK_SILT_WALL.get());
+
+		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.BLACK_SILT_SHINGLES.get());
+		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.BLACK_SILT_SHINGLES_STAIRS.get());
+		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.BLACK_SILT_SHINGLES_SLAB.get());
 	}
 }

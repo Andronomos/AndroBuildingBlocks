@@ -2,21 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "C": {
-      "item": "minecraft:sand"
-    },
-    "S": {
-      "item": "minecraft:clay_ball"
+    "#": {
+      "item": "androbuildingblocks:silt_shingles"
     }
   },
   "pattern": [
-    "SCS",
-    "CSC",
-    "SCS"
+    "#  ",
+    "## ",
+    "###"
   ],
   "result": {
     "count": 4,
-    "item": "androbuildingblocks:silt"
+    "item": "androbuildingblocks:silt_shingles_stairs"
   },
   "show_notification": true
 }

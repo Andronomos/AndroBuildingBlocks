@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "D": {
+      "item": "minecraft:black_dye"
+    },
+    "S": {
+      "item": "androbuildingblocks:silt"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SDS",
+    "SSS"
+  ],
+  "result": {
+    "count": 8,
+    "item": "androbuildingblocks:black_silt"
+  },
+  "show_notification": true
+}

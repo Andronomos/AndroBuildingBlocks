@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "androbuildingblocks:block/black_silt_shingles",
+    "side": "androbuildingblocks:block/black_silt_shingles",
+    "top": "androbuildingblocks:block/black_silt_shingles"
+  }
+}
