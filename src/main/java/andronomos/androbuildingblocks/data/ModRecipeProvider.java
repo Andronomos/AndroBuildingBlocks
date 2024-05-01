@@ -207,7 +207,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		steelFromCoal.pattern("CCC");
 		steelFromCoal.pattern("CIC");
 		steelFromCoal.pattern("CCC");
-		steelFromCoal.group("steel");
+		steelFromCoal.group("steel_ingot");
 		steelFromCoal.unlockedBy("has_item", has(Items.COAL));
 		steelFromCoal.save(consumer);
 
@@ -217,16 +217,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		steelFromCharcoal.pattern("CCC");
 		steelFromCharcoal.pattern("CIC");
 		steelFromCharcoal.pattern("CCC");
-		steelFromCharcoal.group("steel");
+		steelFromCharcoal.group("steel_ingot");
 		steelFromCharcoal.unlockedBy("has_item", has(Items.CHARCOAL));
 		steelFromCharcoal.save(consumer, "steel_from_charcoal");
 
-		ShapedRecipeBuilder steelBlock = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.STEEL_BLOCK.get(), 4);
+		ShapedRecipeBuilder steelBlock = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.STEEL_BLOCK.get(), 1);
 		steelBlock.define('I', ItemRegistry.STEEL_INGOT.get());
 		steelBlock.pattern("III");
 		steelBlock.pattern("III");
 		steelBlock.pattern("III");
-		steelBlock.group("steel");
 		steelBlock.unlockedBy("has_item", has(ItemRegistry.STEEL_INGOT.get()));
 		steelBlock.save(consumer, "steel_block");
 
