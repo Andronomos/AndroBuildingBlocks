@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "1": {
+      "item": "minecraft:yellow_stained_glass"
+    },
+    "2": {
+      "item": "minecraft:slime_ball"
+    }
+  },
+  "pattern": [
+    "212",
+    "121",
+    "212"
+  ],
+  "result": {
+    "count": 4,
+    "item": "androbuildingblocks:yellow_structural_glass"
+  },
+  "show_notification": true
+}

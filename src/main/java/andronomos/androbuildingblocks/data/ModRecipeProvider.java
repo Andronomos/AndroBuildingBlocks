@@ -5,6 +5,7 @@ import andronomos.androbuildingblocks.registry.ItemRegistry;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -136,6 +137,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildStoneCutter(BlockRegistry.SILT_SHINGLES.get(), BlockRegistry.SILT.get(), 1, consumer);
 
 		buildColoredSilt(BlockRegistry.BLACK_SILT.get(), "black", consumer);
+
+		for(DyeColor color : DyeColor.values()) {
+			Block glassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, color + "_structural_glass"));
+			buildStructuralGlass(glassBlock, color.getName(), consumer);
+		}
 	}
 
 	private void buildReinforcedConcrete(Block concreteBlock, String color, Consumer<FinishedRecipe> consumer) {
@@ -190,6 +196,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		sandedRecipe.requires(input);
 		sandedRecipe.unlockedBy("has_item", has(input));
 		sandedRecipe.save(consumer);
+	}
+
+	private void buildStructuralGlass(Block block, String color, Consumer<FinishedRecipe> consumer) {
+		Block vanillaGlassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft", color + "_stained_glass"));
+
+		if(blockExists(vanillaGlassBlock)) {
+			ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, block, 4);
+			shaped.define('1', vanillaGlassBlock);
+			shaped.define('2', Items.SLIME_BALL);
+			shaped.pattern("212");
+			shaped.pattern("121");
+			shaped.pattern("212");
+			shaped.unlockedBy("has_item", has(Items.SLIME_BALL));
+			shaped.save(consumer);
+
+			String name = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
+			Block glassPaneBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, String.format("%s_pane", name)));
+
+			if(blockExists(glassPaneBlock)) {
+				buildThreeByTwo(glassPaneBlock, block, consumer);
+			}
+		}
 	}
 
 	private void buildVariants(Block source, boolean stairs, boolean slab, boolean wall, Consumer<FinishedRecipe> consumer) {
