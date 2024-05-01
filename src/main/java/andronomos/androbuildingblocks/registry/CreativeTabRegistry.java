@@ -9,10 +9,20 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 public class CreativeTabRegistry {
 	public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AndroBuildingBlocks.MODID);
+
+	private static List<String> modernBlocks = Arrays.asList(
+			"reinforced_concrete",
+			"structural_glass",
+			"steel",
+			"asphalt"
+	);
 
 	public static final RegistryObject<CreativeModeTab> ANDROBUILDINGBLOCKS_ITEMS_TAB = CREATIVE_MODE_TABS.register("androbuildingblocks_items_tab", () -> CreativeModeTab.builder()
 			.title(Component.translatable("creativetab.androbuildingblocks_items_tab"))
@@ -125,6 +135,7 @@ public class CreativeTabRegistry {
 
 	private static boolean isModernBlock(Block block) {
 		String blockPath = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
-		return blockPath.contains("reinforced_concrete") || blockPath.contains("structural_glass") || blockPath.contains("steel");
+		//return blockPath.contains("reinforced_concrete") || blockPath.contains("structural_glass") || blockPath.contains("steel");
+		return modernBlocks.stream().anyMatch(blockPath::contains);
 	}
 }

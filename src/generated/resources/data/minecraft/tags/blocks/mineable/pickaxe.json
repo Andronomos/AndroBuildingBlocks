@@ -153,6 +153,12 @@
     "androbuildingblocks:silt_shingles_slab",
     "androbuildingblocks:black_silt_shingles",
     "androbuildingblocks:black_silt_shingles_stairs",
-    "androbuildingblocks:black_silt_shingles_slab"
+    "androbuildingblocks:black_silt_shingles_slab",
+    "androbuildingblocks:asphalt",
+    "androbuildingblocks:asphalt_stairs",
+    "androbuildingblocks:asphalt_slab",
+    "androbuildingblocks:asphalt_shingles",
+    "androbuildingblocks:asphalt_shingles_stairs",
+    "androbuildingblocks:asphalt_shingles_slab"
   ]
 }

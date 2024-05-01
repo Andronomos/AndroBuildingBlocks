@@ -159,5 +159,13 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.BLACK_SILT_SHINGLES.get());
 		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.BLACK_SILT_SHINGLES_STAIRS.get());
 		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.BLACK_SILT_SHINGLES_SLAB.get());
+
+		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.ASPHALT.get());
+		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.ASPHALT_STAIRS.get());
+		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.ASPHALT_SLAB.get());
+
+		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.ASPHALT_SHINGLES.get());
+		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.ASPHALT_SHINGLES_STAIRS.get());
+		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.ASPHALT_SHINGLES_SLAB.get());
 	}
 }
