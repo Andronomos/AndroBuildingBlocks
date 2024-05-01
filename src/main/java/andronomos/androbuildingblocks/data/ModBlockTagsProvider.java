@@ -132,6 +132,11 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.CHARRED_STONE_SLAB.get());
 		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.CHARRED_STONE_WALL.get());
 
+		tag(BlockTags.MINEABLE_WITH_SHOVEL).add(BlockRegistry.SILT.get());
+		tag(BlockTags.MINEABLE_WITH_SHOVEL).add(BlockRegistry.SILT_STAIRS.get());
+		tag(BlockTags.MINEABLE_WITH_SHOVEL).add(BlockRegistry.SILT_SLAB.get());
+		tag(BlockTags.MINEABLE_WITH_SHOVEL).add(BlockRegistry.SILT_WALL.get());
+
 		//BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
 		//	String blockType = b.getClass().getSimpleName();
 		//
