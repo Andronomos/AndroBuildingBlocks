@@ -29,9 +29,10 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
 	@Override
 	protected void addTags(HolderLookup.Provider provider) {
-		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath().contains("concrete")).forEach(block -> {
-			tag(BlockTags.MINEABLE_WITH_PICKAXE).add(block);
-		});
+		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> {
+			String blockPath = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
+			return blockPath.contains("concrete") || blockPath.contains("asphalt") || blockPath.contains("steel");
+		}).forEach(block -> tag(BlockTags.MINEABLE_WITH_PICKAXE).add(block));
 
 		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> block instanceof StairBlock).forEach(block -> {
 			tag(BlockTags.STAIRS).add(block);
@@ -151,29 +152,5 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 		tag(BlockTags.MINEABLE_WITH_SHOVEL).add(BlockRegistry.BLACK_SILT_STAIRS.get());
 		tag(BlockTags.MINEABLE_WITH_SHOVEL).add(BlockRegistry.BLACK_SILT_SLAB.get());
 		tag(BlockTags.MINEABLE_WITH_SHOVEL).add(BlockRegistry.BLACK_SILT_WALL.get());
-
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.ASPHALT.get());
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.ASPHALT_STAIRS.get());
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.ASPHALT_SLAB.get());
-
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.ASPHALT_SHINGLES.get());
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.ASPHALT_SHINGLES_STAIRS.get());
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.ASPHALT_SHINGLES_SLAB.get());
-
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.RED_ASPHALT.get());
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.RED_ASPHALT_STAIRS.get());
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.RED_ASPHALT_SLAB.get());
-
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.RED_ASPHALT_SHINGLES.get());
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.RED_ASPHALT_SHINGLES_STAIRS.get());
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.RED_ASPHALT_SHINGLES_SLAB.get());
-
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.BLUE_ASPHALT.get());
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.BLUE_ASPHALT_STAIRS.get());
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.BLUE_ASPHALT_SLAB.get());
-
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.BLUE_ASPHALT_SHINGLES.get());
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.BLUE_ASPHALT_SHINGLES_STAIRS.get());
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.BLUE_ASPHALT_SHINGLES_SLAB.get());
 	}
 }
