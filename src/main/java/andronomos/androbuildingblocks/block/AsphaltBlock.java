@@ -18,6 +18,6 @@ public class AsphaltBlock extends Block {
 
 	@Override
 	public float getSpeedFactor() {
-		return 2.0F;
+		return 1.3F;
 	}
 }
