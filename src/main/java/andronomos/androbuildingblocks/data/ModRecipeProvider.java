@@ -135,7 +135,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildVariants(BlockRegistry.SILT.get(), true, true, true, consumer);
 		buildColoredSilt(BlockRegistry.BLACK_SILT.get(), "black", consumer);
 
-		buildSmelting(Blocks.CALCITE, BlockRegistry.POLISHED_MARBLE.get(), consumer);
+		buildSmelting(Blocks.CALCITE, BlockRegistry.MARBLE.get(), consumer);
 		buildTwoByTwo(BlockRegistry.POLISHED_MARBLE.get(), BlockRegistry.MARBLE.get(), consumer);
 		buildStoneCutter(BlockRegistry.POLISHED_MARBLE.get(), BlockRegistry.MARBLE.get(), 1, consumer);
 
