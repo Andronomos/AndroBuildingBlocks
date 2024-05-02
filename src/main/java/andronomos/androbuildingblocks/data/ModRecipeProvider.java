@@ -189,6 +189,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildColoredAsphalt(BlockRegistry.BLUE_ASPHALT.get(), "blue", consumer);
 		buildColoredAsphalt(BlockRegistry.GREEN_ASPHALT.get(), "green", consumer);
 		buildColoredAsphalt(BlockRegistry.GRAY_ASPHALT.get(), "gray", consumer);
+		buildColoredAsphalt(BlockRegistry.BROWN_ASPHALT.get(), "gray", consumer);
 	}
 
 	private void buildColoredSilt(Block coloredSiltBlock, String color, Consumer<FinishedRecipe> consumer) {

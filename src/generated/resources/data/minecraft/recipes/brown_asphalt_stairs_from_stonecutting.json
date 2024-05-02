@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "androbuildingblocks:brown_asphalt"
+  },
+  "result": "androbuildingblocks:brown_asphalt_stairs"
+}

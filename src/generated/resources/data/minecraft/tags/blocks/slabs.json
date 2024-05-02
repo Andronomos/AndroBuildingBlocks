@@ -50,6 +50,8 @@
     "androbuildingblocks:green_asphalt_slab",
     "androbuildingblocks:green_asphalt_shingles_slab",
     "androbuildingblocks:gray_asphalt_slab",
-    "androbuildingblocks:gray_asphalt_shingles_slab"
+    "androbuildingblocks:gray_asphalt_shingles_slab",
+    "androbuildingblocks:brown_asphalt_slab",
+    "androbuildingblocks:brown_asphalt_shingles_slab"
   ]
 }
