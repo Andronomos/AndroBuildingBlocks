@@ -9,6 +9,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.ShapelessRecipe;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
@@ -140,6 +141,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		}
 
 		buildSteel(consumer);
+		buildAsphalt(consumer);
 	}
 
 	private void buildReinforcedConcrete(Block concreteBlock, String color, Consumer<FinishedRecipe> consumer) {
@@ -173,6 +175,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		}
 	}
 
+	private void buildAsphalt(Consumer<FinishedRecipe> consumer) {
+		ShapelessRecipeBuilder asphalt = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.ASPHALT.get(), 1);
+		asphalt.requires(Items.STONE);
+		asphalt.requires(Items.SAND);
+		asphalt.requires(Items.GRAVEL);
+		asphalt.requires(Items.COAL);
+		asphalt.unlockedBy("has_item", has(Items.COAL));
+		asphalt.save(consumer);
+		buildVariants(BlockRegistry.ASPHALT.get(), true, true, true, consumer);
+	}
+
 	private void buildColoredSilt(Block coloredSiltBlock, String color, Consumer<FinishedRecipe> consumer) {
 		Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", color + "_dye"));
 
@@ -186,6 +199,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		shaped.save(consumer);
 
 		buildVariants(coloredSiltBlock, true, true, true, consumer);
+	}
+
+	private void buildColoredAsphalt(Block coloredAsphaltBlock, String color, Consumer<FinishedRecipe> consumer) {
+		Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", color + "_dye"));
+
+		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, coloredAsphaltBlock, 8);
+		shaped.define('A', BlockRegistry.ASPHALT.get());
+		shaped.define('D', Objects.requireNonNull(dye));
+		shaped.pattern("AAA");
+		shaped.pattern("ADA");
+		shaped.pattern("AAA");
+		shaped.unlockedBy("has_item", has(Objects.requireNonNull(dye)));
+		shaped.save(consumer);
+
+		buildVariants(coloredAsphaltBlock, true, true, true, consumer);
 	}
 
 	private void buildSanded(Block output, Block input, Consumer<FinishedRecipe> consumer) {
