@@ -44,6 +44,8 @@
     "androbuildingblocks:asphalt_slab",
     "androbuildingblocks:asphalt_shingles_slab",
     "androbuildingblocks:red_asphalt_slab",
-    "androbuildingblocks:red_asphalt_shingles_slab"
+    "androbuildingblocks:red_asphalt_shingles_slab",
+    "androbuildingblocks:blue_asphalt_slab",
+    "androbuildingblocks:blue_asphalt_shingles_slab"
   ]
 }
