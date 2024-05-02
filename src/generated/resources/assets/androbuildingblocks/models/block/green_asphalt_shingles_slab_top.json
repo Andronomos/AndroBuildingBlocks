@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "androbuildingblocks:block/green_asphalt_shingles",
+    "side": "androbuildingblocks:block/green_asphalt_shingles",
+    "top": "androbuildingblocks:block/green_asphalt_shingles"
+  }
+}

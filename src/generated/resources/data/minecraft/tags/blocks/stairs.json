@@ -47,6 +47,10 @@
     "androbuildingblocks:red_asphalt_shingles_stairs",
     "androbuildingblocks:blue_asphalt_stairs",
     "androbuildingblocks:blue_asphalt_shingles_stairs",
+    "androbuildingblocks:green_asphalt_stairs",
+    "androbuildingblocks:green_asphalt_shingles_stairs",
+    "androbuildingblocks:gray_asphalt_stairs",
+    "androbuildingblocks:gray_asphalt_shingles_stairs",
     "androbuildingblocks:dark_prismarine_brick_stairs"
   ]
 }
