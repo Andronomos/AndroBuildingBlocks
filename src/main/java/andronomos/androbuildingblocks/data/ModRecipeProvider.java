@@ -135,6 +135,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildVariants(BlockRegistry.SILT.get(), true, true, true, consumer);
 		buildColoredSilt(BlockRegistry.BLACK_SILT.get(), "black", consumer);
 
+		buildSmelting(Blocks.CALCITE, BlockRegistry.POLISHED_MARBLE.get(), consumer);
+		buildTwoByTwo(BlockRegistry.POLISHED_MARBLE.get(), BlockRegistry.MARBLE.get(), consumer);
+		buildStoneCutter(BlockRegistry.POLISHED_MARBLE.get(), BlockRegistry.MARBLE.get(), 1, consumer);
+
 		for(DyeColor color : DyeColor.values()) {
 			Block glassBlock = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(MODID, color + "_structural_glass"));
 			buildStructuralGlass(glassBlock, color.getName(), consumer);
@@ -357,10 +361,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 	}
 
 	private void buildSmelting(Block input, Block output, Consumer<FinishedRecipe> consumer) {
+		String blockName = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(output)).getPath();
 		SimpleCookingRecipeBuilder cooking = SimpleCookingRecipeBuilder.smelting(Ingredient.of(input),
 				RecipeCategory.BUILDING_BLOCKS,	output, 0.1F, 200);
 		cooking.unlockedBy("has_item", has(input));
-		cooking.save(consumer);
+		cooking.save(consumer, blockName + "_from_smelting");
 	}
 
 	private boolean blockExists(Block block) {

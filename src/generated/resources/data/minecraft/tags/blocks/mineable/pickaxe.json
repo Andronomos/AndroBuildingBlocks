@@ -191,6 +191,14 @@
     "androbuildingblocks:charred_stone",
     "androbuildingblocks:charred_stone_stairs",
     "androbuildingblocks:charred_stone_slab",
-    "androbuildingblocks:charred_stone_wall"
+    "androbuildingblocks:charred_stone_wall",
+    "androbuildingblocks:marble",
+    "androbuildingblocks:marble_stairs",
+    "androbuildingblocks:marble_slab",
+    "androbuildingblocks:marble_wall",
+    "androbuildingblocks:polished_marble",
+    "androbuildingblocks:polished_marble_stairs",
+    "androbuildingblocks:polished_marble_slab",
+    "androbuildingblocks:polished_marble_wall"
   ]
 }

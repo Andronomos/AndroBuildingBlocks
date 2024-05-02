@@ -269,6 +269,16 @@ public class BlockRegistry {
 	public static RegistryObject<StairBlock> BROWN_ASPHALT_SHINGLES_STAIRS;
 	public static RegistryObject<SlabBlock> BROWN_ASPHALT_SHINGLES_SLAB;
 
+	public static Supplier<Block> MARBLE;
+	public static RegistryObject<StairBlock> MARBLE_STAIRS;
+	public static RegistryObject<SlabBlock> MARBLE_SLAB;
+	public static RegistryObject<WallBlock> MARBLE_WALL;
+
+	public static Supplier<Block> POLISHED_MARBLE;
+	public static RegistryObject<StairBlock> POLISHED_MARBLE_STAIRS;
+	public static RegistryObject<SlabBlock> POLISHED_MARBLE_SLAB;
+	public static RegistryObject<WallBlock> POLISHED_MARBLE_WALL;
+
 	public static void register() {
 		BLACK_REINFORCED_CONCRETE = registerBlock("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
 		BLACK_REINFORCED_CONCRETE_STAIRS = registerStairBlock("black_reinforced_concrete_stairs", BLACK_REINFORCED_CONCRETE, REINFORCED_CONCRETE_PROPERTIES);
@@ -513,6 +523,16 @@ public class BlockRegistry {
 		BROWN_ASPHALT_SHINGLES = registerBlock("brown_asphalt_shingles", () -> new AsphaltBlock(GENERIC_PROPERTIES));
 		BROWN_ASPHALT_SHINGLES_STAIRS = registerStairBlock("brown_asphalt_shingles_stairs", RED_ASPHALT_SHINGLES, GENERIC_PROPERTIES);
 		BROWN_ASPHALT_SHINGLES_SLAB = registerSlabBlock("brown_asphalt_shingles_slab", GENERIC_PROPERTIES);
+
+		MARBLE = registerBlock("marble", () -> new Block(GENERIC_PROPERTIES));
+		MARBLE_STAIRS = registerStairBlock("marble_stairs", MARBLE, GENERIC_PROPERTIES);
+		MARBLE_SLAB = registerSlabBlock("marble_slab", GENERIC_PROPERTIES);
+		MARBLE_WALL = registerWallBlock("marble_wall", GENERIC_PROPERTIES);
+
+		POLISHED_MARBLE = registerBlock("polished_marble", () -> new Block(GENERIC_PROPERTIES));
+		POLISHED_MARBLE_STAIRS = registerStairBlock("polished_marble_stairs", POLISHED_MARBLE, GENERIC_PROPERTIES);
+		POLISHED_MARBLE_SLAB = registerSlabBlock("polished_marble_slab", GENERIC_PROPERTIES);
+		POLISHED_MARBLE_WALL = registerWallBlock("polished_marble_wall", GENERIC_PROPERTIES);
 
 		for(DyeColor color : DyeColor.values()) {
 			registerGlassBlock(color + "_structural_glass", color);

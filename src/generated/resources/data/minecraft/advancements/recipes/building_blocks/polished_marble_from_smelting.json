@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "minecraft:stone"
+              "minecraft:calcite"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "androbuildingblocks:charred_stone"
+        "recipe": "minecraft:polished_marble_from_smelting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "androbuildingblocks:charred_stone"
+      "minecraft:polished_marble_from_smelting"
     ]
   },
   "sends_telemetry_event": false

@@ -152,5 +152,15 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 		tag(BlockTags.MINEABLE_WITH_SHOVEL).add(BlockRegistry.BLACK_SILT_STAIRS.get());
 		tag(BlockTags.MINEABLE_WITH_SHOVEL).add(BlockRegistry.BLACK_SILT_SLAB.get());
 		tag(BlockTags.MINEABLE_WITH_SHOVEL).add(BlockRegistry.BLACK_SILT_WALL.get());
+
+		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.MARBLE.get());
+		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.MARBLE_STAIRS.get());
+		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.MARBLE_SLAB.get());
+		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.MARBLE_WALL.get());
+
+		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.POLISHED_MARBLE.get());
+		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.POLISHED_MARBLE_STAIRS.get());
+		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.POLISHED_MARBLE_SLAB.get());
+		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.POLISHED_MARBLE_WALL.get());
 	}
 }

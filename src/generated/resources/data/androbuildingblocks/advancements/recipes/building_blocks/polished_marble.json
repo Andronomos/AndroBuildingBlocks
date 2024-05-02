@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "minecraft:brown_dye"
+              "androbuildingblocks:marble"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "androbuildingblocks:brown_asphalt"
+        "recipe": "androbuildingblocks:polished_marble"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "androbuildingblocks:brown_asphalt"
+      "androbuildingblocks:polished_marble"
     ]
   },
   "sends_telemetry_event": false
