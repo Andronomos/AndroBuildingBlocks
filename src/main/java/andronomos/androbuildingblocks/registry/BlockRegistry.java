@@ -401,10 +401,10 @@ public class BlockRegistry {
 		SANDED_PACKED_MUD_WALL = registerWallBlock("sanded_packed_mud_wall", BlockBehaviour.Properties.copy(Blocks.PACKED_MUD));
 		SANDED_PACKED_MUD_SLAB = registerSlabBlock("sanded_packed_mud_slab", BlockBehaviour.Properties.copy(Blocks.PACKED_MUD));
 
-		SANDED_CALCITE = registerBlock("sanded_calcite", BlockBehaviour.Properties.copy(Blocks.PACKED_MUD));
-		SANDED_CALCITE_STAIRS = registerStairBlock("sanded_calcite_stairs", SANDED_CALCITE, BlockBehaviour.Properties.copy(Blocks.PACKED_MUD));
-		SANDED_CALCITE_WALL = registerWallBlock("sanded_calcite_wall", BlockBehaviour.Properties.copy(Blocks.PACKED_MUD));
-		SANDED_CALCITE_SLAB = registerSlabBlock("sanded_calcite_slab", BlockBehaviour.Properties.copy(Blocks.PACKED_MUD));
+		SANDED_CALCITE = registerBlock("sanded_calcite", BlockBehaviour.Properties.copy(Blocks.CALCITE));
+		SANDED_CALCITE_STAIRS = registerStairBlock("sanded_calcite_stairs", SANDED_CALCITE, BlockBehaviour.Properties.copy(Blocks.CALCITE));
+		SANDED_CALCITE_WALL = registerWallBlock("sanded_calcite_wall", BlockBehaviour.Properties.copy(Blocks.CALCITE));
+		SANDED_CALCITE_SLAB = registerSlabBlock("sanded_calcite_slab", BlockBehaviour.Properties.copy(Blocks.CALCITE));
 
 		SANDED_STONE = registerBlock("sanded_stone", GENERIC_PROPERTIES);
 		SANDED_STONE_STAIRS = registerStairBlock("sanded_stone_stairs", SANDED_STONE, GENERIC_PROPERTIES);
