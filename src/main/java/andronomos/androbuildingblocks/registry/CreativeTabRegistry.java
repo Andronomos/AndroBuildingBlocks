@@ -121,6 +121,8 @@ public class CreativeTabRegistry {
 				output.accept(BlockRegistry.POLISHED_MARBLE_STAIRS.get());
 				output.accept(BlockRegistry.POLISHED_MARBLE_WALL.get());
 				output.accept(BlockRegistry.POLISHED_MARBLE_SLAB.get());
+				output.accept(BlockRegistry.TEXTURE_TEST_ONE.get());
+				output.accept(BlockRegistry.TEXTURE_TEST_TWO.get());
 			})
 			.build());
 

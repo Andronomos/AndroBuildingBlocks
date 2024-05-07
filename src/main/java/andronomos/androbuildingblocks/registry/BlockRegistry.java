@@ -279,6 +279,9 @@ public class BlockRegistry {
 	public static RegistryObject<SlabBlock> POLISHED_MARBLE_SLAB;
 	public static RegistryObject<WallBlock> POLISHED_MARBLE_WALL;
 
+	public static Supplier<Block> TEXTURE_TEST_ONE;
+	public static Supplier<Block> TEXTURE_TEST_TWO;
+
 	public static void register() {
 		BLACK_REINFORCED_CONCRETE = registerBlock("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
 		BLACK_REINFORCED_CONCRETE_STAIRS = registerStairBlock("black_reinforced_concrete_stairs", BLACK_REINFORCED_CONCRETE, REINFORCED_CONCRETE_PROPERTIES);
@@ -533,6 +536,9 @@ public class BlockRegistry {
 		POLISHED_MARBLE_STAIRS = registerStairBlock("polished_marble_stairs", POLISHED_MARBLE, GENERIC_PROPERTIES);
 		POLISHED_MARBLE_SLAB = registerSlabBlock("polished_marble_slab", GENERIC_PROPERTIES);
 		POLISHED_MARBLE_WALL = registerWallBlock("polished_marble_wall", GENERIC_PROPERTIES);
+
+		TEXTURE_TEST_ONE = registerBlock("texture_test_one", () -> new Block(GENERIC_PROPERTIES));
+		TEXTURE_TEST_TWO = registerBlock("texture_test_two", () -> new Block(GENERIC_PROPERTIES));
 
 		for(DyeColor color : DyeColor.values()) {
 			registerGlassBlock(color + "_structural_glass", color);
