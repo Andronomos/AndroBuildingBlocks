@@ -27,27 +27,28 @@ public class ModBlockStateProvider extends BlockStateProvider {
 			String className = block.getClass().getSimpleName();
 
 			switch (className) {
-				case "StairBlock" -> registerStairsBlock(block, blockPath);
-				case "SlabBlock" -> registerSlabBlock(block, blockPath);
-				case "WallBlock" -> registerWallBlock(block, blockPath);
-				case "FenceBlock" -> registerFenceBlock(block, blockPath);
-				case "StainedGlassBlock" -> registerSimpleBlock(block, blockPath, true);
-				case "StainedGlassPaneBlock", "IronBarsBlock" -> registerPaneBlock(block, blockPath);
-				default -> registerSimpleBlock(block, blockPath, false);
+				case "StairBlock" -> stairs(block, blockPath);
+				case "SlabBlock" -> slab(block, blockPath);
+				case "WallBlock" -> wall(block, blockPath);
+				case "FenceBlock" -> fenceBlock(block, blockPath);
+				case "RotatedPillarBlock" -> rotatableBlock(block, blockPath);
+				case "StainedGlassBlock" -> simpleBlock(block, blockPath, true);
+				case "StainedGlassPaneBlock", "IronBarsBlock" -> pane(block, blockPath);
+				default -> simpleBlock(block, blockPath, false);
 			}
 		});
 	}
 
-	private void registerSimpleBlock(Block block, String path, boolean isTranslucent) {
+	private void simpleBlock(Block block, String path, boolean isTranslucent) {
 		ModelFile model = models().cubeAll(path, modLoc("block/" + path));
 		if(isTranslucent) {
 			model = models().cubeAll(path, modLoc("block/" + path)).renderType("translucent");
 		}
 		simpleBlock(block, model);
-		registerItemModel(path);
+		itemModel(path);
 	}
 
-	private void registerFenceBlock(Block block, String path) {
+	private void fenceBlock(Block block, String path) {
 		String parent = path.replace("_fence", "");
 		parent = getProperParentName(parent);
 		ResourceLocation txt = modLoc("block/" + parent);
@@ -55,7 +56,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		itemModels().fenceInventory(path, txt);
 	}
 
-	private void registerTrapDoorBlockStateAndModel(Block block, String path) {
+	private void trapDoor(Block block, String path) {
 		String parent = path.replace("_trapdoor", "");
 		parent = getProperParentName(parent);
 		ResourceLocation txt = modLoc("block/" + parent);
@@ -63,22 +64,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		itemModels().trapdoorTop(path, txt);
 	}
 
-	public void registerStairsBlock(Block block, String path) {
+	public void stairs(Block block, String path) {
 		String parent = path.replace("_stairs", "");
 		parent = getProperParentName(parent);
 		stairsBlock((StairBlock) block, modLoc("block/" + parent));
-		registerItemModel(path);
+		itemModel(path);
 	}
 
-	public void registerSlabBlock(Block slab, String path) {
+	public void slab(Block slab, String path) {
 		String parent = path.replace("_slab", "");
 		parent = getProperParentName(parent);
 		ResourceLocation txt = modLoc("block/" + parent);
 		slabBlock((SlabBlock) slab, txt, txt);
-		registerItemModel(path);
+		itemModel(path);
 	}
 
-	private void registerWallBlock(Block block, String path) {
+	private void wall(Block block, String path) {
 		String parent = path.replace("_wall", "");
 		parent = getProperParentName(parent);
 		ResourceLocation txt = modLoc("block/" + parent);
@@ -86,14 +87,48 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		itemModels().wallInventory(path, txt);
 	}
 
-	private void registerPaneBlock(Block block, String path) {
+	private void pane(Block block, String path) {
 		String parent = path.replace("_pane", "");
 		String textureName = String.format("block/%s", parent);
 		paneBlockWithRenderType((IronBarsBlock)block, modLoc(textureName), modLoc(textureName),"translucent");
 		itemModels().singleTexture(path, mcLoc("item/generated"), "layer0", modLoc(textureName)).renderType("translucent");
 	}
 
-	private void registerItemModel(String name) {
+	private void rotatableBlock(Block block, String path) {
+		ResourceLocation side = modLoc("block/" + path);
+		ResourceLocation end = modLoc("block/" + path + "_top");
+
+		ModelFile model = models().cubeColumn(path, side, end);
+
+		getVariantBuilder(block).forAllStatesExcept(state -> {
+			Direction.Axis axis = state.getValue(RotatedPillarBlock.AXIS);
+
+			int yRot = 0;
+			int xRot = 0;
+
+			switch (axis) {
+				case X:
+					xRot = 90;
+					yRot = 90;
+					break;
+				case Y:
+					break;
+				case Z:
+					xRot = 90;
+					break;
+			}
+
+			return ConfiguredModel.builder()
+					.modelFile(model)
+					.rotationX(xRot)
+					.rotationY(yRot)
+					.build();
+		});
+
+		itemModel(path);
+	}
+
+	private void itemModel(String name) {
 		itemModels().withExistingParent(name, modLoc("block/" + name));
 	}
 
