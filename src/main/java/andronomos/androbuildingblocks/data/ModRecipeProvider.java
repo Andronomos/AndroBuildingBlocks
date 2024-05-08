@@ -120,9 +120,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildStoneCutter(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), Blocks.DARK_PRISMARINE, 1, consumer);
 		buildVariants(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), true, true, true, consumer);
 
-		buildSmelting(Blocks.STONE, BlockRegistry.CHARRED_STONE.get(), consumer);
-		buildVariants(BlockRegistry.CHARRED_STONE.get(),true, true, true, consumer);
-
 		buildSmelting(Blocks.CALCITE, BlockRegistry.MARBLE.get(), consumer);
 		buildTwoByTwo(BlockRegistry.POLISHED_MARBLE.get(), BlockRegistry.MARBLE.get(), consumer);
 		buildStoneCutter(BlockRegistry.POLISHED_MARBLE.get(), BlockRegistry.MARBLE.get(), 1, consumer);

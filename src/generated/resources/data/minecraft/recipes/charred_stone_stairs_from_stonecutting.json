@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "androbuildingblocks:charred_stone"
-  },
-  "result": "androbuildingblocks:charred_stone_stairs"
-}

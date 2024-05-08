@@ -196,11 +196,6 @@ public class BlockRegistry {
 	public static RegistryObject<WallBlock> BASALT_BRICK_WALL;
 	public static RegistryObject<SlabBlock> BASALT_BRICK_SLAB;
 
-	public static RegistryObject<Block> CHARRED_STONE;
-	public static RegistryObject<StairBlock> CHARRED_STONE_STAIRS;
-	public static RegistryObject<WallBlock> CHARRED_STONE_WALL;
-	public static RegistryObject<SlabBlock> CHARRED_STONE_SLAB;
-
 	public static RegistryObject<Block> STEEL_BLOCK;
 	public static RegistryObject<StairBlock> STEEL_STAIRS;
 	public static RegistryObject<WallBlock> STEEL_WALL;
@@ -445,11 +440,6 @@ public class BlockRegistry {
 		BASALT_BRICK_STAIRS = registerStairBlock("basalt_brick_stairs", BASALT_BRICKS, BASALT_PROPERTIES);
 		BASALT_BRICK_WALL = registerWallBlock("basalt_brick_wall", BASALT_PROPERTIES);
 		BASALT_BRICK_SLAB = registerSlabBlock("basalt_brick_slab", BASALT_PROPERTIES);
-
-		CHARRED_STONE = registerBlock("charred_stone", GENERIC_PROPERTIES);
-		CHARRED_STONE_STAIRS = registerStairBlock("charred_stone_stairs", CHARRED_STONE, GENERIC_PROPERTIES);
-		CHARRED_STONE_WALL = registerWallBlock("charred_stone_wall", GENERIC_PROPERTIES);
-		CHARRED_STONE_SLAB = registerSlabBlock("charred_stone_slab", GENERIC_PROPERTIES);
 
 		STEEL_BLOCK = registerBlock("steel_block", METAL_PROPERTIES);
 		STEEL_STAIRS = registerStairBlock("steel_stairs", STEEL_BLOCK, METAL_PROPERTIES);

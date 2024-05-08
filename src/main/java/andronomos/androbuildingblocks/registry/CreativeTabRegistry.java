@@ -45,10 +45,6 @@ public class CreativeTabRegistry {
 			.icon(BlockRegistry.MOSSY_COBBLED_DEEPLSATE.get().asItem()::getDefaultInstance)
 			.displayItems((parameters, output) -> {
 				//BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> output.accept(b));
-				output.accept(BlockRegistry.CHARRED_STONE.get());
-				output.accept(BlockRegistry.CHARRED_STONE_STAIRS.get());
-				output.accept(BlockRegistry.CHARRED_STONE_SLAB.get());
-				output.accept(BlockRegistry.CHARRED_STONE_WALL.get());
 				output.accept(BlockRegistry.BASALT_BRICKS.get());
 				output.accept(BlockRegistry.BASALT_BRICK_STAIRS.get());
 				output.accept(BlockRegistry.BASALT_BRICK_SLAB.get());

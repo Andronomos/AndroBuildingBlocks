@@ -138,11 +138,6 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.DARK_PRISMARINE_BRICK_WALL.get());
 		tag(BlockTags.WALLS).add(BlockRegistry.DARK_PRISMARINE_BRICK_WALL.get());
 
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.CHARRED_STONE.get());
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.CHARRED_STONE_STAIRS.get());
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.CHARRED_STONE_SLAB.get());
-		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.CHARRED_STONE_WALL.get());
-
 		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.MARBLE.get());
 		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.MARBLE_STAIRS.get());
 		tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.MARBLE_SLAB.get());
