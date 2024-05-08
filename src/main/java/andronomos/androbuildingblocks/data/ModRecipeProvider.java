@@ -173,27 +173,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		asphalt.unlockedBy("has_item", has(Items.COAL));
 		asphalt.save(consumer);
 		buildVariants(BlockRegistry.ASPHALT.get(), true, true, true, consumer);
-
-		buildColoredAsphalt(BlockRegistry.RED_ASPHALT.get(), "red", consumer);
-		buildColoredAsphalt(BlockRegistry.BLUE_ASPHALT.get(), "blue", consumer);
-		buildColoredAsphalt(BlockRegistry.GREEN_ASPHALT.get(), "green", consumer);
-		buildColoredAsphalt(BlockRegistry.GRAY_ASPHALT.get(), "gray", consumer);
-		buildColoredAsphalt(BlockRegistry.BROWN_ASPHALT.get(), "brown", consumer);
-	}
-
-	private void buildColoredAsphalt(Block coloredAsphaltBlock, String color, Consumer<FinishedRecipe> consumer) {
-		Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", color + "_dye"));
-
-		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, coloredAsphaltBlock, 8);
-		shaped.define('A', BlockRegistry.ASPHALT.get());
-		shaped.define('D', Objects.requireNonNull(dye));
-		shaped.pattern("AAA");
-		shaped.pattern("ADA");
-		shaped.pattern("AAA");
-		shaped.unlockedBy("has_item", has(Objects.requireNonNull(dye)));
-		shaped.save(consumer);
-
-		buildVariants(coloredAsphaltBlock, true, true, true, consumer);
 	}
 
 	private void buildSanded(Block output, Block input, Consumer<FinishedRecipe> consumer) {

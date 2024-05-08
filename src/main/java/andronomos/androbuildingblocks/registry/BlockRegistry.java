@@ -214,46 +214,6 @@ public class BlockRegistry {
 	public static RegistryObject<StairBlock> ASPHALT_SHINGLES_STAIRS;
 	public static RegistryObject<SlabBlock> ASPHALT_SHINGLES_SLAB;
 
-	public static Supplier<Block> RED_ASPHALT;
-	public static RegistryObject<StairBlock> RED_ASPHALT_STAIRS;
-	public static RegistryObject<SlabBlock> RED_ASPHALT_SLAB;
-
-	public static Supplier<Block> RED_ASPHALT_SHINGLES;
-	public static RegistryObject<StairBlock> RED_ASPHALT_SHINGLES_STAIRS;
-	public static RegistryObject<SlabBlock> RED_ASPHALT_SHINGLES_SLAB;
-
-	public static Supplier<Block> BLUE_ASPHALT;
-	public static RegistryObject<StairBlock> BLUE_ASPHALT_STAIRS;
-	public static RegistryObject<SlabBlock> BLUE_ASPHALT_SLAB;
-
-	public static Supplier<Block> BLUE_ASPHALT_SHINGLES;
-	public static RegistryObject<StairBlock> BLUE_ASPHALT_SHINGLES_STAIRS;
-	public static RegistryObject<SlabBlock> BLUE_ASPHALT_SHINGLES_SLAB;
-
-	public static Supplier<Block> GREEN_ASPHALT;
-	public static RegistryObject<StairBlock> GREEN_ASPHALT_STAIRS;
-	public static RegistryObject<SlabBlock> GREEN_ASPHALT_SLAB;
-
-	public static Supplier<Block> GREEN_ASPHALT_SHINGLES;
-	public static RegistryObject<StairBlock> GREEN_ASPHALT_SHINGLES_STAIRS;
-	public static RegistryObject<SlabBlock> GREEN_ASPHALT_SHINGLES_SLAB;
-
-	public static Supplier<Block> GRAY_ASPHALT;
-	public static RegistryObject<StairBlock> GRAY_ASPHALT_STAIRS;
-	public static RegistryObject<SlabBlock> GRAY_ASPHALT_SLAB;
-
-	public static Supplier<Block> GRAY_ASPHALT_SHINGLES;
-	public static RegistryObject<StairBlock> GRAY_ASPHALT_SHINGLES_STAIRS;
-	public static RegistryObject<SlabBlock> GRAY_ASPHALT_SHINGLES_SLAB;
-
-	public static Supplier<Block> BROWN_ASPHALT;
-	public static RegistryObject<StairBlock> BROWN_ASPHALT_STAIRS;
-	public static RegistryObject<SlabBlock> BROWN_ASPHALT_SLAB;
-
-	public static Supplier<Block> BROWN_ASPHALT_SHINGLES;
-	public static RegistryObject<StairBlock> BROWN_ASPHALT_SHINGLES_STAIRS;
-	public static RegistryObject<SlabBlock> BROWN_ASPHALT_SHINGLES_SLAB;
-
 	public static Supplier<Block> MARBLE;
 	public static RegistryObject<StairBlock> MARBLE_STAIRS;
 	public static RegistryObject<SlabBlock> MARBLE_SLAB;
@@ -458,46 +418,6 @@ public class BlockRegistry {
 		ASPHALT_SHINGLES = registerBlock("asphalt_shingles", () -> new AsphaltBlock(GENERIC_PROPERTIES));
 		ASPHALT_SHINGLES_STAIRS = registerStairBlock("asphalt_shingles_stairs", ASPHALT_SHINGLES, GENERIC_PROPERTIES);
 		ASPHALT_SHINGLES_SLAB = registerSlabBlock("asphalt_shingles_slab", GENERIC_PROPERTIES);
-
-		RED_ASPHALT = registerBlock("red_asphalt", () -> new AsphaltBlock(GENERIC_PROPERTIES));
-		RED_ASPHALT_STAIRS = registerStairBlock("red_asphalt_stairs", RED_ASPHALT, GENERIC_PROPERTIES);
-		RED_ASPHALT_SLAB = registerSlabBlock("red_asphalt_slab", GENERIC_PROPERTIES);
-
-		RED_ASPHALT_SHINGLES = registerBlock("red_asphalt_shingles", () -> new AsphaltBlock(GENERIC_PROPERTIES));
-		RED_ASPHALT_SHINGLES_STAIRS = registerStairBlock("red_asphalt_shingles_stairs", RED_ASPHALT_SHINGLES, GENERIC_PROPERTIES);
-		RED_ASPHALT_SHINGLES_SLAB = registerSlabBlock("red_asphalt_shingles_slab", GENERIC_PROPERTIES);
-
-		BLUE_ASPHALT = registerBlock("blue_asphalt", () -> new AsphaltBlock(GENERIC_PROPERTIES));
-		BLUE_ASPHALT_STAIRS = registerStairBlock("blue_asphalt_stairs", RED_ASPHALT, GENERIC_PROPERTIES);
-		BLUE_ASPHALT_SLAB = registerSlabBlock("blue_asphalt_slab", GENERIC_PROPERTIES);
-
-		BLUE_ASPHALT_SHINGLES = registerBlock("blue_asphalt_shingles", () -> new AsphaltBlock(GENERIC_PROPERTIES));
-		BLUE_ASPHALT_SHINGLES_STAIRS = registerStairBlock("blue_asphalt_shingles_stairs", RED_ASPHALT_SHINGLES, GENERIC_PROPERTIES);
-		BLUE_ASPHALT_SHINGLES_SLAB = registerSlabBlock("blue_asphalt_shingles_slab", GENERIC_PROPERTIES);
-
-		GREEN_ASPHALT = registerBlock("green_asphalt", () -> new AsphaltBlock(GENERIC_PROPERTIES));
-		GREEN_ASPHALT_STAIRS = registerStairBlock("green_asphalt_stairs", RED_ASPHALT, GENERIC_PROPERTIES);
-		GREEN_ASPHALT_SLAB = registerSlabBlock("green_asphalt_slab", GENERIC_PROPERTIES);
-
-		GREEN_ASPHALT_SHINGLES = registerBlock("green_asphalt_shingles", () -> new AsphaltBlock(GENERIC_PROPERTIES));
-		GREEN_ASPHALT_SHINGLES_STAIRS = registerStairBlock("green_asphalt_shingles_stairs", RED_ASPHALT_SHINGLES, GENERIC_PROPERTIES);
-		GREEN_ASPHALT_SHINGLES_SLAB = registerSlabBlock("green_asphalt_shingles_slab", GENERIC_PROPERTIES);
-
-		GRAY_ASPHALT = registerBlock("gray_asphalt", () -> new AsphaltBlock(GENERIC_PROPERTIES));
-		GRAY_ASPHALT_STAIRS = registerStairBlock("gray_asphalt_stairs", RED_ASPHALT, GENERIC_PROPERTIES);
-		GRAY_ASPHALT_SLAB = registerSlabBlock("gray_asphalt_slab", GENERIC_PROPERTIES);
-
-		GRAY_ASPHALT_SHINGLES = registerBlock("gray_asphalt_shingles", () -> new AsphaltBlock(GENERIC_PROPERTIES));
-		GRAY_ASPHALT_SHINGLES_STAIRS = registerStairBlock("gray_asphalt_shingles_stairs", RED_ASPHALT_SHINGLES, GENERIC_PROPERTIES);
-		GRAY_ASPHALT_SHINGLES_SLAB = registerSlabBlock("gray_asphalt_shingles_slab", GENERIC_PROPERTIES);
-
-		BROWN_ASPHALT = registerBlock("brown_asphalt", () -> new AsphaltBlock(GENERIC_PROPERTIES));
-		BROWN_ASPHALT_STAIRS = registerStairBlock("brown_asphalt_stairs", RED_ASPHALT, GENERIC_PROPERTIES);
-		BROWN_ASPHALT_SLAB = registerSlabBlock("brown_asphalt_slab", GENERIC_PROPERTIES);
-
-		BROWN_ASPHALT_SHINGLES = registerBlock("brown_asphalt_shingles", () -> new AsphaltBlock(GENERIC_PROPERTIES));
-		BROWN_ASPHALT_SHINGLES_STAIRS = registerStairBlock("brown_asphalt_shingles_stairs", RED_ASPHALT_SHINGLES, GENERIC_PROPERTIES);
-		BROWN_ASPHALT_SHINGLES_SLAB = registerSlabBlock("brown_asphalt_shingles_slab", GENERIC_PROPERTIES);
 
 		MARBLE = registerBlock("marble", () -> new Block(GENERIC_PROPERTIES));
 		MARBLE_STAIRS = registerStairBlock("marble_stairs", MARBLE, GENERIC_PROPERTIES);
