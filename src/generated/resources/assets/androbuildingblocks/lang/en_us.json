@@ -1,8 +1,5 @@
 {
   "block.androbuildingblocks.asphalt": "Asphalt",
-  "block.androbuildingblocks.asphalt_shingles": "Asphalt Shingles",
-  "block.androbuildingblocks.asphalt_shingles_slab": "Asphalt Shingles Slab",
-  "block.androbuildingblocks.asphalt_shingles_stairs": "Asphalt Shingles Stairs",
   "block.androbuildingblocks.asphalt_slab": "Asphalt Slab",
   "block.androbuildingblocks.asphalt_stairs": "Asphalt Stairs",
   "block.androbuildingblocks.basalt_brick_slab": "Basalt Brick Slab",
@@ -179,6 +176,7 @@
   "block.androbuildingblocks.sanded_tuff_stairs": "Sanded Tuff Stairs",
   "block.androbuildingblocks.sanded_tuff_wall": "Sanded Tuff Wall",
   "block.androbuildingblocks.steel_block": "Steel Block",
+  "block.androbuildingblocks.steel_pillar": "Steel Pillar",
   "block.androbuildingblocks.steel_siding": "Steel Siding",
   "block.androbuildingblocks.steel_siding_slab": "Steel Siding Slab",
   "block.androbuildingblocks.steel_siding_stairs": "Steel Siding Stairs",

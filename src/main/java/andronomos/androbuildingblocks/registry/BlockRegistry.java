@@ -201,6 +201,8 @@ public class BlockRegistry {
 	public static RegistryObject<WallBlock> STEEL_WALL;
 	public static RegistryObject<SlabBlock> STEEL_SLAB;
 
+	public static RegistryObject<Block> STEEL_PILLAR;
+
 	public static RegistryObject<Block> STEEL_SIDING;
 	public static RegistryObject<StairBlock> STEEL_SIDING_STAIRS;
 	public static RegistryObject<WallBlock> STEEL_SIDING_WALL;
@@ -401,6 +403,8 @@ public class BlockRegistry {
 		STEEL_STAIRS = registerStairBlock("steel_stairs", STEEL_BLOCK, METAL_PROPERTIES);
 		STEEL_WALL = registerWallBlock("steel_wall", METAL_PROPERTIES);
 		STEEL_SLAB = registerSlabBlock("steel_slab", METAL_PROPERTIES);
+
+		STEEL_PILLAR = registerBlock("steel_pillar", () -> new RotatedPillarBlock(GENERIC_PROPERTIES));
 
 		STEEL_SIDING = registerBlock("steel_siding", METAL_PROPERTIES);
 		STEEL_SIDING_STAIRS = registerStairBlock("steel_siding_stairs", STEEL_SIDING, METAL_PROPERTIES);

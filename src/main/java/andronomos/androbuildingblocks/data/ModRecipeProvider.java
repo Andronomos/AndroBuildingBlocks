@@ -215,6 +215,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildVariants(BlockRegistry.STEEL_BLOCK.get(), true, true, true, consumer);
 		buildVariants(BlockRegistry.STEEL_SIDING.get(), true, true, true, consumer);
 		buildStoneCutter(BlockRegistry.STEEL_SIDING.get(), BlockRegistry.STEEL_BLOCK.get(), 1, consumer);
+		buildStoneCutter(BlockRegistry.STEEL_PILLAR.get(), BlockRegistry.STEEL_BLOCK.get(), 1, consumer);
 	}
 
 	private void buildStructuralGlass(Block block, String color, Consumer<FinishedRecipe> consumer) {
