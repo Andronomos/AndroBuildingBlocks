@@ -123,18 +123,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildSmelting(Blocks.STONE, BlockRegistry.CHARRED_STONE.get(), consumer);
 		buildVariants(BlockRegistry.CHARRED_STONE.get(),true, true, true, consumer);
 
-		ShapedRecipeBuilder silt = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.SILT.get(), 4);
-		silt.define('S', Items.CLAY_BALL);
-		silt.define('C', Items.SAND);
-		silt.pattern("SCS");
-		silt.pattern("CSC");
-		silt.pattern("SCS");
-		silt.unlockedBy("has_item", has(BlockRegistry.SILT.get()));
-		silt.save(consumer);
-
-		buildVariants(BlockRegistry.SILT.get(), true, true, true, consumer);
-		buildColoredSilt(BlockRegistry.BLACK_SILT.get(), "black", consumer);
-
 		buildSmelting(Blocks.CALCITE, BlockRegistry.MARBLE.get(), consumer);
 		buildTwoByTwo(BlockRegistry.POLISHED_MARBLE.get(), BlockRegistry.MARBLE.get(), consumer);
 		buildStoneCutter(BlockRegistry.POLISHED_MARBLE.get(), BlockRegistry.MARBLE.get(), 1, consumer);
@@ -194,21 +182,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildColoredAsphalt(BlockRegistry.GREEN_ASPHALT.get(), "green", consumer);
 		buildColoredAsphalt(BlockRegistry.GRAY_ASPHALT.get(), "gray", consumer);
 		buildColoredAsphalt(BlockRegistry.BROWN_ASPHALT.get(), "brown", consumer);
-	}
-
-	private void buildColoredSilt(Block coloredSiltBlock, String color, Consumer<FinishedRecipe> consumer) {
-		Item dye = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", color + "_dye"));
-
-		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, coloredSiltBlock, 8);
-		shaped.define('S', BlockRegistry.SILT.get());
-		shaped.define('D', Objects.requireNonNull(dye));
-		shaped.pattern("SSS");
-		shaped.pattern("SDS");
-		shaped.pattern("SSS");
-		shaped.unlockedBy("has_item", has(Objects.requireNonNull(dye)));
-		shaped.save(consumer);
-
-		buildVariants(coloredSiltBlock, true, true, true, consumer);
 	}
 
 	private void buildColoredAsphalt(Block coloredAsphaltBlock, String color, Consumer<FinishedRecipe> consumer) {

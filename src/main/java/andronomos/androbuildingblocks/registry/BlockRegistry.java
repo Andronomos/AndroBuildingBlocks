@@ -201,16 +201,6 @@ public class BlockRegistry {
 	public static RegistryObject<WallBlock> CHARRED_STONE_WALL;
 	public static RegistryObject<SlabBlock> CHARRED_STONE_SLAB;
 
-	public static RegistryObject<Block> SILT;
-	public static RegistryObject<StairBlock> SILT_STAIRS;
-	public static RegistryObject<WallBlock> SILT_WALL;
-	public static RegistryObject<SlabBlock> SILT_SLAB;
-
-	public static RegistryObject<Block> BLACK_SILT;
-	public static RegistryObject<StairBlock> BLACK_SILT_STAIRS;
-	public static RegistryObject<WallBlock> BLACK_SILT_WALL;
-	public static RegistryObject<SlabBlock> BLACK_SILT_SLAB;
-
 	public static RegistryObject<Block> STEEL_BLOCK;
 	public static RegistryObject<StairBlock> STEEL_STAIRS;
 	public static RegistryObject<WallBlock> STEEL_WALL;
@@ -461,23 +451,13 @@ public class BlockRegistry {
 		CHARRED_STONE_WALL = registerWallBlock("charred_stone_wall", GENERIC_PROPERTIES);
 		CHARRED_STONE_SLAB = registerSlabBlock("charred_stone_slab", GENERIC_PROPERTIES);
 
-		SILT = registerBlock("silt", BlockBehaviour.Properties.copy(Blocks.CLAY));
-		SILT_STAIRS = registerStairBlock("silt_stairs", SILT, BlockBehaviour.Properties.copy(Blocks.CLAY));
-		SILT_WALL = registerWallBlock("silt_wall", BlockBehaviour.Properties.copy(Blocks.CLAY));
-		SILT_SLAB = registerSlabBlock("silt_slab", BlockBehaviour.Properties.copy(Blocks.CLAY));
-
-		BLACK_SILT = registerBlock("black_silt", ClAY_PROPERTIES);
-		BLACK_SILT_STAIRS = registerStairBlock("black_silt_stairs", BLACK_SILT, ClAY_PROPERTIES);
-		BLACK_SILT_WALL = registerWallBlock("black_silt_wall", ClAY_PROPERTIES);
-		BLACK_SILT_SLAB = registerSlabBlock("black_silt_slab", ClAY_PROPERTIES);
-
 		STEEL_BLOCK = registerBlock("steel_block", METAL_PROPERTIES);
-		STEEL_STAIRS = registerStairBlock("steel_stairs", BLACK_SILT, METAL_PROPERTIES);
+		STEEL_STAIRS = registerStairBlock("steel_stairs", STEEL_BLOCK, METAL_PROPERTIES);
 		STEEL_WALL = registerWallBlock("steel_wall", METAL_PROPERTIES);
 		STEEL_SLAB = registerSlabBlock("steel_slab", METAL_PROPERTIES);
 
 		STEEL_SIDING = registerBlock("steel_siding", METAL_PROPERTIES);
-		STEEL_SIDING_STAIRS = registerStairBlock("steel_siding_stairs", BLACK_SILT, METAL_PROPERTIES);
+		STEEL_SIDING_STAIRS = registerStairBlock("steel_siding_stairs", STEEL_SIDING, METAL_PROPERTIES);
 		STEEL_SIDING_WALL = registerWallBlock("steel_siding_wall", METAL_PROPERTIES);
 		STEEL_SIDING_SLAB = registerSlabBlock("steel_siding_slab", METAL_PROPERTIES);
 

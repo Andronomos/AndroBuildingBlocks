@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "androbuildingblocks:silt"
-  },
-  "result": "androbuildingblocks:silt_stairs"
-}
