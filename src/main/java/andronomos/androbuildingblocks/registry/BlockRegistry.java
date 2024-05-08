@@ -210,10 +210,6 @@ public class BlockRegistry {
 	public static RegistryObject<StairBlock> ASPHALT_STAIRS;
 	public static RegistryObject<SlabBlock> ASPHALT_SLAB;
 
-	public static Supplier<Block> ASPHALT_SHINGLES;
-	public static RegistryObject<StairBlock> ASPHALT_SHINGLES_STAIRS;
-	public static RegistryObject<SlabBlock> ASPHALT_SHINGLES_SLAB;
-
 	public static Supplier<Block> MARBLE;
 	public static RegistryObject<StairBlock> MARBLE_STAIRS;
 	public static RegistryObject<SlabBlock> MARBLE_SLAB;
@@ -414,10 +410,6 @@ public class BlockRegistry {
 		ASPHALT = registerBlock("asphalt", () -> new AsphaltBlock(GENERIC_PROPERTIES));
 		ASPHALT_STAIRS = registerStairBlock("asphalt_stairs", ASPHALT, GENERIC_PROPERTIES);
 		ASPHALT_SLAB = registerSlabBlock("asphalt_slab", GENERIC_PROPERTIES);
-
-		ASPHALT_SHINGLES = registerBlock("asphalt_shingles", () -> new AsphaltBlock(GENERIC_PROPERTIES));
-		ASPHALT_SHINGLES_STAIRS = registerStairBlock("asphalt_shingles_stairs", ASPHALT_SHINGLES, GENERIC_PROPERTIES);
-		ASPHALT_SHINGLES_SLAB = registerSlabBlock("asphalt_shingles_slab", GENERIC_PROPERTIES);
 
 		MARBLE = registerBlock("marble", () -> new Block(GENERIC_PROPERTIES));
 		MARBLE_STAIRS = registerStairBlock("marble_stairs", MARBLE, GENERIC_PROPERTIES);
