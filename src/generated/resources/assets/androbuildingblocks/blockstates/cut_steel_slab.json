@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "androbuildingblocks:block/cut_steel_slab"
+    },
+    "type=double": {
+      "model": "androbuildingblocks:block/cut_steel"
+    },
+    "type=top": {
+      "model": "androbuildingblocks:block/cut_steel_slab_top"
+    }
+  }
+}
