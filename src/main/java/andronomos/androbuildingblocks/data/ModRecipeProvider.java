@@ -216,6 +216,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildVariants(BlockRegistry.STEEL_SIDING.get(), true, true, true, consumer);
 		buildStoneCutter(BlockRegistry.STEEL_SIDING.get(), BlockRegistry.STEEL_BLOCK.get(), 1, consumer);
 		buildStoneCutter(BlockRegistry.STEEL_PILLAR.get(), BlockRegistry.STEEL_BLOCK.get(), 1, consumer);
+		buildStoneCutter(BlockRegistry.CUT_STEEL.get(), BlockRegistry.STEEL_BLOCK.get(), 1, consumer);
+		buildTwoByTwo(BlockRegistry.CUT_STEEL.get(), BlockRegistry.STEEL_BLOCK.get(), consumer);
+		buildVariants(BlockRegistry.CUT_STEEL.get(), true, true, true, consumer);
 	}
 
 	private void buildStructuralGlass(Block block, String color, Consumer<FinishedRecipe> consumer) {
@@ -282,6 +285,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		SingleItemRecipeBuilder stonecutting = SingleItemRecipeBuilder.stonecutting(Ingredient.of(input), RecipeCategory.BUILDING_BLOCKS, output, amount);
 		stonecutting.unlockedBy("has_item", has(input));
 		stonecutting.save(consumer, blockName + "_from_stonecutting");
+	}
+
+	private void buildOneByTwo(Block output, Block input, Consumer<FinishedRecipe> consumer) {
+		ShapelessRecipeBuilder oneByTwo = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, output, 1);
+		oneByTwo.requires(input);
+		oneByTwo.requires(input);
+		oneByTwo.unlockedBy("has_item", has(input));
+		oneByTwo.save(consumer);
 	}
 
 	private void buildTwoByTwo(Block output, Block input, Consumer<FinishedRecipe> consumer) {

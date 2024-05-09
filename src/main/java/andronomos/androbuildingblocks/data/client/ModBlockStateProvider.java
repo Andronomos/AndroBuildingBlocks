@@ -136,7 +136,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		if (dirtyParent.contains("brick") && !dirtyParent.contains("bricks")) {
 			return dirtyParent.replace("brick","bricks");
 		}
-		if (dirtyParent.contains("steel") && !dirtyParent.contains("siding")) {
+		if (dirtyParent.contains("steel") && !dirtyParent.contains("siding") && !dirtyParent.contains("cut")) {
 			return dirtyParent + "_block";
 		}
 		return dirtyParent;
