@@ -213,6 +213,11 @@ public class BlockRegistry {
 	public static RegistryObject<WallBlock> STEEL_SIDING_WALL;
 	public static RegistryObject<SlabBlock> STEEL_SIDING_SLAB;
 
+	public static RegistryObject<Block> STAINLESS_STEEL;
+	public static RegistryObject<StairBlock> STAINLESS_STEEL_STAIRS;
+	public static RegistryObject<WallBlock> STAINLESS_STEEL_WALL;
+	public static RegistryObject<SlabBlock> STAINLESS_STEEL_SLAB;
+
 	public static Supplier<Block> ASPHALT;
 	public static RegistryObject<StairBlock> ASPHALT_STAIRS;
 	public static RegistryObject<SlabBlock> ASPHALT_SLAB;
@@ -420,6 +425,11 @@ public class BlockRegistry {
 		STEEL_SIDING_STAIRS = registerStairBlock("steel_siding_stairs", STEEL_SIDING, METAL_PROPERTIES);
 		STEEL_SIDING_WALL = registerWallBlock("steel_siding_wall", METAL_PROPERTIES);
 		STEEL_SIDING_SLAB = registerSlabBlock("steel_siding_slab", METAL_PROPERTIES);
+
+		STAINLESS_STEEL = registerBlock("stainless_steel", () -> new Block(GENERIC_PROPERTIES));
+		STAINLESS_STEEL_STAIRS = registerStairBlock("stainless_steel_stairs", CUT_STEEL, METAL_PROPERTIES);
+		STAINLESS_STEEL_WALL = registerWallBlock("stainless_steel_wall", METAL_PROPERTIES);
+		STAINLESS_STEEL_SLAB = registerSlabBlock("stainless_steel_slab", METAL_PROPERTIES);
 
 		ASPHALT = registerBlock("asphalt", () -> new AsphaltBlock(GENERIC_PROPERTIES));
 		ASPHALT_STAIRS = registerStairBlock("asphalt_stairs", ASPHALT, GENERIC_PROPERTIES);
