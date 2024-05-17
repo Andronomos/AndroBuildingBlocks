@@ -222,6 +222,18 @@ public class BlockRegistry {
 	public static RegistryObject<StairBlock> ASPHALT_STAIRS;
 	public static RegistryObject<SlabBlock> ASPHALT_SLAB;
 
+	public static Supplier<Block> RED_ASPHALT;
+	public static RegistryObject<StairBlock> RED_ASPHALT_STAIRS;
+	public static RegistryObject<SlabBlock> RED_ASPHALT_SLAB;
+
+	public static Supplier<Block> BLUE_ASPHALT;
+	public static RegistryObject<StairBlock> BLUE_ASPHALT_STAIRS;
+	public static RegistryObject<SlabBlock> BLUE_ASPHALT_SLAB;
+
+	public static Supplier<Block> GREEN_ASPHALT;
+	public static RegistryObject<StairBlock> GREEN_ASPHALT_STAIRS;
+	public static RegistryObject<SlabBlock> GREEN_ASPHALT_SLAB;
+
 	public static Supplier<Block> MARBLE;
 	public static RegistryObject<StairBlock> MARBLE_STAIRS;
 	public static RegistryObject<SlabBlock> MARBLE_SLAB;
@@ -236,6 +248,9 @@ public class BlockRegistry {
 
 	public static Supplier<Block> TEXTURE_TEST_ONE;
 	public static Supplier<Block> TEXTURE_TEST_TWO;
+
+	public static Supplier<Block> WHITE_LAMP;
+	public static Supplier<Block> RED_LAMP;
 
 	public static void register() {
 		BLACK_REINFORCED_CONCRETE = registerBlock("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
@@ -435,6 +450,18 @@ public class BlockRegistry {
 		ASPHALT_STAIRS = registerStairBlock("asphalt_stairs", ASPHALT, GENERIC_PROPERTIES);
 		ASPHALT_SLAB = registerSlabBlock("asphalt_slab", GENERIC_PROPERTIES);
 
+		RED_ASPHALT = registerBlock("red_asphalt", () -> new AsphaltBlock(GENERIC_PROPERTIES));
+		RED_ASPHALT_STAIRS = registerStairBlock("red_asphalt_stairs", ASPHALT, GENERIC_PROPERTIES);
+		RED_ASPHALT_SLAB = registerSlabBlock("red_asphalt_slab", GENERIC_PROPERTIES);
+
+		GREEN_ASPHALT = registerBlock("green_asphalt", () -> new AsphaltBlock(GENERIC_PROPERTIES));
+		GREEN_ASPHALT_STAIRS = registerStairBlock("green_asphalt_stairs", ASPHALT, GENERIC_PROPERTIES);
+		GREEN_ASPHALT_SLAB = registerSlabBlock("green_asphalt_slab", GENERIC_PROPERTIES);
+
+		BLUE_ASPHALT = registerBlock("blue_asphalt", () -> new AsphaltBlock(GENERIC_PROPERTIES));
+		BLUE_ASPHALT_STAIRS = registerStairBlock("blue_asphalt_stairs", ASPHALT, GENERIC_PROPERTIES);
+		BLUE_ASPHALT_SLAB = registerSlabBlock("blue_asphalt_slab", GENERIC_PROPERTIES);
+
 		MARBLE = registerBlock("marble", () -> new Block(GENERIC_PROPERTIES));
 		MARBLE_STAIRS = registerStairBlock("marble_stairs", MARBLE, GENERIC_PROPERTIES);
 		MARBLE_SLAB = registerSlabBlock("marble_slab", GENERIC_PROPERTIES);
@@ -453,6 +480,7 @@ public class BlockRegistry {
 		for(DyeColor color : DyeColor.values()) {
 			registerGlassBlock(color + "_structural_glass", color);
 			registerStainedGlassPaneBlock(color + "_structural_glass_pane", color);
+			registerLampBlock(color + "_lamp");
 		}
 	}
 
@@ -474,6 +502,10 @@ public class BlockRegistry {
 
 	private static RegistryObject<StainedGlassBlock> registerGlassBlock(final String name, DyeColor color) {
 		return registerBlock(name, () -> new StainedGlassBlock(color, GLASS_PROPERTIES));
+	}
+
+	private static RegistryObject<Block> registerLampBlock(final String name) {
+		return registerBlock(name, () -> new Block(BlockBehaviour.Properties.of().lightLevel((i) -> 15)));
 	}
 
 	private static RegistryObject<Block> registerStainedGlassPaneBlock(final String name, DyeColor color) {
