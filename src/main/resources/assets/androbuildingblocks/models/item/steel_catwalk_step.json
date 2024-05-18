@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_trapdoor_bottom",
+  "textures": {
+    "texture": "androbuildingblocks:block/steel_catwalk_step"
+  }
+}
