@@ -253,6 +253,8 @@ public class BlockRegistry {
 	public static Supplier<Block> WHITE_LAMP;
 	public static Supplier<Block> RED_LAMP;
 
+	public static Supplier<Block> CATWALK;
+
 	public static void register() {
 		BLACK_REINFORCED_CONCRETE = registerBlock("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
 		BLACK_REINFORCED_CONCRETE_STAIRS = registerStairBlock("black_reinforced_concrete_stairs", BLACK_REINFORCED_CONCRETE, REINFORCED_CONCRETE_PROPERTIES);

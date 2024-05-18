@@ -21,7 +21,8 @@ public class CreativeTabRegistry {
 			"structural_glass",
 			"steel",
 			"asphalt",
-			"lamp"
+			"lamp",
+			"catwalk"
 	);
 
 	public static final RegistryObject<CreativeModeTab> ANDROBUILDINGBLOCKS_ITEMS_TAB = CREATIVE_MODE_TABS.register("androbuildingblocks_items_tab", () -> CreativeModeTab.builder()
