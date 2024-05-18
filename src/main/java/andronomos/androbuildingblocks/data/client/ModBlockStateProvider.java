@@ -34,7 +34,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 				case "RotatedPillarBlock" -> rotatableBlock(block, blockPath);
 				case "StainedGlassBlock" -> simpleBlock(block, blockPath, true);
 				case "StainedGlassPaneBlock", "IronBarsBlock" -> pane(block, blockPath);
-				default -> simpleBlock(block, blockPath, false);
+				case "Block" -> simpleBlock(block, blockPath, false);
 			}
 		});
 	}
@@ -133,8 +133,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	}
 
 	private String getProperParentName(String dirtyParent) {
-		AndroBuildingBlocks.LOGGER.info(String.format("ModBlockStateProvider#getProperParentName | dirtyParent: %s", dirtyParent));
-
 		if (dirtyParent.contains("brick") && !dirtyParent.contains("bricks")) {
 			return dirtyParent.replace("brick","bricks");
 		}
