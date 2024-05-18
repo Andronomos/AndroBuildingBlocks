@@ -480,6 +480,8 @@ public class BlockRegistry {
 		TEXTURE_TEST_ONE = registerBlock("texture_test_one", () -> new Block(GENERIC_PROPERTIES));
 		TEXTURE_TEST_TWO = registerBlock("texture_test_two", () -> new Block(GENERIC_PROPERTIES));
 
+		CATWALK = registerBlock("catwalk", () -> new CatwalkBlock(METAL_PROPERTIES));
+
 		for(DyeColor color : DyeColor.values()) {
 			registerGlassBlock(color + "_structural_glass", color);
 			registerStainedGlassPaneBlock(color + "_structural_glass_pane", color);
