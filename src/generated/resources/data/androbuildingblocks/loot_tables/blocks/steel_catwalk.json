@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "androbuildingblocks:catwalk"
+          "name": "androbuildingblocks:steel_catwalk"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "androbuildingblocks:blocks/catwalk"
+  "random_sequence": "androbuildingblocks:blocks/steel_catwalk"
 }
