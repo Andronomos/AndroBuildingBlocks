@@ -1,7 +1,8 @@
 {
   "variants": {
-    "": {
-      "model": "androbuildingblocks:block/steel_catwalk_step"
-    }
+    "facing=north": { "model": "androbuildingblocks:block/steel_catwalk_step" },
+    "facing=south": { "model": "androbuildingblocks:block/steel_catwalk_step", "y": 180 },
+    "facing=west":  { "model": "androbuildingblocks:block/steel_catwalk_step", "y": 270},
+    "facing=east":  { "model": "androbuildingblocks:block/steel_catwalk_step" , "y": 90 }
   }
 }
