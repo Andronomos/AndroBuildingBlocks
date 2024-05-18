@@ -12,9 +12,34 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.shapes.BooleanOp;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class CatwalkStepBlock extends Block implements SimpleWaterloggedBlock {
+	private static final VoxelShape BOX_NORTH = Shapes.join(
+			Block.box(0d, 14d, 8d, 16d, 16d, 16d),
+			Block.box(0d, 6d, 0d, 16d, 8d, 8d),
+			BooleanOp.OR
+	);
+	private static final VoxelShape BOX_SOUTH = Shapes.join(
+			Block.box(0d, 14d, 0d, 16d, 16d, 8d),
+			Block.box(0d, 6d, 8d, 16d, 8d, 16d),
+			BooleanOp.OR
+	);
+	private static final VoxelShape BOX_WEST = Shapes.join(
+			Block.box(8d, 14d, 0d, 16d, 16d, 16d),
+			Block.box(0d, 6d, 0d, 8d, 8d, 16d),
+			BooleanOp.OR
+	);
+	private static final VoxelShape BOX_EAST = Shapes.join(
+			Block.box(0d, 14d, 0d, 8d, 16d, 16),
+			Block.box(8d, 6d, 0d, 16d, 8d, 16d),
+			BooleanOp.OR
+	);
+
 	public CatwalkStepBlock(Properties properties) {
 		super(properties);
 		this.registerDefaultState(this.defaultBlockState()
@@ -49,5 +74,15 @@ public class CatwalkStepBlock extends Block implements SimpleWaterloggedBlock {
 	@Override
 	public FluidState getFluidState(BlockState state) {
 		return state.getValue(BlockStateProperties.WATERLOGGED) ? Fluids.WATER.getSource(false) : Fluids.EMPTY.defaultFluidState();
+	}
+
+	@Override
+	public VoxelShape getShape (BlockState state, BlockGetter world, BlockPos pos, CollisionContext ctx) {
+		return switch(state.getValue(BlockStateProperties.HORIZONTAL_FACING)) {
+			case SOUTH -> BOX_SOUTH;
+			case EAST  -> BOX_EAST;
+			case WEST  -> BOX_WEST;
+			default    -> BOX_NORTH;
+		};
 	}
 }
