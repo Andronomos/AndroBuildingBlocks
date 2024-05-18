@@ -1,7 +1,7 @@
 package andronomos.androbuildingblocks.registry;
 
 import andronomos.androbuildingblocks.AndroBuildingBlocks;
-import andronomos.androbuildingblocks.block.AsphaltBlock;
+import andronomos.androbuildingblocks.block.CatwalkBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
@@ -22,6 +22,7 @@ public class BlockRegistry {
 	public static Block.Properties DARK_PRISMARINE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.DARK_PRISMARINE);
 	public static Block.Properties BASALT_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.BASALT);
 	public static Block.Properties ClAY_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.CLAY);
+	public static Block.Properties ASPHALT_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.STONE).speedFactor(1.3F);
 
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AndroBuildingBlocks.MODID);
 
@@ -446,21 +447,21 @@ public class BlockRegistry {
 		STAINLESS_STEEL_WALL = registerWallBlock("stainless_steel_wall", METAL_PROPERTIES);
 		STAINLESS_STEEL_SLAB = registerSlabBlock("stainless_steel_slab", METAL_PROPERTIES);
 
-		ASPHALT = registerBlock("asphalt", () -> new AsphaltBlock(GENERIC_PROPERTIES));
-		ASPHALT_STAIRS = registerStairBlock("asphalt_stairs", ASPHALT, GENERIC_PROPERTIES);
-		ASPHALT_SLAB = registerSlabBlock("asphalt_slab", GENERIC_PROPERTIES);
+		ASPHALT = registerBlock("asphalt", () -> new Block(ASPHALT_PROPERTIES));
+		ASPHALT_STAIRS = registerStairBlock("asphalt_stairs", ASPHALT, ASPHALT_PROPERTIES);
+		ASPHALT_SLAB = registerSlabBlock("asphalt_slab", ASPHALT_PROPERTIES);
 
-		RED_ASPHALT = registerBlock("red_asphalt", () -> new AsphaltBlock(GENERIC_PROPERTIES));
-		RED_ASPHALT_STAIRS = registerStairBlock("red_asphalt_stairs", ASPHALT, GENERIC_PROPERTIES);
-		RED_ASPHALT_SLAB = registerSlabBlock("red_asphalt_slab", GENERIC_PROPERTIES);
+		RED_ASPHALT = registerBlock("red_asphalt", () -> new Block(ASPHALT_PROPERTIES));
+		RED_ASPHALT_STAIRS = registerStairBlock("red_asphalt_stairs", ASPHALT, ASPHALT_PROPERTIES);
+		RED_ASPHALT_SLAB = registerSlabBlock("red_asphalt_slab", ASPHALT_PROPERTIES);
 
-		GREEN_ASPHALT = registerBlock("green_asphalt", () -> new AsphaltBlock(GENERIC_PROPERTIES));
-		GREEN_ASPHALT_STAIRS = registerStairBlock("green_asphalt_stairs", ASPHALT, GENERIC_PROPERTIES);
-		GREEN_ASPHALT_SLAB = registerSlabBlock("green_asphalt_slab", GENERIC_PROPERTIES);
+		GREEN_ASPHALT = registerBlock("green_asphalt", () -> new Block(ASPHALT_PROPERTIES));
+		GREEN_ASPHALT_STAIRS = registerStairBlock("green_asphalt_stairs", ASPHALT, ASPHALT_PROPERTIES);
+		GREEN_ASPHALT_SLAB = registerSlabBlock("green_asphalt_slab", ASPHALT_PROPERTIES);
 
-		BLUE_ASPHALT = registerBlock("blue_asphalt", () -> new AsphaltBlock(GENERIC_PROPERTIES));
-		BLUE_ASPHALT_STAIRS = registerStairBlock("blue_asphalt_stairs", ASPHALT, GENERIC_PROPERTIES);
-		BLUE_ASPHALT_SLAB = registerSlabBlock("blue_asphalt_slab", GENERIC_PROPERTIES);
+		BLUE_ASPHALT = registerBlock("blue_asphalt", () -> new Block(ASPHALT_PROPERTIES));
+		BLUE_ASPHALT_STAIRS = registerStairBlock("blue_asphalt_stairs", ASPHALT, ASPHALT_PROPERTIES);
+		BLUE_ASPHALT_SLAB = registerSlabBlock("blue_asphalt_slab", ASPHALT_PROPERTIES);
 
 		MARBLE = registerBlock("marble", () -> new Block(GENERIC_PROPERTIES));
 		MARBLE_STAIRS = registerStairBlock("marble_stairs", MARBLE, GENERIC_PROPERTIES);
