@@ -29,7 +29,6 @@ public class CatwalkBlock extends Block implements SimpleWaterloggedBlock {
 			0d, 14d, 0d,
 			16d, 16d, 16d
 	);
-	private static final VoxelShape SUPPORTED = Shapes.block();
 	BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
 
@@ -37,10 +36,6 @@ public class CatwalkBlock extends Block implements SimpleWaterloggedBlock {
 		super(properties);
 		this.registerDefaultState(this.defaultBlockState()
 				.setValue(WATERLOGGED, false));
-	}
-
-	private static boolean hasNeighborTo (Direction side, BlockPlaceContext ctx) {
-		return ctx.getLevel().getBlockState(ctx.getClickedPos().offset(side.getNormal())).getBlock() instanceof CatwalkBlock;
 	}
 
 	@Override
@@ -55,7 +50,7 @@ public class CatwalkBlock extends Block implements SimpleWaterloggedBlock {
 
 	@Nullable
 	@Override
-	public BlockState getStateForPlacement (BlockPlaceContext ctx) {
+	public BlockState getStateForPlacement(BlockPlaceContext ctx) {
 		FluidState fluid = ctx.getLevel().getFluidState(ctx.getClickedPos());
 
 		return defaultBlockState()
@@ -63,7 +58,7 @@ public class CatwalkBlock extends Block implements SimpleWaterloggedBlock {
 	}
 
 	@Override
-	protected void createBlockStateDefinition (StateDefinition.Builder<Block, BlockState> builder) {
+	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		super.createBlockStateDefinition(builder);
 		builder.add(BlockStateProperties.WATERLOGGED);
 	}
