@@ -17,6 +17,7 @@ import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class CatwalkRailingBlock extends Block implements SimpleWaterloggedBlock {
@@ -55,7 +56,7 @@ public class CatwalkRailingBlock extends Block implements SimpleWaterloggedBlock
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter reader, BlockPos pos, CollisionContext ctx) {
+	public @NotNull VoxelShape getShape(BlockState state, @NotNull BlockGetter reader, @NotNull BlockPos pos, @NotNull CollisionContext ctx) {
 		VoxelShape shape = Shapes.empty();
 		if (state.getValue(NORTH_FENCE)) shape = Shapes.join(shape, VOXEL_NORTH, BooleanOp.OR);
 		if (state.getValue(SOUTH_FENCE)) shape = Shapes.join(shape, VOXEL_SOUTH, BooleanOp.OR);
@@ -70,18 +71,17 @@ public class CatwalkRailingBlock extends Block implements SimpleWaterloggedBlock
 	public BlockState getStateForPlacement(BlockPlaceContext ctx) {
 		Direction facing = ctx.getHorizontalDirection();
 		FluidState fluid = ctx.getLevel().getFluidState(ctx.getClickedPos());
-		BlockState state = defaultBlockState()
+		return defaultBlockState()
 				.setValue(NORTH_FENCE, (facing == Direction.NORTH))
 				.setValue(SOUTH_FENCE, (facing == Direction.SOUTH))
 				.setValue(EAST_FENCE,  (facing == Direction.EAST))
 				.setValue(WEST_FENCE,  (facing == Direction.WEST))
 				//.setValue(BlockStateProperties.HORIZONTAL_FACING, facing.getOpposite())
 				.setValue(BlockStateProperties.WATERLOGGED, fluid.getType() == Fluids.WATER);
-		return state;
 	}
 
 	@Override
-	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+	protected void createBlockStateDefinition(StateDefinition.@NotNull Builder<Block, BlockState> builder) {
 		super.createBlockStateDefinition(builder);
 		builder.add(NORTH_FENCE);
 		builder.add(SOUTH_FENCE);
@@ -92,12 +92,12 @@ public class CatwalkRailingBlock extends Block implements SimpleWaterloggedBlock
 	}
 
 	@Override
-	public boolean canPlaceLiquid(BlockGetter world, BlockPos pos, BlockState state, Fluid fluid) {
+	public boolean canPlaceLiquid(@NotNull BlockGetter world, @NotNull BlockPos pos, BlockState state, @NotNull Fluid fluid) {
 		return !state.getValue(BlockStateProperties.WATERLOGGED) && fluid == Fluids.WATER;
 	}
 
 	@Override
-	public FluidState getFluidState(BlockState state) {
+	public @NotNull FluidState getFluidState(BlockState state) {
 		return state.getValue(BlockStateProperties.WATERLOGGED) ? Fluids.WATER.getSource(false) : Fluids.EMPTY.defaultFluidState();
 	}
 }
