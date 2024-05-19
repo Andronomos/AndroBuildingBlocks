@@ -1,7 +1,7 @@
 {
 	"parent": "androbuildingblocks:block/catwalk",
 	"textures": {
-		"2": "androbuildingblocks:block/steel_catwalk",
+		"0": "androbuildingblocks:block/steel_catwalk",
 		"particle": "androbuildingblocks:block/steel_catwalk"
 	}
 }
