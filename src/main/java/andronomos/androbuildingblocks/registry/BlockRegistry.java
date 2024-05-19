@@ -2,6 +2,7 @@ package andronomos.androbuildingblocks.registry;
 
 import andronomos.androbuildingblocks.AndroBuildingBlocks;
 import andronomos.androbuildingblocks.block.CatwalkBlock;
+import andronomos.androbuildingblocks.block.CatwalkRailingBlock;
 import andronomos.androbuildingblocks.block.CatwalkStepBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
@@ -256,6 +257,7 @@ public class BlockRegistry {
 
 	public static Supplier<Block> STEEL_CATWALK;
 	public static Supplier<Block> STEEL_CATWALK_STEP;
+	public static Supplier<Block> STEEL_CATWALK_RAIL;
 
 	public static void register() {
 		BLACK_REINFORCED_CONCRETE = registerBlock("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
@@ -484,6 +486,7 @@ public class BlockRegistry {
 
 		STEEL_CATWALK = registerBlock("steel_catwalk", () -> new CatwalkBlock(METAL_PROPERTIES.noOcclusion()));
 		STEEL_CATWALK_STEP = registerBlock("steel_catwalk_step", () -> new CatwalkStepBlock(METAL_PROPERTIES.noOcclusion()));
+		STEEL_CATWALK_RAIL = registerBlock("steel_catwalk_rail", () -> new CatwalkRailingBlock(METAL_PROPERTIES.noOcclusion()));
 
 		for(DyeColor color : DyeColor.values()) {
 			registerGlassBlock(color + "_structural_glass", color);
