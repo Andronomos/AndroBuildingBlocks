@@ -1,8 +1,39 @@
 {
-  "variants": {
-    "facing=north": { "model": "androbuildingblocks:block/steel_catwalk_step", "y": 90 },
-    "facing=south": { "model": "androbuildingblocks:block/steel_catwalk_step", "y": -90 },
-    "facing=west":  { "model": "androbuildingblocks:block/steel_catwalk_step"},
-    "facing=east":  { "model": "androbuildingblocks:block/steel_catwalk_step" , "y": 180 }
-  }
+  "multipart": [
+    {
+      "apply": {
+        "model": "androbuildingblocks:block/steel_catwalk_rail",
+        "y": 90
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "androbuildingblocks:block/steel_catwalk_rail",
+        "y": -90
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "androbuildingblocks:block/steel_catwalk_rail",
+        "y": 180
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "androbuildingblocks:block/steel_catwalk_rail"
+      },
+      "when": {
+        "west": "true"
+      }
+    }
+  ]
 }
