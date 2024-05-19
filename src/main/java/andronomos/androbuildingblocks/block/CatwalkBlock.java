@@ -31,7 +31,6 @@ public class CatwalkBlock extends Block implements SimpleWaterloggedBlock {
 	);
 	BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-
 	public CatwalkBlock(Properties properties) {
 		super(properties);
 		this.registerDefaultState(this.defaultBlockState()
