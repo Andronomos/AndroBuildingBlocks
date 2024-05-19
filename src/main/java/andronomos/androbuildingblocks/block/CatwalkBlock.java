@@ -1,7 +1,6 @@
 package andronomos.androbuildingblocks.block;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -14,16 +13,10 @@ import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Properties;
-
-
-/*
-	Copies from
- */
 public class CatwalkBlock extends Block implements SimpleWaterloggedBlock {
 	private static final VoxelShape VOXEL_TOP = Block.box(
 			0d, 14d, 0d,
@@ -38,12 +31,12 @@ public class CatwalkBlock extends Block implements SimpleWaterloggedBlock {
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter reader, BlockPos pos, CollisionContext ctx) {
+	public @NotNull VoxelShape getShape(@NotNull BlockState state, @NotNull BlockGetter reader, @NotNull BlockPos pos, @NotNull CollisionContext ctx) {
 		return getInteractionShape(state, reader, pos);
 	}
 
 	@Override
-	public VoxelShape getInteractionShape (BlockState state, BlockGetter world, BlockPos pos) {
+	public @NotNull VoxelShape getInteractionShape (@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos) {
 		return VOXEL_TOP;
 	}
 
@@ -57,18 +50,18 @@ public class CatwalkBlock extends Block implements SimpleWaterloggedBlock {
 	}
 
 	@Override
-	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+	protected void createBlockStateDefinition(StateDefinition.@NotNull Builder<Block, BlockState> builder) {
 		super.createBlockStateDefinition(builder);
 		builder.add(BlockStateProperties.WATERLOGGED);
 	}
 
 	@Override
-	public boolean canPlaceLiquid(BlockGetter world, BlockPos pos, BlockState state, Fluid fluid) {
+	public boolean canPlaceLiquid(@NotNull BlockGetter world, @NotNull BlockPos pos, BlockState state, @NotNull Fluid fluid) {
 		return !state.getValue(BlockStateProperties.WATERLOGGED) && fluid == Fluids.WATER;
 	}
 
 	@Override
-	public FluidState getFluidState(BlockState state) {
+	public @NotNull FluidState getFluidState(BlockState state) {
 		return state.getValue(BlockStateProperties.WATERLOGGED) ? Fluids.WATER.getSource(false) : Fluids.EMPTY.defaultFluidState();
 	}
 }
