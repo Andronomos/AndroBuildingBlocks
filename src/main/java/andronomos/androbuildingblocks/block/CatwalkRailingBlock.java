@@ -50,7 +50,6 @@ public class CatwalkRailingBlock extends Block implements SimpleWaterloggedBlock
 				.setValue(SOUTH_FENCE, false)
 				.setValue(EAST_FENCE,  false)
 				.setValue(WEST_FENCE,  false)
-				//.setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH)
 				.setValue(BlockStateProperties.WATERLOGGED, false)
 		);
 	}
@@ -76,7 +75,6 @@ public class CatwalkRailingBlock extends Block implements SimpleWaterloggedBlock
 				.setValue(SOUTH_FENCE, (facing == Direction.SOUTH))
 				.setValue(EAST_FENCE,  (facing == Direction.EAST))
 				.setValue(WEST_FENCE,  (facing == Direction.WEST))
-				//.setValue(BlockStateProperties.HORIZONTAL_FACING, facing.getOpposite())
 				.setValue(BlockStateProperties.WATERLOGGED, fluid.getType() == Fluids.WATER);
 	}
 
@@ -87,7 +85,6 @@ public class CatwalkRailingBlock extends Block implements SimpleWaterloggedBlock
 		builder.add(SOUTH_FENCE);
 		builder.add(EAST_FENCE);
 		builder.add(WEST_FENCE);
-		//builder.add(BlockStateProperties.HORIZONTAL_FACING);
 		builder.add(BlockStateProperties.WATERLOGGED);
 	}
 
