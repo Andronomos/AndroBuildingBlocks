@@ -4,7 +4,9 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -61,7 +63,6 @@ public class CatwalkRailingBlock extends Block implements SimpleWaterloggedBlock
 		if (state.getValue(SOUTH_FENCE)) shape = Shapes.join(shape, VOXEL_SOUTH, BooleanOp.OR);
 		if (state.getValue(EAST_FENCE))  shape = Shapes.join(shape, VOXEL_EAST,  BooleanOp.OR);
 		if (state.getValue(WEST_FENCE))  shape = Shapes.join(shape, VOXEL_WEST,  BooleanOp.OR);
-
 		return shape;
 	}
 
@@ -96,5 +97,28 @@ public class CatwalkRailingBlock extends Block implements SimpleWaterloggedBlock
 	@Override
 	public @NotNull FluidState getFluidState(BlockState state) {
 		return state.getValue(BlockStateProperties.WATERLOGGED) ? Fluids.WATER.getSource(false) : Fluids.EMPTY.defaultFluidState();
+	}
+
+	@Override
+	public void neighborChanged(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Block neighborBlock, @NotNull BlockPos neighborPos, boolean movedByPiston) {
+		if (isEmpty(state)) level.setBlock(pos, Blocks.AIR.defaultBlockState(), 0);
+		super.neighborChanged(state, level, pos, neighborBlock, neighborPos, movedByPiston);
+	}
+
+	public static boolean isEmpty(BlockState state) {
+		boolean safe = false;
+		for (Direction dir : BlockStateProperties.HORIZONTAL_FACING.getPossibleValues()) {
+			safe |= state.getValue(fromDirection(dir));
+		}
+		return !safe;
+	}
+
+	public static BooleanProperty fromDirection(Direction face) {
+		return switch (face) {
+			case SOUTH -> SOUTH_FENCE;
+			case EAST  -> EAST_FENCE;
+			case WEST  -> WEST_FENCE;
+			default -> NORTH_FENCE;
+		};
 	}
 }
