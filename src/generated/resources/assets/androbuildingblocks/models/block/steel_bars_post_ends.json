@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/iron_bars_post_ends",
+  "textures": {
+    "edge": "androbuildingblocks:block/steel_bars_post",
+    "particle": "androbuildingblocks:block/steel_bars_post"
+  }
+}

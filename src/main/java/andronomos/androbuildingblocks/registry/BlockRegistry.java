@@ -221,6 +221,10 @@ public class BlockRegistry {
 	public static RegistryObject<WallBlock> STAINLESS_STEEL_WALL;
 	public static RegistryObject<SlabBlock> STAINLESS_STEEL_SLAB;
 
+	public static Supplier<Block> STEEL_CATWALK;
+	public static Supplier<Block> STEEL_CATWALK_STEP;
+	public static Supplier<Block> STEEL_CATWALK_RAIL;
+
 	public static Supplier<Block> ASPHALT;
 	public static RegistryObject<StairBlock> ASPHALT_STAIRS;
 	public static RegistryObject<SlabBlock> ASPHALT_SLAB;
@@ -434,9 +438,10 @@ public class BlockRegistry {
 		STEEL_WALL = registerWallBlock("steel_wall", METAL_PROPERTIES);
 		STEEL_SLAB = registerSlabBlock("steel_slab", METAL_PROPERTIES);
 
-		STEEL_PILLAR = registerBlock("steel_pillar", () -> new RotatedPillarBlock(GENERIC_PROPERTIES));
+		STEEL_PILLAR = registerBlock("steel_pillar", () -> new RotatedPillarBlock(METAL_PROPERTIES));
+		STEEL_BARS = registerBlock("steel_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BARS)));
 
-		CUT_STEEL = registerBlock("cut_steel", () -> new Block(GENERIC_PROPERTIES));
+		CUT_STEEL = registerBlock("cut_steel", () -> new Block(METAL_PROPERTIES));
 		CUT_STEEL_STAIRS = registerStairBlock("cut_steel_stairs", CUT_STEEL, METAL_PROPERTIES);
 		CUT_STEEL_WALL = registerWallBlock("cut_steel_wall", METAL_PROPERTIES);
 		CUT_STEEL_SLAB = registerSlabBlock("cut_steel_slab", METAL_PROPERTIES);
@@ -446,7 +451,7 @@ public class BlockRegistry {
 		STEEL_SIDING_WALL = registerWallBlock("steel_siding_wall", METAL_PROPERTIES);
 		STEEL_SIDING_SLAB = registerSlabBlock("steel_siding_slab", METAL_PROPERTIES);
 
-		STAINLESS_STEEL = registerBlock("stainless_steel", () -> new Block(GENERIC_PROPERTIES));
+		STAINLESS_STEEL = registerBlock("stainless_steel", () -> new Block(METAL_PROPERTIES));
 		STAINLESS_STEEL_STAIRS = registerStairBlock("stainless_steel_stairs", CUT_STEEL, METAL_PROPERTIES);
 		STAINLESS_STEEL_WALL = registerWallBlock("stainless_steel_wall", METAL_PROPERTIES);
 		STAINLESS_STEEL_SLAB = registerSlabBlock("stainless_steel_slab", METAL_PROPERTIES);

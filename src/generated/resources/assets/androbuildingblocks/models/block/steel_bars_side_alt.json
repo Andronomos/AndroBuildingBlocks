@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/iron_bars_side_alt",
+  "textures": {
+    "bars": "androbuildingblocks:block/steel_bars",
+    "edge": "androbuildingblocks:block/steel_bars_post",
+    "particle": "androbuildingblocks:block/steel_bars_post"
+  }
+}

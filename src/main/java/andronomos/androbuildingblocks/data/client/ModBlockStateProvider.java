@@ -6,9 +6,8 @@ import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
-import net.minecraftforge.client.model.generators.ModelFile;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraftforge.client.model.generators.*;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -22,6 +21,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 	@Override
 	protected void registerStatesAndModels() {
+		//BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get)
+		//		.filter(block -> block.getClass().getSimpleName().equals("StairBlock"))
+		//		.forEach(block -> stairs(block, Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath()));
+
 		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
 			String blockPath = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
 			String className = block.getClass().getSimpleName();
@@ -33,7 +36,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 				case "FenceBlock" -> fenceBlock(block, blockPath);
 				case "RotatedPillarBlock" -> rotatableBlock(block, blockPath);
 				case "StainedGlassBlock" -> simpleBlock(block, blockPath, true);
-				case "StainedGlassPaneBlock", "IronBarsBlock" -> pane(block, blockPath);
+				case "StainedGlassPaneBlock" -> pane(block, blockPath);
+				case "IronBarsBlock" -> bars(block, blockPath);
 				case "Block" -> simpleBlock(block, blockPath, false);
 			}
 		});
@@ -62,6 +66,45 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		ResourceLocation txt = modLoc("block/" + parent);
 		trapdoorBlock((TrapDoorBlock) block, txt, true);
 		itemModels().trapdoorTop(path, txt);
+	}
+
+	private void bars(Block block, String path) {
+		ResourceLocation barTexture = modLoc("block/" + path);
+		ResourceLocation postTexture = modLoc("block/" + path + "_post");
+
+		MultiPartBlockStateBuilder builder = getMultipartBuilder(block);
+
+		BlockModelBuilder sideModel = models().withExistingParent(path + "_side", mcLoc("block/iron_bars_side"))
+				.texture("bars", barTexture)
+				.texture("edge", postTexture)
+				.texture("particle", postTexture)
+				.renderType("cutout_mipped")
+				.ao(false);
+
+		BlockModelBuilder sideAltModel = models().withExistingParent(path + "_side_alt", mcLoc("block/iron_bars_side_alt"))
+				.texture("bars", barTexture)
+				.texture("edge", postTexture)
+				.texture("particle", postTexture);
+
+		builder.part().modelFile(models().withExistingParent(path + "_post", mcLoc("block/iron_bars_post"))
+						.texture("bars", postTexture)
+						.texture("particle", postTexture))
+				.addModel()
+				.condition(BlockStateProperties.NORTH, false)
+				.condition(BlockStateProperties.SOUTH, false)
+				.condition(BlockStateProperties.EAST, false)
+				.condition(BlockStateProperties.WEST, false)
+				.end();
+
+		builder.part().modelFile(models().withExistingParent(path + "_post_ends", mcLoc("block/iron_bars_post_ends"))
+						.texture("edge", postTexture).texture("particle", postTexture)
+		).addModel().end();
+		builder.part().modelFile(sideModel).addModel().condition(BlockStateProperties.NORTH, true).end();
+		builder.part().modelFile(sideModel).rotationY(90).addModel().condition(BlockStateProperties.EAST, true).end();
+		builder.part().modelFile(sideAltModel).addModel().condition(BlockStateProperties.SOUTH, true).end();
+		builder.part().modelFile(sideAltModel).rotationY(90).addModel().condition(BlockStateProperties.WEST, true).end();
+
+		itemModels().singleTexture(path, mcLoc("item/generated"), "layer0", barTexture);
 	}
 
 	public void stairs(Block block, String path) {
