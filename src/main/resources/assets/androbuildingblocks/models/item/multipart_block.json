@@ -1,0 +1,6 @@
+{
+  "parent": "androbuildingblocks:block/multipart_block",
+  "textures": {
+    "texture": "androbuildingblocks:block/multipart_block"
+  }
+}
