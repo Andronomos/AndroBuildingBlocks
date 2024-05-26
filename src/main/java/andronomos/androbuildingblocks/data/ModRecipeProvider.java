@@ -129,6 +129,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 			buildStructuralGlass(glassBlock, color.getName(), consumer);
 		}
 
+		ShapelessRecipeBuilder cautionStripes = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.CAUTION_STRIPES.get(), 1);
+		cautionStripes.requires(Items.STONE);
+		cautionStripes.requires(Items.YELLOW_DYE);
+		cautionStripes.requires(Items.BLACK_DYE);
+		cautionStripes.unlockedBy("has_item", has(Items.YELLOW_DYE));
+		cautionStripes.save(consumer);
+		buildVariants(BlockRegistry.CAUTION_STRIPES.get(), true, true, true, consumer);
+
 		buildSteel(consumer);
 		buildAsphalt(consumer);
 	}

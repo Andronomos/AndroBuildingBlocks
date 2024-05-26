@@ -255,6 +255,8 @@ public class BlockRegistry {
 
 	public static Supplier<Block> MARBLE_PILLAR;
 
+	public static Supplier<Block> CAUTION_STRIPES;
+
 	public static Supplier<Block> TEXTURE_TEST_ONE;
 	public static Supplier<Block> TEXTURE_TEST_TWO;
 
@@ -485,6 +487,8 @@ public class BlockRegistry {
 		POLISHED_MARBLE_WALL = registerWallBlock("polished_marble_wall", GENERIC_PROPERTIES);
 
 		MARBLE_PILLAR = registerBlock("marble_pillar", () -> new RotatedPillarBlock(GENERIC_PROPERTIES));
+
+		CAUTION_STRIPES = registerBlock("caution_stripes", () -> new Block(GENERIC_PROPERTIES));
 
 		TEXTURE_TEST_ONE = registerBlock("texture_test_one", () -> new Block(GENERIC_PROPERTIES));
 		TEXTURE_TEST_TWO = registerBlock("texture_test_two", () -> new Block(GENERIC_PROPERTIES));

@@ -39,6 +39,7 @@ public class CreativeTabRegistry {
 			.icon(BlockRegistry.WHITE_REINFORCED_CONCRETE.get().asItem()::getDefaultInstance)
 			.displayItems((parameters, output) -> {
 				BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> isModernBlock(block)).forEach(block -> output.accept(block));
+				output.accept(BlockRegistry.CAUTION_STRIPES.get());
 			})
 			.build());
 
