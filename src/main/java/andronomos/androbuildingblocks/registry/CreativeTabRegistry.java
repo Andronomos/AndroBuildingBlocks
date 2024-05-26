@@ -16,7 +16,7 @@ import java.util.Objects;
 public class CreativeTabRegistry {
 	public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AndroBuildingBlocks.MODID);
 
-	private static List<String> modernBlocks = Arrays.asList(
+	private static final List<String> modernBlocks = Arrays.asList(
 			"reinforced_concrete",
 			"structural_glass",
 			"steel",

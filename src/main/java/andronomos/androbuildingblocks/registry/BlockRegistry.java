@@ -4,6 +4,7 @@ import andronomos.androbuildingblocks.AndroBuildingBlocks;
 import andronomos.androbuildingblocks.block.CatwalkBlock;
 import andronomos.androbuildingblocks.block.CatwalkRailingBlock;
 import andronomos.androbuildingblocks.block.CatwalkStepBlock;
+import andronomos.androbuildingblocks.block.MultiPartBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
@@ -205,6 +206,7 @@ public class BlockRegistry {
 	public static RegistryObject<SlabBlock> STEEL_SLAB;
 
 	public static RegistryObject<Block> STEEL_PILLAR;
+	public static RegistryObject<Block> STEEL_BARS;
 
 	public static RegistryObject<Block> CUT_STEEL;
 	public static RegistryObject<StairBlock> CUT_STEEL_STAIRS;

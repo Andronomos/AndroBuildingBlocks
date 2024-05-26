@@ -1,5 +1,6 @@
 package andronomos.androbuildingblocks.block;
 
+import andronomos.androbuildingblocks.AndroBuildingBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -71,6 +72,24 @@ public class CatwalkRailingBlock extends Block implements SimpleWaterloggedBlock
 	public BlockState getStateForPlacement(BlockPlaceContext ctx) {
 		Direction facing = ctx.getHorizontalDirection();
 		FluidState fluid = ctx.getLevel().getFluidState(ctx.getClickedPos());
+
+		BlockGetter blockgetter = ctx.getLevel();
+		BlockPos blockpos = ctx.getClickedPos();
+
+		BlockState blockstate = blockgetter.getBlockState(blockpos.north());
+		BlockState blockstate1 = blockgetter.getBlockState(blockpos.south());
+		BlockState blockstate2 = blockgetter.getBlockState(blockpos.west());
+		BlockState blockstate3 = blockgetter.getBlockState(blockpos.east());
+
+		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlock#getStateForPlacement | facing: %s", facing));
+		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlock#getStateForPlacement | blockpos: %s", blockpos));
+
+		//if() {
+		//
+		//}
+
+
+
 		return defaultBlockState()
 				.setValue(NORTH_FENCE, (facing == Direction.NORTH))
 				.setValue(SOUTH_FENCE, (facing == Direction.SOUTH))

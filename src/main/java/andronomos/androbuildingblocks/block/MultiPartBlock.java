@@ -78,7 +78,7 @@ public class MultiPartBlock extends Block {
 	@Override
 	public @NotNull InteractionResult use(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos,
 										  @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hitResult) {
-		if (state == null || !(state.getBlock() instanceof MultiPartBlock) || level == null)
+		if (!(state.getBlock() instanceof MultiPartBlock) || level == null)
 		{
 			return InteractionResult.PASS;
 		}
@@ -91,7 +91,7 @@ public class MultiPartBlock extends Block {
 			blockInHand = ((BlockItem)itemInHand).getBlock();
 		}
 
-		if(blockInHand  == null || !(blockInHand instanceof MultiPartBlock)) {
+		if(!(blockInHand instanceof MultiPartBlock)) {
 			return InteractionResult.PASS;
 		}
 
