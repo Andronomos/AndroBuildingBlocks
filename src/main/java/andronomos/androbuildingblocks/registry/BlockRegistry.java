@@ -206,7 +206,6 @@ public class BlockRegistry {
 	public static RegistryObject<SlabBlock> STEEL_SLAB;
 
 	public static RegistryObject<Block> STEEL_PILLAR;
-	public static RegistryObject<Block> STEEL_BARS;
 
 	public static RegistryObject<Block> CUT_STEEL;
 	public static RegistryObject<StairBlock> CUT_STEEL_STAIRS;
@@ -443,7 +442,6 @@ public class BlockRegistry {
 		STEEL_SLAB = registerSlabBlock("steel_slab", METAL_PROPERTIES);
 
 		STEEL_PILLAR = registerBlock("steel_pillar", () -> new RotatedPillarBlock(METAL_PROPERTIES));
-		STEEL_BARS = registerBlock("steel_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BARS)));
 
 		CUT_STEEL = registerBlock("cut_steel", () -> new Block(METAL_PROPERTIES));
 		CUT_STEEL_STAIRS = registerStairBlock("cut_steel_stairs", CUT_STEEL, METAL_PROPERTIES);
