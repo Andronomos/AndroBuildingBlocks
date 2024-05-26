@@ -1,18 +1,24 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "category": "building",
-  "ingredients": [
-    {
+  "key": {
+    "1": {
       "item": "minecraft:stone"
     },
-    {
+    "2": {
       "item": "minecraft:yellow_dye"
     },
-    {
+    "3": {
       "item": "minecraft:black_dye"
     }
+  },
+  "pattern": [
+    "323",
+    "212",
+    "323"
   ],
   "result": {
     "item": "androbuildingblocks:caution_stripes"
-  }
+  },
+  "show_notification": true
 }
