@@ -259,9 +259,6 @@ public class BlockRegistry {
 	public static Supplier<Block> TEXTURE_TEST_ONE;
 	public static Supplier<Block> TEXTURE_TEST_TWO;
 
-	public static Supplier<Block> WHITE_LAMP;
-	public static Supplier<Block> RED_LAMP;
-
 	public static Supplier<Block> MULTIPART_BLOCK;
 
 	public static void register() {
@@ -500,7 +497,7 @@ public class BlockRegistry {
 		for(DyeColor color : DyeColor.values()) {
 			registerGlassBlock(color + "_structural_glass", color);
 			registerStainedGlassPaneBlock(color + "_structural_glass_pane", color);
-			registerLampBlock(color + "_lamp");
+			//registerLampBlock(color + "_lamp");
 		}
 	}
 
