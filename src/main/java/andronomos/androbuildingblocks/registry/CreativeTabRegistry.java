@@ -47,7 +47,8 @@ public class CreativeTabRegistry {
 			.title(Component.translatable("creativetab.androbuildingblocks_dev_tab"))
 			.icon(BlockRegistry.TEXTURE_TEST_ONE.get().asItem()::getDefaultInstance)
 			.displayItems((parameters, output) -> {
-				output.accept(ItemRegistry.SANDPAPER.get());
+				output.accept(BlockRegistry.TEXTURE_TEST_ONE.get());
+				output.accept(BlockRegistry.TEXTURE_TEST_TWO.get());
 			})
 			.build());
 
@@ -122,8 +123,6 @@ public class CreativeTabRegistry {
 				output.accept(BlockRegistry.POLISHED_MARBLE_WALL.get());
 				output.accept(BlockRegistry.POLISHED_MARBLE_SLAB.get());
 				output.accept(BlockRegistry.MARBLE_PILLAR.get());
-				output.accept(BlockRegistry.TEXTURE_TEST_ONE.get());
-				output.accept(BlockRegistry.TEXTURE_TEST_TWO.get());
 			})
 			.build());
 
