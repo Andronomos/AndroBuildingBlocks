@@ -1,10 +1,9 @@
 package andronomos.androbuildingblocks.block;
 
-import andronomos.androbuildingblocks.AndroBuildingBlocks;
-import andronomos.androbuildingblocks.registry.BlockRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -73,30 +72,8 @@ public class CatwalkRailingBlock extends Block implements SimpleWaterloggedBlock
 	@Nullable
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext ctx) {
-		BlockGetter blockgetter = ctx.getLevel();
-		BlockPos clickedPos = ctx.getClickedPos();
-		BlockState blockstateBelow = blockgetter.getBlockState(clickedPos.below());
-
-		//if(blockstateBelow != BlockRegistry.STEEL_CATWALK.get().defaultBlockState()) {
-		//	return null;
-		//}
-
 		Direction facing = ctx.getHorizontalDirection();
 		FluidState fluid = ctx.getLevel().getFluidState(ctx.getClickedPos());
-		Player player = ctx.getPlayer();
-		Direction playerFacing = player.getDirection();
-
-		//BlockState blockstate = blockgetter.getBlockState(clickedPos.north());
-		//BlockState blockstate1 = blockgetter.getBlockState(clickedPos.south());
-		//BlockState blockstate2 = blockgetter.getBlockState(clickedPos.west());
-		//BlockState blockstate3 = blockgetter.getBlockState(clickedPos.east());
-
-		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlock#getStateForPlacement | facing: %s", facing));
-		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlock#getStateForPlacement | clickedPos: %s", clickedPos));
-		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlock#getStateForPlacement | playerFacing: %s", playerFacing));
-		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlock#getStateForPlacement | clicked blockstate: %s", blockgetter.getBlockState(clickedPos)));
-		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlock#getStateForPlacement | blockstateBelow: %s", blockstateBelow));
-
 
 		return defaultBlockState()
 				.setValue(NORTH_FENCE, (facing == Direction.NORTH))
@@ -140,12 +117,20 @@ public class CatwalkRailingBlock extends Block implements SimpleWaterloggedBlock
 		return !safe;
 	}
 
-	public static BooleanProperty fromDirection(Direction face) {
-		return switch (face) {
+	public static BooleanProperty fromDirection(Direction dir) {
+		return switch (dir) {
 			case SOUTH -> SOUTH_FENCE;
 			case EAST  -> EAST_FENCE;
 			case WEST  -> WEST_FENCE;
 			default -> NORTH_FENCE;
 		};
+	}
+
+	public static boolean isRailing(ItemStack stack) {
+		return (stack.getItem() instanceof BlockItem) && isRailing(((BlockItem)stack.getItem()).getBlock());
+	}
+
+	public static boolean isRailing (Block block) {
+		return block instanceof CatwalkRailingBlock;
 	}
 }
