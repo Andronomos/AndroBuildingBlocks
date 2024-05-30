@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "androbuildingblocks:cut_steel"
-  },
-  "result": "androbuildingblocks:cut_steel_slab"
-}

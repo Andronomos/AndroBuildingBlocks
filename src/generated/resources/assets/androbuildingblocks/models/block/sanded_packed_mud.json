@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "androbuildingblocks:block/sanded_packed_mud"
-  }
-}

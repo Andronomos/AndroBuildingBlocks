@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "androbuildingblocks:block/dark_prismarine_bricks",
-    "side": "androbuildingblocks:block/dark_prismarine_bricks",
-    "top": "androbuildingblocks:block/dark_prismarine_bricks"
-  }
-}

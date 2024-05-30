@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "androbuildingblocks:block/basalt_bricks",
-    "side": "androbuildingblocks:block/basalt_bricks",
-    "top": "androbuildingblocks:block/basalt_bricks"
-  }
-}

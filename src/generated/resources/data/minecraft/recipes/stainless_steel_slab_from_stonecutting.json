@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "androbuildingblocks:stainless_steel"
-  },
-  "result": "androbuildingblocks:stainless_steel_slab"
-}

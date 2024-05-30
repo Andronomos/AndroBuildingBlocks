@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "androbuildingblocks:sanded_dripstone"
-  },
-  "result": "androbuildingblocks:sanded_dripstone_stairs"
-}

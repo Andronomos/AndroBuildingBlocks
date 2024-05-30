@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "androbuildingblocks:sanded_andesite"
-  },
-  "result": "androbuildingblocks:sanded_andesite_wall"
-}

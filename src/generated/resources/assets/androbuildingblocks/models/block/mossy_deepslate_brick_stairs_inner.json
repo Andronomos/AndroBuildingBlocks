@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "androbuildingblocks:block/mossy_deepslate_bricks",
-    "side": "androbuildingblocks:block/mossy_deepslate_bricks",
-    "top": "androbuildingblocks:block/mossy_deepslate_bricks"
-  }
-}

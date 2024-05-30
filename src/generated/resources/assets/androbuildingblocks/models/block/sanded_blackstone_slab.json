@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "androbuildingblocks:block/sanded_blackstone",
-    "side": "androbuildingblocks:block/sanded_blackstone",
-    "top": "androbuildingblocks:block/sanded_blackstone"
-  }
-}

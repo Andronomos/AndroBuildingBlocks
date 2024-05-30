@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "androbuildingblocks:green_reinforced_concrete_tile"
-  },
-  "result": "androbuildingblocks:green_reinforced_concrete_tile_wall"
-}

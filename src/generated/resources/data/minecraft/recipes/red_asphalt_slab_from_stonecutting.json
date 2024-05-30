@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "androbuildingblocks:red_asphalt"
-  },
-  "result": "androbuildingblocks:red_asphalt_slab"
-}
