@@ -16,15 +16,6 @@ import java.util.Objects;
 public class CreativeTabRegistry {
 	public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AndroBuildingBlocks.MODID);
 
-	private static final List<String> modernBlocks = Arrays.asList(
-			"reinforced_concrete",
-			"structural_glass",
-			"steel",
-			"asphalt",
-			"lamp",
-			"catwalk"
-	);
-
 	public static final RegistryObject<CreativeModeTab> ANDROBUILDINGBLOCKS_ITEMS_TAB = CREATIVE_MODE_TABS.register("androbuildingblocks_items_tab", () -> CreativeModeTab.builder()
 			.title(Component.translatable("creativetab.androbuildingblocks_items_tab"))
 			.icon(ItemRegistry.SANDPAPER.get()::getDefaultInstance)
@@ -38,7 +29,19 @@ public class CreativeTabRegistry {
 			.title(Component.translatable("creativetab.androbuildingblocks_modern_tab"))
 			.icon(BlockRegistry.WHITE_REINFORCED_CONCRETE.get().asItem()::getDefaultInstance)
 			.displayItems((parameters, output) -> {
-				BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> isModernBlock(block)).forEach(block -> output.accept(block));
+				//BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).filter(block -> isModernBlock(block)).forEach(block -> output.accept(block));
+				BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
+					String blockPath = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
+
+					if(blockPath.contains("asphalt") || blockPath.contains("reinforced_concrete") || blockPath.contains("structural_glass")) {
+						output.accept(block);
+					}
+
+					if(blockPath.contains("steel") && !blockPath.contains("catwalk")) {
+						output.accept(block);
+					}
+
+				});
 				output.accept(BlockRegistry.CAUTION_STRIPES.get());
 			})
 			.build());
@@ -49,6 +52,9 @@ public class CreativeTabRegistry {
 			.displayItems((parameters, output) -> {
 				output.accept(BlockRegistry.TEXTURE_TEST_ONE.get());
 				output.accept(BlockRegistry.TEXTURE_TEST_TWO.get());
+				output.accept(BlockRegistry.STEEL_CATWALK.get());
+				output.accept(BlockRegistry.STEEL_CATWALK_RAIL.get());
+				output.accept(BlockRegistry.STEEL_CATWALK_STEP.get());
 			})
 			.build());
 
@@ -125,9 +131,4 @@ public class CreativeTabRegistry {
 				output.accept(BlockRegistry.MARBLE_PILLAR.get());
 			})
 			.build());
-
-	private static boolean isModernBlock(Block block) {
-		String blockPath = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
-		return modernBlocks.stream().anyMatch(blockPath::contains);
-	}
 }
