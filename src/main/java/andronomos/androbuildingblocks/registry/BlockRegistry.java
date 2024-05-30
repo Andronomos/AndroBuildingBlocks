@@ -4,7 +4,6 @@ import andronomos.androbuildingblocks.AndroBuildingBlocks;
 import andronomos.androbuildingblocks.block.CatwalkBlock;
 import andronomos.androbuildingblocks.block.CatwalkRailingBlock;
 import andronomos.androbuildingblocks.block.CatwalkStepBlock;
-import andronomos.androbuildingblocks.block.MultiPartBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
@@ -269,8 +268,6 @@ public class BlockRegistry {
 	public static Supplier<Block> TEXTURE_TEST_ONE;
 	public static Supplier<Block> TEXTURE_TEST_TWO;
 
-	public static Supplier<Block> MULTIPART_BLOCK;
-
 	public static void register() {
 		//region concrete
 		BLACK_REINFORCED_CONCRETE = registerBlockWithItem("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
@@ -509,8 +506,6 @@ public class BlockRegistry {
 
 		TEXTURE_TEST_ONE = registerBlockWithItem("texture_test_one", () -> new Block(GENERIC_PROPERTIES));
 		TEXTURE_TEST_TWO = registerBlockWithItem("texture_test_two", () -> new Block(GENERIC_PROPERTIES));
-
-		MULTIPART_BLOCK = registerBlockWithItem("multipart_block", () -> new MultiPartBlock(GENERIC_PROPERTIES));
 
 		for(DyeColor color : DyeColor.values()) {
 			registerGlassBlock(color + "_structural_glass", color);
