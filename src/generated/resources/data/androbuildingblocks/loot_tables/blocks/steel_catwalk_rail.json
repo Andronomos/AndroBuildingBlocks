@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:air"
+          "name": "androbuildingblocks:steel_catwalk_rail"
         }
       ],
       "rolls": 1.0
