@@ -29,6 +29,7 @@ public class BlockRegistry {
 
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AndroBuildingBlocks.MODID);
 
+	//region concrete
 	public static RegistryObject<Block> BLACK_REINFORCED_CONCRETE;
 	public static RegistryObject<StairBlock> BLACK_REINFORCED_CONCRETE_STAIRS;
 	public static RegistryObject<WallBlock> BLACK_REINFORCED_CONCRETE_WALL;
@@ -109,7 +110,9 @@ public class BlockRegistry {
 	public static RegistryObject<StairBlock> WHITE_REINFORCED_CONCRETE_TILE_STAIRS;
 	public static RegistryObject<WallBlock> WHITE_REINFORCED_CONCRETE_TILE_WALL;
 	public static RegistryObject<SlabBlock> WHITE_REINFORCED_CONCRETE_TILE_SLAB;
+	//endregion
 
+	//region sanded
 	public static RegistryObject<Block> SANDED_ANDESITE;
 	public static RegistryObject<StairBlock> SANDED_ANDESITE_STAIRS;
 	public static RegistryObject<WallBlock> SANDED_ANDESITE_WALL;
@@ -179,7 +182,9 @@ public class BlockRegistry {
 	public static RegistryObject<StairBlock> SANDED_TUFF_STAIRS;
 	public static RegistryObject<WallBlock> SANDED_TUFF_WALL;
 	public static RegistryObject<SlabBlock> SANDED_TUFF_SLAB;
+	//endregion
 
+	//region misc
 	public static RegistryObject<Block> MOSSY_COBBLED_DEEPLSATE;
 	public static RegistryObject<StairBlock> MOSSY_COBBLED_DEEPLSATE_STAIRS;
 	public static RegistryObject<WallBlock> MOSSY_COBBLED_DEEPLSATE_WALL;
@@ -200,6 +205,22 @@ public class BlockRegistry {
 	public static RegistryObject<WallBlock> BASALT_BRICK_WALL;
 	public static RegistryObject<SlabBlock> BASALT_BRICK_SLAB;
 
+	public static Supplier<Block> MARBLE;
+	public static RegistryObject<StairBlock> MARBLE_STAIRS;
+	public static RegistryObject<SlabBlock> MARBLE_SLAB;
+	public static RegistryObject<WallBlock> MARBLE_WALL;
+
+	public static Supplier<Block> POLISHED_MARBLE;
+	public static RegistryObject<StairBlock> POLISHED_MARBLE_STAIRS;
+	public static RegistryObject<SlabBlock> POLISHED_MARBLE_SLAB;
+	public static RegistryObject<WallBlock> POLISHED_MARBLE_WALL;
+
+	public static Supplier<Block> MARBLE_PILLAR;
+
+	public static Supplier<Block> CAUTION_STRIPES;
+	//endregion
+
+	//region steel
 	public static RegistryObject<Block> STEEL_BLOCK;
 	public static RegistryObject<StairBlock> STEEL_STAIRS;
 	public static RegistryObject<WallBlock> STEEL_WALL;
@@ -225,7 +246,9 @@ public class BlockRegistry {
 	public static Supplier<Block> STEEL_CATWALK;
 	public static Supplier<Block> STEEL_CATWALK_STEP;
 	public static Supplier<Block> STEEL_CATWALK_RAIL;
+	//endregion
 
+	//region asphalt
 	public static Supplier<Block> ASPHALT;
 	public static RegistryObject<StairBlock> ASPHALT_STAIRS;
 	public static RegistryObject<SlabBlock> ASPHALT_SLAB;
@@ -241,20 +264,7 @@ public class BlockRegistry {
 	public static Supplier<Block> GREEN_ASPHALT;
 	public static RegistryObject<StairBlock> GREEN_ASPHALT_STAIRS;
 	public static RegistryObject<SlabBlock> GREEN_ASPHALT_SLAB;
-
-	public static Supplier<Block> MARBLE;
-	public static RegistryObject<StairBlock> MARBLE_STAIRS;
-	public static RegistryObject<SlabBlock> MARBLE_SLAB;
-	public static RegistryObject<WallBlock> MARBLE_WALL;
-
-	public static Supplier<Block> POLISHED_MARBLE;
-	public static RegistryObject<StairBlock> POLISHED_MARBLE_STAIRS;
-	public static RegistryObject<SlabBlock> POLISHED_MARBLE_SLAB;
-	public static RegistryObject<WallBlock> POLISHED_MARBLE_WALL;
-
-	public static Supplier<Block> MARBLE_PILLAR;
-
-	public static Supplier<Block> CAUTION_STRIPES;
+	//endregion
 
 	public static Supplier<Block> TEXTURE_TEST_ONE;
 	public static Supplier<Block> TEXTURE_TEST_TWO;
