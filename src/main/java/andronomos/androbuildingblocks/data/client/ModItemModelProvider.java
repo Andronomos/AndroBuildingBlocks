@@ -15,7 +15,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 	protected void registerModels() {
 		createSingleTexture("sandpaper");
 		createSingleTexture("steel_ingot");
-		withExistingParent("steel_catwalk_rail", modLoc("block/steel_catwalk_rail"));
+		//withExistingParent("steel_catwalk_rail", modLoc("block/steel_catwalk_rail"));
 	}
 
 	private ItemModelBuilder createSingleTexture(String name) {
