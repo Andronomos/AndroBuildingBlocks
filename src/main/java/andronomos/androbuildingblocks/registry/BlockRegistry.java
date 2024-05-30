@@ -262,237 +262,237 @@ public class BlockRegistry {
 	public static Supplier<Block> MULTIPART_BLOCK;
 
 	public static void register() {
-		BLACK_REINFORCED_CONCRETE = registerBlock("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
+		BLACK_REINFORCED_CONCRETE = registerBlockWithItem("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
 		BLACK_REINFORCED_CONCRETE_STAIRS = registerStairBlock("black_reinforced_concrete_stairs", BLACK_REINFORCED_CONCRETE, REINFORCED_CONCRETE_PROPERTIES);
 		BLACK_REINFORCED_CONCRETE_WALL = registerWallBlock("black_reinforced_concrete_wall", REINFORCED_CONCRETE_PROPERTIES);
 		BLACK_REINFORCED_CONCRETE_SLAB = registerSlabBlock("black_reinforced_concrete_slab", REINFORCED_CONCRETE_PROPERTIES);
-		BLACK_REINFORCED_CONCRETE_TILE = registerBlock("black_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
+		BLACK_REINFORCED_CONCRETE_TILE = registerBlockWithItem("black_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
 		BLACK_REINFORCED_CONCRETE_TILE_STAIRS = registerStairBlock("black_reinforced_concrete_tile_stairs", BLACK_REINFORCED_CONCRETE_TILE, REINFORCED_CONCRETE_PROPERTIES);
 		BLACK_REINFORCED_CONCRETE_TILE_WALL = registerWallBlock("black_reinforced_concrete_tile_wall", REINFORCED_CONCRETE_PROPERTIES);
 		BLACK_REINFORCED_CONCRETE_TILE_SLAB = registerSlabBlock("black_reinforced_concrete_tile_slab", REINFORCED_CONCRETE_PROPERTIES);
 
-		BLUE_REINFORCED_CONCRETE = registerBlock("blue_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
+		BLUE_REINFORCED_CONCRETE = registerBlockWithItem("blue_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
 		BLUE_REINFORCED_CONCRETE_STAIRS = registerStairBlock("blue_reinforced_concrete_stairs", BLUE_REINFORCED_CONCRETE, REINFORCED_CONCRETE_PROPERTIES);
 		BLUE_REINFORCED_CONCRETE_WALL = registerWallBlock("blue_reinforced_concrete_wall", REINFORCED_CONCRETE_PROPERTIES);
 		BLUE_REINFORCED_CONCRETE_SLAB = registerSlabBlock("blue_reinforced_concrete_slab", REINFORCED_CONCRETE_PROPERTIES);
-		BLUE_REINFORCED_CONCRETE_TILE = registerBlock("blue_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
+		BLUE_REINFORCED_CONCRETE_TILE = registerBlockWithItem("blue_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
 		BLUE_REINFORCED_CONCRETE_TILE_STAIRS = registerStairBlock("blue_reinforced_concrete_tile_stairs", BLUE_REINFORCED_CONCRETE_TILE, REINFORCED_CONCRETE_PROPERTIES);
 		BLUE_REINFORCED_CONCRETE_TILE_WALL = registerWallBlock("blue_reinforced_concrete_tile_wall", REINFORCED_CONCRETE_PROPERTIES);
 		BLUE_REINFORCED_CONCRETE_TILE_SLAB = registerSlabBlock("blue_reinforced_concrete_tile_slab", REINFORCED_CONCRETE_PROPERTIES);
 
-		BROWN_REINFORCED_CONCRETE = registerBlock("brown_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
+		BROWN_REINFORCED_CONCRETE = registerBlockWithItem("brown_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
 		BROWN_REINFORCED_CONCRETE_STAIRS = registerStairBlock("brown_reinforced_concrete_stairs", BROWN_REINFORCED_CONCRETE, REINFORCED_CONCRETE_PROPERTIES);
 		BROWN_REINFORCED_CONCRETE_WALL = registerWallBlock("brown_reinforced_concrete_wall", REINFORCED_CONCRETE_PROPERTIES);
 		BROWN_REINFORCED_CONCRETE_SLAB = registerSlabBlock("brown_reinforced_concrete_slab", REINFORCED_CONCRETE_PROPERTIES);
-		BROWN_REINFORCED_CONCRETE_TILE = registerBlock("brown_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
+		BROWN_REINFORCED_CONCRETE_TILE = registerBlockWithItem("brown_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
 		BROWN_REINFORCED_CONCRETE_TILE_STAIRS = registerStairBlock("brown_reinforced_concrete_tile_stairs", BROWN_REINFORCED_CONCRETE_TILE, REINFORCED_CONCRETE_PROPERTIES);
 		BROWN_REINFORCED_CONCRETE_TILE_WALL = registerWallBlock("brown_reinforced_concrete_tile_wall", REINFORCED_CONCRETE_PROPERTIES);
 		BROWN_REINFORCED_CONCRETE_TILE_SLAB = registerSlabBlock("brown_reinforced_concrete_tile_slab", REINFORCED_CONCRETE_PROPERTIES);
 
-		GREEN_REINFORCED_CONCRETE = registerBlock("green_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
+		GREEN_REINFORCED_CONCRETE = registerBlockWithItem("green_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
 		GREEN_REINFORCED_CONCRETE_STAIRS = registerStairBlock("green_reinforced_concrete_stairs", GREEN_REINFORCED_CONCRETE, REINFORCED_CONCRETE_PROPERTIES);
 		GREEN_REINFORCED_CONCRETE_WALL = registerWallBlock("green_reinforced_concrete_wall", REINFORCED_CONCRETE_PROPERTIES);
 		GREEN_REINFORCED_CONCRETE_SLAB = registerSlabBlock("green_reinforced_concrete_slab", REINFORCED_CONCRETE_PROPERTIES);
-		GREEN_REINFORCED_CONCRETE_TILE = registerBlock("green_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
+		GREEN_REINFORCED_CONCRETE_TILE = registerBlockWithItem("green_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
 		GREEN_REINFORCED_CONCRETE_TILE_STAIRS = registerStairBlock("green_reinforced_concrete_tile_stairs", GREEN_REINFORCED_CONCRETE_TILE, REINFORCED_CONCRETE_PROPERTIES);
 		GREEN_REINFORCED_CONCRETE_TILE_WALL = registerWallBlock("green_reinforced_concrete_tile_wall", REINFORCED_CONCRETE_PROPERTIES);
 		GREEN_REINFORCED_CONCRETE_TILE_SLAB = registerSlabBlock("green_reinforced_concrete_tile_slab", REINFORCED_CONCRETE_PROPERTIES);
 
-		GRAY_REINFORCED_CONCRETE = registerBlock("gray_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
+		GRAY_REINFORCED_CONCRETE = registerBlockWithItem("gray_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
 		GRAY_REINFORCED_CONCRETE_STAIRS = registerStairBlock("gray_reinforced_concrete_stairs", GRAY_REINFORCED_CONCRETE, REINFORCED_CONCRETE_PROPERTIES);
 		GRAY_REINFORCED_CONCRETE_WALL = registerWallBlock("gray_reinforced_concrete_wall", REINFORCED_CONCRETE_PROPERTIES);
 		GRAY_REINFORCED_CONCRETE_SLAB = registerSlabBlock("gray_reinforced_concrete_slab", REINFORCED_CONCRETE_PROPERTIES);
-		GRAY_REINFORCED_CONCRETE_TILE = registerBlock("gray_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
+		GRAY_REINFORCED_CONCRETE_TILE = registerBlockWithItem("gray_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
 		GRAY_REINFORCED_CONCRETE_TILE_STAIRS = registerStairBlock("gray_reinforced_concrete_tile_stairs", GRAY_REINFORCED_CONCRETE_TILE, REINFORCED_CONCRETE_PROPERTIES);
 		GRAY_REINFORCED_CONCRETE_TILE_WALL = registerWallBlock("gray_reinforced_concrete_tile_wall", REINFORCED_CONCRETE_PROPERTIES);
 		GRAY_REINFORCED_CONCRETE_TILE_SLAB = registerSlabBlock("gray_reinforced_concrete_tile_slab", REINFORCED_CONCRETE_PROPERTIES);
 
-		PURPLE_REINFORCED_CONCRETE = registerBlock("purple_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
+		PURPLE_REINFORCED_CONCRETE = registerBlockWithItem("purple_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
 		PURPLE_REINFORCED_CONCRETE_STAIRS = registerStairBlock("purple_reinforced_concrete_stairs", PURPLE_REINFORCED_CONCRETE, REINFORCED_CONCRETE_PROPERTIES);
 		PURPLE_REINFORCED_CONCRETE_WALL = registerWallBlock("purple_reinforced_concrete_wall", REINFORCED_CONCRETE_PROPERTIES);
 		PURPLE_REINFORCED_CONCRETE_SLAB = registerSlabBlock("purple_reinforced_concrete_slab", REINFORCED_CONCRETE_PROPERTIES);
-		PURPLE_REINFORCED_CONCRETE_TILE = registerBlock("purple_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
+		PURPLE_REINFORCED_CONCRETE_TILE = registerBlockWithItem("purple_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
 		PURPLE_REINFORCED_CONCRETE_TILE_STAIRS = registerStairBlock("purple_reinforced_concrete_tile_stairs", PURPLE_REINFORCED_CONCRETE_TILE, REINFORCED_CONCRETE_PROPERTIES);
 		PURPLE_REINFORCED_CONCRETE_TILE_WALL = registerWallBlock("purple_reinforced_concrete_tile_wall", REINFORCED_CONCRETE_PROPERTIES);
 		PURPLE_REINFORCED_CONCRETE_TILE_SLAB = registerSlabBlock("purple_reinforced_concrete_tile_slab", REINFORCED_CONCRETE_PROPERTIES);
 
-		PINK_REINFORCED_CONCRETE = registerBlock("pink_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
+		PINK_REINFORCED_CONCRETE = registerBlockWithItem("pink_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
 		PINK_REINFORCED_CONCRETE_STAIRS = registerStairBlock("pink_reinforced_concrete_stairs", PINK_REINFORCED_CONCRETE, REINFORCED_CONCRETE_PROPERTIES);
 		PINK_REINFORCED_CONCRETE_WALL = registerWallBlock("pink_reinforced_concrete_wall", REINFORCED_CONCRETE_PROPERTIES);
 		PINK_REINFORCED_CONCRETE_SLAB = registerSlabBlock("pink_reinforced_concrete_slab", REINFORCED_CONCRETE_PROPERTIES);
-		PINK_REINFORCED_CONCRETE_TILE = registerBlock("pink_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
+		PINK_REINFORCED_CONCRETE_TILE = registerBlockWithItem("pink_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
 		PINK_REINFORCED_CONCRETE_TILE_STAIRS = registerStairBlock("pink_reinforced_concrete_tile_stairs", PINK_REINFORCED_CONCRETE_TILE, REINFORCED_CONCRETE_PROPERTIES);
 		PINK_REINFORCED_CONCRETE_TILE_WALL = registerWallBlock("pink_reinforced_concrete_tile_wall", REINFORCED_CONCRETE_PROPERTIES);
 		PINK_REINFORCED_CONCRETE_TILE_SLAB = registerSlabBlock("pink_reinforced_concrete_tile_slab", REINFORCED_CONCRETE_PROPERTIES);
 
-		RED_REINFORCED_CONCRETE = registerBlock("red_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
+		RED_REINFORCED_CONCRETE = registerBlockWithItem("red_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
 		RED_REINFORCED_CONCRETE_STAIRS = registerStairBlock("red_reinforced_concrete_stairs", RED_REINFORCED_CONCRETE, REINFORCED_CONCRETE_PROPERTIES);
 		RED_REINFORCED_CONCRETE_WALL = registerWallBlock("red_reinforced_concrete_wall", REINFORCED_CONCRETE_PROPERTIES);
 		RED_REINFORCED_CONCRETE_SLAB = registerSlabBlock("red_reinforced_concrete_slab", REINFORCED_CONCRETE_PROPERTIES);
-		RED_REINFORCED_CONCRETE_TILE = registerBlock("red_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
+		RED_REINFORCED_CONCRETE_TILE = registerBlockWithItem("red_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
 		RED_REINFORCED_CONCRETE_TILE_STAIRS = registerStairBlock("red_reinforced_concrete_tile_stairs", RED_REINFORCED_CONCRETE_TILE, REINFORCED_CONCRETE_PROPERTIES);
 		RED_REINFORCED_CONCRETE_TILE_WALL = registerWallBlock("red_reinforced_concrete_tile_wall", REINFORCED_CONCRETE_PROPERTIES);
 		RED_REINFORCED_CONCRETE_TILE_SLAB = registerSlabBlock("red_reinforced_concrete_tile_slab", REINFORCED_CONCRETE_PROPERTIES);
 
-		WHITE_REINFORCED_CONCRETE = registerBlock("white_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
+		WHITE_REINFORCED_CONCRETE = registerBlockWithItem("white_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
 		WHITE_REINFORCED_CONCRETE_STAIRS = registerStairBlock("white_reinforced_concrete_stairs", WHITE_REINFORCED_CONCRETE, REINFORCED_CONCRETE_PROPERTIES);
 		WHITE_REINFORCED_CONCRETE_WALL = registerWallBlock("white_reinforced_concrete_wall", REINFORCED_CONCRETE_PROPERTIES);
 		WHITE_REINFORCED_CONCRETE_SLAB = registerSlabBlock("white_reinforced_concrete_slab", REINFORCED_CONCRETE_PROPERTIES);
-		WHITE_REINFORCED_CONCRETE_TILE = registerBlock("white_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
+		WHITE_REINFORCED_CONCRETE_TILE = registerBlockWithItem("white_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
 		WHITE_REINFORCED_CONCRETE_TILE_STAIRS = registerStairBlock("white_reinforced_concrete_tile_stairs", WHITE_REINFORCED_CONCRETE_TILE, REINFORCED_CONCRETE_PROPERTIES);
 		WHITE_REINFORCED_CONCRETE_TILE_WALL = registerWallBlock("white_reinforced_concrete_tile_wall", REINFORCED_CONCRETE_PROPERTIES);
 		WHITE_REINFORCED_CONCRETE_TILE_SLAB = registerSlabBlock("white_reinforced_concrete_tile_slab", REINFORCED_CONCRETE_PROPERTIES);
 
-		SANDED_ANDESITE = registerBlock("sanded_andesite", BlockBehaviour.Properties.copy(Blocks.ANDESITE));
+		SANDED_ANDESITE = registerBlockWithItem("sanded_andesite", BlockBehaviour.Properties.copy(Blocks.ANDESITE));
 		SANDED_ANDESITE_STAIRS = registerStairBlock("sanded_andesite_stairs", SANDED_ANDESITE, BlockBehaviour.Properties.copy(Blocks.ANDESITE));
 		SANDED_ANDESITE_WALL = registerWallBlock("sanded_andesite_wall", BlockBehaviour.Properties.copy(Blocks.ANDESITE));
 		SANDED_ANDESITE_SLAB = registerSlabBlock("sanded_andesite_slab", BlockBehaviour.Properties.copy(Blocks.ANDESITE));
 
-		SANDED_DARK_PRISMARINE = registerBlock("sanded_dark_prismarine", DARK_PRISMARINE_PROPERTIES);
+		SANDED_DARK_PRISMARINE = registerBlockWithItem("sanded_dark_prismarine", DARK_PRISMARINE_PROPERTIES);
 		SANDED_DARK_PRISMARINE_STAIRS = registerStairBlock("sanded_dark_prismarine_stairs", SANDED_DARK_PRISMARINE, DARK_PRISMARINE_PROPERTIES);
 		SANDED_DARK_PRISMARINE_WALL = registerWallBlock("sanded_dark_prismarine_wall", DARK_PRISMARINE_PROPERTIES);
 		SANDED_DARK_PRISMARINE_SLAB = registerSlabBlock("sanded_dark_prismarine_slab", DARK_PRISMARINE_PROPERTIES);
 
-		SANDED_GRANITE = registerBlock("sanded_granite", BlockBehaviour.Properties.copy(Blocks.GRANITE));
+		SANDED_GRANITE = registerBlockWithItem("sanded_granite", BlockBehaviour.Properties.copy(Blocks.GRANITE));
 		SANDED_GRANITE_STAIRS = registerStairBlock("sanded_granite_stairs", SANDED_GRANITE, BlockBehaviour.Properties.copy(Blocks.GRANITE));
 		SANDED_GRANITE_WALL = registerWallBlock("sanded_granite_wall", BlockBehaviour.Properties.copy(Blocks.GRANITE));
 		SANDED_GRANITE_SLAB = registerSlabBlock("sanded_granite_slab", BlockBehaviour.Properties.copy(Blocks.GRANITE));
 
-		SANDED_DEEPSLATE = registerBlock("sanded_deepslate", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE));
+		SANDED_DEEPSLATE = registerBlockWithItem("sanded_deepslate", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE));
 		SANDED_DEEPSLATE_STAIRS = registerStairBlock("sanded_deepslate_stairs", SANDED_DEEPSLATE, BlockBehaviour.Properties.copy(Blocks.DEEPSLATE));
 		SANDED_DEEPSLATE_WALL = registerWallBlock("sanded_deepslate_wall", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE));
 		SANDED_DEEPSLATE_SLAB = registerSlabBlock("sanded_deepslate_slab", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE));
 
-		SANDED_BASALT = registerBlock("sanded_basalt", BASALT_PROPERTIES);
+		SANDED_BASALT = registerBlockWithItem("sanded_basalt", BASALT_PROPERTIES);
 		SANDED_BASALT_STAIRS = registerStairBlock("sanded_basalt_stairs", SANDED_BASALT, BASALT_PROPERTIES);
 		SANDED_BASALT_WALL = registerWallBlock("sanded_basalt_wall", BASALT_PROPERTIES);
 		SANDED_BASALT_SLAB = registerSlabBlock("sanded_basalt_slab", BASALT_PROPERTIES);
 
-		SANDED_NETHERRACK = registerBlock("sanded_netherrack", BlockBehaviour.Properties.copy(Blocks.NETHERRACK));
+		SANDED_NETHERRACK = registerBlockWithItem("sanded_netherrack", BlockBehaviour.Properties.copy(Blocks.NETHERRACK));
 		SANDED_NETHERRACK_STAIRS = registerStairBlock("sanded_netherrack_stairs", SANDED_NETHERRACK, BlockBehaviour.Properties.copy(Blocks.NETHERRACK));
 		SANDED_NETHERRACK_WALL = registerWallBlock("sanded_netherrack_wall", BlockBehaviour.Properties.copy(Blocks.NETHERRACK));
 		SANDED_NETHERRACK_SLAB = registerSlabBlock("sanded_netherrack_slab", BlockBehaviour.Properties.copy(Blocks.NETHERRACK));
 
-		SANDED_NETHERBRICKS = registerBlock("sanded_netherbricks", BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS));
+		SANDED_NETHERBRICKS = registerBlockWithItem("sanded_netherbricks", BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS));
 		SANDED_NETHERBRICKS_STAIRS = registerStairBlock("sanded_netherbricks_stairs", SANDED_NETHERBRICKS, BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS));
 		SANDED_NETHERBRICKS_WALL = registerWallBlock("sanded_netherbricks_wall", BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS));
 		SANDED_NETHERBRICKS_SLAB = registerSlabBlock("sanded_netherbricks_slab", BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS));
 
-		SANDED_PACKED_MUD = registerBlock("sanded_packed_mud", BlockBehaviour.Properties.copy(Blocks.PACKED_MUD));
+		SANDED_PACKED_MUD = registerBlockWithItem("sanded_packed_mud", BlockBehaviour.Properties.copy(Blocks.PACKED_MUD));
 		SANDED_PACKED_MUD_STAIRS = registerStairBlock("sanded_packed_mud_stairs", SANDED_PACKED_MUD, BlockBehaviour.Properties.copy(Blocks.PACKED_MUD));
 		SANDED_PACKED_MUD_WALL = registerWallBlock("sanded_packed_mud_wall", BlockBehaviour.Properties.copy(Blocks.PACKED_MUD));
 		SANDED_PACKED_MUD_SLAB = registerSlabBlock("sanded_packed_mud_slab", BlockBehaviour.Properties.copy(Blocks.PACKED_MUD));
 
-		SANDED_CALCITE = registerBlock("sanded_calcite", BlockBehaviour.Properties.copy(Blocks.CALCITE));
+		SANDED_CALCITE = registerBlockWithItem("sanded_calcite", BlockBehaviour.Properties.copy(Blocks.CALCITE));
 		SANDED_CALCITE_STAIRS = registerStairBlock("sanded_calcite_stairs", SANDED_CALCITE, BlockBehaviour.Properties.copy(Blocks.CALCITE));
 		SANDED_CALCITE_WALL = registerWallBlock("sanded_calcite_wall", BlockBehaviour.Properties.copy(Blocks.CALCITE));
 		SANDED_CALCITE_SLAB = registerSlabBlock("sanded_calcite_slab", BlockBehaviour.Properties.copy(Blocks.CALCITE));
 
-		SANDED_STONE = registerBlock("sanded_stone", GENERIC_PROPERTIES);
+		SANDED_STONE = registerBlockWithItem("sanded_stone", GENERIC_PROPERTIES);
 		SANDED_STONE_STAIRS = registerStairBlock("sanded_stone_stairs", SANDED_STONE, GENERIC_PROPERTIES);
 		SANDED_STONE_WALL = registerWallBlock("sanded_stone_wall", GENERIC_PROPERTIES);
 		SANDED_STONE_SLAB = registerSlabBlock("sanded_stone_slab", GENERIC_PROPERTIES);
 
-		SANDED_BLACKSTONE = registerBlock("sanded_blackstone", BlockBehaviour.Properties.copy(Blocks.BLACKSTONE));
+		SANDED_BLACKSTONE = registerBlockWithItem("sanded_blackstone", BlockBehaviour.Properties.copy(Blocks.BLACKSTONE));
 		SANDED_BLACKSTONE_STAIRS = registerStairBlock("sanded_blackstone_stairs", SANDED_BLACKSTONE, BlockBehaviour.Properties.copy(Blocks.BLACKSTONE));
 		SANDED_BLACKSTONE_WALL = registerWallBlock("sanded_blackstone_wall", BlockBehaviour.Properties.copy(Blocks.BLACKSTONE));
 		SANDED_BLACKSTONE_SLAB = registerSlabBlock("sanded_blackstone_slab", BlockBehaviour.Properties.copy(Blocks.BLACKSTONE));
 
-		SANDED_END_STONE = registerBlock("sanded_end_stone", BlockBehaviour.Properties.copy(Blocks.END_STONE));
+		SANDED_END_STONE = registerBlockWithItem("sanded_end_stone", BlockBehaviour.Properties.copy(Blocks.END_STONE));
 		SANDED_END_STONE_STAIRS = registerStairBlock("sanded_end_stone_stairs", SANDED_END_STONE, BlockBehaviour.Properties.copy(Blocks.END_STONE));
 		SANDED_END_STONE_WALL = registerWallBlock("sanded_end_stone_wall", BlockBehaviour.Properties.copy(Blocks.END_STONE));
 		SANDED_END_STONE_SLAB = registerSlabBlock("sanded_end_stone_slab", BlockBehaviour.Properties.copy(Blocks.END_STONE));
 
-		SANDED_DRIPSTONE = registerBlock("sanded_dripstone", BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK));
+		SANDED_DRIPSTONE = registerBlockWithItem("sanded_dripstone", BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK));
 		SANDED_DRIPSTONE_STAIRS = registerStairBlock("sanded_dripstone_stairs", SANDED_DRIPSTONE, BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK));
 		SANDED_DRIPSTONE_WALL = registerWallBlock("sanded_dripstone_wall", BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK));
 		SANDED_DRIPSTONE_SLAB = registerSlabBlock("sanded_dripstone_slab", BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK));
 
-		SANDED_TUFF = registerBlock("sanded_tuff", BlockBehaviour.Properties.copy(Blocks.TUFF));
+		SANDED_TUFF = registerBlockWithItem("sanded_tuff", BlockBehaviour.Properties.copy(Blocks.TUFF));
 		SANDED_TUFF_STAIRS = registerStairBlock("sanded_tuff_stairs", SANDED_TUFF, BlockBehaviour.Properties.copy(Blocks.TUFF));
 		SANDED_TUFF_WALL = registerWallBlock("sanded_tuff_wall", BlockBehaviour.Properties.copy(Blocks.TUFF));
 		SANDED_TUFF_SLAB = registerSlabBlock("sanded_tuff_slab", BlockBehaviour.Properties.copy(Blocks.TUFF));
 
-		MOSSY_COBBLED_DEEPLSATE = registerBlock("mossy_cobbled_deepslate", BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE));
+		MOSSY_COBBLED_DEEPLSATE = registerBlockWithItem("mossy_cobbled_deepslate", BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE));
 		MOSSY_COBBLED_DEEPLSATE_STAIRS = registerStairBlock("mossy_cobbled_deepslate_stairs", MOSSY_COBBLED_DEEPLSATE, BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE));
 		MOSSY_COBBLED_DEEPLSATE_WALL = registerWallBlock("mossy_cobbled_deepslate_wall", BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE));
 		MOSSY_COBBLED_DEEPLSATE_SLAB = registerSlabBlock("mossy_cobbled_deepslate_slab", BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE));
 
-		MOSSY_DEEPLSATE_BRICKS = registerBlock("mossy_deepslate_bricks", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS));
+		MOSSY_DEEPLSATE_BRICKS = registerBlockWithItem("mossy_deepslate_bricks", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS));
 		MOSSY_DEEPLSATE_BRICK_STAIRS = registerStairBlock("mossy_deepslate_brick_stairs", MOSSY_DEEPLSATE_BRICKS, BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS));
 		MOSSY_DEEPLSATE_BRICK_WALL = registerWallBlock("mossy_deepslate_brick_wall", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS));
 		MOSSY_DEEPLSATE_BRICK_SLAB = registerSlabBlock("mossy_deepslate_brick_slab", BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS));
 
-		DARK_PRISMARINE_BRICKS = registerBlock("dark_prismarine_bricks", DARK_PRISMARINE_PROPERTIES);
+		DARK_PRISMARINE_BRICKS = registerBlockWithItem("dark_prismarine_bricks", DARK_PRISMARINE_PROPERTIES);
 		DARK_PRISMARINE_BRICK_STAIRS = registerStairBlock("dark_prismarine_brick_stairs", DARK_PRISMARINE_BRICKS, DARK_PRISMARINE_PROPERTIES);
 		DARK_PRISMARINE_BRICK_WALL = registerWallBlock("dark_prismarine_brick_wall", DARK_PRISMARINE_PROPERTIES);
 		DARK_PRISMARINE_BRICK_SLAB = registerSlabBlock("dark_prismarine_brick_slab", DARK_PRISMARINE_PROPERTIES);
 
-		BASALT_BRICKS = registerBlock("basalt_bricks", BASALT_PROPERTIES);
+		BASALT_BRICKS = registerBlockWithItem("basalt_bricks", BASALT_PROPERTIES);
 		BASALT_BRICK_STAIRS = registerStairBlock("basalt_brick_stairs", BASALT_BRICKS, BASALT_PROPERTIES);
 		BASALT_BRICK_WALL = registerWallBlock("basalt_brick_wall", BASALT_PROPERTIES);
 		BASALT_BRICK_SLAB = registerSlabBlock("basalt_brick_slab", BASALT_PROPERTIES);
 
-		STEEL_BLOCK = registerBlock("steel_block", METAL_PROPERTIES);
+		STEEL_BLOCK = registerBlockWithItem("steel_block", METAL_PROPERTIES);
 		STEEL_STAIRS = registerStairBlock("steel_stairs", STEEL_BLOCK, METAL_PROPERTIES);
 		STEEL_WALL = registerWallBlock("steel_wall", METAL_PROPERTIES);
 		STEEL_SLAB = registerSlabBlock("steel_slab", METAL_PROPERTIES);
 
-		STEEL_PILLAR = registerBlock("steel_pillar", () -> new RotatedPillarBlock(METAL_PROPERTIES));
+		STEEL_PILLAR = registerBlockWithItem("steel_pillar", () -> new RotatedPillarBlock(METAL_PROPERTIES));
 
-		CUT_STEEL = registerBlock("cut_steel", () -> new Block(METAL_PROPERTIES));
+		CUT_STEEL = registerBlockWithItem("cut_steel", () -> new Block(METAL_PROPERTIES));
 		CUT_STEEL_STAIRS = registerStairBlock("cut_steel_stairs", CUT_STEEL, METAL_PROPERTIES);
 		CUT_STEEL_WALL = registerWallBlock("cut_steel_wall", METAL_PROPERTIES);
 		CUT_STEEL_SLAB = registerSlabBlock("cut_steel_slab", METAL_PROPERTIES);
 
-		STEEL_SIDING = registerBlock("steel_siding", METAL_PROPERTIES);
+		STEEL_SIDING = registerBlockWithItem("steel_siding", METAL_PROPERTIES);
 		STEEL_SIDING_STAIRS = registerStairBlock("steel_siding_stairs", STEEL_SIDING, METAL_PROPERTIES);
 		STEEL_SIDING_WALL = registerWallBlock("steel_siding_wall", METAL_PROPERTIES);
 		STEEL_SIDING_SLAB = registerSlabBlock("steel_siding_slab", METAL_PROPERTIES);
 
-		STAINLESS_STEEL = registerBlock("stainless_steel", () -> new Block(METAL_PROPERTIES));
+		STAINLESS_STEEL = registerBlockWithItem("stainless_steel", () -> new Block(METAL_PROPERTIES));
 		STAINLESS_STEEL_STAIRS = registerStairBlock("stainless_steel_stairs", CUT_STEEL, METAL_PROPERTIES);
 		STAINLESS_STEEL_WALL = registerWallBlock("stainless_steel_wall", METAL_PROPERTIES);
 		STAINLESS_STEEL_SLAB = registerSlabBlock("stainless_steel_slab", METAL_PROPERTIES);
 
-		ASPHALT = registerBlock("asphalt", () -> new Block(ASPHALT_PROPERTIES));
+		ASPHALT = registerBlockWithItem("asphalt", () -> new Block(ASPHALT_PROPERTIES));
 		ASPHALT_STAIRS = registerStairBlock("asphalt_stairs", ASPHALT, ASPHALT_PROPERTIES);
 		ASPHALT_SLAB = registerSlabBlock("asphalt_slab", ASPHALT_PROPERTIES);
 
-		RED_ASPHALT = registerBlock("red_asphalt", () -> new Block(ASPHALT_PROPERTIES));
+		RED_ASPHALT = registerBlockWithItem("red_asphalt", () -> new Block(ASPHALT_PROPERTIES));
 		RED_ASPHALT_STAIRS = registerStairBlock("red_asphalt_stairs", ASPHALT, ASPHALT_PROPERTIES);
 		RED_ASPHALT_SLAB = registerSlabBlock("red_asphalt_slab", ASPHALT_PROPERTIES);
 
-		GREEN_ASPHALT = registerBlock("green_asphalt", () -> new Block(ASPHALT_PROPERTIES));
+		GREEN_ASPHALT = registerBlockWithItem("green_asphalt", () -> new Block(ASPHALT_PROPERTIES));
 		GREEN_ASPHALT_STAIRS = registerStairBlock("green_asphalt_stairs", ASPHALT, ASPHALT_PROPERTIES);
 		GREEN_ASPHALT_SLAB = registerSlabBlock("green_asphalt_slab", ASPHALT_PROPERTIES);
 
-		BLUE_ASPHALT = registerBlock("blue_asphalt", () -> new Block(ASPHALT_PROPERTIES));
+		BLUE_ASPHALT = registerBlockWithItem("blue_asphalt", () -> new Block(ASPHALT_PROPERTIES));
 		BLUE_ASPHALT_STAIRS = registerStairBlock("blue_asphalt_stairs", ASPHALT, ASPHALT_PROPERTIES);
 		BLUE_ASPHALT_SLAB = registerSlabBlock("blue_asphalt_slab", ASPHALT_PROPERTIES);
 
-		MARBLE = registerBlock("marble", () -> new Block(GENERIC_PROPERTIES));
+		MARBLE = registerBlockWithItem("marble", () -> new Block(GENERIC_PROPERTIES));
 		MARBLE_STAIRS = registerStairBlock("marble_stairs", MARBLE, GENERIC_PROPERTIES);
 		MARBLE_SLAB = registerSlabBlock("marble_slab", GENERIC_PROPERTIES);
 		MARBLE_WALL = registerWallBlock("marble_wall", GENERIC_PROPERTIES);
 
-		POLISHED_MARBLE = registerBlock("polished_marble", () -> new Block(GENERIC_PROPERTIES));
+		POLISHED_MARBLE = registerBlockWithItem("polished_marble", () -> new Block(GENERIC_PROPERTIES));
 		POLISHED_MARBLE_STAIRS = registerStairBlock("polished_marble_stairs", POLISHED_MARBLE, GENERIC_PROPERTIES);
 		POLISHED_MARBLE_SLAB = registerSlabBlock("polished_marble_slab", GENERIC_PROPERTIES);
 		POLISHED_MARBLE_WALL = registerWallBlock("polished_marble_wall", GENERIC_PROPERTIES);
 
-		MARBLE_PILLAR = registerBlock("marble_pillar", () -> new RotatedPillarBlock(GENERIC_PROPERTIES));
+		MARBLE_PILLAR = registerBlockWithItem("marble_pillar", () -> new RotatedPillarBlock(GENERIC_PROPERTIES));
 
-		CAUTION_STRIPES = registerBlock("caution_stripes", () -> new Block(GENERIC_PROPERTIES));
+		CAUTION_STRIPES = registerBlockWithItem("caution_stripes", () -> new Block(GENERIC_PROPERTIES));
 
-		TEXTURE_TEST_ONE = registerBlock("texture_test_one", () -> new Block(GENERIC_PROPERTIES));
-		TEXTURE_TEST_TWO = registerBlock("texture_test_two", () -> new Block(GENERIC_PROPERTIES));
+		TEXTURE_TEST_ONE = registerBlockWithItem("texture_test_one", () -> new Block(GENERIC_PROPERTIES));
+		TEXTURE_TEST_TWO = registerBlockWithItem("texture_test_two", () -> new Block(GENERIC_PROPERTIES));
 
-		STEEL_CATWALK = registerBlock("steel_catwalk", () -> new CatwalkBlock(METAL_PROPERTIES.noOcclusion()));
-		STEEL_CATWALK_STEP = registerBlock("steel_catwalk_step", () -> new CatwalkStepBlock(METAL_PROPERTIES.noOcclusion()));
-		STEEL_CATWALK_RAIL = registerBlock("steel_catwalk_rail", () -> new CatwalkRailingBlock(METAL_PROPERTIES.noOcclusion()));
+		STEEL_CATWALK = registerBlockWithItem("steel_catwalk", () -> new CatwalkBlock(METAL_PROPERTIES.noOcclusion()));
+		STEEL_CATWALK_STEP = registerBlockWithItem("steel_catwalk_step", () -> new CatwalkStepBlock(METAL_PROPERTIES.noOcclusion()));
+		STEEL_CATWALK_RAIL = registerBlockWithItem("steel_catwalk_rail", () -> new CatwalkRailingBlock(METAL_PROPERTIES.noOcclusion()));
 
-		MULTIPART_BLOCK = registerBlock("multipart_block", () -> new MultiPartBlock(GENERIC_PROPERTIES));
+		MULTIPART_BLOCK = registerBlockWithItem("multipart_block", () -> new MultiPartBlock(GENERIC_PROPERTIES));
 
 		for(DyeColor color : DyeColor.values()) {
 			registerGlassBlock(color + "_structural_glass", color);
@@ -501,37 +501,42 @@ public class BlockRegistry {
 		}
 	}
 
-	private static RegistryObject<Block> registerBlock(final String name, Block.Properties properties) {
-		return registerBlock(name, () -> new Block(properties));
+	private static RegistryObject<Block> registerBlockWithItem(final String name, Block.Properties properties) {
+		return registerBlockWithItem(name, () -> new Block(properties));
 	}
 
 	private static RegistryObject<StairBlock> registerStairBlock(final String name, Supplier<Block> source, Block.Properties properties) {
-		return registerBlock(name, () -> new StairBlock(() -> source.get().defaultBlockState(), properties));
+		return registerBlockWithItem(name, () -> new StairBlock(() -> source.get().defaultBlockState(), properties));
 	}
 
 	private static RegistryObject<WallBlock> registerWallBlock(final String name, Block.Properties properties) {
-		return registerBlock(name, () -> new WallBlock(properties));
+		return registerBlockWithItem(name, () -> new WallBlock(properties));
 	}
 
 	private static RegistryObject<SlabBlock> registerSlabBlock(final String name, Block.Properties properties) {
-		return registerBlock(name, () -> new SlabBlock(properties));
+		return registerBlockWithItem(name, () -> new SlabBlock(properties));
 	}
 
 	private static RegistryObject<StainedGlassBlock> registerGlassBlock(final String name, DyeColor color) {
-		return registerBlock(name, () -> new StainedGlassBlock(color, GLASS_PROPERTIES));
+		return registerBlockWithItem(name, () -> new StainedGlassBlock(color, GLASS_PROPERTIES));
 	}
 
 	private static RegistryObject<Block> registerLampBlock(final String name) {
-		return registerBlock(name, () -> new Block(BlockBehaviour.Properties.of().lightLevel((i) -> 15)));
+		return registerBlockWithItem(name, () -> new Block(BlockBehaviour.Properties.of().lightLevel((i) -> 15)));
 	}
 
 	private static RegistryObject<Block> registerStainedGlassPaneBlock(final String name, DyeColor color) {
-		return registerBlock(name, () -> new StainedGlassPaneBlock(color, GLASS_PANE_PROPERTIES));
+		return registerBlockWithItem(name, () -> new StainedGlassPaneBlock(color, GLASS_PANE_PROPERTIES));
 	}
 
-	private static <BLOCK extends Block> RegistryObject<BLOCK> registerBlock(final String name, final Supplier<BLOCK> blockFactory) {
+	private static <BLOCK extends Block> RegistryObject<BLOCK> registerBlockWithItem(final String name, final Supplier<BLOCK> blockFactory) {
 		final RegistryObject<BLOCK> block = BLOCKS.register(name, blockFactory);
 		ItemRegistry.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+		return block;
+	}
+
+	private static <BLOCK extends Block> RegistryObject<BLOCK> registerBlockWithoutItem(final String name, final Supplier<BLOCK> blockFactory) {
+		final RegistryObject<BLOCK> block = BLOCKS.register(name, blockFactory);
 		return block;
 	}
 }
