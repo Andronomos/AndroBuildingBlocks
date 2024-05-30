@@ -272,6 +272,7 @@ public class BlockRegistry {
 	public static Supplier<Block> MULTIPART_BLOCK;
 
 	public static void register() {
+		//region concrete
 		BLACK_REINFORCED_CONCRETE = registerBlockWithItem("black_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
 		BLACK_REINFORCED_CONCRETE_STAIRS = registerStairBlock("black_reinforced_concrete_stairs", BLACK_REINFORCED_CONCRETE, REINFORCED_CONCRETE_PROPERTIES);
 		BLACK_REINFORCED_CONCRETE_WALL = registerWallBlock("black_reinforced_concrete_wall", REINFORCED_CONCRETE_PROPERTIES);
@@ -352,7 +353,9 @@ public class BlockRegistry {
 		WHITE_REINFORCED_CONCRETE_TILE_STAIRS = registerStairBlock("white_reinforced_concrete_tile_stairs", WHITE_REINFORCED_CONCRETE_TILE, REINFORCED_CONCRETE_PROPERTIES);
 		WHITE_REINFORCED_CONCRETE_TILE_WALL = registerWallBlock("white_reinforced_concrete_tile_wall", REINFORCED_CONCRETE_PROPERTIES);
 		WHITE_REINFORCED_CONCRETE_TILE_SLAB = registerSlabBlock("white_reinforced_concrete_tile_slab", REINFORCED_CONCRETE_PROPERTIES);
+		//endregion
 
+		//region sanded
 		SANDED_ANDESITE = registerBlockWithItem("sanded_andesite", BlockBehaviour.Properties.copy(Blocks.ANDESITE));
 		SANDED_ANDESITE_STAIRS = registerStairBlock("sanded_andesite_stairs", SANDED_ANDESITE, BlockBehaviour.Properties.copy(Blocks.ANDESITE));
 		SANDED_ANDESITE_WALL = registerWallBlock("sanded_andesite_wall", BlockBehaviour.Properties.copy(Blocks.ANDESITE));
@@ -422,7 +425,9 @@ public class BlockRegistry {
 		SANDED_TUFF_STAIRS = registerStairBlock("sanded_tuff_stairs", SANDED_TUFF, BlockBehaviour.Properties.copy(Blocks.TUFF));
 		SANDED_TUFF_WALL = registerWallBlock("sanded_tuff_wall", BlockBehaviour.Properties.copy(Blocks.TUFF));
 		SANDED_TUFF_SLAB = registerSlabBlock("sanded_tuff_slab", BlockBehaviour.Properties.copy(Blocks.TUFF));
+		//endregion
 
+		//region misc
 		MOSSY_COBBLED_DEEPLSATE = registerBlockWithItem("mossy_cobbled_deepslate", BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE));
 		MOSSY_COBBLED_DEEPLSATE_STAIRS = registerStairBlock("mossy_cobbled_deepslate_stairs", MOSSY_COBBLED_DEEPLSATE, BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE));
 		MOSSY_COBBLED_DEEPLSATE_WALL = registerWallBlock("mossy_cobbled_deepslate_wall", BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE));
@@ -442,28 +447,6 @@ public class BlockRegistry {
 		BASALT_BRICK_STAIRS = registerStairBlock("basalt_brick_stairs", BASALT_BRICKS, BASALT_PROPERTIES);
 		BASALT_BRICK_WALL = registerWallBlock("basalt_brick_wall", BASALT_PROPERTIES);
 		BASALT_BRICK_SLAB = registerSlabBlock("basalt_brick_slab", BASALT_PROPERTIES);
-
-		STEEL_BLOCK = registerBlockWithItem("steel_block", METAL_PROPERTIES);
-		STEEL_STAIRS = registerStairBlock("steel_stairs", STEEL_BLOCK, METAL_PROPERTIES);
-		STEEL_WALL = registerWallBlock("steel_wall", METAL_PROPERTIES);
-		STEEL_SLAB = registerSlabBlock("steel_slab", METAL_PROPERTIES);
-
-		STEEL_PILLAR = registerBlockWithItem("steel_pillar", () -> new RotatedPillarBlock(METAL_PROPERTIES));
-
-		CUT_STEEL = registerBlockWithItem("cut_steel", () -> new Block(METAL_PROPERTIES));
-		CUT_STEEL_STAIRS = registerStairBlock("cut_steel_stairs", CUT_STEEL, METAL_PROPERTIES);
-		CUT_STEEL_WALL = registerWallBlock("cut_steel_wall", METAL_PROPERTIES);
-		CUT_STEEL_SLAB = registerSlabBlock("cut_steel_slab", METAL_PROPERTIES);
-
-		STEEL_SIDING = registerBlockWithItem("steel_siding", METAL_PROPERTIES);
-		STEEL_SIDING_STAIRS = registerStairBlock("steel_siding_stairs", STEEL_SIDING, METAL_PROPERTIES);
-		STEEL_SIDING_WALL = registerWallBlock("steel_siding_wall", METAL_PROPERTIES);
-		STEEL_SIDING_SLAB = registerSlabBlock("steel_siding_slab", METAL_PROPERTIES);
-
-		STAINLESS_STEEL = registerBlockWithItem("stainless_steel", () -> new Block(METAL_PROPERTIES));
-		STAINLESS_STEEL_STAIRS = registerStairBlock("stainless_steel_stairs", CUT_STEEL, METAL_PROPERTIES);
-		STAINLESS_STEEL_WALL = registerWallBlock("stainless_steel_wall", METAL_PROPERTIES);
-		STAINLESS_STEEL_SLAB = registerSlabBlock("stainless_steel_slab", METAL_PROPERTIES);
 
 		ASPHALT = registerBlockWithItem("asphalt", () -> new Block(ASPHALT_PROPERTIES));
 		ASPHALT_STAIRS = registerStairBlock("asphalt_stairs", ASPHALT, ASPHALT_PROPERTIES);
@@ -494,13 +477,38 @@ public class BlockRegistry {
 		MARBLE_PILLAR = registerBlockWithItem("marble_pillar", () -> new RotatedPillarBlock(GENERIC_PROPERTIES));
 
 		CAUTION_STRIPES = registerBlockWithItem("caution_stripes", () -> new Block(GENERIC_PROPERTIES));
+		//endregion
 
-		TEXTURE_TEST_ONE = registerBlockWithItem("texture_test_one", () -> new Block(GENERIC_PROPERTIES));
-		TEXTURE_TEST_TWO = registerBlockWithItem("texture_test_two", () -> new Block(GENERIC_PROPERTIES));
+		//region steel
+		STEEL_BLOCK = registerBlockWithItem("steel_block", METAL_PROPERTIES);
+		STEEL_STAIRS = registerStairBlock("steel_stairs", STEEL_BLOCK, METAL_PROPERTIES);
+		STEEL_WALL = registerWallBlock("steel_wall", METAL_PROPERTIES);
+		STEEL_SLAB = registerSlabBlock("steel_slab", METAL_PROPERTIES);
+
+		STEEL_PILLAR = registerBlockWithItem("steel_pillar", () -> new RotatedPillarBlock(METAL_PROPERTIES));
+
+		CUT_STEEL = registerBlockWithItem("cut_steel", () -> new Block(METAL_PROPERTIES));
+		CUT_STEEL_STAIRS = registerStairBlock("cut_steel_stairs", CUT_STEEL, METAL_PROPERTIES);
+		CUT_STEEL_WALL = registerWallBlock("cut_steel_wall", METAL_PROPERTIES);
+		CUT_STEEL_SLAB = registerSlabBlock("cut_steel_slab", METAL_PROPERTIES);
+
+		STEEL_SIDING = registerBlockWithItem("steel_siding", METAL_PROPERTIES);
+		STEEL_SIDING_STAIRS = registerStairBlock("steel_siding_stairs", STEEL_SIDING, METAL_PROPERTIES);
+		STEEL_SIDING_WALL = registerWallBlock("steel_siding_wall", METAL_PROPERTIES);
+		STEEL_SIDING_SLAB = registerSlabBlock("steel_siding_slab", METAL_PROPERTIES);
+
+		STAINLESS_STEEL = registerBlockWithItem("stainless_steel", () -> new Block(METAL_PROPERTIES));
+		STAINLESS_STEEL_STAIRS = registerStairBlock("stainless_steel_stairs", CUT_STEEL, METAL_PROPERTIES);
+		STAINLESS_STEEL_WALL = registerWallBlock("stainless_steel_wall", METAL_PROPERTIES);
+		STAINLESS_STEEL_SLAB = registerSlabBlock("stainless_steel_slab", METAL_PROPERTIES);
 
 		STEEL_CATWALK = registerBlockWithItem("steel_catwalk", () -> new CatwalkBlock(METAL_PROPERTIES.noOcclusion()));
 		STEEL_CATWALK_STEP = registerBlockWithItem("steel_catwalk_step", () -> new CatwalkStepBlock(METAL_PROPERTIES.noOcclusion()));
 		STEEL_CATWALK_RAIL = registerBlockWithItem("steel_catwalk_rail", () -> new CatwalkRailingBlock(METAL_PROPERTIES.noOcclusion()));
+		//endregion
+
+		TEXTURE_TEST_ONE = registerBlockWithItem("texture_test_one", () -> new Block(GENERIC_PROPERTIES));
+		TEXTURE_TEST_TWO = registerBlockWithItem("texture_test_two", () -> new Block(GENERIC_PROPERTIES));
 
 		MULTIPART_BLOCK = registerBlockWithItem("multipart_block", () -> new MultiPartBlock(GENERIC_PROPERTIES));
 
