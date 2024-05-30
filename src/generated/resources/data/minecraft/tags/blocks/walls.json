@@ -36,12 +36,12 @@
     "androbuildingblocks:mossy_deepslate_brick_wall",
     "androbuildingblocks:dark_prismarine_brick_wall",
     "androbuildingblocks:basalt_brick_wall",
+    "androbuildingblocks:marble_wall",
+    "androbuildingblocks:polished_marble_wall",
     "androbuildingblocks:steel_wall",
     "androbuildingblocks:cut_steel_wall",
     "androbuildingblocks:steel_siding_wall",
     "androbuildingblocks:stainless_steel_wall",
-    "androbuildingblocks:marble_wall",
-    "androbuildingblocks:polished_marble_wall",
     "androbuildingblocks:dark_prismarine_brick_wall"
   ]
 }

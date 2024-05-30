@@ -504,7 +504,7 @@ public class BlockRegistry {
 
 		STEEL_CATWALK = registerBlockWithItem("steel_catwalk", () -> new CatwalkBlock(METAL_PROPERTIES.noOcclusion()));
 		STEEL_CATWALK_STEP = registerBlockWithItem("steel_catwalk_step", () -> new CatwalkStepBlock(METAL_PROPERTIES.noOcclusion()));
-		STEEL_CATWALK_RAIL = registerBlockWithItem("steel_catwalk_rail", () -> new CatwalkRailingBlock(METAL_PROPERTIES.noOcclusion()));
+		STEEL_CATWALK_RAIL = registerBlockWithoutItem("steel_catwalk_rail", () -> new CatwalkRailingBlock(METAL_PROPERTIES.noOcclusion()));
 		//endregion
 
 		TEXTURE_TEST_ONE = registerBlockWithItem("texture_test_one", () -> new Block(GENERIC_PROPERTIES));

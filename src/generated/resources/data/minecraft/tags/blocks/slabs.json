@@ -36,15 +36,15 @@
     "androbuildingblocks:mossy_deepslate_brick_slab",
     "androbuildingblocks:dark_prismarine_brick_slab",
     "androbuildingblocks:basalt_brick_slab",
-    "androbuildingblocks:steel_slab",
-    "androbuildingblocks:cut_steel_slab",
-    "androbuildingblocks:steel_siding_slab",
-    "androbuildingblocks:stainless_steel_slab",
     "androbuildingblocks:asphalt_slab",
     "androbuildingblocks:red_asphalt_slab",
     "androbuildingblocks:green_asphalt_slab",
     "androbuildingblocks:blue_asphalt_slab",
     "androbuildingblocks:marble_slab",
-    "androbuildingblocks:polished_marble_slab"
+    "androbuildingblocks:polished_marble_slab",
+    "androbuildingblocks:steel_slab",
+    "androbuildingblocks:cut_steel_slab",
+    "androbuildingblocks:steel_siding_slab",
+    "androbuildingblocks:stainless_steel_slab"
   ]
 }
