@@ -5,6 +5,7 @@ import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Collections;
 
@@ -24,7 +25,7 @@ public class ModBlockLootSubProvider extends BlockLootSubProvider {
 	}
 
 	@Override
-	protected Iterable<Block> getKnownBlocks() {
+	protected @NotNull Iterable<Block> getKnownBlocks() {
 		return BlockRegistry.BLOCKS.getEntries()
 				.stream()
 				.flatMap(RegistryObject::stream)
