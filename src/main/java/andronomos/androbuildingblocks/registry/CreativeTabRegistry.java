@@ -43,6 +43,14 @@ public class CreativeTabRegistry {
 			})
 			.build());
 
+	public static final RegistryObject<CreativeModeTab> ANDROBUILDINGBLOCKS_DEV_TAB = CREATIVE_MODE_TABS.register("androbuildingblocks_dev_tab", () -> CreativeModeTab.builder()
+			.title(Component.translatable("creativetab.androbuildingblocks_dev_tab"))
+			.icon(BlockRegistry.TEXTURE_TEST_ONE.get().asItem()::getDefaultInstance)
+			.displayItems((parameters, output) -> {
+				output.accept(ItemRegistry.SANDPAPER.get());
+			})
+			.build());
+
 	public static final RegistryObject<CreativeModeTab> ANDROBUILDINGBLOCKS_MISC_TAB = CREATIVE_MODE_TABS.register("androbuildingblocks_misc_tab", () -> CreativeModeTab.builder()
 			.title(Component.translatable("creativetab.androbuildingblocks_misc_tab"))
 			.icon(BlockRegistry.MOSSY_COBBLED_DEEPLSATE.get().asItem()::getDefaultInstance)

@@ -22,6 +22,7 @@ public class ModLanguageProvider extends LanguageProvider {
 		add("creativetab.androbuildingblocks_items_tab", "AndroBuildingBlocks Items");
 		add("creativetab.androbuildingblocks_modern_tab", "AndroBuildingBlocks Modern");
 		add("creativetab.androbuildingblocks_misc_tab", "AndroBuildingBlocks Misc");
+		add("creativetab.androbuildingblocks_dev_tab", "AndroBuildingBlocks DEV");
 		add(ItemRegistry.SANDPAPER.get(), "Sandpaper");
 
 		BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(b -> {
