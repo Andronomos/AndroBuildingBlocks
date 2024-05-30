@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "androbuildingblocks:sanded_basalt"
+  },
+  "result": "androbuildingblocks:sanded_basalt_wall"
+}

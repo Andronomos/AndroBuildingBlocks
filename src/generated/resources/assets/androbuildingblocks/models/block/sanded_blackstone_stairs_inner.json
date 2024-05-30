@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "androbuildingblocks:block/sanded_blackstone",
+    "side": "androbuildingblocks:block/sanded_blackstone",
+    "top": "androbuildingblocks:block/sanded_blackstone"
+  }
+}

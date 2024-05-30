@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "androbuildingblocks:block/sanded_dark_prismarine_slab"
+    },
+    "type=double": {
+      "model": "androbuildingblocks:block/sanded_dark_prismarine"
+    },
+    "type=top": {
+      "model": "androbuildingblocks:block/sanded_dark_prismarine_slab_top"
+    }
+  }
+}

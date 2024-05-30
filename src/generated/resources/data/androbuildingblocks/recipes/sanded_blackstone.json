@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "androbuildingblocks:sandpaper"
+    },
+    {
+      "item": "minecraft:blackstone"
+    }
+  ],
+  "result": {
+    "item": "androbuildingblocks:sanded_blackstone"
+  }
+}

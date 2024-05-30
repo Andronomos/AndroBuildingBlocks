@@ -1,8 +1,10 @@
 package andronomos.androbuildingblocks.block;
 
 import andronomos.androbuildingblocks.AndroBuildingBlocks;
+import andronomos.androbuildingblocks.registry.BlockRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -23,6 +25,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+@SuppressWarnings("deprecation")
 public class CatwalkRailingBlock extends Block implements SimpleWaterloggedBlock {
 	private static final VoxelShape VOXEL_NORTH = Block.box(
 			0d, 0d, 0d,
@@ -70,24 +73,29 @@ public class CatwalkRailingBlock extends Block implements SimpleWaterloggedBlock
 	@Nullable
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext ctx) {
-		Direction facing = ctx.getHorizontalDirection();
-		FluidState fluid = ctx.getLevel().getFluidState(ctx.getClickedPos());
-
 		BlockGetter blockgetter = ctx.getLevel();
-		BlockPos blockpos = ctx.getClickedPos();
+		BlockPos clickedPos = ctx.getClickedPos();
+		BlockState blockstateBelow = blockgetter.getBlockState(clickedPos.below());
 
-		BlockState blockstate = blockgetter.getBlockState(blockpos.north());
-		BlockState blockstate1 = blockgetter.getBlockState(blockpos.south());
-		BlockState blockstate2 = blockgetter.getBlockState(blockpos.west());
-		BlockState blockstate3 = blockgetter.getBlockState(blockpos.east());
-
-		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlock#getStateForPlacement | facing: %s", facing));
-		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlock#getStateForPlacement | blockpos: %s", blockpos));
-
-		//if() {
-		//
+		//if(blockstateBelow != BlockRegistry.STEEL_CATWALK.get().defaultBlockState()) {
+		//	return null;
 		//}
 
+		Direction facing = ctx.getHorizontalDirection();
+		FluidState fluid = ctx.getLevel().getFluidState(ctx.getClickedPos());
+		Player player = ctx.getPlayer();
+		Direction playerFacing = player.getDirection();
+
+		//BlockState blockstate = blockgetter.getBlockState(clickedPos.north());
+		//BlockState blockstate1 = blockgetter.getBlockState(clickedPos.south());
+		//BlockState blockstate2 = blockgetter.getBlockState(clickedPos.west());
+		//BlockState blockstate3 = blockgetter.getBlockState(clickedPos.east());
+
+		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlock#getStateForPlacement | facing: %s", facing));
+		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlock#getStateForPlacement | clickedPos: %s", clickedPos));
+		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlock#getStateForPlacement | playerFacing: %s", playerFacing));
+		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlock#getStateForPlacement | clicked blockstate: %s", blockgetter.getBlockState(clickedPos)));
+		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlock#getStateForPlacement | blockstateBelow: %s", blockstateBelow));
 
 
 		return defaultBlockState()

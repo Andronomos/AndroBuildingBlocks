@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "androbuildingblocks:block/blue_reinforced_concrete_tile",
+    "side": "androbuildingblocks:block/blue_reinforced_concrete_tile",
+    "top": "androbuildingblocks:block/blue_reinforced_concrete_tile"
+  }
+}

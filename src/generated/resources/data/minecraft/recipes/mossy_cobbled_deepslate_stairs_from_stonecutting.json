@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "androbuildingblocks:mossy_cobbled_deepslate"
+  },
+  "result": "androbuildingblocks:mossy_cobbled_deepslate_stairs"
+}

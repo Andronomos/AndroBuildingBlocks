@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "androbuildingblocks:sanded_granite"
+  },
+  "result": "androbuildingblocks:sanded_granite_stairs"
+}
