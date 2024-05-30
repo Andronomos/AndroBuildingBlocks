@@ -222,9 +222,9 @@ public class BlockRegistry {
 	public static RegistryObject<WallBlock> STAINLESS_STEEL_WALL;
 	public static RegistryObject<SlabBlock> STAINLESS_STEEL_SLAB;
 
-	public static Supplier<Block> STEEL_CATWALK;
-	public static Supplier<Block> STEEL_CATWALK_STEP;
-	public static Supplier<Block> STEEL_CATWALK_RAIL;
+	//public static Supplier<Block> STEEL_CATWALK;
+	//public static Supplier<Block> STEEL_CATWALK_STEP;
+	//public static Supplier<Block> STEEL_CATWALK_RAIL;
 
 	public static Supplier<Block> ASPHALT;
 	public static RegistryObject<StairBlock> ASPHALT_STAIRS;
@@ -488,9 +488,9 @@ public class BlockRegistry {
 		TEXTURE_TEST_ONE = registerBlock("texture_test_one", () -> new Block(GENERIC_PROPERTIES));
 		TEXTURE_TEST_TWO = registerBlock("texture_test_two", () -> new Block(GENERIC_PROPERTIES));
 
-		STEEL_CATWALK = registerBlock("steel_catwalk", () -> new CatwalkBlock(METAL_PROPERTIES.noOcclusion()));
-		STEEL_CATWALK_STEP = registerBlock("steel_catwalk_step", () -> new CatwalkStepBlock(METAL_PROPERTIES.noOcclusion()));
-		STEEL_CATWALK_RAIL = registerBlock("steel_catwalk_rail", () -> new CatwalkRailingBlock(METAL_PROPERTIES.noOcclusion()));
+		//STEEL_CATWALK = registerBlock("steel_catwalk", () -> new CatwalkBlock(METAL_PROPERTIES.noOcclusion()));
+		//STEEL_CATWALK_STEP = registerBlock("steel_catwalk_step", () -> new CatwalkStepBlock(METAL_PROPERTIES.noOcclusion()));
+		//STEEL_CATWALK_RAIL = registerBlock("steel_catwalk_rail", () -> new CatwalkRailingBlock(METAL_PROPERTIES.noOcclusion()));
 
 		MULTIPART_BLOCK = registerBlock("multipart_block", () -> new MultiPartBlock(GENERIC_PROPERTIES));
 
