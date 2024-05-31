@@ -2,6 +2,8 @@ package andronomos.androbuildingblocks.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -107,6 +109,11 @@ public class CatwalkRailingBlock extends Block implements SimpleWaterloggedBlock
 	public void neighborChanged(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Block neighborBlock, @NotNull BlockPos neighborPos, boolean movedByPiston) {
 		if (isEmpty(state)) level.setBlock(pos, Blocks.AIR.defaultBlockState(), 0);
 		super.neighborChanged(state, level, pos, neighborBlock, neighborPos, movedByPiston);
+	}
+
+	@Override
+	public boolean isValidSpawn(BlockState state, BlockGetter level, BlockPos pos, SpawnPlacements.Type type, EntityType<?> entityType) {
+		return false;
 	}
 
 	public static boolean isEmpty(BlockState state) {

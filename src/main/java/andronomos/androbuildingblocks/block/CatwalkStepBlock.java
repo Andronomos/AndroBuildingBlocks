@@ -2,6 +2,8 @@ package andronomos.androbuildingblocks.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -85,5 +87,10 @@ public class CatwalkStepBlock extends Block implements SimpleWaterloggedBlock {
 			case WEST  -> BOX_WEST;
 			default    -> BOX_NORTH;
 		};
+	}
+
+	@Override
+	public boolean isValidSpawn(BlockState state, BlockGetter level, BlockPos pos, SpawnPlacements.Type type, EntityType<?> entityType) {
+		return false;
 	}
 }
