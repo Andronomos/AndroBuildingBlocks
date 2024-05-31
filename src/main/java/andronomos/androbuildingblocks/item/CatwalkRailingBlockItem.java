@@ -5,6 +5,7 @@ import andronomos.androbuildingblocks.block.CatwalkBlock;
 import andronomos.androbuildingblocks.block.CatwalkRailingBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
@@ -12,6 +13,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
@@ -23,13 +25,12 @@ public class CatwalkRailingBlockItem extends BlockItem {
 
 	@Override
 	public InteractionResult useOn(UseOnContext ctx) {
-		BlockPos pos    = ctx.getClickedPos();
-		Direction face  = ctx.getClickedFace();
-		Level level     = ctx.getLevel();
-		Player player   = ctx.getPlayer();
+		BlockPos pos = ctx.getClickedPos();
+		Direction face = ctx.getClickedFace();
+		Level level = ctx.getLevel();
+		Player player = ctx.getPlayer();
 		ItemStack stack = ctx.getItemInHand();
 		BlockState state = level.getBlockState(pos);
-		BlockHitResult ray = new BlockHitResult(ctx.getClickLocation(), face, pos, true);
 
 		if(!(state.getBlock() instanceof CatwalkBlock)) {
 			return InteractionResult.FAIL;
@@ -37,14 +38,6 @@ public class CatwalkRailingBlockItem extends BlockItem {
 
 		BlockPos abovePos = pos.relative(face);
 		BlockState aboveState = level.getBlockState(pos.relative(face));
-
-		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlockItem#useOn | pos: %s", pos));
-		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlockItem#useOn | face: %s", face));
-		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlockItem#useOn | clicked blockstate: %s", level.getBlockState(pos)));
-		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlockItem#useOn | state.getBlock: %s", state.getBlock()));
-		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlockItem#useOn | abovePos: %s", abovePos));
-		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlockItem#useOn | aboveState: %s", aboveState));
-		AndroBuildingBlocks.LOGGER.info(String.format("CatwalkRailingBlockItem#useOn | aboveState.getBlock: %s", aboveState.getBlock()));
 
 		if(CatwalkRailingBlock.isRailing(aboveState.getBlock())) {
 			pos = abovePos;
@@ -63,10 +56,18 @@ public class CatwalkRailingBlockItem extends BlockItem {
 		}
 
 		Direction playerDirection = player.getDirection();
+
+		//If there's already a railing in this direction, cancel placing
+		if (state.getValue(CatwalkRailingBlock.fromDirection(playerDirection))) {
+			return InteractionResult.FAIL;
+		}
+
 		state = state.setValue(CatwalkRailingBlock.fromDirection(playerDirection), true);
 
 		if (!player.isShiftKeyDown()) {
+			SoundType soundType = state.getSoundType();
 			level.setBlock(abovePos, state, 3);
+			level.playSound(player, pos, this.getPlaceSound(state), SoundSource.BLOCKS, (soundType.getVolume() + 1.0F) / 2.0F, soundType.getPitch() * 0.8F);
 			level.gameEvent(GameEvent.BLOCK_PLACE, pos.relative(face), GameEvent.Context.of(player, state));
 
 			if (!player.getAbilities().instabuild) {
