@@ -1,6 +1,5 @@
 package andronomos.androbuildingblocks.item;
 
-import andronomos.androbuildingblocks.AndroBuildingBlocks;
 import andronomos.androbuildingblocks.block.CatwalkBlock;
 import andronomos.androbuildingblocks.block.CatwalkRailingBlock;
 import net.minecraft.core.BlockPos;
@@ -16,15 +15,18 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
-import net.minecraft.world.phys.BlockHitResult;
+import org.jetbrains.annotations.NotNull;
 
+import java.util.Objects;
+
+@SuppressWarnings("deprecation")
 public class CatwalkRailingBlockItem extends BlockItem {
 	public CatwalkRailingBlockItem(Block block, Properties properties) {
 		super(block, properties);
 	}
 
 	@Override
-	public InteractionResult useOn(UseOnContext ctx) {
+	public @NotNull InteractionResult useOn(UseOnContext ctx) {
 		BlockPos pos = ctx.getClickedPos();
 		Direction face = ctx.getClickedFace();
 		Level level = ctx.getLevel();
@@ -44,7 +46,7 @@ public class CatwalkRailingBlockItem extends BlockItem {
 			state = aboveState;
 		}
 
-		boolean railMatchTest = player.isHolding(state.getBlock().asItem());
+		boolean railMatchTest = Objects.requireNonNull(player).isHolding(state.getBlock().asItem());
 
 		if(!CatwalkRailingBlock.isRailing(state.getBlock()) ||
 				(state.getValue(CatwalkRailingBlock.NORTH_FENCE)) &&
