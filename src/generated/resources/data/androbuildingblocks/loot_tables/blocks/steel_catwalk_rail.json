@@ -3,14 +3,67 @@
   "pools": [
     {
       "bonus_rolls": 0.0,
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
       "entries": [
         {
           "type": "minecraft:item",
+          "functions": [
+            {
+              "add": true,
+              "conditions": [
+                {
+                  "block": "androbuildingblocks:steel_catwalk_rail",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "north": "true"
+                  }
+                }
+              ],
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "add": true,
+              "conditions": [
+                {
+                  "block": "androbuildingblocks:steel_catwalk_rail",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "north": "true"
+                  }
+                }
+              ],
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "add": true,
+              "conditions": [
+                {
+                  "block": "androbuildingblocks:steel_catwalk_rail",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "east": "true"
+                  }
+                }
+              ],
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "add": true,
+              "conditions": [
+                {
+                  "block": "androbuildingblocks:steel_catwalk_rail",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "west": "true"
+                  }
+                }
+              ],
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            }
+          ],
           "name": "androbuildingblocks:steel_catwalk_rail"
         }
       ],
