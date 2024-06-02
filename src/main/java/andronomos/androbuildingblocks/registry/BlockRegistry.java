@@ -521,7 +521,7 @@ public class BlockRegistry {
 		STEEL_TILE_SLAB = registerSlabBlock("steel_tile_slab", METAL_PROPERTIES);
 
 		STEEL_PILLAR = registerBlockWithItem("steel_pillar", () -> new RotatedPillarBlock(METAL_PROPERTIES));
-		STEEL_TRAPDOOR = registerBlockWithItem("steel_trapdoor", () -> new TrapDoorBlock(METAL_PROPERTIES, BlockSetType.IRON));
+		STEEL_TRAPDOOR = registerBlockWithItem("steel_trapdoor", () -> new TrapDoorBlock(METAL_PROPERTIES, BlockSetTypeRegistry.STEEL));
 
 		CUT_STEEL = registerBlockWithItem("cut_steel", () -> new Block(METAL_PROPERTIES));
 		CUT_STEEL_STAIRS = registerStairBlock("cut_steel_stairs", CUT_STEEL, METAL_PROPERTIES);
