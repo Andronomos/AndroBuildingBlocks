@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "androbuildingblocks:block/graphite_pillar",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "androbuildingblocks:block/graphite_pillar"
+    },
+    "axis=z": {
+      "model": "androbuildingblocks:block/graphite_pillar",
+      "x": 90
+    }
+  }
+}

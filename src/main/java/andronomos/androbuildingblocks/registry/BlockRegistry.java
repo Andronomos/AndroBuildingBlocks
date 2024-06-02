@@ -209,14 +209,18 @@ public class BlockRegistry {
 	public static RegistryObject<SlabBlock> MARBLE_SLAB;
 	public static RegistryObject<WallBlock> MARBLE_WALL;
 
+	public static Supplier<Block> MARBLE_PILLAR;
+
 	public static Supplier<Block> POLISHED_MARBLE;
 	public static RegistryObject<StairBlock> POLISHED_MARBLE_STAIRS;
 	public static RegistryObject<SlabBlock> POLISHED_MARBLE_SLAB;
 	public static RegistryObject<WallBlock> POLISHED_MARBLE_WALL;
 
-	public static Supplier<Block> MARBLE_PILLAR;
-
 	public static Supplier<Block> CAUTION_STRIPES;
+
+	public static Supplier<Block> GRAPHITE;
+	public static Supplier<Block> GRAPHITE_TILE;
+	public static Supplier<Block> GRAPHITE_PILLAR;
 	//endregion
 
 	//region steel
@@ -474,6 +478,10 @@ public class BlockRegistry {
 		MARBLE_PILLAR = registerBlockWithItem("marble_pillar", () -> new RotatedPillarBlock(GENERIC_PROPERTIES));
 
 		CAUTION_STRIPES = registerBlockWithItem("caution_stripes", () -> new Block(GENERIC_PROPERTIES));
+
+		GRAPHITE = registerBlockWithItem("graphite", () -> new Block(GENERIC_PROPERTIES));
+		GRAPHITE_TILE = registerBlockWithItem("graphite_tile", () -> new Block(GENERIC_PROPERTIES));
+		GRAPHITE_PILLAR = registerBlockWithItem("graphite_pillar", () -> new RotatedPillarBlock(GENERIC_PROPERTIES));
 		//endregion
 
 		//region steel
