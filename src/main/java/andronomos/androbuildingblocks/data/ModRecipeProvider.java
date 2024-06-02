@@ -140,6 +140,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		cautionStripes.save(consumer);
 		buildVariants(BlockRegistry.CAUTION_STRIPES.get(), true, true, true, consumer);
 
+		buildSmelting(Blocks.COAL_BLOCK, BlockRegistry.GRAPHITE.get(), consumer);
+		buildVariants(BlockRegistry.GRAPHITE.get(), true, true, true, consumer);
+		buildStoneCutter(BlockRegistry.GRAPHITE_TILE.get(), BlockRegistry.GRAPHITE.get(), 1, consumer);
+		buildStoneCutter(BlockRegistry.GRAPHITE_PILLAR.get(), BlockRegistry.GRAPHITE.get(), 1, consumer);
+
 		buildSteel(consumer);
 		buildAsphalt(consumer);
 	}
