@@ -258,6 +258,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildStoneCutter(BlockRegistry.STEEL_PILLAR.get(), BlockRegistry.STEEL_BLOCK.get(), 1, consumer);
 		buildStoneCutter(BlockRegistry.CUT_STEEL.get(), BlockRegistry.STEEL_BLOCK.get(), 1, consumer);
 		buildVariants(BlockRegistry.CUT_STEEL.get(), true, true, true, consumer);
+
+		buildTwoByTwo(BlockRegistry.STEEL_TRAPDOOR.get(), ItemRegistry.STEEL_INGOT.get(), consumer);
 	}
 
 	private void buildStructuralGlass(Block block, String color, Consumer<FinishedRecipe> consumer) {
