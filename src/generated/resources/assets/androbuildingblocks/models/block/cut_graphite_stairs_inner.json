@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "androbuildingblocks:block/cut_graphite",
+    "side": "androbuildingblocks:block/cut_graphite",
+    "top": "androbuildingblocks:block/cut_graphite"
+  }
+}

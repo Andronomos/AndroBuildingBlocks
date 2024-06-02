@@ -145,6 +145,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildStoneCutter(BlockRegistry.GRAPHITE_TILE.get(), BlockRegistry.GRAPHITE.get(), 1, consumer);
 		buildVariants(BlockRegistry.GRAPHITE_TILE.get(), true, true, true, consumer);
 		buildStoneCutter(BlockRegistry.GRAPHITE_PILLAR.get(), BlockRegistry.GRAPHITE.get(), 1, consumer);
+		buildStoneCutter(BlockRegistry.CUT_GRAPHITE.get(), BlockRegistry.GRAPHITE.get(), 1, consumer);
+		buildVariants(BlockRegistry.CUT_GRAPHITE.get(), true, true, true, consumer);
 
 		buildSteel(consumer);
 		buildAsphalt(consumer);
