@@ -116,12 +116,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildVariants(BlockRegistry.MOSSY_COBBLED_DEEPLSATE.get(), true, true, true, consumer);
 		buildVariants(BlockRegistry.MOSSY_DEEPLSATE_BRICKS.get(), true, true, true, consumer);
 
-		buildTwoByTwo(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), Blocks.DARK_PRISMARINE, consumer);
+		buildTwoByTwo(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), Blocks.DARK_PRISMARINE.asItem(), consumer);
 		buildStoneCutter(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), Blocks.DARK_PRISMARINE, 1, consumer);
 		buildVariants(BlockRegistry.DARK_PRISMARINE_BRICKS.get(), true, true, true, consumer);
 
 		buildSmelting(Blocks.CALCITE, BlockRegistry.MARBLE.get(), consumer);
-		buildTwoByTwo(BlockRegistry.POLISHED_MARBLE.get(), BlockRegistry.MARBLE.get(), consumer);
+		buildTwoByTwo(BlockRegistry.POLISHED_MARBLE.get(), BlockRegistry.MARBLE.get().asItem(), consumer);
 		buildStoneCutter(BlockRegistry.POLISHED_MARBLE.get(), BlockRegistry.MARBLE.get(), 1, consumer);
 
 		for(DyeColor color : DyeColor.values()) {
@@ -252,7 +252,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 		buildVariants(BlockRegistry.STEEL_BLOCK.get(), true, true, true, consumer);
 		buildVariants(BlockRegistry.STEEL_SIDING.get(), true, true, true, consumer);
-		buildTwoByTwo(BlockRegistry.STEEL_TILE.get(), BlockRegistry.STEEL_BLOCK.get(), consumer);
+		buildTwoByTwo(BlockRegistry.STEEL_TILE.get(), BlockRegistry.STEEL_BLOCK.get().asItem(), consumer);
 		buildVariants(BlockRegistry.STEEL_TILE.get(), true, true, true, consumer);
 		buildStoneCutter(BlockRegistry.STEEL_SIDING.get(), BlockRegistry.STEEL_BLOCK.get(), 1, consumer);
 		buildStoneCutter(BlockRegistry.STEEL_PILLAR.get(), BlockRegistry.STEEL_BLOCK.get(), 1, consumer);
@@ -334,7 +334,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		oneByTwo.save(consumer);
 	}
 
-	private void buildTwoByTwo(Block output, Block input, Consumer<FinishedRecipe> consumer) {
+	private void buildTwoByTwo(Block output, Item input, Consumer<FinishedRecipe> consumer) {
 		ShapedRecipeBuilder shaped = ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 4);
 		shaped.define('#', input);
 		shaped.pattern("##");
