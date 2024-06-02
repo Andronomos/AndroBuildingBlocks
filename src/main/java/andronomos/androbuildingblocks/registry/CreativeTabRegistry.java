@@ -33,7 +33,7 @@ public class CreativeTabRegistry {
 				BlockRegistry.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
 					String blockPath = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
 
-					if(blockPath.contains("asphalt") || blockPath.contains("reinforced_concrete") || blockPath.contains("structural_glass")) {
+					if(blockPath.contains("asphalt") || blockPath.contains("reinforced_concrete") || blockPath.contains("structural_glass") || blockPath.contains("graphite")) {
 						output.accept(block);
 					}
 
