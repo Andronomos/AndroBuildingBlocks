@@ -9,6 +9,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -246,6 +247,7 @@ public class BlockRegistry {
 	public static RegistryObject<SlabBlock> STEEL_TILE_SLAB;
 
 	public static RegistryObject<Block> STEEL_PILLAR;
+	public static RegistryObject<Block> STEEL_TRAPDOOR;
 
 	public static RegistryObject<Block> CUT_STEEL;
 	public static RegistryObject<StairBlock> CUT_STEEL_STAIRS;
@@ -519,6 +521,7 @@ public class BlockRegistry {
 		STEEL_TILE_SLAB = registerSlabBlock("steel_tile_slab", METAL_PROPERTIES);
 
 		STEEL_PILLAR = registerBlockWithItem("steel_pillar", () -> new RotatedPillarBlock(METAL_PROPERTIES));
+		STEEL_TRAPDOOR = registerBlockWithItem("steel_trapdoor", () -> new TrapDoorBlock(METAL_PROPERTIES, BlockSetType.IRON));
 
 		CUT_STEEL = registerBlockWithItem("cut_steel", () -> new Block(METAL_PROPERTIES));
 		CUT_STEEL_STAIRS = registerStairBlock("cut_steel_stairs", CUT_STEEL, METAL_PROPERTIES);

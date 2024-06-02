@@ -38,6 +38,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 				case "StainedGlassBlock" -> simpleBlock(block, blockPath, true);
 				case "StainedGlassPaneBlock" -> pane(block, blockPath);
 				case "IronBarsBlock" -> bars(block, blockPath);
+				case "TrapDoorBlock" -> trapDoor(block, blockPath);
 				case "Block" -> simpleBlock(block, blockPath, false);
 			}
 		});
