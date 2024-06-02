@@ -252,11 +252,6 @@ public class BlockRegistry {
 	public static RegistryObject<WallBlock> STEEL_SIDING_WALL;
 	public static RegistryObject<SlabBlock> STEEL_SIDING_SLAB;
 
-	public static RegistryObject<Block> STAINLESS_STEEL;
-	public static RegistryObject<StairBlock> STAINLESS_STEEL_STAIRS;
-	public static RegistryObject<WallBlock> STAINLESS_STEEL_WALL;
-	public static RegistryObject<SlabBlock> STAINLESS_STEEL_SLAB;
-
 	public static Supplier<Block> STEEL_CATWALK;
 	public static Supplier<Block> STEEL_CATWALK_STEP;
 	public static Supplier<Block> STEEL_CATWALK_RAIL;
@@ -524,11 +519,6 @@ public class BlockRegistry {
 		STEEL_SIDING_STAIRS = registerStairBlock("steel_siding_stairs", STEEL_SIDING, METAL_PROPERTIES);
 		STEEL_SIDING_WALL = registerWallBlock("steel_siding_wall", METAL_PROPERTIES);
 		STEEL_SIDING_SLAB = registerSlabBlock("steel_siding_slab", METAL_PROPERTIES);
-
-		STAINLESS_STEEL = registerBlockWithItem("stainless_steel", () -> new Block(METAL_PROPERTIES));
-		STAINLESS_STEEL_STAIRS = registerStairBlock("stainless_steel_stairs", CUT_STEEL, METAL_PROPERTIES);
-		STAINLESS_STEEL_WALL = registerWallBlock("stainless_steel_wall", METAL_PROPERTIES);
-		STAINLESS_STEEL_SLAB = registerSlabBlock("stainless_steel_slab", METAL_PROPERTIES);
 
 		STEEL_CATWALK = registerBlockWithItem("steel_catwalk", () -> new CatwalkBlock(METAL_PROPERTIES.noOcclusion()));
 		STEEL_CATWALK_STEP = registerBlockWithItem("steel_catwalk_step", () -> new CatwalkStepBlock(METAL_PROPERTIES.noOcclusion()));

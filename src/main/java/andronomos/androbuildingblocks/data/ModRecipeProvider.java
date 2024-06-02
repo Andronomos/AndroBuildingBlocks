@@ -257,13 +257,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildStoneCutter(BlockRegistry.CUT_STEEL.get(), BlockRegistry.STEEL_BLOCK.get(), 1, consumer);
 		buildTwoByTwo(BlockRegistry.CUT_STEEL.get(), BlockRegistry.STEEL_BLOCK.get(), consumer);
 		buildVariants(BlockRegistry.CUT_STEEL.get(), true, true, true, consumer);
-
-		ShapelessRecipeBuilder stainlessSteelBlock = ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.STAINLESS_STEEL.get(), 1);
-		stainlessSteelBlock.requires(BlockRegistry.STEEL_BLOCK.get());
-		stainlessSteelBlock.requires(Items.HONEYCOMB);
-		stainlessSteelBlock.unlockedBy("has_item", has(Items.HONEYCOMB));
-		stainlessSteelBlock.save(consumer, "stainless_steel");
-		buildVariants(BlockRegistry.STAINLESS_STEEL.get(), true, true, true, consumer);
 	}
 
 	private void buildStructuralGlass(Block block, String color, Consumer<FinishedRecipe> consumer) {

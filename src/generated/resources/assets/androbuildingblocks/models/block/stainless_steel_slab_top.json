@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "androbuildingblocks:block/stainless_steel",
-    "side": "androbuildingblocks:block/stainless_steel",
-    "top": "androbuildingblocks:block/stainless_steel"
-  }
-}
