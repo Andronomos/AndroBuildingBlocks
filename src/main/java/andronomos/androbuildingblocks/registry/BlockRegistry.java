@@ -9,7 +9,6 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -583,7 +582,6 @@ public class BlockRegistry {
 	}
 
 	private static <BLOCK extends Block> RegistryObject<BLOCK> registerBlockWithoutItem(final String name, final Supplier<BLOCK> blockFactory) {
-		final RegistryObject<BLOCK> block = BLOCKS.register(name, blockFactory);
-		return block;
+		return BLOCKS.register(name, blockFactory);
 	}
 }
