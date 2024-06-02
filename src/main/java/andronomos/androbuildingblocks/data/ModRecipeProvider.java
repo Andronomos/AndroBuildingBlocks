@@ -252,6 +252,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 		buildVariants(BlockRegistry.STEEL_BLOCK.get(), true, true, true, consumer);
 		buildVariants(BlockRegistry.STEEL_SIDING.get(), true, true, true, consumer);
+		buildTwoByTwo(BlockRegistry.STEEL_TILE.get(), BlockRegistry.STEEL_BLOCK.get(), consumer);
+		buildVariants(BlockRegistry.STEEL_TILE.get(), true, true, true, consumer);
 		buildStoneCutter(BlockRegistry.STEEL_SIDING.get(), BlockRegistry.STEEL_BLOCK.get(), 1, consumer);
 		buildStoneCutter(BlockRegistry.STEEL_PILLAR.get(), BlockRegistry.STEEL_BLOCK.get(), 1, consumer);
 		buildStoneCutter(BlockRegistry.CUT_STEEL.get(), BlockRegistry.STEEL_BLOCK.get(), 1, consumer);
