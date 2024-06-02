@@ -219,7 +219,13 @@ public class BlockRegistry {
 	public static Supplier<Block> CAUTION_STRIPES;
 
 	public static Supplier<Block> GRAPHITE;
+	public static Supplier<StairBlock> GRAPHITE_STAIRS;
+	public static Supplier<SlabBlock> GRAPHITE_SLAB;
+	public static Supplier<WallBlock> GRAPHITE_WALL;
 	public static Supplier<Block> GRAPHITE_TILE;
+	public static Supplier<StairBlock> GRAPHITE_TILE_STAIRS;
+	public static Supplier<SlabBlock> GRAPHITE_TILE_SLAB;
+	public static Supplier<WallBlock> GRAPHITE_TILE_WALL;
 	public static Supplier<Block> GRAPHITE_PILLAR;
 	//endregion
 
@@ -480,7 +486,13 @@ public class BlockRegistry {
 		CAUTION_STRIPES = registerBlockWithItem("caution_stripes", () -> new Block(GENERIC_PROPERTIES));
 
 		GRAPHITE = registerBlockWithItem("graphite", () -> new Block(GENERIC_PROPERTIES));
+		GRAPHITE_STAIRS = registerStairBlock("graphite_stairs", POLISHED_MARBLE, GENERIC_PROPERTIES);
+		GRAPHITE_SLAB = registerSlabBlock("graphite_slab", GENERIC_PROPERTIES);
+		GRAPHITE_WALL = registerWallBlock("graphite_wall", GENERIC_PROPERTIES);
 		GRAPHITE_TILE = registerBlockWithItem("graphite_tile", () -> new Block(GENERIC_PROPERTIES));
+		GRAPHITE_TILE_STAIRS = registerStairBlock("graphite_tile_stairs", POLISHED_MARBLE, GENERIC_PROPERTIES);
+		GRAPHITE_TILE_SLAB = registerSlabBlock("graphite_tile_slab", GENERIC_PROPERTIES);
+		GRAPHITE_TILE_WALL = registerWallBlock("graphite_tile_wall", GENERIC_PROPERTIES);
 		GRAPHITE_PILLAR = registerBlockWithItem("graphite_pillar", () -> new RotatedPillarBlock(GENERIC_PROPERTIES));
 		//endregion
 
