@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_trapdoor_top",
   "textures": {
-    "texture": "androbuildingblocks:block/steel_block"
+    "texture": "androbuildingblocks:block/steel_trapdoor"
   }
 }
