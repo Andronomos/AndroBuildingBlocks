@@ -39,6 +39,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		buildReinforcedConcrete(BlockRegistry.BLUE_REINFORCED_CONCRETE.get(), "blue", consumer);
 		buildReinforcedConcrete(BlockRegistry.BROWN_REINFORCED_CONCRETE.get(), "brown", consumer);
 		buildReinforcedConcrete(BlockRegistry.GREEN_REINFORCED_CONCRETE.get(), "green", consumer);
+		buildReinforcedConcrete(BlockRegistry.LIGHT_GRAY_REINFORCED_CONCRETE.get(), "light_gray", consumer);
 		buildReinforcedConcrete(BlockRegistry.GRAY_REINFORCED_CONCRETE.get(), "gray", consumer);
 		buildReinforcedConcrete(BlockRegistry.PURPLE_REINFORCED_CONCRETE.get(), "purple", consumer);
 		buildReinforcedConcrete(BlockRegistry.RED_REINFORCED_CONCRETE.get(), "red", consumer);

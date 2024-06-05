@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "androbuildingblocks:light_gray_reinforced_concrete_tile"
+  },
+  "result": "androbuildingblocks:light_gray_reinforced_concrete_tile_stairs"
+}

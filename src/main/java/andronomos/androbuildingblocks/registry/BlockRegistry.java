@@ -74,6 +74,15 @@ public class BlockRegistry {
 	public static RegistryObject<WallBlock> GRAY_REINFORCED_CONCRETE_TILE_WALL;
 	public static RegistryObject<SlabBlock> GRAY_REINFORCED_CONCRETE_TILE_SLAB;
 
+	public static RegistryObject<Block> LIGHT_GRAY_REINFORCED_CONCRETE;
+	public static RegistryObject<StairBlock> LIGHT_GRAY_REINFORCED_CONCRETE_STAIRS;
+	public static RegistryObject<WallBlock> LIGHT_GRAY_REINFORCED_CONCRETE_WALL;
+	public static RegistryObject<SlabBlock> LIGHT_GRAY_REINFORCED_CONCRETE_SLAB;
+	public static RegistryObject<Block> LIGHT_GRAY_REINFORCED_CONCRETE_TILE;
+	public static RegistryObject<StairBlock> LIGHT_GRAY_REINFORCED_CONCRETE_TILE_STAIRS;
+	public static RegistryObject<WallBlock> LIGHT_GRAY_REINFORCED_CONCRETE_TILE_WALL;
+	public static RegistryObject<SlabBlock> LIGHT_GRAY_REINFORCED_CONCRETE_TILE_SLAB;
+
 	public static RegistryObject<Block> PINK_REINFORCED_CONCRETE;
 	public static RegistryObject<StairBlock> PINK_REINFORCED_CONCRETE_STAIRS;
 	public static RegistryObject<WallBlock> PINK_REINFORCED_CONCRETE_WALL;
@@ -330,6 +339,15 @@ public class BlockRegistry {
 		GRAY_REINFORCED_CONCRETE_TILE_STAIRS = registerStairBlock("gray_reinforced_concrete_tile_stairs", GRAY_REINFORCED_CONCRETE_TILE, REINFORCED_CONCRETE_PROPERTIES);
 		GRAY_REINFORCED_CONCRETE_TILE_WALL = registerWallBlock("gray_reinforced_concrete_tile_wall", REINFORCED_CONCRETE_PROPERTIES);
 		GRAY_REINFORCED_CONCRETE_TILE_SLAB = registerSlabBlock("gray_reinforced_concrete_tile_slab", REINFORCED_CONCRETE_PROPERTIES);
+
+		LIGHT_GRAY_REINFORCED_CONCRETE = registerBlockWithItem("light_gray_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
+		LIGHT_GRAY_REINFORCED_CONCRETE_STAIRS = registerStairBlock("light_gray_reinforced_concrete_stairs", LIGHT_GRAY_REINFORCED_CONCRETE, REINFORCED_CONCRETE_PROPERTIES);
+		LIGHT_GRAY_REINFORCED_CONCRETE_WALL = registerWallBlock("light_gray_reinforced_concrete_wall", REINFORCED_CONCRETE_PROPERTIES);
+		LIGHT_GRAY_REINFORCED_CONCRETE_SLAB = registerSlabBlock("light_gray_reinforced_concrete_slab", REINFORCED_CONCRETE_PROPERTIES);
+		LIGHT_GRAY_REINFORCED_CONCRETE_TILE = registerBlockWithItem("light_gray_reinforced_concrete_tile", REINFORCED_CONCRETE_PROPERTIES);
+		LIGHT_GRAY_REINFORCED_CONCRETE_TILE_STAIRS = registerStairBlock("light_gray_reinforced_concrete_tile_stairs", LIGHT_GRAY_REINFORCED_CONCRETE_TILE, REINFORCED_CONCRETE_PROPERTIES);
+		LIGHT_GRAY_REINFORCED_CONCRETE_TILE_WALL = registerWallBlock("light_gray_reinforced_concrete_tile_wall", REINFORCED_CONCRETE_PROPERTIES);
+		LIGHT_GRAY_REINFORCED_CONCRETE_TILE_SLAB = registerSlabBlock("light_gray_reinforced_concrete_tile_slab", REINFORCED_CONCRETE_PROPERTIES);
 
 		PURPLE_REINFORCED_CONCRETE = registerBlockWithItem("purple_reinforced_concrete", REINFORCED_CONCRETE_PROPERTIES);
 		PURPLE_REINFORCED_CONCRETE_STAIRS = registerStairBlock("purple_reinforced_concrete_stairs", PURPLE_REINFORCED_CONCRETE, REINFORCED_CONCRETE_PROPERTIES);
