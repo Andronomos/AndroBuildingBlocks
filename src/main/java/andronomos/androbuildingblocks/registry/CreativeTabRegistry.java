@@ -68,6 +68,10 @@ public class CreativeTabRegistry {
 				output.accept(BlockRegistry.DARK_PRISMARINE_BRICK_STAIRS.get());
 				output.accept(BlockRegistry.DARK_PRISMARINE_BRICK_SLAB.get());
 				output.accept(BlockRegistry.DARK_PRISMARINE_BRICK_WALL.get());
+				output.accept(BlockRegistry.SANDED_DARK_PRISMARINE.get());
+				output.accept(BlockRegistry.SANDED_DARK_PRISMARINE_STAIRS.get());
+				output.accept(BlockRegistry.SANDED_DARK_PRISMARINE_SLAB.get());
+				output.accept(BlockRegistry.SANDED_DARK_PRISMARINE_WALL.get());
 				output.accept(BlockRegistry.SANDED_DEEPSLATE.get());
 				output.accept(BlockRegistry.SANDED_DEEPSLATE_STAIRS.get());
 				output.accept(BlockRegistry.SANDED_DEEPSLATE_WALL.get());
