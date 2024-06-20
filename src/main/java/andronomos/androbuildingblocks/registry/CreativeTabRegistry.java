@@ -120,6 +120,10 @@ public class CreativeTabRegistry {
 				output.accept(BlockRegistry.SANDED_GRANITE_STAIRS.get());
 				output.accept(BlockRegistry.SANDED_GRANITE_WALL.get());
 				output.accept(BlockRegistry.SANDED_GRANITE_SLAB.get());
+				output.accept(BlockRegistry.SANDED_ANDESITE.get());
+				output.accept(BlockRegistry.SANDED_ANDESITE_STAIRS.get());
+				output.accept(BlockRegistry.SANDED_ANDESITE_WALL.get());
+				output.accept(BlockRegistry.SANDED_ANDESITE_SLAB.get());
 				output.accept(BlockRegistry.MOSSY_COBBLED_DEEPLSATE.get());
 				output.accept(BlockRegistry.MOSSY_COBBLED_DEEPLSATE_STAIRS.get());
 				output.accept(BlockRegistry.MOSSY_COBBLED_DEEPLSATE_WALL.get());
